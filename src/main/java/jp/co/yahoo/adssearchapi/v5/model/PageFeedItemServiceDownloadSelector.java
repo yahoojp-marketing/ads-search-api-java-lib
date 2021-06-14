@@ -1,0 +1,107 @@
+package jp.co.yahoo.adssearchapi.v5.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.openapitools.jackson.nullable.JsonNullable;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアイテムのダウンロード処理を実施します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Download page feed items.&lt;/div&gt; 
+ */
+@ApiModel(description = "<div lang=\"ja\">ページフィードアイテムのダウンロード処理を実施します。</div> <div lang=\"en\"> Download page feed items.</div> ")
+
+public class PageFeedItemServiceDownloadSelector   {
+  @JsonProperty("accountId")
+  private Long accountId;
+
+  @JsonProperty("jobId")
+  private JsonNullable<Long> jobId = JsonNullable.undefined();
+
+  public PageFeedItemServiceDownloadSelector accountId(Long accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * <div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> 
+   * @return accountId
+  */
+  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @NotNull
+
+
+  public Long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
+  }
+
+  public PageFeedItemServiceDownloadSelector jobId(Long jobId) {
+    this.jobId = JsonNullable.of(jobId);
+    return this;
+  }
+
+  /**
+   * <div lang=\"ja\">検索条件：ジョブIDです。</div> <div lang=\"en\">Search condition: Job ID.</div> 
+   * @return jobId
+  */
+  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：ジョブIDです。</div> <div lang=\"en\">Search condition: Job ID.</div> ")
+  @NotNull
+
+
+  public JsonNullable<Long> getJobId() {
+    return jobId;
+  }
+
+  public void setJobId(JsonNullable<Long> jobId) {
+    this.jobId = jobId;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    PageFeedItemServiceDownloadSelector pageFeedItemServiceDownloadSelector = (PageFeedItemServiceDownloadSelector) o;
+    return Objects.equals(this.accountId, pageFeedItemServiceDownloadSelector.accountId) &&
+        Objects.equals(this.jobId, pageFeedItemServiceDownloadSelector.jobId);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(accountId, jobId);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class PageFeedItemServiceDownloadSelector {\n");
+    
+    sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    jobId: ").append(toIndentedString(jobId)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
+
