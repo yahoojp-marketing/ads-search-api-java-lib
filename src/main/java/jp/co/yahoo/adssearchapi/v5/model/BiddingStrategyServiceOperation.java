@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.BiddingStrategy;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceOperationオブジェクトは、自動入札設定の操作対象キャンペーンに関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceOperation object displays the details of auto bidding details of designated campaign.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceOperationオブジェクトは、自動入札設定の操作対象キャンペーンに関する情報を表します。</div> <div lang=\"en\">BiddingStrategyServiceOperation object displays the details of auto bidding details of designated campaign.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BiddingStrategyServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<BiddingStrategy>> operand = JsonNullable.undefined();
+  private List<BiddingStrategy> operand = new ArrayList<>();
 
   public BiddingStrategyServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class BiddingStrategyServiceOperation   {
   }
 
   public BiddingStrategyServiceOperation operand(List<BiddingStrategy> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public BiddingStrategyServiceOperation addOperandItem(BiddingStrategy operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class BiddingStrategyServiceOperation   {
 
   @Valid
 @Size(min=1,max=200) 
-  public JsonNullable<List<BiddingStrategy>> getOperand() {
+  public List<BiddingStrategy> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<BiddingStrategy>> operand) {
+  public void setOperand(List<BiddingStrategy> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class BiddingStrategyServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

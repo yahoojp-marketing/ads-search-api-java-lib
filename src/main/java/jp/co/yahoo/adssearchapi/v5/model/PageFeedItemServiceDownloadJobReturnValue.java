@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceDownloadJobValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceDownloadJobReturnValueは、ダウンロードの実行結果をリストに格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceDownloadJobReturnValue retains list of download result.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceDownloadJobReturnValueは、ダウンロードの実行結果をリストに格納するコンテナです。</div> <div lang=\"en\">PageFeedItemServiceDownloadJobReturnValue retains list of download result.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceDownloadJobReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<PageFeedItemServiceDownloadJobValue>> values = JsonNullable.undefined();
+  private List<PageFeedItemServiceDownloadJobValue> values = null;
 
   public PageFeedItemServiceDownloadJobReturnValue values(List<PageFeedItemServiceDownloadJobValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public PageFeedItemServiceDownloadJobReturnValue addValuesItem(PageFeedItemServiceDownloadJobValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class PageFeedItemServiceDownloadJobReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<PageFeedItemServiceDownloadJobValue>> getValues() {
+  public List<PageFeedItemServiceDownloadJobValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<PageFeedItemServiceDownloadJobValue>> values) {
+  public void setValues(List<PageFeedItemServiceDownloadJobValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class PageFeedItemServiceDownloadJobReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

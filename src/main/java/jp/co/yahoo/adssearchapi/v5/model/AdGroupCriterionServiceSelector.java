@@ -13,7 +13,6 @@ import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceContainsLabelId;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceKeyword;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceUse;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -21,56 +20,56 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceSelectorオブジェクトは、操作の対象となる広告グループのクライテリアを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceSelector object displays criteria of ad group to be operated.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceSelectorオブジェクトは、操作の対象となる広告グループのクライテリアを表します。</div> <div lang=\"en\">AdGroupCriterionServiceSelector object displays criteria of ad group to be operated.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("adGroupIds")
   @Valid
-  private JsonNullable<List<Long>> adGroupIds = JsonNullable.undefined();
+  private List<Long> adGroupIds = null;
 
   @JsonProperty("approvalStatuses")
   @Valid
-  private JsonNullable<List<AdGroupCriterionServiceApprovalStatus>> approvalStatuses = JsonNullable.undefined();
+  private List<AdGroupCriterionServiceApprovalStatus> approvalStatuses = null;
 
   @JsonProperty("biddingStrategyIds")
   @Valid
-  private JsonNullable<List<Long>> biddingStrategyIds = JsonNullable.undefined();
+  private List<Long> biddingStrategyIds = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("containsLabelId")
-  private JsonNullable<AdGroupCriterionServiceContainsLabelId> containsLabelId = JsonNullable.undefined();
+  private AdGroupCriterionServiceContainsLabelId containsLabelId = null;
 
   @JsonProperty("criterionIds")
   @Valid
-  private JsonNullable<List<Long>> criterionIds = JsonNullable.undefined();
+  private List<Long> criterionIds = null;
 
   @JsonProperty("labelIds")
   @Valid
-  private JsonNullable<List<Long>> labelIds = JsonNullable.undefined();
+  private List<Long> labelIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("use")
-  private JsonNullable<AdGroupCriterionServiceUse> use = JsonNullable.undefined();
+  private AdGroupCriterionServiceUse use = null;
 
   @JsonProperty("userStatuses")
   @Valid
-  private JsonNullable<List<AdGroupCriterionServiceUserStatus>> userStatuses = JsonNullable.undefined();
+  private List<AdGroupCriterionServiceUserStatus> userStatuses = null;
 
   @JsonProperty("keyword")
-  private JsonNullable<AdGroupCriterionServiceKeyword> keyword = JsonNullable.undefined();
+  private AdGroupCriterionServiceKeyword keyword = null;
 
   @JsonProperty("biddingKeywordCpcRange")
-  private JsonNullable<AdGroupCriterionServiceBiddingKeywordCpcRange> biddingKeywordCpcRange = JsonNullable.undefined();
+  private AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange = null;
 
   public AdGroupCriterionServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -94,15 +93,15 @@ public class AdGroupCriterionServiceSelector   {
   }
 
   public AdGroupCriterionServiceSelector adGroupIds(List<Long> adGroupIds) {
-    this.adGroupIds = JsonNullable.of(adGroupIds);
+    this.adGroupIds = adGroupIds;
     return this;
   }
 
   public AdGroupCriterionServiceSelector addAdGroupIdsItem(Long adGroupIdsItem) {
-    if (this.adGroupIds == null || !this.adGroupIds.isPresent()) {
-      this.adGroupIds = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupIds == null) {
+      this.adGroupIds = new ArrayList<>();
     }
-    this.adGroupIds.get().add(adGroupIdsItem);
+    this.adGroupIds.add(adGroupIdsItem);
     return this;
   }
 
@@ -113,24 +112,24 @@ public class AdGroupCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：広告グループID</div> <div lang=\"en\">Search condition: Ad group ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getAdGroupIds() {
+  public List<Long> getAdGroupIds() {
     return adGroupIds;
   }
 
-  public void setAdGroupIds(JsonNullable<List<Long>> adGroupIds) {
+  public void setAdGroupIds(List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
   public AdGroupCriterionServiceSelector approvalStatuses(List<AdGroupCriterionServiceApprovalStatus> approvalStatuses) {
-    this.approvalStatuses = JsonNullable.of(approvalStatuses);
+    this.approvalStatuses = approvalStatuses;
     return this;
   }
 
   public AdGroupCriterionServiceSelector addApprovalStatusesItem(AdGroupCriterionServiceApprovalStatus approvalStatusesItem) {
-    if (this.approvalStatuses == null || !this.approvalStatuses.isPresent()) {
-      this.approvalStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.approvalStatuses == null) {
+      this.approvalStatuses = new ArrayList<>();
     }
-    this.approvalStatuses.get().add(approvalStatusesItem);
+    this.approvalStatuses.add(approvalStatusesItem);
     return this;
   }
 
@@ -142,24 +141,24 @@ public class AdGroupCriterionServiceSelector   {
 
   @Valid
 @Size(max=5) 
-  public JsonNullable<List<AdGroupCriterionServiceApprovalStatus>> getApprovalStatuses() {
+  public List<AdGroupCriterionServiceApprovalStatus> getApprovalStatuses() {
     return approvalStatuses;
   }
 
-  public void setApprovalStatuses(JsonNullable<List<AdGroupCriterionServiceApprovalStatus>> approvalStatuses) {
+  public void setApprovalStatuses(List<AdGroupCriterionServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
   public AdGroupCriterionServiceSelector biddingStrategyIds(List<Long> biddingStrategyIds) {
-    this.biddingStrategyIds = JsonNullable.of(biddingStrategyIds);
+    this.biddingStrategyIds = biddingStrategyIds;
     return this;
   }
 
   public AdGroupCriterionServiceSelector addBiddingStrategyIdsItem(Long biddingStrategyIdsItem) {
-    if (this.biddingStrategyIds == null || !this.biddingStrategyIds.isPresent()) {
-      this.biddingStrategyIds = JsonNullable.of(new ArrayList<>());
+    if (this.biddingStrategyIds == null) {
+      this.biddingStrategyIds = new ArrayList<>();
     }
-    this.biddingStrategyIds.get().add(biddingStrategyIdsItem);
+    this.biddingStrategyIds.add(biddingStrategyIdsItem);
     return this;
   }
 
@@ -170,24 +169,24 @@ public class AdGroupCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：自動入札ID</div> <div lang=\"en\">Search condition: Auto bidding ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getBiddingStrategyIds() {
+  public List<Long> getBiddingStrategyIds() {
     return biddingStrategyIds;
   }
 
-  public void setBiddingStrategyIds(JsonNullable<List<Long>> biddingStrategyIds) {
+  public void setBiddingStrategyIds(List<Long> biddingStrategyIds) {
     this.biddingStrategyIds = biddingStrategyIds;
   }
 
   public AdGroupCriterionServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public AdGroupCriterionServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -198,16 +197,16 @@ public class AdGroupCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：キャンペーンID</div> <div lang=\"en\">Search condition: Campaign ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public AdGroupCriterionServiceSelector containsLabelId(AdGroupCriterionServiceContainsLabelId containsLabelId) {
-    this.containsLabelId = JsonNullable.of(containsLabelId);
+    this.containsLabelId = containsLabelId;
     return this;
   }
 
@@ -219,24 +218,24 @@ public class AdGroupCriterionServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceContainsLabelId> getContainsLabelId() {
+  public AdGroupCriterionServiceContainsLabelId getContainsLabelId() {
     return containsLabelId;
   }
 
-  public void setContainsLabelId(JsonNullable<AdGroupCriterionServiceContainsLabelId> containsLabelId) {
+  public void setContainsLabelId(AdGroupCriterionServiceContainsLabelId containsLabelId) {
     this.containsLabelId = containsLabelId;
   }
 
   public AdGroupCriterionServiceSelector criterionIds(List<Long> criterionIds) {
-    this.criterionIds = JsonNullable.of(criterionIds);
+    this.criterionIds = criterionIds;
     return this;
   }
 
   public AdGroupCriterionServiceSelector addCriterionIdsItem(Long criterionIdsItem) {
-    if (this.criterionIds == null || !this.criterionIds.isPresent()) {
-      this.criterionIds = JsonNullable.of(new ArrayList<>());
+    if (this.criterionIds == null) {
+      this.criterionIds = new ArrayList<>();
     }
-    this.criterionIds.get().add(criterionIdsItem);
+    this.criterionIds.add(criterionIdsItem);
     return this;
   }
 
@@ -247,24 +246,24 @@ public class AdGroupCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：クライテリオンID<br>指定しない場合は、広告グループID以下のすべてのクライ テリアが含まれます。</div> <div lang=\"en\">Search condition: Criterion ID.<br>* All criteria under the Ad group ID will return if theres is no designation.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getCriterionIds() {
+  public List<Long> getCriterionIds() {
     return criterionIds;
   }
 
-  public void setCriterionIds(JsonNullable<List<Long>> criterionIds) {
+  public void setCriterionIds(List<Long> criterionIds) {
     this.criterionIds = criterionIds;
   }
 
   public AdGroupCriterionServiceSelector labelIds(List<Long> labelIds) {
-    this.labelIds = JsonNullable.of(labelIds);
+    this.labelIds = labelIds;
     return this;
   }
 
   public AdGroupCriterionServiceSelector addLabelIdsItem(Long labelIdsItem) {
-    if (this.labelIds == null || !this.labelIds.isPresent()) {
-      this.labelIds = JsonNullable.of(new ArrayList<>());
+    if (this.labelIds == null) {
+      this.labelIds = new ArrayList<>();
     }
-    this.labelIds.get().add(labelIdsItem);
+    this.labelIds.add(labelIdsItem);
     return this;
   }
 
@@ -275,16 +274,16 @@ public class AdGroupCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ラベルID</div> <div lang=\"en\">Search condition: Label ID</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getLabelIds() {
+  public List<Long> getLabelIds() {
     return labelIds;
   }
 
-  public void setLabelIds(JsonNullable<List<Long>> labelIds) {
+  public void setLabelIds(List<Long> labelIds) {
     this.labelIds = labelIds;
   }
 
   public AdGroupCriterionServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -297,16 +296,16 @@ public class AdGroupCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AdGroupCriterionServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -318,16 +317,16 @@ public class AdGroupCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public AdGroupCriterionServiceSelector use(AdGroupCriterionServiceUse use) {
-    this.use = JsonNullable.of(use);
+    this.use = use;
     return this;
   }
 
@@ -340,24 +339,24 @@ public class AdGroupCriterionServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceUse> getUse() {
+  public AdGroupCriterionServiceUse getUse() {
     return use;
   }
 
-  public void setUse(JsonNullable<AdGroupCriterionServiceUse> use) {
+  public void setUse(AdGroupCriterionServiceUse use) {
     this.use = use;
   }
 
   public AdGroupCriterionServiceSelector userStatuses(List<AdGroupCriterionServiceUserStatus> userStatuses) {
-    this.userStatuses = JsonNullable.of(userStatuses);
+    this.userStatuses = userStatuses;
     return this;
   }
 
   public AdGroupCriterionServiceSelector addUserStatusesItem(AdGroupCriterionServiceUserStatus userStatusesItem) {
-    if (this.userStatuses == null || !this.userStatuses.isPresent()) {
-      this.userStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.userStatuses == null) {
+      this.userStatuses = new ArrayList<>();
     }
-    this.userStatuses.get().add(userStatusesItem);
+    this.userStatuses.add(userStatusesItem);
     return this;
   }
 
@@ -369,16 +368,16 @@ public class AdGroupCriterionServiceSelector   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<AdGroupCriterionServiceUserStatus>> getUserStatuses() {
+  public List<AdGroupCriterionServiceUserStatus> getUserStatuses() {
     return userStatuses;
   }
 
-  public void setUserStatuses(JsonNullable<List<AdGroupCriterionServiceUserStatus>> userStatuses) {
+  public void setUserStatuses(List<AdGroupCriterionServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
   public AdGroupCriterionServiceSelector keyword(AdGroupCriterionServiceKeyword keyword) {
-    this.keyword = JsonNullable.of(keyword);
+    this.keyword = keyword;
     return this;
   }
 
@@ -390,16 +389,16 @@ public class AdGroupCriterionServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceKeyword> getKeyword() {
+  public AdGroupCriterionServiceKeyword getKeyword() {
     return keyword;
   }
 
-  public void setKeyword(JsonNullable<AdGroupCriterionServiceKeyword> keyword) {
+  public void setKeyword(AdGroupCriterionServiceKeyword keyword) {
     this.keyword = keyword;
   }
 
   public AdGroupCriterionServiceSelector biddingKeywordCpcRange(AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange) {
-    this.biddingKeywordCpcRange = JsonNullable.of(biddingKeywordCpcRange);
+    this.biddingKeywordCpcRange = biddingKeywordCpcRange;
     return this;
   }
 
@@ -411,17 +410,17 @@ public class AdGroupCriterionServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceBiddingKeywordCpcRange> getBiddingKeywordCpcRange() {
+  public AdGroupCriterionServiceBiddingKeywordCpcRange getBiddingKeywordCpcRange() {
     return biddingKeywordCpcRange;
   }
 
-  public void setBiddingKeywordCpcRange(JsonNullable<AdGroupCriterionServiceBiddingKeywordCpcRange> biddingKeywordCpcRange) {
+  public void setBiddingKeywordCpcRange(AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange) {
     this.biddingKeywordCpcRange = biddingKeywordCpcRange;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -477,7 +476,7 @@ public class AdGroupCriterionServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

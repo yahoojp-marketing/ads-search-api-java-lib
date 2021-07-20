@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,13 +12,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaオブジェクトは、提案結果のキーワードを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A container of keywords related to specified keyword.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaオブジェクトは、提案結果のキーワードを格納するコンテナです。</div> <div lang=\"en\">A container of keywords related to specified keyword.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordPlanIdea   {
   @JsonProperty("text")
-  private JsonNullable<String> text = JsonNullable.undefined();
+  private String text = null;
 
   public KeywordPlanIdea text(String text) {
-    this.text = JsonNullable.of(text);
+    this.text = text;
     return this;
   }
 
@@ -30,17 +29,17 @@ public class KeywordPlanIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。</div> <div lang=\"en\">Keyword</div> ")
 
 
-  public JsonNullable<String> getText() {
+  public String getText() {
     return text;
   }
 
-  public void setText(JsonNullable<String> text) {
+  public void setText(String text) {
     this.text = text;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,7 +69,7 @@ public class KeywordPlanIdea   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

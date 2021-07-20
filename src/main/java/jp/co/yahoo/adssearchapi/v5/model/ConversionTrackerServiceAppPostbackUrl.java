@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceAppPostbackUrlClearFlag;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポストバックURLです。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Postback URL.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ポストバックURLです。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">Postback URL.<br> This field is optional in any cases.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceAppPostbackUrl   {
   @JsonProperty("appPostbackUrlClearFlag")
-  private JsonNullable<ConversionTrackerServiceAppPostbackUrlClearFlag> appPostbackUrlClearFlag = JsonNullable.undefined();
+  private ConversionTrackerServiceAppPostbackUrlClearFlag appPostbackUrlClearFlag = null;
 
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   public ConversionTrackerServiceAppPostbackUrl appPostbackUrlClearFlag(ConversionTrackerServiceAppPostbackUrlClearFlag appPostbackUrlClearFlag) {
-    this.appPostbackUrlClearFlag = JsonNullable.of(appPostbackUrlClearFlag);
+    this.appPostbackUrlClearFlag = appPostbackUrlClearFlag;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class ConversionTrackerServiceAppPostbackUrl   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppPostbackUrlClearFlag> getAppPostbackUrlClearFlag() {
+  public ConversionTrackerServiceAppPostbackUrlClearFlag getAppPostbackUrlClearFlag() {
     return appPostbackUrlClearFlag;
   }
 
-  public void setAppPostbackUrlClearFlag(JsonNullable<ConversionTrackerServiceAppPostbackUrlClearFlag> appPostbackUrlClearFlag) {
+  public void setAppPostbackUrlClearFlag(ConversionTrackerServiceAppPostbackUrlClearFlag appPostbackUrlClearFlag) {
     this.appPostbackUrlClearFlag = appPostbackUrlClearFlag;
   }
 
   public ConversionTrackerServiceAppPostbackUrl url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class ConversionTrackerServiceAppPostbackUrl   {
   @ApiModelProperty(value = "")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class ConversionTrackerServiceAppPostbackUrl   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServiceDayOfWeek;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServiceMinuteOfHour;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,25 +14,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceScheduleTargetオブジェクトは、曜日・時間帯ターゲティングレポートを表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となります。&lt;br&gt; ※targetTypeがSCHEDULEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceScheduleTarget describes Day of week/Hour targeting report.&lt;br&gt; *This field is optional in ADD and SET operation.&lt;br&gt; If targetType is SCHEDULE, this field is required in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceScheduleTargetオブジェクトは、曜日・時間帯ターゲティングレポートを表します。<br> このフィールドは、ADD時およびSET時に省略可能となります。<br> ※targetTypeがSCHEDULEの場合、このフィールドはADD時に必須となります。</div> <div lang=\"en\">CampaignTargetServiceScheduleTarget describes Day of week/Hour targeting report.<br> *This field is optional in ADD and SET operation.<br> If targetType is SCHEDULE, this field is required in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignTargetServiceScheduleTarget   {
   @JsonProperty("dayOfWeek")
-  private JsonNullable<CampaignTargetServiceDayOfWeek> dayOfWeek = JsonNullable.undefined();
+  private CampaignTargetServiceDayOfWeek dayOfWeek = null;
 
   @JsonProperty("endHour")
-  private JsonNullable<Integer> endHour = JsonNullable.undefined();
+  private Integer endHour = null;
 
   @JsonProperty("endMinute")
-  private JsonNullable<CampaignTargetServiceMinuteOfHour> endMinute = JsonNullable.undefined();
+  private CampaignTargetServiceMinuteOfHour endMinute = null;
 
   @JsonProperty("startHour")
-  private JsonNullable<Integer> startHour = JsonNullable.undefined();
+  private Integer startHour = null;
 
   @JsonProperty("startMinute")
-  private JsonNullable<CampaignTargetServiceMinuteOfHour> startMinute = JsonNullable.undefined();
+  private CampaignTargetServiceMinuteOfHour startMinute = null;
 
   public CampaignTargetServiceScheduleTarget dayOfWeek(CampaignTargetServiceDayOfWeek dayOfWeek) {
-    this.dayOfWeek = JsonNullable.of(dayOfWeek);
+    this.dayOfWeek = dayOfWeek;
     return this;
   }
 
@@ -45,16 +44,16 @@ public class CampaignTargetServiceScheduleTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceDayOfWeek> getDayOfWeek() {
+  public CampaignTargetServiceDayOfWeek getDayOfWeek() {
     return dayOfWeek;
   }
 
-  public void setDayOfWeek(JsonNullable<CampaignTargetServiceDayOfWeek> dayOfWeek) {
+  public void setDayOfWeek(CampaignTargetServiceDayOfWeek dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
   public CampaignTargetServiceScheduleTarget endHour(Integer endHour) {
-    this.endHour = JsonNullable.of(endHour);
+    this.endHour = endHour;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class CampaignTargetServiceScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">24時間表示の終了時刻です。<br>このフィールドは、ADD時に必須となります。</div> <div lang=\"en\">Ending hour in 24 hour time.<br>This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<Integer> getEndHour() {
+  public Integer getEndHour() {
     return endHour;
   }
 
-  public void setEndHour(JsonNullable<Integer> endHour) {
+  public void setEndHour(Integer endHour) {
     this.endHour = endHour;
   }
 
   public CampaignTargetServiceScheduleTarget endMinute(CampaignTargetServiceMinuteOfHour endMinute) {
-    this.endMinute = JsonNullable.of(endMinute);
+    this.endMinute = endMinute;
     return this;
   }
 
@@ -86,16 +85,16 @@ public class CampaignTargetServiceScheduleTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceMinuteOfHour> getEndMinute() {
+  public CampaignTargetServiceMinuteOfHour getEndMinute() {
     return endMinute;
   }
 
-  public void setEndMinute(JsonNullable<CampaignTargetServiceMinuteOfHour> endMinute) {
+  public void setEndMinute(CampaignTargetServiceMinuteOfHour endMinute) {
     this.endMinute = endMinute;
   }
 
   public CampaignTargetServiceScheduleTarget startHour(Integer startHour) {
-    this.startHour = JsonNullable.of(startHour);
+    this.startHour = startHour;
     return this;
   }
 
@@ -106,16 +105,16 @@ public class CampaignTargetServiceScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">24時間表示の開始時刻です。<br>このフィールドは、ADD時に必須となります。</div> <div lang=\"en\">Starting hour in 24 hour time.<br>This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<Integer> getStartHour() {
+  public Integer getStartHour() {
     return startHour;
   }
 
-  public void setStartHour(JsonNullable<Integer> startHour) {
+  public void setStartHour(Integer startHour) {
     this.startHour = startHour;
   }
 
   public CampaignTargetServiceScheduleTarget startMinute(CampaignTargetServiceMinuteOfHour startMinute) {
-    this.startMinute = JsonNullable.of(startMinute);
+    this.startMinute = startMinute;
     return this;
   }
 
@@ -127,17 +126,17 @@ public class CampaignTargetServiceScheduleTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceMinuteOfHour> getStartMinute() {
+  public CampaignTargetServiceMinuteOfHour getStartMinute() {
     return startMinute;
   }
 
-  public void setStartMinute(JsonNullable<CampaignTargetServiceMinuteOfHour> startMinute) {
+  public void setStartMinute(CampaignTargetServiceMinuteOfHour startMinute) {
     this.startMinute = startMinute;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -175,7 +174,7 @@ public class CampaignTargetServiceScheduleTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

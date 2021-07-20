@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,17 +14,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceAdditionalAdvancedMobileUrlsは、2件目以降の最終リンク先URL（スマートフォン）を保持するオブジェクトです。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAdditionalAdvancedMobileUrls is object to hold the 2nd and later Landing Page URLs (Smartphone).&lt;br&gt; This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceAdditionalAdvancedMobileUrlsは、2件目以降の最終リンク先URL（スマートフォン）を保持するオブジェクトです。<br> ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">AdGroupAdServiceAdditionalAdvancedMobileUrls is object to hold the 2nd and later Landing Page URLs (Smartphone).<br> This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceAdditionalAdvancedMobileUrls   {
   @JsonProperty("advancedMobileUrl")
-  private JsonNullable<String> advancedMobileUrl = JsonNullable.undefined();
+  private String advancedMobileUrl = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   public AdGroupAdServiceAdditionalAdvancedMobileUrls advancedMobileUrl(String advancedMobileUrl) {
-    this.advancedMobileUrl = JsonNullable.of(advancedMobileUrl);
+    this.advancedMobileUrl = advancedMobileUrl;
     return this;
   }
 
@@ -36,24 +35,24 @@ public class AdGroupAdServiceAdditionalAdvancedMobileUrls   {
   @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Landing Page URL (Smartphone).<br> This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getAdvancedMobileUrl() {
+  public String getAdvancedMobileUrl() {
     return advancedMobileUrl;
   }
 
-  public void setAdvancedMobileUrl(JsonNullable<String> advancedMobileUrl) {
+  public void setAdvancedMobileUrl(String advancedMobileUrl) {
     this.advancedMobileUrl = advancedMobileUrl;
   }
 
   public AdGroupAdServiceAdditionalAdvancedMobileUrls disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public AdGroupAdServiceAdditionalAdvancedMobileUrls addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -64,17 +63,17 @@ public class AdGroupAdServiceAdditionalAdvancedMobileUrls   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コードです。<br> (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)</div> <div lang=\"en\">Reject reason code<br> (Refer to DictionaryService getDisapprovalReason response for details)</div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -106,7 +105,7 @@ public class AdGroupAdServiceAdditionalAdvancedMobileUrls   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

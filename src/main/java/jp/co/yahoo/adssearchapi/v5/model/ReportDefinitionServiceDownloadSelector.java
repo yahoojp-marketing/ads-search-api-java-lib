@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,13 +12,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レポートをダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download the report.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">レポートをダウンロードします。</div> <div lang=\"en\">Download the report.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceDownloadSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("reportJobId")
-  private JsonNullable<Long> reportJobId = JsonNullable.undefined();
+  private Long reportJobId = null;
 
   public ReportDefinitionServiceDownloadSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -43,7 +42,7 @@ public class ReportDefinitionServiceDownloadSelector   {
   }
 
   public ReportDefinitionServiceDownloadSelector reportJobId(Long reportJobId) {
-    this.reportJobId = JsonNullable.of(reportJobId);
+    this.reportJobId = reportJobId;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class ReportDefinitionServiceDownloadSelector   {
   @NotNull
 
 
-  public JsonNullable<Long> getReportJobId() {
+  public Long getReportJobId() {
     return reportJobId;
   }
 
-  public void setReportJobId(JsonNullable<Long> reportJobId) {
+  public void setReportJobId(Long reportJobId) {
     this.reportJobId = reportJobId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class ReportDefinitionServiceDownloadSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

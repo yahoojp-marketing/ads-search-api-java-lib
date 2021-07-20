@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,37 +12,37 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Labelオブジェクトは、ラベルの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Label object describes label information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Labelオブジェクトは、ラベルの情報を表します。</div> <div lang=\"en\">Label object describes label information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Label   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("color")
-  private JsonNullable<String> color = JsonNullable.undefined();
+  private String color = null;
 
   @JsonProperty("description")
-  private JsonNullable<String> description = JsonNullable.undefined();
+  private String description = null;
 
   @JsonProperty("labelId")
-  private JsonNullable<Long> labelId = JsonNullable.undefined();
+  private Long labelId = null;
 
   @JsonProperty("labelName")
-  private JsonNullable<String> labelName = JsonNullable.undefined();
+  private String labelName = null;
 
   @JsonProperty("labeledAdGroup")
-  private JsonNullable<Long> labeledAdGroup = JsonNullable.undefined();
+  private Long labeledAdGroup = null;
 
   @JsonProperty("labeledAdGroupAd")
-  private JsonNullable<Long> labeledAdGroupAd = JsonNullable.undefined();
+  private Long labeledAdGroupAd = null;
 
   @JsonProperty("labeledAdGroupCriterion")
-  private JsonNullable<Long> labeledAdGroupCriterion = JsonNullable.undefined();
+  private Long labeledAdGroupCriterion = null;
 
   @JsonProperty("labeledCampaign")
-  private JsonNullable<Long> labeledCampaign = JsonNullable.undefined();
+  private Long labeledCampaign = null;
 
   public Label accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -54,16 +53,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public Label color(String color) {
-    this.color = JsonNullable.of(color);
+    this.color = color;
     return this;
   }
 
@@ -74,16 +73,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">カラーコードです。例：#FFFFFF<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">Color code. e.g. #FFFFFF<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
 
 
-  public JsonNullable<String> getColor() {
+  public String getColor() {
     return color;
   }
 
-  public void setColor(JsonNullable<String> color) {
+  public void setColor(String color) {
     this.color = color;
   }
 
   public Label description(String description) {
-    this.description = JsonNullable.of(description);
+    this.description = description;
     return this;
   }
 
@@ -94,16 +93,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">説明文です。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">Description.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
 
 
-  public JsonNullable<String> getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(JsonNullable<String> description) {
+  public void setDescription(String description) {
     this.description = description;
   }
 
   public Label labelId(Long labelId) {
-    this.labelId = JsonNullable.of(labelId);
+    this.labelId = labelId;
     return this;
   }
 
@@ -114,16 +113,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">ラベルIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時に無視されます。</div> <div lang=\"en\">Label ID.<br> This field is required in SET and REMOVE operation, and will be ignored in ADD operation.</div> ")
 
 
-  public JsonNullable<Long> getLabelId() {
+  public Long getLabelId() {
     return labelId;
   }
 
-  public void setLabelId(JsonNullable<Long> labelId) {
+  public void setLabelId(Long labelId) {
     this.labelId = labelId;
   }
 
   public Label labelName(String labelName) {
-    this.labelName = JsonNullable.of(labelName);
+    this.labelName = labelName;
     return this;
   }
 
@@ -134,16 +133,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">ラベル名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">Label Name.<br> This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.</div> ")
 
 
-  public JsonNullable<String> getLabelName() {
+  public String getLabelName() {
     return labelName;
   }
 
-  public void setLabelName(JsonNullable<String> labelName) {
+  public void setLabelName(String labelName) {
     this.labelName = labelName;
   }
 
   public Label labeledAdGroup(Long labeledAdGroup) {
-    this.labeledAdGroup = JsonNullable.of(labeledAdGroup);
+    this.labeledAdGroup = labeledAdGroup;
     return this;
   }
 
@@ -154,16 +153,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループの紐付け数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Number of labeled AdGroup.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getLabeledAdGroup() {
+  public Long getLabeledAdGroup() {
     return labeledAdGroup;
   }
 
-  public void setLabeledAdGroup(JsonNullable<Long> labeledAdGroup) {
+  public void setLabeledAdGroup(Long labeledAdGroup) {
     this.labeledAdGroup = labeledAdGroup;
   }
 
   public Label labeledAdGroupAd(Long labeledAdGroupAd) {
-    this.labeledAdGroupAd = JsonNullable.of(labeledAdGroupAd);
+    this.labeledAdGroupAd = labeledAdGroupAd;
     return this;
   }
 
@@ -174,16 +173,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告の紐付け数です。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Number of labeled AdGroupAd.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getLabeledAdGroupAd() {
+  public Long getLabeledAdGroupAd() {
     return labeledAdGroupAd;
   }
 
-  public void setLabeledAdGroupAd(JsonNullable<Long> labeledAdGroupAd) {
+  public void setLabeledAdGroupAd(Long labeledAdGroupAd) {
     this.labeledAdGroupAd = labeledAdGroupAd;
   }
 
   public Label labeledAdGroupCriterion(Long labeledAdGroupCriterion) {
-    this.labeledAdGroupCriterion = JsonNullable.of(labeledAdGroupCriterion);
+    this.labeledAdGroupCriterion = labeledAdGroupCriterion;
     return this;
   }
 
@@ -194,16 +193,16 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">キーワードの紐付け数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Number of labeled Ad Group Criterion.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getLabeledAdGroupCriterion() {
+  public Long getLabeledAdGroupCriterion() {
     return labeledAdGroupCriterion;
   }
 
-  public void setLabeledAdGroupCriterion(JsonNullable<Long> labeledAdGroupCriterion) {
+  public void setLabeledAdGroupCriterion(Long labeledAdGroupCriterion) {
     this.labeledAdGroupCriterion = labeledAdGroupCriterion;
   }
 
   public Label labeledCampaign(Long labeledCampaign) {
-    this.labeledCampaign = JsonNullable.of(labeledCampaign);
+    this.labeledCampaign = labeledCampaign;
     return this;
   }
 
@@ -214,17 +213,17 @@ public class Label   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンの紐付け数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Number of labeled Campaign.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getLabeledCampaign() {
+  public Long getLabeledCampaign() {
     return labeledCampaign;
   }
 
-  public void setLabeledCampaign(JsonNullable<Long> labeledCampaign) {
+  public void setLabeledCampaign(Long labeledCampaign) {
     this.labeledCampaign = labeledCampaign;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -270,7 +269,7 @@ public class Label   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

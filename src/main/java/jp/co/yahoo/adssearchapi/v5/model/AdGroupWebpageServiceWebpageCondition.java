@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceOperator;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceWebpageConditionType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,19 +14,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageConditionオブジェクトは、Webpageの条件を保持します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceWebpageCondition object contains the rules of webpage.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceWebpageConditionオブジェクトは、Webpageの条件を保持します。<br> このフィールドは、ADD時は必須となり、SET時は無視されます。</div> <div lang=\"en\">AdGroupWebpageServiceWebpageCondition object contains the rules of webpage.<br> This field is required in ADD operation, and will be ignored in SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupWebpageServiceWebpageCondition   {
   @JsonProperty("argument")
-  private JsonNullable<String> argument = JsonNullable.undefined();
+  private String argument = null;
 
   @JsonProperty("webpageConditionType")
-  private JsonNullable<AdGroupWebpageServiceWebpageConditionType> webpageConditionType = JsonNullable.undefined();
+  private AdGroupWebpageServiceWebpageConditionType webpageConditionType = null;
 
   @JsonProperty("operator")
-  private JsonNullable<AdGroupWebpageServiceOperator> operator = JsonNullable.undefined();
+  private AdGroupWebpageServiceOperator operator = null;
 
   public AdGroupWebpageServiceWebpageCondition argument(String argument) {
-    this.argument = JsonNullable.of(argument);
+    this.argument = argument;
     return this;
   }
 
@@ -38,16 +37,16 @@ public class AdGroupWebpageServiceWebpageCondition   {
   @ApiModelProperty(value = "<div lang=\"ja\">条件の設定値(正規表現の指定可)です。<br>ADD時、このフィールドは必須です。※typeがALL_PAGESの場合は省略可能となります。SET時、このフィールドは無視されます。</div> <div lang=\"en\">Value of rule setting (Can specify regular expression)<br>This field is required in ADD operation, and will be ignored in SET operation. *If type is 'ALL_PAGES', this field is optional in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getArgument() {
+  public String getArgument() {
     return argument;
   }
 
-  public void setArgument(JsonNullable<String> argument) {
+  public void setArgument(String argument) {
     this.argument = argument;
   }
 
   public AdGroupWebpageServiceWebpageCondition webpageConditionType(AdGroupWebpageServiceWebpageConditionType webpageConditionType) {
-    this.webpageConditionType = JsonNullable.of(webpageConditionType);
+    this.webpageConditionType = webpageConditionType;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class AdGroupWebpageServiceWebpageCondition   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceWebpageConditionType> getWebpageConditionType() {
+  public AdGroupWebpageServiceWebpageConditionType getWebpageConditionType() {
     return webpageConditionType;
   }
 
-  public void setWebpageConditionType(JsonNullable<AdGroupWebpageServiceWebpageConditionType> webpageConditionType) {
+  public void setWebpageConditionType(AdGroupWebpageServiceWebpageConditionType webpageConditionType) {
     this.webpageConditionType = webpageConditionType;
   }
 
   public AdGroupWebpageServiceWebpageCondition operator(AdGroupWebpageServiceOperator operator) {
-    this.operator = JsonNullable.of(operator);
+    this.operator = operator;
     return this;
   }
 
@@ -80,17 +79,17 @@ public class AdGroupWebpageServiceWebpageCondition   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceOperator> getOperator() {
+  public AdGroupWebpageServiceOperator getOperator() {
     return operator;
   }
 
-  public void setOperator(JsonNullable<AdGroupWebpageServiceOperator> operator) {
+  public void setOperator(AdGroupWebpageServiceOperator operator) {
     this.operator = operator;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -124,7 +123,7 @@ public class AdGroupWebpageServiceWebpageCondition   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

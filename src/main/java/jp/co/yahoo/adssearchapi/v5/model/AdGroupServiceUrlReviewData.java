@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupServiceReviewUrl;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupServiceUrlApprovalStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,31 +16,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceUrlReviewDataオブジェクトは、URLの審査状況を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceUrlReviewData object displays review status of URL.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupServiceUrlReviewDataオブジェクトは、URLの審査状況を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">AdGroupServiceUrlReviewData object displays review status of URL.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceUrlReviewData   {
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("disapprovalReviewUrl")
-  private JsonNullable<AdGroupServiceReviewUrl> disapprovalReviewUrl = JsonNullable.undefined();
+  private AdGroupServiceReviewUrl disapprovalReviewUrl = null;
 
   @JsonProperty("inReviewUrl")
-  private JsonNullable<AdGroupServiceReviewUrl> inReviewUrl = JsonNullable.undefined();
+  private AdGroupServiceReviewUrl inReviewUrl = null;
 
   @JsonProperty("urlApprovalStatus")
-  private JsonNullable<AdGroupServiceUrlApprovalStatus> urlApprovalStatus = JsonNullable.undefined();
+  private AdGroupServiceUrlApprovalStatus urlApprovalStatus = null;
 
   public AdGroupServiceUrlReviewData disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public AdGroupServiceUrlReviewData addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -52,16 +51,16 @@ public class AdGroupServiceUrlReviewData   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コードです。</div> <div lang=\"en\">Code of Disapproval reason.<br></div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public AdGroupServiceUrlReviewData disapprovalReviewUrl(AdGroupServiceReviewUrl disapprovalReviewUrl) {
-    this.disapprovalReviewUrl = JsonNullable.of(disapprovalReviewUrl);
+    this.disapprovalReviewUrl = disapprovalReviewUrl;
     return this;
   }
 
@@ -73,16 +72,16 @@ public class AdGroupServiceUrlReviewData   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceReviewUrl> getDisapprovalReviewUrl() {
+  public AdGroupServiceReviewUrl getDisapprovalReviewUrl() {
     return disapprovalReviewUrl;
   }
 
-  public void setDisapprovalReviewUrl(JsonNullable<AdGroupServiceReviewUrl> disapprovalReviewUrl) {
+  public void setDisapprovalReviewUrl(AdGroupServiceReviewUrl disapprovalReviewUrl) {
     this.disapprovalReviewUrl = disapprovalReviewUrl;
   }
 
   public AdGroupServiceUrlReviewData inReviewUrl(AdGroupServiceReviewUrl inReviewUrl) {
-    this.inReviewUrl = JsonNullable.of(inReviewUrl);
+    this.inReviewUrl = inReviewUrl;
     return this;
   }
 
@@ -94,16 +93,16 @@ public class AdGroupServiceUrlReviewData   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceReviewUrl> getInReviewUrl() {
+  public AdGroupServiceReviewUrl getInReviewUrl() {
     return inReviewUrl;
   }
 
-  public void setInReviewUrl(JsonNullable<AdGroupServiceReviewUrl> inReviewUrl) {
+  public void setInReviewUrl(AdGroupServiceReviewUrl inReviewUrl) {
     this.inReviewUrl = inReviewUrl;
   }
 
   public AdGroupServiceUrlReviewData urlApprovalStatus(AdGroupServiceUrlApprovalStatus urlApprovalStatus) {
-    this.urlApprovalStatus = JsonNullable.of(urlApprovalStatus);
+    this.urlApprovalStatus = urlApprovalStatus;
     return this;
   }
 
@@ -115,17 +114,17 @@ public class AdGroupServiceUrlReviewData   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceUrlApprovalStatus> getUrlApprovalStatus() {
+  public AdGroupServiceUrlApprovalStatus getUrlApprovalStatus() {
     return urlApprovalStatus;
   }
 
-  public void setUrlApprovalStatus(JsonNullable<AdGroupServiceUrlApprovalStatus> urlApprovalStatus) {
+  public void setUrlApprovalStatus(AdGroupServiceUrlApprovalStatus urlApprovalStatus) {
     this.urlApprovalStatus = urlApprovalStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -161,7 +160,7 @@ public class AdGroupServiceUrlReviewData   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

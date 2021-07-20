@@ -9,35 +9,34 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignCriterionServiceReturnValue;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * CampaignCriterionServiceMutateResponse
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignCriterionServiceMutateResponse   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("rid")
   private String rid;
 
   @JsonProperty("rval")
-  private JsonNullable<CampaignCriterionServiceReturnValue> rval = JsonNullable.undefined();
+  private CampaignCriterionServiceReturnValue rval = null;
 
   public CampaignCriterionServiceMutateResponse errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public CampaignCriterionServiceMutateResponse addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -49,11 +48,11 @@ public class CampaignCriterionServiceMutateResponse   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
@@ -78,7 +77,7 @@ public class CampaignCriterionServiceMutateResponse   {
   }
 
   public CampaignCriterionServiceMutateResponse rval(CampaignCriterionServiceReturnValue rval) {
-    this.rval = JsonNullable.of(rval);
+    this.rval = rval;
     return this;
   }
 
@@ -90,17 +89,17 @@ public class CampaignCriterionServiceMutateResponse   {
 
   @Valid
 
-  public JsonNullable<CampaignCriterionServiceReturnValue> getRval() {
+  public CampaignCriterionServiceReturnValue getRval() {
     return rval;
   }
 
-  public void setRval(JsonNullable<CampaignCriterionServiceReturnValue> rval) {
+  public void setRval(CampaignCriterionServiceReturnValue rval) {
     this.rval = rval;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -134,7 +133,7 @@ public class CampaignCriterionServiceMutateResponse   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

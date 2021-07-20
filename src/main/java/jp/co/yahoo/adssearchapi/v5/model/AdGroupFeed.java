@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupFeedServicePlaceholderType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,25 +13,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupFeedオブジェクトは、広告グループに紐づけられたFeedItem情報を表します。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupFeed describes the FeedItem information connected to ad group.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupFeedオブジェクトは、広告グループに紐づけられたFeedItem情報を表します。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupFeed describes the FeedItem information connected to ad group.<br> This field is required in SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupFeed   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("feedItemId")
-  private JsonNullable<Long> feedItemId = JsonNullable.undefined();
+  private Long feedItemId = null;
 
   @JsonProperty("placeholderType")
-  private JsonNullable<AdGroupFeedServicePlaceholderType> placeholderType = JsonNullable.undefined();
+  private AdGroupFeedServicePlaceholderType placeholderType = null;
 
   public AdGroupFeed accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -43,16 +42,16 @@ public class AdGroupFeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AdGroupFeed adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class AdGroupFeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。</div> <div lang=\"en\">Ad group ID.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public AdGroupFeed campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class AdGroupFeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public AdGroupFeed feedItemId(Long feedItemId) {
-    this.feedItemId = JsonNullable.of(feedItemId);
+    this.feedItemId = feedItemId;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class AdGroupFeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">FeedItem情報のIDです。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">FeedItem information ID.<br> This field is required in SET operation.</div> ")
 
 
-  public JsonNullable<Long> getFeedItemId() {
+  public Long getFeedItemId() {
     return feedItemId;
   }
 
-  public void setFeedItemId(JsonNullable<Long> feedItemId) {
+  public void setFeedItemId(Long feedItemId) {
     this.feedItemId = feedItemId;
   }
 
   public AdGroupFeed placeholderType(AdGroupFeedServicePlaceholderType placeholderType) {
-    this.placeholderType = JsonNullable.of(placeholderType);
+    this.placeholderType = placeholderType;
     return this;
   }
 
@@ -124,17 +123,17 @@ public class AdGroupFeed   {
 
   @Valid
 
-  public JsonNullable<AdGroupFeedServicePlaceholderType> getPlaceholderType() {
+  public AdGroupFeedServicePlaceholderType getPlaceholderType() {
     return placeholderType;
   }
 
-  public void setPlaceholderType(JsonNullable<AdGroupFeedServicePlaceholderType> placeholderType) {
+  public void setPlaceholderType(AdGroupFeedServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -172,7 +171,7 @@ public class AdGroupFeed   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

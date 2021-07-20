@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceMatchType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServicePageFeedUrlオブジェクトは、ページフィードURL検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServicePageFeedUrl object stores search condition of page feed URL.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServicePageFeedUrlオブジェクトは、ページフィードURL検索条件を格納します。</div> <div lang=\"en\">PageFeedItemServicePageFeedUrl object stores search condition of page feed URL.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServicePageFeedUrl   {
   @JsonProperty("matchType")
-  private JsonNullable<PageFeedItemServiceMatchType> matchType = JsonNullable.undefined();
+  private PageFeedItemServiceMatchType matchType = null;
 
   @JsonProperty("text")
-  private JsonNullable<String> text = JsonNullable.undefined();
+  private String text = null;
 
   public PageFeedItemServicePageFeedUrl matchType(PageFeedItemServiceMatchType matchType) {
-    this.matchType = JsonNullable.of(matchType);
+    this.matchType = matchType;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class PageFeedItemServicePageFeedUrl   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceMatchType> getMatchType() {
+  public PageFeedItemServiceMatchType getMatchType() {
     return matchType;
   }
 
-  public void setMatchType(JsonNullable<PageFeedItemServiceMatchType> matchType) {
+  public void setMatchType(PageFeedItemServiceMatchType matchType) {
     this.matchType = matchType;
   }
 
   public PageFeedItemServicePageFeedUrl text(String text) {
-    this.text = JsonNullable.of(text);
+    this.text = text;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class PageFeedItemServicePageFeedUrl   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページフィードURL</div> <div lang=\"en\">Page feed URL</div> ")
 
 
-  public JsonNullable<String> getText() {
+  public String getText() {
     return text;
   }
 
-  public void setText(JsonNullable<String> text) {
+  public void setText(String text) {
     this.text = text;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class PageFeedItemServicePageFeedUrl   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AccountLinkServiceLinkAccessPermission;
 import jp.co.yahoo.adssearchapi.v5.model.AccountLinkServiceOwnerShipType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,7 +14,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountLinkオブジェクトは、アカウントリンク情報を示します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountLink objects serve account link information.&lt;br&gt; &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountLinkオブジェクトは、アカウントリンク情報を示します。<br> </div> <div lang=\"en\">AccountLink objects serve account link information.<br> </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountLink   {
   @JsonProperty("managerAccountId")
   private Long managerAccountId;
@@ -24,10 +23,10 @@ public class AccountLink   {
   private Long accountId;
 
   @JsonProperty("linkAccessPermission")
-  private JsonNullable<AccountLinkServiceLinkAccessPermission> linkAccessPermission = JsonNullable.undefined();
+  private AccountLinkServiceLinkAccessPermission linkAccessPermission = null;
 
   @JsonProperty("ownerShipType")
-  private JsonNullable<AccountLinkServiceOwnerShipType> ownerShipType = JsonNullable.undefined();
+  private AccountLinkServiceOwnerShipType ownerShipType = null;
 
   public AccountLink managerAccountId(Long managerAccountId) {
     this.managerAccountId = managerAccountId;
@@ -70,7 +69,7 @@ public class AccountLink   {
   }
 
   public AccountLink linkAccessPermission(AccountLinkServiceLinkAccessPermission linkAccessPermission) {
-    this.linkAccessPermission = JsonNullable.of(linkAccessPermission);
+    this.linkAccessPermission = linkAccessPermission;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class AccountLink   {
 
   @Valid
 
-  public JsonNullable<AccountLinkServiceLinkAccessPermission> getLinkAccessPermission() {
+  public AccountLinkServiceLinkAccessPermission getLinkAccessPermission() {
     return linkAccessPermission;
   }
 
-  public void setLinkAccessPermission(JsonNullable<AccountLinkServiceLinkAccessPermission> linkAccessPermission) {
+  public void setLinkAccessPermission(AccountLinkServiceLinkAccessPermission linkAccessPermission) {
     this.linkAccessPermission = linkAccessPermission;
   }
 
   public AccountLink ownerShipType(AccountLinkServiceOwnerShipType ownerShipType) {
-    this.ownerShipType = JsonNullable.of(ownerShipType);
+    this.ownerShipType = ownerShipType;
     return this;
   }
 
@@ -103,17 +102,17 @@ public class AccountLink   {
 
   @Valid
 
-  public JsonNullable<AccountLinkServiceOwnerShipType> getOwnerShipType() {
+  public AccountLinkServiceOwnerShipType getOwnerShipType() {
     return ownerShipType;
   }
 
-  public void setOwnerShipType(JsonNullable<AccountLinkServiceOwnerShipType> ownerShipType) {
+  public void setOwnerShipType(AccountLinkServiceOwnerShipType ownerShipType) {
     this.ownerShipType = ownerShipType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -149,7 +148,7 @@ public class AccountLink   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

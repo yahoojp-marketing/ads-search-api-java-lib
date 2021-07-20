@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceCriterionTypeFeedItem;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceGeoRestriction;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceIsRemove;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceLocationオブジェクトは、地域設定情報を格納します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※アドカスタマイザーの場合は、ADD時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceLocation object contains the information of Geographic FeedItemServiceLocation.&lt;br&gt; Although this field will be returned in the  response, it will be ignored on input.&lt;br&gt; *For AD_CUSTOMIZER, this field is optional in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemServiceLocationオブジェクトは、地域設定情報を格納します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※アドカスタマイザーの場合は、ADD時に省略可能となります。</div> <div lang=\"en\">FeedItemServiceLocation object contains the information of Geographic FeedItemServiceLocation.<br> Although this field will be returned in the  response, it will be ignored on input.<br> *For AD_CUSTOMIZER, this field is optional in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItemServiceLocation   {
   @JsonProperty("criterionTypeFeedItem")
-  private JsonNullable<FeedItemServiceCriterionTypeFeedItem> criterionTypeFeedItem = JsonNullable.undefined();
+  private FeedItemServiceCriterionTypeFeedItem criterionTypeFeedItem = null;
 
   @JsonProperty("geoRestriction")
-  private JsonNullable<FeedItemServiceGeoRestriction> geoRestriction = JsonNullable.undefined();
+  private FeedItemServiceGeoRestriction geoRestriction = null;
 
   @JsonProperty("isRemove")
-  private JsonNullable<FeedItemServiceIsRemove> isRemove = JsonNullable.undefined();
+  private FeedItemServiceIsRemove isRemove = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   public FeedItemServiceLocation criterionTypeFeedItem(FeedItemServiceCriterionTypeFeedItem criterionTypeFeedItem) {
-    this.criterionTypeFeedItem = JsonNullable.of(criterionTypeFeedItem);
+    this.criterionTypeFeedItem = criterionTypeFeedItem;
     return this;
   }
 
@@ -43,16 +42,16 @@ public class FeedItemServiceLocation   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceCriterionTypeFeedItem> getCriterionTypeFeedItem() {
+  public FeedItemServiceCriterionTypeFeedItem getCriterionTypeFeedItem() {
     return criterionTypeFeedItem;
   }
 
-  public void setCriterionTypeFeedItem(JsonNullable<FeedItemServiceCriterionTypeFeedItem> criterionTypeFeedItem) {
+  public void setCriterionTypeFeedItem(FeedItemServiceCriterionTypeFeedItem criterionTypeFeedItem) {
     this.criterionTypeFeedItem = criterionTypeFeedItem;
   }
 
   public FeedItemServiceLocation geoRestriction(FeedItemServiceGeoRestriction geoRestriction) {
-    this.geoRestriction = JsonNullable.of(geoRestriction);
+    this.geoRestriction = geoRestriction;
     return this;
   }
 
@@ -64,16 +63,16 @@ public class FeedItemServiceLocation   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceGeoRestriction> getGeoRestriction() {
+  public FeedItemServiceGeoRestriction getGeoRestriction() {
     return geoRestriction;
   }
 
-  public void setGeoRestriction(JsonNullable<FeedItemServiceGeoRestriction> geoRestriction) {
+  public void setGeoRestriction(FeedItemServiceGeoRestriction geoRestriction) {
     this.geoRestriction = geoRestriction;
   }
 
   public FeedItemServiceLocation isRemove(FeedItemServiceIsRemove isRemove) {
-    this.isRemove = JsonNullable.of(isRemove);
+    this.isRemove = isRemove;
     return this;
   }
 
@@ -85,16 +84,16 @@ public class FeedItemServiceLocation   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceIsRemove> getIsRemove() {
+  public FeedItemServiceIsRemove getIsRemove() {
     return isRemove;
   }
 
-  public void setIsRemove(JsonNullable<FeedItemServiceIsRemove> isRemove) {
+  public void setIsRemove(FeedItemServiceIsRemove isRemove) {
     this.isRemove = isRemove;
   }
 
   public FeedItemServiceLocation targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -105,17 +104,17 @@ public class FeedItemServiceLocation   {
   @ApiModelProperty(value = "<div lang=\"ja\">地域種別コードです。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">FeedItemServiceLocation Type Code.<br> This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -151,7 +150,7 @@ public class FeedItemServiceLocation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

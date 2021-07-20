@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignExportServiceJobStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,24 +15,24 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceSelector オブジェクトは、登録したジョブを検索する条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceSelector object describes the condition to search registered job settings.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignExportServiceSelector オブジェクトは、登録したジョブを検索する条件を表します。</div> <div lang=\"en\">CampaignExportServiceSelector object describes the condition to search registered job settings.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignExportServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("jobIds")
   @Valid
-  private JsonNullable<List<Long>> jobIds = JsonNullable.undefined();
+  private List<Long> jobIds = null;
 
   @JsonProperty("jobStatuses")
   @Valid
-  private JsonNullable<List<CampaignExportServiceJobStatus>> jobStatuses = JsonNullable.undefined();
+  private List<CampaignExportServiceJobStatus> jobStatuses = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public CampaignExportServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -57,15 +56,15 @@ public class CampaignExportServiceSelector   {
   }
 
   public CampaignExportServiceSelector jobIds(List<Long> jobIds) {
-    this.jobIds = JsonNullable.of(jobIds);
+    this.jobIds = jobIds;
     return this;
   }
 
   public CampaignExportServiceSelector addJobIdsItem(Long jobIdsItem) {
-    if (this.jobIds == null || !this.jobIds.isPresent()) {
-      this.jobIds = JsonNullable.of(new ArrayList<>());
+    if (this.jobIds == null) {
+      this.jobIds = new ArrayList<>();
     }
-    this.jobIds.get().add(jobIdsItem);
+    this.jobIds.add(jobIdsItem);
     return this;
   }
 
@@ -76,24 +75,24 @@ public class CampaignExportServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ジョブIDです。</div> <div lang=\"en\">Search condition: Job ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getJobIds() {
+  public List<Long> getJobIds() {
     return jobIds;
   }
 
-  public void setJobIds(JsonNullable<List<Long>> jobIds) {
+  public void setJobIds(List<Long> jobIds) {
     this.jobIds = jobIds;
   }
 
   public CampaignExportServiceSelector jobStatuses(List<CampaignExportServiceJobStatus> jobStatuses) {
-    this.jobStatuses = JsonNullable.of(jobStatuses);
+    this.jobStatuses = jobStatuses;
     return this;
   }
 
   public CampaignExportServiceSelector addJobStatusesItem(CampaignExportServiceJobStatus jobStatusesItem) {
-    if (this.jobStatuses == null || !this.jobStatuses.isPresent()) {
-      this.jobStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.jobStatuses == null) {
+      this.jobStatuses = new ArrayList<>();
     }
-    this.jobStatuses.get().add(jobStatusesItem);
+    this.jobStatuses.add(jobStatusesItem);
     return this;
   }
 
@@ -105,16 +104,16 @@ public class CampaignExportServiceSelector   {
 
   @Valid
 @Size(max=4) 
-  public JsonNullable<List<CampaignExportServiceJobStatus>> getJobStatuses() {
+  public List<CampaignExportServiceJobStatus> getJobStatuses() {
     return jobStatuses;
   }
 
-  public void setJobStatuses(JsonNullable<List<CampaignExportServiceJobStatus>> jobStatuses) {
+  public void setJobStatuses(List<CampaignExportServiceJobStatus> jobStatuses) {
     this.jobStatuses = jobStatuses;
   }
 
   public CampaignExportServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -127,16 +126,16 @@ public class CampaignExportServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public CampaignExportServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -148,17 +147,17 @@ public class CampaignExportServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -196,7 +195,7 @@ public class CampaignExportServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

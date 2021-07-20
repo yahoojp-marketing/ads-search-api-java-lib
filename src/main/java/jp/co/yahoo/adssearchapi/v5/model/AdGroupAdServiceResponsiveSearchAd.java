@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceDescriptionTextAsset;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceHeadlineTextAsset;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,32 +16,32 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ広告を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceResponsiveSearchAd object is Responsive ads.&lt;br&gt; This field is optional in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ広告を表します。<br> ADD時、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceResponsiveSearchAd object is Responsive ads.<br> This field is optional in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceResponsiveSearchAd   {
   @JsonProperty("headlines")
   @Valid
-  private JsonNullable<List<AdGroupAdServiceHeadlineTextAsset>> headlines = JsonNullable.undefined();
+  private List<AdGroupAdServiceHeadlineTextAsset> headlines = null;
 
   @JsonProperty("descriptions")
   @Valid
-  private JsonNullable<List<AdGroupAdServiceDescriptionTextAsset>> descriptions = JsonNullable.undefined();
+  private List<AdGroupAdServiceDescriptionTextAsset> descriptions = null;
 
   @JsonProperty("path1")
-  private JsonNullable<String> path1 = JsonNullable.undefined();
+  private String path1 = null;
 
   @JsonProperty("path2")
-  private JsonNullable<String> path2 = JsonNullable.undefined();
+  private String path2 = null;
 
   public AdGroupAdServiceResponsiveSearchAd headlines(List<AdGroupAdServiceHeadlineTextAsset> headlines) {
-    this.headlines = JsonNullable.of(headlines);
+    this.headlines = headlines;
     return this;
   }
 
   public AdGroupAdServiceResponsiveSearchAd addHeadlinesItem(AdGroupAdServiceHeadlineTextAsset headlinesItem) {
-    if (this.headlines == null || !this.headlines.isPresent()) {
-      this.headlines = JsonNullable.of(new ArrayList<>());
+    if (this.headlines == null) {
+      this.headlines = new ArrayList<>();
     }
-    this.headlines.get().add(headlinesItem);
+    this.headlines.add(headlinesItem);
     return this;
   }
 
@@ -54,24 +53,24 @@ public class AdGroupAdServiceResponsiveSearchAd   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupAdServiceHeadlineTextAsset>> getHeadlines() {
+  public List<AdGroupAdServiceHeadlineTextAsset> getHeadlines() {
     return headlines;
   }
 
-  public void setHeadlines(JsonNullable<List<AdGroupAdServiceHeadlineTextAsset>> headlines) {
+  public void setHeadlines(List<AdGroupAdServiceHeadlineTextAsset> headlines) {
     this.headlines = headlines;
   }
 
   public AdGroupAdServiceResponsiveSearchAd descriptions(List<AdGroupAdServiceDescriptionTextAsset> descriptions) {
-    this.descriptions = JsonNullable.of(descriptions);
+    this.descriptions = descriptions;
     return this;
   }
 
   public AdGroupAdServiceResponsiveSearchAd addDescriptionsItem(AdGroupAdServiceDescriptionTextAsset descriptionsItem) {
-    if (this.descriptions == null || !this.descriptions.isPresent()) {
-      this.descriptions = JsonNullable.of(new ArrayList<>());
+    if (this.descriptions == null) {
+      this.descriptions = new ArrayList<>();
     }
-    this.descriptions.get().add(descriptionsItem);
+    this.descriptions.add(descriptionsItem);
     return this;
   }
 
@@ -83,16 +82,16 @@ public class AdGroupAdServiceResponsiveSearchAd   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupAdServiceDescriptionTextAsset>> getDescriptions() {
+  public List<AdGroupAdServiceDescriptionTextAsset> getDescriptions() {
     return descriptions;
   }
 
-  public void setDescriptions(JsonNullable<List<AdGroupAdServiceDescriptionTextAsset>> descriptions) {
+  public void setDescriptions(List<AdGroupAdServiceDescriptionTextAsset> descriptions) {
     this.descriptions = descriptions;
   }
 
   public AdGroupAdServiceResponsiveSearchAd path1(String path1) {
-    this.path1 = JsonNullable.of(path1);
+    this.path1 = path1;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class AdGroupAdServiceResponsiveSearchAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path2を指定する場合は、path1は必須です。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*To specify path2, path1 is required.</div> ")
 
 
-  public JsonNullable<String> getPath1() {
+  public String getPath1() {
     return path1;
   }
 
-  public void setPath1(JsonNullable<String> path1) {
+  public void setPath1(String path1) {
     this.path1 = path1;
   }
 
   public AdGroupAdServiceResponsiveSearchAd path2(String path2) {
-    this.path2 = JsonNullable.of(path2);
+    this.path2 = path2;
     return this;
   }
 
@@ -123,17 +122,17 @@ public class AdGroupAdServiceResponsiveSearchAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path1を指定していない場合、path2は無視されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*If path1 is not specified, path2 will be ignored.</div> ")
 
 
-  public JsonNullable<String> getPath2() {
+  public String getPath2() {
     return path2;
   }
 
-  public void setPath2(JsonNullable<String> path2) {
+  public void setPath2(String path2) {
     this.path2 = path2;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -169,7 +168,7 @@ public class AdGroupAdServiceResponsiveSearchAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

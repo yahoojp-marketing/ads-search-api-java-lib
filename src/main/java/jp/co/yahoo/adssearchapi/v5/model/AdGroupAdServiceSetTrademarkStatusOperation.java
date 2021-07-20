@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceSetTrademarkStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceSetTrademarkStatusOperationオブジェクトは、操作対象の商標使用制限の情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceSetTrademarkStatusOperation object holds the target&#39;s trademark restriction information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceSetTrademarkStatusOperationオブジェクトは、操作対象の商標使用制限の情報を格納します。</div> <div lang=\"en\">AdGroupAdServiceSetTrademarkStatusOperation object holds the target's trademark restriction information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceSetTrademarkStatusOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<AdGroupAdServiceSetTrademarkStatus>> operand = JsonNullable.undefined();
+  private List<AdGroupAdServiceSetTrademarkStatus> operand = new ArrayList<>();
 
   public AdGroupAdServiceSetTrademarkStatusOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class AdGroupAdServiceSetTrademarkStatusOperation   {
   }
 
   public AdGroupAdServiceSetTrademarkStatusOperation operand(List<AdGroupAdServiceSetTrademarkStatus> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public AdGroupAdServiceSetTrademarkStatusOperation addOperandItem(AdGroupAdServiceSetTrademarkStatus operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class AdGroupAdServiceSetTrademarkStatusOperation   {
 
   @Valid
 @Size(min=1,max=2000) 
-  public JsonNullable<List<AdGroupAdServiceSetTrademarkStatus>> getOperand() {
+  public List<AdGroupAdServiceSetTrademarkStatus> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<AdGroupAdServiceSetTrademarkStatus>> operand) {
+  public void setOperand(List<AdGroupAdServiceSetTrademarkStatus> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AdGroupAdServiceSetTrademarkStatusOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

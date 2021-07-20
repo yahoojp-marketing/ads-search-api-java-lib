@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceLogicalCondition;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceLogicalRuleOperand;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalGroupは、組合せグループの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalGroup is an object that holds combination group information.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceLogicalGroupは、組合せグループの情報を保持するオブジェクトです。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">RetargetingListServiceLogicalGroup is an object that holds combination group information.<br> This field is required in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceLogicalGroup   {
   @JsonProperty("logicalCondition")
-  private JsonNullable<RetargetingListServiceLogicalCondition> logicalCondition = JsonNullable.undefined();
+  private RetargetingListServiceLogicalCondition logicalCondition = null;
 
   @JsonProperty("logicalOperand")
   @Valid
-  private JsonNullable<List<RetargetingListServiceLogicalRuleOperand>> logicalOperand = JsonNullable.undefined();
+  private List<RetargetingListServiceLogicalRuleOperand> logicalOperand = null;
 
   public RetargetingListServiceLogicalGroup logicalCondition(RetargetingListServiceLogicalCondition logicalCondition) {
-    this.logicalCondition = JsonNullable.of(logicalCondition);
+    this.logicalCondition = logicalCondition;
     return this;
   }
 
@@ -39,24 +38,24 @@ public class RetargetingListServiceLogicalGroup   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceLogicalCondition> getLogicalCondition() {
+  public RetargetingListServiceLogicalCondition getLogicalCondition() {
     return logicalCondition;
   }
 
-  public void setLogicalCondition(JsonNullable<RetargetingListServiceLogicalCondition> logicalCondition) {
+  public void setLogicalCondition(RetargetingListServiceLogicalCondition logicalCondition) {
     this.logicalCondition = logicalCondition;
   }
 
   public RetargetingListServiceLogicalGroup logicalOperand(List<RetargetingListServiceLogicalRuleOperand> logicalOperand) {
-    this.logicalOperand = JsonNullable.of(logicalOperand);
+    this.logicalOperand = logicalOperand;
     return this;
   }
 
   public RetargetingListServiceLogicalGroup addLogicalOperandItem(RetargetingListServiceLogicalRuleOperand logicalOperandItem) {
-    if (this.logicalOperand == null || !this.logicalOperand.isPresent()) {
-      this.logicalOperand = JsonNullable.of(new ArrayList<>());
+    if (this.logicalOperand == null) {
+      this.logicalOperand = new ArrayList<>();
     }
-    this.logicalOperand.get().add(logicalOperandItem);
+    this.logicalOperand.add(logicalOperandItem);
     return this;
   }
 
@@ -68,17 +67,17 @@ public class RetargetingListServiceLogicalGroup   {
 
   @Valid
 
-  public JsonNullable<List<RetargetingListServiceLogicalRuleOperand>> getLogicalOperand() {
+  public List<RetargetingListServiceLogicalRuleOperand> getLogicalOperand() {
     return logicalOperand;
   }
 
-  public void setLogicalOperand(JsonNullable<List<RetargetingListServiceLogicalRuleOperand>> logicalOperand) {
+  public void setLogicalOperand(List<RetargetingListServiceLogicalRuleOperand> logicalOperand) {
     this.logicalOperand = logicalOperand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class RetargetingListServiceLogicalGroup   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

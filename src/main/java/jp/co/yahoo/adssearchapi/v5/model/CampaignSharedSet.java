@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,25 +12,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignSharedSetは、キャンペーンと対象外キーワードリストの関連付け情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignSharedSet is object to hold setup information between negative keyword list and campaign.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignSharedSetは、キャンペーンと対象外キーワードリストの関連付け情報を保持するオブジェクトです。</div> <div lang=\"en\">CampaignSharedSet is object to hold setup information between negative keyword list and campaign.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignSharedSet   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("sharedListId")
-  private JsonNullable<Long> sharedListId = JsonNullable.undefined();
+  private Long sharedListId = null;
 
   @JsonProperty("sharedListName")
-  private JsonNullable<String> sharedListName = JsonNullable.undefined();
+  private String sharedListName = null;
 
   public CampaignSharedSet accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class CampaignSharedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public CampaignSharedSet campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class CampaignSharedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> ADD時およびREMOVE時、このフィールドは必須です。</div> <div lang=\"en\">Campaign ID.<br> This field is required in ADD and REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public CampaignSharedSet campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class CampaignSharedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。</div> <div lang=\"en\">Campaign name.</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public CampaignSharedSet sharedListId(Long sharedListId) {
-    this.sharedListId = JsonNullable.of(sharedListId);
+    this.sharedListId = sharedListId;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class CampaignSharedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントの対象外キーワードリストIDです。<br> ADD時およびREMOVE時、このフィールドは必須です。</div> <div lang=\"en\">Negative keyword list ID of the account.<br> This field is required in ADD and REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getSharedListId() {
+  public Long getSharedListId() {
     return sharedListId;
   }
 
-  public void setSharedListId(JsonNullable<Long> sharedListId) {
+  public void setSharedListId(Long sharedListId) {
     this.sharedListId = sharedListId;
   }
 
   public CampaignSharedSet sharedListName(String sharedListName) {
-    this.sharedListName = JsonNullable.of(sharedListName);
+    this.sharedListName = sharedListName;
     return this;
   }
 
@@ -122,17 +121,17 @@ public class CampaignSharedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントの対象外キーワードリスト名です。</div> <div lang=\"en\">Negative keyword list name of the account.</div> ")
 
 
-  public JsonNullable<String> getSharedListName() {
+  public String getSharedListName() {
     return sharedListName;
   }
 
-  public void setSharedListName(JsonNullable<String> sharedListName) {
+  public void setSharedListName(String sharedListName) {
     this.sharedListName = sharedListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -170,7 +169,7 @@ public class CampaignSharedSet   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

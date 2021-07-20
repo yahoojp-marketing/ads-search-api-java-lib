@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AppLinkServiceAppLinkPlatform;
 import jp.co.yahoo.adssearchapi.v5.model.AppLinkServiceLinkStatus;
 import jp.co.yahoo.adssearchapi.v5.model.AppLinkServiceSyncStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,40 +15,40 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkオブジェクトは、アプリリンク情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLink information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AppLinkオブジェクトは、アプリリンク情報を表します。</div> <div lang=\"en\">AppLink information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AppLink   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("appLinkId")
-  private JsonNullable<Long> appLinkId = JsonNullable.undefined();
+  private Long appLinkId = null;
 
   @JsonProperty("appVendorId")
-  private JsonNullable<String> appVendorId = JsonNullable.undefined();
+  private String appVendorId = null;
 
   @JsonProperty("appVendorNameJa")
-  private JsonNullable<String> appVendorNameJa = JsonNullable.undefined();
+  private String appVendorNameJa = null;
 
   @JsonProperty("appVendorNameEn")
-  private JsonNullable<String> appVendorNameEn = JsonNullable.undefined();
+  private String appVendorNameEn = null;
 
   @JsonProperty("appId")
-  private JsonNullable<String> appId = JsonNullable.undefined();
+  private String appId = null;
 
   @JsonProperty("appLinkPlatform")
-  private JsonNullable<AppLinkServiceAppLinkPlatform> appLinkPlatform = JsonNullable.undefined();
+  private AppLinkServiceAppLinkPlatform appLinkPlatform = null;
 
   @JsonProperty("linkId")
-  private JsonNullable<String> linkId = JsonNullable.undefined();
+  private String linkId = null;
 
   @JsonProperty("linkStatus")
-  private JsonNullable<AppLinkServiceLinkStatus> linkStatus = JsonNullable.undefined();
+  private AppLinkServiceLinkStatus linkStatus = null;
 
   @JsonProperty("syncStatus")
-  private JsonNullable<AppLinkServiceSyncStatus> syncStatus = JsonNullable.undefined();
+  private AppLinkServiceSyncStatus syncStatus = null;
 
   public AppLink accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class AppLink   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AppLink appLinkId(Long appLinkId) {
-    this.appLinkId = JsonNullable.of(appLinkId);
+    this.appLinkId = appLinkId;
     return this;
   }
 
@@ -80,16 +79,16 @@ public class AppLink   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリリンクIDです。<br> SETまたはREGENERATE時、このフィールドは必須となります。</div> <div lang=\"en\">App Link ID.<br> This field is required in SET or REGENERATE operation.</div> ")
 
 
-  public JsonNullable<Long> getAppLinkId() {
+  public Long getAppLinkId() {
     return appLinkId;
   }
 
-  public void setAppLinkId(JsonNullable<Long> appLinkId) {
+  public void setAppLinkId(Long appLinkId) {
     this.appLinkId = appLinkId;
   }
 
   public AppLink appVendorId(String appVendorId) {
-    this.appVendorId = JsonNullable.of(appVendorId);
+    this.appVendorId = appVendorId;
     return this;
   }
 
@@ -100,16 +99,16 @@ public class AppLink   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダーIDです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">App Vendor ID.<br> This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getAppVendorId() {
+  public String getAppVendorId() {
     return appVendorId;
   }
 
-  public void setAppVendorId(JsonNullable<String> appVendorId) {
+  public void setAppVendorId(String appVendorId) {
     this.appVendorId = appVendorId;
   }
 
   public AppLink appVendorNameJa(String appVendorNameJa) {
-    this.appVendorNameJa = JsonNullable.of(appVendorNameJa);
+    this.appVendorNameJa = appVendorNameJa;
     return this;
   }
 
@@ -120,16 +119,16 @@ public class AppLink   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（日本語）です。</div> <div lang=\"en\">App Vendor Name in Japanese.</div> ")
 
 
-  public JsonNullable<String> getAppVendorNameJa() {
+  public String getAppVendorNameJa() {
     return appVendorNameJa;
   }
 
-  public void setAppVendorNameJa(JsonNullable<String> appVendorNameJa) {
+  public void setAppVendorNameJa(String appVendorNameJa) {
     this.appVendorNameJa = appVendorNameJa;
   }
 
   public AppLink appVendorNameEn(String appVendorNameEn) {
-    this.appVendorNameEn = JsonNullable.of(appVendorNameEn);
+    this.appVendorNameEn = appVendorNameEn;
     return this;
   }
 
@@ -140,16 +139,16 @@ public class AppLink   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（英語）です。</div> <div lang=\"en\">App Vendor Name in English.</div> ")
 
 
-  public JsonNullable<String> getAppVendorNameEn() {
+  public String getAppVendorNameEn() {
     return appVendorNameEn;
   }
 
-  public void setAppVendorNameEn(JsonNullable<String> appVendorNameEn) {
+  public void setAppVendorNameEn(String appVendorNameEn) {
     this.appVendorNameEn = appVendorNameEn;
   }
 
   public AppLink appId(String appId) {
-    this.appId = JsonNullable.of(appId);
+    this.appId = appId;
     return this;
   }
 
@@ -160,16 +159,16 @@ public class AppLink   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリIDです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">App ID.<br> This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getAppId() {
+  public String getAppId() {
     return appId;
   }
 
-  public void setAppId(JsonNullable<String> appId) {
+  public void setAppId(String appId) {
     this.appId = appId;
   }
 
   public AppLink appLinkPlatform(AppLinkServiceAppLinkPlatform appLinkPlatform) {
-    this.appLinkPlatform = JsonNullable.of(appLinkPlatform);
+    this.appLinkPlatform = appLinkPlatform;
     return this;
   }
 
@@ -181,16 +180,16 @@ public class AppLink   {
 
   @Valid
 
-  public JsonNullable<AppLinkServiceAppLinkPlatform> getAppLinkPlatform() {
+  public AppLinkServiceAppLinkPlatform getAppLinkPlatform() {
     return appLinkPlatform;
   }
 
-  public void setAppLinkPlatform(JsonNullable<AppLinkServiceAppLinkPlatform> appLinkPlatform) {
+  public void setAppLinkPlatform(AppLinkServiceAppLinkPlatform appLinkPlatform) {
     this.appLinkPlatform = appLinkPlatform;
   }
 
   public AppLink linkId(String linkId) {
-    this.linkId = JsonNullable.of(linkId);
+    this.linkId = linkId;
     return this;
   }
 
@@ -201,16 +200,16 @@ public class AppLink   {
   @ApiModelProperty(value = "<div lang=\"ja\">リンクIDです。</div> <div lang=\"en\">Link ID.</div> ")
 
 
-  public JsonNullable<String> getLinkId() {
+  public String getLinkId() {
     return linkId;
   }
 
-  public void setLinkId(JsonNullable<String> linkId) {
+  public void setLinkId(String linkId) {
     this.linkId = linkId;
   }
 
   public AppLink linkStatus(AppLinkServiceLinkStatus linkStatus) {
-    this.linkStatus = JsonNullable.of(linkStatus);
+    this.linkStatus = linkStatus;
     return this;
   }
 
@@ -222,16 +221,16 @@ public class AppLink   {
 
   @Valid
 
-  public JsonNullable<AppLinkServiceLinkStatus> getLinkStatus() {
+  public AppLinkServiceLinkStatus getLinkStatus() {
     return linkStatus;
   }
 
-  public void setLinkStatus(JsonNullable<AppLinkServiceLinkStatus> linkStatus) {
+  public void setLinkStatus(AppLinkServiceLinkStatus linkStatus) {
     this.linkStatus = linkStatus;
   }
 
   public AppLink syncStatus(AppLinkServiceSyncStatus syncStatus) {
-    this.syncStatus = JsonNullable.of(syncStatus);
+    this.syncStatus = syncStatus;
     return this;
   }
 
@@ -243,17 +242,17 @@ public class AppLink   {
 
   @Valid
 
-  public JsonNullable<AppLinkServiceSyncStatus> getSyncStatus() {
+  public AppLinkServiceSyncStatus getSyncStatus() {
     return syncStatus;
   }
 
-  public void setSyncStatus(JsonNullable<AppLinkServiceSyncStatus> syncStatus) {
+  public void setSyncStatus(AppLinkServiceSyncStatus syncStatus) {
     this.syncStatus = syncStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -301,7 +300,7 @@ public class AppLink   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

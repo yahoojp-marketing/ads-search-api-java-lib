@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceIsAllVisitorRule;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceIsDateSpecificRule;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceRuleGroup;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,26 +17,26 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleBaseTargetListは、ベースターゲットリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがRULEの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleBaseTargetList is an object that holds Rule based target list information.&lt;br&gt; This field is optional.&lt;br&gt;*If the targetListType is RULE, this field is required.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceRuleBaseTargetListは、ベースターゲットリストの情報を保持するオブジェクトです。<br> このフィールドは、省略可能となります。<br> ※targetListTypeがRULEの場合、このフィールドは必須となります。</div> <div lang=\"en\">RetargetingListServiceRuleBaseTargetList is an object that holds Rule based target list information.<br> This field is optional.<br>*If the targetListType is RULE, this field is required.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceRuleBaseTargetList   {
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("isAllVisitorRule")
-  private JsonNullable<RetargetingListServiceIsAllVisitorRule> isAllVisitorRule = JsonNullable.undefined();
+  private RetargetingListServiceIsAllVisitorRule isAllVisitorRule = null;
 
   @JsonProperty("isDateSpecificRule")
-  private JsonNullable<RetargetingListServiceIsDateSpecificRule> isDateSpecificRule = JsonNullable.undefined();
+  private RetargetingListServiceIsDateSpecificRule isDateSpecificRule = null;
 
   @JsonProperty("rules")
   @Valid
-  private JsonNullable<List<RetargetingListServiceRuleGroup>> rules = JsonNullable.undefined();
+  private List<RetargetingListServiceRuleGroup> rules = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   public RetargetingListServiceRuleBaseTargetList endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -48,16 +47,16 @@ public class RetargetingListServiceRuleBaseTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\">ルール適用終了日です。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> isDateSpecificがTRUEである場合、ADDおよびSET時に必須となります。<br> ※YYYYMMDD形式です。<br> ※リクエスト日は2037/12/30まで 指定可能です。</div> <div lang=\"en\">End date of rule setting.<br> This field is optional in ADD and SET operation.<br> If isDateSpecific is TRUE, this field  is required in ADD and SET operation.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public RetargetingListServiceRuleBaseTargetList isAllVisitorRule(RetargetingListServiceIsAllVisitorRule isAllVisitorRule) {
-    this.isAllVisitorRule = JsonNullable.of(isAllVisitorRule);
+    this.isAllVisitorRule = isAllVisitorRule;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class RetargetingListServiceRuleBaseTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceIsAllVisitorRule> getIsAllVisitorRule() {
+  public RetargetingListServiceIsAllVisitorRule getIsAllVisitorRule() {
     return isAllVisitorRule;
   }
 
-  public void setIsAllVisitorRule(JsonNullable<RetargetingListServiceIsAllVisitorRule> isAllVisitorRule) {
+  public void setIsAllVisitorRule(RetargetingListServiceIsAllVisitorRule isAllVisitorRule) {
     this.isAllVisitorRule = isAllVisitorRule;
   }
 
   public RetargetingListServiceRuleBaseTargetList isDateSpecificRule(RetargetingListServiceIsDateSpecificRule isDateSpecificRule) {
-    this.isDateSpecificRule = JsonNullable.of(isDateSpecificRule);
+    this.isDateSpecificRule = isDateSpecificRule;
     return this;
   }
 
@@ -90,24 +89,24 @@ public class RetargetingListServiceRuleBaseTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceIsDateSpecificRule> getIsDateSpecificRule() {
+  public RetargetingListServiceIsDateSpecificRule getIsDateSpecificRule() {
     return isDateSpecificRule;
   }
 
-  public void setIsDateSpecificRule(JsonNullable<RetargetingListServiceIsDateSpecificRule> isDateSpecificRule) {
+  public void setIsDateSpecificRule(RetargetingListServiceIsDateSpecificRule isDateSpecificRule) {
     this.isDateSpecificRule = isDateSpecificRule;
   }
 
   public RetargetingListServiceRuleBaseTargetList rules(List<RetargetingListServiceRuleGroup> rules) {
-    this.rules = JsonNullable.of(rules);
+    this.rules = rules;
     return this;
   }
 
   public RetargetingListServiceRuleBaseTargetList addRulesItem(RetargetingListServiceRuleGroup rulesItem) {
-    if (this.rules == null || !this.rules.isPresent()) {
-      this.rules = JsonNullable.of(new ArrayList<>());
+    if (this.rules == null) {
+      this.rules = new ArrayList<>();
     }
-    this.rules.get().add(rulesItem);
+    this.rules.add(rulesItem);
     return this;
   }
 
@@ -119,16 +118,16 @@ public class RetargetingListServiceRuleBaseTargetList   {
 
   @Valid
 
-  public JsonNullable<List<RetargetingListServiceRuleGroup>> getRules() {
+  public List<RetargetingListServiceRuleGroup> getRules() {
     return rules;
   }
 
-  public void setRules(JsonNullable<List<RetargetingListServiceRuleGroup>> rules) {
+  public void setRules(List<RetargetingListServiceRuleGroup> rules) {
     this.rules = rules;
   }
 
   public RetargetingListServiceRuleBaseTargetList startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -139,17 +138,17 @@ public class RetargetingListServiceRuleBaseTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\">ルール適用開始日です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> isDateSpecificがTRUEである場合、ADDおよびSET時に必須となります。 <br> ※YYYYMMDD形式です。<br>※リクエスト日は2037/12/30まで 指定可能です。</div> <div lang=\"en\">Start date of rule setting.<br> This field is optional in ADD and SET operation.<br> If isDateSpecific is TRUE, this field is  required in ADD and SET operation.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30 </div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -187,7 +186,7 @@ public class RetargetingListServiceRuleBaseTargetList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

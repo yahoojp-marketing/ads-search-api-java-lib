@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignCriterionServiceUse;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,27 +15,27 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceSelectorオブジェクトは、操作の対象となるキャンペーンのクライテリアを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceSelector object describes campaign criteria for operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceSelectorオブジェクトは、操作の対象となるキャンペーンのクライテリアを表します。</div> <div lang=\"en\">CampaignCriterionServiceSelector object describes campaign criteria for operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignCriterionServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("criterionIds")
   @Valid
-  private JsonNullable<List<Long>> criterionIds = JsonNullable.undefined();
+  private List<Long> criterionIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("use")
-  private JsonNullable<CampaignCriterionServiceUse> use = JsonNullable.undefined();
+  private CampaignCriterionServiceUse use = null;
 
   public CampaignCriterionServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -60,15 +59,15 @@ public class CampaignCriterionServiceSelector   {
   }
 
   public CampaignCriterionServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public CampaignCriterionServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -79,24 +78,24 @@ public class CampaignCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDの配列です。</div> <div lang=\"en\">Campaign ID array.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public CampaignCriterionServiceSelector criterionIds(List<Long> criterionIds) {
-    this.criterionIds = JsonNullable.of(criterionIds);
+    this.criterionIds = criterionIds;
     return this;
   }
 
   public CampaignCriterionServiceSelector addCriterionIdsItem(Long criterionIdsItem) {
-    if (this.criterionIds == null || !this.criterionIds.isPresent()) {
-      this.criterionIds = JsonNullable.of(new ArrayList<>());
+    if (this.criterionIds == null) {
+      this.criterionIds = new ArrayList<>();
     }
-    this.criterionIds.get().add(criterionIdsItem);
+    this.criterionIds.add(criterionIdsItem);
     return this;
   }
 
@@ -107,16 +106,16 @@ public class CampaignCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">クライテリオンIDの配列です。<br> 指定しない場合は、キャンペーンID以下のすべてのクライテリアが含まれます。</div> <div lang=\"en\">Criterion ID array.<br> If no criterionIds, all of criterionIds under the campaign ID are returned.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCriterionIds() {
+  public List<Long> getCriterionIds() {
     return criterionIds;
   }
 
-  public void setCriterionIds(JsonNullable<List<Long>> criterionIds) {
+  public void setCriterionIds(List<Long> criterionIds) {
     this.criterionIds = criterionIds;
   }
 
   public CampaignCriterionServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -129,16 +128,16 @@ public class CampaignCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public CampaignCriterionServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -150,16 +149,16 @@ public class CampaignCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public CampaignCriterionServiceSelector use(CampaignCriterionServiceUse use) {
-    this.use = JsonNullable.of(use);
+    this.use = use;
     return this;
   }
 
@@ -171,17 +170,17 @@ public class CampaignCriterionServiceSelector   {
 
   @Valid
 
-  public JsonNullable<CampaignCriterionServiceUse> getUse() {
+  public CampaignCriterionServiceUse getUse() {
     return use;
   }
 
-  public void setUse(JsonNullable<CampaignCriterionServiceUse> use) {
+  public void setUse(CampaignCriterionServiceUse use) {
     this.use = use;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -221,7 +220,7 @@ public class CampaignCriterionServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

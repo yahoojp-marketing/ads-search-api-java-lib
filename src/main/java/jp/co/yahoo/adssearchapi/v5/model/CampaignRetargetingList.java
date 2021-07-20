@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignRetargetingListServiceCriterionTargetList;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignRetargetingListServiceExcludedType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,28 +14,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListオブジェクトは、キャンペーン階層におけるターゲットリストの設定情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingList object holds the setting information of Target List on campaign level.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignRetargetingListオブジェクトは、キャンペーン階層におけるターゲットリストの設定情報を保持するオブジェクトです。</div> <div lang=\"en\">CampaignRetargetingList object holds the setting information of Target List on campaign level.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignRetargetingList   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("bidMultiplier")
-  private JsonNullable<Double> bidMultiplier = JsonNullable.undefined();
+  private Double bidMultiplier = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("criterionTargetList")
-  private JsonNullable<CampaignRetargetingListServiceCriterionTargetList> criterionTargetList = JsonNullable.undefined();
+  private CampaignRetargetingListServiceCriterionTargetList criterionTargetList = null;
 
   @JsonProperty("excludedType")
-  private JsonNullable<CampaignRetargetingListServiceExcludedType> excludedType = JsonNullable.undefined();
+  private CampaignRetargetingListServiceExcludedType excludedType = null;
 
   public CampaignRetargetingList accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -47,16 +46,16 @@ public class CampaignRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public CampaignRetargetingList bidMultiplier(Double bidMultiplier) {
-    this.bidMultiplier = JsonNullable.of(bidMultiplier);
+    this.bidMultiplier = bidMultiplier;
     return this;
   }
 
@@ -67,16 +66,16 @@ public class CampaignRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">   入札価格調整率です。0.10～10.00まで指定できます。<br>   0を指定した場合、広告は配信されません。<br>   また、入札価格調整率の値は小数点第二位まで指定可能です。<br>   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 </div> <div lang=\"en\">   Bid adjustment rate.<br>   Can be specified between  0.10 to 10.00.<br>   When specified &#39;0&#39;, the ad will not be delivered.<br>   Bid adjustment rate can be specified up to two decimal places.<br>   This field is optional. The default value will be 1.0. </div> ")
 
 
-  public JsonNullable<Double> getBidMultiplier() {
+  public Double getBidMultiplier() {
     return bidMultiplier;
   }
 
-  public void setBidMultiplier(JsonNullable<Double> bidMultiplier) {
+  public void setBidMultiplier(Double bidMultiplier) {
     this.bidMultiplier = bidMultiplier;
   }
 
   public CampaignRetargetingList campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -87,16 +86,16 @@ public class CampaignRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br>このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Campaign ID.<br>This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public CampaignRetargetingList campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -107,16 +106,16 @@ public class CampaignRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名称です。</div> <div lang=\"en\">Name of campaign.</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public CampaignRetargetingList criterionTargetList(CampaignRetargetingListServiceCriterionTargetList criterionTargetList) {
-    this.criterionTargetList = JsonNullable.of(criterionTargetList);
+    this.criterionTargetList = criterionTargetList;
     return this;
   }
 
@@ -128,16 +127,16 @@ public class CampaignRetargetingList   {
 
   @Valid
 
-  public JsonNullable<CampaignRetargetingListServiceCriterionTargetList> getCriterionTargetList() {
+  public CampaignRetargetingListServiceCriterionTargetList getCriterionTargetList() {
     return criterionTargetList;
   }
 
-  public void setCriterionTargetList(JsonNullable<CampaignRetargetingListServiceCriterionTargetList> criterionTargetList) {
+  public void setCriterionTargetList(CampaignRetargetingListServiceCriterionTargetList criterionTargetList) {
     this.criterionTargetList = criterionTargetList;
   }
 
   public CampaignRetargetingList excludedType(CampaignRetargetingListServiceExcludedType excludedType) {
-    this.excludedType = JsonNullable.of(excludedType);
+    this.excludedType = excludedType;
     return this;
   }
 
@@ -149,17 +148,17 @@ public class CampaignRetargetingList   {
 
   @Valid
 
-  public JsonNullable<CampaignRetargetingListServiceExcludedType> getExcludedType() {
+  public CampaignRetargetingListServiceExcludedType getExcludedType() {
     return excludedType;
   }
 
-  public void setExcludedType(JsonNullable<CampaignRetargetingListServiceExcludedType> excludedType) {
+  public void setExcludedType(CampaignRetargetingListServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -199,7 +198,7 @@ public class CampaignRetargetingList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

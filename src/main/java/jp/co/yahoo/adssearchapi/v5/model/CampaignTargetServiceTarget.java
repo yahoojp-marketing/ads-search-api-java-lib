@@ -10,7 +10,6 @@ import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServiceNetworkTarget;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServicePlatformTarget;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServiceScheduleTarget;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServiceTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,28 +17,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceTargetオブジェクトは、ターゲティング設定を表します。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceTarget object describes CampaignTargetServiceTarget information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceTargetオブジェクトは、ターゲティング設定を表します。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">CampaignTargetServiceTarget object describes CampaignTargetServiceTarget information.<br> This field is required in any cases.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignTargetServiceTarget   {
   @JsonProperty("locationTarget")
-  private JsonNullable<CampaignTargetServiceLocationTarget> locationTarget = JsonNullable.undefined();
+  private CampaignTargetServiceLocationTarget locationTarget = null;
 
   @JsonProperty("networkTarget")
-  private JsonNullable<CampaignTargetServiceNetworkTarget> networkTarget = JsonNullable.undefined();
+  private CampaignTargetServiceNetworkTarget networkTarget = null;
 
   @JsonProperty("platformTarget")
-  private JsonNullable<CampaignTargetServicePlatformTarget> platformTarget = JsonNullable.undefined();
+  private CampaignTargetServicePlatformTarget platformTarget = null;
 
   @JsonProperty("scheduleTarget")
-  private JsonNullable<CampaignTargetServiceScheduleTarget> scheduleTarget = JsonNullable.undefined();
+  private CampaignTargetServiceScheduleTarget scheduleTarget = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("targetType")
-  private JsonNullable<CampaignTargetServiceTargetType> targetType = JsonNullable.undefined();
+  private CampaignTargetServiceTargetType targetType = null;
 
   public CampaignTargetServiceTarget locationTarget(CampaignTargetServiceLocationTarget locationTarget) {
-    this.locationTarget = JsonNullable.of(locationTarget);
+    this.locationTarget = locationTarget;
     return this;
   }
 
@@ -51,16 +50,16 @@ public class CampaignTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceLocationTarget> getLocationTarget() {
+  public CampaignTargetServiceLocationTarget getLocationTarget() {
     return locationTarget;
   }
 
-  public void setLocationTarget(JsonNullable<CampaignTargetServiceLocationTarget> locationTarget) {
+  public void setLocationTarget(CampaignTargetServiceLocationTarget locationTarget) {
     this.locationTarget = locationTarget;
   }
 
   public CampaignTargetServiceTarget networkTarget(CampaignTargetServiceNetworkTarget networkTarget) {
-    this.networkTarget = JsonNullable.of(networkTarget);
+    this.networkTarget = networkTarget;
     return this;
   }
 
@@ -72,16 +71,16 @@ public class CampaignTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceNetworkTarget> getNetworkTarget() {
+  public CampaignTargetServiceNetworkTarget getNetworkTarget() {
     return networkTarget;
   }
 
-  public void setNetworkTarget(JsonNullable<CampaignTargetServiceNetworkTarget> networkTarget) {
+  public void setNetworkTarget(CampaignTargetServiceNetworkTarget networkTarget) {
     this.networkTarget = networkTarget;
   }
 
   public CampaignTargetServiceTarget platformTarget(CampaignTargetServicePlatformTarget platformTarget) {
-    this.platformTarget = JsonNullable.of(platformTarget);
+    this.platformTarget = platformTarget;
     return this;
   }
 
@@ -93,16 +92,16 @@ public class CampaignTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServicePlatformTarget> getPlatformTarget() {
+  public CampaignTargetServicePlatformTarget getPlatformTarget() {
     return platformTarget;
   }
 
-  public void setPlatformTarget(JsonNullable<CampaignTargetServicePlatformTarget> platformTarget) {
+  public void setPlatformTarget(CampaignTargetServicePlatformTarget platformTarget) {
     this.platformTarget = platformTarget;
   }
 
   public CampaignTargetServiceTarget scheduleTarget(CampaignTargetServiceScheduleTarget scheduleTarget) {
-    this.scheduleTarget = JsonNullable.of(scheduleTarget);
+    this.scheduleTarget = scheduleTarget;
     return this;
   }
 
@@ -114,16 +113,16 @@ public class CampaignTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceScheduleTarget> getScheduleTarget() {
+  public CampaignTargetServiceScheduleTarget getScheduleTarget() {
     return scheduleTarget;
   }
 
-  public void setScheduleTarget(JsonNullable<CampaignTargetServiceScheduleTarget> scheduleTarget) {
+  public void setScheduleTarget(CampaignTargetServiceScheduleTarget scheduleTarget) {
     this.scheduleTarget = scheduleTarget;
   }
 
   public CampaignTargetServiceTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -134,16 +133,16 @@ public class CampaignTargetServiceTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットIDです。<br> このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。<br> ※LocationCampaignTargetServiceTargetの場合、ADD時に必須となります。<br> ※PlatformCampaignTargetServiceTargetの場合、SET時に無視されます。</div> <div lang=\"en\">CampaignTargetServiceTarget ID.<br> This field will be ignored in ADD operation, and is required in ADD and REMOVE operation.<br> *For LocationCampaignTargetServiceTarget, this is required in ADD operation.<br> *For PlatformCampaignTargetServiceTarget, this will be ignored in SET operation.</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public CampaignTargetServiceTarget targetType(CampaignTargetServiceTargetType targetType) {
-    this.targetType = JsonNullable.of(targetType);
+    this.targetType = targetType;
     return this;
   }
 
@@ -155,17 +154,17 @@ public class CampaignTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceTargetType> getTargetType() {
+  public CampaignTargetServiceTargetType getTargetType() {
     return targetType;
   }
 
-  public void setTargetType(JsonNullable<CampaignTargetServiceTargetType> targetType) {
+  public void setTargetType(CampaignTargetServiceTargetType targetType) {
     this.targetType = targetType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -205,7 +204,7 @@ public class CampaignTargetServiceTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

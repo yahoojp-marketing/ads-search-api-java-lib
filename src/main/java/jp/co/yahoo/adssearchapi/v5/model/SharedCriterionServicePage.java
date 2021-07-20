@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.SharedCriterionServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionServicePageオブジェクトは、検索結果（全エンティティのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterionServicePage object holds search results (all entities list).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SharedCriterionServicePageオブジェクトは、検索結果（全エンティティのリスト）を保持します。</div> <div lang=\"en\">SharedCriterionServicePage object holds search results (all entities list).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SharedCriterionServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<SharedCriterionServiceValue>> values = JsonNullable.undefined();
+  private List<SharedCriterionServiceValue> values = null;
 
   public SharedCriterionServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class SharedCriterionServicePage   {
   }
 
   public SharedCriterionServicePage values(List<SharedCriterionServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public SharedCriterionServicePage addValuesItem(SharedCriterionServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class SharedCriterionServicePage   {
 
   @Valid
 
-  public JsonNullable<List<SharedCriterionServiceValue>> getValues() {
+  public List<SharedCriterionServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<SharedCriterionServiceValue>> values) {
+  public void setValues(List<SharedCriterionServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class SharedCriterionServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

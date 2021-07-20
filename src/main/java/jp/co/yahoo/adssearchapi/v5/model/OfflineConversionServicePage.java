@@ -8,24 +8,23 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.OfflineConversionServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * OfflineConversionServicePage
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class OfflineConversionServicePage   {
   @JsonProperty("totalNumEntries")
-  private JsonNullable<Integer> totalNumEntries = JsonNullable.undefined();
+  private Integer totalNumEntries = null;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<OfflineConversionServiceValue>> values = JsonNullable.undefined();
+  private List<OfflineConversionServiceValue> values = null;
 
   public OfflineConversionServicePage totalNumEntries(Integer totalNumEntries) {
-    this.totalNumEntries = JsonNullable.of(totalNumEntries);
+    this.totalNumEntries = totalNumEntries;
     return this;
   }
 
@@ -36,24 +35,24 @@ public class OfflineConversionServicePage   {
   @ApiModelProperty(value = "")
 
 
-  public JsonNullable<Integer> getTotalNumEntries() {
+  public Integer getTotalNumEntries() {
     return totalNumEntries;
   }
 
-  public void setTotalNumEntries(JsonNullable<Integer> totalNumEntries) {
+  public void setTotalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
   }
 
   public OfflineConversionServicePage values(List<OfflineConversionServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public OfflineConversionServicePage addValuesItem(OfflineConversionServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -65,17 +64,17 @@ public class OfflineConversionServicePage   {
 
   @Valid
 
-  public JsonNullable<List<OfflineConversionServiceValue>> getValues() {
+  public List<OfflineConversionServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<OfflineConversionServiceValue>> values) {
+  public void setValues(List<OfflineConversionServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +106,7 @@ public class OfflineConversionServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

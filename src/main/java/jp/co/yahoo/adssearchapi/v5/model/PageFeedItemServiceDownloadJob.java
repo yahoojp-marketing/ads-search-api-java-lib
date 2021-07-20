@@ -9,7 +9,6 @@ import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceBulkEncoding;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceBulkLang;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceBulkOutput;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceDownloadJobStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,40 +16,40 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceDownloadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceDownloadJob object retains contents of page feed item information for download.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceDownloadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。</div> <div lang=\"en\">PageFeedItemServiceDownloadJob object retains contents of page feed item information for download.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceDownloadJob   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("bulkEncoding")
-  private JsonNullable<PageFeedItemServiceBulkEncoding> bulkEncoding = JsonNullable.undefined();
+  private PageFeedItemServiceBulkEncoding bulkEncoding = null;
 
   @JsonProperty("bulkLang")
-  private JsonNullable<PageFeedItemServiceBulkLang> bulkLang = JsonNullable.undefined();
+  private PageFeedItemServiceBulkLang bulkLang = null;
 
   @JsonProperty("bulkOutput")
-  private JsonNullable<PageFeedItemServiceBulkOutput> bulkOutput = JsonNullable.undefined();
+  private PageFeedItemServiceBulkOutput bulkOutput = null;
 
   @JsonProperty("downloadJobStatus")
-  private JsonNullable<PageFeedItemServiceDownloadJobStatus> downloadJobStatus = JsonNullable.undefined();
+  private PageFeedItemServiceDownloadJobStatus downloadJobStatus = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("jobId")
-  private JsonNullable<Long> jobId = JsonNullable.undefined();
+  private Long jobId = null;
 
   @JsonProperty("progress")
-  private JsonNullable<Integer> progress = JsonNullable.undefined();
+  private Integer progress = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   public PageFeedItemServiceDownloadJob accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class PageFeedItemServiceDownloadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは必須です。</div> <div lang=\"en\">Account ID.<br> This field is required.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public PageFeedItemServiceDownloadJob bulkEncoding(PageFeedItemServiceBulkEncoding bulkEncoding) {
-    this.bulkEncoding = JsonNullable.of(bulkEncoding);
+    this.bulkEncoding = bulkEncoding;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class PageFeedItemServiceDownloadJob   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceBulkEncoding> getBulkEncoding() {
+  public PageFeedItemServiceBulkEncoding getBulkEncoding() {
     return bulkEncoding;
   }
 
-  public void setBulkEncoding(JsonNullable<PageFeedItemServiceBulkEncoding> bulkEncoding) {
+  public void setBulkEncoding(PageFeedItemServiceBulkEncoding bulkEncoding) {
     this.bulkEncoding = bulkEncoding;
   }
 
   public PageFeedItemServiceDownloadJob bulkLang(PageFeedItemServiceBulkLang bulkLang) {
-    this.bulkLang = JsonNullable.of(bulkLang);
+    this.bulkLang = bulkLang;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class PageFeedItemServiceDownloadJob   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceBulkLang> getBulkLang() {
+  public PageFeedItemServiceBulkLang getBulkLang() {
     return bulkLang;
   }
 
-  public void setBulkLang(JsonNullable<PageFeedItemServiceBulkLang> bulkLang) {
+  public void setBulkLang(PageFeedItemServiceBulkLang bulkLang) {
     this.bulkLang = bulkLang;
   }
 
   public PageFeedItemServiceDownloadJob bulkOutput(PageFeedItemServiceBulkOutput bulkOutput) {
-    this.bulkOutput = JsonNullable.of(bulkOutput);
+    this.bulkOutput = bulkOutput;
     return this;
   }
 
@@ -124,16 +123,16 @@ public class PageFeedItemServiceDownloadJob   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceBulkOutput> getBulkOutput() {
+  public PageFeedItemServiceBulkOutput getBulkOutput() {
     return bulkOutput;
   }
 
-  public void setBulkOutput(JsonNullable<PageFeedItemServiceBulkOutput> bulkOutput) {
+  public void setBulkOutput(PageFeedItemServiceBulkOutput bulkOutput) {
     this.bulkOutput = bulkOutput;
   }
 
   public PageFeedItemServiceDownloadJob downloadJobStatus(PageFeedItemServiceDownloadJobStatus downloadJobStatus) {
-    this.downloadJobStatus = JsonNullable.of(downloadJobStatus);
+    this.downloadJobStatus = downloadJobStatus;
     return this;
   }
 
@@ -145,16 +144,16 @@ public class PageFeedItemServiceDownloadJob   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceDownloadJobStatus> getDownloadJobStatus() {
+  public PageFeedItemServiceDownloadJobStatus getDownloadJobStatus() {
     return downloadJobStatus;
   }
 
-  public void setDownloadJobStatus(JsonNullable<PageFeedItemServiceDownloadJobStatus> downloadJobStatus) {
+  public void setDownloadJobStatus(PageFeedItemServiceDownloadJobStatus downloadJobStatus) {
     this.downloadJobStatus = downloadJobStatus;
   }
 
   public PageFeedItemServiceDownloadJob endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -165,16 +164,16 @@ public class PageFeedItemServiceDownloadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの終了日です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> 形式：yyyyMMddHHmmss</div><div lang=\"en\">End date of job.<br> Although this field will be returned in the response, it will be ignored on input.  <br> Format:yyyyMMddHHmmss</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public PageFeedItemServiceDownloadJob feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -185,16 +184,16 @@ public class PageFeedItemServiceDownloadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> このフィールドは必須です。</div> <div lang=\"en\">Feed ID.<br> This field is required.</div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public PageFeedItemServiceDownloadJob jobId(Long jobId) {
-    this.jobId = JsonNullable.of(jobId);
+    this.jobId = jobId;
     return this;
   }
 
@@ -205,16 +204,16 @@ public class PageFeedItemServiceDownloadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Job ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getJobId() {
+  public Long getJobId() {
     return jobId;
   }
 
-  public void setJobId(JsonNullable<Long> jobId) {
+  public void setJobId(Long jobId) {
     this.jobId = jobId;
   }
 
   public PageFeedItemServiceDownloadJob progress(Integer progress) {
-    this.progress = JsonNullable.of(progress);
+    this.progress = progress;
     return this;
   }
 
@@ -225,16 +224,16 @@ public class PageFeedItemServiceDownloadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの進捗状況です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Progress of page feed item job.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Integer> getProgress() {
+  public Integer getProgress() {
     return progress;
   }
 
-  public void setProgress(JsonNullable<Integer> progress) {
+  public void setProgress(Integer progress) {
     this.progress = progress;
   }
 
   public PageFeedItemServiceDownloadJob startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -245,17 +244,17 @@ public class PageFeedItemServiceDownloadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの開始日です。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 <br> 形式：yyyyMMddHHmmss </div> <div lang=\"en\">Start date of job.<br> Although this field will be returned in the response, it will be ignored on input.<br> Format:yyyyMMddHHmmss</div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -303,7 +302,7 @@ public class PageFeedItemServiceDownloadJob   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

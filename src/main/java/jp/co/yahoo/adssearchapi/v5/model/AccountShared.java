@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,25 +12,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountSharedオブジェクトは、アカウント内で共有できる対象外キーワードリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountShared object describes negative keyword list which can be shared within the account.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountSharedオブジェクトは、アカウント内で共有できる対象外キーワードリストの情報を表します。</div> <div lang=\"en\">AccountShared object describes negative keyword list which can be shared within the account.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountShared   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("memberCount")
-  private JsonNullable<Integer> memberCount = JsonNullable.undefined();
+  private Integer memberCount = null;
 
   @JsonProperty("name")
-  private JsonNullable<String> name = JsonNullable.undefined();
+  private String name = null;
 
   @JsonProperty("referenceCount")
-  private JsonNullable<Integer> referenceCount = JsonNullable.undefined();
+  private Integer referenceCount = null;
 
   @JsonProperty("sharedListId")
-  private JsonNullable<Long> sharedListId = JsonNullable.undefined();
+  private Long sharedListId = null;
 
   public AccountShared accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class AccountShared   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AccountShared memberCount(Integer memberCount) {
-    this.memberCount = JsonNullable.of(memberCount);
+    this.memberCount = memberCount;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class AccountShared   {
   @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリストに含まれるアイテム（検索対象外キーワード）数です。</div> <div lang=\"en\">Number of items on Negative keyword list (keyword excluded on search).</div> ")
 
 
-  public JsonNullable<Integer> getMemberCount() {
+  public Integer getMemberCount() {
     return memberCount;
   }
 
-  public void setMemberCount(JsonNullable<Integer> memberCount) {
+  public void setMemberCount(Integer memberCount) {
     this.memberCount = memberCount;
   }
 
   public AccountShared name(String name) {
-    this.name = JsonNullable.of(name);
+    this.name = name;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class AccountShared   {
   @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリスト名です。<br>ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Negative keyword list name.<br>This field is required in ADD and SET operation.</div> ")
 
 
-  public JsonNullable<String> getName() {
+  public String getName() {
     return name;
   }
 
-  public void setName(JsonNullable<String> name) {
+  public void setName(String name) {
     this.name = name;
   }
 
   public AccountShared referenceCount(Integer referenceCount) {
-    this.referenceCount = JsonNullable.of(referenceCount);
+    this.referenceCount = referenceCount;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class AccountShared   {
   @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリストを使用している キャンペーン数です。</div> <div lang=\"en\">Number of campaigns which use negative keyword list.</div> ")
 
 
-  public JsonNullable<Integer> getReferenceCount() {
+  public Integer getReferenceCount() {
     return referenceCount;
   }
 
-  public void setReferenceCount(JsonNullable<Integer> referenceCount) {
+  public void setReferenceCount(Integer referenceCount) {
     this.referenceCount = referenceCount;
   }
 
   public AccountShared sharedListId(Long sharedListId) {
-    this.sharedListId = JsonNullable.of(sharedListId);
+    this.sharedListId = sharedListId;
     return this;
   }
 
@@ -122,17 +121,17 @@ public class AccountShared   {
   @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリストIDです。<br>SETおよびREMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">Negative keyword list ID.<br>This field is required in SET and REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getSharedListId() {
+  public Long getSharedListId() {
     return sharedListId;
   }
 
-  public void setSharedListId(JsonNullable<Long> sharedListId) {
+  public void setSharedListId(Long sharedListId) {
     this.sharedListId = sharedListId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -170,7 +169,7 @@ public class AccountShared   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

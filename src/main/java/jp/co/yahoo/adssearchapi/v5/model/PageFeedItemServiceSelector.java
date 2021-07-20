@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceApprovalStatus;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServicePageFeedUrl;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,32 +16,32 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceSelectorオブジェクトは、登録したページフィードアイテムを照会するための検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceSelector object stores search condition to inquire about registered page feed item.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceSelectorオブジェクトは、登録したページフィードアイテムを照会するための検索条件を格納します。</div> <div lang=\"en\">PageFeedItemServiceSelector object stores search condition to inquire about registered page feed item.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("approvalStatuses")
   @Valid
-  private JsonNullable<List<PageFeedItemServiceApprovalStatus>> approvalStatuses = JsonNullable.undefined();
+  private List<PageFeedItemServiceApprovalStatus> approvalStatuses = null;
 
   @JsonProperty("feedIds")
   @Valid
-  private JsonNullable<List<Long>> feedIds = JsonNullable.undefined();
+  private List<Long> feedIds = new ArrayList<>();
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("pageFeedCustomLabel")
   @Valid
-  private JsonNullable<List<String>> pageFeedCustomLabel = JsonNullable.undefined();
+  private List<String> pageFeedCustomLabel = null;
 
   @JsonProperty("pageFeedUrl")
   @Valid
-  private JsonNullable<List<PageFeedItemServicePageFeedUrl>> pageFeedUrl = JsonNullable.undefined();
+  private List<PageFeedItemServicePageFeedUrl> pageFeedUrl = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public PageFeedItemServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -66,15 +65,15 @@ public class PageFeedItemServiceSelector   {
   }
 
   public PageFeedItemServiceSelector approvalStatuses(List<PageFeedItemServiceApprovalStatus> approvalStatuses) {
-    this.approvalStatuses = JsonNullable.of(approvalStatuses);
+    this.approvalStatuses = approvalStatuses;
     return this;
   }
 
   public PageFeedItemServiceSelector addApprovalStatusesItem(PageFeedItemServiceApprovalStatus approvalStatusesItem) {
-    if (this.approvalStatuses == null || !this.approvalStatuses.isPresent()) {
-      this.approvalStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.approvalStatuses == null) {
+      this.approvalStatuses = new ArrayList<>();
     }
-    this.approvalStatuses.get().add(approvalStatusesItem);
+    this.approvalStatuses.add(approvalStatusesItem);
     return this;
   }
 
@@ -86,21 +85,24 @@ public class PageFeedItemServiceSelector   {
 
   @Valid
 @Size(max=5) 
-  public JsonNullable<List<PageFeedItemServiceApprovalStatus>> getApprovalStatuses() {
+  public List<PageFeedItemServiceApprovalStatus> getApprovalStatuses() {
     return approvalStatuses;
   }
 
-  public void setApprovalStatuses(JsonNullable<List<PageFeedItemServiceApprovalStatus>> approvalStatuses) {
+  public void setApprovalStatuses(List<PageFeedItemServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
   public PageFeedItemServiceSelector feedIds(List<Long> feedIds) {
-    this.feedIds = JsonNullable.of(feedIds);
+    this.feedIds = feedIds;
     return this;
   }
 
   public PageFeedItemServiceSelector addFeedIdsItem(Long feedIdsItem) {
-    this.feedIds.get().add(feedIdsItem);
+    if (this.feedIds == null) {
+      this.feedIds = new ArrayList<>();
+    }
+    this.feedIds.add(feedIdsItem);
     return this;
   }
 
@@ -112,16 +114,16 @@ public class PageFeedItemServiceSelector   {
   @NotNull
 
 @Size(min=1,max=1000) 
-  public JsonNullable<List<Long>> getFeedIds() {
+  public List<Long> getFeedIds() {
     return feedIds;
   }
 
-  public void setFeedIds(JsonNullable<List<Long>> feedIds) {
+  public void setFeedIds(List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
   public PageFeedItemServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -134,24 +136,24 @@ public class PageFeedItemServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public PageFeedItemServiceSelector pageFeedCustomLabel(List<String> pageFeedCustomLabel) {
-    this.pageFeedCustomLabel = JsonNullable.of(pageFeedCustomLabel);
+    this.pageFeedCustomLabel = pageFeedCustomLabel;
     return this;
   }
 
   public PageFeedItemServiceSelector addPageFeedCustomLabelItem(String pageFeedCustomLabelItem) {
-    if (this.pageFeedCustomLabel == null || !this.pageFeedCustomLabel.isPresent()) {
-      this.pageFeedCustomLabel = JsonNullable.of(new ArrayList<>());
+    if (this.pageFeedCustomLabel == null) {
+      this.pageFeedCustomLabel = new ArrayList<>();
     }
-    this.pageFeedCustomLabel.get().add(pageFeedCustomLabelItem);
+    this.pageFeedCustomLabel.add(pageFeedCustomLabelItem);
     return this;
   }
 
@@ -162,24 +164,24 @@ public class PageFeedItemServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">カスタムラベル</div> <div lang=\"en\">Custom label</div> ")
 
 @Size(max=5) 
-  public JsonNullable<List<String>> getPageFeedCustomLabel() {
+  public List<String> getPageFeedCustomLabel() {
     return pageFeedCustomLabel;
   }
 
-  public void setPageFeedCustomLabel(JsonNullable<List<String>> pageFeedCustomLabel) {
+  public void setPageFeedCustomLabel(List<String> pageFeedCustomLabel) {
     this.pageFeedCustomLabel = pageFeedCustomLabel;
   }
 
   public PageFeedItemServiceSelector pageFeedUrl(List<PageFeedItemServicePageFeedUrl> pageFeedUrl) {
-    this.pageFeedUrl = JsonNullable.of(pageFeedUrl);
+    this.pageFeedUrl = pageFeedUrl;
     return this;
   }
 
   public PageFeedItemServiceSelector addPageFeedUrlItem(PageFeedItemServicePageFeedUrl pageFeedUrlItem) {
-    if (this.pageFeedUrl == null || !this.pageFeedUrl.isPresent()) {
-      this.pageFeedUrl = JsonNullable.of(new ArrayList<>());
+    if (this.pageFeedUrl == null) {
+      this.pageFeedUrl = new ArrayList<>();
     }
-    this.pageFeedUrl.get().add(pageFeedUrlItem);
+    this.pageFeedUrl.add(pageFeedUrlItem);
     return this;
   }
 
@@ -191,16 +193,16 @@ public class PageFeedItemServiceSelector   {
 
   @Valid
 @Size(max=5) 
-  public JsonNullable<List<PageFeedItemServicePageFeedUrl>> getPageFeedUrl() {
+  public List<PageFeedItemServicePageFeedUrl> getPageFeedUrl() {
     return pageFeedUrl;
   }
 
-  public void setPageFeedUrl(JsonNullable<List<PageFeedItemServicePageFeedUrl>> pageFeedUrl) {
+  public void setPageFeedUrl(List<PageFeedItemServicePageFeedUrl> pageFeedUrl) {
     this.pageFeedUrl = pageFeedUrl;
   }
 
   public PageFeedItemServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -212,17 +214,17 @@ public class PageFeedItemServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -264,7 +266,7 @@ public class PageFeedItemServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

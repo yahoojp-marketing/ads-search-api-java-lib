@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,13 +12,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エクスポート結果をダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download the export result.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">エクスポート結果をダウンロードします。</div> <div lang=\"en\">Download the export result.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignExportServiceDownloadSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("jobId")
-  private JsonNullable<Long> jobId = JsonNullable.undefined();
+  private Long jobId = null;
 
   public CampaignExportServiceDownloadSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -43,7 +42,7 @@ public class CampaignExportServiceDownloadSelector   {
   }
 
   public CampaignExportServiceDownloadSelector jobId(Long jobId) {
-    this.jobId = JsonNullable.of(jobId);
+    this.jobId = jobId;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class CampaignExportServiceDownloadSelector   {
   @NotNull
 
 
-  public JsonNullable<Long> getJobId() {
+  public Long getJobId() {
     return jobId;
   }
 
-  public void setJobId(JsonNullable<Long> jobId) {
+  public void setJobId(Long jobId) {
     this.jobId = jobId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class CampaignExportServiceDownloadSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

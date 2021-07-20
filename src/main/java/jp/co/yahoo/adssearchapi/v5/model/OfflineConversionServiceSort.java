@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.OfflineConversionServiceSortField;
 import jp.co.yahoo.adssearchapi.v5.model.OfflineConversionServiceSortType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,16 +14,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索結果のソート指定です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Specify sorting of search results.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">検索結果のソート指定です。</div> <div lang=\"en\">Specify sorting of search results.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class OfflineConversionServiceSort   {
   @JsonProperty("sortType")
-  private JsonNullable<OfflineConversionServiceSortType> sortType = JsonNullable.undefined();
+  private OfflineConversionServiceSortType sortType = null;
 
   @JsonProperty("sortField")
-  private JsonNullable<OfflineConversionServiceSortField> sortField = JsonNullable.undefined();
+  private OfflineConversionServiceSortField sortField = null;
 
   public OfflineConversionServiceSort sortType(OfflineConversionServiceSortType sortType) {
-    this.sortType = JsonNullable.of(sortType);
+    this.sortType = sortType;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class OfflineConversionServiceSort   {
 
   @Valid
 
-  public JsonNullable<OfflineConversionServiceSortType> getSortType() {
+  public OfflineConversionServiceSortType getSortType() {
     return sortType;
   }
 
-  public void setSortType(JsonNullable<OfflineConversionServiceSortType> sortType) {
+  public void setSortType(OfflineConversionServiceSortType sortType) {
     this.sortType = sortType;
   }
 
   public OfflineConversionServiceSort sortField(OfflineConversionServiceSortField sortField) {
-    this.sortField = JsonNullable.of(sortField);
+    this.sortField = sortField;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class OfflineConversionServiceSort   {
 
   @Valid
 
-  public JsonNullable<OfflineConversionServiceSortField> getSortField() {
+  public OfflineConversionServiceSortField getSortField() {
     return sortField;
   }
 
-  public void setSortField(JsonNullable<OfflineConversionServiceSortField> sortField) {
+  public void setSortField(OfflineConversionServiceSortField sortField) {
     this.sortField = sortField;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class OfflineConversionServiceSort   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

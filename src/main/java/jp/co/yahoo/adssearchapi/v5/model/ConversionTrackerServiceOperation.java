@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTracker;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョントラッカー情報および操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceOperation object describes ConversionTracker information and operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョントラッカー情報および操作の内容を表します。</div> <div lang=\"en\">ConversionTrackerServiceOperation object describes ConversionTracker information and operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<ConversionTracker>> operand = JsonNullable.undefined();
+  private List<ConversionTracker> operand = new ArrayList<>();
 
   public ConversionTrackerServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class ConversionTrackerServiceOperation   {
   }
 
   public ConversionTrackerServiceOperation operand(List<ConversionTracker> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public ConversionTrackerServiceOperation addOperandItem(ConversionTracker operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class ConversionTrackerServiceOperation   {
 
   @Valid
 @Size(min=1,max=200) 
-  public JsonNullable<List<ConversionTracker>> getOperand() {
+  public List<ConversionTracker> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<ConversionTracker>> operand) {
+  public void setOperand(List<ConversionTracker> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class ConversionTrackerServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceAppLinkVendor オブジェクトは、 アプリ計測ベンダー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceAppLinkVendor object is a container that stores App measurement vendor information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceAppLinkVendor オブジェクトは、 アプリ計測ベンダー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceAppLinkVendor object is a container that stores App measurement vendor information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceAppLinkVendor   {
   @JsonProperty("appVendorId")
-  private JsonNullable<String> appVendorId = JsonNullable.undefined();
+  private String appVendorId = null;
 
   @JsonProperty("appVendorNameJa")
-  private JsonNullable<String> appVendorNameJa = JsonNullable.undefined();
+  private String appVendorNameJa = null;
 
   @JsonProperty("appVendorNameEn")
-  private JsonNullable<String> appVendorNameEn = JsonNullable.undefined();
+  private String appVendorNameEn = null;
 
   public DictionaryServiceAppLinkVendor appVendorId(String appVendorId) {
-    this.appVendorId = JsonNullable.of(appVendorId);
+    this.appVendorId = appVendorId;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class DictionaryServiceAppLinkVendor   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダーIDです。</div> <div lang=\"en\">App Vendor ID.</div> ")
 
 
-  public JsonNullable<String> getAppVendorId() {
+  public String getAppVendorId() {
     return appVendorId;
   }
 
-  public void setAppVendorId(JsonNullable<String> appVendorId) {
+  public void setAppVendorId(String appVendorId) {
     this.appVendorId = appVendorId;
   }
 
   public DictionaryServiceAppLinkVendor appVendorNameJa(String appVendorNameJa) {
-    this.appVendorNameJa = JsonNullable.of(appVendorNameJa);
+    this.appVendorNameJa = appVendorNameJa;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class DictionaryServiceAppLinkVendor   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（日本語）です。</div> <div lang=\"en\">App Vendor Name in Japanese.</div> ")
 
 
-  public JsonNullable<String> getAppVendorNameJa() {
+  public String getAppVendorNameJa() {
     return appVendorNameJa;
   }
 
-  public void setAppVendorNameJa(JsonNullable<String> appVendorNameJa) {
+  public void setAppVendorNameJa(String appVendorNameJa) {
     this.appVendorNameJa = appVendorNameJa;
   }
 
   public DictionaryServiceAppLinkVendor appVendorNameEn(String appVendorNameEn) {
-    this.appVendorNameEn = JsonNullable.of(appVendorNameEn);
+    this.appVendorNameEn = appVendorNameEn;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class DictionaryServiceAppLinkVendor   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（英語）です。</div> <div lang=\"en\">App Vendor Name in English.</div> ")
 
 
-  public JsonNullable<String> getAppVendorNameEn() {
+  public String getAppVendorNameEn() {
     return appVendorNameEn;
   }
 
-  public void setAppVendorNameEn(JsonNullable<String> appVendorNameEn) {
+  public void setAppVendorNameEn(String appVendorNameEn) {
     this.appVendorNameEn = appVendorNameEn;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class DictionaryServiceAppLinkVendor   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

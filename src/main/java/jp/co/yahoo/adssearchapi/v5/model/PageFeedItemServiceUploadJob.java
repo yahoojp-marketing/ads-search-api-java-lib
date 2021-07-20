@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceUploadJobStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,35 +15,35 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceUploadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceUploadJob object retains contents of page feed item information for upload.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceUploadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。</div> <div lang=\"en\">PageFeedItemServiceUploadJob object retains contents of page feed item information for upload.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceUploadJob   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("errorCount")
-  private JsonNullable<Integer> errorCount = JsonNullable.undefined();
+  private Integer errorCount = null;
 
   @JsonProperty("feedIds")
   @Valid
-  private JsonNullable<List<Long>> feedIds = JsonNullable.undefined();
+  private List<Long> feedIds = null;
 
   @JsonProperty("jobId")
-  private JsonNullable<Long> jobId = JsonNullable.undefined();
+  private Long jobId = null;
 
   @JsonProperty("progress")
-  private JsonNullable<Integer> progress = JsonNullable.undefined();
+  private Integer progress = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("uploadJobStatus")
-  private JsonNullable<PageFeedItemServiceUploadJobStatus> uploadJobStatus = JsonNullable.undefined();
+  private PageFeedItemServiceUploadJobStatus uploadJobStatus = null;
 
   public PageFeedItemServiceUploadJob accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -55,16 +54,16 @@ public class PageFeedItemServiceUploadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public PageFeedItemServiceUploadJob endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -75,16 +74,16 @@ public class PageFeedItemServiceUploadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの終了日<br> 形式：yyyyMMddHHmmss</div> <div lang=\"en\">End date of job<br> Format:yyyyMMddHHmmss</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public PageFeedItemServiceUploadJob errorCount(Integer errorCount) {
-    this.errorCount = JsonNullable.of(errorCount);
+    this.errorCount = errorCount;
     return this;
   }
 
@@ -95,24 +94,24 @@ public class PageFeedItemServiceUploadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">エラーの件数</div> <div lang=\"en\">count of error occured</div> ")
 
 
-  public JsonNullable<Integer> getErrorCount() {
+  public Integer getErrorCount() {
     return errorCount;
   }
 
-  public void setErrorCount(JsonNullable<Integer> errorCount) {
+  public void setErrorCount(Integer errorCount) {
     this.errorCount = errorCount;
   }
 
   public PageFeedItemServiceUploadJob feedIds(List<Long> feedIds) {
-    this.feedIds = JsonNullable.of(feedIds);
+    this.feedIds = feedIds;
     return this;
   }
 
   public PageFeedItemServiceUploadJob addFeedIdsItem(Long feedIdsItem) {
-    if (this.feedIds == null || !this.feedIds.isPresent()) {
-      this.feedIds = JsonNullable.of(new ArrayList<>());
+    if (this.feedIds == null) {
+      this.feedIds = new ArrayList<>();
     }
-    this.feedIds.get().add(feedIdsItem);
+    this.feedIds.add(feedIdsItem);
     return this;
   }
 
@@ -123,16 +122,16 @@ public class PageFeedItemServiceUploadJob   {
   @ApiModelProperty(value = "")
 
 
-  public JsonNullable<List<Long>> getFeedIds() {
+  public List<Long> getFeedIds() {
     return feedIds;
   }
 
-  public void setFeedIds(JsonNullable<List<Long>> feedIds) {
+  public void setFeedIds(List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
   public PageFeedItemServiceUploadJob jobId(Long jobId) {
-    this.jobId = JsonNullable.of(jobId);
+    this.jobId = jobId;
     return this;
   }
 
@@ -143,16 +142,16 @@ public class PageFeedItemServiceUploadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブID</div> <div lang=\"en\">Job ID.</div> ")
 
 
-  public JsonNullable<Long> getJobId() {
+  public Long getJobId() {
     return jobId;
   }
 
-  public void setJobId(JsonNullable<Long> jobId) {
+  public void setJobId(Long jobId) {
     this.jobId = jobId;
   }
 
   public PageFeedItemServiceUploadJob progress(Integer progress) {
-    this.progress = JsonNullable.of(progress);
+    this.progress = progress;
     return this;
   }
 
@@ -163,16 +162,16 @@ public class PageFeedItemServiceUploadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの進捗状況</div> <div lang=\"en\">Progress of page feed item job</div> ")
 
 
-  public JsonNullable<Integer> getProgress() {
+  public Integer getProgress() {
     return progress;
   }
 
-  public void setProgress(JsonNullable<Integer> progress) {
+  public void setProgress(Integer progress) {
     this.progress = progress;
   }
 
   public PageFeedItemServiceUploadJob startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -183,16 +182,16 @@ public class PageFeedItemServiceUploadJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの開始日<br> 形式：yyyyMMddHHmmss</div> <div lang=\"en\">Start date of job<br> Format:yyyyMMddHHmmss</div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public PageFeedItemServiceUploadJob uploadJobStatus(PageFeedItemServiceUploadJobStatus uploadJobStatus) {
-    this.uploadJobStatus = JsonNullable.of(uploadJobStatus);
+    this.uploadJobStatus = uploadJobStatus;
     return this;
   }
 
@@ -204,17 +203,17 @@ public class PageFeedItemServiceUploadJob   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceUploadJobStatus> getUploadJobStatus() {
+  public PageFeedItemServiceUploadJobStatus getUploadJobStatus() {
     return uploadJobStatus;
   }
 
-  public void setUploadJobStatus(JsonNullable<PageFeedItemServiceUploadJobStatus> uploadJobStatus) {
+  public void setUploadJobStatus(PageFeedItemServiceUploadJobStatus uploadJobStatus) {
     this.uploadJobStatus = uploadJobStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -258,7 +257,7 @@ public class PageFeedItemServiceUploadJob   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

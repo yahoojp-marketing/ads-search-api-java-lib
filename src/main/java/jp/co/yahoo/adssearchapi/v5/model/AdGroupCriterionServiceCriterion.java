@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceKeyword;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,22 +14,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceCriterionオブジェクトは、クライテリアを表します。※広告グループ用クライテリアです。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceCriterion object displays criteria information. *Ad group criteria.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceCriterionオブジェクトは、クライテリアを表します。※広告グループ用クライテリアです。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">AdGroupCriterionServiceCriterion object displays criteria information. *Ad group criteria.<br> This field is required in any cases.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceCriterion   {
   @JsonProperty("criterionId")
-  private JsonNullable<Long> criterionId = JsonNullable.undefined();
+  private Long criterionId = null;
 
   @JsonProperty("criterionTrackId")
-  private JsonNullable<Long> criterionTrackId = JsonNullable.undefined();
+  private Long criterionTrackId = null;
 
   @JsonProperty("criterionType")
-  private JsonNullable<AdGroupCriterionServiceCriterionType> criterionType = JsonNullable.undefined();
+  private AdGroupCriterionServiceCriterionType criterionType = null;
 
   @JsonProperty("keyword")
-  private JsonNullable<AdGroupCriterionServiceKeyword> keyword = JsonNullable.undefined();
+  private AdGroupCriterionServiceKeyword keyword = null;
 
   public AdGroupCriterionServiceCriterion criterionId(Long criterionId) {
-    this.criterionId = JsonNullable.of(criterionId);
+    this.criterionId = criterionId;
     return this;
   }
 
@@ -41,16 +40,16 @@ public class AdGroupCriterionServiceCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">クライテリアIDです。<br> SETおよびREMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupCriterionServiceCriterion ID.<br> This field is required in SET and REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getCriterionId() {
+  public Long getCriterionId() {
     return criterionId;
   }
 
-  public void setCriterionId(JsonNullable<Long> criterionId) {
+  public void setCriterionId(Long criterionId) {
     this.criterionId = criterionId;
   }
 
   public AdGroupCriterionServiceCriterion criterionTrackId(Long criterionTrackId) {
-    this.criterionTrackId = JsonNullable.of(criterionTrackId);
+    this.criterionTrackId = criterionTrackId;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class AdGroupCriterionServiceCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用クライテリアIDです。</div> <div lang=\"en\">AdGroupCriterionServiceCriterion ID for tracking.</div> ")
 
 
-  public JsonNullable<Long> getCriterionTrackId() {
+  public Long getCriterionTrackId() {
     return criterionTrackId;
   }
 
-  public void setCriterionTrackId(JsonNullable<Long> criterionTrackId) {
+  public void setCriterionTrackId(Long criterionTrackId) {
     this.criterionTrackId = criterionTrackId;
   }
 
   public AdGroupCriterionServiceCriterion criterionType(AdGroupCriterionServiceCriterionType criterionType) {
-    this.criterionType = JsonNullable.of(criterionType);
+    this.criterionType = criterionType;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class AdGroupCriterionServiceCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceCriterionType> getCriterionType() {
+  public AdGroupCriterionServiceCriterionType getCriterionType() {
     return criterionType;
   }
 
-  public void setCriterionType(JsonNullable<AdGroupCriterionServiceCriterionType> criterionType) {
+  public void setCriterionType(AdGroupCriterionServiceCriterionType criterionType) {
     this.criterionType = criterionType;
   }
 
   public AdGroupCriterionServiceCriterion keyword(AdGroupCriterionServiceKeyword keyword) {
-    this.keyword = JsonNullable.of(keyword);
+    this.keyword = keyword;
     return this;
   }
 
@@ -103,17 +102,17 @@ public class AdGroupCriterionServiceCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceKeyword> getKeyword() {
+  public AdGroupCriterionServiceKeyword getKeyword() {
     return keyword;
   }
 
-  public void setKeyword(JsonNullable<AdGroupCriterionServiceKeyword> keyword) {
+  public void setKeyword(AdGroupCriterionServiceKeyword keyword) {
     this.keyword = keyword;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -149,7 +148,7 @@ public class AdGroupCriterionServiceCriterion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

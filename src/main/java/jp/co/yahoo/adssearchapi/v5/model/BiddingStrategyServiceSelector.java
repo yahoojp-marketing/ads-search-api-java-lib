@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.BiddingStrategyServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,24 +15,24 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceSelectorオブジェクトは、自動入札設定の検索条件に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceSelector object displays the details of search results of auto bidding setting .&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceSelectorオブジェクトは、自動入札設定の検索条件に関する情報を表します。</div> <div lang=\"en\">BiddingStrategyServiceSelector object displays the details of search results of auto bidding setting .</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BiddingStrategyServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("biddingStrategyIds")
   @Valid
-  private JsonNullable<List<Long>> biddingStrategyIds = JsonNullable.undefined();
+  private List<Long> biddingStrategyIds = null;
 
   @JsonProperty("biddingStrategyTypes")
   @Valid
-  private JsonNullable<List<BiddingStrategyServiceType>> biddingStrategyTypes = JsonNullable.undefined();
+  private List<BiddingStrategyServiceType> biddingStrategyTypes = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public BiddingStrategyServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -57,15 +56,15 @@ public class BiddingStrategyServiceSelector   {
   }
 
   public BiddingStrategyServiceSelector biddingStrategyIds(List<Long> biddingStrategyIds) {
-    this.biddingStrategyIds = JsonNullable.of(biddingStrategyIds);
+    this.biddingStrategyIds = biddingStrategyIds;
     return this;
   }
 
   public BiddingStrategyServiceSelector addBiddingStrategyIdsItem(Long biddingStrategyIdsItem) {
-    if (this.biddingStrategyIds == null || !this.biddingStrategyIds.isPresent()) {
-      this.biddingStrategyIds = JsonNullable.of(new ArrayList<>());
+    if (this.biddingStrategyIds == null) {
+      this.biddingStrategyIds = new ArrayList<>();
     }
-    this.biddingStrategyIds.get().add(biddingStrategyIdsItem);
+    this.biddingStrategyIds.add(biddingStrategyIdsItem);
     return this;
   }
 
@@ -76,24 +75,24 @@ public class BiddingStrategyServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動入札ID</div> <div lang=\"en\">Auto bidding ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getBiddingStrategyIds() {
+  public List<Long> getBiddingStrategyIds() {
     return biddingStrategyIds;
   }
 
-  public void setBiddingStrategyIds(JsonNullable<List<Long>> biddingStrategyIds) {
+  public void setBiddingStrategyIds(List<Long> biddingStrategyIds) {
     this.biddingStrategyIds = biddingStrategyIds;
   }
 
   public BiddingStrategyServiceSelector biddingStrategyTypes(List<BiddingStrategyServiceType> biddingStrategyTypes) {
-    this.biddingStrategyTypes = JsonNullable.of(biddingStrategyTypes);
+    this.biddingStrategyTypes = biddingStrategyTypes;
     return this;
   }
 
   public BiddingStrategyServiceSelector addBiddingStrategyTypesItem(BiddingStrategyServiceType biddingStrategyTypesItem) {
-    if (this.biddingStrategyTypes == null || !this.biddingStrategyTypes.isPresent()) {
-      this.biddingStrategyTypes = JsonNullable.of(new ArrayList<>());
+    if (this.biddingStrategyTypes == null) {
+      this.biddingStrategyTypes = new ArrayList<>();
     }
-    this.biddingStrategyTypes.get().add(biddingStrategyTypesItem);
+    this.biddingStrategyTypes.add(biddingStrategyTypesItem);
     return this;
   }
 
@@ -105,16 +104,16 @@ public class BiddingStrategyServiceSelector   {
 
   @Valid
 @Size(max=3) 
-  public JsonNullable<List<BiddingStrategyServiceType>> getBiddingStrategyTypes() {
+  public List<BiddingStrategyServiceType> getBiddingStrategyTypes() {
     return biddingStrategyTypes;
   }
 
-  public void setBiddingStrategyTypes(JsonNullable<List<BiddingStrategyServiceType>> biddingStrategyTypes) {
+  public void setBiddingStrategyTypes(List<BiddingStrategyServiceType> biddingStrategyTypes) {
     this.biddingStrategyTypes = biddingStrategyTypes;
   }
 
   public BiddingStrategyServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -127,16 +126,16 @@ public class BiddingStrategyServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public BiddingStrategyServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -148,17 +147,17 @@ public class BiddingStrategyServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -196,7 +195,7 @@ public class BiddingStrategyServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignSharedSetServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignSharedSetServiceReturnValueは、実行結果（全エンティティのリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignSharedSetServiceReturnValue is object to hold exec result (all entities list).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignSharedSetServiceReturnValueは、実行結果（全エンティティのリスト）を保持するオブジェクトです。</div> <div lang=\"en\">CampaignSharedSetServiceReturnValue is object to hold exec result (all entities list).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignSharedSetServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<CampaignSharedSetServiceValue>> values = JsonNullable.undefined();
+  private List<CampaignSharedSetServiceValue> values = null;
 
   public CampaignSharedSetServiceReturnValue values(List<CampaignSharedSetServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public CampaignSharedSetServiceReturnValue addValuesItem(CampaignSharedSetServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class CampaignSharedSetServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<CampaignSharedSetServiceValue>> getValues() {
+  public List<CampaignSharedSetServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<CampaignSharedSetServiceValue>> values) {
+  public void setValues(List<CampaignSharedSetServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class CampaignSharedSetServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

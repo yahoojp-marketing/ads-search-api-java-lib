@@ -6,32 +6,31 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordEstimatorServiceEstimateResult;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * KeywordEstimatorServiceResult
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordEstimatorServiceResult   {
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("keyword")
-  private JsonNullable<String> keyword = JsonNullable.undefined();
+  private String keyword = null;
 
   @JsonProperty("max")
-  private JsonNullable<KeywordEstimatorServiceEstimateResult> max = JsonNullable.undefined();
+  private KeywordEstimatorServiceEstimateResult max = null;
 
   @JsonProperty("min")
-  private JsonNullable<KeywordEstimatorServiceEstimateResult> min = JsonNullable.undefined();
+  private KeywordEstimatorServiceEstimateResult min = null;
 
   public KeywordEstimatorServiceResult adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class KeywordEstimatorServiceResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。</div> <div lang=\"en\">AdGroup ID.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public KeywordEstimatorServiceResult campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class KeywordEstimatorServiceResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public KeywordEstimatorServiceResult keyword(String keyword) {
-    this.keyword = JsonNullable.of(keyword);
+    this.keyword = keyword;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class KeywordEstimatorServiceResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。</div> <div lang=\"en\">Keywords.</div> ")
 
 
-  public JsonNullable<String> getKeyword() {
+  public String getKeyword() {
     return keyword;
   }
 
-  public void setKeyword(JsonNullable<String> keyword) {
+  public void setKeyword(String keyword) {
     this.keyword = keyword;
   }
 
   public KeywordEstimatorServiceResult max(KeywordEstimatorServiceEstimateResult max) {
-    this.max = JsonNullable.of(max);
+    this.max = max;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class KeywordEstimatorServiceResult   {
 
   @Valid
 
-  public JsonNullable<KeywordEstimatorServiceEstimateResult> getMax() {
+  public KeywordEstimatorServiceEstimateResult getMax() {
     return max;
   }
 
-  public void setMax(JsonNullable<KeywordEstimatorServiceEstimateResult> max) {
+  public void setMax(KeywordEstimatorServiceEstimateResult max) {
     this.max = max;
   }
 
   public KeywordEstimatorServiceResult min(KeywordEstimatorServiceEstimateResult min) {
-    this.min = JsonNullable.of(min);
+    this.min = min;
     return this;
   }
 
@@ -124,17 +123,17 @@ public class KeywordEstimatorServiceResult   {
 
   @Valid
 
-  public JsonNullable<KeywordEstimatorServiceEstimateResult> getMin() {
+  public KeywordEstimatorServiceEstimateResult getMin() {
     return min;
   }
 
-  public void setMin(JsonNullable<KeywordEstimatorServiceEstimateResult> min) {
+  public void setMin(KeywordEstimatorServiceEstimateResult min) {
     this.min = min;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -172,7 +171,7 @@ public class KeywordEstimatorServiceResult   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

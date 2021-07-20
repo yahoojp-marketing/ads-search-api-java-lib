@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceReviewSummaryValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceReviewSummaryPageオブジェクトは、ページフィードアイテムの審査成績、状況サマリー取得結果をリストに格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceReviewSummaryPage object is a container storing the examination results of the page feed item, the situation summary acquisition result in a list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceReviewSummaryPageオブジェクトは、ページフィードアイテムの審査成績、状況サマリー取得結果をリストに格納するコンテナです。</div> <div lang=\"en\">PageFeedItemServiceReviewSummaryPage object is a container storing the examination results of the page feed item, the situation summary acquisition result in a list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceReviewSummaryPage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<PageFeedItemServiceReviewSummaryValue>> values = JsonNullable.undefined();
+  private List<PageFeedItemServiceReviewSummaryValue> values = null;
 
   public PageFeedItemServiceReviewSummaryPage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class PageFeedItemServiceReviewSummaryPage   {
   }
 
   public PageFeedItemServiceReviewSummaryPage values(List<PageFeedItemServiceReviewSummaryValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public PageFeedItemServiceReviewSummaryPage addValuesItem(PageFeedItemServiceReviewSummaryValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class PageFeedItemServiceReviewSummaryPage   {
 
   @Valid
 
-  public JsonNullable<List<PageFeedItemServiceReviewSummaryValue>> getValues() {
+  public List<PageFeedItemServiceReviewSummaryValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<PageFeedItemServiceReviewSummaryValue>> values) {
+  public void setValues(List<PageFeedItemServiceReviewSummaryValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class PageFeedItemServiceReviewSummaryPage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

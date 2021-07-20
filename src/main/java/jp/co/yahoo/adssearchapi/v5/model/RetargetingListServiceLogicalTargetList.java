@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceLogicalGroup;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalTargetListは、組合せターゲットリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがLOGICALの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalTargetList is an object that holds the combination target list information.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is LOGICAL, this field is required.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceLogicalTargetListは、組合せターゲットリストの情報を保持するオブジェクトです。<br> このフィールドは、省略可能となります。<br> ※targetListTypeがLOGICALの場合、このフィールドは必須となります。</div> <div lang=\"en\">RetargetingListServiceLogicalTargetList is an object that holds the combination target list information.<br> This field is optional.<br> If the targetListType is LOGICAL, this field is required.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceLogicalTargetList   {
   @JsonProperty("logicalGroup")
   @Valid
-  private JsonNullable<List<RetargetingListServiceLogicalGroup>> logicalGroup = JsonNullable.undefined();
+  private List<RetargetingListServiceLogicalGroup> logicalGroup = null;
 
   public RetargetingListServiceLogicalTargetList logicalGroup(List<RetargetingListServiceLogicalGroup> logicalGroup) {
-    this.logicalGroup = JsonNullable.of(logicalGroup);
+    this.logicalGroup = logicalGroup;
     return this;
   }
 
   public RetargetingListServiceLogicalTargetList addLogicalGroupItem(RetargetingListServiceLogicalGroup logicalGroupItem) {
-    if (this.logicalGroup == null || !this.logicalGroup.isPresent()) {
-      this.logicalGroup = JsonNullable.of(new ArrayList<>());
+    if (this.logicalGroup == null) {
+      this.logicalGroup = new ArrayList<>();
     }
-    this.logicalGroup.get().add(logicalGroupItem);
+    this.logicalGroup.add(logicalGroupItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RetargetingListServiceLogicalTargetList   {
 
   @Valid
 
-  public JsonNullable<List<RetargetingListServiceLogicalGroup>> getLogicalGroup() {
+  public List<RetargetingListServiceLogicalGroup> getLogicalGroup() {
     return logicalGroup;
   }
 
-  public void setLogicalGroup(JsonNullable<List<RetargetingListServiceLogicalGroup>> logicalGroup) {
+  public void setLogicalGroup(List<RetargetingListServiceLogicalGroup> logicalGroup) {
     this.logicalGroup = logicalGroup;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RetargetingListServiceLogicalTargetList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

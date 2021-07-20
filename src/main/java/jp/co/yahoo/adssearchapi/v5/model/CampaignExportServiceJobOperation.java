@@ -6,20 +6,19 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignExportServiceExportSetting;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * CampaignExportServiceJobOperation
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignExportServiceJobOperation   {
   @JsonProperty("setting")
-  private JsonNullable<CampaignExportServiceExportSetting> setting = JsonNullable.undefined();
+  private CampaignExportServiceExportSetting setting = null;
 
   public CampaignExportServiceJobOperation setting(CampaignExportServiceExportSetting setting) {
-    this.setting = JsonNullable.of(setting);
+    this.setting = setting;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class CampaignExportServiceJobOperation   {
 
   @Valid
 
-  public JsonNullable<CampaignExportServiceExportSetting> getSetting() {
+  public CampaignExportServiceExportSetting getSetting() {
     return setting;
   }
 
-  public void setSetting(JsonNullable<CampaignExportServiceExportSetting> setting) {
+  public void setSetting(CampaignExportServiceExportSetting setting) {
     this.setting = setting;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class CampaignExportServiceJobOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

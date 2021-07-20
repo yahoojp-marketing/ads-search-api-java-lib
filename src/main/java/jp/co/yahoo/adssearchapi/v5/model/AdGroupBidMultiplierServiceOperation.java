@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupBidMultiplier;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupBidMultiplierServiceOperationオブジェクトは、入札価格調整率の操作内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for bid multiplier.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupBidMultiplierServiceOperationオブジェクトは、入札価格調整率の操作内容を表します。</div> <div lang=\"en\">Container for bid multiplier.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupBidMultiplierServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<AdGroupBidMultiplier>> operand = JsonNullable.undefined();
+  private List<AdGroupBidMultiplier> operand = new ArrayList<>();
 
   public AdGroupBidMultiplierServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class AdGroupBidMultiplierServiceOperation   {
   }
 
   public AdGroupBidMultiplierServiceOperation operand(List<AdGroupBidMultiplier> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public AdGroupBidMultiplierServiceOperation addOperandItem(AdGroupBidMultiplier operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class AdGroupBidMultiplierServiceOperation   {
 
   @Valid
 @Size(min=1,max=10000) 
-  public JsonNullable<List<AdGroupBidMultiplier>> getOperand() {
+  public List<AdGroupBidMultiplier> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<AdGroupBidMultiplier>> operand) {
+  public void setOperand(List<AdGroupBidMultiplier> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AdGroupBidMultiplierServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

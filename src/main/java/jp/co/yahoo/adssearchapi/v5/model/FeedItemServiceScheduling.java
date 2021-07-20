@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceSchedule;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceSchedulingオブジェクトは、広告配信スケジュールを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceScheduling object describes ad display schedule.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemServiceSchedulingオブジェクトは、広告配信スケジュールを表します。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">FeedItemServiceScheduling object describes ad display schedule.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItemServiceScheduling   {
   @JsonProperty("schedules")
   @Valid
-  private JsonNullable<List<FeedItemServiceSchedule>> schedules = JsonNullable.undefined();
+  private List<FeedItemServiceSchedule> schedules = null;
 
   public FeedItemServiceScheduling schedules(List<FeedItemServiceSchedule> schedules) {
-    this.schedules = JsonNullable.of(schedules);
+    this.schedules = schedules;
     return this;
   }
 
   public FeedItemServiceScheduling addSchedulesItem(FeedItemServiceSchedule schedulesItem) {
-    if (this.schedules == null || !this.schedules.isPresent()) {
-      this.schedules = JsonNullable.of(new ArrayList<>());
+    if (this.schedules == null) {
+      this.schedules = new ArrayList<>();
     }
-    this.schedules.get().add(schedulesItem);
+    this.schedules.add(schedulesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class FeedItemServiceScheduling   {
 
   @Valid
 
-  public JsonNullable<List<FeedItemServiceSchedule>> getSchedules() {
+  public List<FeedItemServiceSchedule> getSchedules() {
     return schedules;
   }
 
-  public void setSchedules(JsonNullable<List<FeedItemServiceSchedule>> schedules) {
+  public void setSchedules(List<FeedItemServiceSchedule> schedules) {
     this.schedules = schedules;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class FeedItemServiceScheduling   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

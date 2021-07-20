@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,24 +14,24 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionServiceSelectorオブジェクトは、検索条件を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterionServiceSelector object holds search criteria.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SharedCriterionServiceSelectorオブジェクトは、検索条件を保持します。</div> <div lang=\"en\">SharedCriterionServiceSelector object holds search criteria.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SharedCriterionServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("criterionIds")
   @Valid
-  private JsonNullable<List<Long>> criterionIds = JsonNullable.undefined();
+  private List<Long> criterionIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("sharedListIds")
   @Valid
-  private JsonNullable<List<Long>> sharedListIds = JsonNullable.undefined();
+  private List<Long> sharedListIds = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public SharedCriterionServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -56,15 +55,15 @@ public class SharedCriterionServiceSelector   {
   }
 
   public SharedCriterionServiceSelector criterionIds(List<Long> criterionIds) {
-    this.criterionIds = JsonNullable.of(criterionIds);
+    this.criterionIds = criterionIds;
     return this;
   }
 
   public SharedCriterionServiceSelector addCriterionIdsItem(Long criterionIdsItem) {
-    if (this.criterionIds == null || !this.criterionIds.isPresent()) {
-      this.criterionIds = JsonNullable.of(new ArrayList<>());
+    if (this.criterionIds == null) {
+      this.criterionIds = new ArrayList<>();
     }
-    this.criterionIds.get().add(criterionIdsItem);
+    this.criterionIds.add(criterionIdsItem);
     return this;
   }
 
@@ -75,16 +74,16 @@ public class SharedCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">クライテリオンIDです。</div> <div lang=\"en\">Criterion ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getCriterionIds() {
+  public List<Long> getCriterionIds() {
     return criterionIds;
   }
 
-  public void setCriterionIds(JsonNullable<List<Long>> criterionIds) {
+  public void setCriterionIds(List<Long> criterionIds) {
     this.criterionIds = criterionIds;
   }
 
   public SharedCriterionServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -97,24 +96,24 @@ public class SharedCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public SharedCriterionServiceSelector sharedListIds(List<Long> sharedListIds) {
-    this.sharedListIds = JsonNullable.of(sharedListIds);
+    this.sharedListIds = sharedListIds;
     return this;
   }
 
   public SharedCriterionServiceSelector addSharedListIdsItem(Long sharedListIdsItem) {
-    if (this.sharedListIds == null || !this.sharedListIds.isPresent()) {
-      this.sharedListIds = JsonNullable.of(new ArrayList<>());
+    if (this.sharedListIds == null) {
+      this.sharedListIds = new ArrayList<>();
     }
-    this.sharedListIds.get().add(sharedListIdsItem);
+    this.sharedListIds.add(sharedListIdsItem);
     return this;
   }
 
@@ -125,16 +124,16 @@ public class SharedCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">共有リストのIDです。</div> <div lang=\"en\">Share list ID.</div> ")
 
 @Size(max=20) 
-  public JsonNullable<List<Long>> getSharedListIds() {
+  public List<Long> getSharedListIds() {
     return sharedListIds;
   }
 
-  public void setSharedListIds(JsonNullable<List<Long>> sharedListIds) {
+  public void setSharedListIds(List<Long> sharedListIds) {
     this.sharedListIds = sharedListIds;
   }
 
   public SharedCriterionServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -146,17 +145,17 @@ public class SharedCriterionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -194,7 +193,7 @@ public class SharedCriterionServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

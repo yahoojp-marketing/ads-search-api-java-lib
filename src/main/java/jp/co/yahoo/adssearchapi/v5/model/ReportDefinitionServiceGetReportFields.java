@@ -6,20 +6,19 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.ReportDefinitionServiceReportType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * ReportDefinitionServiceGetReportFields
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceGetReportFields   {
   @JsonProperty("reportType")
-  private JsonNullable<ReportDefinitionServiceReportType> reportType = JsonNullable.undefined();
+  private ReportDefinitionServiceReportType reportType = null;
 
   public ReportDefinitionServiceGetReportFields reportType(ReportDefinitionServiceReportType reportType) {
-    this.reportType = JsonNullable.of(reportType);
+    this.reportType = reportType;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class ReportDefinitionServiceGetReportFields   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportType> getReportType() {
+  public ReportDefinitionServiceReportType getReportType() {
     return reportType;
   }
 
-  public void setReportType(JsonNullable<ReportDefinitionServiceReportType> reportType) {
+  public void setReportType(ReportDefinitionServiceReportType reportType) {
     this.reportType = reportType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class ReportDefinitionServiceGetReportFields   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

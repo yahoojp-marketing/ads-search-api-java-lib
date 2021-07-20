@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignWebpageServiceWebpageParameter;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceWebpageオブジェクトは、除外設定するCampaignWebpageServiceWebpageの条件を保持します。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceWebpage object contains the rules of webpage to be excluded.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceWebpageオブジェクトは、除外設定するCampaignWebpageServiceWebpageの条件を保持します。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">CampaignWebpageServiceWebpage object contains the rules of webpage to be excluded.<br> This field is required in any cases.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignWebpageServiceWebpage   {
   @JsonProperty("parameter")
-  private JsonNullable<CampaignWebpageServiceWebpageParameter> parameter = JsonNullable.undefined();
+  private CampaignWebpageServiceWebpageParameter parameter = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<Long> targetId = JsonNullable.undefined();
+  private Long targetId = null;
 
   @JsonProperty("targetTrackId")
-  private JsonNullable<Long> targetTrackId = JsonNullable.undefined();
+  private Long targetTrackId = null;
 
   public CampaignWebpageServiceWebpage parameter(CampaignWebpageServiceWebpageParameter parameter) {
-    this.parameter = JsonNullable.of(parameter);
+    this.parameter = parameter;
     return this;
   }
 
@@ -38,16 +37,16 @@ public class CampaignWebpageServiceWebpage   {
 
   @Valid
 
-  public JsonNullable<CampaignWebpageServiceWebpageParameter> getParameter() {
+  public CampaignWebpageServiceWebpageParameter getParameter() {
     return parameter;
   }
 
-  public void setParameter(JsonNullable<CampaignWebpageServiceWebpageParameter> parameter) {
+  public void setParameter(CampaignWebpageServiceWebpageParameter parameter) {
     this.parameter = parameter;
   }
 
   public CampaignWebpageServiceWebpage targetId(Long targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class CampaignWebpageServiceWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">CampaignWebpageServiceWebpageを識別するIDです。 <br> このフィールドは、REMOVE時に必須となり、ADD時は無視されます。</div> <div lang=\"en\">Unique ID for each webpage.<br> This field is required in REMOVE operation, and will be ignored in ADD operation.</div> ")
 
 
-  public JsonNullable<Long> getTargetId() {
+  public Long getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<Long> targetId) {
+  public void setTargetId(Long targetId) {
     this.targetId = targetId;
   }
 
   public CampaignWebpageServiceWebpage targetTrackId(Long targetTrackId) {
-    this.targetTrackId = JsonNullable.of(targetTrackId);
+    this.targetTrackId = targetTrackId;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class CampaignWebpageServiceWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">CampaignWebpageServiceWebpageを識別するトラッキングIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Unique tracking ID for each CampaignWebpageServiceWebpage.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getTargetTrackId() {
+  public Long getTargetTrackId() {
     return targetTrackId;
   }
 
-  public void setTargetTrackId(JsonNullable<Long> targetTrackId) {
+  public void setTargetTrackId(Long targetTrackId) {
     this.targetTrackId = targetTrackId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class CampaignWebpageServiceWebpage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

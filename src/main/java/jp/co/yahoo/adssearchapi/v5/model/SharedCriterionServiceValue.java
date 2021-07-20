@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
 import jp.co.yahoo.adssearchapi.v5.model.SharedCriterion;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionServiceValueは、実行結果（1エンティティ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterionServiceValue object holds exec result (1 entity).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SharedCriterionServiceValueは、実行結果（1エンティティ）を保持するオブジェクトです。</div> <div lang=\"en\">SharedCriterionServiceValue object holds exec result (1 entity).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SharedCriterionServiceValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   @JsonProperty("sharedCriterion")
-  private JsonNullable<SharedCriterion> sharedCriterion = JsonNullable.undefined();
+  private SharedCriterion sharedCriterion = null;
 
   public SharedCriterionServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public SharedCriterionServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -50,16 +49,16 @@ public class SharedCriterionServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public SharedCriterionServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class SharedCriterionServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果を表示します。</div> <div lang=\"en\">Showing operation result.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
   public SharedCriterionServiceValue sharedCriterion(SharedCriterion sharedCriterion) {
-    this.sharedCriterion = JsonNullable.of(sharedCriterion);
+    this.sharedCriterion = sharedCriterion;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class SharedCriterionServiceValue   {
 
   @Valid
 
-  public JsonNullable<SharedCriterion> getSharedCriterion() {
+  public SharedCriterion getSharedCriterion() {
     return sharedCriterion;
   }
 
-  public void setSharedCriterion(JsonNullable<SharedCriterion> sharedCriterion) {
+  public void setSharedCriterion(SharedCriterion sharedCriterion) {
     this.sharedCriterion = sharedCriterion;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class SharedCriterionServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

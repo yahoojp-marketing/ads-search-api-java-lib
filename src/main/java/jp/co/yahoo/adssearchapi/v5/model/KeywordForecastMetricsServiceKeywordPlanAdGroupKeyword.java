@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordForecastMetricsServiceMatchType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,22 +13,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword object contains the estimate request.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword object contains the estimate request.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword   {
   @JsonProperty("text")
-  private JsonNullable<String> text = JsonNullable.undefined();
+  private String text = null;
 
   @JsonProperty("matchType")
-  private JsonNullable<KeywordForecastMetricsServiceMatchType> matchType = JsonNullable.undefined();
+  private KeywordForecastMetricsServiceMatchType matchType = null;
 
   @JsonProperty("maxCpc")
-  private JsonNullable<Long> maxCpc = JsonNullable.undefined();
+  private Long maxCpc = null;
 
   @JsonProperty("isNegative")
-  private JsonNullable<Boolean> isNegative = JsonNullable.undefined();
+  private Boolean isNegative = null;
 
   public KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword text(String text) {
-    this.text = JsonNullable.of(text);
+    this.text = text;
     return this;
   }
 
@@ -41,16 +40,16 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword   {
   @NotNull
 
 
-  public JsonNullable<String> getText() {
+  public String getText() {
     return text;
   }
 
-  public void setText(JsonNullable<String> text) {
+  public void setText(String text) {
     this.text = text;
   }
 
   public KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword matchType(KeywordForecastMetricsServiceMatchType matchType) {
-    this.matchType = JsonNullable.of(matchType);
+    this.matchType = matchType;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword   {
 
   @Valid
 
-  public JsonNullable<KeywordForecastMetricsServiceMatchType> getMatchType() {
+  public KeywordForecastMetricsServiceMatchType getMatchType() {
     return matchType;
   }
 
-  public void setMatchType(JsonNullable<KeywordForecastMetricsServiceMatchType> matchType) {
+  public void setMatchType(KeywordForecastMetricsServiceMatchType matchType) {
     this.matchType = matchType;
   }
 
   public KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword maxCpc(Long maxCpc) {
-    this.maxCpc = JsonNullable.of(maxCpc);
+    this.maxCpc = maxCpc;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword   {
   @ApiModelProperty(value = "<div lang=\"ja\">最大クリック単価です。<br> isNegativeがTRUEのときにmaxCpcを指定することはできません。</div> <div lang=\"en\">Maximum CPC.<br> When isNegative is TRUE, maxCPC cannot be specified.</div> ")
 
 
-  public JsonNullable<Long> getMaxCpc() {
+  public Long getMaxCpc() {
     return maxCpc;
   }
 
-  public void setMaxCpc(JsonNullable<Long> maxCpc) {
+  public void setMaxCpc(Long maxCpc) {
     this.maxCpc = maxCpc;
   }
 
   public KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword isNegative(Boolean isNegative) {
-    this.isNegative = JsonNullable.of(isNegative);
+    this.isNegative = isNegative;
     return this;
   }
 
@@ -103,17 +102,17 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword   {
   @ApiModelProperty(value = "<div lang=\"ja\">除外キーワードです。<br> デフォルト値はfalseです。<br> 除外キーワードのみでのリクエストはできません。</div> <div lang=\"en\">Refine keyword.<br> The default value will be FALSE.<br> Cannot request with only refine keyword.</div> ")
 
 
-  public JsonNullable<Boolean> getIsNegative() {
+  public Boolean getIsNegative() {
     return isNegative;
   }
 
-  public void setIsNegative(JsonNullable<Boolean> isNegative) {
+  public void setIsNegative(Boolean isNegative) {
     this.isNegative = isNegative;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -149,7 +148,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

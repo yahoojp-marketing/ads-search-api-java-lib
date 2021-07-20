@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupRetargetingList;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,20 +16,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListServiceValueは、広告グループレベルでのターゲットリスト設定の実行結果（1 Entity）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingListServiceValue is an oject that holds results (one entity).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupRetargetingListServiceValueは、広告グループレベルでのターゲットリスト設定の実行結果（1 Entity）を保持するオブジェクトです。</div> <div lang=\"en\">AdGroupRetargetingListServiceValue is an oject that holds results (one entity).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupRetargetingListServiceValue   {
   @JsonProperty("adGroupRetargetingList")
-  private JsonNullable<AdGroupRetargetingList> adGroupRetargetingList = JsonNullable.undefined();
+  private AdGroupRetargetingList adGroupRetargetingList = null;
 
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public AdGroupRetargetingListServiceValue adGroupRetargetingList(AdGroupRetargetingList adGroupRetargetingList) {
-    this.adGroupRetargetingList = JsonNullable.of(adGroupRetargetingList);
+    this.adGroupRetargetingList = adGroupRetargetingList;
     return this;
   }
 
@@ -42,24 +41,24 @@ public class AdGroupRetargetingListServiceValue   {
 
   @Valid
 
-  public JsonNullable<AdGroupRetargetingList> getAdGroupRetargetingList() {
+  public AdGroupRetargetingList getAdGroupRetargetingList() {
     return adGroupRetargetingList;
   }
 
-  public void setAdGroupRetargetingList(JsonNullable<AdGroupRetargetingList> adGroupRetargetingList) {
+  public void setAdGroupRetargetingList(AdGroupRetargetingList adGroupRetargetingList) {
     this.adGroupRetargetingList = adGroupRetargetingList;
   }
 
   public AdGroupRetargetingListServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public AdGroupRetargetingListServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class AdGroupRetargetingListServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public AdGroupRetargetingListServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class AdGroupRetargetingListServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">Process results.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class AdGroupRetargetingListServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

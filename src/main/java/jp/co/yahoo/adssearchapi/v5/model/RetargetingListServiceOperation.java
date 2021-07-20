@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceTargetListOwner;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceTargetingList;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceOperationは、操作対象のターゲットリストを保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceOperation is an object that holds target retargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceOperationは、操作対象のターゲットリストを保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceOperation is an object that holds target retargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<RetargetingListServiceTargetingList>> operand = JsonNullable.undefined();
+  private List<RetargetingListServiceTargetingList> operand = new ArrayList<>();
 
   @JsonProperty("targetListOwner")
-  private JsonNullable<RetargetingListServiceTargetListOwner> targetListOwner = JsonNullable.undefined();
+  private RetargetingListServiceTargetListOwner targetListOwner = null;
 
   public RetargetingListServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -51,12 +50,15 @@ public class RetargetingListServiceOperation   {
   }
 
   public RetargetingListServiceOperation operand(List<RetargetingListServiceTargetingList> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public RetargetingListServiceOperation addOperandItem(RetargetingListServiceTargetingList operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -69,16 +71,16 @@ public class RetargetingListServiceOperation   {
 
   @Valid
 @Size(min=1,max=200) 
-  public JsonNullable<List<RetargetingListServiceTargetingList>> getOperand() {
+  public List<RetargetingListServiceTargetingList> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<RetargetingListServiceTargetingList>> operand) {
+  public void setOperand(List<RetargetingListServiceTargetingList> operand) {
     this.operand = operand;
   }
 
   public RetargetingListServiceOperation targetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
-    this.targetListOwner = JsonNullable.of(targetListOwner);
+    this.targetListOwner = targetListOwner;
     return this;
   }
 
@@ -90,17 +92,17 @@ public class RetargetingListServiceOperation   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceTargetListOwner> getTargetListOwner() {
+  public RetargetingListServiceTargetListOwner getTargetListOwner() {
     return targetListOwner;
   }
 
-  public void setTargetListOwner(JsonNullable<RetargetingListServiceTargetListOwner> targetListOwner) {
+  public void setTargetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
     this.targetListOwner = targetListOwner;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -134,7 +136,7 @@ public class RetargetingListServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

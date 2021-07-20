@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceReviewSummary;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceReviewSummaryValueは、ページフィードアイテムの審査成績、状況サマリー取得結果を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceReviewSummaryValue is a container storing the examination results of the page feed item, acquisitionc result of situation summary.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceReviewSummaryValueは、ページフィードアイテムの審査成績、状況サマリー取得結果を格納するコンテナです。</div> <div lang=\"en\">PageFeedItemServiceReviewSummaryValue is a container storing the examination results of the page feed item, acquisitionc result of situation summary.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceReviewSummaryValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   @JsonProperty("reviewSummary")
-  private JsonNullable<PageFeedItemServiceReviewSummary> reviewSummary = JsonNullable.undefined();
+  private PageFeedItemServiceReviewSummary reviewSummary = null;
 
   public PageFeedItemServiceReviewSummaryValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public PageFeedItemServiceReviewSummaryValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -50,16 +49,16 @@ public class PageFeedItemServiceReviewSummaryValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public PageFeedItemServiceReviewSummaryValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class PageFeedItemServiceReviewSummaryValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
   public PageFeedItemServiceReviewSummaryValue reviewSummary(PageFeedItemServiceReviewSummary reviewSummary) {
-    this.reviewSummary = JsonNullable.of(reviewSummary);
+    this.reviewSummary = reviewSummary;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class PageFeedItemServiceReviewSummaryValue   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceReviewSummary> getReviewSummary() {
+  public PageFeedItemServiceReviewSummary getReviewSummary() {
     return reviewSummary;
   }
 
-  public void setReviewSummary(JsonNullable<PageFeedItemServiceReviewSummary> reviewSummary) {
+  public void setReviewSummary(PageFeedItemServiceReviewSummary reviewSummary) {
     this.reviewSummary = reviewSummary;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class PageFeedItemServiceReviewSummaryValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

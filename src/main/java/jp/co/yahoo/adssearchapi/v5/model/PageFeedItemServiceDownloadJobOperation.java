@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceDownloadJob;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceDownloadJobOperationオブジェクトは、ページフィードアイテムを一括でダウンロードするための処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceDownloadJobOperation object displays content of page feed item for download collectively.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceDownloadJobOperationオブジェクトは、ページフィードアイテムを一括でダウンロードするための処理の内容を表します。</div> <div lang=\"en\">PageFeedItemServiceDownloadJobOperation object displays content of page feed item for download collectively.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceDownloadJobOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<PageFeedItemServiceDownloadJob>> operand = JsonNullable.undefined();
+  private List<PageFeedItemServiceDownloadJob> operand = new ArrayList<>();
 
   public PageFeedItemServiceDownloadJobOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -46,12 +45,15 @@ public class PageFeedItemServiceDownloadJobOperation   {
   }
 
   public PageFeedItemServiceDownloadJobOperation operand(List<PageFeedItemServiceDownloadJob> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public PageFeedItemServiceDownloadJobOperation addOperandItem(PageFeedItemServiceDownloadJob operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -64,17 +66,17 @@ public class PageFeedItemServiceDownloadJobOperation   {
 
   @Valid
 @Size(min=1,max=1) 
-  public JsonNullable<List<PageFeedItemServiceDownloadJob>> getOperand() {
+  public List<PageFeedItemServiceDownloadJob> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<PageFeedItemServiceDownloadJob>> operand) {
+  public void setOperand(List<PageFeedItemServiceDownloadJob> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -106,7 +108,7 @@ public class PageFeedItemServiceDownloadJobOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

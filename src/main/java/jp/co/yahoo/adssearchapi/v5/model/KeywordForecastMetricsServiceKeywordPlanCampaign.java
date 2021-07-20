@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordForecastMetricsServiceKeywordPlanAdGroup;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordForecastMetricsServiceKeywordPlanNetwork;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,23 +16,23 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanCampaign オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanCampaign object is a container for the estimate request.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordForecastMetricsServiceKeywordPlanCampaign オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetricsServiceKeywordPlanCampaign object is a container for the estimate request.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordForecastMetricsServiceKeywordPlanCampaign   {
   @JsonProperty("keywordPlanNetwork")
-  private JsonNullable<KeywordForecastMetricsServiceKeywordPlanNetwork> keywordPlanNetwork = JsonNullable.undefined();
+  private KeywordForecastMetricsServiceKeywordPlanNetwork keywordPlanNetwork = null;
 
   @JsonProperty("maxCpc")
-  private JsonNullable<Long> maxCpc = JsonNullable.undefined();
+  private Long maxCpc = null;
 
   @JsonProperty("geoTargets")
   @Valid
-  private JsonNullable<List<String>> geoTargets = JsonNullable.undefined();
+  private List<String> geoTargets = null;
 
   @JsonProperty("keywordPlanAdGroup")
-  private JsonNullable<KeywordForecastMetricsServiceKeywordPlanAdGroup> keywordPlanAdGroup = JsonNullable.undefined();
+  private KeywordForecastMetricsServiceKeywordPlanAdGroup keywordPlanAdGroup = null;
 
   public KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanNetwork(KeywordForecastMetricsServiceKeywordPlanNetwork keywordPlanNetwork) {
-    this.keywordPlanNetwork = JsonNullable.of(keywordPlanNetwork);
+    this.keywordPlanNetwork = keywordPlanNetwork;
     return this;
   }
 
@@ -45,16 +44,16 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign   {
 
   @Valid
 
-  public JsonNullable<KeywordForecastMetricsServiceKeywordPlanNetwork> getKeywordPlanNetwork() {
+  public KeywordForecastMetricsServiceKeywordPlanNetwork getKeywordPlanNetwork() {
     return keywordPlanNetwork;
   }
 
-  public void setKeywordPlanNetwork(JsonNullable<KeywordForecastMetricsServiceKeywordPlanNetwork> keywordPlanNetwork) {
+  public void setKeywordPlanNetwork(KeywordForecastMetricsServiceKeywordPlanNetwork keywordPlanNetwork) {
     this.keywordPlanNetwork = keywordPlanNetwork;
   }
 
   public KeywordForecastMetricsServiceKeywordPlanCampaign maxCpc(Long maxCpc) {
-    this.maxCpc = JsonNullable.of(maxCpc);
+    this.maxCpc = maxCpc;
     return this;
   }
 
@@ -66,24 +65,24 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign   {
   @NotNull
 
 
-  public JsonNullable<Long> getMaxCpc() {
+  public Long getMaxCpc() {
     return maxCpc;
   }
 
-  public void setMaxCpc(JsonNullable<Long> maxCpc) {
+  public void setMaxCpc(Long maxCpc) {
     this.maxCpc = maxCpc;
   }
 
   public KeywordForecastMetricsServiceKeywordPlanCampaign geoTargets(List<String> geoTargets) {
-    this.geoTargets = JsonNullable.of(geoTargets);
+    this.geoTargets = geoTargets;
     return this;
   }
 
   public KeywordForecastMetricsServiceKeywordPlanCampaign addGeoTargetsItem(String geoTargetsItem) {
-    if (this.geoTargets == null || !this.geoTargets.isPresent()) {
-      this.geoTargets = JsonNullable.of(new ArrayList<>());
+    if (this.geoTargets == null) {
+      this.geoTargets = new ArrayList<>();
     }
-    this.geoTargets.get().add(geoTargetsItem);
+    this.geoTargets.add(geoTargetsItem);
     return this;
   }
 
@@ -94,16 +93,16 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">地域情報です。</div> <div lang=\"en\">Area information.</div> ")
 
 
-  public JsonNullable<List<String>> getGeoTargets() {
+  public List<String> getGeoTargets() {
     return geoTargets;
   }
 
-  public void setGeoTargets(JsonNullable<List<String>> geoTargets) {
+  public void setGeoTargets(List<String> geoTargets) {
     this.geoTargets = geoTargets;
   }
 
   public KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanAdGroup(KeywordForecastMetricsServiceKeywordPlanAdGroup keywordPlanAdGroup) {
-    this.keywordPlanAdGroup = JsonNullable.of(keywordPlanAdGroup);
+    this.keywordPlanAdGroup = keywordPlanAdGroup;
     return this;
   }
 
@@ -116,17 +115,17 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign   {
 
   @Valid
 
-  public JsonNullable<KeywordForecastMetricsServiceKeywordPlanAdGroup> getKeywordPlanAdGroup() {
+  public KeywordForecastMetricsServiceKeywordPlanAdGroup getKeywordPlanAdGroup() {
     return keywordPlanAdGroup;
   }
 
-  public void setKeywordPlanAdGroup(JsonNullable<KeywordForecastMetricsServiceKeywordPlanAdGroup> keywordPlanAdGroup) {
+  public void setKeywordPlanAdGroup(KeywordForecastMetricsServiceKeywordPlanAdGroup keywordPlanAdGroup) {
     this.keywordPlanAdGroup = keywordPlanAdGroup;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -162,7 +161,7 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

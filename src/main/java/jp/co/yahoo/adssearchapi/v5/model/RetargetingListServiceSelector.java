@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceTargetListOwner;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceTargetListType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,27 +16,27 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceSelectorは、ターゲットリストの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceSelector is an object that holds search condition (parameter).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceSelectorは、ターゲットリストの検索条件（実行パラメータ）を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceSelector is an object that holds search condition (parameter).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("targetListIds")
   @Valid
-  private JsonNullable<List<Long>> targetListIds = JsonNullable.undefined();
+  private List<Long> targetListIds = null;
 
   @JsonProperty("targetListOwner")
-  private JsonNullable<RetargetingListServiceTargetListOwner> targetListOwner = JsonNullable.undefined();
+  private RetargetingListServiceTargetListOwner targetListOwner = null;
 
   @JsonProperty("targetListTypes")
   @Valid
-  private JsonNullable<List<RetargetingListServiceTargetListType>> targetListTypes = JsonNullable.undefined();
+  private List<RetargetingListServiceTargetListType> targetListTypes = null;
 
   public RetargetingListServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -61,7 +60,7 @@ public class RetargetingListServiceSelector   {
   }
 
   public RetargetingListServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -74,16 +73,16 @@ public class RetargetingListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public RetargetingListServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -95,24 +94,24 @@ public class RetargetingListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public RetargetingListServiceSelector targetListIds(List<Long> targetListIds) {
-    this.targetListIds = JsonNullable.of(targetListIds);
+    this.targetListIds = targetListIds;
     return this;
   }
 
   public RetargetingListServiceSelector addTargetListIdsItem(Long targetListIdsItem) {
-    if (this.targetListIds == null || !this.targetListIds.isPresent()) {
-      this.targetListIds = JsonNullable.of(new ArrayList<>());
+    if (this.targetListIds == null) {
+      this.targetListIds = new ArrayList<>();
     }
-    this.targetListIds.get().add(targetListIdsItem);
+    this.targetListIds.add(targetListIdsItem);
     return this;
   }
 
@@ -123,16 +122,16 @@ public class RetargetingListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ターゲットリストIDです。</div> <div lang=\"en\">Search conditon: Target List ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getTargetListIds() {
+  public List<Long> getTargetListIds() {
     return targetListIds;
   }
 
-  public void setTargetListIds(JsonNullable<List<Long>> targetListIds) {
+  public void setTargetListIds(List<Long> targetListIds) {
     this.targetListIds = targetListIds;
   }
 
   public RetargetingListServiceSelector targetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
-    this.targetListOwner = JsonNullable.of(targetListOwner);
+    this.targetListOwner = targetListOwner;
     return this;
   }
 
@@ -144,24 +143,24 @@ public class RetargetingListServiceSelector   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceTargetListOwner> getTargetListOwner() {
+  public RetargetingListServiceTargetListOwner getTargetListOwner() {
     return targetListOwner;
   }
 
-  public void setTargetListOwner(JsonNullable<RetargetingListServiceTargetListOwner> targetListOwner) {
+  public void setTargetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
     this.targetListOwner = targetListOwner;
   }
 
   public RetargetingListServiceSelector targetListTypes(List<RetargetingListServiceTargetListType> targetListTypes) {
-    this.targetListTypes = JsonNullable.of(targetListTypes);
+    this.targetListTypes = targetListTypes;
     return this;
   }
 
   public RetargetingListServiceSelector addTargetListTypesItem(RetargetingListServiceTargetListType targetListTypesItem) {
-    if (this.targetListTypes == null || !this.targetListTypes.isPresent()) {
-      this.targetListTypes = JsonNullable.of(new ArrayList<>());
+    if (this.targetListTypes == null) {
+      this.targetListTypes = new ArrayList<>();
     }
-    this.targetListTypes.get().add(targetListTypesItem);
+    this.targetListTypes.add(targetListTypesItem);
     return this;
   }
 
@@ -173,17 +172,17 @@ public class RetargetingListServiceSelector   {
 
   @Valid
 @Size(max=3) 
-  public JsonNullable<List<RetargetingListServiceTargetListType>> getTargetListTypes() {
+  public List<RetargetingListServiceTargetListType> getTargetListTypes() {
     return targetListTypes;
   }
 
-  public void setTargetListTypes(JsonNullable<List<RetargetingListServiceTargetListType>> targetListTypes) {
+  public void setTargetListTypes(List<RetargetingListServiceTargetListType> targetListTypes) {
     this.targetListTypes = targetListTypes;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -223,7 +222,7 @@ public class RetargetingListServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

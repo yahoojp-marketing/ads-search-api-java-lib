@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceJobType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,23 +15,23 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceJobStatusSelectorオブジェクトは、upload、downloadの処理状況を取得するための検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceJobStatusSelector object retains search condition for The processing situation upload/download.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceJobStatusSelectorオブジェクトは、upload、downloadの処理状況を取得するための検索条件を格納します。</div> <div lang=\"en\">PageFeedItemServiceJobStatusSelector object retains search condition for The processing situation upload/download.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceJobStatusSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("jobIds")
   @Valid
-  private JsonNullable<List<Long>> jobIds = JsonNullable.undefined();
+  private List<Long> jobIds = null;
 
   @JsonProperty("jobType")
-  private JsonNullable<PageFeedItemServiceJobType> jobType = JsonNullable.undefined();
+  private PageFeedItemServiceJobType jobType = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public PageFeedItemServiceJobStatusSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -56,15 +55,15 @@ public class PageFeedItemServiceJobStatusSelector   {
   }
 
   public PageFeedItemServiceJobStatusSelector jobIds(List<Long> jobIds) {
-    this.jobIds = JsonNullable.of(jobIds);
+    this.jobIds = jobIds;
     return this;
   }
 
   public PageFeedItemServiceJobStatusSelector addJobIdsItem(Long jobIdsItem) {
-    if (this.jobIds == null || !this.jobIds.isPresent()) {
-      this.jobIds = JsonNullable.of(new ArrayList<>());
+    if (this.jobIds == null) {
+      this.jobIds = new ArrayList<>();
     }
-    this.jobIds.get().add(jobIdsItem);
+    this.jobIds.add(jobIdsItem);
     return this;
   }
 
@@ -75,16 +74,16 @@ public class PageFeedItemServiceJobStatusSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">登録したジョブのID</div> <div lang=\"en\">Registered job ID</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getJobIds() {
+  public List<Long> getJobIds() {
     return jobIds;
   }
 
-  public void setJobIds(JsonNullable<List<Long>> jobIds) {
+  public void setJobIds(List<Long> jobIds) {
     this.jobIds = jobIds;
   }
 
   public PageFeedItemServiceJobStatusSelector jobType(PageFeedItemServiceJobType jobType) {
-    this.jobType = JsonNullable.of(jobType);
+    this.jobType = jobType;
     return this;
   }
 
@@ -97,16 +96,16 @@ public class PageFeedItemServiceJobStatusSelector   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceJobType> getJobType() {
+  public PageFeedItemServiceJobType getJobType() {
     return jobType;
   }
 
-  public void setJobType(JsonNullable<PageFeedItemServiceJobType> jobType) {
+  public void setJobType(PageFeedItemServiceJobType jobType) {
     this.jobType = jobType;
   }
 
   public PageFeedItemServiceJobStatusSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -119,16 +118,16 @@ public class PageFeedItemServiceJobStatusSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public PageFeedItemServiceJobStatusSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -140,17 +139,17 @@ public class PageFeedItemServiceJobStatusSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -188,7 +187,7 @@ public class PageFeedItemServiceJobStatusSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,29 +15,29 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServicePageオブジェクトは、取得されるコンバージョントラッカー情報のエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServicePage object shows entry of ConversionTracker.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServicePageオブジェクトは、取得されるコンバージョントラッカー情報のエントリーを表します。</div> <div lang=\"en\">ConversionTrackerServicePage object shows entry of ConversionTracker.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServicePage   {
   @JsonProperty("totalAllConversionValue")
-  private JsonNullable<String> totalAllConversionValue = JsonNullable.undefined();
+  private String totalAllConversionValue = null;
 
   @JsonProperty("totalAllConversions")
-  private JsonNullable<Long> totalAllConversions = JsonNullable.undefined();
+  private Long totalAllConversions = null;
 
   @JsonProperty("totalConversionValue")
-  private JsonNullable<String> totalConversionValue = JsonNullable.undefined();
+  private String totalConversionValue = null;
 
   @JsonProperty("totalConversions")
-  private JsonNullable<Long> totalConversions = JsonNullable.undefined();
+  private Long totalConversions = null;
 
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<ConversionTrackerServiceValue>> values = JsonNullable.undefined();
+  private List<ConversionTrackerServiceValue> values = null;
 
   public ConversionTrackerServicePage totalAllConversionValue(String totalAllConversionValue) {
-    this.totalAllConversionValue = JsonNullable.of(totalAllConversionValue);
+    this.totalAllConversionValue = totalAllConversionValue;
     return this;
   }
 
@@ -49,16 +48,16 @@ public class ConversionTrackerServicePage   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定の対象コンバージョン値と、対象外コンバージョン値の合計です。</div> <div lang=\"en\">Total value of conversions on Auto Bidding setting and the value of conversions not on Auto Bidding setting.</div> ")
 
 
-  public JsonNullable<String> getTotalAllConversionValue() {
+  public String getTotalAllConversionValue() {
     return totalAllConversionValue;
   }
 
-  public void setTotalAllConversionValue(JsonNullable<String> totalAllConversionValue) {
+  public void setTotalAllConversionValue(String totalAllConversionValue) {
     this.totalAllConversionValue = totalAllConversionValue;
   }
 
   public ConversionTrackerServicePage totalAllConversions(Long totalAllConversions) {
-    this.totalAllConversions = JsonNullable.of(totalAllConversions);
+    this.totalAllConversions = totalAllConversions;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class ConversionTrackerServicePage   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定の対象コンバージョン数と、対象外コンバージョン数の合計です。</div> <div lang=\"en\">Total value of conversions on Auto Bidding setting and the value of conversions not on Auto Bidding setting.</div> ")
 
 
-  public JsonNullable<Long> getTotalAllConversions() {
+  public Long getTotalAllConversions() {
     return totalAllConversions;
   }
 
-  public void setTotalAllConversions(JsonNullable<Long> totalAllConversions) {
+  public void setTotalAllConversions(Long totalAllConversions) {
     this.totalAllConversions = totalAllConversions;
   }
 
   public ConversionTrackerServicePage totalConversionValue(String totalConversionValue) {
-    this.totalConversionValue = JsonNullable.of(totalConversionValue);
+    this.totalConversionValue = totalConversionValue;
     return this;
   }
 
@@ -89,16 +88,16 @@ public class ConversionTrackerServicePage   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定の対象コンバージョン値の合計です。</div> <div lang=\"en\">Total value of conversions on Auto Bidding setting.</div> ")
 
 
-  public JsonNullable<String> getTotalConversionValue() {
+  public String getTotalConversionValue() {
     return totalConversionValue;
   }
 
-  public void setTotalConversionValue(JsonNullable<String> totalConversionValue) {
+  public void setTotalConversionValue(String totalConversionValue) {
     this.totalConversionValue = totalConversionValue;
   }
 
   public ConversionTrackerServicePage totalConversions(Long totalConversions) {
-    this.totalConversions = JsonNullable.of(totalConversions);
+    this.totalConversions = totalConversions;
     return this;
   }
 
@@ -109,11 +108,11 @@ public class ConversionTrackerServicePage   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定の対象コンバージョン数の合計です。</div> <div lang=\"en\">Total value of conversions on Auto Bidding setting.</div> ")
 
 
-  public JsonNullable<Long> getTotalConversions() {
+  public Long getTotalConversions() {
     return totalConversions;
   }
 
-  public void setTotalConversions(JsonNullable<Long> totalConversions) {
+  public void setTotalConversions(Long totalConversions) {
     this.totalConversions = totalConversions;
   }
 
@@ -138,15 +137,15 @@ public class ConversionTrackerServicePage   {
   }
 
   public ConversionTrackerServicePage values(List<ConversionTrackerServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public ConversionTrackerServicePage addValuesItem(ConversionTrackerServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -158,17 +157,17 @@ public class ConversionTrackerServicePage   {
 
   @Valid
 
-  public JsonNullable<List<ConversionTrackerServiceValue>> getValues() {
+  public List<ConversionTrackerServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<ConversionTrackerServiceValue>> values) {
+  public void setValues(List<ConversionTrackerServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -208,7 +207,7 @@ public class ConversionTrackerServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

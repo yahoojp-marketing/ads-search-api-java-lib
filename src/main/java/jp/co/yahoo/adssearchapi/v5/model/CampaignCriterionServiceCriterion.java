@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignCriterionServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignCriterionServiceKeyword;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,22 +14,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceCriterionオブジェクトは、クライテリアを表します。※キャンペーン用クライテリアです。&lt;br&gt; ADD時およびREMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceCriterion object describes criteria information. *This is a criteria for campaign.&lt;br&gt; This field is required in ADD and REMOVE operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceCriterionオブジェクトは、クライテリアを表します。※キャンペーン用クライテリアです。<br> ADD時およびREMOVE時、このフィールドは必須です。</div> <div lang=\"en\">CampaignCriterionServiceCriterion object describes criteria information. *This is a criteria for campaign.<br> This field is required in ADD and REMOVE operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignCriterionServiceCriterion   {
   @JsonProperty("criterionId")
-  private JsonNullable<Long> criterionId = JsonNullable.undefined();
+  private Long criterionId = null;
 
   @JsonProperty("criterionTrackId")
-  private JsonNullable<Long> criterionTrackId = JsonNullable.undefined();
+  private Long criterionTrackId = null;
 
   @JsonProperty("criterionType")
-  private JsonNullable<CampaignCriterionServiceCriterionType> criterionType = JsonNullable.undefined();
+  private CampaignCriterionServiceCriterionType criterionType = null;
 
   @JsonProperty("keyword")
-  private JsonNullable<CampaignCriterionServiceKeyword> keyword = JsonNullable.undefined();
+  private CampaignCriterionServiceKeyword keyword = null;
 
   public CampaignCriterionServiceCriterion criterionId(Long criterionId) {
-    this.criterionId = JsonNullable.of(criterionId);
+    this.criterionId = criterionId;
     return this;
   }
 
@@ -41,16 +40,16 @@ public class CampaignCriterionServiceCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">クライテリアIDです。<br> REMOVE時、このフィールドは必須です。</div> <div lang=\"en\">CampaignCriterionServiceCriterion ID.<br> This field is required in REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getCriterionId() {
+  public Long getCriterionId() {
     return criterionId;
   }
 
-  public void setCriterionId(JsonNullable<Long> criterionId) {
+  public void setCriterionId(Long criterionId) {
     this.criterionId = criterionId;
   }
 
   public CampaignCriterionServiceCriterion criterionTrackId(Long criterionTrackId) {
-    this.criterionTrackId = JsonNullable.of(criterionTrackId);
+    this.criterionTrackId = criterionTrackId;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class CampaignCriterionServiceCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">クライテリオントラックIDです。<br> 対象外キーワードでは返却されません。</div> <div lang=\"en\">CampaignCriterionServiceCriterion Track ID.<br> This is not returned for Negative keyword.</div> ")
 
 
-  public JsonNullable<Long> getCriterionTrackId() {
+  public Long getCriterionTrackId() {
     return criterionTrackId;
   }
 
-  public void setCriterionTrackId(JsonNullable<Long> criterionTrackId) {
+  public void setCriterionTrackId(Long criterionTrackId) {
     this.criterionTrackId = criterionTrackId;
   }
 
   public CampaignCriterionServiceCriterion criterionType(CampaignCriterionServiceCriterionType criterionType) {
-    this.criterionType = JsonNullable.of(criterionType);
+    this.criterionType = criterionType;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class CampaignCriterionServiceCriterion   {
 
   @Valid
 
-  public JsonNullable<CampaignCriterionServiceCriterionType> getCriterionType() {
+  public CampaignCriterionServiceCriterionType getCriterionType() {
     return criterionType;
   }
 
-  public void setCriterionType(JsonNullable<CampaignCriterionServiceCriterionType> criterionType) {
+  public void setCriterionType(CampaignCriterionServiceCriterionType criterionType) {
     this.criterionType = criterionType;
   }
 
   public CampaignCriterionServiceCriterion keyword(CampaignCriterionServiceKeyword keyword) {
-    this.keyword = JsonNullable.of(keyword);
+    this.keyword = keyword;
     return this;
   }
 
@@ -103,17 +102,17 @@ public class CampaignCriterionServiceCriterion   {
 
   @Valid
 
-  public JsonNullable<CampaignCriterionServiceKeyword> getKeyword() {
+  public CampaignCriterionServiceKeyword getKeyword() {
     return keyword;
   }
 
-  public void setKeyword(JsonNullable<CampaignCriterionServiceKeyword> keyword) {
+  public void setKeyword(CampaignCriterionServiceKeyword keyword) {
     this.keyword = keyword;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -149,7 +148,7 @@ public class CampaignCriterionServiceCriterion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

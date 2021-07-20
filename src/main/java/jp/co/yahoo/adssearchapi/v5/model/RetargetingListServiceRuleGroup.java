@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceRuleItem;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleGroupは、URL/LABELのルールをグループ化した情報を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時に、このフィールドは省略可能となります。&lt;br&gt; isAllVisitorがTRUEである場合、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleGroup is an object that holds grouped URL/LABEL rules.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If isAllVisitor is TRUE, this field is required in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceRuleGroupは、URL/LABELのルールをグループ化した情報を保持するオブジェクトです。<br> ADDおよびSET時に、このフィールドは省略可能となります。<br> isAllVisitorがTRUEである場合、ADDおよびSET時に必須となります。</div> <div lang=\"en\">RetargetingListServiceRuleGroup is an object that holds grouped URL/LABEL rules.<br> This field is optional in ADD and SET operation.<br> If isAllVisitor is TRUE, this field is required in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceRuleGroup   {
   @JsonProperty("ruleItems")
   @Valid
-  private JsonNullable<List<RetargetingListServiceRuleItem>> ruleItems = JsonNullable.undefined();
+  private List<RetargetingListServiceRuleItem> ruleItems = null;
 
   public RetargetingListServiceRuleGroup ruleItems(List<RetargetingListServiceRuleItem> ruleItems) {
-    this.ruleItems = JsonNullable.of(ruleItems);
+    this.ruleItems = ruleItems;
     return this;
   }
 
   public RetargetingListServiceRuleGroup addRuleItemsItem(RetargetingListServiceRuleItem ruleItemsItem) {
-    if (this.ruleItems == null || !this.ruleItems.isPresent()) {
-      this.ruleItems = JsonNullable.of(new ArrayList<>());
+    if (this.ruleItems == null) {
+      this.ruleItems = new ArrayList<>();
     }
-    this.ruleItems.get().add(ruleItemsItem);
+    this.ruleItems.add(ruleItemsItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RetargetingListServiceRuleGroup   {
 
   @Valid
 
-  public JsonNullable<List<RetargetingListServiceRuleItem>> getRuleItems() {
+  public List<RetargetingListServiceRuleItem> getRuleItems() {
     return ruleItems;
   }
 
-  public void setRuleItems(JsonNullable<List<RetargetingListServiceRuleItem>> ruleItems) {
+  public void setRuleItems(List<RetargetingListServiceRuleItem> ruleItems) {
     this.ruleItems = ruleItems;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RetargetingListServiceRuleGroup   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

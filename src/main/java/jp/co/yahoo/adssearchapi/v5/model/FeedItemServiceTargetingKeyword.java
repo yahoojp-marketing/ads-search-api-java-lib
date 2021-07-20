@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceKeywordMatchType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceTargetingKeywordオブジェクトは、データ自動挿入のターゲットキーワードを表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※アドカスタマイザーの場合は、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceTargetingKeyword contains keyword setting for Data Auto Insertion.&lt;br&gt; Although this field will be returned in the response, it will be  ignored on input.&lt;br&gt; *For AD_CUSTOMIZER, this field is optional in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemServiceTargetingKeywordオブジェクトは、データ自動挿入のターゲットキーワードを表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※アドカスタマイザーの場合は、ADDおよびSET時に省略可能となります。</div> <div lang=\"en\">FeedItemServiceTargetingKeyword contains keyword setting for Data Auto Insertion.<br> Although this field will be returned in the response, it will be  ignored on input.<br> *For AD_CUSTOMIZER, this field is optional in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItemServiceTargetingKeyword   {
   @JsonProperty("keywordMatchType")
-  private JsonNullable<FeedItemServiceKeywordMatchType> keywordMatchType = JsonNullable.undefined();
+  private FeedItemServiceKeywordMatchType keywordMatchType = null;
 
   @JsonProperty("targetingKeywordId")
-  private JsonNullable<Long> targetingKeywordId = JsonNullable.undefined();
+  private Long targetingKeywordId = null;
 
   @JsonProperty("text")
-  private JsonNullable<String> text = JsonNullable.undefined();
+  private String text = null;
 
   public FeedItemServiceTargetingKeyword keywordMatchType(FeedItemServiceKeywordMatchType keywordMatchType) {
-    this.keywordMatchType = JsonNullable.of(keywordMatchType);
+    this.keywordMatchType = keywordMatchType;
     return this;
   }
 
@@ -38,16 +37,16 @@ public class FeedItemServiceTargetingKeyword   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceKeywordMatchType> getKeywordMatchType() {
+  public FeedItemServiceKeywordMatchType getKeywordMatchType() {
     return keywordMatchType;
   }
 
-  public void setKeywordMatchType(JsonNullable<FeedItemServiceKeywordMatchType> keywordMatchType) {
+  public void setKeywordMatchType(FeedItemServiceKeywordMatchType keywordMatchType) {
     this.keywordMatchType = keywordMatchType;
   }
 
   public FeedItemServiceTargetingKeyword targetingKeywordId(Long targetingKeywordId) {
-    this.targetingKeywordId = JsonNullable.of(targetingKeywordId);
+    this.targetingKeywordId = targetingKeywordId;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class FeedItemServiceTargetingKeyword   {
   @ApiModelProperty(value = "<div lang=\"ja\">指定したキーワード（text）を識別する IDになります。<br> ※設定を解除する場合は「0」を指定 してください。<br> このフィールドは、SET時に省略可能となります。</div> <div lang=\"en\">ID to identify the Targeting keyword (text).<br> * To deactive, set &#34;0&#34;.<br> This field is optional in SET operation.</div> ")
 
 
-  public JsonNullable<Long> getTargetingKeywordId() {
+  public Long getTargetingKeywordId() {
     return targetingKeywordId;
   }
 
-  public void setTargetingKeywordId(JsonNullable<Long> targetingKeywordId) {
+  public void setTargetingKeywordId(Long targetingKeywordId) {
     this.targetingKeywordId = targetingKeywordId;
   }
 
   public FeedItemServiceTargetingKeyword text(String text) {
-    this.text = JsonNullable.of(text);
+    this.text = text;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class FeedItemServiceTargetingKeyword   {
   @ApiModelProperty(value = "<div lang=\"ja\">指定するキーワードです。<br>※入力制限：80文字、10ワード までです。<br> このフィールドはADDおよびSET時に必須となります。</div> <div lang=\"en\">Keyword text.<br> * Insert limit: Up to 80 characters and/or 10 words.<br> This field is required in ADD and SET operation.</div> ")
 
 
-  public JsonNullable<String> getText() {
+  public String getText() {
     return text;
   }
 
-  public void setText(JsonNullable<String> text) {
+  public void setText(String text) {
     this.text = text;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class FeedItemServiceTargetingKeyword   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }
