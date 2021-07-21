@@ -9,7 +9,6 @@ import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceCustomKeyRuleItem
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceRuleOperator;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceRuleType;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceUrlRuleItem;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,25 +16,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleItemは、ルールの評価条件を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleItem is an object that holds evaluation condition of rule.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceRuleItemは、ルールの評価条件を保持するオブジェクトです。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">RetargetingListServiceRuleItem is an object that holds evaluation condition of rule.<br> This field is required in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceRuleItem   {
   @JsonProperty("customKeyRuleItem")
-  private JsonNullable<RetargetingListServiceCustomKeyRuleItem> customKeyRuleItem = JsonNullable.undefined();
+  private RetargetingListServiceCustomKeyRuleItem customKeyRuleItem = null;
 
   @JsonProperty("ruleOperator")
-  private JsonNullable<RetargetingListServiceRuleOperator> ruleOperator = JsonNullable.undefined();
+  private RetargetingListServiceRuleOperator ruleOperator = null;
 
   @JsonProperty("ruleType")
-  private JsonNullable<RetargetingListServiceRuleType> ruleType = JsonNullable.undefined();
+  private RetargetingListServiceRuleType ruleType = null;
 
   @JsonProperty("urlRuleItem")
-  private JsonNullable<RetargetingListServiceUrlRuleItem> urlRuleItem = JsonNullable.undefined();
+  private RetargetingListServiceUrlRuleItem urlRuleItem = null;
 
   @JsonProperty("value")
-  private JsonNullable<String> value = JsonNullable.undefined();
+  private String value = null;
 
   public RetargetingListServiceRuleItem customKeyRuleItem(RetargetingListServiceCustomKeyRuleItem customKeyRuleItem) {
-    this.customKeyRuleItem = JsonNullable.of(customKeyRuleItem);
+    this.customKeyRuleItem = customKeyRuleItem;
     return this;
   }
 
@@ -47,16 +46,16 @@ public class RetargetingListServiceRuleItem   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceCustomKeyRuleItem> getCustomKeyRuleItem() {
+  public RetargetingListServiceCustomKeyRuleItem getCustomKeyRuleItem() {
     return customKeyRuleItem;
   }
 
-  public void setCustomKeyRuleItem(JsonNullable<RetargetingListServiceCustomKeyRuleItem> customKeyRuleItem) {
+  public void setCustomKeyRuleItem(RetargetingListServiceCustomKeyRuleItem customKeyRuleItem) {
     this.customKeyRuleItem = customKeyRuleItem;
   }
 
   public RetargetingListServiceRuleItem ruleOperator(RetargetingListServiceRuleOperator ruleOperator) {
-    this.ruleOperator = JsonNullable.of(ruleOperator);
+    this.ruleOperator = ruleOperator;
     return this;
   }
 
@@ -68,16 +67,16 @@ public class RetargetingListServiceRuleItem   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceRuleOperator> getRuleOperator() {
+  public RetargetingListServiceRuleOperator getRuleOperator() {
     return ruleOperator;
   }
 
-  public void setRuleOperator(JsonNullable<RetargetingListServiceRuleOperator> ruleOperator) {
+  public void setRuleOperator(RetargetingListServiceRuleOperator ruleOperator) {
     this.ruleOperator = ruleOperator;
   }
 
   public RetargetingListServiceRuleItem ruleType(RetargetingListServiceRuleType ruleType) {
-    this.ruleType = JsonNullable.of(ruleType);
+    this.ruleType = ruleType;
     return this;
   }
 
@@ -89,16 +88,16 @@ public class RetargetingListServiceRuleItem   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceRuleType> getRuleType() {
+  public RetargetingListServiceRuleType getRuleType() {
     return ruleType;
   }
 
-  public void setRuleType(JsonNullable<RetargetingListServiceRuleType> ruleType) {
+  public void setRuleType(RetargetingListServiceRuleType ruleType) {
     this.ruleType = ruleType;
   }
 
   public RetargetingListServiceRuleItem urlRuleItem(RetargetingListServiceUrlRuleItem urlRuleItem) {
-    this.urlRuleItem = JsonNullable.of(urlRuleItem);
+    this.urlRuleItem = urlRuleItem;
     return this;
   }
 
@@ -110,16 +109,16 @@ public class RetargetingListServiceRuleItem   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceUrlRuleItem> getUrlRuleItem() {
+  public RetargetingListServiceUrlRuleItem getUrlRuleItem() {
     return urlRuleItem;
   }
 
-  public void setUrlRuleItem(JsonNullable<RetargetingListServiceUrlRuleItem> urlRuleItem) {
+  public void setUrlRuleItem(RetargetingListServiceUrlRuleItem urlRuleItem) {
     this.urlRuleItem = urlRuleItem;
   }
 
   public RetargetingListServiceRuleItem value(String value) {
-    this.value = JsonNullable.of(value);
+    this.value = value;
     return this;
   }
 
@@ -130,17 +129,17 @@ public class RetargetingListServiceRuleItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">評価値です。<br> ADDおよびSET時、このフィールドは必須となります。<br> ※括弧（()）、シングルクォート（&#39;）、ダブルクォート（&#34;）、タブ（\\t）は利用できません。<br> ※250文字まで指定可能です。</div> <div lang=\"en\">Evaluation value.<br> *Cannot use: bracket, single quote, double quote, and tab.<br> *Can select up to 250 characters.<br> This field is required in ADD and SET operation.</div> ")
 
 
-  public JsonNullable<String> getValue() {
+  public String getValue() {
     return value;
   }
 
-  public void setValue(JsonNullable<String> value) {
+  public void setValue(String value) {
     this.value = value;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -178,7 +177,7 @@ public class RetargetingListServiceRuleItem   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

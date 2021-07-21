@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceBidSource;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,22 +13,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceBidオブジェクトは、入札価格を表示します。 （AdGroupWebpageService用のオブジェクトです。）&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。※ExcludedTypeがINCLUDEDのみ更新可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceBid object describes bid. (Object for AdGroupWebpageService.)&lt;br&gt; This field is optional in ADD and SET operation. *This field can be updated when ExcludedType is &#39;INCLUDED&#39;.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceBidオブジェクトは、入札価格を表示します。 （AdGroupWebpageService用のオブジェクトです。）<br> ADD時およびSET時、このフィールドは省略可能となります。※ExcludedTypeがINCLUDEDのみ更新可能です。</div> <div lang=\"en\">AdGroupWebpageServiceBid object describes bid. (Object for AdGroupWebpageService.)<br> This field is optional in ADD and SET operation. *This field can be updated when ExcludedType is 'INCLUDED'.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupWebpageServiceBid   {
   @JsonProperty("adGroupMaxCpc")
-  private JsonNullable<Long> adGroupMaxCpc = JsonNullable.undefined();
+  private Long adGroupMaxCpc = null;
 
   @JsonProperty("bidSource")
-  private JsonNullable<AdGroupWebpageServiceBidSource> bidSource = JsonNullable.undefined();
+  private AdGroupWebpageServiceBidSource bidSource = null;
 
   @JsonProperty("keywordMaxCpc")
-  private JsonNullable<Long> keywordMaxCpc = JsonNullable.undefined();
+  private Long keywordMaxCpc = null;
 
   @JsonProperty("maxCpc")
-  private JsonNullable<Long> maxCpc = JsonNullable.undefined();
+  private Long maxCpc = null;
 
   public AdGroupWebpageServiceBid adGroupMaxCpc(Long adGroupMaxCpc) {
-    this.adGroupMaxCpc = JsonNullable.of(adGroupMaxCpc);
+    this.adGroupMaxCpc = adGroupMaxCpc;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class AdGroupWebpageServiceBid   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループの最大入札価格です。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Max bid of ad group.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupMaxCpc() {
+  public Long getAdGroupMaxCpc() {
     return adGroupMaxCpc;
   }
 
-  public void setAdGroupMaxCpc(JsonNullable<Long> adGroupMaxCpc) {
+  public void setAdGroupMaxCpc(Long adGroupMaxCpc) {
     this.adGroupMaxCpc = adGroupMaxCpc;
   }
 
   public AdGroupWebpageServiceBid bidSource(AdGroupWebpageServiceBidSource bidSource) {
-    this.bidSource = JsonNullable.of(bidSource);
+    this.bidSource = bidSource;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class AdGroupWebpageServiceBid   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceBidSource> getBidSource() {
+  public AdGroupWebpageServiceBidSource getBidSource() {
     return bidSource;
   }
 
-  public void setBidSource(JsonNullable<AdGroupWebpageServiceBidSource> bidSource) {
+  public void setBidSource(AdGroupWebpageServiceBidSource bidSource) {
     this.bidSource = bidSource;
   }
 
   public AdGroupWebpageServiceBid keywordMaxCpc(Long keywordMaxCpc) {
-    this.keywordMaxCpc = JsonNullable.of(keywordMaxCpc);
+    this.keywordMaxCpc = keywordMaxCpc;
     return this;
   }
 
@@ -81,16 +80,16 @@ public class AdGroupWebpageServiceBid   {
   @ApiModelProperty(value = "<div lang=\"ja\">キーワードの最大入札価格です。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Max bid of keyword.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getKeywordMaxCpc() {
+  public Long getKeywordMaxCpc() {
     return keywordMaxCpc;
   }
 
-  public void setKeywordMaxCpc(JsonNullable<Long> keywordMaxCpc) {
+  public void setKeywordMaxCpc(Long keywordMaxCpc) {
     this.keywordMaxCpc = keywordMaxCpc;
   }
 
   public AdGroupWebpageServiceBid maxCpc(Long maxCpc) {
-    this.maxCpc = JsonNullable.of(maxCpc);
+    this.maxCpc = maxCpc;
     return this;
   }
 
@@ -101,17 +100,17 @@ public class AdGroupWebpageServiceBid   {
   @ApiModelProperty(value = "<div lang=\"ja\">最大入札価格です。<br>ADD時、このフィールドは省略可能となります。その際、デフォルト値は1となります。SET時、このフィールドは省略可能となります。</div> <div lang=\"en\">Max bid.<br>This field is optional in ADD and SET operation. The default value in ADD operation will be 1.</div> ")
 
 
-  public JsonNullable<Long> getMaxCpc() {
+  public Long getMaxCpc() {
     return maxCpc;
   }
 
-  public void setMaxCpc(JsonNullable<Long> maxCpc) {
+  public void setMaxCpc(Long maxCpc) {
     this.maxCpc = maxCpc;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -147,7 +146,7 @@ public class AdGroupWebpageServiceBid   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

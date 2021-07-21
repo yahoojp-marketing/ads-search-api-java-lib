@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceBudgetPeriod;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceBudgetオブジェクトは、キャンペーン予算に関する情報を表します。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceBudget object displays budget information for campaign.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceBudgetオブジェクトは、キャンペーン予算に関する情報を表します。<br> このフィールドは、ADD時に必須となり、SET時は省略可能となります。</div> <div lang=\"en\">CampaignServiceBudget object displays budget information for campaign.<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceBudget   {
   @JsonProperty("amount")
-  private JsonNullable<Long> amount = JsonNullable.undefined();
+  private Long amount = null;
 
   @JsonProperty("budgetPeriod")
-  private JsonNullable<CampaignServiceBudgetPeriod> budgetPeriod = JsonNullable.undefined();
+  private CampaignServiceBudgetPeriod budgetPeriod = null;
 
   public CampaignServiceBudget amount(Long amount) {
-    this.amount = JsonNullable.of(amount);
+    this.amount = amount;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class CampaignServiceBudget   {
   @ApiModelProperty(value = "<div lang=\"ja\">1日単位のキャンペーン予算利用金額です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Amount of budget of Campaign.<br> This field is required in ADD operation, and is optional in SET operation.</div> ")
 
 
-  public JsonNullable<Long> getAmount() {
+  public Long getAmount() {
     return amount;
   }
 
-  public void setAmount(JsonNullable<Long> amount) {
+  public void setAmount(Long amount) {
     this.amount = amount;
   }
 
   public CampaignServiceBudget budgetPeriod(CampaignServiceBudgetPeriod budgetPeriod) {
-    this.budgetPeriod = JsonNullable.of(budgetPeriod);
+    this.budgetPeriod = budgetPeriod;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class CampaignServiceBudget   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBudgetPeriod> getBudgetPeriod() {
+  public CampaignServiceBudgetPeriod getBudgetPeriod() {
     return budgetPeriod;
   }
 
-  public void setBudgetPeriod(JsonNullable<CampaignServiceBudgetPeriod> budgetPeriod) {
+  public void setBudgetPeriod(CampaignServiceBudgetPeriod budgetPeriod) {
     this.budgetPeriod = budgetPeriod;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class CampaignServiceBudget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

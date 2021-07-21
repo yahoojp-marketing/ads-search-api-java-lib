@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceMarkupLanguage;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceTrackingCodeType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,22 +14,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceWebConversionオブジェクトは、ウェブページのコンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョントラッカー情報を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※ADD時、conversionTrackerTypeがWEB_CONVERSIONの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceWebConversion describes ConversionTracker information such as ConversionTag and performance data by tag.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If the conversionTrackerType is WEB_CONVERSION,  this field will be required in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceWebConversionオブジェクトは、ウェブページのコンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョントラッカー情報を表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※ADD時、conversionTrackerTypeがWEB_CONVERSIONの場合、このフィールドは必須となります。</div> <div lang=\"en\">ConversionTrackerServiceWebConversion describes ConversionTracker information such as ConversionTag and performance data by tag.<br> This field is optional in ADD and SET operation.<br> *If the conversionTrackerType is WEB_CONVERSION,  this field will be required in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceWebConversion   {
   @JsonProperty("markupLanguage")
-  private JsonNullable<ConversionTrackerServiceMarkupLanguage> markupLanguage = JsonNullable.undefined();
+  private ConversionTrackerServiceMarkupLanguage markupLanguage = null;
 
   @JsonProperty("snippet")
-  private JsonNullable<String> snippet = JsonNullable.undefined();
+  private String snippet = null;
 
   @JsonProperty("advancedSnippet")
-  private JsonNullable<String> advancedSnippet = JsonNullable.undefined();
+  private String advancedSnippet = null;
 
   @JsonProperty("trackingCodeType")
-  private JsonNullable<ConversionTrackerServiceTrackingCodeType> trackingCodeType = JsonNullable.undefined();
+  private ConversionTrackerServiceTrackingCodeType trackingCodeType = null;
 
   public ConversionTrackerServiceWebConversion markupLanguage(ConversionTrackerServiceMarkupLanguage markupLanguage) {
-    this.markupLanguage = JsonNullable.of(markupLanguage);
+    this.markupLanguage = markupLanguage;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class ConversionTrackerServiceWebConversion   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceMarkupLanguage> getMarkupLanguage() {
+  public ConversionTrackerServiceMarkupLanguage getMarkupLanguage() {
     return markupLanguage;
   }
 
-  public void setMarkupLanguage(JsonNullable<ConversionTrackerServiceMarkupLanguage> markupLanguage) {
+  public void setMarkupLanguage(ConversionTrackerServiceMarkupLanguage markupLanguage) {
     this.markupLanguage = markupLanguage;
   }
 
   public ConversionTrackerServiceWebConversion snippet(String snippet) {
-    this.snippet = JsonNullable.of(snippet);
+    this.snippet = snippet;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class ConversionTrackerServiceWebConversion   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキングスクリプトです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\"> Tracking script.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getSnippet() {
+  public String getSnippet() {
     return snippet;
   }
 
-  public void setSnippet(JsonNullable<String> snippet) {
+  public void setSnippet(String snippet) {
     this.snippet = snippet;
   }
 
   public ConversionTrackerServiceWebConversion advancedSnippet(String advancedSnippet) {
-    this.advancedSnippet = JsonNullable.of(advancedSnippet);
+    this.advancedSnippet = advancedSnippet;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class ConversionTrackerServiceWebConversion   {
   @ApiModelProperty(value = "<div lang=\"ja\">リニューアル版のコンバージョンタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。<br/> 詳細は[ヘルプ](https://support-marketing.yahoo.co.jp/promotionalads/ss/articledetail?lan=ja&aid=1159)をご参照ください。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">The new format of conversion tag avoids the impacts such as changes made to the browser. <br/> [Help Page](https://support-marketing.yahoo.co.jp/promotionalads/ss/articledetail?lan=en&aid=353) <br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getAdvancedSnippet() {
+  public String getAdvancedSnippet() {
     return advancedSnippet;
   }
 
-  public void setAdvancedSnippet(JsonNullable<String> advancedSnippet) {
+  public void setAdvancedSnippet(String advancedSnippet) {
     this.advancedSnippet = advancedSnippet;
   }
 
   public ConversionTrackerServiceWebConversion trackingCodeType(ConversionTrackerServiceTrackingCodeType trackingCodeType) {
-    this.trackingCodeType = JsonNullable.of(trackingCodeType);
+    this.trackingCodeType = trackingCodeType;
     return this;
   }
 
@@ -103,17 +102,17 @@ public class ConversionTrackerServiceWebConversion   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceTrackingCodeType> getTrackingCodeType() {
+  public ConversionTrackerServiceTrackingCodeType getTrackingCodeType() {
     return trackingCodeType;
   }
 
-  public void setTrackingCodeType(JsonNullable<ConversionTrackerServiceTrackingCodeType> trackingCodeType) {
+  public void setTrackingCodeType(ConversionTrackerServiceTrackingCodeType trackingCodeType) {
     this.trackingCodeType = trackingCodeType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -149,7 +148,7 @@ public class ConversionTrackerServiceWebConversion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

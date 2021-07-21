@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupFeedServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupFeedServicePageオブジェクトは、FeedItem情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupFeedServicePage is a container of FeedItem information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupFeedServicePageオブジェクトは、FeedItem情報を格納するコンテナです。</div> <div lang=\"en\">AdGroupFeedServicePage is a container of FeedItem information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupFeedServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AdGroupFeedServiceValue>> values = JsonNullable.undefined();
+  private List<AdGroupFeedServiceValue> values = null;
 
   public AdGroupFeedServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class AdGroupFeedServicePage   {
   }
 
   public AdGroupFeedServicePage values(List<AdGroupFeedServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AdGroupFeedServicePage addValuesItem(AdGroupFeedServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class AdGroupFeedServicePage   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupFeedServiceValue>> getValues() {
+  public List<AdGroupFeedServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AdGroupFeedServiceValue>> values) {
+  public void setValues(List<AdGroupFeedServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class AdGroupFeedServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

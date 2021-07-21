@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceAppConversionType;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceAppPlatform;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceAppPostbackUrl;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,28 +15,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※ADD時、conversionTrackerTypeがAPP_CONVERSIONの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by  tag.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If the conversionTrackerType is APP_CONVERSION, this field will be required in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※ADD時、conversionTrackerTypeがAPP_CONVERSIONの場合は必須です。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by  tag.<br> This field is optional in ADD and SET operation.<br> *If the conversionTrackerType is APP_CONVERSION, this field will be required in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceAppConversion   {
   @JsonProperty("appConversionType")
-  private JsonNullable<ConversionTrackerServiceAppConversionType> appConversionType = JsonNullable.undefined();
+  private ConversionTrackerServiceAppConversionType appConversionType = null;
 
   @JsonProperty("appId")
-  private JsonNullable<String> appId = JsonNullable.undefined();
+  private String appId = null;
 
   @JsonProperty("appPlatform")
-  private JsonNullable<ConversionTrackerServiceAppPlatform> appPlatform = JsonNullable.undefined();
+  private ConversionTrackerServiceAppPlatform appPlatform = null;
 
   @JsonProperty("appPostbackUrl")
-  private JsonNullable<ConversionTrackerServiceAppPostbackUrl> appPostbackUrl = JsonNullable.undefined();
+  private ConversionTrackerServiceAppPostbackUrl appPostbackUrl = null;
 
   @JsonProperty("snippetId")
-  private JsonNullable<Long> snippetId = JsonNullable.undefined();
+  private Long snippetId = null;
 
   @JsonProperty("snippetLabel")
-  private JsonNullable<String> snippetLabel = JsonNullable.undefined();
+  private String snippetLabel = null;
 
   public ConversionTrackerServiceAppConversion appConversionType(ConversionTrackerServiceAppConversionType appConversionType) {
-    this.appConversionType = JsonNullable.of(appConversionType);
+    this.appConversionType = appConversionType;
     return this;
   }
 
@@ -49,16 +48,16 @@ public class ConversionTrackerServiceAppConversion   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppConversionType> getAppConversionType() {
+  public ConversionTrackerServiceAppConversionType getAppConversionType() {
     return appConversionType;
   }
 
-  public void setAppConversionType(JsonNullable<ConversionTrackerServiceAppConversionType> appConversionType) {
+  public void setAppConversionType(ConversionTrackerServiceAppConversionType appConversionType) {
     this.appConversionType = appConversionType;
   }
 
   public ConversionTrackerServiceAppConversion appId(String appId) {
-    this.appId = JsonNullable.of(appId);
+    this.appId = appId;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class ConversionTrackerServiceAppConversion   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">Application ID.<br> This field is optional in any cases.</div> ")
 
 
-  public JsonNullable<String> getAppId() {
+  public String getAppId() {
     return appId;
   }
 
-  public void setAppId(JsonNullable<String> appId) {
+  public void setAppId(String appId) {
     this.appId = appId;
   }
 
   public ConversionTrackerServiceAppConversion appPlatform(ConversionTrackerServiceAppPlatform appPlatform) {
-    this.appPlatform = JsonNullable.of(appPlatform);
+    this.appPlatform = appPlatform;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class ConversionTrackerServiceAppConversion   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppPlatform> getAppPlatform() {
+  public ConversionTrackerServiceAppPlatform getAppPlatform() {
     return appPlatform;
   }
 
-  public void setAppPlatform(JsonNullable<ConversionTrackerServiceAppPlatform> appPlatform) {
+  public void setAppPlatform(ConversionTrackerServiceAppPlatform appPlatform) {
     this.appPlatform = appPlatform;
   }
 
   public ConversionTrackerServiceAppConversion appPostbackUrl(ConversionTrackerServiceAppPostbackUrl appPostbackUrl) {
-    this.appPostbackUrl = JsonNullable.of(appPostbackUrl);
+    this.appPostbackUrl = appPostbackUrl;
     return this;
   }
 
@@ -111,16 +110,16 @@ public class ConversionTrackerServiceAppConversion   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppPostbackUrl> getAppPostbackUrl() {
+  public ConversionTrackerServiceAppPostbackUrl getAppPostbackUrl() {
     return appPostbackUrl;
   }
 
-  public void setAppPostbackUrl(JsonNullable<ConversionTrackerServiceAppPostbackUrl> appPostbackUrl) {
+  public void setAppPostbackUrl(ConversionTrackerServiceAppPostbackUrl appPostbackUrl) {
     this.appPostbackUrl = appPostbackUrl;
   }
 
   public ConversionTrackerServiceAppConversion snippetId(Long snippetId) {
-    this.snippetId = JsonNullable.of(snippetId);
+    this.snippetId = snippetId;
     return this;
   }
 
@@ -131,16 +130,16 @@ public class ConversionTrackerServiceAppConversion   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンIDです。</div> <div lang=\"en\">Converison ID</div> ")
 
 
-  public JsonNullable<Long> getSnippetId() {
+  public Long getSnippetId() {
     return snippetId;
   }
 
-  public void setSnippetId(JsonNullable<Long> snippetId) {
+  public void setSnippetId(Long snippetId) {
     this.snippetId = snippetId;
   }
 
   public ConversionTrackerServiceAppConversion snippetLabel(String snippetLabel) {
-    this.snippetLabel = JsonNullable.of(snippetLabel);
+    this.snippetLabel = snippetLabel;
     return this;
   }
 
@@ -151,17 +150,17 @@ public class ConversionTrackerServiceAppConversion   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョントラッカーラベルです。</div> <div lang=\"en\">Converison tracker label</div> ")
 
 
-  public JsonNullable<String> getSnippetLabel() {
+  public String getSnippetLabel() {
     return snippetLabel;
   }
 
-  public void setSnippetLabel(JsonNullable<String> snippetLabel) {
+  public void setSnippetLabel(String snippetLabel) {
     this.snippetLabel = snippetLabel;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -201,7 +200,7 @@ public class ConversionTrackerServiceAppConversion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignWebpage;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedItemの除外設定を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceOperation object contains the excluded setting of PageFeedItem which is the target of mutate operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedItemの除外設定を保持します。</div> <div lang=\"en\">CampaignWebpageServiceOperation object contains the excluded setting of PageFeedItem which is the target of mutate operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignWebpageServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<CampaignWebpage>> operand = JsonNullable.undefined();
+  private List<CampaignWebpage> operand = new ArrayList<>();
 
   public CampaignWebpageServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class CampaignWebpageServiceOperation   {
   }
 
   public CampaignWebpageServiceOperation operand(List<CampaignWebpage> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public CampaignWebpageServiceOperation addOperandItem(CampaignWebpage operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class CampaignWebpageServiceOperation   {
 
   @Valid
 @Size(min=1,max=2000) 
-  public JsonNullable<List<CampaignWebpage>> getOperand() {
+  public List<CampaignWebpage> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<CampaignWebpage>> operand) {
+  public void setOperand(List<CampaignWebpage> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class CampaignWebpageServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

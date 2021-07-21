@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,28 +12,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordEstimatorServiceEstimateResult オブジェクトは、見積もりリクエストを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;EstimateKeyword object is a container for the estimate request.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordEstimatorServiceEstimateResult オブジェクトは、見積もりリクエストを格納するコンテナです。</div> <div lang=\"en\">EstimateKeyword object is a container for the estimate request.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordEstimatorServiceEstimateResult   {
   @JsonProperty("clicks")
-  private JsonNullable<Double> clicks = JsonNullable.undefined();
+  private Double clicks = null;
 
   @JsonProperty("cost")
-  private JsonNullable<Double> cost = JsonNullable.undefined();
+  private Double cost = null;
 
   @JsonProperty("cpc")
-  private JsonNullable<Double> cpc = JsonNullable.undefined();
+  private Double cpc = null;
 
   @JsonProperty("ctr")
-  private JsonNullable<Double> ctr = JsonNullable.undefined();
+  private Double ctr = null;
 
   @JsonProperty("impressions")
-  private JsonNullable<Double> impressions = JsonNullable.undefined();
+  private Double impressions = null;
 
   @JsonProperty("rank")
-  private JsonNullable<Double> rank = JsonNullable.undefined();
+  private Double rank = null;
 
   public KeywordEstimatorServiceEstimateResult clicks(Double clicks) {
-    this.clicks = JsonNullable.of(clicks);
+    this.clicks = clicks;
     return this;
   }
 
@@ -45,16 +44,16 @@ public class KeywordEstimatorServiceEstimateResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">1日あたりのクリック数です。</div> <div lang=\"en\">Number of clicks per day</div> ")
 
 
-  public JsonNullable<Double> getClicks() {
+  public Double getClicks() {
     return clicks;
   }
 
-  public void setClicks(JsonNullable<Double> clicks) {
+  public void setClicks(Double clicks) {
     this.clicks = clicks;
   }
 
   public KeywordEstimatorServiceEstimateResult cost(Double cost) {
-    this.cost = JsonNullable.of(cost);
+    this.cost = cost;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class KeywordEstimatorServiceEstimateResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">1日あたりの推定合計費用です。</div> <div lang=\"en\">Total amount of CPC cost per day</div> ")
 
 
-  public JsonNullable<Double> getCost() {
+  public Double getCost() {
     return cost;
   }
 
-  public void setCost(JsonNullable<Double> cost) {
+  public void setCost(Double cost) {
     this.cost = cost;
   }
 
   public KeywordEstimatorServiceEstimateResult cpc(Double cpc) {
-    this.cpc = JsonNullable.of(cpc);
+    this.cpc = cpc;
     return this;
   }
 
@@ -85,16 +84,16 @@ public class KeywordEstimatorServiceEstimateResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">推定平均クリック単価です。</div> <div lang=\"en\">Assumed average CPC</div> ")
 
 
-  public JsonNullable<Double> getCpc() {
+  public Double getCpc() {
     return cpc;
   }
 
-  public void setCpc(JsonNullable<Double> cpc) {
+  public void setCpc(Double cpc) {
     this.cpc = cpc;
   }
 
   public KeywordEstimatorServiceEstimateResult ctr(Double ctr) {
-    this.ctr = JsonNullable.of(ctr);
+    this.ctr = ctr;
     return this;
   }
 
@@ -105,16 +104,16 @@ public class KeywordEstimatorServiceEstimateResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">推定CTRです。</div> <div lang=\"en\">Estimation of CTR.</div> ")
 
 
-  public JsonNullable<Double> getCtr() {
+  public Double getCtr() {
     return ctr;
   }
 
-  public void setCtr(JsonNullable<Double> ctr) {
+  public void setCtr(Double ctr) {
     this.ctr = ctr;
   }
 
   public KeywordEstimatorServiceEstimateResult impressions(Double impressions) {
-    this.impressions = JsonNullable.of(impressions);
+    this.impressions = impressions;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class KeywordEstimatorServiceEstimateResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">1日当たりの推定インプレッション数です。</div> <div lang=\"en\">Estimation of impression per day.</div> ")
 
 
-  public JsonNullable<Double> getImpressions() {
+  public Double getImpressions() {
     return impressions;
   }
 
-  public void setImpressions(JsonNullable<Double> impressions) {
+  public void setImpressions(Double impressions) {
     this.impressions = impressions;
   }
 
   public KeywordEstimatorServiceEstimateResult rank(Double rank) {
-    this.rank = JsonNullable.of(rank);
+    this.rank = rank;
     return this;
   }
 
@@ -145,17 +144,17 @@ public class KeywordEstimatorServiceEstimateResult   {
   @ApiModelProperty(value = "<div lang=\"ja\">推定平均掲載順位です。</div> <div lang=\"en\">Assumed average display rank</div> ")
 
 
-  public JsonNullable<Double> getRank() {
+  public Double getRank() {
     return rank;
   }
 
-  public void setRank(JsonNullable<Double> rank) {
+  public void setRank(Double rank) {
     this.rank = rank;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -195,7 +194,7 @@ public class KeywordEstimatorServiceEstimateResult   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

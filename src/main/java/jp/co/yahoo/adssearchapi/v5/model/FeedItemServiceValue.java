@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItem;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceValueオブジェクトは、フィードアイテム情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceValue contains FeedItem value information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemServiceValueオブジェクトは、フィードアイテム情報を格納します。</div> <div lang=\"en\">FeedItemServiceValue contains FeedItem value information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItemServiceValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("feedItem")
-  private JsonNullable<FeedItem> feedItem = JsonNullable.undefined();
+  private FeedItem feedItem = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public FeedItemServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public FeedItemServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -50,16 +49,16 @@ public class FeedItemServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public FeedItemServiceValue feedItem(FeedItem feedItem) {
-    this.feedItem = JsonNullable.of(feedItem);
+    this.feedItem = feedItem;
     return this;
   }
 
@@ -71,16 +70,16 @@ public class FeedItemServiceValue   {
 
   @Valid
 
-  public JsonNullable<FeedItem> getFeedItem() {
+  public FeedItem getFeedItem() {
     return feedItem;
   }
 
-  public void setFeedItem(JsonNullable<FeedItem> feedItem) {
+  public void setFeedItem(FeedItem feedItem) {
     this.feedItem = feedItem;
   }
 
   public FeedItemServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class FeedItemServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">Result of process.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class FeedItemServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -11,7 +11,6 @@ import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceBudgetAmountRange;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceContainsLabelId;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceCreatedDateRange;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -19,41 +18,41 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceSelectorオブジェクトは、操作の対象とするキャンペーンの情報およびフィルタ条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceSelector object displays information and filter criteria of campaign to be operated.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceSelectorオブジェクトは、操作の対象とするキャンペーンの情報およびフィルタ条件を表します。</div> <div lang=\"en\">CampaignServiceSelector object displays information and filter criteria of campaign to be operated.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("biddingStrategyIds")
   @Valid
-  private JsonNullable<List<Long>> biddingStrategyIds = JsonNullable.undefined();
+  private List<Long> biddingStrategyIds = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("containsLabelId")
-  private JsonNullable<CampaignServiceContainsLabelId> containsLabelId = JsonNullable.undefined();
+  private CampaignServiceContainsLabelId containsLabelId = null;
 
   @JsonProperty("labelIds")
   @Valid
-  private JsonNullable<List<Long>> labelIds = JsonNullable.undefined();
+  private List<Long> labelIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("userStatuses")
   @Valid
-  private JsonNullable<List<CampaignServiceUserStatus>> userStatuses = JsonNullable.undefined();
+  private List<CampaignServiceUserStatus> userStatuses = null;
 
   @JsonProperty("createdDateRange")
-  private JsonNullable<CampaignServiceCreatedDateRange> createdDateRange = JsonNullable.undefined();
+  private CampaignServiceCreatedDateRange createdDateRange = null;
 
   @JsonProperty("budgetAmountRange")
-  private JsonNullable<CampaignServiceBudgetAmountRange> budgetAmountRange = JsonNullable.undefined();
+  private CampaignServiceBudgetAmountRange budgetAmountRange = null;
 
   public CampaignServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -77,15 +76,15 @@ public class CampaignServiceSelector   {
   }
 
   public CampaignServiceSelector biddingStrategyIds(List<Long> biddingStrategyIds) {
-    this.biddingStrategyIds = JsonNullable.of(biddingStrategyIds);
+    this.biddingStrategyIds = biddingStrategyIds;
     return this;
   }
 
   public CampaignServiceSelector addBiddingStrategyIdsItem(Long biddingStrategyIdsItem) {
-    if (this.biddingStrategyIds == null || !this.biddingStrategyIds.isPresent()) {
-      this.biddingStrategyIds = JsonNullable.of(new ArrayList<>());
+    if (this.biddingStrategyIds == null) {
+      this.biddingStrategyIds = new ArrayList<>();
     }
-    this.biddingStrategyIds.get().add(biddingStrategyIdsItem);
+    this.biddingStrategyIds.add(biddingStrategyIdsItem);
     return this;
   }
 
@@ -96,24 +95,24 @@ public class CampaignServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：自動入札IDです。</div> <div lang=\"en\">Search condition: Auto Bidding ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getBiddingStrategyIds() {
+  public List<Long> getBiddingStrategyIds() {
     return biddingStrategyIds;
   }
 
-  public void setBiddingStrategyIds(JsonNullable<List<Long>> biddingStrategyIds) {
+  public void setBiddingStrategyIds(List<Long> biddingStrategyIds) {
     this.biddingStrategyIds = biddingStrategyIds;
   }
 
   public CampaignServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public CampaignServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -124,16 +123,16 @@ public class CampaignServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：キャンペーンIDです。<br> ※指定しない場合は、フィルタ条件に すべてのキャンペーンが含まれます。</div> <div lang=\"en\">Search condition: Campaign ID<br> * All campaign will return, if no campaign are not specified.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public CampaignServiceSelector containsLabelId(CampaignServiceContainsLabelId containsLabelId) {
-    this.containsLabelId = JsonNullable.of(containsLabelId);
+    this.containsLabelId = containsLabelId;
     return this;
   }
 
@@ -145,24 +144,24 @@ public class CampaignServiceSelector   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceContainsLabelId> getContainsLabelId() {
+  public CampaignServiceContainsLabelId getContainsLabelId() {
     return containsLabelId;
   }
 
-  public void setContainsLabelId(JsonNullable<CampaignServiceContainsLabelId> containsLabelId) {
+  public void setContainsLabelId(CampaignServiceContainsLabelId containsLabelId) {
     this.containsLabelId = containsLabelId;
   }
 
   public CampaignServiceSelector labelIds(List<Long> labelIds) {
-    this.labelIds = JsonNullable.of(labelIds);
+    this.labelIds = labelIds;
     return this;
   }
 
   public CampaignServiceSelector addLabelIdsItem(Long labelIdsItem) {
-    if (this.labelIds == null || !this.labelIds.isPresent()) {
-      this.labelIds = JsonNullable.of(new ArrayList<>());
+    if (this.labelIds == null) {
+      this.labelIds = new ArrayList<>();
     }
-    this.labelIds.get().add(labelIdsItem);
+    this.labelIds.add(labelIdsItem);
     return this;
   }
 
@@ -173,16 +172,16 @@ public class CampaignServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ラベルIDです。</div> <div lang=\"en\">Search condition: Label ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getLabelIds() {
+  public List<Long> getLabelIds() {
     return labelIds;
   }
 
-  public void setLabelIds(JsonNullable<List<Long>> labelIds) {
+  public void setLabelIds(List<Long> labelIds) {
     this.labelIds = labelIds;
   }
 
   public CampaignServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -195,16 +194,16 @@ public class CampaignServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public CampaignServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -216,24 +215,24 @@ public class CampaignServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public CampaignServiceSelector userStatuses(List<CampaignServiceUserStatus> userStatuses) {
-    this.userStatuses = JsonNullable.of(userStatuses);
+    this.userStatuses = userStatuses;
     return this;
   }
 
   public CampaignServiceSelector addUserStatusesItem(CampaignServiceUserStatus userStatusesItem) {
-    if (this.userStatuses == null || !this.userStatuses.isPresent()) {
-      this.userStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.userStatuses == null) {
+      this.userStatuses = new ArrayList<>();
     }
-    this.userStatuses.get().add(userStatusesItem);
+    this.userStatuses.add(userStatusesItem);
     return this;
   }
 
@@ -245,16 +244,16 @@ public class CampaignServiceSelector   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<CampaignServiceUserStatus>> getUserStatuses() {
+  public List<CampaignServiceUserStatus> getUserStatuses() {
     return userStatuses;
   }
 
-  public void setUserStatuses(JsonNullable<List<CampaignServiceUserStatus>> userStatuses) {
+  public void setUserStatuses(List<CampaignServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
   public CampaignServiceSelector createdDateRange(CampaignServiceCreatedDateRange createdDateRange) {
-    this.createdDateRange = JsonNullable.of(createdDateRange);
+    this.createdDateRange = createdDateRange;
     return this;
   }
 
@@ -266,16 +265,16 @@ public class CampaignServiceSelector   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceCreatedDateRange> getCreatedDateRange() {
+  public CampaignServiceCreatedDateRange getCreatedDateRange() {
     return createdDateRange;
   }
 
-  public void setCreatedDateRange(JsonNullable<CampaignServiceCreatedDateRange> createdDateRange) {
+  public void setCreatedDateRange(CampaignServiceCreatedDateRange createdDateRange) {
     this.createdDateRange = createdDateRange;
   }
 
   public CampaignServiceSelector budgetAmountRange(CampaignServiceBudgetAmountRange budgetAmountRange) {
-    this.budgetAmountRange = JsonNullable.of(budgetAmountRange);
+    this.budgetAmountRange = budgetAmountRange;
     return this;
   }
 
@@ -287,17 +286,17 @@ public class CampaignServiceSelector   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBudgetAmountRange> getBudgetAmountRange() {
+  public CampaignServiceBudgetAmountRange getBudgetAmountRange() {
     return budgetAmountRange;
   }
 
-  public void setBudgetAmountRange(JsonNullable<CampaignServiceBudgetAmountRange> budgetAmountRange) {
+  public void setBudgetAmountRange(CampaignServiceBudgetAmountRange budgetAmountRange) {
     this.budgetAmountRange = budgetAmountRange;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -345,7 +344,7 @@ public class CampaignServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

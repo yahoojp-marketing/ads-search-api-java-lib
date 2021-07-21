@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupBidMultiplierServicePlatformType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,28 +15,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupBidMultiplierServiceSelectorオブジェクトは、入札価格調整率を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for bid multiplier.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupBidMultiplierServiceSelectorオブジェクトは、入札価格調整率を格納するコンテナです。</div> <div lang=\"en\">Container for bid multiplier.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupBidMultiplierServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("adGroupIds")
   @Valid
-  private JsonNullable<List<Long>> adGroupIds = JsonNullable.undefined();
+  private List<Long> adGroupIds = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("platformTypes")
   @Valid
-  private JsonNullable<List<AdGroupBidMultiplierServicePlatformType>> platformTypes = JsonNullable.undefined();
+  private List<AdGroupBidMultiplierServicePlatformType> platformTypes = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AdGroupBidMultiplierServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -61,15 +60,15 @@ public class AdGroupBidMultiplierServiceSelector   {
   }
 
   public AdGroupBidMultiplierServiceSelector adGroupIds(List<Long> adGroupIds) {
-    this.adGroupIds = JsonNullable.of(adGroupIds);
+    this.adGroupIds = adGroupIds;
     return this;
   }
 
   public AdGroupBidMultiplierServiceSelector addAdGroupIdsItem(Long adGroupIdsItem) {
-    if (this.adGroupIds == null || !this.adGroupIds.isPresent()) {
-      this.adGroupIds = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupIds == null) {
+      this.adGroupIds = new ArrayList<>();
     }
-    this.adGroupIds.get().add(adGroupIdsItem);
+    this.adGroupIds.add(adGroupIdsItem);
     return this;
   }
 
@@ -80,24 +79,24 @@ public class AdGroupBidMultiplierServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。</div> <div lang=\"en\">Ad group ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getAdGroupIds() {
+  public List<Long> getAdGroupIds() {
     return adGroupIds;
   }
 
-  public void setAdGroupIds(JsonNullable<List<Long>> adGroupIds) {
+  public void setAdGroupIds(List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
   public AdGroupBidMultiplierServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public AdGroupBidMultiplierServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -108,16 +107,16 @@ public class AdGroupBidMultiplierServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public AdGroupBidMultiplierServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -130,24 +129,24 @@ public class AdGroupBidMultiplierServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AdGroupBidMultiplierServiceSelector platformTypes(List<AdGroupBidMultiplierServicePlatformType> platformTypes) {
-    this.platformTypes = JsonNullable.of(platformTypes);
+    this.platformTypes = platformTypes;
     return this;
   }
 
   public AdGroupBidMultiplierServiceSelector addPlatformTypesItem(AdGroupBidMultiplierServicePlatformType platformTypesItem) {
-    if (this.platformTypes == null || !this.platformTypes.isPresent()) {
-      this.platformTypes = JsonNullable.of(new ArrayList<>());
+    if (this.platformTypes == null) {
+      this.platformTypes = new ArrayList<>();
     }
-    this.platformTypes.get().add(platformTypesItem);
+    this.platformTypes.add(platformTypesItem);
     return this;
   }
 
@@ -159,16 +158,16 @@ public class AdGroupBidMultiplierServiceSelector   {
 
   @Valid
 @Size(max=3) 
-  public JsonNullable<List<AdGroupBidMultiplierServicePlatformType>> getPlatformTypes() {
+  public List<AdGroupBidMultiplierServicePlatformType> getPlatformTypes() {
     return platformTypes;
   }
 
-  public void setPlatformTypes(JsonNullable<List<AdGroupBidMultiplierServicePlatformType>> platformTypes) {
+  public void setPlatformTypes(List<AdGroupBidMultiplierServicePlatformType> platformTypes) {
     this.platformTypes = platformTypes;
   }
 
   public AdGroupBidMultiplierServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -180,17 +179,17 @@ public class AdGroupBidMultiplierServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -230,7 +229,7 @@ public class AdGroupBidMultiplierServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

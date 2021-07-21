@@ -12,7 +12,6 @@ import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceCriterion;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceLabel;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceTrademarkStatus;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceUse;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -20,51 +19,51 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionオブジェクトは、広告グループのクライテリアを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterion object describes ad group criteria information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionオブジェクトは、広告グループのクライテリアを表します。</div> <div lang=\"en\">AdGroupCriterion object describes ad group criteria information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterion   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("adGroupTrackId")
-  private JsonNullable<Long> adGroupTrackId = JsonNullable.undefined();
+  private Long adGroupTrackId = null;
 
   @JsonProperty("biddableAdGroupCriterion")
-  private JsonNullable<AdGroupCriterionServiceBiddableAdGroupCriterion> biddableAdGroupCriterion = JsonNullable.undefined();
+  private AdGroupCriterionServiceBiddableAdGroupCriterion biddableAdGroupCriterion = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("campaignTrackId")
-  private JsonNullable<Long> campaignTrackId = JsonNullable.undefined();
+  private Long campaignTrackId = null;
 
   @JsonProperty("criterion")
-  private JsonNullable<AdGroupCriterionServiceCriterion> criterion = JsonNullable.undefined();
+  private AdGroupCriterionServiceCriterion criterion = null;
 
   @JsonProperty("labels")
   @Valid
-  private JsonNullable<List<AdGroupCriterionServiceLabel>> labels = JsonNullable.undefined();
+  private List<AdGroupCriterionServiceLabel> labels = null;
 
   @JsonProperty("use")
-  private JsonNullable<AdGroupCriterionServiceUse> use = JsonNullable.undefined();
+  private AdGroupCriterionServiceUse use = null;
 
   @JsonProperty("trademarkStatus")
-  private JsonNullable<AdGroupCriterionServiceTrademarkStatus> trademarkStatus = JsonNullable.undefined();
+  private AdGroupCriterionServiceTrademarkStatus trademarkStatus = null;
 
   @JsonProperty("invalidedTrademarks")
   @Valid
-  private JsonNullable<List<String>> invalidedTrademarks = JsonNullable.undefined();
+  private List<String> invalidedTrademarks = null;
 
   public AdGroupCriterion accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -75,16 +74,16 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AdGroupCriterion adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -95,16 +94,16 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">Ad group ID.<br> This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public AdGroupCriterion adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -115,16 +114,16 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループ名です。</div> <div lang=\"en\">Ad group name.</div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public AdGroupCriterion adGroupTrackId(Long adGroupTrackId) {
-    this.adGroupTrackId = JsonNullable.of(adGroupTrackId);
+    this.adGroupTrackId = adGroupTrackId;
     return this;
   }
 
@@ -135,16 +134,16 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用広告グループIDです。</div> <div lang=\"en\">Ad group ID for tracking.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupTrackId() {
+  public Long getAdGroupTrackId() {
     return adGroupTrackId;
   }
 
-  public void setAdGroupTrackId(JsonNullable<Long> adGroupTrackId) {
+  public void setAdGroupTrackId(Long adGroupTrackId) {
     this.adGroupTrackId = adGroupTrackId;
   }
 
   public AdGroupCriterion biddableAdGroupCriterion(AdGroupCriterionServiceBiddableAdGroupCriterion biddableAdGroupCriterion) {
-    this.biddableAdGroupCriterion = JsonNullable.of(biddableAdGroupCriterion);
+    this.biddableAdGroupCriterion = biddableAdGroupCriterion;
     return this;
   }
 
@@ -156,16 +155,16 @@ public class AdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceBiddableAdGroupCriterion> getBiddableAdGroupCriterion() {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion getBiddableAdGroupCriterion() {
     return biddableAdGroupCriterion;
   }
 
-  public void setBiddableAdGroupCriterion(JsonNullable<AdGroupCriterionServiceBiddableAdGroupCriterion> biddableAdGroupCriterion) {
+  public void setBiddableAdGroupCriterion(AdGroupCriterionServiceBiddableAdGroupCriterion biddableAdGroupCriterion) {
     this.biddableAdGroupCriterion = biddableAdGroupCriterion;
   }
 
   public AdGroupCriterion campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -176,16 +175,16 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">Campaign ID.<br> This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public AdGroupCriterion campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -196,16 +195,16 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。</div> <div lang=\"en\">Campaign name.</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public AdGroupCriterion campaignTrackId(Long campaignTrackId) {
-    this.campaignTrackId = JsonNullable.of(campaignTrackId);
+    this.campaignTrackId = campaignTrackId;
     return this;
   }
 
@@ -216,16 +215,16 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用キャンペーンIDです。</div> <div lang=\"en\">Campaign ID for tracking.</div> ")
 
 
-  public JsonNullable<Long> getCampaignTrackId() {
+  public Long getCampaignTrackId() {
     return campaignTrackId;
   }
 
-  public void setCampaignTrackId(JsonNullable<Long> campaignTrackId) {
+  public void setCampaignTrackId(Long campaignTrackId) {
     this.campaignTrackId = campaignTrackId;
   }
 
   public AdGroupCriterion criterion(AdGroupCriterionServiceCriterion criterion) {
-    this.criterion = JsonNullable.of(criterion);
+    this.criterion = criterion;
     return this;
   }
 
@@ -237,24 +236,24 @@ public class AdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceCriterion> getCriterion() {
+  public AdGroupCriterionServiceCriterion getCriterion() {
     return criterion;
   }
 
-  public void setCriterion(JsonNullable<AdGroupCriterionServiceCriterion> criterion) {
+  public void setCriterion(AdGroupCriterionServiceCriterion criterion) {
     this.criterion = criterion;
   }
 
   public AdGroupCriterion labels(List<AdGroupCriterionServiceLabel> labels) {
-    this.labels = JsonNullable.of(labels);
+    this.labels = labels;
     return this;
   }
 
   public AdGroupCriterion addLabelsItem(AdGroupCriterionServiceLabel labelsItem) {
-    if (this.labels == null || !this.labels.isPresent()) {
-      this.labels = JsonNullable.of(new ArrayList<>());
+    if (this.labels == null) {
+      this.labels = new ArrayList<>();
     }
-    this.labels.get().add(labelsItem);
+    this.labels.add(labelsItem);
     return this;
   }
 
@@ -266,16 +265,16 @@ public class AdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupCriterionServiceLabel>> getLabels() {
+  public List<AdGroupCriterionServiceLabel> getLabels() {
     return labels;
   }
 
-  public void setLabels(JsonNullable<List<AdGroupCriterionServiceLabel>> labels) {
+  public void setLabels(List<AdGroupCriterionServiceLabel> labels) {
     this.labels = labels;
   }
 
   public AdGroupCriterion use(AdGroupCriterionServiceUse use) {
-    this.use = JsonNullable.of(use);
+    this.use = use;
     return this;
   }
 
@@ -287,16 +286,16 @@ public class AdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceUse> getUse() {
+  public AdGroupCriterionServiceUse getUse() {
     return use;
   }
 
-  public void setUse(JsonNullable<AdGroupCriterionServiceUse> use) {
+  public void setUse(AdGroupCriterionServiceUse use) {
     this.use = use;
   }
 
   public AdGroupCriterion trademarkStatus(AdGroupCriterionServiceTrademarkStatus trademarkStatus) {
-    this.trademarkStatus = JsonNullable.of(trademarkStatus);
+    this.trademarkStatus = trademarkStatus;
     return this;
   }
 
@@ -308,24 +307,24 @@ public class AdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceTrademarkStatus> getTrademarkStatus() {
+  public AdGroupCriterionServiceTrademarkStatus getTrademarkStatus() {
     return trademarkStatus;
   }
 
-  public void setTrademarkStatus(JsonNullable<AdGroupCriterionServiceTrademarkStatus> trademarkStatus) {
+  public void setTrademarkStatus(AdGroupCriterionServiceTrademarkStatus trademarkStatus) {
     this.trademarkStatus = trademarkStatus;
   }
 
   public AdGroupCriterion invalidedTrademarks(List<String> invalidedTrademarks) {
-    this.invalidedTrademarks = JsonNullable.of(invalidedTrademarks);
+    this.invalidedTrademarks = invalidedTrademarks;
     return this;
   }
 
   public AdGroupCriterion addInvalidedTrademarksItem(String invalidedTrademarksItem) {
-    if (this.invalidedTrademarks == null || !this.invalidedTrademarks.isPresent()) {
-      this.invalidedTrademarks = JsonNullable.of(new ArrayList<>());
+    if (this.invalidedTrademarks == null) {
+      this.invalidedTrademarks = new ArrayList<>();
     }
-    this.invalidedTrademarks.get().add(invalidedTrademarksItem);
+    this.invalidedTrademarks.add(invalidedTrademarksItem);
     return this;
   }
 
@@ -336,17 +335,17 @@ public class AdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">制限された商標です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">Invalided trademarks.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<List<String>> getInvalidedTrademarks() {
+  public List<String> getInvalidedTrademarks() {
     return invalidedTrademarks;
   }
 
-  public void setInvalidedTrademarks(JsonNullable<List<String>> invalidedTrademarks) {
+  public void setInvalidedTrademarks(List<String> invalidedTrademarks) {
     this.invalidedTrademarks = invalidedTrademarks;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -400,7 +399,7 @@ public class AdGroupCriterion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

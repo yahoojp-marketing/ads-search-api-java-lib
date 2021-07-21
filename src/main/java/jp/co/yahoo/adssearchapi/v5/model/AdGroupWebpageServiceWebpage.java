@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceWebpageParameter;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageオブジェクトは、配信/除外設定するAdGroupWebpageServiceWebpageの条件を保持します。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceWebpage object contains the rules of webpage to be allowed or excluded.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceWebpageオブジェクトは、配信/除外設定するAdGroupWebpageServiceWebpageの条件を保持します。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">AdGroupWebpageServiceWebpage object contains the rules of webpage to be allowed or excluded.<br> This field is required in any cases.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupWebpageServiceWebpage   {
   @JsonProperty("parameter")
-  private JsonNullable<AdGroupWebpageServiceWebpageParameter> parameter = JsonNullable.undefined();
+  private AdGroupWebpageServiceWebpageParameter parameter = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<Long> targetId = JsonNullable.undefined();
+  private Long targetId = null;
 
   @JsonProperty("targetTrackId")
-  private JsonNullable<Long> targetTrackId = JsonNullable.undefined();
+  private Long targetTrackId = null;
 
   public AdGroupWebpageServiceWebpage parameter(AdGroupWebpageServiceWebpageParameter parameter) {
-    this.parameter = JsonNullable.of(parameter);
+    this.parameter = parameter;
     return this;
   }
 
@@ -38,16 +37,16 @@ public class AdGroupWebpageServiceWebpage   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceWebpageParameter> getParameter() {
+  public AdGroupWebpageServiceWebpageParameter getParameter() {
     return parameter;
   }
 
-  public void setParameter(JsonNullable<AdGroupWebpageServiceWebpageParameter> parameter) {
+  public void setParameter(AdGroupWebpageServiceWebpageParameter parameter) {
     this.parameter = parameter;
   }
 
   public AdGroupWebpageServiceWebpage targetId(Long targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class AdGroupWebpageServiceWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">AdGroupWebpageServiceWebpageを識別するIDです。<br>このフィールドは、ADD時は無視され、SET時は必須となります。</div> <div lang=\"en\">Unique ID for each identify webpage.<br>This field will be ignored in ADD operation, and is required in SET operation.</div> ")
 
 
-  public JsonNullable<Long> getTargetId() {
+  public Long getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<Long> targetId) {
+  public void setTargetId(Long targetId) {
     this.targetId = targetId;
   }
 
   public AdGroupWebpageServiceWebpage targetTrackId(Long targetTrackId) {
-    this.targetTrackId = JsonNullable.of(targetTrackId);
+    this.targetTrackId = targetTrackId;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class AdGroupWebpageServiceWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">AdGroupWebpageServiceWebpageを識別するトラッキングIDです。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Tracking ID for each identify webpage.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getTargetTrackId() {
+  public Long getTargetTrackId() {
     return targetTrackId;
   }
 
-  public void setTargetTrackId(JsonNullable<Long> targetTrackId) {
+  public void setTargetTrackId(Long targetTrackId) {
     this.targetTrackId = targetTrackId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class AdGroupWebpageServiceWebpage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

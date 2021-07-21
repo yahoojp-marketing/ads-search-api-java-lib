@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupBidMultiplierServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupBidMultiplierServiceReturnValueオブジェクトは、入札価格調整率を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for bid multiplier.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupBidMultiplierServiceReturnValueオブジェクトは、入札価格調整率を格納するコンテナです。</div> <div lang=\"en\">Container for bid multiplier.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupBidMultiplierServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AdGroupBidMultiplierServiceValue>> values = JsonNullable.undefined();
+  private List<AdGroupBidMultiplierServiceValue> values = null;
 
   public AdGroupBidMultiplierServiceReturnValue values(List<AdGroupBidMultiplierServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AdGroupBidMultiplierServiceReturnValue addValuesItem(AdGroupBidMultiplierServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class AdGroupBidMultiplierServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupBidMultiplierServiceValue>> getValues() {
+  public List<AdGroupBidMultiplierServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AdGroupBidMultiplierServiceValue>> values) {
+  public void setValues(List<AdGroupBidMultiplierServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class AdGroupBidMultiplierServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

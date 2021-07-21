@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupRetargetingListServiceCriterionTargetList;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupRetargetingListServiceExcludedType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,34 +14,34 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListは、広告グループレベルでのターゲットリスト設定を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingList is an object that holds ad group user list information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupRetargetingListは、広告グループレベルでのターゲットリスト設定を保持するオブジェクトです。</div> <div lang=\"en\">AdGroupRetargetingList is an object that holds ad group user list information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupRetargetingList   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("bidMultiplier")
-  private JsonNullable<Double> bidMultiplier = JsonNullable.undefined();
+  private Double bidMultiplier = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("criterionTargetList")
-  private JsonNullable<AdGroupRetargetingListServiceCriterionTargetList> criterionTargetList = JsonNullable.undefined();
+  private AdGroupRetargetingListServiceCriterionTargetList criterionTargetList = null;
 
   @JsonProperty("excludedType")
-  private JsonNullable<AdGroupRetargetingListServiceExcludedType> excludedType = JsonNullable.undefined();
+  private AdGroupRetargetingListServiceExcludedType excludedType = null;
 
   public AdGroupRetargetingList accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -53,16 +52,16 @@ public class AdGroupRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AdGroupRetargetingList adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -73,16 +72,16 @@ public class AdGroupRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Ad group ID.<br> This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public AdGroupRetargetingList adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -93,16 +92,16 @@ public class AdGroupRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループ名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Ad group name.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public AdGroupRetargetingList bidMultiplier(Double bidMultiplier) {
-    this.bidMultiplier = JsonNullable.of(bidMultiplier);
+    this.bidMultiplier = bidMultiplier;
     return this;
   }
 
@@ -113,16 +112,16 @@ public class AdGroupRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">   MaxCPC上昇値です。<br>   0.10～10.00まで指定できます。<br>   また、0を指定した場合、広告は配信されません。<br>   MaxCPC上昇値の値は小数点第二位まで指定可能です。<br>   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 </div> <div lang=\"en\">   Maximum CPC increase value.<br>   Can be specified between  0.10 to 10.00.<br>   When specified &#39;0&#39;, the ad will not be delivered.<br>   Maximum CPC increase value can be specified up to two decimal places.<br>   This field is optional. The default value will be 1.0. </div> ")
 
 
-  public JsonNullable<Double> getBidMultiplier() {
+  public Double getBidMultiplier() {
     return bidMultiplier;
   }
 
-  public void setBidMultiplier(JsonNullable<Double> bidMultiplier) {
+  public void setBidMultiplier(Double bidMultiplier) {
     this.bidMultiplier = bidMultiplier;
   }
 
   public AdGroupRetargetingList campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -133,16 +132,16 @@ public class AdGroupRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Campaign ID.<br> This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public AdGroupRetargetingList campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -153,16 +152,16 @@ public class AdGroupRetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Campaign name.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public AdGroupRetargetingList criterionTargetList(AdGroupRetargetingListServiceCriterionTargetList criterionTargetList) {
-    this.criterionTargetList = JsonNullable.of(criterionTargetList);
+    this.criterionTargetList = criterionTargetList;
     return this;
   }
 
@@ -174,16 +173,16 @@ public class AdGroupRetargetingList   {
 
   @Valid
 
-  public JsonNullable<AdGroupRetargetingListServiceCriterionTargetList> getCriterionTargetList() {
+  public AdGroupRetargetingListServiceCriterionTargetList getCriterionTargetList() {
     return criterionTargetList;
   }
 
-  public void setCriterionTargetList(JsonNullable<AdGroupRetargetingListServiceCriterionTargetList> criterionTargetList) {
+  public void setCriterionTargetList(AdGroupRetargetingListServiceCriterionTargetList criterionTargetList) {
     this.criterionTargetList = criterionTargetList;
   }
 
   public AdGroupRetargetingList excludedType(AdGroupRetargetingListServiceExcludedType excludedType) {
-    this.excludedType = JsonNullable.of(excludedType);
+    this.excludedType = excludedType;
     return this;
   }
 
@@ -195,17 +194,17 @@ public class AdGroupRetargetingList   {
 
   @Valid
 
-  public JsonNullable<AdGroupRetargetingListServiceExcludedType> getExcludedType() {
+  public AdGroupRetargetingListServiceExcludedType getExcludedType() {
     return excludedType;
   }
 
-  public void setExcludedType(JsonNullable<AdGroupRetargetingListServiceExcludedType> excludedType) {
+  public void setExcludedType(AdGroupRetargetingListServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -249,7 +248,7 @@ public class AdGroupRetargetingList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

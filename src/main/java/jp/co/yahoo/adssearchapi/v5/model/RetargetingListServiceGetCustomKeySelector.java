@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceTargetListOwner;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceGetCustomKeySelectorは、ターゲットリストの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceGetCustomKeySelector object holds search condition (execution parameter).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceGetCustomKeySelectorは、ターゲットリストの検索条件（実行パラメータ）を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceGetCustomKeySelector object holds search condition (execution parameter).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceGetCustomKeySelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("targetListOwner")
-  private JsonNullable<RetargetingListServiceTargetListOwner> targetListOwner = JsonNullable.undefined();
+  private RetargetingListServiceTargetListOwner targetListOwner = null;
 
   public RetargetingListServiceGetCustomKeySelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -44,7 +43,7 @@ public class RetargetingListServiceGetCustomKeySelector   {
   }
 
   public RetargetingListServiceGetCustomKeySelector targetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
-    this.targetListOwner = JsonNullable.of(targetListOwner);
+    this.targetListOwner = targetListOwner;
     return this;
   }
 
@@ -56,17 +55,17 @@ public class RetargetingListServiceGetCustomKeySelector   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceTargetListOwner> getTargetListOwner() {
+  public RetargetingListServiceTargetListOwner getTargetListOwner() {
     return targetListOwner;
   }
 
-  public void setTargetListOwner(JsonNullable<RetargetingListServiceTargetListOwner> targetListOwner) {
+  public void setTargetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
     this.targetListOwner = targetListOwner;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -98,7 +97,7 @@ public class RetargetingListServiceGetCustomKeySelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

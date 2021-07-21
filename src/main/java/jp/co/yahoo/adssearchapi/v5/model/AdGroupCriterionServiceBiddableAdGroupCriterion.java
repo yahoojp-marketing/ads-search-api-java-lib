@@ -13,7 +13,6 @@ import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceApprovalStatus;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceBid;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceCustomParameters;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -21,59 +20,59 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceBiddableAdGroupCriterionオブジェクトは、広告グループの単価設定可能（包含）クライテリアです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceBiddableAdGroupCriterion object displays biddable criterion in ad group.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceBiddableAdGroupCriterionオブジェクトは、広告グループの単価設定可能（包含）クライテリアです。</div> <div lang=\"en\">AdGroupCriterionServiceBiddableAdGroupCriterion object displays biddable criterion in ad group.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @JsonProperty("additionalAdvancedMobileUrls")
-  private JsonNullable<AdGroupCriterionServiceAdditionalAdvancedMobileUrls> additionalAdvancedMobileUrls = JsonNullable.undefined();
+  private AdGroupCriterionServiceAdditionalAdvancedMobileUrls additionalAdvancedMobileUrls = null;
 
   @JsonProperty("additionalAdvancedUrls")
-  private JsonNullable<AdGroupCriterionServiceAdditionalAdvancedUrls> additionalAdvancedUrls = JsonNullable.undefined();
+  private AdGroupCriterionServiceAdditionalAdvancedUrls additionalAdvancedUrls = null;
 
   @JsonProperty("advancedMobileUrl")
-  private JsonNullable<String> advancedMobileUrl = JsonNullable.undefined();
+  private String advancedMobileUrl = null;
 
   @JsonProperty("advancedUrl")
-  private JsonNullable<String> advancedUrl = JsonNullable.undefined();
+  private String advancedUrl = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<AdGroupCriterionServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private AdGroupCriterionServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("bid")
-  private JsonNullable<AdGroupCriterionServiceBid> bid = JsonNullable.undefined();
+  private AdGroupCriterionServiceBid bid = null;
 
   @JsonProperty("customParameters")
-  private JsonNullable<AdGroupCriterionServiceCustomParameters> customParameters = JsonNullable.undefined();
+  private AdGroupCriterionServiceCustomParameters customParameters = null;
 
   @JsonProperty("destinationUrl")
-  private JsonNullable<String> destinationUrl = JsonNullable.undefined();
+  private String destinationUrl = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("reviewAdvancedMobileUrl")
-  private JsonNullable<String> reviewAdvancedMobileUrl = JsonNullable.undefined();
+  private String reviewAdvancedMobileUrl = null;
 
   @JsonProperty("reviewAdvancedUrl")
-  private JsonNullable<String> reviewAdvancedUrl = JsonNullable.undefined();
+  private String reviewAdvancedUrl = null;
 
   @JsonProperty("reviewCustomParameters")
-  private JsonNullable<AdGroupCriterionServiceCustomParameters> reviewCustomParameters = JsonNullable.undefined();
+  private AdGroupCriterionServiceCustomParameters reviewCustomParameters = null;
 
   @JsonProperty("reviewDestinationUrl")
-  private JsonNullable<String> reviewDestinationUrl = JsonNullable.undefined();
+  private String reviewDestinationUrl = null;
 
   @JsonProperty("reviewTrackingUrl")
-  private JsonNullable<String> reviewTrackingUrl = JsonNullable.undefined();
+  private String reviewTrackingUrl = null;
 
   @JsonProperty("trackingUrl")
-  private JsonNullable<String> trackingUrl = JsonNullable.undefined();
+  private String trackingUrl = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<AdGroupCriterionServiceUserStatus> userStatus = JsonNullable.undefined();
+  private AdGroupCriterionServiceUserStatus userStatus = null;
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion additionalAdvancedMobileUrls(AdGroupCriterionServiceAdditionalAdvancedMobileUrls additionalAdvancedMobileUrls) {
-    this.additionalAdvancedMobileUrls = JsonNullable.of(additionalAdvancedMobileUrls);
+    this.additionalAdvancedMobileUrls = additionalAdvancedMobileUrls;
     return this;
   }
 
@@ -85,16 +84,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceAdditionalAdvancedMobileUrls> getAdditionalAdvancedMobileUrls() {
+  public AdGroupCriterionServiceAdditionalAdvancedMobileUrls getAdditionalAdvancedMobileUrls() {
     return additionalAdvancedMobileUrls;
   }
 
-  public void setAdditionalAdvancedMobileUrls(JsonNullable<AdGroupCriterionServiceAdditionalAdvancedMobileUrls> additionalAdvancedMobileUrls) {
+  public void setAdditionalAdvancedMobileUrls(AdGroupCriterionServiceAdditionalAdvancedMobileUrls additionalAdvancedMobileUrls) {
     this.additionalAdvancedMobileUrls = additionalAdvancedMobileUrls;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion additionalAdvancedUrls(AdGroupCriterionServiceAdditionalAdvancedUrls additionalAdvancedUrls) {
-    this.additionalAdvancedUrls = JsonNullable.of(additionalAdvancedUrls);
+    this.additionalAdvancedUrls = additionalAdvancedUrls;
     return this;
   }
 
@@ -106,16 +105,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceAdditionalAdvancedUrls> getAdditionalAdvancedUrls() {
+  public AdGroupCriterionServiceAdditionalAdvancedUrls getAdditionalAdvancedUrls() {
     return additionalAdvancedUrls;
   }
 
-  public void setAdditionalAdvancedUrls(JsonNullable<AdGroupCriterionServiceAdditionalAdvancedUrls> additionalAdvancedUrls) {
+  public void setAdditionalAdvancedUrls(AdGroupCriterionServiceAdditionalAdvancedUrls additionalAdvancedUrls) {
     this.additionalAdvancedUrls = additionalAdvancedUrls;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion advancedMobileUrl(String advancedMobileUrl) {
-    this.advancedMobileUrl = JsonNullable.of(advancedMobileUrl);
+    this.advancedMobileUrl = advancedMobileUrl;
     return this;
   }
 
@@ -126,16 +125,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">カスタムURL（スマートフォン）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存のカスタムURL（スマートフォン）は削除されます。</div> <div lang=\"en\">Upgraded Custom URL (Smartphone).<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing upgraded Custom URL (Smartphone) will be deleted.</div> ")
 
 
-  public JsonNullable<String> getAdvancedMobileUrl() {
+  public String getAdvancedMobileUrl() {
     return advancedMobileUrl;
   }
 
-  public void setAdvancedMobileUrl(JsonNullable<String> advancedMobileUrl) {
+  public void setAdvancedMobileUrl(String advancedMobileUrl) {
     this.advancedMobileUrl = advancedMobileUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion advancedUrl(String advancedUrl) {
-    this.advancedUrl = JsonNullable.of(advancedUrl);
+    this.advancedUrl = advancedUrl;
     return this;
   }
 
@@ -146,16 +145,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">移行後のカスタムURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。<br> ※空で設定すると、既存の移行後のカスタムURLは削除されます。</div> <div lang=\"en\">Upgraded Custom URL.<br> This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.<br> *When this is set blank, existing upgraded Custom URL will be deleted.</div> ")
 
 
-  public JsonNullable<String> getAdvancedUrl() {
+  public String getAdvancedUrl() {
     return advancedUrl;
   }
 
-  public void setAdvancedUrl(JsonNullable<String> advancedUrl) {
+  public void setAdvancedUrl(String advancedUrl) {
     this.advancedUrl = advancedUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion approvalStatus(AdGroupCriterionServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -167,16 +166,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceApprovalStatus> getApprovalStatus() {
+  public AdGroupCriterionServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<AdGroupCriterionServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(AdGroupCriterionServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion bid(AdGroupCriterionServiceBid bid) {
-    this.bid = JsonNullable.of(bid);
+    this.bid = bid;
     return this;
   }
 
@@ -188,16 +187,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceBid> getBid() {
+  public AdGroupCriterionServiceBid getBid() {
     return bid;
   }
 
-  public void setBid(JsonNullable<AdGroupCriterionServiceBid> bid) {
+  public void setBid(AdGroupCriterionServiceBid bid) {
     this.bid = bid;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion customParameters(AdGroupCriterionServiceCustomParameters customParameters) {
-    this.customParameters = JsonNullable.of(customParameters);
+    this.customParameters = customParameters;
     return this;
   }
 
@@ -209,16 +208,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceCustomParameters> getCustomParameters() {
+  public AdGroupCriterionServiceCustomParameters getCustomParameters() {
     return customParameters;
   }
 
-  public void setCustomParameters(JsonNullable<AdGroupCriterionServiceCustomParameters> customParameters) {
+  public void setCustomParameters(AdGroupCriterionServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion destinationUrl(String destinationUrl) {
-    this.destinationUrl = JsonNullable.of(destinationUrl);
+    this.destinationUrl = destinationUrl;
     return this;
   }
 
@@ -229,24 +228,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">移行前のカスタムURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存の移行前のカスタムURLは削除されます。</div> <div lang=\"en\">Custom URL of before upgrading.<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing Custom URL before upgrade will be deleted.</div> ")
 
 
-  public JsonNullable<String> getDestinationUrl() {
+  public String getDestinationUrl() {
     return destinationUrl;
   }
 
-  public void setDestinationUrl(JsonNullable<String> destinationUrl) {
+  public void setDestinationUrl(String destinationUrl) {
     this.destinationUrl = destinationUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -257,16 +256,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認コードです。<br> (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)</div> <div lang=\"en\">Code of Disapproval reason.<br> (Refer to DictionaryService getDisapprovalReason response for details)</div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion reviewAdvancedMobileUrl(String reviewAdvancedMobileUrl) {
-    this.reviewAdvancedMobileUrl = JsonNullable.of(reviewAdvancedMobileUrl);
+    this.reviewAdvancedMobileUrl = reviewAdvancedMobileUrl;
     return this;
   }
 
@@ -277,16 +276,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">配信審査中のカスタムURL（スマートフォン）です。</div> <div lang=\"en\">Upgraded Custom URL (Smartphone), in review.</div> ")
 
 
-  public JsonNullable<String> getReviewAdvancedMobileUrl() {
+  public String getReviewAdvancedMobileUrl() {
     return reviewAdvancedMobileUrl;
   }
 
-  public void setReviewAdvancedMobileUrl(JsonNullable<String> reviewAdvancedMobileUrl) {
+  public void setReviewAdvancedMobileUrl(String reviewAdvancedMobileUrl) {
     this.reviewAdvancedMobileUrl = reviewAdvancedMobileUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion reviewAdvancedUrl(String reviewAdvancedUrl) {
-    this.reviewAdvancedUrl = JsonNullable.of(reviewAdvancedUrl);
+    this.reviewAdvancedUrl = reviewAdvancedUrl;
     return this;
   }
 
@@ -297,16 +296,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">移行後の配信審査中のカスタムURLです。</div> <div lang=\"en\">Upgraded Custom URL, in review.</div> ")
 
 
-  public JsonNullable<String> getReviewAdvancedUrl() {
+  public String getReviewAdvancedUrl() {
     return reviewAdvancedUrl;
   }
 
-  public void setReviewAdvancedUrl(JsonNullable<String> reviewAdvancedUrl) {
+  public void setReviewAdvancedUrl(String reviewAdvancedUrl) {
     this.reviewAdvancedUrl = reviewAdvancedUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion reviewCustomParameters(AdGroupCriterionServiceCustomParameters reviewCustomParameters) {
-    this.reviewCustomParameters = JsonNullable.of(reviewCustomParameters);
+    this.reviewCustomParameters = reviewCustomParameters;
     return this;
   }
 
@@ -318,16 +317,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceCustomParameters> getReviewCustomParameters() {
+  public AdGroupCriterionServiceCustomParameters getReviewCustomParameters() {
     return reviewCustomParameters;
   }
 
-  public void setReviewCustomParameters(JsonNullable<AdGroupCriterionServiceCustomParameters> reviewCustomParameters) {
+  public void setReviewCustomParameters(AdGroupCriterionServiceCustomParameters reviewCustomParameters) {
     this.reviewCustomParameters = reviewCustomParameters;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion reviewDestinationUrl(String reviewDestinationUrl) {
-    this.reviewDestinationUrl = JsonNullable.of(reviewDestinationUrl);
+    this.reviewDestinationUrl = reviewDestinationUrl;
     return this;
   }
 
@@ -338,16 +337,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">移行前の配信審査中のカスタムURLです。</div> <div lang=\"en\">Custom URL of before upgrading, in review.</div> ")
 
 
-  public JsonNullable<String> getReviewDestinationUrl() {
+  public String getReviewDestinationUrl() {
     return reviewDestinationUrl;
   }
 
-  public void setReviewDestinationUrl(JsonNullable<String> reviewDestinationUrl) {
+  public void setReviewDestinationUrl(String reviewDestinationUrl) {
     this.reviewDestinationUrl = reviewDestinationUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion reviewTrackingUrl(String reviewTrackingUrl) {
-    this.reviewTrackingUrl = JsonNullable.of(reviewTrackingUrl);
+    this.reviewTrackingUrl = reviewTrackingUrl;
     return this;
   }
 
@@ -358,16 +357,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">配信審査中のトラッキングURLです。</div> <div lang=\"en\">Tracking URL, in review.</div> ")
 
 
-  public JsonNullable<String> getReviewTrackingUrl() {
+  public String getReviewTrackingUrl() {
     return reviewTrackingUrl;
   }
 
-  public void setReviewTrackingUrl(JsonNullable<String> reviewTrackingUrl) {
+  public void setReviewTrackingUrl(String reviewTrackingUrl) {
     this.reviewTrackingUrl = reviewTrackingUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion trackingUrl(String trackingUrl) {
-    this.trackingUrl = JsonNullable.of(trackingUrl);
+    this.trackingUrl = trackingUrl;
     return this;
   }
 
@@ -378,16 +377,16 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存のトラッキングURLは削除されます。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing Tracking URL will be deleted.</div> ")
 
 
-  public JsonNullable<String> getTrackingUrl() {
+  public String getTrackingUrl() {
     return trackingUrl;
   }
 
-  public void setTrackingUrl(JsonNullable<String> trackingUrl) {
+  public void setTrackingUrl(String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion userStatus(AdGroupCriterionServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -399,17 +398,17 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceUserStatus> getUserStatus() {
+  public AdGroupCriterionServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<AdGroupCriterionServiceUserStatus> userStatus) {
+  public void setUserStatus(AdGroupCriterionServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -469,7 +468,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

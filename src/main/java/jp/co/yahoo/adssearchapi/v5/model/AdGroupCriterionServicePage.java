@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServicePageオブジェクトは、取得される広告グループのクライテリアのエントリーです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServicePage object displays entries for ad group criteria.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServicePageオブジェクトは、取得される広告グループのクライテリアのエントリーです。</div> <div lang=\"en\">AdGroupCriterionServicePage object displays entries for ad group criteria.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AdGroupCriterionServiceValue>> values = JsonNullable.undefined();
+  private List<AdGroupCriterionServiceValue> values = null;
 
   public AdGroupCriterionServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class AdGroupCriterionServicePage   {
   }
 
   public AdGroupCriterionServicePage values(List<AdGroupCriterionServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AdGroupCriterionServicePage addValuesItem(AdGroupCriterionServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class AdGroupCriterionServicePage   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupCriterionServiceValue>> getValues() {
+  public List<AdGroupCriterionServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AdGroupCriterionServiceValue>> values) {
+  public void setValues(List<AdGroupCriterionServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class AdGroupCriterionServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordEstimatorServiceKeywordEstimateRequest;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,20 +15,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupEstimateRequestオブジェクトは、見積もりを行う広告グループを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupEstimateRequest object is a container for AdGroup to estimate.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupEstimateRequestオブジェクトは、見積もりを行う広告グループを格納するコンテナです。</div> <div lang=\"en\">AdGroupEstimateRequest object is a container for AdGroup to estimate.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordEstimatorServiceAdGroupEstimateRequest   {
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("keywordEstimateRequests")
   @Valid
-  private JsonNullable<List<KeywordEstimatorServiceKeywordEstimateRequest>> keywordEstimateRequests = JsonNullable.undefined();
+  private List<KeywordEstimatorServiceKeywordEstimateRequest> keywordEstimateRequests = new ArrayList<>();
 
   @JsonProperty("maxCpc")
-  private JsonNullable<Long> maxCpc = JsonNullable.undefined();
+  private Long maxCpc = null;
 
   public KeywordEstimatorServiceAdGroupEstimateRequest adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -40,21 +39,24 @@ public class KeywordEstimatorServiceAdGroupEstimateRequest   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。<br> ※campaignIdを指定していないとき、このフィールドを指定することはできません。</div> <div lang=\"en\">AdGroupID<br> *This field cannot be specified if campaignId is not specified.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public KeywordEstimatorServiceAdGroupEstimateRequest keywordEstimateRequests(List<KeywordEstimatorServiceKeywordEstimateRequest> keywordEstimateRequests) {
-    this.keywordEstimateRequests = JsonNullable.of(keywordEstimateRequests);
+    this.keywordEstimateRequests = keywordEstimateRequests;
     return this;
   }
 
   public KeywordEstimatorServiceAdGroupEstimateRequest addKeywordEstimateRequestsItem(KeywordEstimatorServiceKeywordEstimateRequest keywordEstimateRequestsItem) {
-    this.keywordEstimateRequests.get().add(keywordEstimateRequestsItem);
+    if (this.keywordEstimateRequests == null) {
+      this.keywordEstimateRequests = new ArrayList<>();
+    }
+    this.keywordEstimateRequests.add(keywordEstimateRequestsItem);
     return this;
   }
 
@@ -67,16 +69,16 @@ public class KeywordEstimatorServiceAdGroupEstimateRequest   {
 
   @Valid
 @Size(min=1,max=500) 
-  public JsonNullable<List<KeywordEstimatorServiceKeywordEstimateRequest>> getKeywordEstimateRequests() {
+  public List<KeywordEstimatorServiceKeywordEstimateRequest> getKeywordEstimateRequests() {
     return keywordEstimateRequests;
   }
 
-  public void setKeywordEstimateRequests(JsonNullable<List<KeywordEstimatorServiceKeywordEstimateRequest>> keywordEstimateRequests) {
+  public void setKeywordEstimateRequests(List<KeywordEstimatorServiceKeywordEstimateRequest> keywordEstimateRequests) {
     this.keywordEstimateRequests = keywordEstimateRequests;
   }
 
   public KeywordEstimatorServiceAdGroupEstimateRequest maxCpc(Long maxCpc) {
-    this.maxCpc = JsonNullable.of(maxCpc);
+    this.maxCpc = maxCpc;
     return this;
   }
 
@@ -87,17 +89,17 @@ public class KeywordEstimatorServiceAdGroupEstimateRequest   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループの見積もりに使用する上限クリック単価です。</div> <div lang=\"en\">Max CPC for Ad Group estimate</div> ")
 
 
-  public JsonNullable<Long> getMaxCpc() {
+  public Long getMaxCpc() {
     return maxCpc;
   }
 
-  public void setMaxCpc(JsonNullable<Long> maxCpc) {
+  public void setMaxCpc(Long maxCpc) {
     this.maxCpc = maxCpc;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -131,7 +133,7 @@ public class KeywordEstimatorServiceAdGroupEstimateRequest   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

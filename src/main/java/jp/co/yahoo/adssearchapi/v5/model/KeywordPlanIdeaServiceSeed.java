@@ -10,7 +10,6 @@ import jp.co.yahoo.adssearchapi.v5.model.KeywordPlanIdeaServiceKeywordSeed;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordPlanIdeaServiceSeedType;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordPlanIdeaServiceSiteSeed;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordPlanIdeaServiceUrlSeed;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,25 +17,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaServiceSeedオブジェクトは、キーワード候補作成条件の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordPlanIdeaServiceSeed object describes detailed information about related keywords creation conditions.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaServiceSeedオブジェクトは、キーワード候補作成条件の詳細情報を表します。</div> <div lang=\"en\">KeywordPlanIdeaServiceSeed object describes detailed information about related keywords creation conditions.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordPlanIdeaServiceSeed   {
   @JsonProperty("keywordAndUrlSeed")
-  private JsonNullable<KeywordPlanIdeaServiceKeywordAndUrlSeed> keywordAndUrlSeed = JsonNullable.undefined();
+  private KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed = null;
 
   @JsonProperty("keywordSeed")
-  private JsonNullable<KeywordPlanIdeaServiceKeywordSeed> keywordSeed = JsonNullable.undefined();
+  private KeywordPlanIdeaServiceKeywordSeed keywordSeed = null;
 
   @JsonProperty("urlSeed")
-  private JsonNullable<KeywordPlanIdeaServiceUrlSeed> urlSeed = JsonNullable.undefined();
+  private KeywordPlanIdeaServiceUrlSeed urlSeed = null;
 
   @JsonProperty("siteSeed")
-  private JsonNullable<KeywordPlanIdeaServiceSiteSeed> siteSeed = JsonNullable.undefined();
+  private KeywordPlanIdeaServiceSiteSeed siteSeed = null;
 
   @JsonProperty("seedType")
-  private JsonNullable<KeywordPlanIdeaServiceSeedType> seedType = JsonNullable.undefined();
+  private KeywordPlanIdeaServiceSeedType seedType = null;
 
   public KeywordPlanIdeaServiceSeed keywordAndUrlSeed(KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed) {
-    this.keywordAndUrlSeed = JsonNullable.of(keywordAndUrlSeed);
+    this.keywordAndUrlSeed = keywordAndUrlSeed;
     return this;
   }
 
@@ -48,16 +47,16 @@ public class KeywordPlanIdeaServiceSeed   {
 
   @Valid
 
-  public JsonNullable<KeywordPlanIdeaServiceKeywordAndUrlSeed> getKeywordAndUrlSeed() {
+  public KeywordPlanIdeaServiceKeywordAndUrlSeed getKeywordAndUrlSeed() {
     return keywordAndUrlSeed;
   }
 
-  public void setKeywordAndUrlSeed(JsonNullable<KeywordPlanIdeaServiceKeywordAndUrlSeed> keywordAndUrlSeed) {
+  public void setKeywordAndUrlSeed(KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed) {
     this.keywordAndUrlSeed = keywordAndUrlSeed;
   }
 
   public KeywordPlanIdeaServiceSeed keywordSeed(KeywordPlanIdeaServiceKeywordSeed keywordSeed) {
-    this.keywordSeed = JsonNullable.of(keywordSeed);
+    this.keywordSeed = keywordSeed;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class KeywordPlanIdeaServiceSeed   {
 
   @Valid
 
-  public JsonNullable<KeywordPlanIdeaServiceKeywordSeed> getKeywordSeed() {
+  public KeywordPlanIdeaServiceKeywordSeed getKeywordSeed() {
     return keywordSeed;
   }
 
-  public void setKeywordSeed(JsonNullable<KeywordPlanIdeaServiceKeywordSeed> keywordSeed) {
+  public void setKeywordSeed(KeywordPlanIdeaServiceKeywordSeed keywordSeed) {
     this.keywordSeed = keywordSeed;
   }
 
   public KeywordPlanIdeaServiceSeed urlSeed(KeywordPlanIdeaServiceUrlSeed urlSeed) {
-    this.urlSeed = JsonNullable.of(urlSeed);
+    this.urlSeed = urlSeed;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class KeywordPlanIdeaServiceSeed   {
 
   @Valid
 
-  public JsonNullable<KeywordPlanIdeaServiceUrlSeed> getUrlSeed() {
+  public KeywordPlanIdeaServiceUrlSeed getUrlSeed() {
     return urlSeed;
   }
 
-  public void setUrlSeed(JsonNullable<KeywordPlanIdeaServiceUrlSeed> urlSeed) {
+  public void setUrlSeed(KeywordPlanIdeaServiceUrlSeed urlSeed) {
     this.urlSeed = urlSeed;
   }
 
   public KeywordPlanIdeaServiceSeed siteSeed(KeywordPlanIdeaServiceSiteSeed siteSeed) {
-    this.siteSeed = JsonNullable.of(siteSeed);
+    this.siteSeed = siteSeed;
     return this;
   }
 
@@ -111,16 +110,16 @@ public class KeywordPlanIdeaServiceSeed   {
 
   @Valid
 
-  public JsonNullable<KeywordPlanIdeaServiceSiteSeed> getSiteSeed() {
+  public KeywordPlanIdeaServiceSiteSeed getSiteSeed() {
     return siteSeed;
   }
 
-  public void setSiteSeed(JsonNullable<KeywordPlanIdeaServiceSiteSeed> siteSeed) {
+  public void setSiteSeed(KeywordPlanIdeaServiceSiteSeed siteSeed) {
     this.siteSeed = siteSeed;
   }
 
   public KeywordPlanIdeaServiceSeed seedType(KeywordPlanIdeaServiceSeedType seedType) {
-    this.seedType = JsonNullable.of(seedType);
+    this.seedType = seedType;
     return this;
   }
 
@@ -133,17 +132,17 @@ public class KeywordPlanIdeaServiceSeed   {
 
   @Valid
 
-  public JsonNullable<KeywordPlanIdeaServiceSeedType> getSeedType() {
+  public KeywordPlanIdeaServiceSeedType getSeedType() {
     return seedType;
   }
 
-  public void setSeedType(JsonNullable<KeywordPlanIdeaServiceSeedType> seedType) {
+  public void setSeedType(KeywordPlanIdeaServiceSeedType seedType) {
     this.seedType = seedType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -181,7 +180,7 @@ public class KeywordPlanIdeaServiceSeed   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

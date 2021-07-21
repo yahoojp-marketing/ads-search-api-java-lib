@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オフラインコンバージョンデータのファイルダウンロード処理を実施します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download file of offline conversion data.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">オフラインコンバージョンデータのファイルダウンロード処理を実施します。</div> <div lang=\"en\">Download file of offline conversion data.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class OfflineConversionServiceDownloadSelector   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("uploadId")
-  private JsonNullable<Long> uploadId = JsonNullable.undefined();
+  private Long uploadId = null;
 
   public OfflineConversionServiceDownloadSelector accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class OfflineConversionServiceDownloadSelector   {
   @NotNull
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public OfflineConversionServiceDownloadSelector uploadId(Long uploadId) {
-    this.uploadId = JsonNullable.of(uploadId);
+    this.uploadId = uploadId;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class OfflineConversionServiceDownloadSelector   {
   @NotNull
 
 
-  public JsonNullable<Long> getUploadId() {
+  public Long getUploadId() {
     return uploadId;
   }
 
-  public void setUploadId(JsonNullable<Long> uploadId) {
+  public void setUploadId(Long uploadId) {
     this.uploadId = uploadId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class OfflineConversionServiceDownloadSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

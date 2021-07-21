@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceTargetRoasBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。&lt;br&gt; このフィールドは、省略可能となります。※ADD時、typeがTARGET_ROASの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceTargetRoasBiddingScheme object displays Auto Bidding setting for Target ROAS.&lt;br&gt; This field is optional. *If type is &#39;TARGET_ROAS&#39;, this field is required in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceTargetRoasBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。<br> このフィールドは、省略可能となります。※ADD時、typeがTARGET_ROASの場合は必須です。</div> <div lang=\"en\">BiddingStrategyServiceTargetRoasBiddingScheme object displays Auto Bidding setting for Target ROAS.<br> This field is optional. *If type is 'TARGET_ROAS', this field is required in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BiddingStrategyServiceTargetRoasBiddingScheme   {
   @JsonProperty("bidCeiling")
-  private JsonNullable<Long> bidCeiling = JsonNullable.undefined();
+  private Long bidCeiling = null;
 
   @JsonProperty("bidFloor")
-  private JsonNullable<Long> bidFloor = JsonNullable.undefined();
+  private Long bidFloor = null;
 
   @JsonProperty("targetRoas")
-  private JsonNullable<Double> targetRoas = JsonNullable.undefined();
+  private Double targetRoas = null;
 
   public BiddingStrategyServiceTargetRoasBiddingScheme bidCeiling(Long bidCeiling) {
-    this.bidCeiling = JsonNullable.of(bidCeiling);
+    this.bidCeiling = bidCeiling;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class BiddingStrategyServiceTargetRoasBiddingScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。（0〜50000）<br> ※「0」が設定された場合、上限設定はありません。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">CPC limit (0-50000).<br> * No limits if &#34;0&#34; is set.<br> This field is optional in any cases.</div> ")
 
 
-  public JsonNullable<Long> getBidCeiling() {
+  public Long getBidCeiling() {
     return bidCeiling;
   }
 
-  public void setBidCeiling(JsonNullable<Long> bidCeiling) {
+  public void setBidCeiling(Long bidCeiling) {
     this.bidCeiling = bidCeiling;
   }
 
   public BiddingStrategyServiceTargetRoasBiddingScheme bidFloor(Long bidFloor) {
-    this.bidFloor = JsonNullable.of(bidFloor);
+    this.bidFloor = bidFloor;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class BiddingStrategyServiceTargetRoasBiddingScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">入札価格の下限です。<br> ※ 設定を解除する場合は「0」を指定します。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">Minimum CPC.<br> * Set &#34;0&#34; to deactivate.<br> This field is optional in any cases.</div> ")
 
 
-  public JsonNullable<Long> getBidFloor() {
+  public Long getBidFloor() {
     return bidFloor;
   }
 
-  public void setBidFloor(JsonNullable<Long> bidFloor) {
+  public void setBidFloor(Long bidFloor) {
     this.bidFloor = bidFloor;
   }
 
   public BiddingStrategyServiceTargetRoasBiddingScheme targetRoas(Double targetRoas) {
-    this.targetRoas = JsonNullable.of(targetRoas);
+    this.targetRoas = targetRoas;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class BiddingStrategyServiceTargetRoasBiddingScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値<br> ※0.01 〜1000.00（1%〜100000%）の範囲内のみ許容します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。※Return On Advertising Spend(ROAS)</div> <div lang=\"en\">Target ROAS.<br> * ROAS: Return On Average Spend.<br> * Setting limit: 0.01 〜1000.00（1%〜100000%）.<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
 
 
-  public JsonNullable<Double> getTargetRoas() {
+  public Double getTargetRoas() {
     return targetRoas;
   }
 
-  public void setTargetRoas(JsonNullable<Double> targetRoas) {
+  public void setTargetRoas(Double targetRoas) {
     this.targetRoas = targetRoas;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class BiddingStrategyServiceTargetRoasBiddingScheme   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

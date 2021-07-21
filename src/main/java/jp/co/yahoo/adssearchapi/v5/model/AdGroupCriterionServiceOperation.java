@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterion;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceOperationオブジェクトは、操作の対象となる広告グループのクライテリアおよび操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceOperation displays target ad group criteria information and its operation results.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceOperationオブジェクトは、操作の対象となる広告グループのクライテリアおよび操作の内容を表します。</div> <div lang=\"en\">AdGroupCriterionServiceOperation displays target ad group criteria information and its operation results.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<AdGroupCriterion>> operand = JsonNullable.undefined();
+  private List<AdGroupCriterion> operand = new ArrayList<>();
 
   public AdGroupCriterionServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class AdGroupCriterionServiceOperation   {
   }
 
   public AdGroupCriterionServiceOperation operand(List<AdGroupCriterion> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public AdGroupCriterionServiceOperation addOperandItem(AdGroupCriterion operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class AdGroupCriterionServiceOperation   {
 
   @Valid
 @Size(min=1,max=2000) 
-  public JsonNullable<List<AdGroupCriterion>> getOperand() {
+  public List<AdGroupCriterion> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<AdGroupCriterion>> operand) {
+  public void setOperand(List<AdGroupCriterion> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AdGroupCriterionServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

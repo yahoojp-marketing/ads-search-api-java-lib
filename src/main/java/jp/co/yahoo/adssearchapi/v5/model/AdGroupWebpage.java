@@ -9,7 +9,6 @@ import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceBid;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceExcludedType;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceUserStatus;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpageServiceWebpage;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,37 +16,37 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageオブジェクトは、広告グループに関連付けた配信/除外設定の情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpage object contains information of allowed or excluded settings setup to adgroup.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupWebpageオブジェクトは、広告グループに関連付けた配信/除外設定の情報を保持します。</div> <div lang=\"en\">AdGroupWebpage object contains information of allowed or excluded settings setup to adgroup.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupWebpage   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupTrackId")
-  private JsonNullable<Long> adGroupTrackId = JsonNullable.undefined();
+  private Long adGroupTrackId = null;
 
   @JsonProperty("bid")
-  private JsonNullable<AdGroupWebpageServiceBid> bid = JsonNullable.undefined();
+  private AdGroupWebpageServiceBid bid = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignTrackId")
-  private JsonNullable<Long> campaignTrackId = JsonNullable.undefined();
+  private Long campaignTrackId = null;
 
   @JsonProperty("excludedType")
-  private JsonNullable<AdGroupWebpageServiceExcludedType> excludedType = JsonNullable.undefined();
+  private AdGroupWebpageServiceExcludedType excludedType = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<AdGroupWebpageServiceUserStatus> userStatus = JsonNullable.undefined();
+  private AdGroupWebpageServiceUserStatus userStatus = null;
 
   @JsonProperty("webpage")
-  private JsonNullable<AdGroupWebpageServiceWebpage> webpage = JsonNullable.undefined();
+  private AdGroupWebpageServiceWebpage webpage = null;
 
   public AdGroupWebpage accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class AdGroupWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AdGroupWebpage adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -78,16 +77,16 @@ public class AdGroupWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。<br>このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Ad Group ID.<br>This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public AdGroupWebpage adGroupTrackId(Long adGroupTrackId) {
-    this.adGroupTrackId = JsonNullable.of(adGroupTrackId);
+    this.adGroupTrackId = adGroupTrackId;
     return this;
   }
 
@@ -98,16 +97,16 @@ public class AdGroupWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループトラッキングIDです。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Ad Group Tracking ID.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getAdGroupTrackId() {
+  public Long getAdGroupTrackId() {
     return adGroupTrackId;
   }
 
-  public void setAdGroupTrackId(JsonNullable<Long> adGroupTrackId) {
+  public void setAdGroupTrackId(Long adGroupTrackId) {
     this.adGroupTrackId = adGroupTrackId;
   }
 
   public AdGroupWebpage bid(AdGroupWebpageServiceBid bid) {
-    this.bid = JsonNullable.of(bid);
+    this.bid = bid;
     return this;
   }
 
@@ -119,16 +118,16 @@ public class AdGroupWebpage   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceBid> getBid() {
+  public AdGroupWebpageServiceBid getBid() {
     return bid;
   }
 
-  public void setBid(JsonNullable<AdGroupWebpageServiceBid> bid) {
+  public void setBid(AdGroupWebpageServiceBid bid) {
     this.bid = bid;
   }
 
   public AdGroupWebpage campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -139,16 +138,16 @@ public class AdGroupWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br>このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Campaign ID.<br>This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public AdGroupWebpage campaignTrackId(Long campaignTrackId) {
-    this.campaignTrackId = JsonNullable.of(campaignTrackId);
+    this.campaignTrackId = campaignTrackId;
     return this;
   }
 
@@ -159,16 +158,16 @@ public class AdGroupWebpage   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーントラッキングIDです。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Campaign Tracking ID.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getCampaignTrackId() {
+  public Long getCampaignTrackId() {
     return campaignTrackId;
   }
 
-  public void setCampaignTrackId(JsonNullable<Long> campaignTrackId) {
+  public void setCampaignTrackId(Long campaignTrackId) {
     this.campaignTrackId = campaignTrackId;
   }
 
   public AdGroupWebpage excludedType(AdGroupWebpageServiceExcludedType excludedType) {
-    this.excludedType = JsonNullable.of(excludedType);
+    this.excludedType = excludedType;
     return this;
   }
 
@@ -180,16 +179,16 @@ public class AdGroupWebpage   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceExcludedType> getExcludedType() {
+  public AdGroupWebpageServiceExcludedType getExcludedType() {
     return excludedType;
   }
 
-  public void setExcludedType(JsonNullable<AdGroupWebpageServiceExcludedType> excludedType) {
+  public void setExcludedType(AdGroupWebpageServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
 
   public AdGroupWebpage userStatus(AdGroupWebpageServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -201,16 +200,16 @@ public class AdGroupWebpage   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceUserStatus> getUserStatus() {
+  public AdGroupWebpageServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<AdGroupWebpageServiceUserStatus> userStatus) {
+  public void setUserStatus(AdGroupWebpageServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public AdGroupWebpage webpage(AdGroupWebpageServiceWebpage webpage) {
-    this.webpage = JsonNullable.of(webpage);
+    this.webpage = webpage;
     return this;
   }
 
@@ -222,17 +221,17 @@ public class AdGroupWebpage   {
 
   @Valid
 
-  public JsonNullable<AdGroupWebpageServiceWebpage> getWebpage() {
+  public AdGroupWebpageServiceWebpage getWebpage() {
     return webpage;
   }
 
-  public void setWebpage(JsonNullable<AdGroupWebpageServiceWebpage> webpage) {
+  public void setWebpage(AdGroupWebpageServiceWebpage webpage) {
     this.webpage = webpage;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -278,7 +277,7 @@ public class AdGroupWebpage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

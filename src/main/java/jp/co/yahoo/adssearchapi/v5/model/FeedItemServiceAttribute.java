@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceMultipleFeedItemAttribute;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServicePlaceholderField;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceSimpleFeedItemAttribute;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceAttributeオブジェクトは、フィードアイテムの属性情報の値を格納します。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; SET時にfeedItemAttributeを指定するとすべて上書きされます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceAttribute object holds the value of Feed Item information.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.&lt;br&gt; If feedItemAttribute is specified in SET operation, it will be overwritten. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemServiceAttributeオブジェクトは、フィードアイテムの属性情報の値を格納します。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。<br> SET時にfeedItemAttributeを指定するとすべて上書きされます。 </div> <div lang=\"en\">FeedItemServiceAttribute object holds the value of Feed Item information.<br> This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.<br> If feedItemAttribute is specified in SET operation, it will be overwritten. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItemServiceAttribute   {
   @JsonProperty("feedAttributeId")
-  private JsonNullable<Long> feedAttributeId = JsonNullable.undefined();
+  private Long feedAttributeId = null;
 
   @JsonProperty("multipleFeedItemAttribute")
-  private JsonNullable<FeedItemServiceMultipleFeedItemAttribute> multipleFeedItemAttribute = JsonNullable.undefined();
+  private FeedItemServiceMultipleFeedItemAttribute multipleFeedItemAttribute = null;
 
   @JsonProperty("placeholderField")
-  private JsonNullable<FeedItemServicePlaceholderField> placeholderField = JsonNullable.undefined();
+  private FeedItemServicePlaceholderField placeholderField = null;
 
   @JsonProperty("simpleFeedItemAttribute")
-  private JsonNullable<FeedItemServiceSimpleFeedItemAttribute> simpleFeedItemAttribute = JsonNullable.undefined();
+  private FeedItemServiceSimpleFeedItemAttribute simpleFeedItemAttribute = null;
 
   public FeedItemServiceAttribute feedAttributeId(Long feedAttributeId) {
-    this.feedAttributeId = JsonNullable.of(feedAttributeId);
+    this.feedAttributeId = feedAttributeId;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class FeedItemServiceAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィード属性IDです。<br> このフィールドは、ADDおよびSET時に無視されます。<br> ※アドカスタマイザーの場合は、ADDおよびSET時に必須となります。</div> <div lang=\"en\">Feed attribute ID.<br> This field will be ignored in ADD and SET operation.<br> *For AD_CUSTOMIZER, this field is required in ADD and SET operation.</div> ")
 
 
-  public JsonNullable<Long> getFeedAttributeId() {
+  public Long getFeedAttributeId() {
     return feedAttributeId;
   }
 
-  public void setFeedAttributeId(JsonNullable<Long> feedAttributeId) {
+  public void setFeedAttributeId(Long feedAttributeId) {
     this.feedAttributeId = feedAttributeId;
   }
 
   public FeedItemServiceAttribute multipleFeedItemAttribute(FeedItemServiceMultipleFeedItemAttribute multipleFeedItemAttribute) {
-    this.multipleFeedItemAttribute = JsonNullable.of(multipleFeedItemAttribute);
+    this.multipleFeedItemAttribute = multipleFeedItemAttribute;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class FeedItemServiceAttribute   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceMultipleFeedItemAttribute> getMultipleFeedItemAttribute() {
+  public FeedItemServiceMultipleFeedItemAttribute getMultipleFeedItemAttribute() {
     return multipleFeedItemAttribute;
   }
 
-  public void setMultipleFeedItemAttribute(JsonNullable<FeedItemServiceMultipleFeedItemAttribute> multipleFeedItemAttribute) {
+  public void setMultipleFeedItemAttribute(FeedItemServiceMultipleFeedItemAttribute multipleFeedItemAttribute) {
     this.multipleFeedItemAttribute = multipleFeedItemAttribute;
   }
 
   public FeedItemServiceAttribute placeholderField(FeedItemServicePlaceholderField placeholderField) {
-    this.placeholderField = JsonNullable.of(placeholderField);
+    this.placeholderField = placeholderField;
     return this;
   }
 
@@ -84,16 +83,16 @@ public class FeedItemServiceAttribute   {
 
   @Valid
 
-  public JsonNullable<FeedItemServicePlaceholderField> getPlaceholderField() {
+  public FeedItemServicePlaceholderField getPlaceholderField() {
     return placeholderField;
   }
 
-  public void setPlaceholderField(JsonNullable<FeedItemServicePlaceholderField> placeholderField) {
+  public void setPlaceholderField(FeedItemServicePlaceholderField placeholderField) {
     this.placeholderField = placeholderField;
   }
 
   public FeedItemServiceAttribute simpleFeedItemAttribute(FeedItemServiceSimpleFeedItemAttribute simpleFeedItemAttribute) {
-    this.simpleFeedItemAttribute = JsonNullable.of(simpleFeedItemAttribute);
+    this.simpleFeedItemAttribute = simpleFeedItemAttribute;
     return this;
   }
 
@@ -105,17 +104,17 @@ public class FeedItemServiceAttribute   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceSimpleFeedItemAttribute> getSimpleFeedItemAttribute() {
+  public FeedItemServiceSimpleFeedItemAttribute getSimpleFeedItemAttribute() {
     return simpleFeedItemAttribute;
   }
 
-  public void setSimpleFeedItemAttribute(JsonNullable<FeedItemServiceSimpleFeedItemAttribute> simpleFeedItemAttribute) {
+  public void setSimpleFeedItemAttribute(FeedItemServiceSimpleFeedItemAttribute simpleFeedItemAttribute) {
     this.simpleFeedItemAttribute = simpleFeedItemAttribute;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -151,7 +150,7 @@ public class FeedItemServiceAttribute   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

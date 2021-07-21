@@ -7,26 +7,25 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordEstimatorServiceEstimateKeyword;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordEstimatorServiceIsNegativeBool;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * KeywordEstimatorServiceKeywordEstimateRequest
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordEstimatorServiceKeywordEstimateRequest   {
   @JsonProperty("estimateKeyword")
-  private JsonNullable<KeywordEstimatorServiceEstimateKeyword> estimateKeyword = JsonNullable.undefined();
+  private KeywordEstimatorServiceEstimateKeyword estimateKeyword = null;
 
   @JsonProperty("isNegativeBool")
-  private JsonNullable<KeywordEstimatorServiceIsNegativeBool> isNegativeBool = JsonNullable.undefined();
+  private KeywordEstimatorServiceIsNegativeBool isNegativeBool = null;
 
   @JsonProperty("maxCpc")
-  private JsonNullable<Long> maxCpc = JsonNullable.undefined();
+  private Long maxCpc = null;
 
   public KeywordEstimatorServiceKeywordEstimateRequest estimateKeyword(KeywordEstimatorServiceEstimateKeyword estimateKeyword) {
-    this.estimateKeyword = JsonNullable.of(estimateKeyword);
+    this.estimateKeyword = estimateKeyword;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class KeywordEstimatorServiceKeywordEstimateRequest   {
 
   @Valid
 
-  public JsonNullable<KeywordEstimatorServiceEstimateKeyword> getEstimateKeyword() {
+  public KeywordEstimatorServiceEstimateKeyword getEstimateKeyword() {
     return estimateKeyword;
   }
 
-  public void setEstimateKeyword(JsonNullable<KeywordEstimatorServiceEstimateKeyword> estimateKeyword) {
+  public void setEstimateKeyword(KeywordEstimatorServiceEstimateKeyword estimateKeyword) {
     this.estimateKeyword = estimateKeyword;
   }
 
   public KeywordEstimatorServiceKeywordEstimateRequest isNegativeBool(KeywordEstimatorServiceIsNegativeBool isNegativeBool) {
-    this.isNegativeBool = JsonNullable.of(isNegativeBool);
+    this.isNegativeBool = isNegativeBool;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class KeywordEstimatorServiceKeywordEstimateRequest   {
 
   @Valid
 
-  public JsonNullable<KeywordEstimatorServiceIsNegativeBool> getIsNegativeBool() {
+  public KeywordEstimatorServiceIsNegativeBool getIsNegativeBool() {
     return isNegativeBool;
   }
 
-  public void setIsNegativeBool(JsonNullable<KeywordEstimatorServiceIsNegativeBool> isNegativeBool) {
+  public void setIsNegativeBool(KeywordEstimatorServiceIsNegativeBool isNegativeBool) {
     this.isNegativeBool = isNegativeBool;
   }
 
   public KeywordEstimatorServiceKeywordEstimateRequest maxCpc(Long maxCpc) {
-    this.maxCpc = JsonNullable.of(maxCpc);
+    this.maxCpc = maxCpc;
     return this;
   }
 
@@ -80,17 +79,17 @@ public class KeywordEstimatorServiceKeywordEstimateRequest   {
   @ApiModelProperty(value = "<div lang=\"ja\">キーワードの見積もりに使用する上限クリック単価です。</div> <div lang=\"en\">maxCpc for the keyword</div> ")
 
 
-  public JsonNullable<Long> getMaxCpc() {
+  public Long getMaxCpc() {
     return maxCpc;
   }
 
-  public void setMaxCpc(JsonNullable<Long> maxCpc) {
+  public void setMaxCpc(Long maxCpc) {
     this.maxCpc = maxCpc;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -124,7 +123,7 @@ public class KeywordEstimatorServiceKeywordEstimateRequest   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

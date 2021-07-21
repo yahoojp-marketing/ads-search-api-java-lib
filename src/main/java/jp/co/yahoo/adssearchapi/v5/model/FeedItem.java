@@ -18,7 +18,6 @@ import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceTargetingAdGroup;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceTargetingCampaign;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceTargetingKeyword;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServiceTrademarkStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -26,73 +25,73 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemオブジェクトは、フィードアイテム情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItem object contains the information of Feed Item.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemオブジェクトは、フィードアイテム情報を格納します。</div> <div lang=\"en\">FeedItem object contains the information of Feed Item.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItem   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<FeedItemServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private FeedItemServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("customParameters")
-  private JsonNullable<FeedItemServiceCustomParameters> customParameters = JsonNullable.undefined();
+  private FeedItemServiceCustomParameters customParameters = null;
 
   @JsonProperty("devicePreference")
-  private JsonNullable<FeedItemServiceDevicePreference> devicePreference = JsonNullable.undefined();
+  private FeedItemServiceDevicePreference devicePreference = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("feedItemAttribute")
   @Valid
-  private JsonNullable<List<FeedItemServiceAttribute>> feedItemAttribute = JsonNullable.undefined();
+  private List<FeedItemServiceAttribute> feedItemAttribute = null;
 
   @JsonProperty("feedItemId")
-  private JsonNullable<Long> feedItemId = JsonNullable.undefined();
+  private Long feedItemId = null;
 
   @JsonProperty("feedItemTrackId")
-  private JsonNullable<Long> feedItemTrackId = JsonNullable.undefined();
+  private Long feedItemTrackId = null;
 
   @JsonProperty("invalidedTrademarks")
   @Valid
-  private JsonNullable<List<String>> invalidedTrademarks = JsonNullable.undefined();
+  private List<String> invalidedTrademarks = null;
 
   @JsonProperty("location")
-  private JsonNullable<FeedItemServiceLocation> location = JsonNullable.undefined();
+  private FeedItemServiceLocation location = null;
 
   @JsonProperty("placeholderType")
-  private JsonNullable<FeedItemServicePlaceholderType> placeholderType = JsonNullable.undefined();
+  private FeedItemServicePlaceholderType placeholderType = null;
 
   @JsonProperty("reviewCustomParameters")
-  private JsonNullable<FeedItemServiceCustomParameters> reviewCustomParameters = JsonNullable.undefined();
+  private FeedItemServiceCustomParameters reviewCustomParameters = null;
 
   @JsonProperty("scheduling")
-  private JsonNullable<FeedItemServiceScheduling> scheduling = JsonNullable.undefined();
+  private FeedItemServiceScheduling scheduling = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("targetingAdGroup")
-  private JsonNullable<FeedItemServiceTargetingAdGroup> targetingAdGroup = JsonNullable.undefined();
+  private FeedItemServiceTargetingAdGroup targetingAdGroup = null;
 
   @JsonProperty("targetingCampaign")
-  private JsonNullable<FeedItemServiceTargetingCampaign> targetingCampaign = JsonNullable.undefined();
+  private FeedItemServiceTargetingCampaign targetingCampaign = null;
 
   @JsonProperty("targetingKeyword")
-  private JsonNullable<FeedItemServiceTargetingKeyword> targetingKeyword = JsonNullable.undefined();
+  private FeedItemServiceTargetingKeyword targetingKeyword = null;
 
   @JsonProperty("trademarkStatus")
-  private JsonNullable<FeedItemServiceTrademarkStatus> trademarkStatus = JsonNullable.undefined();
+  private FeedItemServiceTrademarkStatus trademarkStatus = null;
 
   public FeedItem accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public FeedItem approvalStatus(FeedItemServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -124,16 +123,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceApprovalStatus> getApprovalStatus() {
+  public FeedItemServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<FeedItemServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(FeedItemServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public FeedItem customParameters(FeedItemServiceCustomParameters customParameters) {
-    this.customParameters = JsonNullable.of(customParameters);
+    this.customParameters = customParameters;
     return this;
   }
 
@@ -145,16 +144,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceCustomParameters> getCustomParameters() {
+  public FeedItemServiceCustomParameters getCustomParameters() {
     return customParameters;
   }
 
-  public void setCustomParameters(JsonNullable<FeedItemServiceCustomParameters> customParameters) {
+  public void setCustomParameters(FeedItemServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
   public FeedItem devicePreference(FeedItemServiceDevicePreference devicePreference) {
-    this.devicePreference = JsonNullable.of(devicePreference);
+    this.devicePreference = devicePreference;
     return this;
   }
 
@@ -166,24 +165,24 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceDevicePreference> getDevicePreference() {
+  public FeedItemServiceDevicePreference getDevicePreference() {
     return devicePreference;
   }
 
-  public void setDevicePreference(JsonNullable<FeedItemServiceDevicePreference> devicePreference) {
+  public void setDevicePreference(FeedItemServiceDevicePreference devicePreference) {
     this.devicePreference = devicePreference;
   }
 
   public FeedItem disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public FeedItem addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -194,16 +193,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Reject reason on editorial review.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public FeedItem endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -214,16 +213,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">配信終了日です。<br>※空で設定すると、既存の配信終了日は削除されます。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">End date of ad display.<br>∗By setting blank, existing end date of ad display will be deleted. <br>This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public FeedItem feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -234,24 +233,24 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※アドカスタマイザーの場合は、ADD時に必須となります。</div> <div lang=\"en\">Feed ID.<br>Although this field will be returned in the response, it will be ignored on input.<br> *For AD_CUSTOMIZER, this field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public FeedItem feedItemAttribute(List<FeedItemServiceAttribute> feedItemAttribute) {
-    this.feedItemAttribute = JsonNullable.of(feedItemAttribute);
+    this.feedItemAttribute = feedItemAttribute;
     return this;
   }
 
   public FeedItem addFeedItemAttributeItem(FeedItemServiceAttribute feedItemAttributeItem) {
-    if (this.feedItemAttribute == null || !this.feedItemAttribute.isPresent()) {
-      this.feedItemAttribute = JsonNullable.of(new ArrayList<>());
+    if (this.feedItemAttribute == null) {
+      this.feedItemAttribute = new ArrayList<>();
     }
-    this.feedItemAttribute.get().add(feedItemAttributeItem);
+    this.feedItemAttribute.add(feedItemAttributeItem);
     return this;
   }
 
@@ -263,16 +262,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<List<FeedItemServiceAttribute>> getFeedItemAttribute() {
+  public List<FeedItemServiceAttribute> getFeedItemAttribute() {
     return feedItemAttribute;
   }
 
-  public void setFeedItemAttribute(JsonNullable<List<FeedItemServiceAttribute>> feedItemAttribute) {
+  public void setFeedItemAttribute(List<FeedItemServiceAttribute> feedItemAttribute) {
     this.feedItemAttribute = feedItemAttribute;
   }
 
   public FeedItem feedItemId(Long feedItemId) {
-    this.feedItemId = JsonNullable.of(feedItemId);
+    this.feedItemId = feedItemId;
     return this;
   }
 
@@ -283,16 +282,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードアイテムIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時に無視されます。</div> <div lang=\"en\">Feed Item ID.<br>This field is required in SET and REMOVE operation, and will be ignored in ADD operation.</div> ")
 
 
-  public JsonNullable<Long> getFeedItemId() {
+  public Long getFeedItemId() {
     return feedItemId;
   }
 
-  public void setFeedItemId(JsonNullable<Long> feedItemId) {
+  public void setFeedItemId(Long feedItemId) {
     this.feedItemId = feedItemId;
   }
 
   public FeedItem feedItemTrackId(Long feedItemTrackId) {
-    this.feedItemTrackId = JsonNullable.of(feedItemTrackId);
+    this.feedItemTrackId = feedItemTrackId;
     return this;
   }
 
@@ -303,24 +302,24 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用フィードアイテムIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Feed Item ID for tracking.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getFeedItemTrackId() {
+  public Long getFeedItemTrackId() {
     return feedItemTrackId;
   }
 
-  public void setFeedItemTrackId(JsonNullable<Long> feedItemTrackId) {
+  public void setFeedItemTrackId(Long feedItemTrackId) {
     this.feedItemTrackId = feedItemTrackId;
   }
 
   public FeedItem invalidedTrademarks(List<String> invalidedTrademarks) {
-    this.invalidedTrademarks = JsonNullable.of(invalidedTrademarks);
+    this.invalidedTrademarks = invalidedTrademarks;
     return this;
   }
 
   public FeedItem addInvalidedTrademarksItem(String invalidedTrademarksItem) {
-    if (this.invalidedTrademarks == null || !this.invalidedTrademarks.isPresent()) {
-      this.invalidedTrademarks = JsonNullable.of(new ArrayList<>());
+    if (this.invalidedTrademarks == null) {
+      this.invalidedTrademarks = new ArrayList<>();
     }
-    this.invalidedTrademarks.get().add(invalidedTrademarksItem);
+    this.invalidedTrademarks.add(invalidedTrademarksItem);
     return this;
   }
 
@@ -331,16 +330,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">制限された商標です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">Invalided trademarks.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<List<String>> getInvalidedTrademarks() {
+  public List<String> getInvalidedTrademarks() {
     return invalidedTrademarks;
   }
 
-  public void setInvalidedTrademarks(JsonNullable<List<String>> invalidedTrademarks) {
+  public void setInvalidedTrademarks(List<String> invalidedTrademarks) {
     this.invalidedTrademarks = invalidedTrademarks;
   }
 
   public FeedItem location(FeedItemServiceLocation location) {
-    this.location = JsonNullable.of(location);
+    this.location = location;
     return this;
   }
 
@@ -352,16 +351,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceLocation> getLocation() {
+  public FeedItemServiceLocation getLocation() {
     return location;
   }
 
-  public void setLocation(JsonNullable<FeedItemServiceLocation> location) {
+  public void setLocation(FeedItemServiceLocation location) {
     this.location = location;
   }
 
   public FeedItem placeholderType(FeedItemServicePlaceholderType placeholderType) {
-    this.placeholderType = JsonNullable.of(placeholderType);
+    this.placeholderType = placeholderType;
     return this;
   }
 
@@ -373,16 +372,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServicePlaceholderType> getPlaceholderType() {
+  public FeedItemServicePlaceholderType getPlaceholderType() {
     return placeholderType;
   }
 
-  public void setPlaceholderType(JsonNullable<FeedItemServicePlaceholderType> placeholderType) {
+  public void setPlaceholderType(FeedItemServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
 
   public FeedItem reviewCustomParameters(FeedItemServiceCustomParameters reviewCustomParameters) {
-    this.reviewCustomParameters = JsonNullable.of(reviewCustomParameters);
+    this.reviewCustomParameters = reviewCustomParameters;
     return this;
   }
 
@@ -394,16 +393,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceCustomParameters> getReviewCustomParameters() {
+  public FeedItemServiceCustomParameters getReviewCustomParameters() {
     return reviewCustomParameters;
   }
 
-  public void setReviewCustomParameters(JsonNullable<FeedItemServiceCustomParameters> reviewCustomParameters) {
+  public void setReviewCustomParameters(FeedItemServiceCustomParameters reviewCustomParameters) {
     this.reviewCustomParameters = reviewCustomParameters;
   }
 
   public FeedItem scheduling(FeedItemServiceScheduling scheduling) {
-    this.scheduling = JsonNullable.of(scheduling);
+    this.scheduling = scheduling;
     return this;
   }
 
@@ -415,16 +414,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceScheduling> getScheduling() {
+  public FeedItemServiceScheduling getScheduling() {
     return scheduling;
   }
 
-  public void setScheduling(JsonNullable<FeedItemServiceScheduling> scheduling) {
+  public void setScheduling(FeedItemServiceScheduling scheduling) {
     this.scheduling = scheduling;
   }
 
   public FeedItem startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -435,16 +434,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">配信開始日です。<br> ※空で設定すると、既存の配信開始日は削除されます。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">Start date of ad display<br> ∗On setting blank, existing start date of ad display will be deleted.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public FeedItem targetingAdGroup(FeedItemServiceTargetingAdGroup targetingAdGroup) {
-    this.targetingAdGroup = JsonNullable.of(targetingAdGroup);
+    this.targetingAdGroup = targetingAdGroup;
     return this;
   }
 
@@ -456,16 +455,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceTargetingAdGroup> getTargetingAdGroup() {
+  public FeedItemServiceTargetingAdGroup getTargetingAdGroup() {
     return targetingAdGroup;
   }
 
-  public void setTargetingAdGroup(JsonNullable<FeedItemServiceTargetingAdGroup> targetingAdGroup) {
+  public void setTargetingAdGroup(FeedItemServiceTargetingAdGroup targetingAdGroup) {
     this.targetingAdGroup = targetingAdGroup;
   }
 
   public FeedItem targetingCampaign(FeedItemServiceTargetingCampaign targetingCampaign) {
-    this.targetingCampaign = JsonNullable.of(targetingCampaign);
+    this.targetingCampaign = targetingCampaign;
     return this;
   }
 
@@ -477,16 +476,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceTargetingCampaign> getTargetingCampaign() {
+  public FeedItemServiceTargetingCampaign getTargetingCampaign() {
     return targetingCampaign;
   }
 
-  public void setTargetingCampaign(JsonNullable<FeedItemServiceTargetingCampaign> targetingCampaign) {
+  public void setTargetingCampaign(FeedItemServiceTargetingCampaign targetingCampaign) {
     this.targetingCampaign = targetingCampaign;
   }
 
   public FeedItem targetingKeyword(FeedItemServiceTargetingKeyword targetingKeyword) {
-    this.targetingKeyword = JsonNullable.of(targetingKeyword);
+    this.targetingKeyword = targetingKeyword;
     return this;
   }
 
@@ -498,16 +497,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceTargetingKeyword> getTargetingKeyword() {
+  public FeedItemServiceTargetingKeyword getTargetingKeyword() {
     return targetingKeyword;
   }
 
-  public void setTargetingKeyword(JsonNullable<FeedItemServiceTargetingKeyword> targetingKeyword) {
+  public void setTargetingKeyword(FeedItemServiceTargetingKeyword targetingKeyword) {
     this.targetingKeyword = targetingKeyword;
   }
 
   public FeedItem trademarkStatus(FeedItemServiceTrademarkStatus trademarkStatus) {
-    this.trademarkStatus = JsonNullable.of(trademarkStatus);
+    this.trademarkStatus = trademarkStatus;
     return this;
   }
 
@@ -519,17 +518,17 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceTrademarkStatus> getTrademarkStatus() {
+  public FeedItemServiceTrademarkStatus getTrademarkStatus() {
     return trademarkStatus;
   }
 
-  public void setTrademarkStatus(JsonNullable<FeedItemServiceTrademarkStatus> trademarkStatus) {
+  public void setTrademarkStatus(FeedItemServiceTrademarkStatus trademarkStatus) {
     this.trademarkStatus = trademarkStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -597,7 +596,7 @@ public class FeedItem   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

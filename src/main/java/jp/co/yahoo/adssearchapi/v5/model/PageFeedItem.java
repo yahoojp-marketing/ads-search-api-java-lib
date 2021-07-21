@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceApprovalStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,35 +15,35 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemオブジェクトは、ページフィードアイテム情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItem object retains page feed Item.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemオブジェクトは、ページフィードアイテム情報を格納します。</div> <div lang=\"en\">PageFeedItem object retains page feed Item.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItem   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<PageFeedItemServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private PageFeedItemServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("disapprovalReasonComment")
-  private JsonNullable<String> disapprovalReasonComment = JsonNullable.undefined();
+  private String disapprovalReasonComment = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("pageFeedCustomLabel")
-  private JsonNullable<String> pageFeedCustomLabel = JsonNullable.undefined();
+  private String pageFeedCustomLabel = null;
 
   @JsonProperty("pageFeedItemId")
-  private JsonNullable<Long> pageFeedItemId = JsonNullable.undefined();
+  private Long pageFeedItemId = null;
 
   @JsonProperty("pageFeedUrl")
-  private JsonNullable<String> pageFeedUrl = JsonNullable.undefined();
+  private String pageFeedUrl = null;
 
   public PageFeedItem accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -55,16 +54,16 @@ public class PageFeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public PageFeedItem approvalStatus(PageFeedItemServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -76,24 +75,24 @@ public class PageFeedItem   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceApprovalStatus> getApprovalStatus() {
+  public PageFeedItemServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<PageFeedItemServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(PageFeedItemServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public PageFeedItem disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public PageFeedItem addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -104,16 +103,16 @@ public class PageFeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コード</div> <div lang=\"en\">Codes of disapproval reason</div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public PageFeedItem disapprovalReasonComment(String disapprovalReasonComment) {
-    this.disapprovalReasonComment = JsonNullable.of(disapprovalReasonComment);
+    this.disapprovalReasonComment = disapprovalReasonComment;
     return this;
   }
 
@@ -124,16 +123,16 @@ public class PageFeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由のコメント</div> <div lang=\"en\">Comment of disapproval reason</div> ")
 
 
-  public JsonNullable<String> getDisapprovalReasonComment() {
+  public String getDisapprovalReasonComment() {
     return disapprovalReasonComment;
   }
 
-  public void setDisapprovalReasonComment(JsonNullable<String> disapprovalReasonComment) {
+  public void setDisapprovalReasonComment(String disapprovalReasonComment) {
     this.disapprovalReasonComment = disapprovalReasonComment;
   }
 
   public PageFeedItem feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -144,16 +143,16 @@ public class PageFeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">Feed ID</div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public PageFeedItem pageFeedCustomLabel(String pageFeedCustomLabel) {
-    this.pageFeedCustomLabel = JsonNullable.of(pageFeedCustomLabel);
+    this.pageFeedCustomLabel = pageFeedCustomLabel;
     return this;
   }
 
@@ -164,16 +163,16 @@ public class PageFeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアイテムのカスタムラベル<br> 複数ある場合はカンマ区切り</div> <div lang=\"en\">Custom label of Page feed item.<br> If multiple, comma separated.</div> ")
 
 
-  public JsonNullable<String> getPageFeedCustomLabel() {
+  public String getPageFeedCustomLabel() {
     return pageFeedCustomLabel;
   }
 
-  public void setPageFeedCustomLabel(JsonNullable<String> pageFeedCustomLabel) {
+  public void setPageFeedCustomLabel(String pageFeedCustomLabel) {
     this.pageFeedCustomLabel = pageFeedCustomLabel;
   }
 
   public PageFeedItem pageFeedItemId(Long pageFeedItemId) {
-    this.pageFeedItemId = JsonNullable.of(pageFeedItemId);
+    this.pageFeedItemId = pageFeedItemId;
     return this;
   }
 
@@ -184,16 +183,16 @@ public class PageFeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアイテムID</div> <div lang=\"en\">Page feed item ID</div> ")
 
 
-  public JsonNullable<Long> getPageFeedItemId() {
+  public Long getPageFeedItemId() {
     return pageFeedItemId;
   }
 
-  public void setPageFeedItemId(JsonNullable<Long> pageFeedItemId) {
+  public void setPageFeedItemId(Long pageFeedItemId) {
     this.pageFeedItemId = pageFeedItemId;
   }
 
   public PageFeedItem pageFeedUrl(String pageFeedUrl) {
-    this.pageFeedUrl = JsonNullable.of(pageFeedUrl);
+    this.pageFeedUrl = pageFeedUrl;
     return this;
   }
 
@@ -204,17 +203,17 @@ public class PageFeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページフィードURL。</div> <div lang=\"en\">Url of page feed</div> ")
 
 
-  public JsonNullable<String> getPageFeedUrl() {
+  public String getPageFeedUrl() {
     return pageFeedUrl;
   }
 
-  public void setPageFeedUrl(JsonNullable<String> pageFeedUrl) {
+  public void setPageFeedUrl(String pageFeedUrl) {
     this.pageFeedUrl = pageFeedUrl;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -258,7 +257,7 @@ public class PageFeedItem   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

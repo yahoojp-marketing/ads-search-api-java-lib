@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceTargetCpaBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。&lt;br&gt; このフィールドは、省略可能となります。※ADD時、typeがTARGET_CPAの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceTargetCpaBiddingScheme object displays Auto Bidding setting for Target CPA.&lt;br&gt; This field is optional. *If type is &#39;TARGET_CPA&#39;, this field is required in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceTargetCpaBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。<br> このフィールドは、省略可能となります。※ADD時、typeがTARGET_CPAの場合は必須です。</div> <div lang=\"en\">BiddingStrategyServiceTargetCpaBiddingScheme object displays Auto Bidding setting for Target CPA.<br> This field is optional. *If type is 'TARGET_CPA', this field is required in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BiddingStrategyServiceTargetCpaBiddingScheme   {
   @JsonProperty("bidCeiling")
-  private JsonNullable<Long> bidCeiling = JsonNullable.undefined();
+  private Long bidCeiling = null;
 
   @JsonProperty("bidFloor")
-  private JsonNullable<Long> bidFloor = JsonNullable.undefined();
+  private Long bidFloor = null;
 
   @JsonProperty("targetCpa")
-  private JsonNullable<Long> targetCpa = JsonNullable.undefined();
+  private Long targetCpa = null;
 
   public BiddingStrategyServiceTargetCpaBiddingScheme bidCeiling(Long bidCeiling) {
-    this.bidCeiling = JsonNullable.of(bidCeiling);
+    this.bidCeiling = bidCeiling;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br>※「0」が設定された場合、上限設定はありません。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">CPC limit.<br>* No limits if &#34;0&#34; is set.<br> This field is optional in any cases.</div> ")
 
 
-  public JsonNullable<Long> getBidCeiling() {
+  public Long getBidCeiling() {
     return bidCeiling;
   }
 
-  public void setBidCeiling(JsonNullable<Long> bidCeiling) {
+  public void setBidCeiling(Long bidCeiling) {
     this.bidCeiling = bidCeiling;
   }
 
   public BiddingStrategyServiceTargetCpaBiddingScheme bidFloor(Long bidFloor) {
-    this.bidFloor = JsonNullable.of(bidFloor);
+    this.bidFloor = bidFloor;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">入札価格の下限です。<br>※ 設定を解除する場合は「0」を指定します。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">Minimum CPC.<br> * Set &#34;0&#34; to deactivate.<br>This field is optional in any cases.</div> ")
 
 
-  public JsonNullable<Long> getBidFloor() {
+  public Long getBidFloor() {
     return bidFloor;
   }
 
-  public void setBidFloor(JsonNullable<Long> bidFloor) {
+  public void setBidFloor(Long bidFloor) {
     this.bidFloor = bidFloor;
   }
 
   public BiddingStrategyServiceTargetCpaBiddingScheme targetCpa(Long targetCpa) {
-    this.targetCpa = JsonNullable.of(targetCpa);
+    this.targetCpa = targetCpa;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です（日本円です）。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Target CPA (JPY).<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
 
 
-  public JsonNullable<Long> getTargetCpa() {
+  public Long getTargetCpa() {
     return targetCpa;
   }
 
-  public void setTargetCpa(JsonNullable<Long> targetCpa) {
+  public void setTargetCpa(Long targetCpa) {
     this.targetCpa = targetCpa;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignFeedServicePlaceholderType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,28 +15,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignFeedServiceSelectorオブジェクトは、FeedItem情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignFeedServiceSelector describes the FeedItem information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignFeedServiceSelectorオブジェクトは、FeedItem情報を指定します。</div> <div lang=\"en\">CampaignFeedServiceSelector describes the FeedItem information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignFeedServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("feedItemIds")
   @Valid
-  private JsonNullable<List<Long>> feedItemIds = JsonNullable.undefined();
+  private List<Long> feedItemIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("placeholderTypes")
   @Valid
-  private JsonNullable<List<CampaignFeedServicePlaceholderType>> placeholderTypes = JsonNullable.undefined();
+  private List<CampaignFeedServicePlaceholderType> placeholderTypes = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public CampaignFeedServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -61,15 +60,15 @@ public class CampaignFeedServiceSelector   {
   }
 
   public CampaignFeedServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public CampaignFeedServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -80,24 +79,24 @@ public class CampaignFeedServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public CampaignFeedServiceSelector feedItemIds(List<Long> feedItemIds) {
-    this.feedItemIds = JsonNullable.of(feedItemIds);
+    this.feedItemIds = feedItemIds;
     return this;
   }
 
   public CampaignFeedServiceSelector addFeedItemIdsItem(Long feedItemIdsItem) {
-    if (this.feedItemIds == null || !this.feedItemIds.isPresent()) {
-      this.feedItemIds = JsonNullable.of(new ArrayList<>());
+    if (this.feedItemIds == null) {
+      this.feedItemIds = new ArrayList<>();
     }
-    this.feedItemIds.get().add(feedItemIdsItem);
+    this.feedItemIds.add(feedItemIdsItem);
     return this;
   }
 
@@ -108,16 +107,16 @@ public class CampaignFeedServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">FeedItem情報のIDです。</div> <div lang=\"en\">FeedItem information ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getFeedItemIds() {
+  public List<Long> getFeedItemIds() {
     return feedItemIds;
   }
 
-  public void setFeedItemIds(JsonNullable<List<Long>> feedItemIds) {
+  public void setFeedItemIds(List<Long> feedItemIds) {
     this.feedItemIds = feedItemIds;
   }
 
   public CampaignFeedServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -130,24 +129,24 @@ public class CampaignFeedServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public CampaignFeedServiceSelector placeholderTypes(List<CampaignFeedServicePlaceholderType> placeholderTypes) {
-    this.placeholderTypes = JsonNullable.of(placeholderTypes);
+    this.placeholderTypes = placeholderTypes;
     return this;
   }
 
   public CampaignFeedServiceSelector addPlaceholderTypesItem(CampaignFeedServicePlaceholderType placeholderTypesItem) {
-    if (this.placeholderTypes == null || !this.placeholderTypes.isPresent()) {
-      this.placeholderTypes = JsonNullable.of(new ArrayList<>());
+    if (this.placeholderTypes == null) {
+      this.placeholderTypes = new ArrayList<>();
     }
-    this.placeholderTypes.get().add(placeholderTypesItem);
+    this.placeholderTypes.add(placeholderTypesItem);
     return this;
   }
 
@@ -159,16 +158,16 @@ public class CampaignFeedServiceSelector   {
 
   @Valid
 @Size(max=4) 
-  public JsonNullable<List<CampaignFeedServicePlaceholderType>> getPlaceholderTypes() {
+  public List<CampaignFeedServicePlaceholderType> getPlaceholderTypes() {
     return placeholderTypes;
   }
 
-  public void setPlaceholderTypes(JsonNullable<List<CampaignFeedServicePlaceholderType>> placeholderTypes) {
+  public void setPlaceholderTypes(List<CampaignFeedServicePlaceholderType> placeholderTypes) {
     this.placeholderTypes = placeholderTypes;
   }
 
   public CampaignFeedServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -180,17 +179,17 @@ public class CampaignFeedServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -230,7 +229,7 @@ public class CampaignFeedServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

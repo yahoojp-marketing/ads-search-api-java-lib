@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceReviewUrl;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceUrlApprovalStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,31 +16,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceUrlReviewDataオブジェクトは、URLの審査状況を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceUrlReviewData object displays review status of URL.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceUrlReviewDataオブジェクトは、URLの審査状況を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">CampaignServiceUrlReviewData object displays review status of URL.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceUrlReviewData   {
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("disapprovalReviewUrl")
-  private JsonNullable<CampaignServiceReviewUrl> disapprovalReviewUrl = JsonNullable.undefined();
+  private CampaignServiceReviewUrl disapprovalReviewUrl = null;
 
   @JsonProperty("inReviewUrl")
-  private JsonNullable<CampaignServiceReviewUrl> inReviewUrl = JsonNullable.undefined();
+  private CampaignServiceReviewUrl inReviewUrl = null;
 
   @JsonProperty("urlApprovalStatus")
-  private JsonNullable<CampaignServiceUrlApprovalStatus> urlApprovalStatus = JsonNullable.undefined();
+  private CampaignServiceUrlApprovalStatus urlApprovalStatus = null;
 
   public CampaignServiceUrlReviewData disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public CampaignServiceUrlReviewData addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -52,16 +51,16 @@ public class CampaignServiceUrlReviewData   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コードです。</div> <div lang=\"en\">Code of Disapproval reason.<br></div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public CampaignServiceUrlReviewData disapprovalReviewUrl(CampaignServiceReviewUrl disapprovalReviewUrl) {
-    this.disapprovalReviewUrl = JsonNullable.of(disapprovalReviewUrl);
+    this.disapprovalReviewUrl = disapprovalReviewUrl;
     return this;
   }
 
@@ -73,16 +72,16 @@ public class CampaignServiceUrlReviewData   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceReviewUrl> getDisapprovalReviewUrl() {
+  public CampaignServiceReviewUrl getDisapprovalReviewUrl() {
     return disapprovalReviewUrl;
   }
 
-  public void setDisapprovalReviewUrl(JsonNullable<CampaignServiceReviewUrl> disapprovalReviewUrl) {
+  public void setDisapprovalReviewUrl(CampaignServiceReviewUrl disapprovalReviewUrl) {
     this.disapprovalReviewUrl = disapprovalReviewUrl;
   }
 
   public CampaignServiceUrlReviewData inReviewUrl(CampaignServiceReviewUrl inReviewUrl) {
-    this.inReviewUrl = JsonNullable.of(inReviewUrl);
+    this.inReviewUrl = inReviewUrl;
     return this;
   }
 
@@ -94,16 +93,16 @@ public class CampaignServiceUrlReviewData   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceReviewUrl> getInReviewUrl() {
+  public CampaignServiceReviewUrl getInReviewUrl() {
     return inReviewUrl;
   }
 
-  public void setInReviewUrl(JsonNullable<CampaignServiceReviewUrl> inReviewUrl) {
+  public void setInReviewUrl(CampaignServiceReviewUrl inReviewUrl) {
     this.inReviewUrl = inReviewUrl;
   }
 
   public CampaignServiceUrlReviewData urlApprovalStatus(CampaignServiceUrlApprovalStatus urlApprovalStatus) {
-    this.urlApprovalStatus = JsonNullable.of(urlApprovalStatus);
+    this.urlApprovalStatus = urlApprovalStatus;
     return this;
   }
 
@@ -115,17 +114,17 @@ public class CampaignServiceUrlReviewData   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceUrlApprovalStatus> getUrlApprovalStatus() {
+  public CampaignServiceUrlApprovalStatus getUrlApprovalStatus() {
     return urlApprovalStatus;
   }
 
-  public void setUrlApprovalStatus(JsonNullable<CampaignServiceUrlApprovalStatus> urlApprovalStatus) {
+  public void setUrlApprovalStatus(CampaignServiceUrlApprovalStatus urlApprovalStatus) {
     this.urlApprovalStatus = urlApprovalStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -161,7 +160,7 @@ public class CampaignServiceUrlReviewData   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

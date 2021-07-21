@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.BiddingStrategyServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceReturnValueオブジェクトは、自動入札設定を作成・更新・削除したときの結果に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceReturnValue object displays the results of auto bidding creation/update/removal setting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceReturnValueオブジェクトは、自動入札設定を作成・更新・削除したときの結果に関する情報を表します。</div> <div lang=\"en\">BiddingStrategyServiceReturnValue object displays the results of auto bidding creation/update/removal setting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BiddingStrategyServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<BiddingStrategyServiceValue>> values = JsonNullable.undefined();
+  private List<BiddingStrategyServiceValue> values = null;
 
   public BiddingStrategyServiceReturnValue values(List<BiddingStrategyServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public BiddingStrategyServiceReturnValue addValuesItem(BiddingStrategyServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class BiddingStrategyServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<BiddingStrategyServiceValue>> getValues() {
+  public List<BiddingStrategyServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<BiddingStrategyServiceValue>> values) {
+  public void setValues(List<BiddingStrategyServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class BiddingStrategyServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

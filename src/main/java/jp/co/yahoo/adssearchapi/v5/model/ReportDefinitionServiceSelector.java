@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.ReportDefinitionServiceReportJobStatus;
 import jp.co.yahoo.adssearchapi.v5.model.ReportDefinitionServiceReportType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionServiceSelectorオブジェクトは、操作の対象とするレポートです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ReportDefinitionServiceSelector is a detail of requested report.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ReportDefinitionServiceSelectorオブジェクトは、操作の対象とするレポートです。</div> <div lang=\"en\">ReportDefinitionServiceSelector is a detail of requested report.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("reportJobIds")
   @Valid
-  private JsonNullable<List<Long>> reportJobIds = JsonNullable.undefined();
+  private List<Long> reportJobIds = null;
 
   @JsonProperty("reportJobStatuses")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceReportJobStatus>> reportJobStatuses = JsonNullable.undefined();
+  private List<ReportDefinitionServiceReportJobStatus> reportJobStatuses = null;
 
   @JsonProperty("reportTypes")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceReportType>> reportTypes = JsonNullable.undefined();
+  private List<ReportDefinitionServiceReportType> reportTypes = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public ReportDefinitionServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -62,7 +61,7 @@ public class ReportDefinitionServiceSelector   {
   }
 
   public ReportDefinitionServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -75,24 +74,24 @@ public class ReportDefinitionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public ReportDefinitionServiceSelector reportJobIds(List<Long> reportJobIds) {
-    this.reportJobIds = JsonNullable.of(reportJobIds);
+    this.reportJobIds = reportJobIds;
     return this;
   }
 
   public ReportDefinitionServiceSelector addReportJobIdsItem(Long reportJobIdsItem) {
-    if (this.reportJobIds == null || !this.reportJobIds.isPresent()) {
-      this.reportJobIds = JsonNullable.of(new ArrayList<>());
+    if (this.reportJobIds == null) {
+      this.reportJobIds = new ArrayList<>();
     }
-    this.reportJobIds.get().add(reportJobIdsItem);
+    this.reportJobIds.add(reportJobIdsItem);
     return this;
   }
 
@@ -103,24 +102,24 @@ public class ReportDefinitionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件： レポートジョブIDです。</div> <div lang=\"en\">Search condition: Report Job ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getReportJobIds() {
+  public List<Long> getReportJobIds() {
     return reportJobIds;
   }
 
-  public void setReportJobIds(JsonNullable<List<Long>> reportJobIds) {
+  public void setReportJobIds(List<Long> reportJobIds) {
     this.reportJobIds = reportJobIds;
   }
 
   public ReportDefinitionServiceSelector reportJobStatuses(List<ReportDefinitionServiceReportJobStatus> reportJobStatuses) {
-    this.reportJobStatuses = JsonNullable.of(reportJobStatuses);
+    this.reportJobStatuses = reportJobStatuses;
     return this;
   }
 
   public ReportDefinitionServiceSelector addReportJobStatusesItem(ReportDefinitionServiceReportJobStatus reportJobStatusesItem) {
-    if (this.reportJobStatuses == null || !this.reportJobStatuses.isPresent()) {
-      this.reportJobStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.reportJobStatuses == null) {
+      this.reportJobStatuses = new ArrayList<>();
     }
-    this.reportJobStatuses.get().add(reportJobStatusesItem);
+    this.reportJobStatuses.add(reportJobStatusesItem);
     return this;
   }
 
@@ -132,24 +131,24 @@ public class ReportDefinitionServiceSelector   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceReportJobStatus>> getReportJobStatuses() {
+  public List<ReportDefinitionServiceReportJobStatus> getReportJobStatuses() {
     return reportJobStatuses;
   }
 
-  public void setReportJobStatuses(JsonNullable<List<ReportDefinitionServiceReportJobStatus>> reportJobStatuses) {
+  public void setReportJobStatuses(List<ReportDefinitionServiceReportJobStatus> reportJobStatuses) {
     this.reportJobStatuses = reportJobStatuses;
   }
 
   public ReportDefinitionServiceSelector reportTypes(List<ReportDefinitionServiceReportType> reportTypes) {
-    this.reportTypes = JsonNullable.of(reportTypes);
+    this.reportTypes = reportTypes;
     return this;
   }
 
   public ReportDefinitionServiceSelector addReportTypesItem(ReportDefinitionServiceReportType reportTypesItem) {
-    if (this.reportTypes == null || !this.reportTypes.isPresent()) {
-      this.reportTypes = JsonNullable.of(new ArrayList<>());
+    if (this.reportTypes == null) {
+      this.reportTypes = new ArrayList<>();
     }
-    this.reportTypes.get().add(reportTypesItem);
+    this.reportTypes.add(reportTypesItem);
     return this;
   }
 
@@ -161,16 +160,16 @@ public class ReportDefinitionServiceSelector   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceReportType>> getReportTypes() {
+  public List<ReportDefinitionServiceReportType> getReportTypes() {
     return reportTypes;
   }
 
-  public void setReportTypes(JsonNullable<List<ReportDefinitionServiceReportType>> reportTypes) {
+  public void setReportTypes(List<ReportDefinitionServiceReportType> reportTypes) {
     this.reportTypes = reportTypes;
   }
 
   public ReportDefinitionServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -182,17 +181,17 @@ public class ReportDefinitionServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -232,7 +231,7 @@ public class ReportDefinitionServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

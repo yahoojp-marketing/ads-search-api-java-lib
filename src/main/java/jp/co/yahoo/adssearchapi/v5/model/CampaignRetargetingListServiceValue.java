@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignRetargetingList;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,20 +16,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceValueオブジェクトは、キャンペーン階層のターゲットリスト設定における実行結果（1Entity）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceValue object holds operation results (1 entity)  for Target List settings on the campaign level.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignRetargetingListServiceValueオブジェクトは、キャンペーン階層のターゲットリスト設定における実行結果（1Entity）を保持します。</div> <div lang=\"en\">CampaignRetargetingListServiceValue object holds operation results (1 entity)  for Target List settings on the campaign level.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignRetargetingListServiceValue   {
   @JsonProperty("campaignRetargetingList")
-  private JsonNullable<CampaignRetargetingList> campaignRetargetingList = JsonNullable.undefined();
+  private CampaignRetargetingList campaignRetargetingList = null;
 
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public CampaignRetargetingListServiceValue campaignRetargetingList(CampaignRetargetingList campaignRetargetingList) {
-    this.campaignRetargetingList = JsonNullable.of(campaignRetargetingList);
+    this.campaignRetargetingList = campaignRetargetingList;
     return this;
   }
 
@@ -42,24 +41,24 @@ public class CampaignRetargetingListServiceValue   {
 
   @Valid
 
-  public JsonNullable<CampaignRetargetingList> getCampaignRetargetingList() {
+  public CampaignRetargetingList getCampaignRetargetingList() {
     return campaignRetargetingList;
   }
 
-  public void setCampaignRetargetingList(JsonNullable<CampaignRetargetingList> campaignRetargetingList) {
+  public void setCampaignRetargetingList(CampaignRetargetingList campaignRetargetingList) {
     this.campaignRetargetingList = campaignRetargetingList;
   }
 
   public CampaignRetargetingListServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public CampaignRetargetingListServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class CampaignRetargetingListServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public CampaignRetargetingListServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class CampaignRetargetingListServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class CampaignRetargetingListServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

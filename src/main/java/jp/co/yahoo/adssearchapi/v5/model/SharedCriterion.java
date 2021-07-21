@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.SharedCriterionServiceKeywordMatchType;
 import jp.co.yahoo.adssearchapi.v5.model.SharedCriterionServiceUse;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,28 +14,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionオブジェクトは、対象外キーワード情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterion object holds negative keyword information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SharedCriterionオブジェクトは、対象外キーワード情報を保持します。</div> <div lang=\"en\">SharedCriterion object holds negative keyword information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SharedCriterion   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("criterionId")
-  private JsonNullable<Long> criterionId = JsonNullable.undefined();
+  private Long criterionId = null;
 
   @JsonProperty("keywordMatchType")
-  private JsonNullable<SharedCriterionServiceKeywordMatchType> keywordMatchType = JsonNullable.undefined();
+  private SharedCriterionServiceKeywordMatchType keywordMatchType = null;
 
   @JsonProperty("sharedListId")
-  private JsonNullable<Long> sharedListId = JsonNullable.undefined();
+  private Long sharedListId = null;
 
   @JsonProperty("text")
-  private JsonNullable<String> text = JsonNullable.undefined();
+  private String text = null;
 
   @JsonProperty("use")
-  private JsonNullable<SharedCriterionServiceUse> use = JsonNullable.undefined();
+  private SharedCriterionServiceUse use = null;
 
   public SharedCriterion accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -47,16 +46,16 @@ public class SharedCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public SharedCriterion criterionId(Long criterionId) {
-    this.criterionId = JsonNullable.of(criterionId);
+    this.criterionId = criterionId;
     return this;
   }
 
@@ -67,16 +66,16 @@ public class SharedCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">クライテリオンIDです。<br> REMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">Criterion ID.<br> This field is required in REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getCriterionId() {
+  public Long getCriterionId() {
     return criterionId;
   }
 
-  public void setCriterionId(JsonNullable<Long> criterionId) {
+  public void setCriterionId(Long criterionId) {
     this.criterionId = criterionId;
   }
 
   public SharedCriterion keywordMatchType(SharedCriterionServiceKeywordMatchType keywordMatchType) {
-    this.keywordMatchType = JsonNullable.of(keywordMatchType);
+    this.keywordMatchType = keywordMatchType;
     return this;
   }
 
@@ -88,16 +87,16 @@ public class SharedCriterion   {
 
   @Valid
 
-  public JsonNullable<SharedCriterionServiceKeywordMatchType> getKeywordMatchType() {
+  public SharedCriterionServiceKeywordMatchType getKeywordMatchType() {
     return keywordMatchType;
   }
 
-  public void setKeywordMatchType(JsonNullable<SharedCriterionServiceKeywordMatchType> keywordMatchType) {
+  public void setKeywordMatchType(SharedCriterionServiceKeywordMatchType keywordMatchType) {
     this.keywordMatchType = keywordMatchType;
   }
 
   public SharedCriterion sharedListId(Long sharedListId) {
-    this.sharedListId = JsonNullable.of(sharedListId);
+    this.sharedListId = sharedListId;
     return this;
   }
 
@@ -108,16 +107,16 @@ public class SharedCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウント共有リストIDです。<br> ADDおよびREMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">Account shared list ID.<br> This field is required in ADD and REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getSharedListId() {
+  public Long getSharedListId() {
     return sharedListId;
   }
 
-  public void setSharedListId(JsonNullable<Long> sharedListId) {
+  public void setSharedListId(Long sharedListId) {
     this.sharedListId = sharedListId;
   }
 
   public SharedCriterion text(String text) {
-    this.text = JsonNullable.of(text);
+    this.text = text;
     return this;
   }
 
@@ -128,16 +127,16 @@ public class SharedCriterion   {
   @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Keyword.<br>This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getText() {
+  public String getText() {
     return text;
   }
 
-  public void setText(JsonNullable<String> text) {
+  public void setText(String text) {
     this.text = text;
   }
 
   public SharedCriterion use(SharedCriterionServiceUse use) {
-    this.use = JsonNullable.of(use);
+    this.use = use;
     return this;
   }
 
@@ -149,17 +148,17 @@ public class SharedCriterion   {
 
   @Valid
 
-  public JsonNullable<SharedCriterionServiceUse> getUse() {
+  public SharedCriterionServiceUse getUse() {
     return use;
   }
 
-  public void setUse(JsonNullable<SharedCriterionServiceUse> use) {
+  public void setUse(SharedCriterionServiceUse use) {
     this.use = use;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -199,7 +198,7 @@ public class SharedCriterion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

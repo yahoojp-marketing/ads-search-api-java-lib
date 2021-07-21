@@ -13,7 +13,6 @@ import jp.co.yahoo.adssearchapi.v5.model.CampaignExportServiceEntityType;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignExportServiceLang;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignExportServiceOutput;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignExportServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -21,74 +20,74 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceExportSetting オブジェクトは、エクスポートする条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceExportSetting object describes the condition for exports.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignExportServiceExportSetting オブジェクトは、エクスポートする条件を表します。</div> <div lang=\"en\">CampaignExportServiceExportSetting object describes the condition for exports.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignExportServiceExportSetting   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("adGroupAdApprovalStatuses")
   @Valid
-  private JsonNullable<List<CampaignExportServiceApprovalStatus>> adGroupAdApprovalStatuses = JsonNullable.undefined();
+  private List<CampaignExportServiceApprovalStatus> adGroupAdApprovalStatuses = null;
 
   @JsonProperty("adGroupAdUserStatuses")
   @Valid
-  private JsonNullable<List<CampaignExportServiceUserStatus>> adGroupAdUserStatuses = JsonNullable.undefined();
+  private List<CampaignExportServiceUserStatus> adGroupAdUserStatuses = null;
 
   @JsonProperty("adGroupCriterionApprovalStatuses")
   @Valid
-  private JsonNullable<List<CampaignExportServiceApprovalStatus>> adGroupCriterionApprovalStatuses = JsonNullable.undefined();
+  private List<CampaignExportServiceApprovalStatus> adGroupCriterionApprovalStatuses = null;
 
   @JsonProperty("adGroupCriterionIds")
   @Valid
-  private JsonNullable<List<Long>> adGroupCriterionIds = JsonNullable.undefined();
+  private List<Long> adGroupCriterionIds = null;
 
   @JsonProperty("adGroupCriterionUserStatuses")
   @Valid
-  private JsonNullable<List<CampaignExportServiceUserStatus>> adGroupCriterionUserStatuses = JsonNullable.undefined();
+  private List<CampaignExportServiceUserStatus> adGroupCriterionUserStatuses = null;
 
   @JsonProperty("adGroupIds")
   @Valid
-  private JsonNullable<List<Long>> adGroupIds = JsonNullable.undefined();
+  private List<Long> adGroupIds = null;
 
   @JsonProperty("adGroupUserStatuses")
   @Valid
-  private JsonNullable<List<CampaignExportServiceUserStatus>> adGroupUserStatuses = JsonNullable.undefined();
+  private List<CampaignExportServiceUserStatus> adGroupUserStatuses = null;
 
   @JsonProperty("adIds")
   @Valid
-  private JsonNullable<List<Long>> adIds = JsonNullable.undefined();
+  private List<Long> adIds = null;
 
   @JsonProperty("campaignCriterionIds")
   @Valid
-  private JsonNullable<List<Long>> campaignCriterionIds = JsonNullable.undefined();
+  private List<Long> campaignCriterionIds = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("campaignUserStatuses")
   @Valid
-  private JsonNullable<List<CampaignExportServiceUserStatus>> campaignUserStatuses = JsonNullable.undefined();
+  private List<CampaignExportServiceUserStatus> campaignUserStatuses = null;
 
   @JsonProperty("encoding")
-  private JsonNullable<CampaignExportServiceEncoding> encoding = JsonNullable.undefined();
+  private CampaignExportServiceEncoding encoding = null;
 
   @JsonProperty("entityTypes")
   @Valid
-  private JsonNullable<List<CampaignExportServiceEntityType>> entityTypes = JsonNullable.undefined();
+  private List<CampaignExportServiceEntityType> entityTypes = null;
 
   @JsonProperty("exportFields")
   @Valid
-  private JsonNullable<List<String>> exportFields = JsonNullable.undefined();
+  private List<String> exportFields = null;
 
   @JsonProperty("jobName")
-  private JsonNullable<String> jobName = JsonNullable.undefined();
+  private String jobName = null;
 
   @JsonProperty("lang")
-  private JsonNullable<CampaignExportServiceLang> lang = JsonNullable.undefined();
+  private CampaignExportServiceLang lang = null;
 
   @JsonProperty("output")
-  private JsonNullable<CampaignExportServiceOutput> output = JsonNullable.undefined();
+  private CampaignExportServiceOutput output = null;
 
   public CampaignExportServiceExportSetting accountId(Long accountId) {
     this.accountId = accountId;
@@ -112,15 +111,15 @@ public class CampaignExportServiceExportSetting   {
   }
 
   public CampaignExportServiceExportSetting adGroupAdApprovalStatuses(List<CampaignExportServiceApprovalStatus> adGroupAdApprovalStatuses) {
-    this.adGroupAdApprovalStatuses = JsonNullable.of(adGroupAdApprovalStatuses);
+    this.adGroupAdApprovalStatuses = adGroupAdApprovalStatuses;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdGroupAdApprovalStatusesItem(CampaignExportServiceApprovalStatus adGroupAdApprovalStatusesItem) {
-    if (this.adGroupAdApprovalStatuses == null || !this.adGroupAdApprovalStatuses.isPresent()) {
-      this.adGroupAdApprovalStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupAdApprovalStatuses == null) {
+      this.adGroupAdApprovalStatuses = new ArrayList<>();
     }
-    this.adGroupAdApprovalStatuses.get().add(adGroupAdApprovalStatusesItem);
+    this.adGroupAdApprovalStatuses.add(adGroupAdApprovalStatusesItem);
     return this;
   }
 
@@ -132,24 +131,24 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 @Size(max=5) 
-  public JsonNullable<List<CampaignExportServiceApprovalStatus>> getAdGroupAdApprovalStatuses() {
+  public List<CampaignExportServiceApprovalStatus> getAdGroupAdApprovalStatuses() {
     return adGroupAdApprovalStatuses;
   }
 
-  public void setAdGroupAdApprovalStatuses(JsonNullable<List<CampaignExportServiceApprovalStatus>> adGroupAdApprovalStatuses) {
+  public void setAdGroupAdApprovalStatuses(List<CampaignExportServiceApprovalStatus> adGroupAdApprovalStatuses) {
     this.adGroupAdApprovalStatuses = adGroupAdApprovalStatuses;
   }
 
   public CampaignExportServiceExportSetting adGroupAdUserStatuses(List<CampaignExportServiceUserStatus> adGroupAdUserStatuses) {
-    this.adGroupAdUserStatuses = JsonNullable.of(adGroupAdUserStatuses);
+    this.adGroupAdUserStatuses = adGroupAdUserStatuses;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdGroupAdUserStatusesItem(CampaignExportServiceUserStatus adGroupAdUserStatusesItem) {
-    if (this.adGroupAdUserStatuses == null || !this.adGroupAdUserStatuses.isPresent()) {
-      this.adGroupAdUserStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupAdUserStatuses == null) {
+      this.adGroupAdUserStatuses = new ArrayList<>();
     }
-    this.adGroupAdUserStatuses.get().add(adGroupAdUserStatusesItem);
+    this.adGroupAdUserStatuses.add(adGroupAdUserStatusesItem);
     return this;
   }
 
@@ -161,24 +160,24 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<CampaignExportServiceUserStatus>> getAdGroupAdUserStatuses() {
+  public List<CampaignExportServiceUserStatus> getAdGroupAdUserStatuses() {
     return adGroupAdUserStatuses;
   }
 
-  public void setAdGroupAdUserStatuses(JsonNullable<List<CampaignExportServiceUserStatus>> adGroupAdUserStatuses) {
+  public void setAdGroupAdUserStatuses(List<CampaignExportServiceUserStatus> adGroupAdUserStatuses) {
     this.adGroupAdUserStatuses = adGroupAdUserStatuses;
   }
 
   public CampaignExportServiceExportSetting adGroupCriterionApprovalStatuses(List<CampaignExportServiceApprovalStatus> adGroupCriterionApprovalStatuses) {
-    this.adGroupCriterionApprovalStatuses = JsonNullable.of(adGroupCriterionApprovalStatuses);
+    this.adGroupCriterionApprovalStatuses = adGroupCriterionApprovalStatuses;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdGroupCriterionApprovalStatusesItem(CampaignExportServiceApprovalStatus adGroupCriterionApprovalStatusesItem) {
-    if (this.adGroupCriterionApprovalStatuses == null || !this.adGroupCriterionApprovalStatuses.isPresent()) {
-      this.adGroupCriterionApprovalStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupCriterionApprovalStatuses == null) {
+      this.adGroupCriterionApprovalStatuses = new ArrayList<>();
     }
-    this.adGroupCriterionApprovalStatuses.get().add(adGroupCriterionApprovalStatusesItem);
+    this.adGroupCriterionApprovalStatuses.add(adGroupCriterionApprovalStatusesItem);
     return this;
   }
 
@@ -190,24 +189,24 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 @Size(max=5) 
-  public JsonNullable<List<CampaignExportServiceApprovalStatus>> getAdGroupCriterionApprovalStatuses() {
+  public List<CampaignExportServiceApprovalStatus> getAdGroupCriterionApprovalStatuses() {
     return adGroupCriterionApprovalStatuses;
   }
 
-  public void setAdGroupCriterionApprovalStatuses(JsonNullable<List<CampaignExportServiceApprovalStatus>> adGroupCriterionApprovalStatuses) {
+  public void setAdGroupCriterionApprovalStatuses(List<CampaignExportServiceApprovalStatus> adGroupCriterionApprovalStatuses) {
     this.adGroupCriterionApprovalStatuses = adGroupCriterionApprovalStatuses;
   }
 
   public CampaignExportServiceExportSetting adGroupCriterionIds(List<Long> adGroupCriterionIds) {
-    this.adGroupCriterionIds = JsonNullable.of(adGroupCriterionIds);
+    this.adGroupCriterionIds = adGroupCriterionIds;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdGroupCriterionIdsItem(Long adGroupCriterionIdsItem) {
-    if (this.adGroupCriterionIds == null || !this.adGroupCriterionIds.isPresent()) {
-      this.adGroupCriterionIds = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupCriterionIds == null) {
+      this.adGroupCriterionIds = new ArrayList<>();
     }
-    this.adGroupCriterionIds.get().add(adGroupCriterionIdsItem);
+    this.adGroupCriterionIds.add(adGroupCriterionIdsItem);
     return this;
   }
 
@@ -218,24 +217,24 @@ public class CampaignExportServiceExportSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループクライテリアIDです。<br>このフィールドは、省略可能となります。</div> <div lang=\"en\">Ad group criteria ID.<br>This field is optional.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getAdGroupCriterionIds() {
+  public List<Long> getAdGroupCriterionIds() {
     return adGroupCriterionIds;
   }
 
-  public void setAdGroupCriterionIds(JsonNullable<List<Long>> adGroupCriterionIds) {
+  public void setAdGroupCriterionIds(List<Long> adGroupCriterionIds) {
     this.adGroupCriterionIds = adGroupCriterionIds;
   }
 
   public CampaignExportServiceExportSetting adGroupCriterionUserStatuses(List<CampaignExportServiceUserStatus> adGroupCriterionUserStatuses) {
-    this.adGroupCriterionUserStatuses = JsonNullable.of(adGroupCriterionUserStatuses);
+    this.adGroupCriterionUserStatuses = adGroupCriterionUserStatuses;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdGroupCriterionUserStatusesItem(CampaignExportServiceUserStatus adGroupCriterionUserStatusesItem) {
-    if (this.adGroupCriterionUserStatuses == null || !this.adGroupCriterionUserStatuses.isPresent()) {
-      this.adGroupCriterionUserStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupCriterionUserStatuses == null) {
+      this.adGroupCriterionUserStatuses = new ArrayList<>();
     }
-    this.adGroupCriterionUserStatuses.get().add(adGroupCriterionUserStatusesItem);
+    this.adGroupCriterionUserStatuses.add(adGroupCriterionUserStatusesItem);
     return this;
   }
 
@@ -247,24 +246,24 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<CampaignExportServiceUserStatus>> getAdGroupCriterionUserStatuses() {
+  public List<CampaignExportServiceUserStatus> getAdGroupCriterionUserStatuses() {
     return adGroupCriterionUserStatuses;
   }
 
-  public void setAdGroupCriterionUserStatuses(JsonNullable<List<CampaignExportServiceUserStatus>> adGroupCriterionUserStatuses) {
+  public void setAdGroupCriterionUserStatuses(List<CampaignExportServiceUserStatus> adGroupCriterionUserStatuses) {
     this.adGroupCriterionUserStatuses = adGroupCriterionUserStatuses;
   }
 
   public CampaignExportServiceExportSetting adGroupIds(List<Long> adGroupIds) {
-    this.adGroupIds = JsonNullable.of(adGroupIds);
+    this.adGroupIds = adGroupIds;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdGroupIdsItem(Long adGroupIdsItem) {
-    if (this.adGroupIds == null || !this.adGroupIds.isPresent()) {
-      this.adGroupIds = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupIds == null) {
+      this.adGroupIds = new ArrayList<>();
     }
-    this.adGroupIds.get().add(adGroupIdsItem);
+    this.adGroupIds.add(adGroupIdsItem);
     return this;
   }
 
@@ -275,24 +274,24 @@ public class CampaignExportServiceExportSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">ダウンロード対象の広告グループIDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Ad group ID of export objective.<br> This field is optional.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getAdGroupIds() {
+  public List<Long> getAdGroupIds() {
     return adGroupIds;
   }
 
-  public void setAdGroupIds(JsonNullable<List<Long>> adGroupIds) {
+  public void setAdGroupIds(List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
   public CampaignExportServiceExportSetting adGroupUserStatuses(List<CampaignExportServiceUserStatus> adGroupUserStatuses) {
-    this.adGroupUserStatuses = JsonNullable.of(adGroupUserStatuses);
+    this.adGroupUserStatuses = adGroupUserStatuses;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdGroupUserStatusesItem(CampaignExportServiceUserStatus adGroupUserStatusesItem) {
-    if (this.adGroupUserStatuses == null || !this.adGroupUserStatuses.isPresent()) {
-      this.adGroupUserStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupUserStatuses == null) {
+      this.adGroupUserStatuses = new ArrayList<>();
     }
-    this.adGroupUserStatuses.get().add(adGroupUserStatusesItem);
+    this.adGroupUserStatuses.add(adGroupUserStatusesItem);
     return this;
   }
 
@@ -304,24 +303,24 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<CampaignExportServiceUserStatus>> getAdGroupUserStatuses() {
+  public List<CampaignExportServiceUserStatus> getAdGroupUserStatuses() {
     return adGroupUserStatuses;
   }
 
-  public void setAdGroupUserStatuses(JsonNullable<List<CampaignExportServiceUserStatus>> adGroupUserStatuses) {
+  public void setAdGroupUserStatuses(List<CampaignExportServiceUserStatus> adGroupUserStatuses) {
     this.adGroupUserStatuses = adGroupUserStatuses;
   }
 
   public CampaignExportServiceExportSetting adIds(List<Long> adIds) {
-    this.adIds = JsonNullable.of(adIds);
+    this.adIds = adIds;
     return this;
   }
 
   public CampaignExportServiceExportSetting addAdIdsItem(Long adIdsItem) {
-    if (this.adIds == null || !this.adIds.isPresent()) {
-      this.adIds = JsonNullable.of(new ArrayList<>());
+    if (this.adIds == null) {
+      this.adIds = new ArrayList<>();
     }
-    this.adIds.get().add(adIdsItem);
+    this.adIds.add(adIdsItem);
     return this;
   }
 
@@ -332,24 +331,24 @@ public class CampaignExportServiceExportSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">ダウンロード対象の広告IDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Ad ID of export objective.<br> This field is optional.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getAdIds() {
+  public List<Long> getAdIds() {
     return adIds;
   }
 
-  public void setAdIds(JsonNullable<List<Long>> adIds) {
+  public void setAdIds(List<Long> adIds) {
     this.adIds = adIds;
   }
 
   public CampaignExportServiceExportSetting campaignCriterionIds(List<Long> campaignCriterionIds) {
-    this.campaignCriterionIds = JsonNullable.of(campaignCriterionIds);
+    this.campaignCriterionIds = campaignCriterionIds;
     return this;
   }
 
   public CampaignExportServiceExportSetting addCampaignCriterionIdsItem(Long campaignCriterionIdsItem) {
-    if (this.campaignCriterionIds == null || !this.campaignCriterionIds.isPresent()) {
-      this.campaignCriterionIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignCriterionIds == null) {
+      this.campaignCriterionIds = new ArrayList<>();
     }
-    this.campaignCriterionIds.get().add(campaignCriterionIdsItem);
+    this.campaignCriterionIds.add(campaignCriterionIdsItem);
     return this;
   }
 
@@ -360,24 +359,24 @@ public class CampaignExportServiceExportSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンクライテリアIDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Campaign criteria ID.<br> This field is optional.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignCriterionIds() {
+  public List<Long> getCampaignCriterionIds() {
     return campaignCriterionIds;
   }
 
-  public void setCampaignCriterionIds(JsonNullable<List<Long>> campaignCriterionIds) {
+  public void setCampaignCriterionIds(List<Long> campaignCriterionIds) {
     this.campaignCriterionIds = campaignCriterionIds;
   }
 
   public CampaignExportServiceExportSetting campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public CampaignExportServiceExportSetting addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -388,24 +387,24 @@ public class CampaignExportServiceExportSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">ダウンロード対象のキャンペーンIDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Campaign ID of export objective.<br> This field is optional.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public CampaignExportServiceExportSetting campaignUserStatuses(List<CampaignExportServiceUserStatus> campaignUserStatuses) {
-    this.campaignUserStatuses = JsonNullable.of(campaignUserStatuses);
+    this.campaignUserStatuses = campaignUserStatuses;
     return this;
   }
 
   public CampaignExportServiceExportSetting addCampaignUserStatusesItem(CampaignExportServiceUserStatus campaignUserStatusesItem) {
-    if (this.campaignUserStatuses == null || !this.campaignUserStatuses.isPresent()) {
-      this.campaignUserStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.campaignUserStatuses == null) {
+      this.campaignUserStatuses = new ArrayList<>();
     }
-    this.campaignUserStatuses.get().add(campaignUserStatusesItem);
+    this.campaignUserStatuses.add(campaignUserStatusesItem);
     return this;
   }
 
@@ -417,16 +416,16 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<CampaignExportServiceUserStatus>> getCampaignUserStatuses() {
+  public List<CampaignExportServiceUserStatus> getCampaignUserStatuses() {
     return campaignUserStatuses;
   }
 
-  public void setCampaignUserStatuses(JsonNullable<List<CampaignExportServiceUserStatus>> campaignUserStatuses) {
+  public void setCampaignUserStatuses(List<CampaignExportServiceUserStatus> campaignUserStatuses) {
     this.campaignUserStatuses = campaignUserStatuses;
   }
 
   public CampaignExportServiceExportSetting encoding(CampaignExportServiceEncoding encoding) {
-    this.encoding = JsonNullable.of(encoding);
+    this.encoding = encoding;
     return this;
   }
 
@@ -438,24 +437,24 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 
-  public JsonNullable<CampaignExportServiceEncoding> getEncoding() {
+  public CampaignExportServiceEncoding getEncoding() {
     return encoding;
   }
 
-  public void setEncoding(JsonNullable<CampaignExportServiceEncoding> encoding) {
+  public void setEncoding(CampaignExportServiceEncoding encoding) {
     this.encoding = encoding;
   }
 
   public CampaignExportServiceExportSetting entityTypes(List<CampaignExportServiceEntityType> entityTypes) {
-    this.entityTypes = JsonNullable.of(entityTypes);
+    this.entityTypes = entityTypes;
     return this;
   }
 
   public CampaignExportServiceExportSetting addEntityTypesItem(CampaignExportServiceEntityType entityTypesItem) {
-    if (this.entityTypes == null || !this.entityTypes.isPresent()) {
-      this.entityTypes = JsonNullable.of(new ArrayList<>());
+    if (this.entityTypes == null) {
+      this.entityTypes = new ArrayList<>();
     }
-    this.entityTypes.get().add(entityTypesItem);
+    this.entityTypes.add(entityTypesItem);
     return this;
   }
 
@@ -467,24 +466,24 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 @Size(max=6) 
-  public JsonNullable<List<CampaignExportServiceEntityType>> getEntityTypes() {
+  public List<CampaignExportServiceEntityType> getEntityTypes() {
     return entityTypes;
   }
 
-  public void setEntityTypes(JsonNullable<List<CampaignExportServiceEntityType>> entityTypes) {
+  public void setEntityTypes(List<CampaignExportServiceEntityType> entityTypes) {
     this.entityTypes = entityTypes;
   }
 
   public CampaignExportServiceExportSetting exportFields(List<String> exportFields) {
-    this.exportFields = JsonNullable.of(exportFields);
+    this.exportFields = exportFields;
     return this;
   }
 
   public CampaignExportServiceExportSetting addExportFieldsItem(String exportFieldsItem) {
-    if (this.exportFields == null || !this.exportFields.isPresent()) {
-      this.exportFields = JsonNullable.of(new ArrayList<>());
+    if (this.exportFields == null) {
+      this.exportFields = new ArrayList<>();
     }
-    this.exportFields.get().add(exportFieldsItem);
+    this.exportFields.add(exportFieldsItem);
     return this;
   }
 
@@ -495,16 +494,16 @@ public class CampaignExportServiceExportSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">エクスポートするフィールドを指定します。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Select which field to export.<br> This field is optional.</div> ")
 
 
-  public JsonNullable<List<String>> getExportFields() {
+  public List<String> getExportFields() {
     return exportFields;
   }
 
-  public void setExportFields(JsonNullable<List<String>> exportFields) {
+  public void setExportFields(List<String> exportFields) {
     this.exportFields = exportFields;
   }
 
   public CampaignExportServiceExportSetting jobName(String jobName) {
-    this.jobName = JsonNullable.of(jobName);
+    this.jobName = jobName;
     return this;
   }
 
@@ -515,16 +514,16 @@ public class CampaignExportServiceExportSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードするジョブの名称です。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Job information for export.<br> This field is optional.</div> ")
 
 
-  public JsonNullable<String> getJobName() {
+  public String getJobName() {
     return jobName;
   }
 
-  public void setJobName(JsonNullable<String> jobName) {
+  public void setJobName(String jobName) {
     this.jobName = jobName;
   }
 
   public CampaignExportServiceExportSetting lang(CampaignExportServiceLang lang) {
-    this.lang = JsonNullable.of(lang);
+    this.lang = lang;
     return this;
   }
 
@@ -536,16 +535,16 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 
-  public JsonNullable<CampaignExportServiceLang> getLang() {
+  public CampaignExportServiceLang getLang() {
     return lang;
   }
 
-  public void setLang(JsonNullable<CampaignExportServiceLang> lang) {
+  public void setLang(CampaignExportServiceLang lang) {
     this.lang = lang;
   }
 
   public CampaignExportServiceExportSetting output(CampaignExportServiceOutput output) {
-    this.output = JsonNullable.of(output);
+    this.output = output;
     return this;
   }
 
@@ -557,17 +556,17 @@ public class CampaignExportServiceExportSetting   {
 
   @Valid
 
-  public JsonNullable<CampaignExportServiceOutput> getOutput() {
+  public CampaignExportServiceOutput getOutput() {
     return output;
   }
 
-  public void setOutput(JsonNullable<CampaignExportServiceOutput> output) {
+  public void setOutput(CampaignExportServiceOutput output) {
     this.output = output;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -631,7 +630,7 @@ public class CampaignExportServiceExportSetting   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

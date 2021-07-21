@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.FeedServicePlaceholderField;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceAttributeオブジェクトは、自動データ挿入のリストの属性を格納します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceAttribute object contains the attribute of auto data insertion list.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedServiceAttributeオブジェクトは、自動データ挿入のリストの属性を格納します。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">FeedServiceAttribute object contains the attribute of auto data insertion list.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedServiceAttribute   {
   @JsonProperty("feedAttributeId")
-  private JsonNullable<Long> feedAttributeId = JsonNullable.undefined();
+  private Long feedAttributeId = null;
 
   @JsonProperty("feedAttributeName")
-  private JsonNullable<String> feedAttributeName = JsonNullable.undefined();
+  private String feedAttributeName = null;
 
   @JsonProperty("placeholderField")
-  private JsonNullable<FeedServicePlaceholderField> placeholderField = JsonNullable.undefined();
+  private FeedServicePlaceholderField placeholderField = null;
 
   public FeedServiceAttribute feedAttributeId(Long feedAttributeId) {
-    this.feedAttributeId = JsonNullable.of(feedAttributeId);
+    this.feedAttributeId = feedAttributeId;
     return this;
   }
 
@@ -37,16 +36,16 @@ public class FeedServiceAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動データ挿入のリストの属性（カラム）IDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Attribute ID (column ID) of auto data insertion list.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getFeedAttributeId() {
+  public Long getFeedAttributeId() {
     return feedAttributeId;
   }
 
-  public void setFeedAttributeId(JsonNullable<Long> feedAttributeId) {
+  public void setFeedAttributeId(Long feedAttributeId) {
     this.feedAttributeId = feedAttributeId;
   }
 
   public FeedServiceAttribute feedAttributeName(String feedAttributeName) {
-    this.feedAttributeName = JsonNullable.of(feedAttributeName);
+    this.feedAttributeName = feedAttributeName;
     return this;
   }
 
@@ -57,16 +56,16 @@ public class FeedServiceAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動データ挿入のリストの属性（カラム）名です。<br> このフィールドはADDおよびSET時に必須となり、REMOVE時に無視されます。</div> <div lang=\"en\">Attribute name (column name) of auto data insertion list.<br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
 
 
-  public JsonNullable<String> getFeedAttributeName() {
+  public String getFeedAttributeName() {
     return feedAttributeName;
   }
 
-  public void setFeedAttributeName(JsonNullable<String> feedAttributeName) {
+  public void setFeedAttributeName(String feedAttributeName) {
     this.feedAttributeName = feedAttributeName;
   }
 
   public FeedServiceAttribute placeholderField(FeedServicePlaceholderField placeholderField) {
-    this.placeholderField = JsonNullable.of(placeholderField);
+    this.placeholderField = placeholderField;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class FeedServiceAttribute   {
 
   @Valid
 
-  public JsonNullable<FeedServicePlaceholderField> getPlaceholderField() {
+  public FeedServicePlaceholderField getPlaceholderField() {
     return placeholderField;
   }
 
-  public void setPlaceholderField(JsonNullable<FeedServicePlaceholderField> placeholderField) {
+  public void setPlaceholderField(FeedServicePlaceholderField placeholderField) {
     this.placeholderField = placeholderField;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class FeedServiceAttribute   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignCriterion;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignCriterionServiceUse;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,20 +16,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceOperationオブジェクトは、操作の対象となるキャンペーンのクライテリアと処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceOperation object describes campaign criteria for operation and list of operations.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceOperationオブジェクトは、操作の対象となるキャンペーンのクライテリアと処理の内容を表します。</div> <div lang=\"en\">CampaignCriterionServiceOperation object describes campaign criteria for operation and list of operations.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignCriterionServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<CampaignCriterion>> operand = JsonNullable.undefined();
+  private List<CampaignCriterion> operand = new ArrayList<>();
 
   @JsonProperty("use")
-  private JsonNullable<CampaignCriterionServiceUse> use = JsonNullable.undefined();
+  private CampaignCriterionServiceUse use = null;
 
   public CampaignCriterionServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -54,7 +53,7 @@ public class CampaignCriterionServiceOperation   {
   }
 
   public CampaignCriterionServiceOperation campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -65,21 +64,24 @@ public class CampaignCriterionServiceOperation   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public CampaignCriterionServiceOperation operand(List<CampaignCriterion> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public CampaignCriterionServiceOperation addOperandItem(CampaignCriterion operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -92,16 +94,16 @@ public class CampaignCriterionServiceOperation   {
 
   @Valid
 @Size(min=1,max=200) 
-  public JsonNullable<List<CampaignCriterion>> getOperand() {
+  public List<CampaignCriterion> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<CampaignCriterion>> operand) {
+  public void setOperand(List<CampaignCriterion> operand) {
     this.operand = operand;
   }
 
   public CampaignCriterionServiceOperation use(CampaignCriterionServiceUse use) {
-    this.use = JsonNullable.of(use);
+    this.use = use;
     return this;
   }
 
@@ -113,17 +115,17 @@ public class CampaignCriterionServiceOperation   {
 
   @Valid
 
-  public JsonNullable<CampaignCriterionServiceUse> getUse() {
+  public CampaignCriterionServiceUse getUse() {
     return use;
   }
 
-  public void setUse(JsonNullable<CampaignCriterionServiceUse> use) {
+  public void setUse(CampaignCriterionServiceUse use) {
     this.use = use;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -159,7 +161,7 @@ public class CampaignCriterionServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,35 +9,34 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
 import jp.co.yahoo.adssearchapi.v5.model.PageFeedItemServiceUploadJob;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * PageFeedItemServiceUploadValue
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceUploadValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("uploadJob")
-  private JsonNullable<PageFeedItemServiceUploadJob> uploadJob = JsonNullable.undefined();
+  private PageFeedItemServiceUploadJob uploadJob = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public PageFeedItemServiceUploadValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public PageFeedItemServiceUploadValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -49,16 +48,16 @@ public class PageFeedItemServiceUploadValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public PageFeedItemServiceUploadValue uploadJob(PageFeedItemServiceUploadJob uploadJob) {
-    this.uploadJob = JsonNullable.of(uploadJob);
+    this.uploadJob = uploadJob;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class PageFeedItemServiceUploadValue   {
 
   @Valid
 
-  public JsonNullable<PageFeedItemServiceUploadJob> getUploadJob() {
+  public PageFeedItemServiceUploadJob getUploadJob() {
     return uploadJob;
   }
 
-  public void setUploadJob(JsonNullable<PageFeedItemServiceUploadJob> uploadJob) {
+  public void setUploadJob(PageFeedItemServiceUploadJob uploadJob) {
     this.uploadJob = uploadJob;
   }
 
   public PageFeedItemServiceUploadValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -90,17 +89,17 @@ public class PageFeedItemServiceUploadValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -134,7 +133,7 @@ public class PageFeedItemServiceUploadValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupWebpage;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedItemの配信/除外設定を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceOperation object contains the allowed or excluded setting of PageFeedItem which is the target of mutate operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedItemの配信/除外設定を保持します。</div> <div lang=\"en\">AdGroupWebpageServiceOperation object contains the allowed or excluded setting of PageFeedItem which is the target of mutate operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupWebpageServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<AdGroupWebpage>> operand = JsonNullable.undefined();
+  private List<AdGroupWebpage> operand = new ArrayList<>();
 
   public AdGroupWebpageServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class AdGroupWebpageServiceOperation   {
   }
 
   public AdGroupWebpageServiceOperation operand(List<AdGroupWebpage> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public AdGroupWebpageServiceOperation addOperandItem(AdGroupWebpage operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class AdGroupWebpageServiceOperation   {
 
   @Valid
 @Size(min=1,max=2000) 
-  public JsonNullable<List<AdGroupWebpage>> getOperand() {
+  public List<AdGroupWebpage> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<AdGroupWebpage>> operand) {
+  public void setOperand(List<AdGroupWebpage> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AdGroupWebpageServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

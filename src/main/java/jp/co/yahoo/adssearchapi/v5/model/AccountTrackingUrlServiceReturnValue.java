@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AccountTrackingUrlServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountTrackingUrlServiceReturnValueオブジェクトは、アカウントトラッキング情報を含む結果として戻される値を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountTrackingUrlServiceReturnValue obaject describes account tracking details.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountTrackingUrlServiceReturnValueオブジェクトは、アカウントトラッキング情報を含む結果として戻される値を表します。</div> <div lang=\"en\">AccountTrackingUrlServiceReturnValue obaject describes account tracking details.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountTrackingUrlServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AccountTrackingUrlServiceValue>> values = JsonNullable.undefined();
+  private List<AccountTrackingUrlServiceValue> values = null;
 
   public AccountTrackingUrlServiceReturnValue values(List<AccountTrackingUrlServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AccountTrackingUrlServiceReturnValue addValuesItem(AccountTrackingUrlServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class AccountTrackingUrlServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<AccountTrackingUrlServiceValue>> getValues() {
+  public List<AccountTrackingUrlServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AccountTrackingUrlServiceValue>> values) {
+  public void setValues(List<AccountTrackingUrlServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class AccountTrackingUrlServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

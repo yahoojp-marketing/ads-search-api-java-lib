@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceCriterionTargetListは、ターゲットリスト情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceCriterionTargetList is an object that holds target list information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignRetargetingListServiceCriterionTargetListは、ターゲットリスト情報を保持するオブジェクトです。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">CampaignRetargetingListServiceCriterionTargetList is an object that holds target list information.<br> This field is required in any cases.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignRetargetingListServiceCriterionTargetList   {
   @JsonProperty("retargetingTrackId")
-  private JsonNullable<Long> retargetingTrackId = JsonNullable.undefined();
+  private Long retargetingTrackId = null;
 
   @JsonProperty("targetListId")
-  private JsonNullable<Long> targetListId = JsonNullable.undefined();
+  private Long targetListId = null;
 
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   public CampaignRetargetingListServiceCriterionTargetList retargetingTrackId(Long retargetingTrackId) {
-    this.retargetingTrackId = JsonNullable.of(retargetingTrackId);
+    this.retargetingTrackId = retargetingTrackId;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class CampaignRetargetingListServiceCriterionTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\">リターゲティングトラックIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Retargeting Track ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getRetargetingTrackId() {
+  public Long getRetargetingTrackId() {
     return retargetingTrackId;
   }
 
-  public void setRetargetingTrackId(JsonNullable<Long> retargetingTrackId) {
+  public void setRetargetingTrackId(Long retargetingTrackId) {
     this.retargetingTrackId = retargetingTrackId;
   }
 
   public CampaignRetargetingListServiceCriterionTargetList targetListId(Long targetListId) {
-    this.targetListId = JsonNullable.of(targetListId);
+    this.targetListId = targetListId;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class CampaignRetargetingListServiceCriterionTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストIDです。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Target list ID.<br> This field is required in any cases.</div> ")
 
 
-  public JsonNullable<Long> getTargetListId() {
+  public Long getTargetListId() {
     return targetListId;
   }
 
-  public void setTargetListId(JsonNullable<Long> targetListId) {
+  public void setTargetListId(Long targetListId) {
     this.targetListId = targetListId;
   }
 
   public CampaignRetargetingListServiceCriterionTargetList targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class CampaignRetargetingListServiceCriterionTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Target list name.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class CampaignRetargetingListServiceCriterionTargetList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

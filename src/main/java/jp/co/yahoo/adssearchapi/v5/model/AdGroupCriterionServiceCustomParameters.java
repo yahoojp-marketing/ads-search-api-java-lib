@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceCustomParameter;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceIsRemove;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupCriterionServiceCustomParameters displays the setting of custom parameters.<br> This field is optional in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceCustomParameters   {
   @JsonProperty("isRemove")
-  private JsonNullable<AdGroupCriterionServiceIsRemove> isRemove = JsonNullable.undefined();
+  private AdGroupCriterionServiceIsRemove isRemove = null;
 
   @JsonProperty("parameters")
   @Valid
-  private JsonNullable<List<AdGroupCriterionServiceCustomParameter>> parameters = JsonNullable.undefined();
+  private List<AdGroupCriterionServiceCustomParameter> parameters = null;
 
   public AdGroupCriterionServiceCustomParameters isRemove(AdGroupCriterionServiceIsRemove isRemove) {
-    this.isRemove = JsonNullable.of(isRemove);
+    this.isRemove = isRemove;
     return this;
   }
 
@@ -39,24 +38,24 @@ public class AdGroupCriterionServiceCustomParameters   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceIsRemove> getIsRemove() {
+  public AdGroupCriterionServiceIsRemove getIsRemove() {
     return isRemove;
   }
 
-  public void setIsRemove(JsonNullable<AdGroupCriterionServiceIsRemove> isRemove) {
+  public void setIsRemove(AdGroupCriterionServiceIsRemove isRemove) {
     this.isRemove = isRemove;
   }
 
   public AdGroupCriterionServiceCustomParameters parameters(List<AdGroupCriterionServiceCustomParameter> parameters) {
-    this.parameters = JsonNullable.of(parameters);
+    this.parameters = parameters;
     return this;
   }
 
   public AdGroupCriterionServiceCustomParameters addParametersItem(AdGroupCriterionServiceCustomParameter parametersItem) {
-    if (this.parameters == null || !this.parameters.isPresent()) {
-      this.parameters = JsonNullable.of(new ArrayList<>());
+    if (this.parameters == null) {
+      this.parameters = new ArrayList<>();
     }
-    this.parameters.get().add(parametersItem);
+    this.parameters.add(parametersItem);
     return this;
   }
 
@@ -68,17 +67,17 @@ public class AdGroupCriterionServiceCustomParameters   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupCriterionServiceCustomParameter>> getParameters() {
+  public List<AdGroupCriterionServiceCustomParameter> getParameters() {
     return parameters;
   }
 
-  public void setParameters(JsonNullable<List<AdGroupCriterionServiceCustomParameter>> parameters) {
+  public void setParameters(List<AdGroupCriterionServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class AdGroupCriterionServiceCustomParameters   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

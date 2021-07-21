@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordEstimatorServiceCampaignEstimateRequest;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordEstimatorServiceSelector オブジェクトは、見積もりリクエストを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordEstimatorServiceSelectorobject is a container for the estimate request.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordEstimatorServiceSelector オブジェクトは、見積もりリクエストを格納するコンテナです。</div> <div lang=\"en\">KeywordEstimatorServiceSelectorobject is a container for the estimate request.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordEstimatorServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("campaignEstimateRequest")
-  private JsonNullable<KeywordEstimatorServiceCampaignEstimateRequest> campaignEstimateRequest = JsonNullable.undefined();
+  private KeywordEstimatorServiceCampaignEstimateRequest campaignEstimateRequest = null;
 
   public KeywordEstimatorServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -44,7 +43,7 @@ public class KeywordEstimatorServiceSelector   {
   }
 
   public KeywordEstimatorServiceSelector campaignEstimateRequest(KeywordEstimatorServiceCampaignEstimateRequest campaignEstimateRequest) {
-    this.campaignEstimateRequest = JsonNullable.of(campaignEstimateRequest);
+    this.campaignEstimateRequest = campaignEstimateRequest;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class KeywordEstimatorServiceSelector   {
 
   @Valid
 
-  public JsonNullable<KeywordEstimatorServiceCampaignEstimateRequest> getCampaignEstimateRequest() {
+  public KeywordEstimatorServiceCampaignEstimateRequest getCampaignEstimateRequest() {
     return campaignEstimateRequest;
   }
 
-  public void setCampaignEstimateRequest(JsonNullable<KeywordEstimatorServiceCampaignEstimateRequest> campaignEstimateRequest) {
+  public void setCampaignEstimateRequest(KeywordEstimatorServiceCampaignEstimateRequest campaignEstimateRequest) {
     this.campaignEstimateRequest = campaignEstimateRequest;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class KeywordEstimatorServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

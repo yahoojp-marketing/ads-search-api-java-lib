@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,34 +12,34 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceDynamicSearchLinkedAdオブジェクトは、動的検索連動型広告を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceDynamicSearchLinkedAd object describes the information of Dynamic Search Ad.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceDynamicSearchLinkedAdオブジェクトは、動的検索連動型広告を表します。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupAdServiceDynamicSearchLinkedAd object describes the information of Dynamic Search Ad.<br> This field is optional in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceDynamicSearchLinkedAd   {
   @JsonProperty("description2")
-  private JsonNullable<String> description2 = JsonNullable.undefined();
+  private String description2 = null;
 
   public AdGroupAdServiceDynamicSearchLinkedAd description2(String description2) {
-    this.description2 = JsonNullable.of(description2);
+    this.description2 = description2;
     return this;
   }
 
   /**
-   * <div lang=\"ja\">説明文2です。<br>※現在、こちらのフィールドは利用できません。</div> <div lang=\"en\">Description2 of the ad.<br>*Currently this field is not available.</div> 
+   * <div lang=\"ja\">説明文2です。</div> <div lang=\"en\">Description2 of the ad.</div> 
    * @return description2
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文2です。<br>※現在、こちらのフィールドは利用できません。</div> <div lang=\"en\">Description2 of the ad.<br>*Currently this field is not available.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">説明文2です。</div> <div lang=\"en\">Description2 of the ad.</div> ")
 
 
-  public JsonNullable<String> getDescription2() {
+  public String getDescription2() {
     return description2;
   }
 
-  public void setDescription2(JsonNullable<String> description2) {
+  public void setDescription2(String description2) {
     this.description2 = description2;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,7 +69,7 @@ public class AdGroupAdServiceDynamicSearchLinkedAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

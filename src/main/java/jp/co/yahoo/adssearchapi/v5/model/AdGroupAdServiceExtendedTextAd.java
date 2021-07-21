@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,25 +12,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceExtendedTextAdオブジェクトは、拡大テキスト広告に関する情報を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがEXTENDED_TEXT_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceExtendedTextAd object describes the information of Extended Text Ad.&lt;br&gt; This field is optional in ADD operation. *If adType is EXTENDED_TEXT_AD, this field is required.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceExtendedTextAdオブジェクトは、拡大テキスト広告に関する情報を表します。<br> ADD時、このフィールドは省略可能となります。※adTypeがEXTENDED_TEXT_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceExtendedTextAd object describes the information of Extended Text Ad.<br> This field is optional in ADD operation. *If adType is EXTENDED_TEXT_AD, this field is required.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceExtendedTextAd   {
   @JsonProperty("headline2")
-  private JsonNullable<String> headline2 = JsonNullable.undefined();
+  private String headline2 = null;
 
   @JsonProperty("headline3")
-  private JsonNullable<String> headline3 = JsonNullable.undefined();
+  private String headline3 = null;
 
   @JsonProperty("description2")
-  private JsonNullable<String> description2 = JsonNullable.undefined();
+  private String description2 = null;
 
   @JsonProperty("path1")
-  private JsonNullable<String> path1 = JsonNullable.undefined();
+  private String path1 = null;
 
   @JsonProperty("path2")
-  private JsonNullable<String> path2 = JsonNullable.undefined();
+  private String path2 = null;
 
   public AdGroupAdServiceExtendedTextAd headline2(String headline2) {
-    this.headline2 = JsonNullable.of(headline2);
+    this.headline2 = headline2;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class AdGroupAdServiceExtendedTextAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">2行目のタイトルです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Title on the second line.<br> This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getHeadline2() {
+  public String getHeadline2() {
     return headline2;
   }
 
-  public void setHeadline2(JsonNullable<String> headline2) {
+  public void setHeadline2(String headline2) {
     this.headline2 = headline2;
   }
 
   public AdGroupAdServiceExtendedTextAd headline3(String headline3) {
-    this.headline3 = JsonNullable.of(headline3);
+    this.headline3 = headline3;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class AdGroupAdServiceExtendedTextAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">3行目のタイトルです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。</div> <div lang=\"en\">Title on the second line.<br> This field is optional in ADD operation. The default value will be null.</div> ")
 
 
-  public JsonNullable<String> getHeadline3() {
+  public String getHeadline3() {
     return headline3;
   }
 
-  public void setHeadline3(JsonNullable<String> headline3) {
+  public void setHeadline3(String headline3) {
     this.headline3 = headline3;
   }
 
   public AdGroupAdServiceExtendedTextAd description2(String description2) {
-    this.description2 = JsonNullable.of(description2);
+    this.description2 = description2;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class AdGroupAdServiceExtendedTextAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">2行目の説明文です。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。</div> <div lang=\"en\">Description on the second line.<br> This field is optional in ADD operation. The default value will be null.</div> ")
 
 
-  public JsonNullable<String> getDescription2() {
+  public String getDescription2() {
     return description2;
   }
 
-  public void setDescription2(JsonNullable<String> description2) {
+  public void setDescription2(String description2) {
     this.description2 = description2;
   }
 
   public AdGroupAdServiceExtendedTextAd path1(String path1) {
-    this.path1 = JsonNullable.of(path1);
+    this.path1 = path1;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class AdGroupAdServiceExtendedTextAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path2を指定する場合は、path1は必須です。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*To specify path2, path1 is required.</div> ")
 
 
-  public JsonNullable<String> getPath1() {
+  public String getPath1() {
     return path1;
   }
 
-  public void setPath1(JsonNullable<String> path1) {
+  public void setPath1(String path1) {
     this.path1 = path1;
   }
 
   public AdGroupAdServiceExtendedTextAd path2(String path2) {
-    this.path2 = JsonNullable.of(path2);
+    this.path2 = path2;
     return this;
   }
 
@@ -122,17 +121,17 @@ public class AdGroupAdServiceExtendedTextAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path1を指定していない場合、path2は無視されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*If path1 is not specified, path2 will be ignored.</div> ")
 
 
-  public JsonNullable<String> getPath2() {
+  public String getPath2() {
     return path2;
   }
 
-  public void setPath2(JsonNullable<String> path2) {
+  public void setPath2(String path2) {
     this.path2 = path2;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -170,7 +169,7 @@ public class AdGroupAdServiceExtendedTextAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.BiddingStrategyServiceTargetImpressionShareLocation;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceTargetImpressionShareSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。&lt;br&gt; このフィールドは、省略可能となります。※ADD時、typeがTARGET_IMPRESSION_SHAREの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceTargetImpressionShareScheme describes the Auto bidding setting information of Target ROAS. &lt;br&gt; This field is optional. *If type is TARGET_IMPRESSION_SHARE, this field is required in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceTargetImpressionShareSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。<br> このフィールドは、省略可能となります。※ADD時、typeがTARGET_IMPRESSION_SHAREの場合は必須です。</div> <div lang=\"en\">BiddingStrategyServiceTargetImpressionShareScheme describes the Auto bidding setting information of Target ROAS. <br> This field is optional. *If type is TARGET_IMPRESSION_SHARE, this field is required in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BiddingStrategyServiceTargetImpressionShareScheme   {
   @JsonProperty("location")
-  private JsonNullable<BiddingStrategyServiceTargetImpressionShareLocation> location = JsonNullable.undefined();
+  private BiddingStrategyServiceTargetImpressionShareLocation location = null;
 
   @JsonProperty("bidCeiling")
-  private JsonNullable<Long> bidCeiling = JsonNullable.undefined();
+  private Long bidCeiling = null;
 
   @JsonProperty("targetImpressionShare")
-  private JsonNullable<Long> targetImpressionShare = JsonNullable.undefined();
+  private Long targetImpressionShare = null;
 
   public BiddingStrategyServiceTargetImpressionShareScheme location(BiddingStrategyServiceTargetImpressionShareLocation location) {
-    this.location = JsonNullable.of(location);
+    this.location = location;
     return this;
   }
 
@@ -38,16 +37,16 @@ public class BiddingStrategyServiceTargetImpressionShareScheme   {
 
   @Valid
 
-  public JsonNullable<BiddingStrategyServiceTargetImpressionShareLocation> getLocation() {
+  public BiddingStrategyServiceTargetImpressionShareLocation getLocation() {
     return location;
   }
 
-  public void setLocation(JsonNullable<BiddingStrategyServiceTargetImpressionShareLocation> location) {
+  public void setLocation(BiddingStrategyServiceTargetImpressionShareLocation location) {
     this.location = location;
   }
 
   public BiddingStrategyServiceTargetImpressionShareScheme bidCeiling(Long bidCeiling) {
-    this.bidCeiling = JsonNullable.of(bidCeiling);
+    this.bidCeiling = bidCeiling;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class BiddingStrategyServiceTargetImpressionShareScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。（0〜50000）<br> ※「0」が設定された場合、上限設定はありません。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">CPC limit (0-50000).<br> * No limits if &#34;0&#34; is set.<br> This field is optional in any cases.</div> ")
 
 
-  public JsonNullable<Long> getBidCeiling() {
+  public Long getBidCeiling() {
     return bidCeiling;
   }
 
-  public void setBidCeiling(JsonNullable<Long> bidCeiling) {
+  public void setBidCeiling(Long bidCeiling) {
     this.bidCeiling = bidCeiling;
   }
 
   public BiddingStrategyServiceTargetImpressionShareScheme targetImpressionShare(Long targetImpressionShare) {
-    this.targetImpressionShare = JsonNullable.of(targetImpressionShare);
+    this.targetImpressionShare = targetImpressionShare;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class BiddingStrategyServiceTargetImpressionShareScheme   {
   @ApiModelProperty(value = "<div lang=\"ja\">目標のインプレッションシェアです。<br> ADD時およびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Target impression share.<br> This field is required in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<Long> getTargetImpressionShare() {
+  public Long getTargetImpressionShare() {
     return targetImpressionShare;
   }
 
-  public void setTargetImpressionShare(JsonNullable<Long> targetImpressionShare) {
+  public void setTargetImpressionShare(Long targetImpressionShare) {
     this.targetImpressionShare = targetImpressionShare;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class BiddingStrategyServiceTargetImpressionShareScheme   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

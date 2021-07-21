@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceBiddingKeywordCpcRangeは、入札価格による検索対象範囲を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceBiddingKeywordCpcRange represents the search range by bid price.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupServiceBiddingKeywordCpcRangeは、入札価格による検索対象範囲を表します。</div> <div lang=\"en\">AdGroupServiceBiddingKeywordCpcRange represents the search range by bid price.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceBiddingKeywordCpcRange   {
   @JsonProperty("min")
-  private JsonNullable<Long> min = JsonNullable.undefined();
+  private Long min = null;
 
   @JsonProperty("max")
-  private JsonNullable<Long> max = JsonNullable.undefined();
+  private Long max = null;
 
   public AdGroupServiceBiddingKeywordCpcRange min(Long min) {
-    this.min = JsonNullable.of(min);
+    this.min = min;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class AdGroupServiceBiddingKeywordCpcRange   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索対象範囲の最小値です。</div> <div lang=\"en\">This is the minimum value of the search range.</div> ")
 
 
-  public JsonNullable<Long> getMin() {
+  public Long getMin() {
     return min;
   }
 
-  public void setMin(JsonNullable<Long> min) {
+  public void setMin(Long min) {
     this.min = min;
   }
 
   public AdGroupServiceBiddingKeywordCpcRange max(Long max) {
-    this.max = JsonNullable.of(max);
+    this.max = max;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class AdGroupServiceBiddingKeywordCpcRange   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索対象範囲の最大値です。</div> <div lang=\"en\">This is the maximum value of the search range.</div> ")
 
 
-  public JsonNullable<Long> getMax() {
+  public Long getMax() {
     return max;
   }
 
-  public void setMax(JsonNullable<Long> max) {
+  public void setMax(Long max) {
     this.max = max;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class AdGroupServiceBiddingKeywordCpcRange   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

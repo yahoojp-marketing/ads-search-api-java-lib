@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordEstimatorServiceAdGroupEstimateRequest;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,29 +15,32 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordEstimatorServiceCampaignEstimateRequestオブジェクトは、見積もりを行うキャンペーンを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordEstimatorServiceCampaignEstimateRequest object is a container for a campaign to estimate.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordEstimatorServiceCampaignEstimateRequestオブジェクトは、見積もりを行うキャンペーンを格納するコンテナです。</div> <div lang=\"en\">KeywordEstimatorServiceCampaignEstimateRequest object is a container for a campaign to estimate.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordEstimatorServiceCampaignEstimateRequest   {
   @JsonProperty("adGroupEstimateRequests")
   @Valid
-  private JsonNullable<List<KeywordEstimatorServiceAdGroupEstimateRequest>> adGroupEstimateRequests = JsonNullable.undefined();
+  private List<KeywordEstimatorServiceAdGroupEstimateRequest> adGroupEstimateRequests = new ArrayList<>();
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("dailyBudget")
-  private JsonNullable<Long> dailyBudget = JsonNullable.undefined();
+  private Long dailyBudget = null;
 
   @JsonProperty("provinces")
   @Valid
-  private JsonNullable<List<String>> provinces = JsonNullable.undefined();
+  private List<String> provinces = null;
 
   public KeywordEstimatorServiceCampaignEstimateRequest adGroupEstimateRequests(List<KeywordEstimatorServiceAdGroupEstimateRequest> adGroupEstimateRequests) {
-    this.adGroupEstimateRequests = JsonNullable.of(adGroupEstimateRequests);
+    this.adGroupEstimateRequests = adGroupEstimateRequests;
     return this;
   }
 
   public KeywordEstimatorServiceCampaignEstimateRequest addAdGroupEstimateRequestsItem(KeywordEstimatorServiceAdGroupEstimateRequest adGroupEstimateRequestsItem) {
-    this.adGroupEstimateRequests.get().add(adGroupEstimateRequestsItem);
+    if (this.adGroupEstimateRequests == null) {
+      this.adGroupEstimateRequests = new ArrayList<>();
+    }
+    this.adGroupEstimateRequests.add(adGroupEstimateRequestsItem);
     return this;
   }
 
@@ -51,16 +53,16 @@ public class KeywordEstimatorServiceCampaignEstimateRequest   {
 
   @Valid
 @Size(min=1,max=50) 
-  public JsonNullable<List<KeywordEstimatorServiceAdGroupEstimateRequest>> getAdGroupEstimateRequests() {
+  public List<KeywordEstimatorServiceAdGroupEstimateRequest> getAdGroupEstimateRequests() {
     return adGroupEstimateRequests;
   }
 
-  public void setAdGroupEstimateRequests(JsonNullable<List<KeywordEstimatorServiceAdGroupEstimateRequest>> adGroupEstimateRequests) {
+  public void setAdGroupEstimateRequests(List<KeywordEstimatorServiceAdGroupEstimateRequest> adGroupEstimateRequests) {
     this.adGroupEstimateRequests = adGroupEstimateRequests;
   }
 
   public KeywordEstimatorServiceCampaignEstimateRequest campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -71,16 +73,16 @@ public class KeywordEstimatorServiceCampaignEstimateRequest   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public KeywordEstimatorServiceCampaignEstimateRequest dailyBudget(Long dailyBudget) {
-    this.dailyBudget = JsonNullable.of(dailyBudget);
+    this.dailyBudget = dailyBudget;
     return this;
   }
 
@@ -91,24 +93,24 @@ public class KeywordEstimatorServiceCampaignEstimateRequest   {
   @ApiModelProperty(value = "<div lang=\"ja\">見積もりで使用するキャンペーンの一日あたりの予算です。</div> <div lang=\"en\">Daily campaign budget used to estimate</div> ")
 
 
-  public JsonNullable<Long> getDailyBudget() {
+  public Long getDailyBudget() {
     return dailyBudget;
   }
 
-  public void setDailyBudget(JsonNullable<Long> dailyBudget) {
+  public void setDailyBudget(Long dailyBudget) {
     this.dailyBudget = dailyBudget;
   }
 
   public KeywordEstimatorServiceCampaignEstimateRequest provinces(List<String> provinces) {
-    this.provinces = JsonNullable.of(provinces);
+    this.provinces = provinces;
     return this;
   }
 
   public KeywordEstimatorServiceCampaignEstimateRequest addProvincesItem(String provincesItem) {
-    if (this.provinces == null || !this.provinces.isPresent()) {
-      this.provinces = JsonNullable.of(new ArrayList<>());
+    if (this.provinces == null) {
+      this.provinces = new ArrayList<>();
     }
-    this.provinces.get().add(provincesItem);
+    this.provinces.add(provincesItem);
     return this;
   }
 
@@ -119,17 +121,17 @@ public class KeywordEstimatorServiceCampaignEstimateRequest   {
   @ApiModelProperty(value = "<div lang=\"ja\">見積もりで使用する広告配信する指定地域（都道府県）です。</div> <div lang=\"en\">Province to serve Ads used to estimate</div> ")
 
 
-  public JsonNullable<List<String>> getProvinces() {
+  public List<String> getProvinces() {
     return provinces;
   }
 
-  public void setProvinces(JsonNullable<List<String>> provinces) {
+  public void setProvinces(List<String> provinces) {
     this.provinces = provinces;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -165,7 +167,7 @@ public class KeywordEstimatorServiceCampaignEstimateRequest   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

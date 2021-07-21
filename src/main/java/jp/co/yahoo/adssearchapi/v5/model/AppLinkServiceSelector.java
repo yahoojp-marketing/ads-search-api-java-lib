@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,20 +14,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkServiceSelectorオブジェクトは、操作の対象となるコンバージョントラッカーおよびフィルタ条件を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLinkServiceSelector object displays information and filter criteria of conversionTracker to be operated.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AppLinkServiceSelectorオブジェクトは、操作の対象となるコンバージョントラッカーおよびフィルタ条件を指定します。</div> <div lang=\"en\">AppLinkServiceSelector object displays information and filter criteria of conversionTracker to be operated.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AppLinkServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("appLinkIds")
   @Valid
-  private JsonNullable<List<Long>> appLinkIds = JsonNullable.undefined();
+  private List<Long> appLinkIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AppLinkServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -52,15 +51,15 @@ public class AppLinkServiceSelector   {
   }
 
   public AppLinkServiceSelector appLinkIds(List<Long> appLinkIds) {
-    this.appLinkIds = JsonNullable.of(appLinkIds);
+    this.appLinkIds = appLinkIds;
     return this;
   }
 
   public AppLinkServiceSelector addAppLinkIdsItem(Long appLinkIdsItem) {
-    if (this.appLinkIds == null || !this.appLinkIds.isPresent()) {
-      this.appLinkIds = JsonNullable.of(new ArrayList<>());
+    if (this.appLinkIds == null) {
+      this.appLinkIds = new ArrayList<>();
     }
-    this.appLinkIds.get().add(appLinkIdsItem);
+    this.appLinkIds.add(appLinkIdsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class AppLinkServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：アプリリンクIDです。<br> ※指定しない場合は、フィルタ条件に すべてのアプリリンク情報が含まれます。</div> <div lang=\"en\">Search condition: App Link ID<br> * All AppLink information will return, if no id are not specified.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getAppLinkIds() {
+  public List<Long> getAppLinkIds() {
     return appLinkIds;
   }
 
-  public void setAppLinkIds(JsonNullable<List<Long>> appLinkIds) {
+  public void setAppLinkIds(List<Long> appLinkIds) {
     this.appLinkIds = appLinkIds;
   }
 
   public AppLinkServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -93,16 +92,16 @@ public class AppLinkServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AppLinkServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -114,17 +113,17 @@ public class AppLinkServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -160,7 +159,7 @@ public class AppLinkServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

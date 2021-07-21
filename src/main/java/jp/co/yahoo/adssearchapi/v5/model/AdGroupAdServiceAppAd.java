@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceAppStore;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceAppAdオブジェクトは、アプリ向けの広告です。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがAPP_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAppAd object is for Mobile App ads.&lt;br&gt; This field is optional in ADD operation. *If adType is APP_AD, this field is required.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceAppAdオブジェクトは、アプリ向けの広告です。<br> ADD時、このフィールドは省略可能となります。※adTypeがAPP_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceAppAd object is for Mobile App ads.<br> This field is optional in ADD operation. *If adType is APP_AD, this field is required.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceAppAd   {
   @JsonProperty("appId")
-  private JsonNullable<String> appId = JsonNullable.undefined();
+  private String appId = null;
 
   @JsonProperty("appStore")
-  private JsonNullable<AdGroupAdServiceAppStore> appStore = JsonNullable.undefined();
+  private AdGroupAdServiceAppStore appStore = null;
 
   @JsonProperty("description2")
-  private JsonNullable<String> description2 = JsonNullable.undefined();
+  private String description2 = null;
 
   public AdGroupAdServiceAppAd appId(String appId) {
-    this.appId = JsonNullable.of(appId);
+    this.appId = appId;
     return this;
   }
 
@@ -37,16 +36,16 @@ public class AdGroupAdServiceAppAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリIDです。<br> ※アプリキャンペーンの 場合、自動で設定され ます。</div> <div lang=\"en\">App ID.<br> *Automatically set for Mobile app campaign.</div> ")
 
 
-  public JsonNullable<String> getAppId() {
+  public String getAppId() {
     return appId;
   }
 
-  public void setAppId(JsonNullable<String> appId) {
+  public void setAppId(String appId) {
     this.appId = appId;
   }
 
   public AdGroupAdServiceAppAd appStore(AdGroupAdServiceAppStore appStore) {
-    this.appStore = JsonNullable.of(appStore);
+    this.appStore = appStore;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class AdGroupAdServiceAppAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceAppStore> getAppStore() {
+  public AdGroupAdServiceAppStore getAppStore() {
     return appStore;
   }
 
-  public void setAppStore(JsonNullable<AdGroupAdServiceAppStore> appStore) {
+  public void setAppStore(AdGroupAdServiceAppStore appStore) {
     this.appStore = appStore;
   }
 
   public AdGroupAdServiceAppAd description2(String description2) {
-    this.description2 = JsonNullable.of(description2);
+    this.description2 = description2;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class AdGroupAdServiceAppAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">説明文（2行目）2です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Description2 (line2) of the ad.<br> This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getDescription2() {
+  public String getDescription2() {
     return description2;
   }
 
-  public void setDescription2(JsonNullable<String> description2) {
+  public void setDescription2(String description2) {
     this.description2 = description2;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class AdGroupAdServiceAppAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

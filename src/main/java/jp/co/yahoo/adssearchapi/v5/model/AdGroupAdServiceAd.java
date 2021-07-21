@@ -17,7 +17,6 @@ import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceDynamicSearchLinkedAd;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceExtendedTextAd;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceResponsiveSearchAd;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupAdServiceTextAd2;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -25,63 +24,63 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAd object describes ad information.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceAd object describes ad information.<br> This field is required in ADD operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceAd   {
   @JsonProperty("adType")
-  private JsonNullable<AdGroupAdServiceAdType> adType = JsonNullable.undefined();
+  private AdGroupAdServiceAdType adType = null;
 
   @JsonProperty("additionalAdvancedMobileUrls")
   @Valid
-  private JsonNullable<List<AdGroupAdServiceAdditionalAdvancedMobileUrls>> additionalAdvancedMobileUrls = JsonNullable.undefined();
+  private List<AdGroupAdServiceAdditionalAdvancedMobileUrls> additionalAdvancedMobileUrls = null;
 
   @JsonProperty("additionalAdvancedUrls")
   @Valid
-  private JsonNullable<List<AdGroupAdServiceAdditionalAdvancedUrls>> additionalAdvancedUrls = JsonNullable.undefined();
+  private List<AdGroupAdServiceAdditionalAdvancedUrls> additionalAdvancedUrls = null;
 
   @JsonProperty("advancedMobileUrl")
-  private JsonNullable<String> advancedMobileUrl = JsonNullable.undefined();
+  private String advancedMobileUrl = null;
 
   @JsonProperty("advancedUrl")
-  private JsonNullable<String> advancedUrl = JsonNullable.undefined();
+  private String advancedUrl = null;
 
   @JsonProperty("appAd")
-  private JsonNullable<AdGroupAdServiceAppAd> appAd = JsonNullable.undefined();
+  private AdGroupAdServiceAppAd appAd = null;
 
   @JsonProperty("customParameters")
-  private JsonNullable<AdGroupAdServiceCustomParameters> customParameters = JsonNullable.undefined();
+  private AdGroupAdServiceCustomParameters customParameters = null;
 
   @JsonProperty("description1")
-  private JsonNullable<String> description1 = JsonNullable.undefined();
+  private String description1 = null;
 
   @JsonProperty("devicePreference")
-  private JsonNullable<AdGroupAdServiceDevicePreference> devicePreference = JsonNullable.undefined();
+  private AdGroupAdServiceDevicePreference devicePreference = null;
 
   @JsonProperty("displayUrl")
-  private JsonNullable<String> displayUrl = JsonNullable.undefined();
+  private String displayUrl = null;
 
   @JsonProperty("extendedTextAd")
-  private JsonNullable<AdGroupAdServiceExtendedTextAd> extendedTextAd = JsonNullable.undefined();
+  private AdGroupAdServiceExtendedTextAd extendedTextAd = null;
 
   @JsonProperty("responsiveSearchAd")
-  private JsonNullable<AdGroupAdServiceResponsiveSearchAd> responsiveSearchAd = JsonNullable.undefined();
+  private AdGroupAdServiceResponsiveSearchAd responsiveSearchAd = null;
 
   @JsonProperty("headline1")
-  private JsonNullable<String> headline1 = JsonNullable.undefined();
+  private String headline1 = null;
 
   @JsonProperty("textAd2")
-  private JsonNullable<AdGroupAdServiceTextAd2> textAd2 = JsonNullable.undefined();
+  private AdGroupAdServiceTextAd2 textAd2 = null;
 
   @JsonProperty("dynamicSearchLinkedAd")
-  private JsonNullable<AdGroupAdServiceDynamicSearchLinkedAd> dynamicSearchLinkedAd = JsonNullable.undefined();
+  private AdGroupAdServiceDynamicSearchLinkedAd dynamicSearchLinkedAd = null;
 
   @JsonProperty("trackingUrl")
-  private JsonNullable<String> trackingUrl = JsonNullable.undefined();
+  private String trackingUrl = null;
 
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   public AdGroupAdServiceAd adType(AdGroupAdServiceAdType adType) {
-    this.adType = JsonNullable.of(adType);
+    this.adType = adType;
     return this;
   }
 
@@ -93,24 +92,24 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceAdType> getAdType() {
+  public AdGroupAdServiceAdType getAdType() {
     return adType;
   }
 
-  public void setAdType(JsonNullable<AdGroupAdServiceAdType> adType) {
+  public void setAdType(AdGroupAdServiceAdType adType) {
     this.adType = adType;
   }
 
   public AdGroupAdServiceAd additionalAdvancedMobileUrls(List<AdGroupAdServiceAdditionalAdvancedMobileUrls> additionalAdvancedMobileUrls) {
-    this.additionalAdvancedMobileUrls = JsonNullable.of(additionalAdvancedMobileUrls);
+    this.additionalAdvancedMobileUrls = additionalAdvancedMobileUrls;
     return this;
   }
 
   public AdGroupAdServiceAd addAdditionalAdvancedMobileUrlsItem(AdGroupAdServiceAdditionalAdvancedMobileUrls additionalAdvancedMobileUrlsItem) {
-    if (this.additionalAdvancedMobileUrls == null || !this.additionalAdvancedMobileUrls.isPresent()) {
-      this.additionalAdvancedMobileUrls = JsonNullable.of(new ArrayList<>());
+    if (this.additionalAdvancedMobileUrls == null) {
+      this.additionalAdvancedMobileUrls = new ArrayList<>();
     }
-    this.additionalAdvancedMobileUrls.get().add(additionalAdvancedMobileUrlsItem);
+    this.additionalAdvancedMobileUrls.add(additionalAdvancedMobileUrlsItem);
     return this;
   }
 
@@ -122,24 +121,24 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupAdServiceAdditionalAdvancedMobileUrls>> getAdditionalAdvancedMobileUrls() {
+  public List<AdGroupAdServiceAdditionalAdvancedMobileUrls> getAdditionalAdvancedMobileUrls() {
     return additionalAdvancedMobileUrls;
   }
 
-  public void setAdditionalAdvancedMobileUrls(JsonNullable<List<AdGroupAdServiceAdditionalAdvancedMobileUrls>> additionalAdvancedMobileUrls) {
+  public void setAdditionalAdvancedMobileUrls(List<AdGroupAdServiceAdditionalAdvancedMobileUrls> additionalAdvancedMobileUrls) {
     this.additionalAdvancedMobileUrls = additionalAdvancedMobileUrls;
   }
 
   public AdGroupAdServiceAd additionalAdvancedUrls(List<AdGroupAdServiceAdditionalAdvancedUrls> additionalAdvancedUrls) {
-    this.additionalAdvancedUrls = JsonNullable.of(additionalAdvancedUrls);
+    this.additionalAdvancedUrls = additionalAdvancedUrls;
     return this;
   }
 
   public AdGroupAdServiceAd addAdditionalAdvancedUrlsItem(AdGroupAdServiceAdditionalAdvancedUrls additionalAdvancedUrlsItem) {
-    if (this.additionalAdvancedUrls == null || !this.additionalAdvancedUrls.isPresent()) {
-      this.additionalAdvancedUrls = JsonNullable.of(new ArrayList<>());
+    if (this.additionalAdvancedUrls == null) {
+      this.additionalAdvancedUrls = new ArrayList<>();
     }
-    this.additionalAdvancedUrls.get().add(additionalAdvancedUrlsItem);
+    this.additionalAdvancedUrls.add(additionalAdvancedUrlsItem);
     return this;
   }
 
@@ -151,16 +150,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupAdServiceAdditionalAdvancedUrls>> getAdditionalAdvancedUrls() {
+  public List<AdGroupAdServiceAdditionalAdvancedUrls> getAdditionalAdvancedUrls() {
     return additionalAdvancedUrls;
   }
 
-  public void setAdditionalAdvancedUrls(JsonNullable<List<AdGroupAdServiceAdditionalAdvancedUrls>> additionalAdvancedUrls) {
+  public void setAdditionalAdvancedUrls(List<AdGroupAdServiceAdditionalAdvancedUrls> additionalAdvancedUrls) {
     this.additionalAdvancedUrls = additionalAdvancedUrls;
   }
 
   public AdGroupAdServiceAd advancedMobileUrl(String advancedMobileUrl) {
-    this.advancedMobileUrl = JsonNullable.of(advancedMobileUrl);
+    this.advancedMobileUrl = advancedMobileUrl;
     return this;
   }
 
@@ -171,16 +170,16 @@ public class AdGroupAdServiceAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">Landing Page URL (Smartphone).<br> This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
 
 
-  public JsonNullable<String> getAdvancedMobileUrl() {
+  public String getAdvancedMobileUrl() {
     return advancedMobileUrl;
   }
 
-  public void setAdvancedMobileUrl(JsonNullable<String> advancedMobileUrl) {
+  public void setAdvancedMobileUrl(String advancedMobileUrl) {
     this.advancedMobileUrl = advancedMobileUrl;
   }
 
   public AdGroupAdServiceAd advancedUrl(String advancedUrl) {
-    this.advancedUrl = JsonNullable.of(advancedUrl);
+    this.advancedUrl = advancedUrl;
     return this;
   }
 
@@ -191,16 +190,16 @@ public class AdGroupAdServiceAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">Landing Page URL.<br> This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
 
 
-  public JsonNullable<String> getAdvancedUrl() {
+  public String getAdvancedUrl() {
     return advancedUrl;
   }
 
-  public void setAdvancedUrl(JsonNullable<String> advancedUrl) {
+  public void setAdvancedUrl(String advancedUrl) {
     this.advancedUrl = advancedUrl;
   }
 
   public AdGroupAdServiceAd appAd(AdGroupAdServiceAppAd appAd) {
-    this.appAd = JsonNullable.of(appAd);
+    this.appAd = appAd;
     return this;
   }
 
@@ -212,16 +211,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceAppAd> getAppAd() {
+  public AdGroupAdServiceAppAd getAppAd() {
     return appAd;
   }
 
-  public void setAppAd(JsonNullable<AdGroupAdServiceAppAd> appAd) {
+  public void setAppAd(AdGroupAdServiceAppAd appAd) {
     this.appAd = appAd;
   }
 
   public AdGroupAdServiceAd customParameters(AdGroupAdServiceCustomParameters customParameters) {
-    this.customParameters = JsonNullable.of(customParameters);
+    this.customParameters = customParameters;
     return this;
   }
 
@@ -233,16 +232,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceCustomParameters> getCustomParameters() {
+  public AdGroupAdServiceCustomParameters getCustomParameters() {
     return customParameters;
   }
 
-  public void setCustomParameters(JsonNullable<AdGroupAdServiceCustomParameters> customParameters) {
+  public void setCustomParameters(AdGroupAdServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
   public AdGroupAdServiceAd description1(String description1) {
-    this.description1 = JsonNullable.of(description1);
+    this.description1 = description1;
     return this;
   }
 
@@ -253,16 +252,16 @@ public class AdGroupAdServiceAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">説明文です。<br> ADD時、このフィールドは必須となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は無視されます。</div> <div lang=\"en\">Description of ad.<br> This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.</div> ")
 
 
-  public JsonNullable<String> getDescription1() {
+  public String getDescription1() {
     return description1;
   }
 
-  public void setDescription1(JsonNullable<String> description1) {
+  public void setDescription1(String description1) {
     this.description1 = description1;
   }
 
   public AdGroupAdServiceAd devicePreference(AdGroupAdServiceDevicePreference devicePreference) {
-    this.devicePreference = JsonNullable.of(devicePreference);
+    this.devicePreference = devicePreference;
     return this;
   }
 
@@ -274,16 +273,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceDevicePreference> getDevicePreference() {
+  public AdGroupAdServiceDevicePreference getDevicePreference() {
     return devicePreference;
   }
 
-  public void setDevicePreference(JsonNullable<AdGroupAdServiceDevicePreference> devicePreference) {
+  public void setDevicePreference(AdGroupAdServiceDevicePreference devicePreference) {
     this.devicePreference = devicePreference;
   }
 
   public AdGroupAdServiceAd displayUrl(String displayUrl) {
-    this.displayUrl = JsonNullable.of(displayUrl);
+    this.displayUrl = displayUrl;
     return this;
   }
 
@@ -294,16 +293,16 @@ public class AdGroupAdServiceAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">表示URLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Display URL.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getDisplayUrl() {
+  public String getDisplayUrl() {
     return displayUrl;
   }
 
-  public void setDisplayUrl(JsonNullable<String> displayUrl) {
+  public void setDisplayUrl(String displayUrl) {
     this.displayUrl = displayUrl;
   }
 
   public AdGroupAdServiceAd extendedTextAd(AdGroupAdServiceExtendedTextAd extendedTextAd) {
-    this.extendedTextAd = JsonNullable.of(extendedTextAd);
+    this.extendedTextAd = extendedTextAd;
     return this;
   }
 
@@ -315,16 +314,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceExtendedTextAd> getExtendedTextAd() {
+  public AdGroupAdServiceExtendedTextAd getExtendedTextAd() {
     return extendedTextAd;
   }
 
-  public void setExtendedTextAd(JsonNullable<AdGroupAdServiceExtendedTextAd> extendedTextAd) {
+  public void setExtendedTextAd(AdGroupAdServiceExtendedTextAd extendedTextAd) {
     this.extendedTextAd = extendedTextAd;
   }
 
   public AdGroupAdServiceAd responsiveSearchAd(AdGroupAdServiceResponsiveSearchAd responsiveSearchAd) {
-    this.responsiveSearchAd = JsonNullable.of(responsiveSearchAd);
+    this.responsiveSearchAd = responsiveSearchAd;
     return this;
   }
 
@@ -336,16 +335,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceResponsiveSearchAd> getResponsiveSearchAd() {
+  public AdGroupAdServiceResponsiveSearchAd getResponsiveSearchAd() {
     return responsiveSearchAd;
   }
 
-  public void setResponsiveSearchAd(JsonNullable<AdGroupAdServiceResponsiveSearchAd> responsiveSearchAd) {
+  public void setResponsiveSearchAd(AdGroupAdServiceResponsiveSearchAd responsiveSearchAd) {
     this.responsiveSearchAd = responsiveSearchAd;
   }
 
   public AdGroupAdServiceAd headline1(String headline1) {
-    this.headline1 = JsonNullable.of(headline1);
+    this.headline1 = headline1;
     return this;
   }
 
@@ -356,16 +355,16 @@ public class AdGroupAdServiceAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">タイトル文です。<br> ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_AD、またはRESPONSIVE_SEARCH_ADの場合は無視されます。</div> <div lang=\"en\">Title of ad.<br> This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD or RESPONSIVE_SEARCH_AD, this field will be ignored.</div> ")
 
 
-  public JsonNullable<String> getHeadline1() {
+  public String getHeadline1() {
     return headline1;
   }
 
-  public void setHeadline1(JsonNullable<String> headline1) {
+  public void setHeadline1(String headline1) {
     this.headline1 = headline1;
   }
 
   public AdGroupAdServiceAd textAd2(AdGroupAdServiceTextAd2 textAd2) {
-    this.textAd2 = JsonNullable.of(textAd2);
+    this.textAd2 = textAd2;
     return this;
   }
 
@@ -377,16 +376,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceTextAd2> getTextAd2() {
+  public AdGroupAdServiceTextAd2 getTextAd2() {
     return textAd2;
   }
 
-  public void setTextAd2(JsonNullable<AdGroupAdServiceTextAd2> textAd2) {
+  public void setTextAd2(AdGroupAdServiceTextAd2 textAd2) {
     this.textAd2 = textAd2;
   }
 
   public AdGroupAdServiceAd dynamicSearchLinkedAd(AdGroupAdServiceDynamicSearchLinkedAd dynamicSearchLinkedAd) {
-    this.dynamicSearchLinkedAd = JsonNullable.of(dynamicSearchLinkedAd);
+    this.dynamicSearchLinkedAd = dynamicSearchLinkedAd;
     return this;
   }
 
@@ -398,16 +397,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceDynamicSearchLinkedAd> getDynamicSearchLinkedAd() {
+  public AdGroupAdServiceDynamicSearchLinkedAd getDynamicSearchLinkedAd() {
     return dynamicSearchLinkedAd;
   }
 
-  public void setDynamicSearchLinkedAd(JsonNullable<AdGroupAdServiceDynamicSearchLinkedAd> dynamicSearchLinkedAd) {
+  public void setDynamicSearchLinkedAd(AdGroupAdServiceDynamicSearchLinkedAd dynamicSearchLinkedAd) {
     this.dynamicSearchLinkedAd = dynamicSearchLinkedAd;
   }
 
   public AdGroupAdServiceAd trackingUrl(String trackingUrl) {
-    this.trackingUrl = JsonNullable.of(trackingUrl);
+    this.trackingUrl = trackingUrl;
     return this;
   }
 
@@ -418,16 +417,16 @@ public class AdGroupAdServiceAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getTrackingUrl() {
+  public String getTrackingUrl() {
     return trackingUrl;
   }
 
-  public void setTrackingUrl(JsonNullable<String> trackingUrl) {
+  public void setTrackingUrl(String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
   public AdGroupAdServiceAd url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -438,17 +437,17 @@ public class AdGroupAdServiceAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">移行前のリンク先URLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Destination URL before upgrading. <br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -510,7 +509,7 @@ public class AdGroupAdServiceAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

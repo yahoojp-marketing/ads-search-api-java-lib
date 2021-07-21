@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceReturnValueは、ターゲットリストの実行結果（全Entityのリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceReturnValue is an object that holds results (list of all entity).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceReturnValueは、ターゲットリストの実行結果（全Entityのリスト）を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceReturnValue is an object that holds results (list of all entity).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<RetargetingListServiceValue>> values = JsonNullable.undefined();
+  private List<RetargetingListServiceValue> values = null;
 
   public RetargetingListServiceReturnValue values(List<RetargetingListServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public RetargetingListServiceReturnValue addValuesItem(RetargetingListServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RetargetingListServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<RetargetingListServiceValue>> getValues() {
+  public List<RetargetingListServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<RetargetingListServiceValue>> values) {
+  public void setValues(List<RetargetingListServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RetargetingListServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItem;
 import jp.co.yahoo.adssearchapi.v5.model.FeedItemServicePlaceholderType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceOperationオブジェクトは、フィードアイテムの情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceOperation contains the Feed Item information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemServiceOperationオブジェクトは、フィードアイテムの情報を格納します。</div> <div lang=\"en\">FeedItemServiceOperation contains the Feed Item information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItemServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<FeedItem>> operand = JsonNullable.undefined();
+  private List<FeedItem> operand = new ArrayList<>();
 
   @JsonProperty("placeholderType")
-  private JsonNullable<FeedItemServicePlaceholderType> placeholderType = JsonNullable.undefined();
+  private FeedItemServicePlaceholderType placeholderType = null;
 
   public FeedItemServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -51,12 +50,15 @@ public class FeedItemServiceOperation   {
   }
 
   public FeedItemServiceOperation operand(List<FeedItem> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public FeedItemServiceOperation addOperandItem(FeedItem operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -69,16 +71,16 @@ public class FeedItemServiceOperation   {
 
   @Valid
 @Size(min=1,max=2000) 
-  public JsonNullable<List<FeedItem>> getOperand() {
+  public List<FeedItem> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<FeedItem>> operand) {
+  public void setOperand(List<FeedItem> operand) {
     this.operand = operand;
   }
 
   public FeedItemServiceOperation placeholderType(FeedItemServicePlaceholderType placeholderType) {
-    this.placeholderType = JsonNullable.of(placeholderType);
+    this.placeholderType = placeholderType;
     return this;
   }
 
@@ -91,17 +93,17 @@ public class FeedItemServiceOperation   {
 
   @Valid
 
-  public JsonNullable<FeedItemServicePlaceholderType> getPlaceholderType() {
+  public FeedItemServicePlaceholderType getPlaceholderType() {
     return placeholderType;
   }
 
-  public void setPlaceholderType(JsonNullable<FeedItemServicePlaceholderType> placeholderType) {
+  public void setPlaceholderType(FeedItemServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +137,7 @@ public class FeedItemServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

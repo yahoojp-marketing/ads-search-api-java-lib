@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceTagは、サイトリターゲティングのタグを保持するオブジェクトです。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceTag is an object that holds tag of Site Retargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceTagは、サイトリターゲティングのタグを保持するオブジェクトです。</div><div lang=\"en\">RetargetingListServiceTag is an object that holds tag of Site Retargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceTag   {
   @JsonProperty("snippet")
-  private JsonNullable<String> snippet = JsonNullable.undefined();
+  private String snippet = null;
 
   @JsonProperty("advancedSnippet")
-  private JsonNullable<String> advancedSnippet = JsonNullable.undefined();
+  private String advancedSnippet = null;
 
   public RetargetingListServiceTag snippet(String snippet) {
-    this.snippet = JsonNullable.of(snippet);
+    this.snippet = snippet;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class RetargetingListServiceTag   {
   @ApiModelProperty(value = "<div lang=\"ja\">サイトリターゲティングのタグです。</div> <div lang=\"en\">RetargetingListServiceTag of Site Retargeting.</div> ")
 
 
-  public JsonNullable<String> getSnippet() {
+  public String getSnippet() {
     return snippet;
   }
 
-  public void setSnippet(JsonNullable<String> snippet) {
+  public void setSnippet(String snippet) {
     this.snippet = snippet;
   }
 
   public RetargetingListServiceTag advancedSnippet(String advancedSnippet) {
-    this.advancedSnippet = JsonNullable.of(advancedSnippet);
+    this.advancedSnippet = advancedSnippet;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class RetargetingListServiceTag   {
   @ApiModelProperty(value = "<div lang=\"ja\">リニューアル版のサイトリターゲティングタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットのタグです。 <br/> 詳細は[ヘルプ](https://support-marketing.yahoo.co.jp/promotionalads/ss/articledetail?lan=ja&aid=7460)を参照</div> <div lang=\"en\">The new format of site retargeting tag avoids the impacts such as changes made to the browser. <br/> [Help Page](https://support-marketing.yahoo.co.jp/promotionalads/ss/articledetail?lan=en&aid=6133)</div> ")
 
 
-  public JsonNullable<String> getAdvancedSnippet() {
+  public String getAdvancedSnippet() {
     return advancedSnippet;
   }
 
-  public void setAdvancedSnippet(JsonNullable<String> advancedSnippet) {
+  public void setAdvancedSnippet(String advancedSnippet) {
     this.advancedSnippet = advancedSnippet;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class RetargetingListServiceTag   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

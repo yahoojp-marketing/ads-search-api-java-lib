@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,13 +12,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaServiceUrlSeedオブジェクトは、キーワード候補作成条件としてURLを指定するオブジェクトです。&lt;br&gt;seedTypeが&lt;code&gt;URL&lt;/code&gt;の場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordPlanIdeaServiceUrlSeed object is for specifying URL as related keywords creation conditions.&lt;br&gt;If seedType is &lt;code&gt;URL&lt;/code&gt;, this field is required.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaServiceUrlSeedオブジェクトは、キーワード候補作成条件としてURLを指定するオブジェクトです。<br>seedTypeが<code>URL</code>の場合は必須です。</div> <div lang=\"en\">KeywordPlanIdeaServiceUrlSeed object is for specifying URL as related keywords creation conditions.<br>If seedType is <code>URL</code>, this field is required.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordPlanIdeaServiceUrlSeed   {
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   public KeywordPlanIdeaServiceUrlSeed url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -30,17 +29,17 @@ public class KeywordPlanIdeaServiceUrlSeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">URLです。</div> <div lang=\"en\">URL.</div> ")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,7 +69,7 @@ public class KeywordPlanIdeaServiceUrlSeed   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

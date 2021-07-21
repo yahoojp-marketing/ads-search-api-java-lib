@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignRetargetingListServiceExcludedType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,27 +15,27 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceSelectorオブジェクトは、キャンペーン階層におけるターゲットリストの設定情報を取得するための検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceSelector object holds search conditions (exec parameters) to get Target List settings on the campaign level.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignRetargetingListServiceSelectorオブジェクトは、キャンペーン階層におけるターゲットリストの設定情報を取得するための検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">CampaignRetargetingListServiceSelector object holds search conditions (exec parameters) to get Target List settings on the campaign level.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignRetargetingListServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("excludedType")
-  private JsonNullable<CampaignRetargetingListServiceExcludedType> excludedType = JsonNullable.undefined();
+  private CampaignRetargetingListServiceExcludedType excludedType = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("targetListIds")
   @Valid
-  private JsonNullable<List<Long>> targetListIds = JsonNullable.undefined();
+  private List<Long> targetListIds = null;
 
   public CampaignRetargetingListServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -60,15 +59,15 @@ public class CampaignRetargetingListServiceSelector   {
   }
 
   public CampaignRetargetingListServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public CampaignRetargetingListServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -79,16 +78,16 @@ public class CampaignRetargetingListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Search conditon: Campaign ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public CampaignRetargetingListServiceSelector excludedType(CampaignRetargetingListServiceExcludedType excludedType) {
-    this.excludedType = JsonNullable.of(excludedType);
+    this.excludedType = excludedType;
     return this;
   }
 
@@ -100,16 +99,16 @@ public class CampaignRetargetingListServiceSelector   {
 
   @Valid
 
-  public JsonNullable<CampaignRetargetingListServiceExcludedType> getExcludedType() {
+  public CampaignRetargetingListServiceExcludedType getExcludedType() {
     return excludedType;
   }
 
-  public void setExcludedType(JsonNullable<CampaignRetargetingListServiceExcludedType> excludedType) {
+  public void setExcludedType(CampaignRetargetingListServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
 
   public CampaignRetargetingListServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -122,16 +121,16 @@ public class CampaignRetargetingListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public CampaignRetargetingListServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -143,24 +142,24 @@ public class CampaignRetargetingListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public CampaignRetargetingListServiceSelector targetListIds(List<Long> targetListIds) {
-    this.targetListIds = JsonNullable.of(targetListIds);
+    this.targetListIds = targetListIds;
     return this;
   }
 
   public CampaignRetargetingListServiceSelector addTargetListIdsItem(Long targetListIdsItem) {
-    if (this.targetListIds == null || !this.targetListIds.isPresent()) {
-      this.targetListIds = JsonNullable.of(new ArrayList<>());
+    if (this.targetListIds == null) {
+      this.targetListIds = new ArrayList<>();
     }
-    this.targetListIds.get().add(targetListIdsItem);
+    this.targetListIds.add(targetListIdsItem);
     return this;
   }
 
@@ -171,17 +170,17 @@ public class CampaignRetargetingListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストIDです。</div> <div lang=\"en\">Search conditon: Target List ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getTargetListIds() {
+  public List<Long> getTargetListIds() {
     return targetListIds;
   }
 
-  public void setTargetListIds(JsonNullable<List<Long>> targetListIds) {
+  public void setTargetListIds(List<Long> targetListIds) {
     this.targetListIds = targetListIds;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -221,7 +220,7 @@ public class CampaignRetargetingListServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

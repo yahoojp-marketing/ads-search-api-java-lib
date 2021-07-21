@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceAdditionalUrl;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceIsRemove;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,25 +16,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedUrls object holds list of Landing Page URL to be added.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceAdditionalAdvancedUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupCriterionServiceAdditionalAdvancedUrls object holds list of Landing Page URL to be added.<br> This field is optional in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceAdditionalAdvancedUrls   {
   @JsonProperty("additionalAdvancedUrl")
   @Valid
-  private JsonNullable<List<AdGroupCriterionServiceAdditionalUrl>> additionalAdvancedUrl = JsonNullable.undefined();
+  private List<AdGroupCriterionServiceAdditionalUrl> additionalAdvancedUrl = null;
 
   @JsonProperty("isRemove")
-  private JsonNullable<AdGroupCriterionServiceIsRemove> isRemove = JsonNullable.undefined();
+  private AdGroupCriterionServiceIsRemove isRemove = null;
 
   public AdGroupCriterionServiceAdditionalAdvancedUrls additionalAdvancedUrl(List<AdGroupCriterionServiceAdditionalUrl> additionalAdvancedUrl) {
-    this.additionalAdvancedUrl = JsonNullable.of(additionalAdvancedUrl);
+    this.additionalAdvancedUrl = additionalAdvancedUrl;
     return this;
   }
 
   public AdGroupCriterionServiceAdditionalAdvancedUrls addAdditionalAdvancedUrlItem(AdGroupCriterionServiceAdditionalUrl additionalAdvancedUrlItem) {
-    if (this.additionalAdvancedUrl == null || !this.additionalAdvancedUrl.isPresent()) {
-      this.additionalAdvancedUrl = JsonNullable.of(new ArrayList<>());
+    if (this.additionalAdvancedUrl == null) {
+      this.additionalAdvancedUrl = new ArrayList<>();
     }
-    this.additionalAdvancedUrl.get().add(additionalAdvancedUrlItem);
+    this.additionalAdvancedUrl.add(additionalAdvancedUrlItem);
     return this;
   }
 
@@ -47,16 +46,16 @@ public class AdGroupCriterionServiceAdditionalAdvancedUrls   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupCriterionServiceAdditionalUrl>> getAdditionalAdvancedUrl() {
+  public List<AdGroupCriterionServiceAdditionalUrl> getAdditionalAdvancedUrl() {
     return additionalAdvancedUrl;
   }
 
-  public void setAdditionalAdvancedUrl(JsonNullable<List<AdGroupCriterionServiceAdditionalUrl>> additionalAdvancedUrl) {
+  public void setAdditionalAdvancedUrl(List<AdGroupCriterionServiceAdditionalUrl> additionalAdvancedUrl) {
     this.additionalAdvancedUrl = additionalAdvancedUrl;
   }
 
   public AdGroupCriterionServiceAdditionalAdvancedUrls isRemove(AdGroupCriterionServiceIsRemove isRemove) {
-    this.isRemove = JsonNullable.of(isRemove);
+    this.isRemove = isRemove;
     return this;
   }
 
@@ -68,17 +67,17 @@ public class AdGroupCriterionServiceAdditionalAdvancedUrls   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceIsRemove> getIsRemove() {
+  public AdGroupCriterionServiceIsRemove getIsRemove() {
     return isRemove;
   }
 
-  public void setIsRemove(JsonNullable<AdGroupCriterionServiceIsRemove> isRemove) {
+  public void setIsRemove(AdGroupCriterionServiceIsRemove isRemove) {
     this.isRemove = isRemove;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class AdGroupCriterionServiceAdditionalAdvancedUrls   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

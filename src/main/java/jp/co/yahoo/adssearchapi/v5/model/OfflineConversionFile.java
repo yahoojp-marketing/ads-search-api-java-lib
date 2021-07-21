@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.OfflineConversionServiceProcessStatus;
 import jp.co.yahoo.adssearchapi.v5.model.OfflineConversionServiceUploadSourceType;
 import jp.co.yahoo.adssearchapi.v5.model.OfflineConversionServiceUploadType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,31 +15,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オフラインコンバージョンデータをアップロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This object contains contents of offline conversion information for upload.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">オフラインコンバージョンデータをアップロードする処理内容を格納します。</div> <div lang=\"en\">This object contains contents of offline conversion information for upload.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class OfflineConversionFile   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("uploadId")
-  private JsonNullable<Long> uploadId = JsonNullable.undefined();
+  private Long uploadId = null;
 
   @JsonProperty("uploadFileName")
-  private JsonNullable<String> uploadFileName = JsonNullable.undefined();
+  private String uploadFileName = null;
 
   @JsonProperty("uploadType")
-  private JsonNullable<OfflineConversionServiceUploadType> uploadType = JsonNullable.undefined();
+  private OfflineConversionServiceUploadType uploadType = null;
 
   @JsonProperty("uploadedDate")
-  private JsonNullable<String> uploadedDate = JsonNullable.undefined();
+  private String uploadedDate = null;
 
   @JsonProperty("uploadSourceType")
-  private JsonNullable<OfflineConversionServiceUploadSourceType> uploadSourceType = JsonNullable.undefined();
+  private OfflineConversionServiceUploadSourceType uploadSourceType = null;
 
   @JsonProperty("processStatus")
-  private JsonNullable<OfflineConversionServiceProcessStatus> processStatus = JsonNullable.undefined();
+  private OfflineConversionServiceProcessStatus processStatus = null;
 
   public OfflineConversionFile accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -51,16 +50,16 @@ public class OfflineConversionFile   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public OfflineConversionFile uploadId(Long uploadId) {
-    this.uploadId = JsonNullable.of(uploadId);
+    this.uploadId = uploadId;
     return this;
   }
 
@@ -71,16 +70,16 @@ public class OfflineConversionFile   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロードIDです。</div> <div lang=\"en\">Upload ID.</div> ")
 
 
-  public JsonNullable<Long> getUploadId() {
+  public Long getUploadId() {
     return uploadId;
   }
 
-  public void setUploadId(JsonNullable<Long> uploadId) {
+  public void setUploadId(Long uploadId) {
     this.uploadId = uploadId;
   }
 
   public OfflineConversionFile uploadFileName(String uploadFileName) {
-    this.uploadFileName = JsonNullable.of(uploadFileName);
+    this.uploadFileName = uploadFileName;
     return this;
   }
 
@@ -91,16 +90,16 @@ public class OfflineConversionFile   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロードファイル名です。</div> <div lang=\"en\">Upload file name.</div> ")
 
 
-  public JsonNullable<String> getUploadFileName() {
+  public String getUploadFileName() {
     return uploadFileName;
   }
 
-  public void setUploadFileName(JsonNullable<String> uploadFileName) {
+  public void setUploadFileName(String uploadFileName) {
     this.uploadFileName = uploadFileName;
   }
 
   public OfflineConversionFile uploadType(OfflineConversionServiceUploadType uploadType) {
-    this.uploadType = JsonNullable.of(uploadType);
+    this.uploadType = uploadType;
     return this;
   }
 
@@ -112,16 +111,16 @@ public class OfflineConversionFile   {
 
   @Valid
 
-  public JsonNullable<OfflineConversionServiceUploadType> getUploadType() {
+  public OfflineConversionServiceUploadType getUploadType() {
     return uploadType;
   }
 
-  public void setUploadType(JsonNullable<OfflineConversionServiceUploadType> uploadType) {
+  public void setUploadType(OfflineConversionServiceUploadType uploadType) {
     this.uploadType = uploadType;
   }
 
   public OfflineConversionFile uploadedDate(String uploadedDate) {
-    this.uploadedDate = JsonNullable.of(uploadedDate);
+    this.uploadedDate = uploadedDate;
     return this;
   }
 
@@ -132,16 +131,16 @@ public class OfflineConversionFile   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロード日時です。</div> <div lang=\"en\">Upload date and time.</div> ")
 
 
-  public JsonNullable<String> getUploadedDate() {
+  public String getUploadedDate() {
     return uploadedDate;
   }
 
-  public void setUploadedDate(JsonNullable<String> uploadedDate) {
+  public void setUploadedDate(String uploadedDate) {
     this.uploadedDate = uploadedDate;
   }
 
   public OfflineConversionFile uploadSourceType(OfflineConversionServiceUploadSourceType uploadSourceType) {
-    this.uploadSourceType = JsonNullable.of(uploadSourceType);
+    this.uploadSourceType = uploadSourceType;
     return this;
   }
 
@@ -153,16 +152,16 @@ public class OfflineConversionFile   {
 
   @Valid
 
-  public JsonNullable<OfflineConversionServiceUploadSourceType> getUploadSourceType() {
+  public OfflineConversionServiceUploadSourceType getUploadSourceType() {
     return uploadSourceType;
   }
 
-  public void setUploadSourceType(JsonNullable<OfflineConversionServiceUploadSourceType> uploadSourceType) {
+  public void setUploadSourceType(OfflineConversionServiceUploadSourceType uploadSourceType) {
     this.uploadSourceType = uploadSourceType;
   }
 
   public OfflineConversionFile processStatus(OfflineConversionServiceProcessStatus processStatus) {
-    this.processStatus = JsonNullable.of(processStatus);
+    this.processStatus = processStatus;
     return this;
   }
 
@@ -174,17 +173,17 @@ public class OfflineConversionFile   {
 
   @Valid
 
-  public JsonNullable<OfflineConversionServiceProcessStatus> getProcessStatus() {
+  public OfflineConversionServiceProcessStatus getProcessStatus() {
     return processStatus;
   }
 
-  public void setProcessStatus(JsonNullable<OfflineConversionServiceProcessStatus> processStatus) {
+  public void setProcessStatus(OfflineConversionServiceProcessStatus processStatus) {
     this.processStatus = processStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -226,7 +225,7 @@ public class OfflineConversionFile   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,34 +12,34 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceReviewSummaryオブジェクトは、ページフィードアイテムの審査成績、状況サマリーを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceReviewSummary object retains the examination results of the page feed item, the situation summary acquisition result.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceReviewSummaryオブジェクトは、ページフィードアイテムの審査成績、状況サマリーを格納します。</div> <div lang=\"en\">PageFeedItemServiceReviewSummary object retains the examination results of the page feed item, the situation summary acquisition result.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PageFeedItemServiceReviewSummary   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("approvedCount")
-  private JsonNullable<Long> approvedCount = JsonNullable.undefined();
+  private Long approvedCount = null;
 
   @JsonProperty("approvedWithReviewCount")
-  private JsonNullable<Long> approvedWithReviewCount = JsonNullable.undefined();
+  private Long approvedWithReviewCount = null;
 
   @JsonProperty("entityCount")
-  private JsonNullable<Long> entityCount = JsonNullable.undefined();
+  private Long entityCount = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("postDisapprovedCount")
-  private JsonNullable<Long> postDisapprovedCount = JsonNullable.undefined();
+  private Long postDisapprovedCount = null;
 
   @JsonProperty("preDisapprovedCount")
-  private JsonNullable<Long> preDisapprovedCount = JsonNullable.undefined();
+  private Long preDisapprovedCount = null;
 
   @JsonProperty("reviewCount")
-  private JsonNullable<Long> reviewCount = JsonNullable.undefined();
+  private Long reviewCount = null;
 
   public PageFeedItemServiceReviewSummary accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -51,16 +50,16 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public PageFeedItemServiceReviewSummary approvedCount(Long approvedCount) {
-    this.approvedCount = JsonNullable.of(approvedCount);
+    this.approvedCount = approvedCount;
     return this;
   }
 
@@ -71,16 +70,16 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">承認済みの件数</div> <div lang=\"en\">Count of approved</div> ")
 
 
-  public JsonNullable<Long> getApprovedCount() {
+  public Long getApprovedCount() {
     return approvedCount;
   }
 
-  public void setApprovedCount(JsonNullable<Long> approvedCount) {
+  public void setApprovedCount(Long approvedCount) {
     this.approvedCount = approvedCount;
   }
 
   public PageFeedItemServiceReviewSummary approvedWithReviewCount(Long approvedWithReviewCount) {
-    this.approvedWithReviewCount = JsonNullable.of(approvedWithReviewCount);
+    this.approvedWithReviewCount = approvedWithReviewCount;
     return this;
   }
 
@@ -91,16 +90,16 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">編集内容審査中の件数</div> <div lang=\"en\">Count of approved with review</div> ")
 
 
-  public JsonNullable<Long> getApprovedWithReviewCount() {
+  public Long getApprovedWithReviewCount() {
     return approvedWithReviewCount;
   }
 
-  public void setApprovedWithReviewCount(JsonNullable<Long> approvedWithReviewCount) {
+  public void setApprovedWithReviewCount(Long approvedWithReviewCount) {
     this.approvedWithReviewCount = approvedWithReviewCount;
   }
 
   public PageFeedItemServiceReviewSummary entityCount(Long entityCount) {
-    this.entityCount = JsonNullable.of(entityCount);
+    this.entityCount = entityCount;
     return this;
   }
 
@@ -111,16 +110,16 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードフォルダ内にあるページフィードアイテムの総件数</div> <div lang=\"en\">Total count of page feed item in feed folder</div> ")
 
 
-  public JsonNullable<Long> getEntityCount() {
+  public Long getEntityCount() {
     return entityCount;
   }
 
-  public void setEntityCount(JsonNullable<Long> entityCount) {
+  public void setEntityCount(Long entityCount) {
     this.entityCount = entityCount;
   }
 
   public PageFeedItemServiceReviewSummary feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -131,16 +130,16 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">Feed ID</div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public PageFeedItemServiceReviewSummary postDisapprovedCount(Long postDisapprovedCount) {
-    this.postDisapprovedCount = JsonNullable.of(postDisapprovedCount);
+    this.postDisapprovedCount = postDisapprovedCount;
     return this;
   }
 
@@ -151,16 +150,16 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">配信停止の件数</div> <div lang=\"en\">Count of distribution cancelled</div> ")
 
 
-  public JsonNullable<Long> getPostDisapprovedCount() {
+  public Long getPostDisapprovedCount() {
     return postDisapprovedCount;
   }
 
-  public void setPostDisapprovedCount(JsonNullable<Long> postDisapprovedCount) {
+  public void setPostDisapprovedCount(Long postDisapprovedCount) {
     this.postDisapprovedCount = postDisapprovedCount;
   }
 
   public PageFeedItemServiceReviewSummary preDisapprovedCount(Long preDisapprovedCount) {
-    this.preDisapprovedCount = JsonNullable.of(preDisapprovedCount);
+    this.preDisapprovedCount = preDisapprovedCount;
     return this;
   }
 
@@ -171,16 +170,16 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">掲載不可の件数</div> <div lang=\"en\">Count of disapproved</div> ")
 
 
-  public JsonNullable<Long> getPreDisapprovedCount() {
+  public Long getPreDisapprovedCount() {
     return preDisapprovedCount;
   }
 
-  public void setPreDisapprovedCount(JsonNullable<Long> preDisapprovedCount) {
+  public void setPreDisapprovedCount(Long preDisapprovedCount) {
     this.preDisapprovedCount = preDisapprovedCount;
   }
 
   public PageFeedItemServiceReviewSummary reviewCount(Long reviewCount) {
-    this.reviewCount = JsonNullable.of(reviewCount);
+    this.reviewCount = reviewCount;
     return this;
   }
 
@@ -191,17 +190,17 @@ public class PageFeedItemServiceReviewSummary   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査中の件数</div> <div lang=\"en\">Count of review</div> ")
 
 
-  public JsonNullable<Long> getReviewCount() {
+  public Long getReviewCount() {
     return reviewCount;
   }
 
-  public void setReviewCount(JsonNullable<Long> reviewCount) {
+  public void setReviewCount(Long reviewCount) {
     this.reviewCount = reviewCount;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -245,7 +244,7 @@ public class PageFeedItemServiceReviewSummary   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

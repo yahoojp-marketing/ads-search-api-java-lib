@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordForecastMetricsServiceDateInterval;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordForecastMetricsServiceKeywordPlanCampaign;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,22 +14,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetricsServiceSelector オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetricsServiceSelector object contains estimate request.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordForecastMetricsServiceSelector オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetricsServiceSelector object contains estimate request.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordForecastMetricsServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("dateInterval")
-  private JsonNullable<KeywordForecastMetricsServiceDateInterval> dateInterval = JsonNullable.undefined();
+  private KeywordForecastMetricsServiceDateInterval dateInterval = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("keywordPlanCampaign")
-  private JsonNullable<KeywordForecastMetricsServiceKeywordPlanCampaign> keywordPlanCampaign = JsonNullable.undefined();
+  private KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanCampaign = null;
 
   public KeywordForecastMetricsServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -54,7 +53,7 @@ public class KeywordForecastMetricsServiceSelector   {
   }
 
   public KeywordForecastMetricsServiceSelector dateInterval(KeywordForecastMetricsServiceDateInterval dateInterval) {
-    this.dateInterval = JsonNullable.of(dateInterval);
+    this.dateInterval = dateInterval;
     return this;
   }
 
@@ -67,16 +66,16 @@ public class KeywordForecastMetricsServiceSelector   {
 
   @Valid
 
-  public JsonNullable<KeywordForecastMetricsServiceDateInterval> getDateInterval() {
+  public KeywordForecastMetricsServiceDateInterval getDateInterval() {
     return dateInterval;
   }
 
-  public void setDateInterval(JsonNullable<KeywordForecastMetricsServiceDateInterval> dateInterval) {
+  public void setDateInterval(KeywordForecastMetricsServiceDateInterval dateInterval) {
     this.dateInterval = dateInterval;
   }
 
   public KeywordForecastMetricsServiceSelector startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -87,16 +86,16 @@ public class KeywordForecastMetricsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">dateIntervalがCUSTOM_DATEのときに指定する開始日です。<br> 現在より先の日付、かつ一年未満である必要があります。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\">Start date specified when dateInterval is CUSTOM_DATE.<br> Must be earlier than the current date and less than a year old.<br> * Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public KeywordForecastMetricsServiceSelector endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -107,16 +106,16 @@ public class KeywordForecastMetricsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">dateIntervalがCUSTOM_DATEのときに指定する終了日です。<br> 現在より先の日付、かつ一年未満である必要があります。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\">End date specified when dateInterval is CUSTOM_DATE.<br> Must be earlier than the current date and less than a year old.<br> * Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public KeywordForecastMetricsServiceSelector keywordPlanCampaign(KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanCampaign) {
-    this.keywordPlanCampaign = JsonNullable.of(keywordPlanCampaign);
+    this.keywordPlanCampaign = keywordPlanCampaign;
     return this;
   }
 
@@ -129,17 +128,17 @@ public class KeywordForecastMetricsServiceSelector   {
 
   @Valid
 
-  public JsonNullable<KeywordForecastMetricsServiceKeywordPlanCampaign> getKeywordPlanCampaign() {
+  public KeywordForecastMetricsServiceKeywordPlanCampaign getKeywordPlanCampaign() {
     return keywordPlanCampaign;
   }
 
-  public void setKeywordPlanCampaign(JsonNullable<KeywordForecastMetricsServiceKeywordPlanCampaign> keywordPlanCampaign) {
+  public void setKeywordPlanCampaign(KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanCampaign) {
     this.keywordPlanCampaign = keywordPlanCampaign;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -177,7 +176,7 @@ public class KeywordForecastMetricsServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

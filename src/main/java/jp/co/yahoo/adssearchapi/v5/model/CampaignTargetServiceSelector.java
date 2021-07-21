@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServiceExcludedType;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServicePlatformType;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignTargetServiceTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,35 +17,35 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceSelectorオブジェクトは、操作の対象とするキャンペーンのターゲティング設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetSelector object describes the targeting settings on the campaign to be operated.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceSelectorオブジェクトは、操作の対象とするキャンペーンのターゲティング設定を表します。</div> <div lang=\"en\">CampaignTargetSelector object describes the targeting settings on the campaign to be operated.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignTargetServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("excludedType")
-  private JsonNullable<CampaignTargetServiceExcludedType> excludedType = JsonNullable.undefined();
+  private CampaignTargetServiceExcludedType excludedType = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("platformTypes")
   @Valid
-  private JsonNullable<List<CampaignTargetServicePlatformType>> platformTypes = JsonNullable.undefined();
+  private List<CampaignTargetServicePlatformType> platformTypes = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("targetIds")
   @Valid
-  private JsonNullable<List<String>> targetIds = JsonNullable.undefined();
+  private List<String> targetIds = null;
 
   @JsonProperty("targetTypes")
   @Valid
-  private JsonNullable<List<CampaignTargetServiceTargetType>> targetTypes = JsonNullable.undefined();
+  private List<CampaignTargetServiceTargetType> targetTypes = null;
 
   public CampaignTargetServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -70,15 +69,15 @@ public class CampaignTargetServiceSelector   {
   }
 
   public CampaignTargetServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public CampaignTargetServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -89,16 +88,16 @@ public class CampaignTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public CampaignTargetServiceSelector excludedType(CampaignTargetServiceExcludedType excludedType) {
-    this.excludedType = JsonNullable.of(excludedType);
+    this.excludedType = excludedType;
     return this;
   }
 
@@ -110,16 +109,16 @@ public class CampaignTargetServiceSelector   {
 
   @Valid
 
-  public JsonNullable<CampaignTargetServiceExcludedType> getExcludedType() {
+  public CampaignTargetServiceExcludedType getExcludedType() {
     return excludedType;
   }
 
-  public void setExcludedType(JsonNullable<CampaignTargetServiceExcludedType> excludedType) {
+  public void setExcludedType(CampaignTargetServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
 
   public CampaignTargetServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -132,24 +131,24 @@ public class CampaignTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public CampaignTargetServiceSelector platformTypes(List<CampaignTargetServicePlatformType> platformTypes) {
-    this.platformTypes = JsonNullable.of(platformTypes);
+    this.platformTypes = platformTypes;
     return this;
   }
 
   public CampaignTargetServiceSelector addPlatformTypesItem(CampaignTargetServicePlatformType platformTypesItem) {
-    if (this.platformTypes == null || !this.platformTypes.isPresent()) {
-      this.platformTypes = JsonNullable.of(new ArrayList<>());
+    if (this.platformTypes == null) {
+      this.platformTypes = new ArrayList<>();
     }
-    this.platformTypes.get().add(platformTypesItem);
+    this.platformTypes.add(platformTypesItem);
     return this;
   }
 
@@ -161,16 +160,16 @@ public class CampaignTargetServiceSelector   {
 
   @Valid
 @Size(max=3) 
-  public JsonNullable<List<CampaignTargetServicePlatformType>> getPlatformTypes() {
+  public List<CampaignTargetServicePlatformType> getPlatformTypes() {
     return platformTypes;
   }
 
-  public void setPlatformTypes(JsonNullable<List<CampaignTargetServicePlatformType>> platformTypes) {
+  public void setPlatformTypes(List<CampaignTargetServicePlatformType> platformTypes) {
     this.platformTypes = platformTypes;
   }
 
   public CampaignTargetServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -182,24 +181,24 @@ public class CampaignTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public CampaignTargetServiceSelector targetIds(List<String> targetIds) {
-    this.targetIds = JsonNullable.of(targetIds);
+    this.targetIds = targetIds;
     return this;
   }
 
   public CampaignTargetServiceSelector addTargetIdsItem(String targetIdsItem) {
-    if (this.targetIds == null || !this.targetIds.isPresent()) {
-      this.targetIds = JsonNullable.of(new ArrayList<>());
+    if (this.targetIds == null) {
+      this.targetIds = new ArrayList<>();
     }
-    this.targetIds.get().add(targetIdsItem);
+    this.targetIds.add(targetIdsItem);
     return this;
   }
 
@@ -210,24 +209,24 @@ public class CampaignTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットIDです。</div> <div lang=\"en\">Target ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<String>> getTargetIds() {
+  public List<String> getTargetIds() {
     return targetIds;
   }
 
-  public void setTargetIds(JsonNullable<List<String>> targetIds) {
+  public void setTargetIds(List<String> targetIds) {
     this.targetIds = targetIds;
   }
 
   public CampaignTargetServiceSelector targetTypes(List<CampaignTargetServiceTargetType> targetTypes) {
-    this.targetTypes = JsonNullable.of(targetTypes);
+    this.targetTypes = targetTypes;
     return this;
   }
 
   public CampaignTargetServiceSelector addTargetTypesItem(CampaignTargetServiceTargetType targetTypesItem) {
-    if (this.targetTypes == null || !this.targetTypes.isPresent()) {
-      this.targetTypes = JsonNullable.of(new ArrayList<>());
+    if (this.targetTypes == null) {
+      this.targetTypes = new ArrayList<>();
     }
-    this.targetTypes.get().add(targetTypesItem);
+    this.targetTypes.add(targetTypesItem);
     return this;
   }
 
@@ -239,17 +238,17 @@ public class CampaignTargetServiceSelector   {
 
   @Valid
 @Size(max=4) 
-  public JsonNullable<List<CampaignTargetServiceTargetType>> getTargetTypes() {
+  public List<CampaignTargetServiceTargetType> getTargetTypes() {
     return targetTypes;
   }
 
-  public void setTargetTypes(JsonNullable<List<CampaignTargetServiceTargetType>> targetTypes) {
+  public void setTargetTypes(List<CampaignTargetServiceTargetType> targetTypes) {
     this.targetTypes = targetTypes;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -293,7 +292,7 @@ public class CampaignTargetServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceGeoTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceGeoTargetTypeSettingsオブジェクトは、地域ターゲットの情報を格納するコンテナです。&lt;br&gt; ADD時、settingTypeがGEO_TARGET_TYPE_SETTINGの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceGeoTargetTypeSettings object is a container for GeoTargeting.&lt;br&gt; This field is optional. However, in ADD operation, this field is required only when settingType is &#39;GEO_TARGET_TYPE_SETTING&#39;, and it is optional when settingType is the others.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceGeoTargetTypeSettingsオブジェクトは、地域ターゲットの情報を格納するコンテナです。<br> ADD時、settingTypeがGEO_TARGET_TYPE_SETTINGの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceGeoTargetTypeSettings object is a container for GeoTargeting.<br> This field is optional. However, in ADD operation, this field is required only when settingType is 'GEO_TARGET_TYPE_SETTING', and it is optional when settingType is the others.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceGeoTargetTypeSetting   {
   @JsonProperty("negativeGeoTargetType")
-  private JsonNullable<CampaignServiceGeoTargetType> negativeGeoTargetType = JsonNullable.undefined();
+  private CampaignServiceGeoTargetType negativeGeoTargetType = null;
 
   @JsonProperty("positiveGeoTargetType")
-  private JsonNullable<CampaignServiceGeoTargetType> positiveGeoTargetType = JsonNullable.undefined();
+  private CampaignServiceGeoTargetType positiveGeoTargetType = null;
 
   public CampaignServiceGeoTargetTypeSetting negativeGeoTargetType(CampaignServiceGeoTargetType negativeGeoTargetType) {
-    this.negativeGeoTargetType = JsonNullable.of(negativeGeoTargetType);
+    this.negativeGeoTargetType = negativeGeoTargetType;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class CampaignServiceGeoTargetTypeSetting   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceGeoTargetType> getNegativeGeoTargetType() {
+  public CampaignServiceGeoTargetType getNegativeGeoTargetType() {
     return negativeGeoTargetType;
   }
 
-  public void setNegativeGeoTargetType(JsonNullable<CampaignServiceGeoTargetType> negativeGeoTargetType) {
+  public void setNegativeGeoTargetType(CampaignServiceGeoTargetType negativeGeoTargetType) {
     this.negativeGeoTargetType = negativeGeoTargetType;
   }
 
   public CampaignServiceGeoTargetTypeSetting positiveGeoTargetType(CampaignServiceGeoTargetType positiveGeoTargetType) {
-    this.positiveGeoTargetType = JsonNullable.of(positiveGeoTargetType);
+    this.positiveGeoTargetType = positiveGeoTargetType;
     return this;
   }
 
@@ -56,17 +55,17 @@ public class CampaignServiceGeoTargetTypeSetting   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceGeoTargetType> getPositiveGeoTargetType() {
+  public CampaignServiceGeoTargetType getPositiveGeoTargetType() {
     return positiveGeoTargetType;
   }
 
-  public void setPositiveGeoTargetType(JsonNullable<CampaignServiceGeoTargetType> positiveGeoTargetType) {
+  public void setPositiveGeoTargetType(CampaignServiceGeoTargetType positiveGeoTargetType) {
     this.positiveGeoTargetType = positiveGeoTargetType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -98,7 +97,7 @@ public class CampaignServiceGeoTargetTypeSetting   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

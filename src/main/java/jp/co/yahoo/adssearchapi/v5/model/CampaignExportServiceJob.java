@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignExportServiceJobStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,38 +15,38 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceJob オブジェクトは、ジョブの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceJob object describes the information of job settings.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignExportServiceJob オブジェクトは、ジョブの情報を表します。</div> <div lang=\"en\">CampaignExportServiceJob object describes the information of job settings.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignExportServiceJob   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("exportFields")
   @Valid
-  private JsonNullable<List<String>> exportFields = JsonNullable.undefined();
+  private List<String> exportFields = null;
 
   @JsonProperty("jobId")
-  private JsonNullable<Long> jobId = JsonNullable.undefined();
+  private Long jobId = null;
 
   @JsonProperty("jobName")
-  private JsonNullable<String> jobName = JsonNullable.undefined();
+  private String jobName = null;
 
   @JsonProperty("jobStatus")
-  private JsonNullable<CampaignExportServiceJobStatus> jobStatus = JsonNullable.undefined();
+  private CampaignExportServiceJobStatus jobStatus = null;
 
   @JsonProperty("progress")
-  private JsonNullable<Integer> progress = JsonNullable.undefined();
+  private Integer progress = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("userName")
-  private JsonNullable<String> userName = JsonNullable.undefined();
+  private String userName = null;
 
   public CampaignExportServiceJob accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public CampaignExportServiceJob endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -78,24 +77,24 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの終了日時です。</div> <div lang=\"en\">End date and time of job setting</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public CampaignExportServiceJob exportFields(List<String> exportFields) {
-    this.exportFields = JsonNullable.of(exportFields);
+    this.exportFields = exportFields;
     return this;
   }
 
   public CampaignExportServiceJob addExportFieldsItem(String exportFieldsItem) {
-    if (this.exportFields == null || !this.exportFields.isPresent()) {
-      this.exportFields = JsonNullable.of(new ArrayList<>());
+    if (this.exportFields == null) {
+      this.exportFields = new ArrayList<>();
     }
-    this.exportFields.get().add(exportFieldsItem);
+    this.exportFields.add(exportFieldsItem);
     return this;
   }
 
@@ -106,16 +105,16 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">エクスポートするフィールドです。</div> <div lang=\"en\">Fields to be exported</div> ")
 
 
-  public JsonNullable<List<String>> getExportFields() {
+  public List<String> getExportFields() {
     return exportFields;
   }
 
-  public void setExportFields(JsonNullable<List<String>> exportFields) {
+  public void setExportFields(List<String> exportFields) {
     this.exportFields = exportFields;
   }
 
   public CampaignExportServiceJob jobId(Long jobId) {
-    this.jobId = JsonNullable.of(jobId);
+    this.jobId = jobId;
     return this;
   }
 
@@ -126,16 +125,16 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブIDです。</div> <div lang=\"en\">CampaignExportServiceJob ID</div> ")
 
 
-  public JsonNullable<Long> getJobId() {
+  public Long getJobId() {
     return jobId;
   }
 
-  public void setJobId(JsonNullable<Long> jobId) {
+  public void setJobId(Long jobId) {
     this.jobId = jobId;
   }
 
   public CampaignExportServiceJob jobName(String jobName) {
-    this.jobName = JsonNullable.of(jobName);
+    this.jobName = jobName;
     return this;
   }
 
@@ -146,16 +145,16 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブ名です。</div> <div lang=\"en\">CampaignExportServiceJob name<br> ∗ Default: NULL</div> ")
 
 
-  public JsonNullable<String> getJobName() {
+  public String getJobName() {
     return jobName;
   }
 
-  public void setJobName(JsonNullable<String> jobName) {
+  public void setJobName(String jobName) {
     this.jobName = jobName;
   }
 
   public CampaignExportServiceJob jobStatus(CampaignExportServiceJobStatus jobStatus) {
-    this.jobStatus = JsonNullable.of(jobStatus);
+    this.jobStatus = jobStatus;
     return this;
   }
 
@@ -167,16 +166,16 @@ public class CampaignExportServiceJob   {
 
   @Valid
 
-  public JsonNullable<CampaignExportServiceJobStatus> getJobStatus() {
+  public CampaignExportServiceJobStatus getJobStatus() {
     return jobStatus;
   }
 
-  public void setJobStatus(JsonNullable<CampaignExportServiceJobStatus> jobStatus) {
+  public void setJobStatus(CampaignExportServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
   public CampaignExportServiceJob progress(Integer progress) {
-    this.progress = JsonNullable.of(progress);
+    this.progress = progress;
     return this;
   }
 
@@ -187,16 +186,16 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理進捗です。</div> <div lang=\"en\">Progress of job setting</div> ")
 
 
-  public JsonNullable<Integer> getProgress() {
+  public Integer getProgress() {
     return progress;
   }
 
-  public void setProgress(JsonNullable<Integer> progress) {
+  public void setProgress(Integer progress) {
     this.progress = progress;
   }
 
   public CampaignExportServiceJob startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -207,16 +206,16 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブの開始日時です。</div> <div lang=\"en\">Start date and time of job setting</div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public CampaignExportServiceJob userName(String userName) {
-    this.userName = JsonNullable.of(userName);
+    this.userName = userName;
     return this;
   }
 
@@ -227,17 +226,17 @@ public class CampaignExportServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブ実行者のユーザー名です。</div> <div lang=\"en\">Name of user who run the job.</div> ")
 
 
-  public JsonNullable<String> getUserName() {
+  public String getUserName() {
     return userName;
   }
 
-  public void setUserName(JsonNullable<String> userName) {
+  public void setUserName(String userName) {
     this.userName = userName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -283,7 +282,7 @@ public class CampaignExportServiceJob   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

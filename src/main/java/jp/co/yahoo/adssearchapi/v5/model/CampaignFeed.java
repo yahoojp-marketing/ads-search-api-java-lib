@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignFeedServicePlaceholderType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,22 +13,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignFeedオブジェクトは、キャンペーンに紐づけられたFeedItem情報を表します。&lt;br&gt; SET時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignFeed describes FeedItem information connected to campaign.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignFeedオブジェクトは、キャンペーンに紐づけられたFeedItem情報を表します。<br> SET時、このフィールドは必須です。</div> <div lang=\"en\">CampaignFeed describes FeedItem information connected to campaign.<br> This field is required in SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignFeed   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("feedItemId")
-  private JsonNullable<Long> feedItemId = JsonNullable.undefined();
+  private Long feedItemId = null;
 
   @JsonProperty("placeholderType")
-  private JsonNullable<CampaignFeedServicePlaceholderType> placeholderType = JsonNullable.undefined();
+  private CampaignFeedServicePlaceholderType placeholderType = null;
 
   public CampaignFeed accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class CampaignFeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public CampaignFeed campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class CampaignFeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public CampaignFeed feedItemId(Long feedItemId) {
-    this.feedItemId = JsonNullable.of(feedItemId);
+    this.feedItemId = feedItemId;
     return this;
   }
 
@@ -80,16 +79,16 @@ public class CampaignFeed   {
   @ApiModelProperty(value = "<div lang=\"ja\">FeedItem情報のIDです。<br> SET時、このフィールドは必須です。</div> <div lang=\"en\">FeedItem information ID.<br> This field is required in SET operation.</div> ")
 
 
-  public JsonNullable<Long> getFeedItemId() {
+  public Long getFeedItemId() {
     return feedItemId;
   }
 
-  public void setFeedItemId(JsonNullable<Long> feedItemId) {
+  public void setFeedItemId(Long feedItemId) {
     this.feedItemId = feedItemId;
   }
 
   public CampaignFeed placeholderType(CampaignFeedServicePlaceholderType placeholderType) {
-    this.placeholderType = JsonNullable.of(placeholderType);
+    this.placeholderType = placeholderType;
     return this;
   }
 
@@ -101,17 +100,17 @@ public class CampaignFeed   {
 
   @Valid
 
-  public JsonNullable<CampaignFeedServicePlaceholderType> getPlaceholderType() {
+  public CampaignFeedServicePlaceholderType getPlaceholderType() {
     return placeholderType;
   }
 
-  public void setPlaceholderType(JsonNullable<CampaignFeedServicePlaceholderType> placeholderType) {
+  public void setPlaceholderType(CampaignFeedServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -147,7 +146,7 @@ public class CampaignFeed   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

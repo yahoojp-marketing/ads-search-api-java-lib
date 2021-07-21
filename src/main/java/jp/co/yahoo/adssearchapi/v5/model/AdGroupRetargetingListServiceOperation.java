@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupRetargetingList;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListServiceOperationは、操作対象の広告グループレベルでのターゲットリスト設定を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingListServiceOperation is an object that holds target ad group retargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupRetargetingListServiceOperationは、操作対象の広告グループレベルでのターゲットリスト設定を保持するオブジェクトです。</div> <div lang=\"en\">AdGroupRetargetingListServiceOperation is an object that holds target ad group retargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupRetargetingListServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<AdGroupRetargetingList>> operand = JsonNullable.undefined();
+  private List<AdGroupRetargetingList> operand = new ArrayList<>();
 
   public AdGroupRetargetingListServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class AdGroupRetargetingListServiceOperation   {
   }
 
   public AdGroupRetargetingListServiceOperation operand(List<AdGroupRetargetingList> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public AdGroupRetargetingListServiceOperation addOperandItem(AdGroupRetargetingList operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class AdGroupRetargetingListServiceOperation   {
 
   @Valid
 @Size(min=1,max=1000) 
-  public JsonNullable<List<AdGroupRetargetingList>> getOperand() {
+  public List<AdGroupRetargetingList> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<AdGroupRetargetingList>> operand) {
+  public void setOperand(List<AdGroupRetargetingList> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AdGroupRetargetingListServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceAdditionalUrl;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionServiceIsRemove;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,25 +16,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedMobileUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedMobileUrls object holds the list of added Landing Page URLs.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceAdditionalAdvancedMobileUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupCriterionServiceAdditionalAdvancedMobileUrls object holds the list of added Landing Page URLs.<br> This field is optional in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceAdditionalAdvancedMobileUrls   {
   @JsonProperty("additionalAdvancedMobileUrl")
   @Valid
-  private JsonNullable<List<AdGroupCriterionServiceAdditionalUrl>> additionalAdvancedMobileUrl = JsonNullable.undefined();
+  private List<AdGroupCriterionServiceAdditionalUrl> additionalAdvancedMobileUrl = null;
 
   @JsonProperty("isRemove")
-  private JsonNullable<AdGroupCriterionServiceIsRemove> isRemove = JsonNullable.undefined();
+  private AdGroupCriterionServiceIsRemove isRemove = null;
 
   public AdGroupCriterionServiceAdditionalAdvancedMobileUrls additionalAdvancedMobileUrl(List<AdGroupCriterionServiceAdditionalUrl> additionalAdvancedMobileUrl) {
-    this.additionalAdvancedMobileUrl = JsonNullable.of(additionalAdvancedMobileUrl);
+    this.additionalAdvancedMobileUrl = additionalAdvancedMobileUrl;
     return this;
   }
 
   public AdGroupCriterionServiceAdditionalAdvancedMobileUrls addAdditionalAdvancedMobileUrlItem(AdGroupCriterionServiceAdditionalUrl additionalAdvancedMobileUrlItem) {
-    if (this.additionalAdvancedMobileUrl == null || !this.additionalAdvancedMobileUrl.isPresent()) {
-      this.additionalAdvancedMobileUrl = JsonNullable.of(new ArrayList<>());
+    if (this.additionalAdvancedMobileUrl == null) {
+      this.additionalAdvancedMobileUrl = new ArrayList<>();
     }
-    this.additionalAdvancedMobileUrl.get().add(additionalAdvancedMobileUrlItem);
+    this.additionalAdvancedMobileUrl.add(additionalAdvancedMobileUrlItem);
     return this;
   }
 
@@ -47,16 +46,16 @@ public class AdGroupCriterionServiceAdditionalAdvancedMobileUrls   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupCriterionServiceAdditionalUrl>> getAdditionalAdvancedMobileUrl() {
+  public List<AdGroupCriterionServiceAdditionalUrl> getAdditionalAdvancedMobileUrl() {
     return additionalAdvancedMobileUrl;
   }
 
-  public void setAdditionalAdvancedMobileUrl(JsonNullable<List<AdGroupCriterionServiceAdditionalUrl>> additionalAdvancedMobileUrl) {
+  public void setAdditionalAdvancedMobileUrl(List<AdGroupCriterionServiceAdditionalUrl> additionalAdvancedMobileUrl) {
     this.additionalAdvancedMobileUrl = additionalAdvancedMobileUrl;
   }
 
   public AdGroupCriterionServiceAdditionalAdvancedMobileUrls isRemove(AdGroupCriterionServiceIsRemove isRemove) {
-    this.isRemove = JsonNullable.of(isRemove);
+    this.isRemove = isRemove;
     return this;
   }
 
@@ -68,17 +67,17 @@ public class AdGroupCriterionServiceAdditionalAdvancedMobileUrls   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterionServiceIsRemove> getIsRemove() {
+  public AdGroupCriterionServiceIsRemove getIsRemove() {
     return isRemove;
   }
 
-  public void setIsRemove(JsonNullable<AdGroupCriterionServiceIsRemove> isRemove) {
+  public void setIsRemove(AdGroupCriterionServiceIsRemove isRemove) {
     this.isRemove = isRemove;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class AdGroupCriterionServiceAdditionalAdvancedMobileUrls   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

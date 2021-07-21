@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupServiceAdRotationMode;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceAdGroupAdRotationModeは、広告表示の最適化設定を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceAdGroupAdRotationMode describes Ad Rotation settings for optimizing and displaying ads.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupServiceAdGroupAdRotationModeは、広告表示の最適化設定を表します。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupServiceAdGroupAdRotationMode describes Ad Rotation settings for optimizing and displaying ads.<br> This field is optional in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceAdGroupAdRotationMode   {
   @JsonProperty("adRotationMode")
-  private JsonNullable<AdGroupServiceAdRotationMode> adRotationMode = JsonNullable.undefined();
+  private AdGroupServiceAdRotationMode adRotationMode = null;
 
   public AdGroupServiceAdGroupAdRotationMode adRotationMode(AdGroupServiceAdRotationMode adRotationMode) {
-    this.adRotationMode = JsonNullable.of(adRotationMode);
+    this.adRotationMode = adRotationMode;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class AdGroupServiceAdGroupAdRotationMode   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceAdRotationMode> getAdRotationMode() {
+  public AdGroupServiceAdRotationMode getAdRotationMode() {
     return adRotationMode;
   }
 
-  public void setAdRotationMode(JsonNullable<AdGroupServiceAdRotationMode> adRotationMode) {
+  public void setAdRotationMode(AdGroupServiceAdRotationMode adRotationMode) {
     this.adRotationMode = adRotationMode;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class AdGroupServiceAdGroupAdRotationMode   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

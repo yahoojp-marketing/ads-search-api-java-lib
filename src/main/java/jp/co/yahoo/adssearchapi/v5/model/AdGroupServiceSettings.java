@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupServiceTargetingSetting;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,16 +14,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceSettingsは、ターゲットタイプを保持するオブジェクトです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceSettings is object that holds target type.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupServiceSettingsは、ターゲットタイプを保持するオブジェクトです。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupServiceSettings is object that holds target type.<br> This field is optional in ADD and SET operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceSettings   {
   @JsonProperty("criterionType")
-  private JsonNullable<AdGroupServiceCriterionType> criterionType = JsonNullable.undefined();
+  private AdGroupServiceCriterionType criterionType = null;
 
   @JsonProperty("targetingSetting")
-  private JsonNullable<AdGroupServiceTargetingSetting> targetingSetting = JsonNullable.undefined();
+  private AdGroupServiceTargetingSetting targetingSetting = null;
 
   public AdGroupServiceSettings criterionType(AdGroupServiceCriterionType criterionType) {
-    this.criterionType = JsonNullable.of(criterionType);
+    this.criterionType = criterionType;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class AdGroupServiceSettings   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceCriterionType> getCriterionType() {
+  public AdGroupServiceCriterionType getCriterionType() {
     return criterionType;
   }
 
-  public void setCriterionType(JsonNullable<AdGroupServiceCriterionType> criterionType) {
+  public void setCriterionType(AdGroupServiceCriterionType criterionType) {
     this.criterionType = criterionType;
   }
 
   public AdGroupServiceSettings targetingSetting(AdGroupServiceTargetingSetting targetingSetting) {
-    this.targetingSetting = JsonNullable.of(targetingSetting);
+    this.targetingSetting = targetingSetting;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class AdGroupServiceSettings   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceTargetingSetting> getTargetingSetting() {
+  public AdGroupServiceTargetingSetting getTargetingSetting() {
     return targetingSetting;
   }
 
-  public void setTargetingSetting(JsonNullable<AdGroupServiceTargetingSetting> targetingSetting) {
+  public void setTargetingSetting(AdGroupServiceTargetingSetting targetingSetting) {
     this.targetingSetting = targetingSetting;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class AdGroupServiceSettings   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

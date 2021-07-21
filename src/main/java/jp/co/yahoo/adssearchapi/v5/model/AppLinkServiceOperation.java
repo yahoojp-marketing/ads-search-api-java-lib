@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AppLink;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkServiceOperationオブジェクトは、操作対象となるアプリリンク情報と処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLinkServiceOperation object describes appLink information for operation and list of operations.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AppLinkServiceOperationオブジェクトは、操作対象となるアプリリンク情報と処理の内容を表します。</div> <div lang=\"en\">AppLinkServiceOperation object describes appLink information for operation and list of operations.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AppLinkServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<AppLink>> operand = JsonNullable.undefined();
+  private List<AppLink> operand = new ArrayList<>();
 
   public AppLinkServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class AppLinkServiceOperation   {
   }
 
   public AppLinkServiceOperation operand(List<AppLink> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public AppLinkServiceOperation addOperandItem(AppLink operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class AppLinkServiceOperation   {
 
   @Valid
 @Size(min=1,max=10) 
-  public JsonNullable<List<AppLink>> getOperand() {
+  public List<AppLink> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<AppLink>> operand) {
+  public void setOperand(List<AppLink> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AppLinkServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

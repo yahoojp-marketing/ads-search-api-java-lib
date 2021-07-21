@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.Campaign;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceOperationオブジェクトは、操作の対象となるキャンペーンの情報と処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceOperation object displays target campaign information and its operation results.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceOperationオブジェクトは、操作の対象となるキャンペーンの情報と処理の内容を表します。</div> <div lang=\"en\">CampaignServiceOperation object displays target campaign information and its operation results.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<Campaign>> operand = JsonNullable.undefined();
+  private List<Campaign> operand = new ArrayList<>();
 
   public CampaignServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class CampaignServiceOperation   {
   }
 
   public CampaignServiceOperation operand(List<Campaign> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public CampaignServiceOperation addOperandItem(Campaign operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class CampaignServiceOperation   {
 
   @Valid
 @Size(min=1,max=2000) 
-  public JsonNullable<List<Campaign>> getOperand() {
+  public List<Campaign> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<Campaign>> operand) {
+  public void setOperand(List<Campaign> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class CampaignServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
 import jp.co.yahoo.adssearchapi.v5.model.KeywordForecastMetrics;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,20 +16,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetrics オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetrics object contains estimate request.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">KeywordForecastMetrics オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetrics object contains estimate request.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class KeywordForecastMetricsServiceValue   {
   @JsonProperty("keywordForecastMetrics")
-  private JsonNullable<KeywordForecastMetrics> keywordForecastMetrics = JsonNullable.undefined();
+  private KeywordForecastMetrics keywordForecastMetrics = null;
 
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public KeywordForecastMetricsServiceValue keywordForecastMetrics(KeywordForecastMetrics keywordForecastMetrics) {
-    this.keywordForecastMetrics = JsonNullable.of(keywordForecastMetrics);
+    this.keywordForecastMetrics = keywordForecastMetrics;
     return this;
   }
 
@@ -42,24 +41,24 @@ public class KeywordForecastMetricsServiceValue   {
 
   @Valid
 
-  public JsonNullable<KeywordForecastMetrics> getKeywordForecastMetrics() {
+  public KeywordForecastMetrics getKeywordForecastMetrics() {
     return keywordForecastMetrics;
   }
 
-  public void setKeywordForecastMetrics(JsonNullable<KeywordForecastMetrics> keywordForecastMetrics) {
+  public void setKeywordForecastMetrics(KeywordForecastMetrics keywordForecastMetrics) {
     this.keywordForecastMetrics = keywordForecastMetrics;
   }
 
   public KeywordForecastMetricsServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public KeywordForecastMetricsServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class KeywordForecastMetricsServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public KeywordForecastMetricsServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class KeywordForecastMetricsServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">Operation result.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class KeywordForecastMetricsServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -11,7 +11,6 @@ import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceTargetCpaBiddingScheme;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceTargetImpressionShareScheme;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceTargetRoasBiddingScheme;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceTargetSpendBiddingScheme;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -19,28 +18,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; ADD時、標準入札設定の場合、このフィールドは必須となり、ポートフォリオ入札設定の場合、設定不可となります。また、biddingStrategyIdと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceBiddingScheme object displays the details of Auto Bidding setting.&lt;br&gt; This field is required when Standard bidding is setting, and cannot be specified when Portfolio bidding is setting in ADD operation. It cannot be specified at the same times as biddingStrategyId.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）<br> ADD時、標準入札設定の場合、このフィールドは必須となり、ポートフォリオ入札設定の場合、設定不可となります。また、biddingStrategyIdと同時に設定することはできません。</div> <div lang=\"en\">CampaignServiceBiddingScheme object displays the details of Auto Bidding setting.<br> This field is required when Standard bidding is setting, and cannot be specified when Portfolio bidding is setting in ADD operation. It cannot be specified at the same times as biddingStrategyId.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceBiddingScheme   {
   @JsonProperty("biddingStrategyType")
-  private JsonNullable<CampaignServiceBiddingStrategyType> biddingStrategyType = JsonNullable.undefined();
+  private CampaignServiceBiddingStrategyType biddingStrategyType = null;
 
   @JsonProperty("manualCpcBiddingScheme")
-  private JsonNullable<CampaignServiceManualCpcBiddingScheme> manualCpcBiddingScheme = JsonNullable.undefined();
+  private CampaignServiceManualCpcBiddingScheme manualCpcBiddingScheme = null;
 
   @JsonProperty("targetCpaBiddingScheme")
-  private JsonNullable<CampaignServiceTargetCpaBiddingScheme> targetCpaBiddingScheme = JsonNullable.undefined();
+  private CampaignServiceTargetCpaBiddingScheme targetCpaBiddingScheme = null;
 
   @JsonProperty("targetRoasBiddingScheme")
-  private JsonNullable<CampaignServiceTargetRoasBiddingScheme> targetRoasBiddingScheme = JsonNullable.undefined();
+  private CampaignServiceTargetRoasBiddingScheme targetRoasBiddingScheme = null;
 
   @JsonProperty("targetSpendBiddingScheme")
-  private JsonNullable<CampaignServiceTargetSpendBiddingScheme> targetSpendBiddingScheme = JsonNullable.undefined();
+  private CampaignServiceTargetSpendBiddingScheme targetSpendBiddingScheme = null;
 
   @JsonProperty("targetImpressionShareScheme")
-  private JsonNullable<CampaignServiceTargetImpressionShareScheme> targetImpressionShareScheme = JsonNullable.undefined();
+  private CampaignServiceTargetImpressionShareScheme targetImpressionShareScheme = null;
 
   public CampaignServiceBiddingScheme biddingStrategyType(CampaignServiceBiddingStrategyType biddingStrategyType) {
-    this.biddingStrategyType = JsonNullable.of(biddingStrategyType);
+    this.biddingStrategyType = biddingStrategyType;
     return this;
   }
 
@@ -52,16 +51,16 @@ public class CampaignServiceBiddingScheme   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBiddingStrategyType> getBiddingStrategyType() {
+  public CampaignServiceBiddingStrategyType getBiddingStrategyType() {
     return biddingStrategyType;
   }
 
-  public void setBiddingStrategyType(JsonNullable<CampaignServiceBiddingStrategyType> biddingStrategyType) {
+  public void setBiddingStrategyType(CampaignServiceBiddingStrategyType biddingStrategyType) {
     this.biddingStrategyType = biddingStrategyType;
   }
 
   public CampaignServiceBiddingScheme manualCpcBiddingScheme(CampaignServiceManualCpcBiddingScheme manualCpcBiddingScheme) {
-    this.manualCpcBiddingScheme = JsonNullable.of(manualCpcBiddingScheme);
+    this.manualCpcBiddingScheme = manualCpcBiddingScheme;
     return this;
   }
 
@@ -73,16 +72,16 @@ public class CampaignServiceBiddingScheme   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceManualCpcBiddingScheme> getManualCpcBiddingScheme() {
+  public CampaignServiceManualCpcBiddingScheme getManualCpcBiddingScheme() {
     return manualCpcBiddingScheme;
   }
 
-  public void setManualCpcBiddingScheme(JsonNullable<CampaignServiceManualCpcBiddingScheme> manualCpcBiddingScheme) {
+  public void setManualCpcBiddingScheme(CampaignServiceManualCpcBiddingScheme manualCpcBiddingScheme) {
     this.manualCpcBiddingScheme = manualCpcBiddingScheme;
   }
 
   public CampaignServiceBiddingScheme targetCpaBiddingScheme(CampaignServiceTargetCpaBiddingScheme targetCpaBiddingScheme) {
-    this.targetCpaBiddingScheme = JsonNullable.of(targetCpaBiddingScheme);
+    this.targetCpaBiddingScheme = targetCpaBiddingScheme;
     return this;
   }
 
@@ -94,16 +93,16 @@ public class CampaignServiceBiddingScheme   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceTargetCpaBiddingScheme> getTargetCpaBiddingScheme() {
+  public CampaignServiceTargetCpaBiddingScheme getTargetCpaBiddingScheme() {
     return targetCpaBiddingScheme;
   }
 
-  public void setTargetCpaBiddingScheme(JsonNullable<CampaignServiceTargetCpaBiddingScheme> targetCpaBiddingScheme) {
+  public void setTargetCpaBiddingScheme(CampaignServiceTargetCpaBiddingScheme targetCpaBiddingScheme) {
     this.targetCpaBiddingScheme = targetCpaBiddingScheme;
   }
 
   public CampaignServiceBiddingScheme targetRoasBiddingScheme(CampaignServiceTargetRoasBiddingScheme targetRoasBiddingScheme) {
-    this.targetRoasBiddingScheme = JsonNullable.of(targetRoasBiddingScheme);
+    this.targetRoasBiddingScheme = targetRoasBiddingScheme;
     return this;
   }
 
@@ -115,16 +114,16 @@ public class CampaignServiceBiddingScheme   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceTargetRoasBiddingScheme> getTargetRoasBiddingScheme() {
+  public CampaignServiceTargetRoasBiddingScheme getTargetRoasBiddingScheme() {
     return targetRoasBiddingScheme;
   }
 
-  public void setTargetRoasBiddingScheme(JsonNullable<CampaignServiceTargetRoasBiddingScheme> targetRoasBiddingScheme) {
+  public void setTargetRoasBiddingScheme(CampaignServiceTargetRoasBiddingScheme targetRoasBiddingScheme) {
     this.targetRoasBiddingScheme = targetRoasBiddingScheme;
   }
 
   public CampaignServiceBiddingScheme targetSpendBiddingScheme(CampaignServiceTargetSpendBiddingScheme targetSpendBiddingScheme) {
-    this.targetSpendBiddingScheme = JsonNullable.of(targetSpendBiddingScheme);
+    this.targetSpendBiddingScheme = targetSpendBiddingScheme;
     return this;
   }
 
@@ -136,16 +135,16 @@ public class CampaignServiceBiddingScheme   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceTargetSpendBiddingScheme> getTargetSpendBiddingScheme() {
+  public CampaignServiceTargetSpendBiddingScheme getTargetSpendBiddingScheme() {
     return targetSpendBiddingScheme;
   }
 
-  public void setTargetSpendBiddingScheme(JsonNullable<CampaignServiceTargetSpendBiddingScheme> targetSpendBiddingScheme) {
+  public void setTargetSpendBiddingScheme(CampaignServiceTargetSpendBiddingScheme targetSpendBiddingScheme) {
     this.targetSpendBiddingScheme = targetSpendBiddingScheme;
   }
 
   public CampaignServiceBiddingScheme targetImpressionShareScheme(CampaignServiceTargetImpressionShareScheme targetImpressionShareScheme) {
-    this.targetImpressionShareScheme = JsonNullable.of(targetImpressionShareScheme);
+    this.targetImpressionShareScheme = targetImpressionShareScheme;
     return this;
   }
 
@@ -157,17 +156,17 @@ public class CampaignServiceBiddingScheme   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceTargetImpressionShareScheme> getTargetImpressionShareScheme() {
+  public CampaignServiceTargetImpressionShareScheme getTargetImpressionShareScheme() {
     return targetImpressionShareScheme;
   }
 
-  public void setTargetImpressionShareScheme(JsonNullable<CampaignServiceTargetImpressionShareScheme> targetImpressionShareScheme) {
+  public void setTargetImpressionShareScheme(CampaignServiceTargetImpressionShareScheme targetImpressionShareScheme) {
     this.targetImpressionShareScheme = targetImpressionShareScheme;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -207,7 +206,7 @@ public class CampaignServiceBiddingScheme   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

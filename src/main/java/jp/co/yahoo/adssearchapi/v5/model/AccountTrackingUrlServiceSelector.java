@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,28 +14,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountTrackingUrlServiceSelectorオブジェクトは、アカウントトラッキング情報のget処理の検索条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountTrackingUrlServiceSelector object describes the account tracking details.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountTrackingUrlServiceSelectorオブジェクトは、アカウントトラッキング情報のget処理の検索条件を表します。</div> <div lang=\"en\">AccountTrackingUrlServiceSelector object describes the account tracking details.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountTrackingUrlServiceSelector   {
   @JsonProperty("accountIds")
   @Valid
-  private JsonNullable<List<Long>> accountIds = JsonNullable.undefined();
+  private List<Long> accountIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AccountTrackingUrlServiceSelector accountIds(List<Long> accountIds) {
-    this.accountIds = JsonNullable.of(accountIds);
+    this.accountIds = accountIds;
     return this;
   }
 
   public AccountTrackingUrlServiceSelector addAccountIdsItem(Long accountIdsItem) {
-    if (this.accountIds == null || !this.accountIds.isPresent()) {
-      this.accountIds = JsonNullable.of(new ArrayList<>());
+    if (this.accountIds == null) {
+      this.accountIds = new ArrayList<>();
     }
-    this.accountIds.get().add(accountIdsItem);
+    this.accountIds.add(accountIdsItem);
     return this;
   }
 
@@ -47,16 +46,16 @@ public class AccountTrackingUrlServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
 
 
-  public JsonNullable<List<Long>> getAccountIds() {
+  public List<Long> getAccountIds() {
     return accountIds;
   }
 
-  public void setAccountIds(JsonNullable<List<Long>> accountIds) {
+  public void setAccountIds(List<Long> accountIds) {
     this.accountIds = accountIds;
   }
 
   public AccountTrackingUrlServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class AccountTrackingUrlServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AccountTrackingUrlServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -90,17 +89,17 @@ public class AccountTrackingUrlServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -134,7 +133,7 @@ public class AccountTrackingUrlServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

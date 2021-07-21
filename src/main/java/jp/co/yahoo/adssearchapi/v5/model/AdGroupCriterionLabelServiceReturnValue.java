@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterionLabelServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionLabelServiceReturnValueオブジェクトは、広告グループのクライテリアラベル情報を含む操作結果として戻される値を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionLabelServiceReturnValue object describes value returned as the operation result including ad group criterion label information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionLabelServiceReturnValueオブジェクトは、広告グループのクライテリアラベル情報を含む操作結果として戻される値を表します。</div> <div lang=\"en\">AdGroupCriterionLabelServiceReturnValue object describes value returned as the operation result including ad group criterion label information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionLabelServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AdGroupCriterionLabelServiceValue>> values = JsonNullable.undefined();
+  private List<AdGroupCriterionLabelServiceValue> values = null;
 
   public AdGroupCriterionLabelServiceReturnValue values(List<AdGroupCriterionLabelServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AdGroupCriterionLabelServiceReturnValue addValuesItem(AdGroupCriterionLabelServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class AdGroupCriterionLabelServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupCriterionLabelServiceValue>> getValues() {
+  public List<AdGroupCriterionLabelServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AdGroupCriterionLabelServiceValue>> values) {
+  public void setValues(List<AdGroupCriterionLabelServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class AdGroupCriterionLabelServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

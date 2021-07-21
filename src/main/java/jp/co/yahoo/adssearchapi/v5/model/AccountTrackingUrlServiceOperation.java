@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AccountTrackingUrl;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountTrackingUrlServiceOperationオブジェクトは、アカウントトラッキング情報と処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountTrackingUrlServiceOperation object describes the account tracking information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountTrackingUrlServiceOperationオブジェクトは、アカウントトラッキング情報と処理の内容を表します。</div> <div lang=\"en\">AccountTrackingUrlServiceOperation object describes the account tracking information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountTrackingUrlServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("operand")
   @Valid
-  private JsonNullable<List<AccountTrackingUrl>> operand = JsonNullable.undefined();
+  private List<AccountTrackingUrl> operand = new ArrayList<>();
 
   public AccountTrackingUrlServiceOperation accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,12 +46,15 @@ public class AccountTrackingUrlServiceOperation   {
   }
 
   public AccountTrackingUrlServiceOperation operand(List<AccountTrackingUrl> operand) {
-    this.operand = JsonNullable.of(operand);
+    this.operand = operand;
     return this;
   }
 
   public AccountTrackingUrlServiceOperation addOperandItem(AccountTrackingUrl operandItem) {
-    this.operand.get().add(operandItem);
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
+    this.operand.add(operandItem);
     return this;
   }
 
@@ -65,17 +67,17 @@ public class AccountTrackingUrlServiceOperation   {
 
   @Valid
 @Size(min=1,max=1) 
-  public JsonNullable<List<AccountTrackingUrl>> getOperand() {
+  public List<AccountTrackingUrl> getOperand() {
     return operand;
   }
 
-  public void setOperand(JsonNullable<List<AccountTrackingUrl>> operand) {
+  public void setOperand(List<AccountTrackingUrl> operand) {
     this.operand = operand;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AccountTrackingUrlServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

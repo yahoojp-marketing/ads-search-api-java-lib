@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.AdGroupCriterion;
 import jp.co.yahoo.adssearchapi.v5.model.Error;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,20 +16,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceValueオブジェクトは、広告グループのクライテリアです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceValue object is ad group criteria information including its operation results.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceValueオブジェクトは、広告グループのクライテリアです。</div> <div lang=\"en\">AdGroupCriterionServiceValue object is ad group criteria information including its operation results.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceValue   {
   @JsonProperty("adGroupCriterion")
-  private JsonNullable<AdGroupCriterion> adGroupCriterion = JsonNullable.undefined();
+  private AdGroupCriterion adGroupCriterion = null;
 
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public AdGroupCriterionServiceValue adGroupCriterion(AdGroupCriterion adGroupCriterion) {
-    this.adGroupCriterion = JsonNullable.of(adGroupCriterion);
+    this.adGroupCriterion = adGroupCriterion;
     return this;
   }
 
@@ -42,24 +41,24 @@ public class AdGroupCriterionServiceValue   {
 
   @Valid
 
-  public JsonNullable<AdGroupCriterion> getAdGroupCriterion() {
+  public AdGroupCriterion getAdGroupCriterion() {
     return adGroupCriterion;
   }
 
-  public void setAdGroupCriterion(JsonNullable<AdGroupCriterion> adGroupCriterion) {
+  public void setAdGroupCriterion(AdGroupCriterion adGroupCriterion) {
     this.adGroupCriterion = adGroupCriterion;
   }
 
   public AdGroupCriterionServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public AdGroupCriterionServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class AdGroupCriterionServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public AdGroupCriterionServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class AdGroupCriterionServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">Result of process</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class AdGroupCriterionServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

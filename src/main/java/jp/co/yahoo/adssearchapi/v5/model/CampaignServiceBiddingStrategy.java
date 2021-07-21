@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceBiddingScheme;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceBiddingStrategySource;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,22 +14,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceBiddingStrategyオブジェクトは、自動入札設定方法を表します。&lt;br&gt; ADD時、biddingStrategyConfigurationは必須となります。また、failedBiddingStrategyConfigurationはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceBiddingStrategy object describes Auto Bidding setting.&lt;br&gt; biddingStrategyConfiguration is required in ADD operation. Although failedBiddingStrategyConfiguration will be returned in the response, it will be ignored on input.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceBiddingStrategyオブジェクトは、自動入札設定方法を表します。<br> ADD時、biddingStrategyConfigurationは必須となります。また、failedBiddingStrategyConfigurationはレスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">CampaignServiceBiddingStrategy object describes Auto Bidding setting.<br> biddingStrategyConfiguration is required in ADD operation. Although failedBiddingStrategyConfiguration will be returned in the response, it will be ignored on input.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceBiddingStrategy   {
   @JsonProperty("biddingScheme")
-  private JsonNullable<CampaignServiceBiddingScheme> biddingScheme = JsonNullable.undefined();
+  private CampaignServiceBiddingScheme biddingScheme = null;
 
   @JsonProperty("biddingStrategyId")
-  private JsonNullable<Long> biddingStrategyId = JsonNullable.undefined();
+  private Long biddingStrategyId = null;
 
   @JsonProperty("biddingStrategyName")
-  private JsonNullable<String> biddingStrategyName = JsonNullable.undefined();
+  private String biddingStrategyName = null;
 
   @JsonProperty("biddingStrategySource")
-  private JsonNullable<CampaignServiceBiddingStrategySource> biddingStrategySource = JsonNullable.undefined();
+  private CampaignServiceBiddingStrategySource biddingStrategySource = null;
 
   public CampaignServiceBiddingStrategy biddingScheme(CampaignServiceBiddingScheme biddingScheme) {
-    this.biddingScheme = JsonNullable.of(biddingScheme);
+    this.biddingScheme = biddingScheme;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class CampaignServiceBiddingStrategy   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBiddingScheme> getBiddingScheme() {
+  public CampaignServiceBiddingScheme getBiddingScheme() {
     return biddingScheme;
   }
 
-  public void setBiddingScheme(JsonNullable<CampaignServiceBiddingScheme> biddingScheme) {
+  public void setBiddingScheme(CampaignServiceBiddingScheme biddingScheme) {
     this.biddingScheme = biddingScheme;
   }
 
   public CampaignServiceBiddingStrategy biddingStrategyId(Long biddingStrategyId) {
-    this.biddingStrategyId = JsonNullable.of(biddingStrategyId);
+    this.biddingStrategyId = biddingStrategyId;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class CampaignServiceBiddingStrategy   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動入札IDです。<br> ADD時、標準入札設定の場合、このフィールドは設定不可となり、ポートフォリオ入札設定の場合、必須となります。また、biddingSchemeと同時に設定することはできません。</div> <div lang=\"en\">Auto Bidding ID.<br> This field cannot be specified when Standard bidding is setting, and is required when Portfolio bidding is setting in ADD operation. It cannot be specified at the same times as biddingScheme.</div> ")
 
 
-  public JsonNullable<Long> getBiddingStrategyId() {
+  public Long getBiddingStrategyId() {
     return biddingStrategyId;
   }
 
-  public void setBiddingStrategyId(JsonNullable<Long> biddingStrategyId) {
+  public void setBiddingStrategyId(Long biddingStrategyId) {
     this.biddingStrategyId = biddingStrategyId;
   }
 
   public CampaignServiceBiddingStrategy biddingStrategyName(String biddingStrategyName) {
-    this.biddingStrategyName = JsonNullable.of(biddingStrategyName);
+    this.biddingStrategyName = biddingStrategyName;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class CampaignServiceBiddingStrategy   {
   @ApiModelProperty(value = "<div lang=\"ja\">自動入札名です。<br> ADD時、このフィールドは無視されます。<br> ※50文字以内になります。</div> <div lang=\"en\">Auto Bidding name.<br> This field will be ignored in ADD operation.<br>* Up to 50 characters.</div> ")
 
 
-  public JsonNullable<String> getBiddingStrategyName() {
+  public String getBiddingStrategyName() {
     return biddingStrategyName;
   }
 
-  public void setBiddingStrategyName(JsonNullable<String> biddingStrategyName) {
+  public void setBiddingStrategyName(String biddingStrategyName) {
     this.biddingStrategyName = biddingStrategyName;
   }
 
   public CampaignServiceBiddingStrategy biddingStrategySource(CampaignServiceBiddingStrategySource biddingStrategySource) {
-    this.biddingStrategySource = JsonNullable.of(biddingStrategySource);
+    this.biddingStrategySource = biddingStrategySource;
     return this;
   }
 
@@ -103,17 +102,17 @@ public class CampaignServiceBiddingStrategy   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBiddingStrategySource> getBiddingStrategySource() {
+  public CampaignServiceBiddingStrategySource getBiddingStrategySource() {
     return biddingStrategySource;
   }
 
-  public void setBiddingStrategySource(JsonNullable<CampaignServiceBiddingStrategySource> biddingStrategySource) {
+  public void setBiddingStrategySource(CampaignServiceBiddingStrategySource biddingStrategySource) {
     this.biddingStrategySource = biddingStrategySource;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -149,7 +148,7 @@ public class CampaignServiceBiddingStrategy   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

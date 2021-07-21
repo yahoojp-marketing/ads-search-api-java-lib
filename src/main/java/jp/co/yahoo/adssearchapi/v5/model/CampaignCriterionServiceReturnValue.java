@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignCriterionServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceReturnValueオブジェクトは、操作結果を含むキャンペーンのクライテリアに関する情報のコンテナを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for campaign criteria including operation results.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceReturnValueオブジェクトは、操作結果を含むキャンペーンのクライテリアに関する情報のコンテナを表します。</div> <div lang=\"en\">Container for campaign criteria including operation results.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignCriterionServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<CampaignCriterionServiceValue>> values = JsonNullable.undefined();
+  private List<CampaignCriterionServiceValue> values = null;
 
   public CampaignCriterionServiceReturnValue values(List<CampaignCriterionServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public CampaignCriterionServiceReturnValue addValuesItem(CampaignCriterionServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class CampaignCriterionServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<CampaignCriterionServiceValue>> getValues() {
+  public List<CampaignCriterionServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<CampaignCriterionServiceValue>> values) {
+  public void setValues(List<CampaignCriterionServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class CampaignCriterionServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

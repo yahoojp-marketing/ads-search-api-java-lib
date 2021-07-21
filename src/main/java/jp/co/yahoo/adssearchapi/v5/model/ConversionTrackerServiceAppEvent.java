@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.ConversionTrackerServiceAppLinkPlatform;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,25 +13,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by  tag.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by  tag.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceAppEvent   {
   @JsonProperty("conversionTrackerTrackId")
-  private JsonNullable<Long> conversionTrackerTrackId = JsonNullable.undefined();
+  private Long conversionTrackerTrackId = null;
 
   @JsonProperty("appVendorId")
-  private JsonNullable<String> appVendorId = JsonNullable.undefined();
+  private String appVendorId = null;
 
   @JsonProperty("appId")
-  private JsonNullable<String> appId = JsonNullable.undefined();
+  private String appId = null;
 
   @JsonProperty("appLinkPlatform")
-  private JsonNullable<ConversionTrackerServiceAppLinkPlatform> appLinkPlatform = JsonNullable.undefined();
+  private ConversionTrackerServiceAppLinkPlatform appLinkPlatform = null;
 
   @JsonProperty("appEventType")
-  private JsonNullable<String> appEventType = JsonNullable.undefined();
+  private String appEventType = null;
 
   public ConversionTrackerServiceAppEvent conversionTrackerTrackId(Long conversionTrackerTrackId) {
-    this.conversionTrackerTrackId = JsonNullable.of(conversionTrackerTrackId);
+    this.conversionTrackerTrackId = conversionTrackerTrackId;
     return this;
   }
 
@@ -43,16 +42,16 @@ public class ConversionTrackerServiceAppEvent   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用コンバージョントラッカーIDです。</div> <div lang=\"en\">ConversionTracker ID for tracking.</div> ")
 
 
-  public JsonNullable<Long> getConversionTrackerTrackId() {
+  public Long getConversionTrackerTrackId() {
     return conversionTrackerTrackId;
   }
 
-  public void setConversionTrackerTrackId(JsonNullable<Long> conversionTrackerTrackId) {
+  public void setConversionTrackerTrackId(Long conversionTrackerTrackId) {
     this.conversionTrackerTrackId = conversionTrackerTrackId;
   }
 
   public ConversionTrackerServiceAppEvent appVendorId(String appVendorId) {
-    this.appVendorId = JsonNullable.of(appVendorId);
+    this.appVendorId = appVendorId;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class ConversionTrackerServiceAppEvent   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー識別子です。</div> <div lang=\"en\">Application Vendor ID.</div> ")
 
 
-  public JsonNullable<String> getAppVendorId() {
+  public String getAppVendorId() {
     return appVendorId;
   }
 
-  public void setAppVendorId(JsonNullable<String> appVendorId) {
+  public void setAppVendorId(String appVendorId) {
     this.appVendorId = appVendorId;
   }
 
   public ConversionTrackerServiceAppEvent appId(String appId) {
-    this.appId = JsonNullable.of(appId);
+    this.appId = appId;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class ConversionTrackerServiceAppEvent   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。</div> <div lang=\"en\">Application ID.</div> ")
 
 
-  public JsonNullable<String> getAppId() {
+  public String getAppId() {
     return appId;
   }
 
-  public void setAppId(JsonNullable<String> appId) {
+  public void setAppId(String appId) {
     this.appId = appId;
   }
 
   public ConversionTrackerServiceAppEvent appLinkPlatform(ConversionTrackerServiceAppLinkPlatform appLinkPlatform) {
-    this.appLinkPlatform = JsonNullable.of(appLinkPlatform);
+    this.appLinkPlatform = appLinkPlatform;
     return this;
   }
 
@@ -104,16 +103,16 @@ public class ConversionTrackerServiceAppEvent   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppLinkPlatform> getAppLinkPlatform() {
+  public ConversionTrackerServiceAppLinkPlatform getAppLinkPlatform() {
     return appLinkPlatform;
   }
 
-  public void setAppLinkPlatform(JsonNullable<ConversionTrackerServiceAppLinkPlatform> appLinkPlatform) {
+  public void setAppLinkPlatform(ConversionTrackerServiceAppLinkPlatform appLinkPlatform) {
     this.appLinkPlatform = appLinkPlatform;
   }
 
   public ConversionTrackerServiceAppEvent appEventType(String appEventType) {
-    this.appEventType = JsonNullable.of(appEventType);
+    this.appEventType = appEventType;
     return this;
   }
 
@@ -124,17 +123,17 @@ public class ConversionTrackerServiceAppEvent   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリイベントタイプです。</div> <div lang=\"en\">Application Event Type.</div> ")
 
 
-  public JsonNullable<String> getAppEventType() {
+  public String getAppEventType() {
     return appEventType;
   }
 
-  public void setAppEventType(JsonNullable<String> appEventType) {
+  public void setAppEventType(String appEventType) {
     this.appEventType = appEventType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -172,7 +171,7 @@ public class ConversionTrackerServiceAppEvent   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

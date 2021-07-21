@@ -19,7 +19,6 @@ import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceSettings;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceType;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceUrlReviewData;
 import jp.co.yahoo.adssearchapi.v5.model.CampaignServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -27,78 +26,78 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Campaignオブジェクトは、キャンペーンの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign object describes Campaign information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Campaignオブジェクトは、キャンペーンの情報を表します。</div> <div lang=\"en\">Campaign object describes Campaign information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Campaign   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("appId")
-  private JsonNullable<String> appId = JsonNullable.undefined();
+  private String appId = null;
 
   @JsonProperty("appStore")
-  private JsonNullable<CampaignServiceAppStore> appStore = JsonNullable.undefined();
+  private CampaignServiceAppStore appStore = null;
 
   @JsonProperty("biddingStrategyConfiguration")
-  private JsonNullable<CampaignServiceBiddingStrategy> biddingStrategyConfiguration = JsonNullable.undefined();
+  private CampaignServiceBiddingStrategy biddingStrategyConfiguration = null;
 
   @JsonProperty("biddingStrategyFailedReason")
-  private JsonNullable<CampaignServiceBiddingStrategyFailedReason> biddingStrategyFailedReason = JsonNullable.undefined();
+  private CampaignServiceBiddingStrategyFailedReason biddingStrategyFailedReason = null;
 
   @JsonProperty("budget")
-  private JsonNullable<CampaignServiceBudget> budget = JsonNullable.undefined();
+  private CampaignServiceBudget budget = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("campaignTrackId")
-  private JsonNullable<Long> campaignTrackId = JsonNullable.undefined();
+  private Long campaignTrackId = null;
 
   @JsonProperty("conversionOptimizerEligibility")
-  private JsonNullable<CampaignServiceConversionOptimizerEligibility> conversionOptimizerEligibility = JsonNullable.undefined();
+  private CampaignServiceConversionOptimizerEligibility conversionOptimizerEligibility = null;
 
   @JsonProperty("customParameters")
-  private JsonNullable<CampaignServiceCustomParameters> customParameters = JsonNullable.undefined();
+  private CampaignServiceCustomParameters customParameters = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("failedBiddingStrategyConfiguration")
-  private JsonNullable<CampaignServiceBiddingStrategy> failedBiddingStrategyConfiguration = JsonNullable.undefined();
+  private CampaignServiceBiddingStrategy failedBiddingStrategyConfiguration = null;
 
   @JsonProperty("labels")
   @Valid
-  private JsonNullable<List<CampaignServiceLabel>> labels = JsonNullable.undefined();
+  private List<CampaignServiceLabel> labels = null;
 
   @JsonProperty("servingStatus")
-  private JsonNullable<CampaignServiceServingStatus> servingStatus = JsonNullable.undefined();
+  private CampaignServiceServingStatus servingStatus = null;
 
   @JsonProperty("settings")
   @Valid
-  private JsonNullable<List<CampaignServiceSettings>> settings = JsonNullable.undefined();
+  private List<CampaignServiceSettings> settings = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("trackingUrl")
-  private JsonNullable<String> trackingUrl = JsonNullable.undefined();
+  private String trackingUrl = null;
 
   @JsonProperty("type")
-  private JsonNullable<CampaignServiceType> type = JsonNullable.undefined();
+  private CampaignServiceType type = null;
 
   @JsonProperty("urlReviewData")
-  private JsonNullable<CampaignServiceUrlReviewData> urlReviewData = JsonNullable.undefined();
+  private CampaignServiceUrlReviewData urlReviewData = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<CampaignServiceUserStatus> userStatus = JsonNullable.undefined();
+  private CampaignServiceUserStatus userStatus = null;
 
   @JsonProperty("createdDate")
-  private JsonNullable<String> createdDate = JsonNullable.undefined();
+  private String createdDate = null;
 
   public Campaign accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -109,16 +108,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public Campaign appId(String appId) {
-    this.appId = JsonNullable.of(appId);
+    this.appId = appId;
     return this;
   }
 
@@ -129,16 +128,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリID（iOS）またはパッケージ名（Android）です。<br> ※アプリキャンペーンでiOSの場合、入力は数値のみです。<br> ADD時、campaignTypeがSTANDARD、またはDYNAMIC_ADS_FOR_SEARCH_SETTINGの場合、無視され、MOBILE_APPの場合、必須となります。</div> <div lang=\"en\">App ID (for iOS) or Package name (for Android).<br> *Input only the numbers for iOS in Mobile App Campaign.<br>  In ADD operation, this field will be ignored when campaignType is 'STANDARD' or 'DYNAMIC_ADS_FOR_SEARCH_SETTING', and is required when campaignType is MOBILE_APP.</div> ")
 
 
-  public JsonNullable<String> getAppId() {
+  public String getAppId() {
     return appId;
   }
 
-  public void setAppId(JsonNullable<String> appId) {
+  public void setAppId(String appId) {
     this.appId = appId;
   }
 
   public Campaign appStore(CampaignServiceAppStore appStore) {
-    this.appStore = JsonNullable.of(appStore);
+    this.appStore = appStore;
     return this;
   }
 
@@ -150,16 +149,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceAppStore> getAppStore() {
+  public CampaignServiceAppStore getAppStore() {
     return appStore;
   }
 
-  public void setAppStore(JsonNullable<CampaignServiceAppStore> appStore) {
+  public void setAppStore(CampaignServiceAppStore appStore) {
     this.appStore = appStore;
   }
 
   public Campaign biddingStrategyConfiguration(CampaignServiceBiddingStrategy biddingStrategyConfiguration) {
-    this.biddingStrategyConfiguration = JsonNullable.of(biddingStrategyConfiguration);
+    this.biddingStrategyConfiguration = biddingStrategyConfiguration;
     return this;
   }
 
@@ -171,16 +170,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBiddingStrategy> getBiddingStrategyConfiguration() {
+  public CampaignServiceBiddingStrategy getBiddingStrategyConfiguration() {
     return biddingStrategyConfiguration;
   }
 
-  public void setBiddingStrategyConfiguration(JsonNullable<CampaignServiceBiddingStrategy> biddingStrategyConfiguration) {
+  public void setBiddingStrategyConfiguration(CampaignServiceBiddingStrategy biddingStrategyConfiguration) {
     this.biddingStrategyConfiguration = biddingStrategyConfiguration;
   }
 
   public Campaign biddingStrategyFailedReason(CampaignServiceBiddingStrategyFailedReason biddingStrategyFailedReason) {
-    this.biddingStrategyFailedReason = JsonNullable.of(biddingStrategyFailedReason);
+    this.biddingStrategyFailedReason = biddingStrategyFailedReason;
     return this;
   }
 
@@ -192,16 +191,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBiddingStrategyFailedReason> getBiddingStrategyFailedReason() {
+  public CampaignServiceBiddingStrategyFailedReason getBiddingStrategyFailedReason() {
     return biddingStrategyFailedReason;
   }
 
-  public void setBiddingStrategyFailedReason(JsonNullable<CampaignServiceBiddingStrategyFailedReason> biddingStrategyFailedReason) {
+  public void setBiddingStrategyFailedReason(CampaignServiceBiddingStrategyFailedReason biddingStrategyFailedReason) {
     this.biddingStrategyFailedReason = biddingStrategyFailedReason;
   }
 
   public Campaign budget(CampaignServiceBudget budget) {
-    this.budget = JsonNullable.of(budget);
+    this.budget = budget;
     return this;
   }
 
@@ -213,16 +212,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBudget> getBudget() {
+  public CampaignServiceBudget getBudget() {
     return budget;
   }
 
-  public void setBudget(JsonNullable<CampaignServiceBudget> budget) {
+  public void setBudget(CampaignServiceBudget budget) {
     this.budget = budget;
   }
 
   public Campaign campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -233,16 +232,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> SET時およびREMOVE時、このフィールドは必須です。</div> <div lang=\"en\">Campaign ID.<br> This field is required in SET and REMOVE operation.</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public Campaign campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -253,16 +252,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。<br>このフィールドは、ADD時に必須となり、SET時に省略可能となります。<br> ※入力制限：50文字以内です。</div> <div lang=\"en\">Campaign name.<br> *Insert limit: Up to 50 characters.<br>This field is required in ADD operation, and will be optional in SET operation.</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public Campaign campaignTrackId(Long campaignTrackId) {
-    this.campaignTrackId = JsonNullable.of(campaignTrackId);
+    this.campaignTrackId = campaignTrackId;
     return this;
   }
 
@@ -273,16 +272,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用キャンペーンIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Campaign ID for tracking.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getCampaignTrackId() {
+  public Long getCampaignTrackId() {
     return campaignTrackId;
   }
 
-  public void setCampaignTrackId(JsonNullable<Long> campaignTrackId) {
+  public void setCampaignTrackId(Long campaignTrackId) {
     this.campaignTrackId = campaignTrackId;
   }
 
   public Campaign conversionOptimizerEligibility(CampaignServiceConversionOptimizerEligibility conversionOptimizerEligibility) {
-    this.conversionOptimizerEligibility = JsonNullable.of(conversionOptimizerEligibility);
+    this.conversionOptimizerEligibility = conversionOptimizerEligibility;
     return this;
   }
 
@@ -294,16 +293,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceConversionOptimizerEligibility> getConversionOptimizerEligibility() {
+  public CampaignServiceConversionOptimizerEligibility getConversionOptimizerEligibility() {
     return conversionOptimizerEligibility;
   }
 
-  public void setConversionOptimizerEligibility(JsonNullable<CampaignServiceConversionOptimizerEligibility> conversionOptimizerEligibility) {
+  public void setConversionOptimizerEligibility(CampaignServiceConversionOptimizerEligibility conversionOptimizerEligibility) {
     this.conversionOptimizerEligibility = conversionOptimizerEligibility;
   }
 
   public Campaign customParameters(CampaignServiceCustomParameters customParameters) {
-    this.customParameters = JsonNullable.of(customParameters);
+    this.customParameters = customParameters;
     return this;
   }
 
@@ -315,16 +314,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceCustomParameters> getCustomParameters() {
+  public CampaignServiceCustomParameters getCustomParameters() {
     return customParameters;
   }
 
-  public void setCustomParameters(JsonNullable<CampaignServiceCustomParameters> customParameters) {
+  public void setCustomParameters(CampaignServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
   public Campaign endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -335,16 +334,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンの終了日です。<br> ADD時およびSET時、このフィールドは省略可能となります。ADD時のデフォルト設定値は20371231となります。<br> 過去の日付、開始日以前の日付は指定できません。<br>※YYYYMMDD形式です。</div> <div lang=\"en\">End date of Campaign.<br> This field is optional in ADD and SET operation. The default value in ADD operation will be 20371231.<br> *Cannot set the past date and date before the start date.<br> *In YYYYMMDD format.</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public Campaign failedBiddingStrategyConfiguration(CampaignServiceBiddingStrategy failedBiddingStrategyConfiguration) {
-    this.failedBiddingStrategyConfiguration = JsonNullable.of(failedBiddingStrategyConfiguration);
+    this.failedBiddingStrategyConfiguration = failedBiddingStrategyConfiguration;
     return this;
   }
 
@@ -356,24 +355,24 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceBiddingStrategy> getFailedBiddingStrategyConfiguration() {
+  public CampaignServiceBiddingStrategy getFailedBiddingStrategyConfiguration() {
     return failedBiddingStrategyConfiguration;
   }
 
-  public void setFailedBiddingStrategyConfiguration(JsonNullable<CampaignServiceBiddingStrategy> failedBiddingStrategyConfiguration) {
+  public void setFailedBiddingStrategyConfiguration(CampaignServiceBiddingStrategy failedBiddingStrategyConfiguration) {
     this.failedBiddingStrategyConfiguration = failedBiddingStrategyConfiguration;
   }
 
   public Campaign labels(List<CampaignServiceLabel> labels) {
-    this.labels = JsonNullable.of(labels);
+    this.labels = labels;
     return this;
   }
 
   public Campaign addLabelsItem(CampaignServiceLabel labelsItem) {
-    if (this.labels == null || !this.labels.isPresent()) {
-      this.labels = JsonNullable.of(new ArrayList<>());
+    if (this.labels == null) {
+      this.labels = new ArrayList<>();
     }
-    this.labels.get().add(labelsItem);
+    this.labels.add(labelsItem);
     return this;
   }
 
@@ -385,16 +384,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<List<CampaignServiceLabel>> getLabels() {
+  public List<CampaignServiceLabel> getLabels() {
     return labels;
   }
 
-  public void setLabels(JsonNullable<List<CampaignServiceLabel>> labels) {
+  public void setLabels(List<CampaignServiceLabel> labels) {
     this.labels = labels;
   }
 
   public Campaign servingStatus(CampaignServiceServingStatus servingStatus) {
-    this.servingStatus = JsonNullable.of(servingStatus);
+    this.servingStatus = servingStatus;
     return this;
   }
 
@@ -406,24 +405,24 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceServingStatus> getServingStatus() {
+  public CampaignServiceServingStatus getServingStatus() {
     return servingStatus;
   }
 
-  public void setServingStatus(JsonNullable<CampaignServiceServingStatus> servingStatus) {
+  public void setServingStatus(CampaignServiceServingStatus servingStatus) {
     this.servingStatus = servingStatus;
   }
 
   public Campaign settings(List<CampaignServiceSettings> settings) {
-    this.settings = JsonNullable.of(settings);
+    this.settings = settings;
     return this;
   }
 
   public Campaign addSettingsItem(CampaignServiceSettings settingsItem) {
-    if (this.settings == null || !this.settings.isPresent()) {
-      this.settings = JsonNullable.of(new ArrayList<>());
+    if (this.settings == null) {
+      this.settings = new ArrayList<>();
     }
-    this.settings.get().add(settingsItem);
+    this.settings.add(settingsItem);
     return this;
   }
 
@@ -435,16 +434,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<List<CampaignServiceSettings>> getSettings() {
+  public List<CampaignServiceSettings> getSettings() {
     return settings;
   }
 
-  public void setSettings(JsonNullable<List<CampaignServiceSettings>> settings) {
+  public void setSettings(List<CampaignServiceSettings> settings) {
     this.settings = settings;
   }
 
   public Campaign startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -455,16 +454,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンの開始日です。<br> ADD時およびSET時、このフィールドは省略可能となります。ADD時のデフォルト設定値は当日日付となります。<br> 過去の日付は指定できません。<br>※配信開始済みのキャンペーンは変更できません。<br> ※YYYYMMDD形式です。</div> <div lang=\"en\">Start date of Campaign.<br> This field is optional in ADD and SET operation. The default value in ADD operation will be Today's date.<br> *Cannot set the past date.<br>*Cannot change the date to the campaign that is already active.<br> *In YYYYMMDD format.</div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public Campaign trackingUrl(String trackingUrl) {
-    this.trackingUrl = JsonNullable.of(trackingUrl);
+    this.trackingUrl = trackingUrl;
     return this;
   }
 
@@ -475,16 +474,16 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時およびSET時、このフィールドは省略可能となります。<br> ※アプリキャンペーンがAndroidの場合、設定はできません。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD and SET operation.<br> *Cannot set if Mobile App Campaign is in Android.</div> ")
 
 
-  public JsonNullable<String> getTrackingUrl() {
+  public String getTrackingUrl() {
     return trackingUrl;
   }
 
-  public void setTrackingUrl(JsonNullable<String> trackingUrl) {
+  public void setTrackingUrl(String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
   public Campaign type(CampaignServiceType type) {
-    this.type = JsonNullable.of(type);
+    this.type = type;
     return this;
   }
 
@@ -496,16 +495,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceType> getType() {
+  public CampaignServiceType getType() {
     return type;
   }
 
-  public void setType(JsonNullable<CampaignServiceType> type) {
+  public void setType(CampaignServiceType type) {
     this.type = type;
   }
 
   public Campaign urlReviewData(CampaignServiceUrlReviewData urlReviewData) {
-    this.urlReviewData = JsonNullable.of(urlReviewData);
+    this.urlReviewData = urlReviewData;
     return this;
   }
 
@@ -517,16 +516,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceUrlReviewData> getUrlReviewData() {
+  public CampaignServiceUrlReviewData getUrlReviewData() {
     return urlReviewData;
   }
 
-  public void setUrlReviewData(JsonNullable<CampaignServiceUrlReviewData> urlReviewData) {
+  public void setUrlReviewData(CampaignServiceUrlReviewData urlReviewData) {
     this.urlReviewData = urlReviewData;
   }
 
   public Campaign userStatus(CampaignServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -538,16 +537,16 @@ public class Campaign   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceUserStatus> getUserStatus() {
+  public CampaignServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<CampaignServiceUserStatus> userStatus) {
+  public void setUserStatus(CampaignServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public Campaign createdDate(String createdDate) {
-    this.createdDate = JsonNullable.of(createdDate);
+    this.createdDate = createdDate;
     return this;
   }
 
@@ -558,17 +557,17 @@ public class Campaign   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンが作成された日です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date of Campaign made.<br>* Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(JsonNullable<String> createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -640,7 +639,7 @@ public class Campaign   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

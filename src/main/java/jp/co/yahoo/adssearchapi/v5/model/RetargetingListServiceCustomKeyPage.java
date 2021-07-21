@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v5.model.RetargetingListServiceCustomKey;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceCustomKeyPageは、ターゲットリストのカスタムキー情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceCustomKeyPage is an object that holds custom key informations of target list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceCustomKeyPageは、ターゲットリストのカスタムキー情報を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceCustomKeyPage is an object that holds custom key informations of target list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceCustomKeyPage   {
   @JsonProperty("customKeys")
-  private JsonNullable<RetargetingListServiceCustomKey> customKeys = JsonNullable.undefined();
+  private RetargetingListServiceCustomKey customKeys = null;
 
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   public RetargetingListServiceCustomKeyPage customKeys(RetargetingListServiceCustomKey customKeys) {
-    this.customKeys = JsonNullable.of(customKeys);
+    this.customKeys = customKeys;
     return this;
   }
 
@@ -35,11 +34,11 @@ public class RetargetingListServiceCustomKeyPage   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceCustomKey> getCustomKeys() {
+  public RetargetingListServiceCustomKey getCustomKeys() {
     return customKeys;
   }
 
-  public void setCustomKeys(JsonNullable<RetargetingListServiceCustomKey> customKeys) {
+  public void setCustomKeys(RetargetingListServiceCustomKey customKeys) {
     this.customKeys = customKeys;
   }
 
@@ -65,7 +64,7 @@ public class RetargetingListServiceCustomKeyPage   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class RetargetingListServiceCustomKeyPage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }
