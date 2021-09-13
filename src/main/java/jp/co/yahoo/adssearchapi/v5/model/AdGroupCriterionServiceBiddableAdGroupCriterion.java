@@ -119,10 +119,10 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   }
 
   /**
-   * <div lang=\"ja\">カスタムURL（スマートフォン）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存のカスタムURL（スマートフォン）は削除されます。</div> <div lang=\"en\">Upgraded Custom URL (Smartphone).<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing upgraded Custom URL (Smartphone) will be deleted.</div> 
+   * <div lang=\"ja\">スマートフォン向けURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存のスマートフォン向けURLは削除されます。</div> <div lang=\"en\">Smartphone final URL.<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing smartphone final URL will be deleted.</div> 
    * @return advancedMobileUrl
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">カスタムURL（スマートフォン）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存のカスタムURL（スマートフォン）は削除されます。</div> <div lang=\"en\">Upgraded Custom URL (Smartphone).<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing upgraded Custom URL (Smartphone) will be deleted.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">スマートフォン向けURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存のスマートフォン向けURLは削除されます。</div> <div lang=\"en\">Smartphone final URL.<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing smartphone final URL will be deleted.</div> ")
 
 
   public String getAdvancedMobileUrl() {
@@ -139,10 +139,10 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   }
 
   /**
-   * <div lang=\"ja\">移行後のカスタムURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。<br> ※空で設定すると、既存の移行後のカスタムURLは削除されます。</div> <div lang=\"en\">Upgraded Custom URL.<br> This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.<br> *When this is set blank, existing upgraded Custom URL will be deleted.</div> 
+   * <div lang=\"ja\">最終リンク先URLです。<br> ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。<br> ※空で設定すると、既存の最終リンク先URLは削除されます。</div> <div lang=\"en\">Final URL.<br> This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.<br> *When this is set blank, existing final URL will be deleted.</div> 
    * @return advancedUrl
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">移行後のカスタムURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。<br> ※空で設定すると、既存の移行後のカスタムURLは削除されます。</div> <div lang=\"en\">Upgraded Custom URL.<br> This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.<br> *When this is set blank, existing upgraded Custom URL will be deleted.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。<br> ※空で設定すると、既存の最終リンク先URLは削除されます。</div> <div lang=\"en\">Final URL.<br> This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.<br> *When this is set blank, existing final URL will be deleted.</div> ")
 
 
   public String getAdvancedUrl() {
@@ -270,10 +270,10 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   }
 
   /**
-   * <div lang=\"ja\">配信審査中のカスタムURL（スマートフォン）です。</div> <div lang=\"en\">Upgraded Custom URL (Smartphone), in review.</div> 
+   * <div lang=\"ja\">配信審査中のスマートフォン向けURLです。</div> <div lang=\"en\">Smartphone final URL, in review.</div> 
    * @return reviewAdvancedMobileUrl
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">配信審査中のカスタムURL（スマートフォン）です。</div> <div lang=\"en\">Upgraded Custom URL (Smartphone), in review.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">配信審査中のスマートフォン向けURLです。</div> <div lang=\"en\">Smartphone final URL, in review.</div> ")
 
 
   public String getReviewAdvancedMobileUrl() {
@@ -290,10 +290,10 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion   {
   }
 
   /**
-   * <div lang=\"ja\">移行後の配信審査中のカスタムURLです。</div> <div lang=\"en\">Upgraded Custom URL, in review.</div> 
+   * <div lang=\"ja\">配信審査中の最終リンク先URLです。</div> <div lang=\"en\">Final URL, in review.</div> 
    * @return reviewAdvancedUrl
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">移行後の配信審査中のカスタムURLです。</div> <div lang=\"en\">Upgraded Custom URL, in review.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">配信審査中の最終リンク先URLです。</div> <div lang=\"en\">Final URL, in review.</div> ")
 
 
   public String getReviewAdvancedUrl() {
