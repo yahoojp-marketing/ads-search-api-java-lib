@@ -13,9 +13,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedMobileUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedMobileUrls object holds the list of added Landing Page URLs.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedMobileUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。&lt;br&gt; ※こちらのフィールドは、現在利用できません。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceAdditionalAdvancedMobileUrls object holds the list of added Landing Page URLs.&lt;br&gt; *This field is currently unavailable.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceAdditionalAdvancedMobileUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupCriterionServiceAdditionalAdvancedMobileUrls object holds the list of added Landing Page URLs.<br> This field is optional in ADD and SET operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceAdditionalAdvancedMobileUrlsオブジェクトは、追加する最終リンク先URULのリストを保持します。<br> ※こちらのフィールドは、現在利用できません。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupCriterionServiceAdditionalAdvancedMobileUrls object holds the list of added Landing Page URLs.<br> *This field is currently unavailable.<br> This field is optional in ADD and SET operation.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupCriterionServiceAdditionalAdvancedMobileUrls   {
   @JsonProperty("additionalAdvancedMobileUrl")

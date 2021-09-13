@@ -11,9 +11,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceAdditionalAdvancedMobileUrlsは、2件目以降の最終リンク先URL（スマートフォン）を保持するオブジェクトです。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAdditionalAdvancedMobileUrls is object to hold the 2nd and later Landing Page URLs (Smartphone).&lt;br&gt; This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceAdditionalAdvancedMobileUrlsは、2件目以降の最終リンク先URL（スマートフォン）を保持するオブジェクトです。&lt;br&gt; ※こちらのフィールドは、現在利用できません。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAdditionalAdvancedMobileUrls is object to hold the 2nd and later Landing Page URLs (Smartphone).&lt;br&gt; *This field is currently unavailable.&lt;br&gt; This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceAdditionalAdvancedMobileUrlsは、2件目以降の最終リンク先URL（スマートフォン）を保持するオブジェクトです。<br> ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">AdGroupAdServiceAdditionalAdvancedMobileUrls is object to hold the 2nd and later Landing Page URLs (Smartphone).<br> This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceAdditionalAdvancedMobileUrlsは、2件目以降の最終リンク先URL（スマートフォン）を保持するオブジェクトです。<br> ※こちらのフィールドは、現在利用できません。<br> ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">AdGroupAdServiceAdditionalAdvancedMobileUrls is object to hold the 2nd and later Landing Page URLs (Smartphone).<br> *This field is currently unavailable.<br> This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceAdditionalAdvancedMobileUrls   {
   @JsonProperty("advancedMobileUrl")
@@ -29,10 +29,10 @@ public class AdGroupAdServiceAdditionalAdvancedMobileUrls   {
   }
 
   /**
-   * <div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Landing Page URL (Smartphone).<br> This field is required in ADD operation.</div> 
+   * <div lang=\"ja\">スマートフォン向けURLです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Smartphone final URL.<br> This field is required in ADD operation.</div> 
    * @return advancedMobileUrl
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Landing Page URL (Smartphone).<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">スマートフォン向けURLです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Smartphone final URL.<br> This field is required in ADD operation.</div> ")
 
 
   public String getAdvancedMobileUrl() {
