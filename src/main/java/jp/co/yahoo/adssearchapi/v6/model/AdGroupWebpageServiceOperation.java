@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedItemの配信/除外設定を保持します。</div> <div lang=\"en\">AdGroupWebpageServiceOperation object contains the allowed or excluded setting of PageFeedItem which is the target of mutate operation.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupWebpageServiceOperation   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-search-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

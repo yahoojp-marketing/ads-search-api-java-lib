@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">CampaignSharedSetServiceOperationは、操作対象のキャンペーンと共有リストの関連付け情報を保持するオブジェクトです。</div> <div lang=\"en\">CampaignSharedSetServiceOperation is object to hold setup information between campaign and shared list for operation.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignSharedSetServiceOperation   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-search-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

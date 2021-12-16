@@ -337,10 +337,10 @@ public class AdGroup   {
   }
 
   /**
-   * <div lang=\"ja\">広告費用対効果の目標値です。<br> キャンペーンで設定した広告費用対効果の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_ROAS</code>の場合のみ変更可能です。</div> <div lang=\"en\">Target ROAS. <br>  Specify 0 in order to use the Target ROAS specified in the campaign setting. <br>  This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. <br>  *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_ROAS</code>. </div> 
+   * <div lang=\"ja\">広告費用対効果の目標値です。<br> キャンペーンで設定した広告費用対効果の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_ROAS</code>または<code>MAXIMIZE_CONVERSION_VALUE</code>の場合に変更可能です。</div> <div lang=\"en\">Target ROAS. <br>  Specify 0 in order to use the Target ROAS specified in the campaign setting. <br>  This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. <br>  *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_ROAS</code> or <code>MAXIMIZE_CONVERSION_VALUE</code>.</div> 
    * @return targetRoasOverride
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値です。<br> キャンペーンで設定した広告費用対効果の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_ROAS</code>の場合のみ変更可能です。</div> <div lang=\"en\">Target ROAS. <br>  Specify 0 in order to use the Target ROAS specified in the campaign setting. <br>  This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. <br>  *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_ROAS</code>. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値です。<br> キャンペーンで設定した広告費用対効果の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_ROAS</code>または<code>MAXIMIZE_CONVERSION_VALUE</code>の場合に変更可能です。</div> <div lang=\"en\">Target ROAS. <br>  Specify 0 in order to use the Target ROAS specified in the campaign setting. <br>  This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. <br>  *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_ROAS</code> or <code>MAXIMIZE_CONVERSION_VALUE</code>.</div> ")
 
 
   public Double getTargetRoasOverride() {
@@ -357,10 +357,10 @@ public class AdGroup   {
   }
 
   /**
-   * <div lang=\"ja\">コンバージョン単価の目標値です。<br> キャンペーンで設定したコンバージョン単価の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_CPA</code>の場合のみ変更可能です。</div> <div lang=\"en\">Target CPA. <br>  Specify 0 in order to use the Target CPA specified in the campaign setting. <br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_CPA</code>. </div> 
+   * <div lang=\"ja\">コンバージョン単価の目標値です。<br> キャンペーンで設定したコンバージョン単価の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_CPA</code>または<code>MAXIMIZE_CONVERSIONS</code>の場合に変更可能です。</div> <div lang=\"en\">Target CPA. <br>  Specify 0 in order to use the Target CPA specified in the campaign setting. <br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_CPA</code> or <code>MAXIMIZE_CONVERSIONS</code>.</div> 
    * @return targetCpaOverride
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です。<br> キャンペーンで設定したコンバージョン単価の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_CPA</code>の場合のみ変更可能です。</div> <div lang=\"en\">Target CPA. <br>  Specify 0 in order to use the Target CPA specified in the campaign setting. <br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_CPA</code>. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です。<br> キャンペーンで設定したコンバージョン単価の目標値を使用する場合は、0を指定してください。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※キャンペーンのbiddingStrategyTypeが<code>TARGET_CPA</code>または<code>MAXIMIZE_CONVERSIONS</code>の場合に変更可能です。</div> <div lang=\"en\">Target CPA. <br>  Specify 0 in order to use the Target CPA specified in the campaign setting. <br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> *This field can be specified only if biddingStrategyType of campaign is <code>TARGET_CPA</code> or <code>MAXIMIZE_CONVERSIONS</code>.</div> ")
 
 
   public Long getTargetCpaOverride() {

@@ -29,10 +29,10 @@ public class CampaignServiceTargetCpaBiddingScheme   {
   }
 
   /**
-   * <div lang=\"ja\">入札価格の上限です。<br> このフィールドは省略可能となります。その際、デフォルト設定値は0となります。<br> ※「0」が設定された場合、上限設定はありません。</div> <div lang=\"en\">Limit of bid (CPC).<br> This field is optional. The default value will be 0.<br> * No limits if &#34;0&#34; is set.</div> 
+   * <div lang=\"ja\">入札価格の上限です。<br> このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Limit of bid (CPC).<br> Adding and editing this field is obsolete. Currently not available.</div> 
    * @return bidCeiling
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br> このフィールドは省略可能となります。その際、デフォルト設定値は0となります。<br> ※「0」が設定された場合、上限設定はありません。</div> <div lang=\"en\">Limit of bid (CPC).<br> This field is optional. The default value will be 0.<br> * No limits if &#34;0&#34; is set.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br> このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Limit of bid (CPC).<br> Adding and editing this field is obsolete. Currently not available.</div> ")
 
 
   public Long getBidCeiling() {
@@ -49,10 +49,10 @@ public class CampaignServiceTargetCpaBiddingScheme   {
   }
 
   /**
-   * <div lang=\"ja\">入札価格の下限です。<br> このフィールドは省略可能となります。その際、デフォルト設定値は0となります。<br> ※ 設定を解除する場合は「0」を指定します。</div> <div lang=\"en\">Minimum CPC.<br> This field is optional. The default value will be 0.<br> * Set &#34;0&#34; to deactivate.</div> 
+   * <div lang=\"ja\">入札価格の下限です。<br> このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Minimum CPC.<br> Adding and editing this field is obsolete. Currently not available.</div> 
    * @return bidFloor
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の下限です。<br> このフィールドは省略可能となります。その際、デフォルト設定値は0となります。<br> ※ 設定を解除する場合は「0」を指定します。</div> <div lang=\"en\">Minimum CPC.<br> This field is optional. The default value will be 0.<br> * Set &#34;0&#34; to deactivate.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の下限です。<br> このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Minimum CPC.<br> Adding and editing this field is obsolete. Currently not available.</div> ")
 
 
   public Long getBidFloor() {
@@ -69,10 +69,10 @@ public class CampaignServiceTargetCpaBiddingScheme   {
   }
 
   /**
-   * <div lang=\"ja\">コンバージョン単価の目標値です。<br> ADD時およびSET時、このフィールドは必須となります。<br> ※制限値：0 ～ 99999999<br>※日本円のみの設定です。</div> <div lang=\"en\">Target CPA (JPY).<br> This field is required in ADD and SET operation.<br> * Range limit: 0 - 99999999</div> 
+   * <div lang=\"ja\">コンバージョン単価の目標値です。<br> ADD時およびSET時、このフィールドは必須となります。<br> ※制限値：1 ～ 800000<br>※日本円のみの設定です。</div> <div lang=\"en\">Target CPA (JPY).<br> This field is required in ADD and SET operation.<br> * Range limit: 1 - 800000</div> 
    * @return targetCpa
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です。<br> ADD時およびSET時、このフィールドは必須となります。<br> ※制限値：0 ～ 99999999<br>※日本円のみの設定です。</div> <div lang=\"en\">Target CPA (JPY).<br> This field is required in ADD and SET operation.<br> * Range limit: 0 - 99999999</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です。<br> ADD時およびSET時、このフィールドは必須となります。<br> ※制限値：1 ～ 800000<br>※日本円のみの設定です。</div> <div lang=\"en\">Target CPA (JPY).<br> This field is required in ADD and SET operation.<br> * Range limit: 1 - 800000</div> ")
 
 
   public Long getTargetCpa() {

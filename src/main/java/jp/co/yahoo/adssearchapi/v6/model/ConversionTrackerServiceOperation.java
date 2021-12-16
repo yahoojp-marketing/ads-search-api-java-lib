@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョントラッカー情報および操作の内容を表します。</div> <div lang=\"en\">ConversionTrackerServiceOperation object describes ConversionTracker information and operation.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceOperation   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-search-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

@@ -16,6 +16,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceSelectorオブジェクトは、取得する条件を保持します。</div> <div lang=\"en\">AdGroupWebpageServiceSelector object contains the rules to be acquired.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupWebpageServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-search-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

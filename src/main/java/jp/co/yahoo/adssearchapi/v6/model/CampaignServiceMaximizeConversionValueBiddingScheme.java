@@ -9,9 +9,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。&lt;br&gt; ※こちらのフィールドは、現在利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.&lt;br&gt; *This field is currently unavailable.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。&lt;br&gt; ADD時、BiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.&lt;br&gt; This field is required when BiddingStrategyType is &#39;MAXIMIZE_CONVERSION_VALUE&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。<br> ※こちらのフィールドは、現在利用できません。</div> <div lang=\"en\">CampaignServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.<br> *This field is currently unavailable.</div> ")
+@ApiModel(description = "<div lang=\"ja\">CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。<br> ADD時、BiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.<br> This field is required when BiddingStrategyType is 'MAXIMIZE_CONVERSION_VALUE' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceMaximizeConversionValueBiddingScheme   {
   @JsonProperty("targetRoas")

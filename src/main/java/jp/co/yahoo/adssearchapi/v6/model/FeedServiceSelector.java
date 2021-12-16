@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">FeedServiceSelectorオブジェクトは、自動データ挿入のリストの基本情報を格納します。</div> <div lang=\"en\">FeedServiceSelector describes the basic information of list of Data auto insertion.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-search-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 
