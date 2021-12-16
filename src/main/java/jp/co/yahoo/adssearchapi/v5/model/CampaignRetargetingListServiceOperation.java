@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">CampaignRetargetingListServiceOperationオブジェクトは、操作対象となるキャンペーン階層のターゲットリスト設定情報を保持します。</div> <div lang=\"en\">CampaignRetargetingListServiceOperation object holds the setting information of target list on campaign level to be object.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignRetargetingListServiceOperation   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-search-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 
