@@ -93,10 +93,10 @@ public class AppLink   {
   }
 
   /**
-   * <div lang=\"ja\">アプリ計測ベンダーIDです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">App Vendor ID.<br> This field is required in ADD operation.</div> 
+   * <div lang=\"ja\">アプリ計測ベンダーIDです。<br> ADD時、このフィールドは必須となります。<br> ※DictionaryService/getAppLinkVendorで取得できるappVendorIdのみ使用できます。</div> <div lang=\"en\">App Vendor ID.<br> This field is required in ADD operation.<br> *Only the appVendorId that can be obtained with DictionaryService/getAppLinkVendor can be used.</div> 
    * @return appVendorId
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダーIDです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">App Vendor ID.<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダーIDです。<br> ADD時、このフィールドは必須となります。<br> ※DictionaryService/getAppLinkVendorで取得できるappVendorIdのみ使用できます。</div> <div lang=\"en\">App Vendor ID.<br> This field is required in ADD operation.<br> *Only the appVendorId that can be obtained with DictionaryService/getAppLinkVendor can be used.</div> ")
 
 
   public String getAppVendorId() {
