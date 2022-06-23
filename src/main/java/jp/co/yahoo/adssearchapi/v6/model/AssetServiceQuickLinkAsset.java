@@ -83,11 +83,11 @@ public class AssetServiceQuickLinkAsset {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リンクテキストです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Link text.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リンクテキストです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Link text.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return linkText
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リンクテキストです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Link text.<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">リンクテキストです。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Link text.<br> This field is required in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_LINK_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

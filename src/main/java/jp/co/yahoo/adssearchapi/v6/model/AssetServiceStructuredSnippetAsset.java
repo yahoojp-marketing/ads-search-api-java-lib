@@ -62,11 +62,11 @@ public class AssetServiceStructuredSnippetAsset {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ヘッダーです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;header.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ヘッダーです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;header.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return header
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ヘッダーです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">header.<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">ヘッダーです。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">header.<br> This field is required in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_HEADER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,11 +124,11 @@ public class AssetServiceStructuredSnippetAsset {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;バリューです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;value.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;バリューです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;value.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return values
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">バリューです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">value.<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">バリューです。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">value.<br> This field is required in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

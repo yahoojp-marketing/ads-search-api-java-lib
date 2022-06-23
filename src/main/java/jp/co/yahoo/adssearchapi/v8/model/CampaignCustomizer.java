@@ -152,11 +152,11 @@ public class CampaignCustomizer {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;属性値です。挿入用広告に挿入されます。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The attribute value. It will be inserted into the ad for insertion.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;属性値です。挿入用広告に挿入されます。&lt;br&gt; 入力仕様の詳細は以下のヘルプを参照してください。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/search/articledetail?lan&#x3D;ja&amp;aid&#x3D;114459\&quot;&gt;アドカスタマイザー属性を関連付ける&lt;/a&gt;&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The attribute value. It will be inserted into the ad for insertion.&lt;br&gt; See also the help below.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/search/articledetail?lan&#x3D;en&amp;aid&#x3D;61568\&quot;&gt;Associate ad customizer attributes&lt;/a&gt;&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">属性値です。挿入用広告に挿入されます。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">The attribute value. It will be inserted into the ad for insertion.<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">属性値です。挿入用広告に挿入されます。<br> 入力仕様の詳細は以下のヘルプを参照してください。<br> ・<a href=\"https://ads-help.yahoo.co.jp/yahooads/search/articledetail?lan=ja&aid=114459\">アドカスタマイザー属性を関連付ける</a><br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">The attribute value. It will be inserted into the ad for insertion.<br> See also the help below.<br> * <a href=\"https://ads-help.yahoo.co.jp/yahooads/search/articledetail?lan=en&aid=61568\">Associate ad customizer attributes</a><br> This field is required in ADD operation.</div> ")
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

@@ -59,11 +59,11 @@ public class AssetServiceCallAsset {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;電話番号です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Phone Number.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;電話番号です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Phone Number.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return phoneNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">電話番号です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Phone Number.<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">電話番号です。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Phone Number.<br> This field is required in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

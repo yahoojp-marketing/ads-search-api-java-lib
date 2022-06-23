@@ -454,11 +454,11 @@ public class Asset {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※ADD時、assetData.typeがQUICKLINKの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *In ADD operation, If assetData.type is QUICKLINK, this field is required.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; ADDおよびSET時、assetData.typeがQUICKLINKの場合は必須です。&lt;br&gt; assetData.typeがQUICKLINK以外の場合、リクエストの際に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; In ADD and SET operation, If assetData.type is QUICKLINK, this field is required.&lt;br&gt; And will be ignored when assetData.type is the others.&lt;/div&gt; 
    * @return finalUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※ADD時、assetData.typeがQUICKLINKの場合は必須です。</div> <div lang=\"en\">Landing Page URL.<br> This field is optional in ADD and SET operation.<br> *In ADD operation, If assetData.type is QUICKLINK, this field is required.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> ADDおよびSET時、assetData.typeがQUICKLINKの場合は必須です。<br> assetData.typeがQUICKLINK以外の場合、リクエストの際に無視されます。</div> <div lang=\"en\">Landing Page URL.<br> This field is optional in ADD and SET operation.<br> In ADD and SET operation, If assetData.type is QUICKLINK, this field is required.<br> And will be ignored when assetData.type is the others.</div> ")
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

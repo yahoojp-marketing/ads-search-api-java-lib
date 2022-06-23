@@ -47,7 +47,7 @@ public class PageFeedAssetSetServiceSelector {
   private List<Long> pageFeedAssetSetIds = null;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
-  private Integer numberResults = 100;
+  private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
@@ -126,6 +126,7 @@ public class PageFeedAssetSetServiceSelector {
    /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページの最大件数です。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.&lt;/div&gt; 
    * minimum: 1
+   * maximum: 500
    * @return numberResults
   **/
   @javax.annotation.Nullable

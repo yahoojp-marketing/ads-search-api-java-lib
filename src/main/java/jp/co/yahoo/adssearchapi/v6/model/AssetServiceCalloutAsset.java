@@ -67,11 +67,11 @@ public class AssetServiceCalloutAsset {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コールアウトテキストです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Callout text.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コールアウトテキストです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Callout text.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return calloutText
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コールアウトテキストです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Callout text.<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">コールアウトテキストです。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Callout text.<br> This field is required in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_CALLOUT_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
