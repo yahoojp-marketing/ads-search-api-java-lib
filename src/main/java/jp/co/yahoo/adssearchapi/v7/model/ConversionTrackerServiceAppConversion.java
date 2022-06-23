@@ -98,11 +98,11 @@ public class ConversionTrackerServiceAppConversion {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application ID.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SET時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application ID.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET operation.&lt;/div&gt; 
    * @return appId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">Application ID.<br> This field is optional in any cases.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。<br> このフィールドは、ADD時に省略可能となり、SET時は無視されます。</div> <div lang=\"en\">Application ID.<br> This field is optional in ADD operation, and will be ignored in SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
