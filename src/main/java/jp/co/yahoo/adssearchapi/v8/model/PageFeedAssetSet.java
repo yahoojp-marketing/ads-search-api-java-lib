@@ -31,6 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @ApiModel(description = "<div lang=\"ja\">PageFeedAssetSetオブジェクトは、ページフィードアセットセットの情報を格納します。</div> <div lang=\"en\">PageFeedAssetSet object stores page feed asset set information.</div> ")
 @JsonPropertyOrder({
   PageFeedAssetSet.JSON_PROPERTY_ACCOUNT_ID,
+  PageFeedAssetSet.JSON_PROPERTY_FEED_ID,
   PageFeedAssetSet.JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID,
   PageFeedAssetSet.JSON_PROPERTY_PAGE_FEED_ASSET_SET_NAME,
   PageFeedAssetSet.JSON_PROPERTY_DOMAIN
@@ -40,6 +41,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class PageFeedAssetSet {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
+
+  public static final String JSON_PROPERTY_FEED_ID = "feedId";
+  private Long feedId;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID = "pageFeedAssetSetId";
   private Long pageFeedAssetSetId;
@@ -77,6 +81,33 @@ public class PageFeedAssetSet {
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+
+  public PageFeedAssetSet feedId(Long feedId) {
+    
+    this.feedId = feedId;
+    return this;
+  }
+
+   /**
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードIDです。&lt;br&gt; 旧形式から自動移行されたページフィードの場合、旧形式のページフィードのIDが返却されます。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;br&gt; If the page feed is auto-migrated, the old-style page feed ID will be returned.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
+   * @return feedId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> 旧形式から自動移行されたページフィードの場合、旧形式のページフィードのIDが返却されます。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Feed ID.<br> If the page feed is auto-migrated, the old-style page feed ID will be returned.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Long getFeedId() {
+    return feedId;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setFeedId(Long feedId) {
+    this.feedId = feedId;
   }
 
 
@@ -171,6 +202,7 @@ public class PageFeedAssetSet {
     }
     PageFeedAssetSet pageFeedAssetSet = (PageFeedAssetSet) o;
     return Objects.equals(this.accountId, pageFeedAssetSet.accountId) &&
+        Objects.equals(this.feedId, pageFeedAssetSet.feedId) &&
         Objects.equals(this.pageFeedAssetSetId, pageFeedAssetSet.pageFeedAssetSetId) &&
         Objects.equals(this.pageFeedAssetSetName, pageFeedAssetSet.pageFeedAssetSetName) &&
         Objects.equals(this.domain, pageFeedAssetSet.domain);
@@ -178,7 +210,7 @@ public class PageFeedAssetSet {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, pageFeedAssetSetId, pageFeedAssetSetName, domain);
+    return Objects.hash(accountId, feedId, pageFeedAssetSetId, pageFeedAssetSetName, domain);
   }
 
   @Override
@@ -186,6 +218,7 @@ public class PageFeedAssetSet {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageFeedAssetSet {\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    feedId: ").append(toIndentedString(feedId)).append("\n");
     sb.append("    pageFeedAssetSetId: ").append(toIndentedString(pageFeedAssetSetId)).append("\n");
     sb.append("    pageFeedAssetSetName: ").append(toIndentedString(pageFeedAssetSetName)).append("\n");
     sb.append("    domain: ").append(toIndentedString(domain)).append("\n");

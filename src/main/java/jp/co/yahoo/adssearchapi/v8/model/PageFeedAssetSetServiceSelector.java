@@ -33,6 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @ApiModel(description = "<div lang=\"ja\">PageFeedAssetSetServiceSelectorオブジェクトは、ページフィードアセットセットの検索条件を格納します。</div> <div lang=\"en\">PageFeedAssetSetServiceSelector object stores the search criteria for a page feed asset set.</div> ")
 @JsonPropertyOrder({
   PageFeedAssetSetServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
+  PageFeedAssetSetServiceSelector.JSON_PROPERTY_FEED_IDS,
   PageFeedAssetSetServiceSelector.JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS,
   PageFeedAssetSetServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   PageFeedAssetSetServiceSelector.JSON_PROPERTY_START_INDEX
@@ -42,6 +43,9 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 public class PageFeedAssetSetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
+
+  public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
+  private List<Long> feedIds = null;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS = "pageFeedAssetSetIds";
   private List<Long> pageFeedAssetSetIds = null;
@@ -79,6 +83,41 @@ public class PageFeedAssetSetServiceSelector {
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+
+  public PageFeedAssetSetServiceSelector feedIds(List<Long> feedIds) {
+    
+    this.feedIds = feedIds;
+    return this;
+  }
+
+  public PageFeedAssetSetServiceSelector addFeedIdsItem(Long feedIdsItem) {
+    if (this.feedIds == null) {
+      this.feedIds = new ArrayList<>();
+    }
+    this.feedIds.add(feedIdsItem);
+    return this;
+  }
+
+   /**
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードIDです。&lt;br&gt; 旧形式のページフィードです。旧形式から自動移行されたページフィードを検索します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;br&gt; It is in the previous format and searches the migrated page feeds.&lt;/div&gt; 
+   * @return feedIds
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> 旧形式のページフィードです。旧形式から自動移行されたページフィードを検索します。</div> <div lang=\"en\">Feed ID.<br> It is in the previous format and searches the migrated page feeds.</div> ")
+  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public List<Long> getFeedIds() {
+    return feedIds;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setFeedIds(List<Long> feedIds) {
+    this.feedIds = feedIds;
   }
 
 
@@ -184,6 +223,7 @@ public class PageFeedAssetSetServiceSelector {
     }
     PageFeedAssetSetServiceSelector pageFeedAssetSetServiceSelector = (PageFeedAssetSetServiceSelector) o;
     return Objects.equals(this.accountId, pageFeedAssetSetServiceSelector.accountId) &&
+        Objects.equals(this.feedIds, pageFeedAssetSetServiceSelector.feedIds) &&
         Objects.equals(this.pageFeedAssetSetIds, pageFeedAssetSetServiceSelector.pageFeedAssetSetIds) &&
         Objects.equals(this.numberResults, pageFeedAssetSetServiceSelector.numberResults) &&
         Objects.equals(this.startIndex, pageFeedAssetSetServiceSelector.startIndex);
@@ -191,7 +231,7 @@ public class PageFeedAssetSetServiceSelector {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, pageFeedAssetSetIds, numberResults, startIndex);
+    return Objects.hash(accountId, feedIds, pageFeedAssetSetIds, numberResults, startIndex);
   }
 
   @Override
@@ -199,6 +239,7 @@ public class PageFeedAssetSetServiceSelector {
     StringBuilder sb = new StringBuilder();
     sb.append("class PageFeedAssetSetServiceSelector {\n");
     sb.append("    accountId: ").append(toIndentedString(accountId)).append("\n");
+    sb.append("    feedIds: ").append(toIndentedString(feedIds)).append("\n");
     sb.append("    pageFeedAssetSetIds: ").append(toIndentedString(pageFeedAssetSetIds)).append("\n");
     sb.append("    numberResults: ").append(toIndentedString(numberResults)).append("\n");
     sb.append("    startIndex: ").append(toIndentedString(startIndex)).append("\n");
