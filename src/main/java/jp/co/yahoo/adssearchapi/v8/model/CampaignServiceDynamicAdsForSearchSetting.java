@@ -106,11 +106,11 @@ public class CampaignServiceDynamicAdsForSearchSetting {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   キャンペーンで使用するページフィードアセットセットIDです。&lt;br&gt;   ※こちらのフィールドは、現在利用できません。&lt;br&gt;   ADD時およびSET時、DasUseUrlsTypeがUSE_SUPPLIED_URLS_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、feedIdsフィールドもしくはpageFeedAssetSetIdsフィールドのどちらか片方の設定が必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   PageFeedAssetSet ID for campaign.&lt;br&gt;   *This type is currently unavailable.&lt;br&gt;   In ADD and SET operation, If DasUseUrlsType is USE_SUPPLIED_URLS_ONLY or DOMAIN_AND_SUPPLIED_URLS, either the feedIds field or the pageFeedAssetSetIds field must be set. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   キャンペーンで使用するページフィードアセットセットIDです。&lt;br&gt;   ADD時およびSET時、DasUseUrlsTypeがUSE_SUPPLIED_URLS_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、feedIdsフィールドもしくはpageFeedAssetSetIdsフィールドのどちらか片方の設定が必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   PageFeedAssetSet ID for campaign.&lt;br&gt;   In ADD and SET operation, If DasUseUrlsType is USE_SUPPLIED_URLS_ONLY or DOMAIN_AND_SUPPLIED_URLS, either the feedIds field or the pageFeedAssetSetIds field must be set. &lt;/div&gt; 
    * @return pageFeedAssetSetIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   キャンペーンで使用するページフィードアセットセットIDです。<br>   ※こちらのフィールドは、現在利用できません。<br>   ADD時およびSET時、DasUseUrlsTypeがUSE_SUPPLIED_URLS_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、feedIdsフィールドもしくはpageFeedAssetSetIdsフィールドのどちらか片方の設定が必須となります。 </div> <div lang=\"en\">   PageFeedAssetSet ID for campaign.<br>   *This type is currently unavailable.<br>   In ADD and SET operation, If DasUseUrlsType is USE_SUPPLIED_URLS_ONLY or DOMAIN_AND_SUPPLIED_URLS, either the feedIds field or the pageFeedAssetSetIds field must be set. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">   キャンペーンで使用するページフィードアセットセットIDです。<br>   ADD時およびSET時、DasUseUrlsTypeがUSE_SUPPLIED_URLS_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、feedIdsフィールドもしくはpageFeedAssetSetIdsフィールドのどちらか片方の設定が必須となります。 </div> <div lang=\"en\">   PageFeedAssetSet ID for campaign.<br>   In ADD and SET operation, If DasUseUrlsType is USE_SUPPLIED_URLS_ONLY or DOMAIN_AND_SUPPLIED_URLS, either the feedIds field or the pageFeedAssetSetIds field must be set. </div> ")
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
