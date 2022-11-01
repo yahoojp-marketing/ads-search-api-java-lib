@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServicePageオブジェクトは、取得されるPageFeedItemの除外設定に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServicePage object describes entry on exclusion setting of acquired PageFeedItem.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServicePageオブジェクトは、取得されるPageFeedAssetの除外設定に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServicePage object describes entry on exclusion setting of acquired PageFeedAsset.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServicePageオブジェクトは、取得されるPageFeedItemの除外設定に関するエントリーを表します。</div> <div lang=\"en\">CampaignWebpageServicePage object describes entry on exclusion setting of acquired PageFeedItem.</div> ")
+@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServicePageオブジェクトは、取得されるPageFeedAssetの除外設定に関するエントリーを表します。</div> <div lang=\"en\">CampaignWebpageServicePage object describes entry on exclusion setting of acquired PageFeedAsset.</div> ")
 @JsonPropertyOrder({
   CampaignWebpageServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   CampaignWebpageServicePage.JSON_PROPERTY_VALUES

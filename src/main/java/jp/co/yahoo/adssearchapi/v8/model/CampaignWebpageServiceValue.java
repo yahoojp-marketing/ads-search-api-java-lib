@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceValueオブジェクトは、操作結果を含むPageFeedItemの除外設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceValue object describes excluded settings including operation result.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceValueオブジェクトは、操作結果を含むPageFeedAssetの除外設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceValue object describes excluded settings including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceValueオブジェクトは、操作結果を含むPageFeedItemの除外設定を表します。</div> <div lang=\"en\">CampaignWebpageServiceValue object describes excluded settings including operation result.</div> ")
+@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceValueオブジェクトは、操作結果を含むPageFeedAssetの除外設定を表します。</div> <div lang=\"en\">CampaignWebpageServiceValue object describes excluded settings including operation result.</div> ")
 @JsonPropertyOrder({
   CampaignWebpageServiceValue.JSON_PROPERTY_CAMPAIGN_WEBPAGE,
   CampaignWebpageServiceValue.JSON_PROPERTY_ERRORS,
