@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedItemの配信/除外設定を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceOperation object contains the allowed or excluded setting of PageFeedItem which is the target of mutate operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedAssetの配信/除外設定を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceOperation object contains the allowed or excluded setting of PageFeedAsset which is the target of mutate operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedItemの配信/除外設定を保持します。</div> <div lang=\"en\">AdGroupWebpageServiceOperation object contains the allowed or excluded setting of PageFeedItem which is the target of mutate operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedAssetの配信/除外設定を保持します。</div> <div lang=\"en\">AdGroupWebpageServiceOperation object contains the allowed or excluded setting of PageFeedAsset which is the target of mutate operation.</div> ")
 @JsonPropertyOrder({
   AdGroupWebpageServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupWebpageServiceOperation.JSON_PROPERTY_OPERAND

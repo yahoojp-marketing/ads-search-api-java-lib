@@ -67,11 +67,11 @@ public class CampaignServiceDynamicAdsForSearchSetting {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   キャンペーンで使用するページフィードIDです。&lt;br&gt;   ADD時およびSET時、DasUseUrlsTypeがUSE_SUPPLIED_URLS_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、このフィールドは必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Page Feed ID for campaign.&lt;br&gt;   If DasUseUrlsType is USE_SUPPLIED_URLS_ONLY or DOMAIN_AND_SUPPLIED_URLS, this field is required in ADD and SET operation. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   キャンペーンで使用するページフィードIDです。&lt;br&gt;   ※現在このフィールドは参照のみ可能です。ページフィードを設定する場合は、v8以降のバージョンをご利用ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Page Feed ID for campaign.&lt;br&gt;   *Currently, this field is read-only. To set up page feeds, please use v8 or later version. &lt;/div&gt; 
    * @return feedIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   キャンペーンで使用するページフィードIDです。<br>   ADD時およびSET時、DasUseUrlsTypeがUSE_SUPPLIED_URLS_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、このフィールドは必須となります。 </div> <div lang=\"en\">   Page Feed ID for campaign.<br>   If DasUseUrlsType is USE_SUPPLIED_URLS_ONLY or DOMAIN_AND_SUPPLIED_URLS, this field is required in ADD and SET operation. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">   キャンペーンで使用するページフィードIDです。<br>   ※現在このフィールドは参照のみ可能です。ページフィードを設定する場合は、v8以降のバージョンをご利用ください。 </div> <div lang=\"en\">   Page Feed ID for campaign.<br>   *Currently, this field is read-only. To set up page feeds, please use v8 or later version. </div> ")
   @JsonProperty(JSON_PROPERTY_FEED_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

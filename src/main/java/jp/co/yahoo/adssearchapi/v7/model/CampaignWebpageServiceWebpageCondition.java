@@ -58,11 +58,11 @@ public class CampaignWebpageServiceWebpageCondition {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件の設定値(正規表現の指定可)です。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of rule setting. ∗ Can specify regular expression.&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件の設定値です。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of rule setting.&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return argument
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">条件の設定値(正規表現の指定可)です。<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。</div> <div lang=\"en\">Value of rule setting. ∗ Can specify regular expression.<br> This field is required in ADD operation, and will be ignored in REMOVE operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">条件の設定値です。<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。</div> <div lang=\"en\">Value of rule setting.<br> This field is required in ADD operation, and will be ignored in REMOVE operation.</div> ")
   @JsonProperty(JSON_PROPERTY_ARGUMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

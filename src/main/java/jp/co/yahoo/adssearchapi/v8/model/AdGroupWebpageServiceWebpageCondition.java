@@ -58,11 +58,11 @@ public class AdGroupWebpageServiceWebpageCondition {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件の設定値(正規表現の指定可)です。&lt;br&gt;ADD時、このフィールドは必須です。※typeがALL_PAGESの場合は省略可能となります。SET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of rule setting (Can specify regular expression)&lt;br&gt;This field is required in ADD operation, and will be ignored in SET operation. *If type is &#39;ALL_PAGES&#39;, this field is optional in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件の設定値です。&lt;br&gt;ADD時、このフィールドは必須です。※typeがALL_PAGESの場合は省略可能となります。SET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of rule setting.&lt;br&gt;This field is required in ADD operation, and will be ignored in SET operation. *If type is &#39;ALL_PAGES&#39;, this field is optional in ADD operation.&lt;/div&gt; 
    * @return argument
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">条件の設定値(正規表現の指定可)です。<br>ADD時、このフィールドは必須です。※typeがALL_PAGESの場合は省略可能となります。SET時、このフィールドは無視されます。</div> <div lang=\"en\">Value of rule setting (Can specify regular expression)<br>This field is required in ADD operation, and will be ignored in SET operation. *If type is 'ALL_PAGES', this field is optional in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">条件の設定値です。<br>ADD時、このフィールドは必須です。※typeがALL_PAGESの場合は省略可能となります。SET時、このフィールドは無視されます。</div> <div lang=\"en\">Value of rule setting.<br>This field is required in ADD operation, and will be ignored in SET operation. *If type is 'ALL_PAGES', this field is optional in ADD operation.</div> ")
   @JsonProperty(JSON_PROPERTY_ARGUMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

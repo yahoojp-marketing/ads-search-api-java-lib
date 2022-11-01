@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceValueオブジェクトは、操作結果を含むPageFeedItemの配信/除外設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceValue object describes allowed or excluded settings including operation result.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceValueオブジェクトは、操作結果を含むPageFeedAssetの配信/除外設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceValue object describes allowed or excluded settings including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceValueオブジェクトは、操作結果を含むPageFeedItemの配信/除外設定を表します。</div> <div lang=\"en\">AdGroupWebpageServiceValue object describes allowed or excluded settings including operation result.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceValueオブジェクトは、操作結果を含むPageFeedAssetの配信/除外設定を表します。</div> <div lang=\"en\">AdGroupWebpageServiceValue object describes allowed or excluded settings including operation result.</div> ")
 @JsonPropertyOrder({
   AdGroupWebpageServiceValue.JSON_PROPERTY_AD_GROUP_WEBPAGE,
   AdGroupWebpageServiceValue.JSON_PROPERTY_ERRORS,
