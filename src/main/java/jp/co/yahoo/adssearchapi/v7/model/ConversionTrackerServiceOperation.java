@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョントラッカー情報および操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceOperation object describes ConversionTracker information and operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョン設定および操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceOperation object describes ConversionTracker settings and operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョントラッカー情報および操作の内容を表します。</div> <div lang=\"en\">ConversionTrackerServiceOperation object describes ConversionTracker information and operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョン設定および操作の内容を表します。</div> <div lang=\"en\">ConversionTrackerServiceOperation object describes ConversionTracker settings and operation.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   ConversionTrackerServiceOperation.JSON_PROPERTY_OPERAND

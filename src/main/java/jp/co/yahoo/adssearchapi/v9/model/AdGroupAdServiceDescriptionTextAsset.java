@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceDescriptionTextAssetは、レスポンシブ広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceDescriptionTextAsset displays the text asset for the description that specify in responsive ad.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceDescriptionTextAssetは、レスポンシブ検索広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceDescriptionTextAsset displays the text asset for the description that specify in responsive ads for search.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceDescriptionTextAssetは、レスポンシブ広告で指定する説明文のテキストアセットを表します。<br> descriptions[]には、2~4件の指定が可能です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceDescriptionTextAsset displays the text asset for the description that specify in responsive ad.<br> 2 to 4 items can be specified for descriptions[].<br> This field is required in ADD operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceDescriptionTextAssetは、レスポンシブ検索広告で指定する説明文のテキストアセットを表します。<br> descriptions[]には、2~4件の指定が可能です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceDescriptionTextAsset displays the text asset for the description that specify in responsive ads for search.<br> 2 to 4 items can be specified for descriptions[].<br> This field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceDescriptionTextAsset.JSON_PROPERTY_TEXT,
   AdGroupAdServiceDescriptionTextAsset.JSON_PROPERTY_PINNED_FIELD,

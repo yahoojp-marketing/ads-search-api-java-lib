@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServicePageオブジェクトは、取得されるコンバージョントラッカー情報のエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServicePage object shows entry of ConversionTracker.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServicePageオブジェクトは、取得されるコンバージョン設定のエントリーを表しますす。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServicePage object shows entry of ConversionTracker.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServicePageオブジェクトは、取得されるコンバージョントラッカー情報のエントリーを表します。</div> <div lang=\"en\">ConversionTrackerServicePage object shows entry of ConversionTracker.</div> ")
+@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServicePageオブジェクトは、取得されるコンバージョン設定のエントリーを表しますす。</div> <div lang=\"en\">ConversionTrackerServicePage object shows entry of ConversionTracker.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServicePage.JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE,
   ConversionTrackerServicePage.JSON_PROPERTY_TOTAL_ALL_CONVERSIONS,

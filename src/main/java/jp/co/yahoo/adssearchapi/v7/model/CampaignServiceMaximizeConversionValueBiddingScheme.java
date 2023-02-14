@@ -48,11 +48,11 @@ public class CampaignServiceMaximizeConversionValueBiddingScheme {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告費用対効果の目標値です。&lt;br&gt; 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。&lt;br&gt; ADD時およびSET時、このフィールドは必須となります。&lt;br&gt; ※ROAS:Return On Advertising Spend&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target ROAS (Return On Advertising Spend)&lt;br&gt; * Limit range: 0.01 - 1000.00 (1% - 100000%)&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告費用対効果の目標値です。&lt;br&gt; 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。&lt;br&gt; ※ROAS:Return On Advertising Spend&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target ROAS (Return On Advertising Spend)&lt;br&gt; * Limit range: 0.01 - 1000.00 (1% - 100000%)&lt;/div&gt; 
    * @return targetRoas
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値です。<br> 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。<br> ADD時およびSET時、このフィールドは必須となります。<br> ※ROAS:Return On Advertising Spend</div> <div lang=\"en\">Target ROAS (Return On Advertising Spend)<br> * Limit range: 0.01 - 1000.00 (1% - 100000%)<br> This field is required in ADD and SET operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値です。<br> 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。<br> ※ROAS:Return On Advertising Spend</div> <div lang=\"en\">Target ROAS (Return On Advertising Spend)<br> * Limit range: 0.01 - 1000.00 (1% - 100000%)</div> ")
   @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
