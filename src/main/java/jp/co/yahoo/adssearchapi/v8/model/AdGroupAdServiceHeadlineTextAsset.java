@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceHeadlineTextAssetは、レスポンシブ広告で指定するタイトルのテキストアセットを表します。&lt;br&gt; headlines[]には、3~15件の指定が可能です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceHeadlineTextAsset displays the text asset for the headline that specify in responsive ad.&lt;br&gt; 3 to 15 items can be specified for headlines[].&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceHeadlineTextAssetは、レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。&lt;br&gt; headlines[]には、3~15件の指定が可能です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceHeadlineTextAsset displays the text asset for the headline that specify in responsive ads for search.&lt;br&gt; 3 to 15 items can be specified for headlines[].&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceHeadlineTextAssetは、レスポンシブ広告で指定するタイトルのテキストアセットを表します。<br> headlines[]には、3~15件の指定が可能です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceHeadlineTextAsset displays the text asset for the headline that specify in responsive ad.<br> 3 to 15 items can be specified for headlines[].<br> This field is required in ADD operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceHeadlineTextAssetは、レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。<br> headlines[]には、3~15件の指定が可能です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceHeadlineTextAsset displays the text asset for the headline that specify in responsive ads for search.<br> 3 to 15 items can be specified for headlines[].<br> This field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceHeadlineTextAsset.JSON_PROPERTY_TEXT,
   AdGroupAdServiceHeadlineTextAsset.JSON_PROPERTY_PINNED_FIELD,

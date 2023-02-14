@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by  tag.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by  tag.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by  tag.</div> ")
+@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by  tag.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID,
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_APP_VENDOR_ID,

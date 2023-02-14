@@ -91,11 +91,11 @@ public class PageFeedAssetSet {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードIDです。&lt;br&gt; 旧形式から自動移行されたページフィードの場合、旧形式のページフィードのIDが返却されます。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;br&gt; If the page feed is auto-migrated, the old-style page feed ID will be returned.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードIDです。&lt;br&gt; 旧形式から自動移行されたページフィードの場合、旧形式のページフィードのIDが返却されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;br&gt; If the page feed is auto-migrated, the old-style page feed ID will be returned.&lt;br&gt; *Currently this field will not be returned.&lt;/div&gt; 
    * @return feedId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> 旧形式から自動移行されたページフィードの場合、旧形式のページフィードのIDが返却されます。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Feed ID.<br> If the page feed is auto-migrated, the old-style page feed ID will be returned.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> 旧形式から自動移行されたページフィードの場合、旧形式のページフィードのIDが返却されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">Feed ID.<br> If the page feed is auto-migrated, the old-style page feed ID will be returned.<br> *Currently this field will not be returned.</div> ")
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

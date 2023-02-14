@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppLinkConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by tag.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppLinkConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by tag.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppLinkConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョントラッカー情報を表します。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker information such as App ConversionTag and performance data by tag.<br> This field is optional in ADD operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppLinkConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by tag.<br> This field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceAppLinkConversion.JSON_PROPERTY_APP_VENDOR_ID,
   ConversionTrackerServiceAppLinkConversion.JSON_PROPERTY_APP_ID,

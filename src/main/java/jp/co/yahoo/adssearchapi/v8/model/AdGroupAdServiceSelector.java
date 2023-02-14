@@ -336,11 +336,11 @@ public class AdGroupAdServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ラベルID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Label ID&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ラベルID。&lt;br&gt; ※labelIdsを指定する場合は、containsLabelIdをTRUEにする必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Label ID.&lt;br&gt; *To specify labelIds, must be containsLabelId set TRUE.&lt;/div&gt; 
    * @return labelIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ラベルID</div> <div lang=\"en\">Search condition: Label ID</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ラベルID。<br> ※labelIdsを指定する場合は、containsLabelIdをTRUEにする必要があります。</div> <div lang=\"en\">Search condition: Label ID.<br> *To specify labelIds, must be containsLabelId set TRUE.</div> ")
   @JsonProperty(JSON_PROPERTY_LABEL_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
