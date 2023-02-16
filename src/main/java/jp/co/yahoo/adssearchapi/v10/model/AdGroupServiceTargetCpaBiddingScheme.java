@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceTargetCpaBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; ADD時、BiddingStrategyTypeがTARGET_CPAの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceTargetCpaBiddingScheme object displays Auto Bidding setting for Target CPA.&lt;br&gt; This field is required when BiddingStrategyType is &#39;TARGET_CPA&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceTargetCpaBiddingSchemeオブジェクトは、広告グループ目標単価（tCPA）の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceTargetCpaBiddingScheme object holds configuration information of Target CPA (tCPA) of ad group. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceTargetCpaBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）<br> ADD時、BiddingStrategyTypeがTARGET_CPAの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">AdGroupServiceTargetCpaBiddingScheme object displays Auto Bidding setting for Target CPA.<br> This field is required when BiddingStrategyType is 'TARGET_CPA' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceTargetCpaBiddingSchemeオブジェクトは、広告グループ目標単価（tCPA）の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceTargetCpaBiddingScheme object holds configuration information of Target CPA (tCPA) of ad group. </div> ")
 @JsonPropertyOrder({
   AdGroupServiceTargetCpaBiddingScheme.JSON_PROPERTY_TARGET_CPA,
   AdGroupServiceTargetCpaBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_CPA
@@ -53,11 +53,11 @@ public class AdGroupServiceTargetCpaBiddingScheme {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン単価の目標値です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※制限値：1 ～ 800000&lt;br&gt;※日本円のみの設定です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target CPA (JPY).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; * Range limit: 1 - 800000&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ目標単価（tCPA）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※制限値：1 ～ 800000&lt;br&gt; ※日本円のみの設定です。&lt;br&gt; ※campaignBiddingStrategyTypeがTARGET_CPAの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target CPA (tCPA) of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *Range limit: 1 - 800000&lt;br&gt; *JPY only.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is TARGET_CPA. &lt;/div&gt; 
    * @return targetCpa
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※制限値：1 ～ 800000<br>※日本円のみの設定です。</div> <div lang=\"en\">Target CPA (JPY).<br> This field is optional in ADD and SET operation.<br> * Range limit: 1 - 800000</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ目標単価（tCPA）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※制限値：1 ～ 800000<br> ※日本円のみの設定です。<br> ※campaignBiddingStrategyTypeがTARGET_CPAの場合のみ指定可能です。 </div> <div lang=\"en\"> Target CPA (tCPA) of ad group.<br> This field is optional in ADD and SET operation.<br> *Range limit: 1 - 800000<br> *JPY only.<br> *This can only be specified when campaignBiddingStrategyType is TARGET_CPA. </div> ")
   @JsonProperty(JSON_PROPERTY_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

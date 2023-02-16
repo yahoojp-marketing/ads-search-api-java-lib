@@ -32,9 +32,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceBiddingScheme object displays the details of Auto Bidding setting.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceBiddingScheme object displays the details of Auto Bidding setting.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">AdGroupServiceBiddingScheme object displays the details of Auto Bidding setting.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）<br> </div> <div lang=\"en\">AdGroupServiceBiddingScheme object displays the details of Auto Bidding setting.<br> </div> ")
 @JsonPropertyOrder({
   AdGroupServiceBiddingScheme.JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TYPE,
   AdGroupServiceBiddingScheme.JSON_PROPERTY_CPC_BIDDING_SCHEME,

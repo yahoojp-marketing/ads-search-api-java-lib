@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceBiddingStrategyConfigurationオブジェクトは、自動入札設定方法を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceBiddingStrategyConfiguration object describes Auto Bidding setting.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceBiddingStrategyConfigurationオブジェクトは、自動入札設定方法を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceBiddingStrategyConfiguration object describes Auto Bidding setting.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceBiddingStrategyConfigurationオブジェクトは、自動入札設定方法を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">AdGroupServiceBiddingStrategyConfiguration object describes Auto Bidding setting.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupServiceBiddingStrategyConfigurationオブジェクトは、自動入札設定方法を表します。<br> </div> <div lang=\"en\">AdGroupServiceBiddingStrategyConfiguration object describes Auto Bidding setting.<br> </div> ")
 @JsonPropertyOrder({
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_BIDDING_SCHEME,
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_PORTFOLIO_BIDDING_ID,
