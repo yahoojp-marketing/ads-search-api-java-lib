@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告グループ費用対効果（tROAS）の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingScheme object holds configuration information of Target ROAS (tROAS) of ad group. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">AdGroupServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告グループ費用対効果（tROAS）の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceMaximizeConversionValueBiddingScheme object holds configuration information of Target ROAS (tROAS) of ad group. </div> ")
 @JsonPropertyOrder({
   AdGroupServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_TARGET_ROAS,
   AdGroupServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_ROAS
@@ -53,11 +53,11 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告費用対効果の目標値です。&lt;br&gt; 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。&lt;br&gt; ※ROAS:Return On Advertising Spend&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target ROAS (Return On Advertising Spend)&lt;br&gt; * Limit range: 0.01 - 1000.00 (1% - 100000%)&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ費用対効果（tROAS）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ROAS (tROAS) of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *Limit range: 0.01 - 1000.00 (1% - 100000%)&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. &lt;/div&gt; 
    * @return targetRoas
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値です。<br> 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。<br> ※ROAS:Return On Advertising Spend</div> <div lang=\"en\">Target ROAS (Return On Advertising Spend)<br> * Limit range: 0.01 - 1000.00 (1% - 100000%)</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ費用対効果（tROAS）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。<br> ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合のみ指定可能です。 </div> <div lang=\"en\"> Target ROAS (tROAS) of ad group.<br> This field is optional in ADD and SET operation.<br> *Limit range: 0.01 - 1000.00 (1% - 100000%)<br> *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. </div> ")
   @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

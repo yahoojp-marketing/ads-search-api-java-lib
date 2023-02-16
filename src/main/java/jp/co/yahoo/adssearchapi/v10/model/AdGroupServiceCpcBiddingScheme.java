@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceCpcBiddingSchemeオブジェクトは、手動入札の設定情報を表します。&lt;br&gt; ADD時、BiddingStrategyTypeがCPCの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceCpcBiddingScheme object displays a setting of Manual Bid.&lt;br&gt; This field is required when BiddingStrategyType is &#39;CPC&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceCpcBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPC)の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpcBiddingScheme object holds configuration information of Max bid of ad group (CPC). &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceCpcBiddingSchemeオブジェクトは、手動入札の設定情報を表します。<br> ADD時、BiddingStrategyTypeがCPCの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">AdGroupServiceCpcBiddingScheme object displays a setting of Manual Bid.<br> This field is required when BiddingStrategyType is 'CPC' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceCpcBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPC)の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceCpcBiddingScheme object holds configuration information of Max bid of ad group (CPC). </div> ")
 @JsonPropertyOrder({
   AdGroupServiceCpcBiddingScheme.JSON_PROPERTY_CPC
 })

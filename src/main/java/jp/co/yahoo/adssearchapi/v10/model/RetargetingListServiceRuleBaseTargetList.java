@@ -69,11 +69,11 @@ public class RetargetingListServiceRuleBaseTargetList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用終了日です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; isDateSpecificがTRUEである場合、ADDおよびSET時に必須となります。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of rule setting.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If isDateSpecific is TRUE, this field  is required in ADD and SET operation.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用終了日です。&lt;br&gt; ※このフィールドの追加と編集は廃止され、現在設定できません。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of rule setting.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return endDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ルール適用終了日です。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> isDateSpecificがTRUEである場合、ADDおよびSET時に必須となります。<br> ※YYYYMMDD形式です。<br> ※リクエスト日は2037/12/30まで 指定可能です。</div> <div lang=\"en\">End date of rule setting.<br> This field is optional in ADD and SET operation.<br> If isDateSpecific is TRUE, this field  is required in ADD and SET operation.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">ルール適用終了日です。<br> ※このフィールドの追加と編集は廃止され、現在設定できません。<br> ※YYYYMMDD形式です。<br> ※リクエスト日は2037/12/30まで 指定可能です。</div> <div lang=\"en\">End date of rule setting.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30<br> *Adding and editing this field is obsolete. Currently not available.</div> ")
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,11 +185,11 @@ public class RetargetingListServiceRuleBaseTargetList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用開始日です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; isDateSpecificがTRUEである場合、ADDおよびSET時に必須となります。 &lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt;※リクエスト日は2037/12/30まで 指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of rule setting.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If isDateSpecific is TRUE, this field is  required in ADD and SET operation.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30 &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用開始日です。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt;※リクエスト日は2037/12/30まで 指定可能です。&lt;br&gt; ※このフィールドの追加と編集は廃止され、現在設定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of rule setting.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return startDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ルール適用開始日です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> isDateSpecificがTRUEである場合、ADDおよびSET時に必須となります。 <br> ※YYYYMMDD形式です。<br>※リクエスト日は2037/12/30まで 指定可能です。</div> <div lang=\"en\">Start date of rule setting.<br> This field is optional in ADD and SET operation.<br> If isDateSpecific is TRUE, this field is  required in ADD and SET operation.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30 </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">ルール適用開始日です。<br> ※YYYYMMDD形式です。<br>※リクエスト日は2037/12/30まで 指定可能です。<br> ※このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Start date of rule setting.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30<br> *Adding and editing this field is obsolete. Currently not available.</div> ")
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
