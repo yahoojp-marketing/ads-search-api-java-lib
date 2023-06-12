@@ -52,11 +52,11 @@ public class AdGroupAdServiceCustomParameter {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーです。&lt;br&gt;このフィールドは、ADD時は必須となり、SET時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Key of parameter.&lt;br&gt;Key of parameter.&lt;br&gt;This field is required in ADD operation, and will be ignored in SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーです。&lt;br&gt;このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Key of parameter.&lt;br&gt;This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return key
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーです。<br>このフィールドは、ADD時は必須となり、SET時は無視されます。</div> <div lang=\"en\">Key of parameter.<br>Key of parameter.<br>This field is required in ADD operation, and will be ignored in SET operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">キーです。<br>このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">Key of parameter.<br>This field is required in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -79,11 +79,11 @@ public class AdGroupAdServiceCustomParameter {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;値です。&lt;br&gt;このフィールドは、ADD時は省略可能となり、SET時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of parameter.&lt;br&gt;Value of parameter.&lt;br&gt;This field is optional in ADD operation, and will be ignored in SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;値です。&lt;br&gt;ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of parameter.&lt;br&gt;This field is optional in ADD and SET operation.&lt;/div&gt; 
    * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">値です。<br>このフィールドは、ADD時は省略可能となり、SET時は無視されます。</div> <div lang=\"en\">Value of parameter.<br>Value of parameter.<br>This field is optional in ADD operation, and will be ignored in SET operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">値です。<br>ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">Value of parameter.<br>This field is optional in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

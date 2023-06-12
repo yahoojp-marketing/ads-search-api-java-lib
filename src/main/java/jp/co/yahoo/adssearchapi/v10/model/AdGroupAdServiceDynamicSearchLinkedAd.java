@@ -52,11 +52,11 @@ public class AdGroupAdServiceDynamicSearchLinkedAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文です。&lt;br&gt; ADD時、このフィールドは必須となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は無視されます。&lt;br&gt;自動挿入をサポートしていません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of ad.&lt;br&gt; This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.&lt;br&gt;Does not support Data Auto Insertion.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt;自動挿入をサポートしていません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of ad.&lt;br&gt; This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.&lt;br&gt;Does not support Data Auto Insertion.&lt;/div&gt; 
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文です。<br> ADD時、このフィールドは必須となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は無視されます。<br>自動挿入をサポートしていません。</div> <div lang=\"en\">Description of ad.<br> This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.<br>Does not support Data Auto Insertion.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">説明文です。<br> ADD時、このフィールドは必須となります。<br>自動挿入をサポートしていません。</div> <div lang=\"en\">Description of ad.<br> This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.<br>Does not support Data Auto Insertion.</div> ")
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

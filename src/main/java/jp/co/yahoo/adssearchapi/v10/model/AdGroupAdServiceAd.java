@@ -35,9 +35,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAd object describes ad information.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAd object describes ad information.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceAd object describes ad information.<br> This field is required in ADD operation.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">AdGroupAdServiceAd object describes ad information.<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceAd.JSON_PROPERTY_AD_TYPE,
   AdGroupAdServiceAd.JSON_PROPERTY_TEXT_AD2,
@@ -291,11 +291,11 @@ public class AdGroupAdServiceAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL.&lt;br&gt; This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;br&gt; SET時、adTypeがRESPONSIVE_SEARCH_ADの場合のみ更新可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL.&lt;br&gt; This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
    * @return finalUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">Landing Page URL.<br> This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。<br> SET時、adTypeがRESPONSIVE_SEARCH_ADの場合のみ更新可能です。</div> <div lang=\"en\">Landing Page URL.<br> This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -318,11 +318,11 @@ public class AdGroupAdServiceAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の最終リンク先URLです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; Currently, this field will not be returned.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の最終リンク先URLです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewFinalUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の最終リンク先URLです。<br> このフィールドは、リクエストの際には無視されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">Landing Page URL on editorial review.<br> This field will be ignored on input.<br> Currently, this field will not be returned.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">審査中の最終リンク先URLです。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Landing Page URL on editorial review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
   @JsonProperty(JSON_PROPERTY_REVIEW_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -345,11 +345,11 @@ public class AdGroupAdServiceAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URL（スマートフォン）です。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL (Smartphone).&lt;br&gt; This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URL（スマートフォン）です。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;br&gt; SET時、adTypeがRESPONSIVE_SEARCH_ADの場合のみ更新可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL (Smartphone).&lt;br&gt; This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
    * @return smartphoneFinalUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">Landing Page URL (Smartphone).<br> This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。<br> SET時、adTypeがRESPONSIVE_SEARCH_ADの場合のみ更新可能です。</div> <div lang=\"en\">Landing Page URL (Smartphone).<br> This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
   @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -372,11 +372,11 @@ public class AdGroupAdServiceAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の最終リンク先URL（スマートフォン）です。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL (Smartphone) on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; Currently, this field will not be returned.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の最終リンク先URL（スマートフォン）です。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL (Smartphone) on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewSmartphoneFinalUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の最終リンク先URL（スマートフォン）です。<br> このフィールドは、リクエストの際には無視されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">Landing Page URL (Smartphone) on editorial review.<br> This field will be ignored on input.<br> Currently, this field will not be returned.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">審査中の最終リンク先URL（スマートフォン）です。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Landing Page URL (Smartphone) on editorial review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
   @JsonProperty(JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -426,11 +426,11 @@ public class AdGroupAdServiceAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; SET時、adTypeがRESPONSIVE_SEARCH_ADの場合のみ更新可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
    * @return trackingUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時、このフィールドは省略可能となります。<br> SET時、adTypeがRESPONSIVE_SEARCH_ADの場合のみ更新可能です。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD operation.</div> ")
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -453,11 +453,11 @@ public class AdGroupAdServiceAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のトラッキングURLです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; Currently, this field will not be returned.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のトラッキングURLです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewTrackingUrl
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中のトラッキングURLです。<br> このフィールドは、リクエストの際には無視されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">Tracking URL on editorial review.<br> This field will be ignored on input.<br> Currently, this field will not be returned.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">審査中のトラッキングURLです。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Tracking URL on editorial review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
   @JsonProperty(JSON_PROPERTY_REVIEW_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
