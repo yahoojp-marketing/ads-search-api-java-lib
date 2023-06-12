@@ -31,9 +31,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ検索広告を表します。&lt;br&gt; ADD、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceResponsiveSearchAd object is Responsive ads.&lt;br&gt; This field is optional in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ検索広告を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceResponsiveSearchAd object is Responsive ads.&lt;br&gt; This field is optional in ADD and SET operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ検索広告を表します。<br> ADD、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceResponsiveSearchAd object is Responsive ads.<br> This field is optional in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ検索広告を表します。<br> ADDおよびSET時、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceResponsiveSearchAd object is Responsive ads.<br> This field is optional in ADD and SET operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_HEADLINES,
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_DESCRIPTIONS,
@@ -97,11 +97,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。&lt;br&gt; headlines[]には、3~15件の指定が可能です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline that specify in responsive ads for search.&lt;br&gt; 3 to 15 items can be specified for headlines[].&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。&lt;br&gt; headlines[]には、3~15件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline that specify in responsive ads for search.&lt;br&gt; 3 to 15 items can be specified for headlines[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return headlines
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。<br> headlines[]には、3~15件の指定が可能です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Text asset for the headline that specify in responsive ads for search.<br> 3 to 15 items can be specified for headlines[].<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。<br> headlines[]には、3~15件の指定が可能です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Text asset for the headline that specify in responsive ads for search.<br> 3 to 15 items can be specified for headlines[].<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_HEADLINES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,11 +132,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description that specify in responsive ads for search.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description that specify in responsive ads for search.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return descriptions
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定する説明文のテキストアセットを表します。<br> descriptions[]には、2~4件の指定が可能です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Text asset for the description that specify in responsive ads for search.<br> 2 to 4 items can be specified for descriptions[].<br> This field is required in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定する説明文のテキストアセットを表します。<br> descriptions[]には、2~4件の指定が可能です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Text asset for the description that specify in responsive ads for search.<br> 2 to 4 items can be specified for descriptions[].<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_DESCRIPTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,11 +159,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path2を指定する場合は、path1は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;br&gt;*To specify path2, path1 is required.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path2を指定する場合は、path1は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD and SET operation. The default value will be null.&lt;br&gt;*To specify path2, path1 is required.&lt;/div&gt; 
    * @return path1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path2を指定する場合は、path1は必須です。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*To specify path2, path1 is required.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADDおよびSET時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path2を指定する場合は、path1は必須です。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD and SET operation. The default value will be null.<br>*To specify path2, path1 is required.</div> ")
   @JsonProperty(JSON_PROPERTY_PATH1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -213,11 +213,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path1を指定していない場合、path2は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;br&gt;*If path1 is not specified, path2 will be ignored.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path1を指定していない場合、path2は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD and SET operation. The default value will be null.&lt;br&gt;*If path1 is not specified, path2 will be ignored.&lt;/div&gt; 
    * @return path2
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path1を指定していない場合、path2は無視されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*If path1 is not specified, path2 will be ignored.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADDおよびSET時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path1を指定していない場合、path2は無視されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD and SET operation. The default value will be null.<br>*If path1 is not specified, path2 will be ignored.</div> ")
   @JsonProperty(JSON_PROPERTY_PATH2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -275,11 +275,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のタイトルのテキストアセットを表します。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline under review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; Currently, this field will not be returned.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のタイトルのテキストアセットを表します。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline under review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewHeadlines
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中のタイトルのテキストアセットを表します。<br> このフィールドは、リクエストの際には無視されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">Text asset for the headline under review.<br> This field will be ignored on input.<br> Currently, this field will not be returned.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">審査中のタイトルのテキストアセットを表します。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Text asset for the headline under review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
   @JsonProperty(JSON_PROPERTY_REVIEW_HEADLINES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,11 +310,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の説明文のテキストアセットを表します。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description under review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; Currently, this field will not be returned.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の説明文のテキストアセットを表します。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description under review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewDescriptions
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の説明文のテキストアセットを表します。<br> このフィールドは、リクエストの際には無視されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">Text asset for the description under review.<br> This field will be ignored on input.<br> Currently, this field will not be returned.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">審査中の説明文のテキストアセットを表します。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Text asset for the description under review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
   @JsonProperty(JSON_PROPERTY_REVIEW_DESCRIPTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -337,11 +337,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の自動作成される表示URLを補足するパスです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically (Under review).&lt;br&gt; This field will be ignored on input.&lt;br&gt; Currently, this field will not be returned.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の自動作成される表示URLを補足するパスです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically (Under review).&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewPath1
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の自動作成される表示URLを補足するパスです。<br> このフィールドは、リクエストの際には無視されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">The path information which complements display URL generated automatically (Under review).<br> This field will be ignored on input.<br> Currently, this field will not be returned.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">審査中の自動作成される表示URLを補足するパスです。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically (Under review).<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
   @JsonProperty(JSON_PROPERTY_REVIEW_PATH1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -364,11 +364,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の自動作成される表示URLを補足するパスです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; ※現在、こちらのフィールドは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically (Under review).&lt;br&gt; This field will be ignored on input.&lt;br&gt; Currently, this field will not be returned.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の自動作成される表示URLを補足するパスです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically (Under review).&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewPath2
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の自動作成される表示URLを補足するパスです。<br> このフィールドは、リクエストの際には無視されます。<br> ※現在、こちらのフィールドは返却されません。</div> <div lang=\"en\">The path information which complements display URL generated automatically (Under review).<br> This field will be ignored on input.<br> Currently, this field will not be returned.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">審査中の自動作成される表示URLを補足するパスです。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically (Under review).<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
   @JsonProperty(JSON_PROPERTY_REVIEW_PATH2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
