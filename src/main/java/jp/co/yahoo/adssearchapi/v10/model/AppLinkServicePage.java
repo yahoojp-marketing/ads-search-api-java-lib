@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AppLinkServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkServicePageオブジェクトは、取得されるPageFeedItemの配信/除外設定に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLinkServicePage object describes entry on allowed or excluded setting of acquired PageFeedItem.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AppLinkServicePageオブジェクトは、取得されるPageFeedItemの配信/除外設定に関するエントリーを表します。</div> <div lang=\"en\">AppLinkServicePage object describes entry on allowed or excluded setting of acquired PageFeedItem.</div> ")
 @JsonPropertyOrder({
   AppLinkServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   AppLinkServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AppLinkServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AppLinkServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AppLinkServiceValue> values = null;
+  private List<AppLinkServiceValue> values;
 
-  public AppLinkServicePage() { 
+  public AppLinkServicePage() {
   }
 
   public AppLinkServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class AppLinkServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries in the result that this page is a part of.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of entries in the result that this page is a part of.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class AppLinkServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class AppLinkServicePage {
   public void setValues(List<AppLinkServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

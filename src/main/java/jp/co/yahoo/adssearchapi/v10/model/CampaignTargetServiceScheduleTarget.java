@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignTargetServiceDayOfWeek;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignTargetServiceMinuteOfHour;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceScheduleTargetオブジェクトは、曜日・時間帯ターゲティングレポートを表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となります。&lt;br&gt; ※targetTypeがSCHEDULEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceScheduleTarget describes Day of week/Hour targeting report.&lt;br&gt; *This field is optional in ADD and SET operation.&lt;br&gt; If targetType is SCHEDULE, this field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceScheduleTargetオブジェクトは、曜日・時間帯ターゲティングレポートを表します。<br> このフィールドは、ADD時およびSET時に省略可能となります。<br> ※targetTypeがSCHEDULEの場合、このフィールドはADD時に必須となります。</div> <div lang=\"en\">CampaignTargetServiceScheduleTarget describes Day of week/Hour targeting report.<br> *This field is optional in ADD and SET operation.<br> If targetType is SCHEDULE, this field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignTargetServiceScheduleTarget.JSON_PROPERTY_DAY_OF_WEEK,
   CampaignTargetServiceScheduleTarget.JSON_PROPERTY_END_HOUR,
@@ -38,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignTargetServiceScheduleTarget.JSON_PROPERTY_START_HOUR,
   CampaignTargetServiceScheduleTarget.JSON_PROPERTY_START_MINUTE
 })
-@JsonTypeName("CampaignTargetServiceScheduleTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTargetServiceScheduleTarget {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "dayOfWeek";
   private CampaignTargetServiceDayOfWeek dayOfWeek;
@@ -56,7 +52,7 @@ public class CampaignTargetServiceScheduleTarget {
   public static final String JSON_PROPERTY_START_MINUTE = "startMinute";
   private CampaignTargetServiceMinuteOfHour startMinute;
 
-  public CampaignTargetServiceScheduleTarget() { 
+  public CampaignTargetServiceScheduleTarget() {
   }
 
   public CampaignTargetServiceScheduleTarget dayOfWeek(CampaignTargetServiceDayOfWeek dayOfWeek) {
@@ -69,8 +65,7 @@ public class CampaignTargetServiceScheduleTarget {
    * Get dayOfWeek
    * @return dayOfWeek
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,8 +91,7 @@ public class CampaignTargetServiceScheduleTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;24時間表示の終了時刻です。&lt;br&gt;このフィールドは、ADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ending hour in 24 hour time.&lt;br&gt;This field is required in ADD operation.&lt;/div&gt; 
    * @return endHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">24時間表示の終了時刻です。<br>このフィールドは、ADD時に必須となります。</div> <div lang=\"en\">Ending hour in 24 hour time.<br>This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,8 +117,7 @@ public class CampaignTargetServiceScheduleTarget {
    * Get endMinute
    * @return endMinute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_MINUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,8 +143,7 @@ public class CampaignTargetServiceScheduleTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;24時間表示の開始時刻です。&lt;br&gt;このフィールドは、ADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Starting hour in 24 hour time.&lt;br&gt;This field is required in ADD operation.&lt;/div&gt; 
    * @return startHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">24時間表示の開始時刻です。<br>このフィールドは、ADD時に必須となります。</div> <div lang=\"en\">Starting hour in 24 hour time.<br>This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,8 +169,7 @@ public class CampaignTargetServiceScheduleTarget {
    * Get startMinute
    * @return startMinute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_MINUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -192,7 +183,6 @@ public class CampaignTargetServiceScheduleTarget {
   public void setStartMinute(CampaignTargetServiceMinuteOfHour startMinute) {
     this.startMinute = startMinute;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanAdGroup オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanAdGroup object is a container for the estimate request.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordForecastMetricsServiceKeywordPlanAdGroup オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetricsServiceKeywordPlanAdGroup object is a container for the estimate request.</div> ")
 @JsonPropertyOrder({
   KeywordForecastMetricsServiceKeywordPlanAdGroup.JSON_PROPERTY_CPC,
   KeywordForecastMetricsServiceKeywordPlanAdGroup.JSON_PROPERTY_KEYWORD_PLAN_AD_GROUP_KEYWORDS
 })
-@JsonTypeName("KeywordForecastMetricsServiceKeywordPlanAdGroup")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordForecastMetricsServiceKeywordPlanAdGroup {
   public static final String JSON_PROPERTY_CPC = "cpc";
   private Long cpc;
 
   public static final String JSON_PROPERTY_KEYWORD_PLAN_AD_GROUP_KEYWORDS = "keywordPlanAdGroupKeywords";
-  private List<KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword> keywordPlanAdGroupKeywords = new ArrayList<>();
+  private List<KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword> keywordPlanAdGroupKeywords;
 
-  public KeywordForecastMetricsServiceKeywordPlanAdGroup() { 
+  public KeywordForecastMetricsServiceKeywordPlanAdGroup() {
   }
 
   public KeywordForecastMetricsServiceKeywordPlanAdGroup cpc(Long cpc) {
@@ -58,8 +54,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最大クリック単価です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum CPC.&lt;/div&gt; 
    * @return cpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最大クリック単価です。</div> <div lang=\"en\">Maximum CPC.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,6 +77,9 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroup {
   }
 
   public KeywordForecastMetricsServiceKeywordPlanAdGroup addKeywordPlanAdGroupKeywordsItem(KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword keywordPlanAdGroupKeywordsItem) {
+    if (this.keywordPlanAdGroupKeywords == null) {
+      this.keywordPlanAdGroupKeywords = new ArrayList<>();
+    }
     this.keywordPlanAdGroupKeywords.add(keywordPlanAdGroupKeywordsItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;見積もりを行うキーワードのコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A container for the keywords to estimate&lt;/div&gt; 
    * @return keywordPlanAdGroupKeywords
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">見積もりを行うキーワードのコンテナです。</div> <div lang=\"en\">A container for the keywords to estimate</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_PLAN_AD_GROUP_KEYWORDS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroup {
   public void setKeywordPlanAdGroupKeywords(List<KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword> keywordPlanAdGroupKeywords) {
     this.keywordPlanAdGroupKeywords = keywordPlanAdGroupKeywords;
   }
-
 
   @Override
   public boolean equals(Object o) {

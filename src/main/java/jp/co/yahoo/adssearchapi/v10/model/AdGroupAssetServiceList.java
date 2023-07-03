@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupAsset;
@@ -32,18 +30,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAssetServiceListオブジェクトは、広告グループとアセット間の設定情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAssetServiceList object describes configuration information between ad groups and assets.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAssetServiceListオブジェクトは、広告グループとアセット間の設定情報を表します。</div> <div lang=\"en\">AdGroupAssetServiceList object describes configuration information between ad groups and assets.</div> ")
 @JsonPropertyOrder({
   AdGroupAssetServiceList.JSON_PROPERTY_AD_GROUP_ASSETS,
   AdGroupAssetServiceList.JSON_PROPERTY_AD_GROUP_ID,
   AdGroupAssetServiceList.JSON_PROPERTY_CAMPAIGN_ID,
   AdGroupAssetServiceList.JSON_PROPERTY_TYPE
 })
-@JsonTypeName("AdGroupAssetServiceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAssetServiceList {
   public static final String JSON_PROPERTY_AD_GROUP_ASSETS = "adGroupAssets";
-  private List<AdGroupAsset> adGroupAssets = null;
+  private List<AdGroupAsset> adGroupAssets;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
   private Long adGroupId;
@@ -54,7 +50,7 @@ public class AdGroupAssetServiceList {
   public static final String JSON_PROPERTY_TYPE = "type";
   private AdGroupAssetServiceType type;
 
-  public AdGroupAssetServiceList() { 
+  public AdGroupAssetServiceList() {
   }
 
   public AdGroupAssetServiceList adGroupAssets(List<AdGroupAsset> adGroupAssets) {
@@ -75,8 +71,7 @@ public class AdGroupAssetServiceList {
    * Get adGroupAssets
    * @return adGroupAssets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ASSETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,8 +97,7 @@ public class AdGroupAssetServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループIDです。&lt;br&gt; REPLACE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad Group ID.&lt;br&gt; This field is required in REPLACE operation.&lt;/div&gt; 
    * @return adGroupId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。<br> REPLACE時、このフィールドは必須となります。</div> <div lang=\"en\">Ad Group ID.<br> This field is required in REPLACE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +123,7 @@ public class AdGroupAssetServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; REPLACE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in REPLACE operation.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> REPLACE時、このフィールドは必須となります。</div> <div lang=\"en\">Campaign ID.<br> This field is required in REPLACE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +149,7 @@ public class AdGroupAssetServiceList {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,7 +163,6 @@ public class AdGroupAssetServiceList {
   public void setType(AdGroupAssetServiceType type) {
     this.type = type;
   }
-
 
   @Override
   public boolean equals(Object o) {

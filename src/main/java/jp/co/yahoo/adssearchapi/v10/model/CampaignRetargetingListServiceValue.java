@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignRetargetingList;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceValueオブジェクトは、キャンペーン階層のターゲットリスト設定における実行結果（1Entity）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceValue object holds operation results (1 entity)  for Target List settings on the campaign level.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignRetargetingListServiceValueオブジェクトは、キャンペーン階層のターゲットリスト設定における実行結果（1Entity）を保持します。</div> <div lang=\"en\">CampaignRetargetingListServiceValue object holds operation results (1 entity)  for Target List settings on the campaign level.</div> ")
 @JsonPropertyOrder({
   CampaignRetargetingListServiceValue.JSON_PROPERTY_CAMPAIGN_RETARGETING_LIST,
   CampaignRetargetingListServiceValue.JSON_PROPERTY_ERRORS,
   CampaignRetargetingListServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("CampaignRetargetingListServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignRetargetingListServiceValue {
   public static final String JSON_PROPERTY_CAMPAIGN_RETARGETING_LIST = "campaignRetargetingList";
   private CampaignRetargetingList campaignRetargetingList;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public CampaignRetargetingListServiceValue() { 
+  public CampaignRetargetingListServiceValue() {
   }
 
   public CampaignRetargetingListServiceValue campaignRetargetingList(CampaignRetargetingList campaignRetargetingList) {
@@ -63,8 +59,7 @@ public class CampaignRetargetingListServiceValue {
    * Get campaignRetargetingList
    * @return campaignRetargetingList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_RETARGETING_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class CampaignRetargetingListServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class CampaignRetargetingListServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class CampaignRetargetingListServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignSharedSet;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignSharedSetServiceOperationは、操作対象のキャンペーンと共有リストの関連付け情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignSharedSetServiceOperation is object to hold setup information between campaign and shared list for operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignSharedSetServiceOperationは、操作対象のキャンペーンと共有リストの関連付け情報を保持するオブジェクトです。</div> <div lang=\"en\">CampaignSharedSetServiceOperation is object to hold setup information between campaign and shared list for operation.</div> ")
 @JsonPropertyOrder({
   CampaignSharedSetServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   CampaignSharedSetServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("CampaignSharedSetServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignSharedSetServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<CampaignSharedSet> operand = new ArrayList<>();
+  private List<CampaignSharedSet> operand;
 
-  public CampaignSharedSetServiceOperation() { 
+  public CampaignSharedSetServiceOperation() {
   }
 
   public CampaignSharedSetServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class CampaignSharedSetServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;操作対象のアカウントです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account for the operation&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">操作対象のアカウントです。</div> <div lang=\"en\">Account for the operation</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class CampaignSharedSetServiceOperation {
   }
 
   public CampaignSharedSetServiceOperation addOperandItem(CampaignSharedSet operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class CampaignSharedSetServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class CampaignSharedSetServiceOperation {
   public void setOperand(List<CampaignSharedSet> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignServiceGeoTargetType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceGeoTargetTypeSettingsオブジェクトは、地域ターゲットの情報を格納するコンテナです。&lt;br&gt; ADD時、settingTypeがGEO_TARGET_TYPE_SETTINGの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceGeoTargetTypeSettings object is a container for GeoTargeting.&lt;br&gt; This field is optional. However, in ADD operation, this field is required only when settingType is &#39;GEO_TARGET_TYPE_SETTING&#39;, and it is optional when settingType is the others.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceGeoTargetTypeSettingsオブジェクトは、地域ターゲットの情報を格納するコンテナです。<br> ADD時、settingTypeがGEO_TARGET_TYPE_SETTINGの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceGeoTargetTypeSettings object is a container for GeoTargeting.<br> This field is optional. However, in ADD operation, this field is required only when settingType is 'GEO_TARGET_TYPE_SETTING', and it is optional when settingType is the others.</div> ")
 @JsonPropertyOrder({
   CampaignServiceGeoTargetTypeSetting.JSON_PROPERTY_NEGATIVE_GEO_TARGET_TYPE,
   CampaignServiceGeoTargetTypeSetting.JSON_PROPERTY_POSITIVE_GEO_TARGET_TYPE
 })
-@JsonTypeName("CampaignServiceGeoTargetTypeSetting")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceGeoTargetTypeSetting {
   public static final String JSON_PROPERTY_NEGATIVE_GEO_TARGET_TYPE = "negativeGeoTargetType";
   private CampaignServiceGeoTargetType negativeGeoTargetType;
@@ -43,7 +39,7 @@ public class CampaignServiceGeoTargetTypeSetting {
   public static final String JSON_PROPERTY_POSITIVE_GEO_TARGET_TYPE = "positiveGeoTargetType";
   private CampaignServiceGeoTargetType positiveGeoTargetType;
 
-  public CampaignServiceGeoTargetTypeSetting() { 
+  public CampaignServiceGeoTargetTypeSetting() {
   }
 
   public CampaignServiceGeoTargetTypeSetting negativeGeoTargetType(CampaignServiceGeoTargetType negativeGeoTargetType) {
@@ -56,8 +52,7 @@ public class CampaignServiceGeoTargetTypeSetting {
    * Get negativeGeoTargetType
    * @return negativeGeoTargetType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NEGATIVE_GEO_TARGET_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class CampaignServiceGeoTargetTypeSetting {
    * Get positiveGeoTargetType
    * @return positiveGeoTargetType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_POSITIVE_GEO_TARGET_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class CampaignServiceGeoTargetTypeSetting {
   public void setPositiveGeoTargetType(CampaignServiceGeoTargetType positiveGeoTargetType) {
     this.positiveGeoTargetType = positiveGeoTargetType;
   }
-
 
   @Override
   public boolean equals(Object o) {

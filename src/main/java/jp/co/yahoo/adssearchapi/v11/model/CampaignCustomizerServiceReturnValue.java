@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignCustomizerServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCustomizerServiceReturnValueオブジェクトは、キャンペーンとカスタマイザー属性間の設定情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCustomizerServiceReturnValue object contains the configuration information between the campaign and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignCustomizerServiceReturnValueオブジェクトは、キャンペーンとカスタマイザー属性間の設定情報を格納します。</div> <div lang=\"en\">CampaignCustomizerServiceReturnValue object contains the configuration information between the campaign and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   CampaignCustomizerServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignCustomizerServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignCustomizerServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignCustomizerServiceValue> values = null;
+  private List<CampaignCustomizerServiceValue> values;
 
-  public CampaignCustomizerServiceReturnValue() { 
+  public CampaignCustomizerServiceReturnValue() {
   }
 
   public CampaignCustomizerServiceReturnValue values(List<CampaignCustomizerServiceValue> values) {
@@ -62,8 +58,7 @@ public class CampaignCustomizerServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignCustomizerServiceReturnValue {
   public void setValues(List<CampaignCustomizerServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.FeedItemServiceApprovalStatus;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceSelectorオブジェクトは、フィードアイテムの情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceSelector describes the Feed item information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedItemServiceSelectorオブジェクトは、フィードアイテムの情報を指定します。</div> <div lang=\"en\">FeedItemServiceSelector describes the Feed item information.</div> ")
 @JsonPropertyOrder({
   FeedItemServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   FeedItemServiceSelector.JSON_PROPERTY_APPROVAL_STATUSES,
@@ -42,31 +39,30 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedItemServiceSelector.JSON_PROPERTY_PLACEHOLDER_TYPES,
   FeedItemServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("FeedItemServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedItemServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUSES = "approvalStatuses";
-  private List<FeedItemServiceApprovalStatus> approvalStatuses = null;
+  private List<FeedItemServiceApprovalStatus> approvalStatuses;
 
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
-  private List<Long> feedIds = null;
+  private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_FEED_ITEM_IDS = "feedItemIds";
-  private List<Long> feedItemIds = null;
+  private List<Long> feedItemIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_PLACEHOLDER_TYPES = "placeholderTypes";
-  private List<FeedItemServicePlaceholderType> placeholderTypes = null;
+  private List<FeedItemServicePlaceholderType> placeholderTypes;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public FeedItemServiceSelector() { 
+  public FeedItemServiceSelector() {
   }
 
   public FeedItemServiceSelector accountId(Long accountId) {
@@ -79,8 +75,7 @@ public class FeedItemServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -114,8 +109,7 @@ public class FeedItemServiceSelector {
    * Get approvalStatuses
    * @return approvalStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,8 +143,7 @@ public class FeedItemServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：フィードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Feed ID.&lt;/div&gt; 
    * @return feedIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：フィードIDです。</div> <div lang=\"en\">Search condition: Feed ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,8 +177,7 @@ public class FeedItemServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：フィードアイテムIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Feed Item ID.&lt;/div&gt; 
    * @return feedItemIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：フィードアイテムIDです。</div> <div lang=\"en\">Search condition: Feed Item ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ITEM_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -213,8 +205,7 @@ public class FeedItemServiceSelector {
    * maximum: 2000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,8 +239,7 @@ public class FeedItemServiceSelector {
    * Get placeholderTypes
    * @return placeholderTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +266,7 @@ public class FeedItemServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,7 +280,6 @@ public class FeedItemServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.FeedItemServiceApprovalStatus;
@@ -41,7 +39,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemオブジェクトは、フィードアイテム情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItem object contains the information of Feed Item.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedItemオブジェクトは、フィードアイテム情報を格納します。</div> <div lang=\"en\">FeedItem object contains the information of Feed Item.</div> ")
 @JsonPropertyOrder({
   FeedItem.JSON_PROPERTY_ACCOUNT_ID,
   FeedItem.JSON_PROPERTY_APPROVAL_STATUS,
@@ -64,8 +61,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedItem.JSON_PROPERTY_TARGETING_KEYWORD,
   FeedItem.JSON_PROPERTY_TRADEMARK_STATUS
 })
-@JsonTypeName("FeedItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedItem {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -80,7 +76,7 @@ public class FeedItem {
   private FeedItemServiceDevicePreference devicePreference;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
   private String endDate;
@@ -89,7 +85,7 @@ public class FeedItem {
   private Long feedId;
 
   public static final String JSON_PROPERTY_FEED_ITEM_ATTRIBUTE = "feedItemAttribute";
-  private List<FeedItemServiceAttribute> feedItemAttribute = null;
+  private List<FeedItemServiceAttribute> feedItemAttribute;
 
   public static final String JSON_PROPERTY_FEED_ITEM_ID = "feedItemId";
   private Long feedItemId;
@@ -98,7 +94,7 @@ public class FeedItem {
   private Long feedItemTrackId;
 
   public static final String JSON_PROPERTY_INVALIDED_TRADEMARKS = "invalidedTrademarks";
-  private List<String> invalidedTrademarks = null;
+  private List<String> invalidedTrademarks;
 
   public static final String JSON_PROPERTY_LOCATION = "location";
   private FeedItemServiceLocation location;
@@ -127,7 +123,7 @@ public class FeedItem {
   public static final String JSON_PROPERTY_TRADEMARK_STATUS = "trademarkStatus";
   private FeedItemServiceTrademarkStatus trademarkStatus;
 
-  public FeedItem() { 
+  public FeedItem() {
   }
 
   public FeedItem accountId(Long accountId) {
@@ -140,8 +136,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -167,8 +162,7 @@ public class FeedItem {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -194,8 +188,7 @@ public class FeedItem {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -221,8 +214,7 @@ public class FeedItem {
    * Get devicePreference
    * @return devicePreference
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_PREFERENCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -256,8 +248,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reject reason on editorial review.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Reject reason on editorial review.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -283,8 +274,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信終了日です。&lt;br&gt;※空で設定すると、既存の配信終了日は削除されます。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of ad display.&lt;br&gt;∗By setting blank, existing end date of ad display will be deleted. &lt;br&gt;This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信終了日です。<br>※空で設定すると、既存の配信終了日は削除されます。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">End date of ad display.<br>∗By setting blank, existing end date of ad display will be deleted. <br>This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,8 +300,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードIDです。&lt;br&gt; このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※アドカスタマイザーの場合は、ADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; *For AD_CUSTOMIZER, this field is required in ADD operation.&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※アドカスタマイザーの場合は、ADD時に必須となります。</div> <div lang=\"en\">Feed ID.<br>Although this field will be returned in the response, it will be ignored on input.<br> *For AD_CUSTOMIZER, this field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -345,8 +334,7 @@ public class FeedItem {
    * Get feedItemAttribute
    * @return feedItemAttribute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ITEM_ATTRIBUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -372,8 +360,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードアイテムIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となり、ADD時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed Item ID.&lt;br&gt;This field is required in SET and REMOVE operation, and will be ignored in ADD operation.&lt;/div&gt; 
    * @return feedItemId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードアイテムIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時に無視されます。</div> <div lang=\"en\">Feed Item ID.<br>This field is required in SET and REMOVE operation, and will be ignored in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ITEM_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -399,8 +386,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキング用フィードアイテムIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed Item ID for tracking.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return feedItemTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用フィードアイテムIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Feed Item ID for tracking.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ITEM_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -434,8 +420,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;制限された商標です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Invalided trademarks.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return invalidedTrademarks
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">制限された商標です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">Invalided trademarks.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INVALIDED_TRADEMARKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -461,8 +446,7 @@ public class FeedItem {
    * Get location
    * @return location
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOCATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -488,8 +472,7 @@ public class FeedItem {
    * Get placeholderType
    * @return placeholderType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -515,8 +498,7 @@ public class FeedItem {
    * Get reviewCustomParameters
    * @return reviewCustomParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -542,8 +524,7 @@ public class FeedItem {
    * Get scheduling
    * @return scheduling
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -569,8 +550,7 @@ public class FeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信開始日です。&lt;br&gt; ※空で設定すると、既存の配信開始日は削除されます。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of ad display&lt;br&gt; ∗On setting blank, existing start date of ad display will be deleted.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信開始日です。<br> ※空で設定すると、既存の配信開始日は削除されます。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">Start date of ad display<br> ∗On setting blank, existing start date of ad display will be deleted.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -596,8 +576,7 @@ public class FeedItem {
    * Get targetingAdGroup
    * @return targetingAdGroup
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGETING_AD_GROUP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -623,8 +602,7 @@ public class FeedItem {
    * Get targetingCampaign
    * @return targetingCampaign
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGETING_CAMPAIGN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -650,8 +628,7 @@ public class FeedItem {
    * Get targetingKeyword
    * @return targetingKeyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGETING_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -677,8 +654,7 @@ public class FeedItem {
    * Get trademarkStatus
    * @return trademarkStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRADEMARK_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -692,7 +668,6 @@ public class FeedItem {
   public void setTrademarkStatus(FeedItemServiceTrademarkStatus trademarkStatus) {
     this.trademarkStatus = trademarkStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

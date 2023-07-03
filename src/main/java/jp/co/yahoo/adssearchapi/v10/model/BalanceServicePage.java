@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.BalanceServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BalancePageオブジェクトは、取得されるアカウント残高に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account balance and a page of balance resulting from the query done by BalanceService.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BalancePageオブジェクトは、取得されるアカウント残高に関するエントリーを表します。</div> <div lang=\"en\">Account balance and a page of balance resulting from the query done by BalanceService.</div> ")
 @JsonPropertyOrder({
   BalanceServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   BalanceServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("BalanceServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BalanceServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<BalanceServiceValue> values = null;
+  private List<BalanceServiceValue> values;
 
-  public BalanceServicePage() { 
+  public BalanceServicePage() {
   }
 
   public BalanceServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class BalanceServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The total number of retrieved entries.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">The total number of retrieved entries.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class BalanceServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;操作結果を含むアカウント情報の配列です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;List of balance.&lt;/div&gt; 
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">操作結果を含むアカウント情報の配列です。</div> <div lang=\"en\">List of balance.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class BalanceServicePage {
   public void setValues(List<BalanceServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

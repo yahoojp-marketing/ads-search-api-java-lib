@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.KeywordPlanIdeaServiceSeed;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaSelectorオブジェクトは、関連キーワードの提案条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Condition for related keyword suggestion.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaSelectorオブジェクトは、関連キーワードの提案条件を表します。</div> <div lang=\"en\">Condition for related keyword suggestion.</div> ")
 @JsonPropertyOrder({
   KeywordPlanIdeaServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   KeywordPlanIdeaServiceSelector.JSON_PROPERTY_SEED,
   KeywordPlanIdeaServiceSelector.JSON_PROPERTY_START_INDEX,
   KeywordPlanIdeaServiceSelector.JSON_PROPERTY_NUMBER_RESULTS
 })
-@JsonTypeName("KeywordPlanIdeaServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordPlanIdeaServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -51,7 +47,7 @@ public class KeywordPlanIdeaServiceSelector {
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
 
-  public KeywordPlanIdeaServiceSelector() { 
+  public KeywordPlanIdeaServiceSelector() {
   }
 
   public KeywordPlanIdeaServiceSelector accountId(Long accountId) {
@@ -64,8 +60,7 @@ public class KeywordPlanIdeaServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは必須となります。</div> <div lang=\"en\">Account ID.<br> This field is required.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -91,8 +86,7 @@ public class KeywordPlanIdeaServiceSelector {
    * Get seed
    * @return seed
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEED)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -119,8 +113,7 @@ public class KeywordPlanIdeaServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,8 +141,7 @@ public class KeywordPlanIdeaServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -163,7 +155,6 @@ public class KeywordPlanIdeaServiceSelector {
   public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
-
 
   @Override
   public boolean equals(Object o) {

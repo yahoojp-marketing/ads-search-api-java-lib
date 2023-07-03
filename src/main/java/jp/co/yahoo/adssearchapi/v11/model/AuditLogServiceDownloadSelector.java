@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;操作履歴ファイルをダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Download operation history data file.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">操作履歴ファイルをダウンロードします。</div> <div lang=\"en\"> Download operation history data file.</div> ")
 @JsonPropertyOrder({
   AuditLogServiceDownloadSelector.JSON_PROPERTY_ACCOUNT_ID,
   AuditLogServiceDownloadSelector.JSON_PROPERTY_JOB_ID
 })
-@JsonTypeName("AuditLogServiceDownloadSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuditLogServiceDownloadSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -42,7 +38,7 @@ public class AuditLogServiceDownloadSelector {
   public static final String JSON_PROPERTY_JOB_ID = "jobId";
   private Long jobId;
 
-  public AuditLogServiceDownloadSelector() { 
+  public AuditLogServiceDownloadSelector() {
   }
 
   public AuditLogServiceDownloadSelector accountId(Long accountId) {
@@ -55,8 +51,7 @@ public class AuditLogServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,8 +77,7 @@ public class AuditLogServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Job ID.&lt;/div&gt; 
    * @return jobId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：ジョブIDです。</div> <div lang=\"en\">Search condition: Job ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -97,7 +91,6 @@ public class AuditLogServiceDownloadSelector {
   public void setJobId(Long jobId) {
     this.jobId = jobId;
   }
-
 
   @Override
   public boolean equals(Object o) {

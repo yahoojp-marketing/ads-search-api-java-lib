@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignCriterionServiceKeywordMatchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceKeywordオブジェクトは、キーワードに関する情報を表します。&lt;br&gt; ADD時、このフィールドは省略可能です。※criterionTypeがKEYWORDの場合、必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceKeyword object displays keyword information.&lt;br&gt; This field is optional in ADD operation. *This field is required when criterionType is &#39;KEYWORD&#39;.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceKeywordオブジェクトは、キーワードに関する情報を表します。<br> ADD時、このフィールドは省略可能です。※criterionTypeがKEYWORDの場合、必須です。</div> <div lang=\"en\">CampaignCriterionServiceKeyword object displays keyword information.<br> This field is optional in ADD operation. *This field is required when criterionType is 'KEYWORD'.</div> ")
 @JsonPropertyOrder({
   CampaignCriterionServiceKeyword.JSON_PROPERTY_KEYWORD_MATCH_TYPE,
   CampaignCriterionServiceKeyword.JSON_PROPERTY_TEXT
 })
-@JsonTypeName("CampaignCriterionServiceKeyword")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignCriterionServiceKeyword {
   public static final String JSON_PROPERTY_KEYWORD_MATCH_TYPE = "keywordMatchType";
   private CampaignCriterionServiceKeywordMatchType keywordMatchType;
@@ -43,7 +39,7 @@ public class CampaignCriterionServiceKeyword {
   public static final String JSON_PROPERTY_TEXT = "text";
   private String text;
 
-  public CampaignCriterionServiceKeyword() { 
+  public CampaignCriterionServiceKeyword() {
   }
 
   public CampaignCriterionServiceKeyword keywordMatchType(CampaignCriterionServiceKeywordMatchType keywordMatchType) {
@@ -56,8 +52,7 @@ public class CampaignCriterionServiceKeyword {
    * Get keywordMatchType
    * @return keywordMatchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_MATCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class CampaignCriterionServiceKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードの内容です。&lt;br&gt; ADD時、このフィールドは必須です。&lt;br&gt; ※最大80文字、10ワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceKeyword element.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; * Maximum of 80 letters, 10 word.&lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワードの内容です。<br> ADD時、このフィールドは必須です。<br> ※最大80文字、10ワードです。</div> <div lang=\"en\">CampaignCriterionServiceKeyword element.<br> This field is required in ADD operation.<br> * Maximum of 80 letters, 10 word.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class CampaignCriterionServiceKeyword {
   public void setText(String text) {
     this.text = text;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.RetargetingListServiceRuleItem;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleGroupは、URL/LABELのルールをグループ化した情報を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時に、このフィールドは省略可能となります。&lt;br&gt; isAllVisitorがTRUEである場合、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleGroup is an object that holds grouped URL/LABEL rules.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If isAllVisitor is TRUE, this field is required in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceRuleGroupは、URL/LABELのルールをグループ化した情報を保持するオブジェクトです。<br> ADDおよびSET時に、このフィールドは省略可能となります。<br> isAllVisitorがTRUEである場合、ADDおよびSET時に必須となります。</div> <div lang=\"en\">RetargetingListServiceRuleGroup is an object that holds grouped URL/LABEL rules.<br> This field is optional in ADD and SET operation.<br> If isAllVisitor is TRUE, this field is required in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceRuleGroup.JSON_PROPERTY_RULE_ITEMS
 })
-@JsonTypeName("RetargetingListServiceRuleGroup")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceRuleGroup {
   public static final String JSON_PROPERTY_RULE_ITEMS = "ruleItems";
-  private List<RetargetingListServiceRuleItem> ruleItems = null;
+  private List<RetargetingListServiceRuleItem> ruleItems;
 
-  public RetargetingListServiceRuleGroup() { 
+  public RetargetingListServiceRuleGroup() {
   }
 
   public RetargetingListServiceRuleGroup ruleItems(List<RetargetingListServiceRuleItem> ruleItems) {
@@ -62,8 +58,7 @@ public class RetargetingListServiceRuleGroup {
    * Get ruleItems
    * @return ruleItems
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULE_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RetargetingListServiceRuleGroup {
   public void setRuleItems(List<RetargetingListServiceRuleItem> ruleItems) {
     this.ruleItems = ruleItems;
   }
-
 
   @Override
   public boolean equals(Object o) {

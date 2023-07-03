@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignWebpageServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServicePageオブジェクトは、取得されるPageFeedAssetの除外設定に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServicePage object describes entry on exclusion setting of acquired PageFeedAsset.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServicePageオブジェクトは、取得されるPageFeedAssetの除外設定に関するエントリーを表します。</div> <div lang=\"en\">CampaignWebpageServicePage object describes entry on exclusion setting of acquired PageFeedAsset.</div> ")
 @JsonPropertyOrder({
   CampaignWebpageServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   CampaignWebpageServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignWebpageServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignWebpageServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignWebpageServiceValue> values = null;
+  private List<CampaignWebpageServiceValue> values;
 
-  public CampaignWebpageServicePage() { 
+  public CampaignWebpageServicePage() {
   }
 
   public CampaignWebpageServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class CampaignWebpageServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be acquired&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数</div> <div lang=\"en\">Total number of items to be acquired</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class CampaignWebpageServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class CampaignWebpageServicePage {
   public void setValues(List<CampaignWebpageServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupCriterionServiceKeywordMatchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceKeywordオブジェクトは、キーワードに関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceKeyword object displays keyword information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceKeywordオブジェクトは、キーワードに関する情報を表します。</div> <div lang=\"en\">AdGroupCriterionServiceKeyword object displays keyword information.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionServiceKeyword.JSON_PROPERTY_KEYWORD_MATCH_TYPE,
   AdGroupCriterionServiceKeyword.JSON_PROPERTY_TEXT
 })
-@JsonTypeName("AdGroupCriterionServiceKeyword")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionServiceKeyword {
   public static final String JSON_PROPERTY_KEYWORD_MATCH_TYPE = "keywordMatchType";
   private AdGroupCriterionServiceKeywordMatchType keywordMatchType;
@@ -43,7 +39,7 @@ public class AdGroupCriterionServiceKeyword {
   public static final String JSON_PROPERTY_TEXT = "text";
   private String text;
 
-  public AdGroupCriterionServiceKeyword() { 
+  public AdGroupCriterionServiceKeyword() {
   }
 
   public AdGroupCriterionServiceKeyword keywordMatchType(AdGroupCriterionServiceKeywordMatchType keywordMatchType) {
@@ -56,8 +52,7 @@ public class AdGroupCriterionServiceKeyword {
    * Get keywordMatchType
    * @return keywordMatchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_MATCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class AdGroupCriterionServiceKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードの内容です。&lt;br&gt; ※最大80文字、10ワードです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceKeyword element.&lt;br&gt; *Maximum of 80 letters, 10 words.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワードの内容です。<br> ※最大80文字、10ワードです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupCriterionServiceKeyword element.<br> *Maximum of 80 letters, 10 words.<br> This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class AdGroupCriterionServiceKeyword {
   public void setText(String text) {
     this.text = text;
   }
-
 
   @Override
   public boolean equals(Object o) {

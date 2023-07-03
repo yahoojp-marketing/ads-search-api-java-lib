@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.AccountLinkServiceLinkAccessPermission;
 import jp.co.yahoo.adssearchapi.v11.model.AccountLinkServiceOwnerShipType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountLinkオブジェクトは、アカウントリンク情報を示します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountLink objects serve account link information.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountLinkオブジェクトは、アカウントリンク情報を示します。<br> </div> <div lang=\"en\">AccountLink objects serve account link information.<br> </div> ")
 @JsonPropertyOrder({
   AccountLink.JSON_PROPERTY_MANAGER_ACCOUNT_ID,
   AccountLink.JSON_PROPERTY_ACCOUNT_ID,
   AccountLink.JSON_PROPERTY_LINK_ACCESS_PERMISSION,
   AccountLink.JSON_PROPERTY_OWNER_SHIP_TYPE
 })
-@JsonTypeName("AccountLink")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountLink {
   public static final String JSON_PROPERTY_MANAGER_ACCOUNT_ID = "managerAccountId";
   private Long managerAccountId;
@@ -52,7 +48,7 @@ public class AccountLink {
   public static final String JSON_PROPERTY_OWNER_SHIP_TYPE = "ownerShipType";
   private AccountLinkServiceOwnerShipType ownerShipType;
 
-  public AccountLink() { 
+  public AccountLink() {
   }
 
   public AccountLink managerAccountId(Long managerAccountId) {
@@ -65,8 +61,7 @@ public class AccountLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MCCアカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;MCC Account ID.&lt;/div&gt; 
    * @return managerAccountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">MCCアカウントIDです。</div> <div lang=\"en\">MCC Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MANAGER_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,8 +87,7 @@ public class AccountLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,8 +113,7 @@ public class AccountLink {
    * Get linkAccessPermission
    * @return linkAccessPermission
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LINK_ACCESS_PERMISSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,8 +139,7 @@ public class AccountLink {
    * Get ownerShipType
    * @return ownerShipType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OWNER_SHIP_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,7 +153,6 @@ public class AccountLink {
   public void setOwnerShipType(AccountLinkServiceOwnerShipType ownerShipType) {
     this.ownerShipType = ownerShipType;
   }
-
 
   @Override
   public boolean equals(Object o) {

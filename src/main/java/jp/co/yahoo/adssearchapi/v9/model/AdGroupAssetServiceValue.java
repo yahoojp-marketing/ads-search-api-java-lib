@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAsset;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAssetServiceValueオブジェクトは、広告グループとアセット間の設定情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAssetServiceValue is a container of configuration information between ad groups and assets.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAssetServiceValueオブジェクトは、広告グループとアセット間の設定情報を格納するコンテナです。</div> <div lang=\"en\">AdGroupAssetServiceValue is a container of configuration information between ad groups and assets.</div> ")
 @JsonPropertyOrder({
   AdGroupAssetServiceValue.JSON_PROPERTY_AD_GROUP_ASSET,
   AdGroupAssetServiceValue.JSON_PROPERTY_ERRORS,
   AdGroupAssetServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("AdGroupAssetServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAssetServiceValue {
   public static final String JSON_PROPERTY_AD_GROUP_ASSET = "adGroupAsset";
   private AdGroupAsset adGroupAsset;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public AdGroupAssetServiceValue() { 
+  public AdGroupAssetServiceValue() {
   }
 
   public AdGroupAssetServiceValue adGroupAsset(AdGroupAsset adGroupAsset) {
@@ -63,8 +59,7 @@ public class AdGroupAssetServiceValue {
    * Get adGroupAsset
    * @return adGroupAsset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ASSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class AdGroupAssetServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class AdGroupAssetServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果を表示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Showing operation results.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果を表示します。</div> <div lang=\"en\">Showing operation results.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class AdGroupAssetServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,14 +28,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BalanceSelectorオブジェクトは、アカウント残高を取得するアカウントを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Explains its account balance.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BalanceSelectorオブジェクトは、アカウント残高を取得するアカウントを示します。</div> <div lang=\"en\">Explains its account balance.</div> ")
 @JsonPropertyOrder({
   BalanceServiceSelector.JSON_PROPERTY_ACCOUNT_IDS,
   BalanceServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   BalanceServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("BalanceServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BalanceServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_IDS = "accountIds";
   private List<Long> accountIds = new ArrayList<>();
@@ -48,7 +44,7 @@ public class BalanceServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public BalanceServiceSelector() { 
+  public BalanceServiceSelector() {
   }
 
   public BalanceServiceSelector accountIds(List<Long> accountIds) {
@@ -58,6 +54,9 @@ public class BalanceServiceSelector {
   }
 
   public BalanceServiceSelector addAccountIdsItem(Long accountIdsItem) {
+    if (this.accountIds == null) {
+      this.accountIds = new ArrayList<>();
+    }
     this.accountIds.add(accountIdsItem);
     return this;
   }
@@ -66,8 +65,7 @@ public class BalanceServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDの配列です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account IDs.&lt;/div&gt; 
    * @return accountIds
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDの配列です。</div> <div lang=\"en\">Account IDs.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_IDS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -95,8 +93,7 @@ public class BalanceServiceSelector {
    * maximum: 200
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,8 +120,7 @@ public class BalanceServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -138,7 +134,6 @@ public class BalanceServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

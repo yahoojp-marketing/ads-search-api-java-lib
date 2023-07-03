@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceReviewStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRetargetingAccountStatusは、アカウントのリタゲ審査ステータスを保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRetargetingAccountStatus is an object that holds retargeting review status of account.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceRetargetingAccountStatusは、アカウントのリタゲ審査ステータスを保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceRetargetingAccountStatus is an object that holds retargeting review status of account.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceRetargetingAccountStatus.JSON_PROPERTY_AGREE_DATE,
   RetargetingListServiceRetargetingAccountStatus.JSON_PROPERTY_REVIEW_REQUEST_DATE,
   RetargetingListServiceRetargetingAccountStatus.JSON_PROPERTY_REVIEW_STATUS
 })
-@JsonTypeName("RetargetingListServiceRetargetingAccountStatus")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceRetargetingAccountStatus {
   public static final String JSON_PROPERTY_AGREE_DATE = "agreeDate";
   private String agreeDate;
@@ -47,7 +43,7 @@ public class RetargetingListServiceRetargetingAccountStatus {
   public static final String JSON_PROPERTY_REVIEW_STATUS = "reviewStatus";
   private RetargetingListServiceReviewStatus reviewStatus;
 
-  public RetargetingListServiceRetargetingAccountStatus() { 
+  public RetargetingListServiceRetargetingAccountStatus() {
   }
 
   public RetargetingListServiceRetargetingAccountStatus agreeDate(String agreeDate) {
@@ -60,8 +56,7 @@ public class RetargetingListServiceRetargetingAccountStatus {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;規約同意日です。&lt;br&gt; ※YYYYMMDD形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Agreement date.&lt;br&gt; *In YYYYMMDD format.&lt;/div&gt; 
    * @return agreeDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">規約同意日です。<br> ※YYYYMMDD形式です。</div> <div lang=\"en\">Agreement date.<br> *In YYYYMMDD format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AGREE_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class RetargetingListServiceRetargetingAccountStatus {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;再審査依頼日です。&lt;br&gt; ※YYYYMMDD形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Re-examination review request date.&lt;br&gt; *In YYYYMMDD format.&lt;/div&gt; 
    * @return reviewRequestDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">再審査依頼日です。<br> ※YYYYMMDD形式です。</div> <div lang=\"en\">Re-examination review request date.<br> *In YYYYMMDD format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_REQUEST_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class RetargetingListServiceRetargetingAccountStatus {
    * Get reviewStatus
    * @return reviewStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class RetargetingListServiceRetargetingAccountStatus {
   public void setReviewStatus(RetargetingListServiceReviewStatus reviewStatus) {
     this.reviewStatus = reviewStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.Error;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceValueは、ターゲットリストのの実行結果（1 Entity）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceValue is an object that holds results (one entity).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceValueは、ターゲットリストのの実行結果（1 Entity）を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceValue is an object that holds results (one entity).</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceValue.JSON_PROPERTY_ERRORS,
   RetargetingListServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   RetargetingListServiceValue.JSON_PROPERTY_TARGET_LIST
 })
-@JsonTypeName("RetargetingListServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
@@ -50,7 +46,7 @@ public class RetargetingListServiceValue {
   public static final String JSON_PROPERTY_TARGET_LIST = "targetList";
   private RetargetingListServiceTargetingList targetList;
 
-  public RetargetingListServiceValue() { 
+  public RetargetingListServiceValue() {
   }
 
   public RetargetingListServiceValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class RetargetingListServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class RetargetingListServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果を表示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Displays process result.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果を表示します。</div> <div lang=\"en\">Displays process result.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class RetargetingListServiceValue {
    * Get targetList
    * @return targetList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class RetargetingListServiceValue {
   public void setTargetList(RetargetingListServiceTargetingList targetList) {
     this.targetList = targetList;
   }
-
 
   @Override
   public boolean equals(Object o) {

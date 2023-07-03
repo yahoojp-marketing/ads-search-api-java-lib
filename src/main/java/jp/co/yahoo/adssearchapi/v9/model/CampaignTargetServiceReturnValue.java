@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignTargetServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaigｎTargetReturnValueオブジェクトは、操作結果を含むキャンペーンのターゲット設定に関する情報のコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for campaign target setting and its operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaigｎTargetReturnValueオブジェクトは、操作結果を含むキャンペーンのターゲット設定に関する情報のコンテナです。</div> <div lang=\"en\">Container for campaign target setting and its operation results.</div> ")
 @JsonPropertyOrder({
   CampaignTargetServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignTargetServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTargetServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignTargetServiceValue> values = null;
+  private List<CampaignTargetServiceValue> values;
 
-  public CampaignTargetServiceReturnValue() { 
+  public CampaignTargetServiceReturnValue() {
   }
 
   public CampaignTargetServiceReturnValue values(List<CampaignTargetServiceValue> values) {
@@ -62,8 +58,7 @@ public class CampaignTargetServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignTargetServiceReturnValue {
   public void setValues(List<CampaignTargetServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

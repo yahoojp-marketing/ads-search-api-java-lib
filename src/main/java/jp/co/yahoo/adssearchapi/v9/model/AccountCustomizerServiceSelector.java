@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AccountCustomizerServiceType;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountCustomizerServiceSelectorオブジェクトは、カスタマイザー属性の情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountCustomizerServiceSelector describes the AccountCustomizer information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountCustomizerServiceSelectorオブジェクトは、カスタマイザー属性の情報を指定します。</div> <div lang=\"en\">AccountCustomizerServiceSelector describes the AccountCustomizer information.</div> ")
 @JsonPropertyOrder({
   AccountCustomizerServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AccountCustomizerServiceSelector.JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_IDS,
@@ -39,17 +36,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountCustomizerServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AccountCustomizerServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AccountCustomizerServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountCustomizerServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_IDS = "customizerAttributeIds";
-  private List<Long> customizerAttributeIds = null;
+  private List<Long> customizerAttributeIds;
 
   public static final String JSON_PROPERTY_TYPES = "types";
-  private List<AccountCustomizerServiceType> types = null;
+  private List<AccountCustomizerServiceType> types;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -57,7 +53,7 @@ public class AccountCustomizerServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AccountCustomizerServiceSelector() { 
+  public AccountCustomizerServiceSelector() {
   }
 
   public AccountCustomizerServiceSelector accountId(Long accountId) {
@@ -70,8 +66,7 @@ public class AccountCustomizerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,8 +100,7 @@ public class AccountCustomizerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：カスタマイザー属性ID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Customizer Attribute ID&lt;/div&gt; 
    * @return customizerAttributeIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：カスタマイザー属性ID</div> <div lang=\"en\">Search condition: Customizer Attribute ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,8 +134,7 @@ public class AccountCustomizerServiceSelector {
    * Get types
    * @return types
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,8 +162,7 @@ public class AccountCustomizerServiceSelector {
    * maximum: 2000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,8 +189,7 @@ public class AccountCustomizerServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,7 +203,6 @@ public class AccountCustomizerServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AccountCustomizerServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountCustomizerServiceReturnValueオブジェクトは、アカウントとカスタマイザー属性間の設定情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountCustomizerServiceReturnValue object contains the configuration information between the account and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountCustomizerServiceReturnValueオブジェクトは、アカウントとカスタマイザー属性間の設定情報を格納します。</div> <div lang=\"en\">AccountCustomizerServiceReturnValue object contains the configuration information between the account and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   AccountCustomizerServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AccountCustomizerServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountCustomizerServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AccountCustomizerServiceValue> values = null;
+  private List<AccountCustomizerServiceValue> values;
 
-  public AccountCustomizerServiceReturnValue() { 
+  public AccountCustomizerServiceReturnValue() {
   }
 
   public AccountCustomizerServiceReturnValue values(List<AccountCustomizerServiceValue> values) {
@@ -62,8 +58,7 @@ public class AccountCustomizerServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AccountCustomizerServiceReturnValue {
   public void setValues(List<AccountCustomizerServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

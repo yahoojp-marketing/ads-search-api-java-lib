@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupFeed;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupFeedServiceListオブジェクトは、広告グループに関連付けられたFeedItem情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupFeedServiceList object describes the FeedItem information connected to ad group.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupFeedServiceListオブジェクトは、広告グループに関連付けられたFeedItem情報を表します。</div> <div lang=\"en\">AdGroupFeedServiceList object describes the FeedItem information connected to ad group.</div> ")
 @JsonPropertyOrder({
   AdGroupFeedServiceList.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupFeedServiceList.JSON_PROPERTY_AD_GROUP_FEED,
@@ -40,14 +37,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupFeedServiceList.JSON_PROPERTY_CAMPAIGN_ID,
   AdGroupFeedServiceList.JSON_PROPERTY_PLACEHOLDER_TYPE
 })
-@JsonTypeName("AdGroupFeedServiceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupFeedServiceList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_FEED = "adGroupFeed";
-  private List<AdGroupFeed> adGroupFeed = null;
+  private List<AdGroupFeed> adGroupFeed;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
   private Long adGroupId;
@@ -58,7 +54,7 @@ public class AdGroupFeedServiceList {
   public static final String JSON_PROPERTY_PLACEHOLDER_TYPE = "placeholderType";
   private AdGroupFeedServicePlaceholderType placeholderType;
 
-  public AdGroupFeedServiceList() { 
+  public AdGroupFeedServiceList() {
   }
 
   public AdGroupFeedServiceList accountId(Long accountId) {
@@ -71,8 +67,7 @@ public class AdGroupFeedServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">Account ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,8 +101,7 @@ public class AdGroupFeedServiceList {
    * Get adGroupFeed
    * @return adGroupFeed
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_FEED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class AdGroupFeedServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad Group ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return adGroupId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">Ad Group ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,8 +153,7 @@ public class AdGroupFeedServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">Campaign ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,8 +179,7 @@ public class AdGroupFeedServiceList {
    * Get placeholderType
    * @return placeholderType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -202,7 +193,6 @@ public class AdGroupFeedServiceList {
   public void setPlaceholderType(AdGroupFeedServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
-
 
   @Override
   public boolean equals(Object o) {

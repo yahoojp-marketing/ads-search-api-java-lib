@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CustomizerAttributeServiceType;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CustomizerAttributeServiceSelectorオブジェクトは、カスタマイザー属性の情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CustomizerAttributeServiceSelector describes the CustomizerAttribute information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CustomizerAttributeServiceSelectorオブジェクトは、カスタマイザー属性の情報を指定します。</div> <div lang=\"en\">CustomizerAttributeServiceSelector describes the CustomizerAttribute information.</div> ")
 @JsonPropertyOrder({
   CustomizerAttributeServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   CustomizerAttributeServiceSelector.JSON_PROPERTY_TYPES
 })
-@JsonTypeName("CustomizerAttributeServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CustomizerAttributeServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_TYPES = "types";
-  private List<CustomizerAttributeServiceType> types = null;
+  private List<CustomizerAttributeServiceType> types;
 
-  public CustomizerAttributeServiceSelector() { 
+  public CustomizerAttributeServiceSelector() {
   }
 
   public CustomizerAttributeServiceSelector accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class CustomizerAttributeServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -93,8 +88,7 @@ public class CustomizerAttributeServiceSelector {
    * Get types
    * @return types
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class CustomizerAttributeServiceSelector {
   public void setTypes(List<CustomizerAttributeServiceType> types) {
     this.types = types;
   }
-
 
   @Override
   public boolean equals(Object o) {

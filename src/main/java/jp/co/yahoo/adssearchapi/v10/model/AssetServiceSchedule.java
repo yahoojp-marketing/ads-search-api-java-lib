@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.AssetServiceDayOfWeek;
 import jp.co.yahoo.adssearchapi.v10.model.AssetServiceMinuteOfHour;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceScheduleオブジェクトは、広告表示オプションの配信スケジュール設定を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceSchedule object describes display schedule from Ad Display Option.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceScheduleオブジェクトは、広告表示オプションの配信スケジュール設定を表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。</div> <div lang=\"en\">AssetServiceSchedule object describes display schedule from Ad Display Option.<br> This field is optional in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   AssetServiceSchedule.JSON_PROPERTY_DAY_OF_WEEK,
   AssetServiceSchedule.JSON_PROPERTY_END_HOUR,
@@ -38,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceSchedule.JSON_PROPERTY_START_HOUR,
   AssetServiceSchedule.JSON_PROPERTY_START_MINUTE
 })
-@JsonTypeName("AssetServiceSchedule")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceSchedule {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "dayOfWeek";
   private AssetServiceDayOfWeek dayOfWeek;
@@ -56,7 +52,7 @@ public class AssetServiceSchedule {
   public static final String JSON_PROPERTY_START_MINUTE = "startMinute";
   private AssetServiceMinuteOfHour startMinute;
 
-  public AssetServiceSchedule() { 
+  public AssetServiceSchedule() {
   }
 
   public AssetServiceSchedule dayOfWeek(AssetServiceDayOfWeek dayOfWeek) {
@@ -69,8 +65,7 @@ public class AssetServiceSchedule {
    * Get dayOfWeek
    * @return dayOfWeek
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,8 +91,7 @@ public class AssetServiceSchedule {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;終了時です。&lt;br&gt; ※0 ～ 24の範囲で設定してください。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End time in hour.&lt;br&gt; *Specify from 0 - 24.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return endHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">終了時です。<br> ※0 ～ 24の範囲で設定してください。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">End time in hour.<br> *Specify from 0 - 24.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,8 +117,7 @@ public class AssetServiceSchedule {
    * Get endMinute
    * @return endMinute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_MINUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,8 +143,7 @@ public class AssetServiceSchedule {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始時です。&lt;br&gt; ※0 ～ 23の範囲で設定してください。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start time in hour.&lt;br&gt; *Specify from 0 - 23.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return startHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">開始時です。<br> ※0 ～ 23の範囲で設定してください。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">Start time in hour.<br> *Specify from 0 - 23.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,8 +169,7 @@ public class AssetServiceSchedule {
    * Get startMinute
    * @return startMinute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_MINUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -192,7 +183,6 @@ public class AssetServiceSchedule {
   public void setStartMinute(AssetServiceMinuteOfHour startMinute) {
     this.startMinute = startMinute;
   }
-
 
   @Override
   public boolean equals(Object o) {

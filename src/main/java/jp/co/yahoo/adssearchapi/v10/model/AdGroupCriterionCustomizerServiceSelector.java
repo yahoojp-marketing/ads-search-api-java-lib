@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupCriterionCustomizerServiceType;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionCustomizerServiceSelectorオブジェクトは、カスタマイザー属性の情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionCustomizerServiceSelector describes the AdGroupCriterionCustomizer information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionCustomizerServiceSelectorオブジェクトは、カスタマイザー属性の情報を指定します。</div> <div lang=\"en\">AdGroupCriterionCustomizerServiceSelector describes the AdGroupCriterionCustomizer information.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionCustomizerServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupCriterionCustomizerServiceSelector.JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_IDS,
@@ -42,26 +39,25 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupCriterionCustomizerServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AdGroupCriterionCustomizerServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AdGroupCriterionCustomizerServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionCustomizerServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_IDS = "customizerAttributeIds";
-  private List<Long> customizerAttributeIds = null;
+  private List<Long> customizerAttributeIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
-  private List<Long> adGroupIds = null;
+  private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_CRITERION_IDS = "criterionIds";
-  private List<Long> criterionIds = null;
+  private List<Long> criterionIds;
 
   public static final String JSON_PROPERTY_TYPES = "types";
-  private List<AdGroupCriterionCustomizerServiceType> types = null;
+  private List<AdGroupCriterionCustomizerServiceType> types;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -69,7 +65,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AdGroupCriterionCustomizerServiceSelector() { 
+  public AdGroupCriterionCustomizerServiceSelector() {
   }
 
   public AdGroupCriterionCustomizerServiceSelector accountId(Long accountId) {
@@ -82,8 +78,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -117,8 +112,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：カスタマイザー属性ID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Customizer Attribute ID&lt;/div&gt; 
    * @return customizerAttributeIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：カスタマイザー属性ID</div> <div lang=\"en\">Search condition: Customizer Attribute ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -152,8 +146,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign ID.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：キャンペーンID</div> <div lang=\"en\">Search condition: Campaign ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,8 +180,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：広告グループID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Ad Group ID&lt;/div&gt; 
    * @return adGroupIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：広告グループID</div> <div lang=\"en\">Search condition: Ad Group ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +214,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：クライテリアID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Criterion ID&lt;/div&gt; 
    * @return criterionIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：クライテリアID</div> <div lang=\"en\">Search condition: Criterion ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -257,8 +248,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * Get types
    * @return types
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -286,8 +276,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * maximum: 2000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -314,8 +303,7 @@ public class AdGroupCriterionCustomizerServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -329,7 +317,6 @@ public class AdGroupCriterionCustomizerServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

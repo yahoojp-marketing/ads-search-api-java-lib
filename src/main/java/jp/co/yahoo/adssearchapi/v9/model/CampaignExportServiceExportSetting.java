@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignExportServiceApprovalStatus;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceExportSetting オブジェクトは、エクスポートする条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceExportSetting object describes the condition for exports.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignExportServiceExportSetting オブジェクトは、エクスポートする条件を表します。</div> <div lang=\"en\">CampaignExportServiceExportSetting object describes the condition for exports.</div> ")
 @JsonPropertyOrder({
   CampaignExportServiceExportSetting.JSON_PROPERTY_ACCOUNT_ID,
   CampaignExportServiceExportSetting.JSON_PROPERTY_AD_GROUP_AD_APPROVAL_STATUSES,
@@ -57,53 +54,52 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignExportServiceExportSetting.JSON_PROPERTY_LANG,
   CampaignExportServiceExportSetting.JSON_PROPERTY_OUTPUT
 })
-@JsonTypeName("CampaignExportServiceExportSetting")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignExportServiceExportSetting {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_AD_APPROVAL_STATUSES = "adGroupAdApprovalStatuses";
-  private List<CampaignExportServiceApprovalStatus> adGroupAdApprovalStatuses = null;
+  private List<CampaignExportServiceApprovalStatus> adGroupAdApprovalStatuses;
 
   public static final String JSON_PROPERTY_AD_GROUP_AD_USER_STATUSES = "adGroupAdUserStatuses";
-  private List<CampaignExportServiceUserStatus> adGroupAdUserStatuses = null;
+  private List<CampaignExportServiceUserStatus> adGroupAdUserStatuses;
 
   public static final String JSON_PROPERTY_AD_GROUP_CRITERION_APPROVAL_STATUSES = "adGroupCriterionApprovalStatuses";
-  private List<CampaignExportServiceApprovalStatus> adGroupCriterionApprovalStatuses = null;
+  private List<CampaignExportServiceApprovalStatus> adGroupCriterionApprovalStatuses;
 
   public static final String JSON_PROPERTY_AD_GROUP_CRITERION_IDS = "adGroupCriterionIds";
-  private List<Long> adGroupCriterionIds = null;
+  private List<Long> adGroupCriterionIds;
 
   public static final String JSON_PROPERTY_AD_GROUP_CRITERION_USER_STATUSES = "adGroupCriterionUserStatuses";
-  private List<CampaignExportServiceUserStatus> adGroupCriterionUserStatuses = null;
+  private List<CampaignExportServiceUserStatus> adGroupCriterionUserStatuses;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
-  private List<Long> adGroupIds = null;
+  private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_AD_GROUP_USER_STATUSES = "adGroupUserStatuses";
-  private List<CampaignExportServiceUserStatus> adGroupUserStatuses = null;
+  private List<CampaignExportServiceUserStatus> adGroupUserStatuses;
 
   public static final String JSON_PROPERTY_AD_IDS = "adIds";
-  private List<Long> adIds = null;
+  private List<Long> adIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_CRITERION_IDS = "campaignCriterionIds";
-  private List<Long> campaignCriterionIds = null;
+  private List<Long> campaignCriterionIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_USER_STATUSES = "campaignUserStatuses";
-  private List<CampaignExportServiceUserStatus> campaignUserStatuses = null;
+  private List<CampaignExportServiceUserStatus> campaignUserStatuses;
 
   public static final String JSON_PROPERTY_ENCODING = "encoding";
   private CampaignExportServiceEncoding encoding;
 
   public static final String JSON_PROPERTY_ENTITY_TYPES = "entityTypes";
-  private List<CampaignExportServiceEntityType> entityTypes = null;
+  private List<CampaignExportServiceEntityType> entityTypes;
 
   public static final String JSON_PROPERTY_EXPORT_FIELDS = "exportFields";
-  private List<String> exportFields = null;
+  private List<String> exportFields;
 
   public static final String JSON_PROPERTY_JOB_NAME = "jobName";
   private String jobName;
@@ -114,7 +110,7 @@ public class CampaignExportServiceExportSetting {
   public static final String JSON_PROPERTY_OUTPUT = "output";
   private CampaignExportServiceOutput output;
 
-  public CampaignExportServiceExportSetting() { 
+  public CampaignExportServiceExportSetting() {
   }
 
   public CampaignExportServiceExportSetting accountId(Long accountId) {
@@ -127,8 +123,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt;このフィールドは、必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt;This field is required.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。<br>このフィールドは、必須です。</div> <div lang=\"en\">Account ID.<br>This field is required.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -162,8 +157,7 @@ public class CampaignExportServiceExportSetting {
    * Get adGroupAdApprovalStatuses
    * @return adGroupAdApprovalStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_AD_APPROVAL_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,8 +191,7 @@ public class CampaignExportServiceExportSetting {
    * Get adGroupAdUserStatuses
    * @return adGroupAdUserStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_AD_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -232,8 +225,7 @@ public class CampaignExportServiceExportSetting {
    * Get adGroupCriterionApprovalStatuses
    * @return adGroupCriterionApprovalStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_CRITERION_APPROVAL_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -267,8 +259,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループクライテリアIDです。&lt;br&gt;このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group criteria ID.&lt;br&gt;This field is optional.&lt;/div&gt; 
    * @return adGroupCriterionIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループクライテリアIDです。<br>このフィールドは、省略可能となります。</div> <div lang=\"en\">Ad group criteria ID.<br>This field is optional.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_CRITERION_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -302,8 +293,7 @@ public class CampaignExportServiceExportSetting {
    * Get adGroupCriterionUserStatuses
    * @return adGroupCriterionUserStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_CRITERION_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -337,8 +327,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロード対象の広告グループIDです。&lt;br&gt; このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID of export objective.&lt;br&gt; This field is optional.&lt;/div&gt; 
    * @return adGroupIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ダウンロード対象の広告グループIDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Ad group ID of export objective.<br> This field is optional.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -372,8 +361,7 @@ public class CampaignExportServiceExportSetting {
    * Get adGroupUserStatuses
    * @return adGroupUserStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -407,8 +395,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロード対象の広告IDです。&lt;br&gt; このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad ID of export objective.&lt;br&gt; This field is optional.&lt;/div&gt; 
    * @return adIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ダウンロード対象の広告IDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Ad ID of export objective.<br> This field is optional.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -442,8 +429,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンクライテリアIDです。&lt;br&gt; このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign criteria ID.&lt;br&gt; This field is optional.&lt;/div&gt; 
    * @return campaignCriterionIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンクライテリアIDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Campaign criteria ID.<br> This field is optional.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_CRITERION_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -477,8 +463,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロード対象のキャンペーンIDです。&lt;br&gt; このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID of export objective.&lt;br&gt; This field is optional.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ダウンロード対象のキャンペーンIDです。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Campaign ID of export objective.<br> This field is optional.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -512,8 +497,7 @@ public class CampaignExportServiceExportSetting {
    * Get campaignUserStatuses
    * @return campaignUserStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -539,8 +523,7 @@ public class CampaignExportServiceExportSetting {
    * Get encoding
    * @return encoding
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ENCODING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -574,8 +557,7 @@ public class CampaignExportServiceExportSetting {
    * Get entityTypes
    * @return entityTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ENTITY_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -609,8 +591,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エクスポートするフィールドを指定します。&lt;br&gt; このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Select which field to export.&lt;br&gt; This field is optional.&lt;/div&gt; 
    * @return exportFields
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">エクスポートするフィールドを指定します。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Select which field to export.<br> This field is optional.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXPORT_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -636,8 +617,7 @@ public class CampaignExportServiceExportSetting {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロードするジョブの名称です。&lt;br&gt; このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Job information for export.&lt;br&gt; This field is optional.&lt;/div&gt; 
    * @return jobName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードするジョブの名称です。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\">Job information for export.<br> This field is optional.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -663,8 +643,7 @@ public class CampaignExportServiceExportSetting {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -690,8 +669,7 @@ public class CampaignExportServiceExportSetting {
    * Get output
    * @return output
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OUTPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -705,7 +683,6 @@ public class CampaignExportServiceExportSetting {
   public void setOutput(CampaignExportServiceOutput output) {
     this.output = output;
   }
-
 
   @Override
   public boolean equals(Object o) {

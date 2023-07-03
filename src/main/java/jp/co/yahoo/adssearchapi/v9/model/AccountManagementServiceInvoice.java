@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementServiceInvoiceオブジェクトは、後金支払情報を表します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountManagementServiceInvoice object describes the invoice information.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountManagementServiceInvoiceオブジェクトは、後金支払情報を表します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">AccountManagementServiceInvoice object describes the invoice information.<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
 @JsonPropertyOrder({
   AccountManagementServiceInvoice.JSON_PROPERTY_BUDGET_AMOUNT,
   AccountManagementServiceInvoice.JSON_PROPERTY_END_DATE,
   AccountManagementServiceInvoice.JSON_PROPERTY_START_DATE
 })
-@JsonTypeName("AccountManagementServiceInvoice")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountManagementServiceInvoice {
   public static final String JSON_PROPERTY_BUDGET_AMOUNT = "budgetAmount";
   private Long budgetAmount;
@@ -46,7 +42,7 @@ public class AccountManagementServiceInvoice {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
 
-  public AccountManagementServiceInvoice() { 
+  public AccountManagementServiceInvoice() {
   }
 
   public AccountManagementServiceInvoice budgetAmount(Long budgetAmount) {
@@ -59,8 +55,7 @@ public class AccountManagementServiceInvoice {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;金額です。&lt;br&gt; ※1,000単位、3,000以上999,999,999,999,000以内です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Budget Amount.&lt;br&gt; * Amount must be more than 3,000 and less than 999,999,999,999,000. The unit is 1,000.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return budgetAmount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">金額です。<br> ※1,000単位、3,000以上999,999,999,999,000以内です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。</div> <div lang=\"en\">Budget Amount.<br> * Amount must be more than 3,000 and less than 999,999,999,999,000. The unit is 1,000.<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BUDGET_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class AccountManagementServiceInvoice {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;終了日です。※YYYYMMDD形式です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。その際、ADD時のデフォルト設定値は20371231となり、『設定なし』と同義となります。&lt;br&gt; 20371231を指定した場合も『設定なし』となります。&lt;br&gt;SET時に『設定なし』に設定する場合は、20371231を指定してください。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End Date (YYYYMMDD).&lt;br&gt; This field is optional in ADD and SET operation. The default value in ADD operation will be 20371231. 20371231 will be considered as \&quot;No setting\&quot;.&lt;br&gt; In order to reset the endDate in SET operation, specify 20371231.&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">終了日です。※YYYYMMDD形式です。<br> ADDおよびSET時、このフィールドは省略可能となります。その際、ADD時のデフォルト設定値は20371231となり、『設定なし』と同義となります。<br> 20371231を指定した場合も『設定なし』となります。<br>SET時に『設定なし』に設定する場合は、20371231を指定してください。</div> <div lang=\"en\">End Date (YYYYMMDD).<br> This field is optional in ADD and SET operation. The default value in ADD operation will be 20371231. 20371231 will be considered as \"No setting\".<br> In order to reset the endDate in SET operation, specify 20371231.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class AccountManagementServiceInvoice {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始日です。※YYYYMMDD形式です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。※自動でADD時の日付が登録されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start Date (YYYYMMDD).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. * This field will be automatically registered in ADD operation.&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">開始日です。※YYYYMMDD形式です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。※自動でADD時の日付が登録されます。</div> <div lang=\"en\">Start Date (YYYYMMDD).<br> Although this field will be returned in the response, it will be ignored on input. * This field will be automatically registered in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class AccountManagementServiceInvoice {
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

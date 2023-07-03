@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedAssetServiceAddDownloadJobValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServiceAddDownloadJobReturnValueは、ダウンロードの実行結果をリストに格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServiceAddDownloadJobReturnValue retains list of download result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedAssetServiceAddDownloadJobReturnValueは、ダウンロードの実行結果をリストに格納するコンテナです。</div> <div lang=\"en\">PageFeedAssetServiceAddDownloadJobReturnValue retains list of download result.</div> ")
 @JsonPropertyOrder({
   PageFeedAssetServiceAddDownloadJobReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("PageFeedAssetServiceAddDownloadJobReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedAssetServiceAddDownloadJobReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<PageFeedAssetServiceAddDownloadJobValue> values = null;
+  private List<PageFeedAssetServiceAddDownloadJobValue> values;
 
-  public PageFeedAssetServiceAddDownloadJobReturnValue() { 
+  public PageFeedAssetServiceAddDownloadJobReturnValue() {
   }
 
   public PageFeedAssetServiceAddDownloadJobReturnValue values(List<PageFeedAssetServiceAddDownloadJobValue> values) {
@@ -62,8 +58,7 @@ public class PageFeedAssetServiceAddDownloadJobReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class PageFeedAssetServiceAddDownloadJobReturnValue {
   public void setValues(List<PageFeedAssetServiceAddDownloadJobValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

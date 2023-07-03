@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupWebpageServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceReturnValueオブジェクトは、操作結果を含む配信/除外設定のコンテナを保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceReturnValue object contains allowed or excluded settings including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceReturnValueオブジェクトは、操作結果を含む配信/除外設定のコンテナを保持します。</div> <div lang=\"en\">AdGroupWebpageServiceReturnValue object contains allowed or excluded settings including operation result.</div> ")
 @JsonPropertyOrder({
   AdGroupWebpageServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupWebpageServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupWebpageServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupWebpageServiceValue> values = null;
+  private List<AdGroupWebpageServiceValue> values;
 
-  public AdGroupWebpageServiceReturnValue() { 
+  public AdGroupWebpageServiceReturnValue() {
   }
 
   public AdGroupWebpageServiceReturnValue values(List<AdGroupWebpageServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupWebpageServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupWebpageServiceReturnValue {
   public void setValues(List<AdGroupWebpageServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

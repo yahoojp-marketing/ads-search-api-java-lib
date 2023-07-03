@@ -30,7 +30,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adssearchapi.v9.api.AdGroupAdServiceApi")
 public class AdGroupAdServiceApi {
     private ApiClient apiClient;
@@ -83,27 +83,27 @@ public class AdGroupAdServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupAdServiceMutateResponse> adGroupAdServiceAddPostWithHttpInfo(AdGroupAdServiceOperation adGroupAdServiceOperation) throws RestClientException {
-        Object postBody = adGroupAdServiceOperation;
+        Object localVarPostBody = adGroupAdServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupAdServiceMutateResponse> returnType = new ParameterizedTypeReference<AdGroupAdServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AdGroupAdService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupAdServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AdGroupAdServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AdGroupAdService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -136,27 +136,27 @@ public class AdGroupAdServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupAdServiceGetResponse> adGroupAdServiceGetPostWithHttpInfo(AdGroupAdServiceSelector adGroupAdServiceSelector) throws RestClientException {
-        Object postBody = adGroupAdServiceSelector;
+        Object localVarPostBody = adGroupAdServiceSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupAdServiceGetResponse> returnType = new ParameterizedTypeReference<AdGroupAdServiceGetResponse>() {};
-        return apiClient.invokeAPI("/AdGroupAdService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupAdServiceGetResponse> localReturnType = new ParameterizedTypeReference<AdGroupAdServiceGetResponse>() {};
+        return apiClient.invokeAPI("/AdGroupAdService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -189,27 +189,27 @@ public class AdGroupAdServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupAdServiceMutateResponse> adGroupAdServiceRemovePostWithHttpInfo(AdGroupAdServiceOperation adGroupAdServiceOperation) throws RestClientException {
-        Object postBody = adGroupAdServiceOperation;
+        Object localVarPostBody = adGroupAdServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupAdServiceMutateResponse> returnType = new ParameterizedTypeReference<AdGroupAdServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AdGroupAdService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupAdServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AdGroupAdServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AdGroupAdService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -242,27 +242,27 @@ public class AdGroupAdServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupAdServiceMutateResponse> adGroupAdServiceSetPostWithHttpInfo(AdGroupAdServiceOperation adGroupAdServiceOperation) throws RestClientException {
-        Object postBody = adGroupAdServiceOperation;
+        Object localVarPostBody = adGroupAdServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupAdServiceMutateResponse> returnType = new ParameterizedTypeReference<AdGroupAdServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AdGroupAdService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupAdServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AdGroupAdServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AdGroupAdService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -295,26 +295,26 @@ public class AdGroupAdServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupAdServiceSetTrademarkStatusResponse> adGroupAdServiceSetTrademarkStatusPostWithHttpInfo(AdGroupAdServiceSetTrademarkStatusOperation adGroupAdServiceSetTrademarkStatusOperation) throws RestClientException {
-        Object postBody = adGroupAdServiceSetTrademarkStatusOperation;
+        Object localVarPostBody = adGroupAdServiceSetTrademarkStatusOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupAdServiceSetTrademarkStatusResponse> returnType = new ParameterizedTypeReference<AdGroupAdServiceSetTrademarkStatusResponse>() {};
-        return apiClient.invokeAPI("/AdGroupAdService/setTrademarkStatus", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupAdServiceSetTrademarkStatusResponse> localReturnType = new ParameterizedTypeReference<AdGroupAdServiceSetTrademarkStatusResponse>() {};
+        return apiClient.invokeAPI("/AdGroupAdService/setTrademarkStatus", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

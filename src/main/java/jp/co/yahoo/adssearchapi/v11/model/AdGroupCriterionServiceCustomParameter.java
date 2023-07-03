@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceCustomParameterは、カスタムパラメータの内容を表します。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; ※SET時、既存の項目を置き換えます。また、isRemoveの設定値がTRUEの場合は無視され、全項目が削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceCustomParameter displays the element of custom parameters.&lt;br&gt; This field is required in ADD and SET operation.&lt;br&gt; *In SET operation, it will replace the current items. In addition, it will be ignored and all item will be deleted if &#39;isRemove&#39;  is set to TRUE.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceCustomParameterは、カスタムパラメータの内容を表します。<br> ADDおよびSET時、このフィールドは必須となります。<br> ※SET時、既存の項目を置き換えます。また、isRemoveの設定値がTRUEの場合は無視され、全項目が削除されます。</div> <div lang=\"en\">AdGroupCriterionServiceCustomParameter displays the element of custom parameters.<br> This field is required in ADD and SET operation.<br> *In SET operation, it will replace the current items. In addition, it will be ignored and all item will be deleted if 'isRemove'  is set to TRUE.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionServiceCustomParameter.JSON_PROPERTY_KEY,
   AdGroupCriterionServiceCustomParameter.JSON_PROPERTY_VALUE
 })
-@JsonTypeName("AdGroupCriterionServiceCustomParameter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionServiceCustomParameter {
   public static final String JSON_PROPERTY_KEY = "key";
   private String key;
@@ -42,7 +38,7 @@ public class AdGroupCriterionServiceCustomParameter {
   public static final String JSON_PROPERTY_VALUE = "value";
   private String value;
 
-  public AdGroupCriterionServiceCustomParameter() { 
+  public AdGroupCriterionServiceCustomParameter() {
   }
 
   public AdGroupCriterionServiceCustomParameter key(String key) {
@@ -55,8 +51,7 @@ public class AdGroupCriterionServiceCustomParameter {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Key of parameter.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return key
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーです。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Key of parameter.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class AdGroupCriterionServiceCustomParameter {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;値です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of parameter.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
    * @return value
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">値です。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">Value of parameter.<br> This field is optional in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class AdGroupCriterionServiceCustomParameter {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(Object o) {

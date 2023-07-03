@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.Error;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetrics オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetrics object contains estimate request.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordForecastMetrics オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetrics object contains estimate request.</div> ")
 @JsonPropertyOrder({
   KeywordForecastMetricsServiceValue.JSON_PROPERTY_KEYWORD_FORECAST_METRICS,
   KeywordForecastMetricsServiceValue.JSON_PROPERTY_ERRORS,
   KeywordForecastMetricsServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("KeywordForecastMetricsServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordForecastMetricsServiceValue {
   public static final String JSON_PROPERTY_KEYWORD_FORECAST_METRICS = "keywordForecastMetrics";
   private KeywordForecastMetrics keywordForecastMetrics;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public KeywordForecastMetricsServiceValue() { 
+  public KeywordForecastMetricsServiceValue() {
   }
 
   public KeywordForecastMetricsServiceValue keywordForecastMetrics(KeywordForecastMetrics keywordForecastMetrics) {
@@ -63,8 +59,7 @@ public class KeywordForecastMetricsServiceValue {
    * Get keywordForecastMetrics
    * @return keywordForecastMetrics
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_FORECAST_METRICS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class KeywordForecastMetricsServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class KeywordForecastMetricsServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Operation result.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">Operation result.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class KeywordForecastMetricsServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

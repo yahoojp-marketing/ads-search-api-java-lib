@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AccountSharedServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountSharedServiceReturnValueオブジェクトは、検索結果（全エンティティのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountSharedServiceReturnValue object holds search results (all entities list).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountSharedServiceReturnValueオブジェクトは、検索結果（全エンティティのリスト）を保持します。</div> <div lang=\"en\">AccountSharedServiceReturnValue object holds search results (all entities list).</div> ")
 @JsonPropertyOrder({
   AccountSharedServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AccountSharedServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountSharedServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AccountSharedServiceValue> values = null;
+  private List<AccountSharedServiceValue> values;
 
-  public AccountSharedServiceReturnValue() { 
+  public AccountSharedServiceReturnValue() {
   }
 
   public AccountSharedServiceReturnValue values(List<AccountSharedServiceValue> values) {
@@ -62,8 +58,7 @@ public class AccountSharedServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AccountSharedServiceReturnValue {
   public void setValues(List<AccountSharedServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

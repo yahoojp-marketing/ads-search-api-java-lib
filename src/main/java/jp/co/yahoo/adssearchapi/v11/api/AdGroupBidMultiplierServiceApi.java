@@ -28,7 +28,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adssearchapi.v11.api.AdGroupBidMultiplierServiceApi")
 public class AdGroupBidMultiplierServiceApi {
     private ApiClient apiClient;
@@ -81,27 +81,27 @@ public class AdGroupBidMultiplierServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupBidMultiplierServiceGetResponse> adGroupBidMultiplierServiceGetPostWithHttpInfo(AdGroupBidMultiplierServiceSelector adGroupBidMultiplierServiceSelector) throws RestClientException {
-        Object postBody = adGroupBidMultiplierServiceSelector;
+        Object localVarPostBody = adGroupBidMultiplierServiceSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupBidMultiplierServiceGetResponse> returnType = new ParameterizedTypeReference<AdGroupBidMultiplierServiceGetResponse>() {};
-        return apiClient.invokeAPI("/AdGroupBidMultiplierService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupBidMultiplierServiceGetResponse> localReturnType = new ParameterizedTypeReference<AdGroupBidMultiplierServiceGetResponse>() {};
+        return apiClient.invokeAPI("/AdGroupBidMultiplierService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -134,27 +134,27 @@ public class AdGroupBidMultiplierServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupBidMultiplierServiceMutateResponse> adGroupBidMultiplierServiceRemovePostWithHttpInfo(AdGroupBidMultiplierServiceOperation adGroupBidMultiplierServiceOperation) throws RestClientException {
-        Object postBody = adGroupBidMultiplierServiceOperation;
+        Object localVarPostBody = adGroupBidMultiplierServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse> returnType = new ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AdGroupBidMultiplierService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AdGroupBidMultiplierService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -187,26 +187,26 @@ public class AdGroupBidMultiplierServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AdGroupBidMultiplierServiceMutateResponse> adGroupBidMultiplierServiceSetPostWithHttpInfo(AdGroupBidMultiplierServiceOperation adGroupBidMultiplierServiceOperation) throws RestClientException {
-        Object postBody = adGroupBidMultiplierServiceOperation;
+        Object localVarPostBody = adGroupBidMultiplierServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse> returnType = new ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AdGroupBidMultiplierService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AdGroupBidMultiplierServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AdGroupBidMultiplierService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

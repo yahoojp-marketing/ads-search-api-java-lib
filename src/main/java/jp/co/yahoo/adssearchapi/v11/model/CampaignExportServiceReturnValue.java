@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignExportServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceReturnValue オブジェクトは、実行結果を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceReturnValue object describes the result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignExportServiceReturnValue オブジェクトは、実行結果を表します。</div> <div lang=\"en\">CampaignExportServiceReturnValue object describes the result.</div> ")
 @JsonPropertyOrder({
   CampaignExportServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignExportServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignExportServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignExportServiceValue> values = null;
+  private List<CampaignExportServiceValue> values;
 
-  public CampaignExportServiceReturnValue() { 
+  public CampaignExportServiceReturnValue() {
   }
 
   public CampaignExportServiceReturnValue values(List<CampaignExportServiceValue> values) {
@@ -62,8 +58,7 @@ public class CampaignExportServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignExportServiceReturnValue {
   public void setValues(List<CampaignExportServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

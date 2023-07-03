@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignExportServiceExportSetting;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -32,13 +30,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   CampaignExportServiceJobOperation.JSON_PROPERTY_SETTING
 })
-@JsonTypeName("CampaignExportServiceJobOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignExportServiceJobOperation {
   public static final String JSON_PROPERTY_SETTING = "setting";
   private CampaignExportServiceExportSetting setting;
 
-  public CampaignExportServiceJobOperation() { 
+  public CampaignExportServiceJobOperation() {
   }
 
   public CampaignExportServiceJobOperation setting(CampaignExportServiceExportSetting setting) {
@@ -51,8 +48,7 @@ public class CampaignExportServiceJobOperation {
    * Get setting
    * @return setting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SETTING)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -66,7 +62,6 @@ public class CampaignExportServiceJobOperation {
   public void setSetting(CampaignExportServiceExportSetting setting) {
     this.setting = setting;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.AssetServiceCallAsset;
 import jp.co.yahoo.adssearchapi.v10.model.AssetServiceCalloutAsset;
 import jp.co.yahoo.adssearchapi.v10.model.AssetServiceQuickLinkAsset;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceAssetDataオブジェクトは、アセットの詳細情報を格納します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceAssetData object contains the details of Asset.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceAssetDataオブジェクトは、アセットの詳細情報を格納します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">AssetServiceAssetData object contains the details of Asset.<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
 @JsonPropertyOrder({
   AssetServiceAssetData.JSON_PROPERTY_TYPE,
   AssetServiceAssetData.JSON_PROPERTY_QUICK_LINK_ASSET,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceAssetData.JSON_PROPERTY_CALLOUT_ASSET,
   AssetServiceAssetData.JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET
 })
-@JsonTypeName("AssetServiceAssetData")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceAssetData {
   public static final String JSON_PROPERTY_TYPE = "type";
   private AssetServiceType type;
@@ -59,7 +55,7 @@ public class AssetServiceAssetData {
   public static final String JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET = "structuredSnippetAsset";
   private AssetServiceStructuredSnippetAsset structuredSnippetAsset;
 
-  public AssetServiceAssetData() { 
+  public AssetServiceAssetData() {
   }
 
   public AssetServiceAssetData type(AssetServiceType type) {
@@ -72,8 +68,7 @@ public class AssetServiceAssetData {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,8 +94,7 @@ public class AssetServiceAssetData {
    * Get quickLinkAsset
    * @return quickLinkAsset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_QUICK_LINK_ASSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class AssetServiceAssetData {
    * Get callAsset
    * @return callAsset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CALL_ASSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +146,7 @@ public class AssetServiceAssetData {
    * Get calloutAsset
    * @return calloutAsset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CALLOUT_ASSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,8 +172,7 @@ public class AssetServiceAssetData {
    * Get structuredSnippetAsset
    * @return structuredSnippetAsset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,7 +186,6 @@ public class AssetServiceAssetData {
   public void setStructuredSnippetAsset(AssetServiceStructuredSnippetAsset structuredSnippetAsset) {
     this.structuredSnippetAsset = structuredSnippetAsset;
   }
-
 
   @Override
   public boolean equals(Object o) {

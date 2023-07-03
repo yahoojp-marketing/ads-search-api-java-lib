@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AssetServiceCustomParameter;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※CustomParameters配下でのみ、クイックリンクオプションの場合、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field will be returned in the response, but it will be ignored on input.&lt;br&gt; *Under customParameters, this field will be optional in ADD and SET operation for QUICKLINK option.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。<br> このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※CustomParameters配下でのみ、クイックリンクオプションの場合、ADDおよびSET時に省略可能となります。</div> <div lang=\"en\">AssetServiceCustomParameters displays the setting of custom parameters.<br> This field will be returned in the response, but it will be ignored on input.<br> *Under customParameters, this field will be optional in ADD and SET operation for QUICKLINK option.</div> ")
 @JsonPropertyOrder({
   AssetServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   AssetServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@JsonTypeName("AssetServiceCustomParameters")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
   private AssetServiceIsRemove isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
-  private List<AssetServiceCustomParameter> parameters = null;
+  private List<AssetServiceCustomParameter> parameters;
 
-  public AssetServiceCustomParameters() { 
+  public AssetServiceCustomParameters() {
   }
 
   public AssetServiceCustomParameters isRemove(AssetServiceIsRemove isRemove) {
@@ -59,8 +55,7 @@ public class AssetServiceCustomParameters {
    * Get isRemove
    * @return isRemove
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class AssetServiceCustomParameters {
    * Get parameters
    * @return parameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class AssetServiceCustomParameters {
   public void setParameters(List<AssetServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
-
 
   @Override
   public boolean equals(Object o) {

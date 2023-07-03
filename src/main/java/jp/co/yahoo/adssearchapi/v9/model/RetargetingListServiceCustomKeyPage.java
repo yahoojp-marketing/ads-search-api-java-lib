@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.RetargetingListServiceCustomKey;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceCustomKeyPageは、ターゲットリストのカスタムキー情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceCustomKeyPage is an object that holds custom key informations of target list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceCustomKeyPageは、ターゲットリストのカスタムキー情報を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceCustomKeyPage is an object that holds custom key informations of target list.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceCustomKeyPage.JSON_PROPERTY_CUSTOM_KEYS,
   RetargetingListServiceCustomKeyPage.JSON_PROPERTY_TOTAL_NUM_ENTRIES
 })
-@JsonTypeName("RetargetingListServiceCustomKeyPage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceCustomKeyPage {
   public static final String JSON_PROPERTY_CUSTOM_KEYS = "customKeys";
   private RetargetingListServiceCustomKey customKeys;
@@ -43,7 +39,7 @@ public class RetargetingListServiceCustomKeyPage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
-  public RetargetingListServiceCustomKeyPage() { 
+  public RetargetingListServiceCustomKeyPage() {
   }
 
   public RetargetingListServiceCustomKeyPage customKeys(RetargetingListServiceCustomKey customKeys) {
@@ -56,8 +52,7 @@ public class RetargetingListServiceCustomKeyPage {
    * Get customKeys
    * @return customKeys
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_KEYS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class RetargetingListServiceCustomKeyPage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries in the result that this page is a part of.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of entries in the result that this page is a part of.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class RetargetingListServiceCustomKeyPage {
   public void setTotalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
   }
-
 
   @Override
   public boolean equals(Object o) {

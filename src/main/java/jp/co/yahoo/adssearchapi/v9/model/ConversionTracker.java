@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.ConversionTrackerServiceAppConversion;
 import jp.co.yahoo.adssearchapi.v9.model.ConversionTrackerServiceAppLinkConversion;
 import jp.co.yahoo.adssearchapi.v9.model.ConversionTrackerServiceCategory;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerオブジェクトは、コンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker object shows ConversionTracker settings such as ConversionTag and performance data by tag.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerオブジェクトは、コンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョン設定を表します。</div> <div lang=\"en\">ConversionTracker object shows ConversionTracker settings such as ConversionTag and performance data by tag.</div> ")
 @JsonPropertyOrder({
   ConversionTracker.JSON_PROPERTY_ACCOUNT_ID,
   ConversionTracker.JSON_PROPERTY_ALL_CONVERSION_VALUE,
@@ -58,8 +55,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTracker.JSON_PROPERTY_USER_REVENUE_VALUE,
   ConversionTracker.JSON_PROPERTY_WEB_CONVERSION
 })
-@JsonTypeName("ConversionTracker")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTracker {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -118,7 +114,7 @@ public class ConversionTracker {
   public static final String JSON_PROPERTY_WEB_CONVERSION = "webConversion";
   private ConversionTrackerServiceWebConversion webConversion;
 
-  public ConversionTracker() { 
+  public ConversionTracker() {
   }
 
   public ConversionTracker accountId(Long accountId) {
@@ -131,8 +127,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -158,8 +153,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動入札設定対象のコンバージョン値と、対象外のコンバージョン値の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total value of conversions to be included to auto bidding and to be exluded from auto bidding.&lt;/div&gt; 
    * @return allConversionValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定対象のコンバージョン値と、対象外のコンバージョン値の合計です。</div> <div lang=\"en\">Total value of conversions to be included to auto bidding and to be exluded from auto bidding.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONVERSION_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,8 +179,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動入札設定対象のコンバージョン数と、対象外のコンバージョン数の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of conversions to be included to auto bidding and to be excluded from auto bidding.&lt;/div&gt; 
    * @return allConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定対象のコンバージョン数と、対象外のコンバージョン数の合計です。</div> <div lang=\"en\">Total number of conversions to be included to auto bidding and to be excluded from auto bidding.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,8 +205,7 @@ public class ConversionTracker {
    * Get appConversion
    * @return appConversion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_CONVERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -239,8 +231,7 @@ public class ConversionTracker {
    * Get appLinkConversion
    * @return appLinkConversion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_CONVERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,8 +257,7 @@ public class ConversionTracker {
    * Get category
    * @return category
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -293,8 +283,7 @@ public class ConversionTracker {
    * Get conversionCountingType
    * @return conversionCountingType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_COUNTING_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -320,8 +309,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョントラッカーのIDです。&lt;br&gt; このフィールドは、SET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return conversionTrackerId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョントラッカーのIDです。<br> このフィールドは、SET時に必須となります。</div> <div lang=\"en\">ConversionTracker ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -347,8 +335,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキング用コンバージョントラッカーIDです。&lt;br&gt; ADD時、このフィールドは省略可能となります。※conversionTrackerTypeがAPP_LINK_CONVERSIONの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker ID for tracking.&lt;br&gt; This field is optional in ADD operation. *If conversionTrackerType is APP_LINK_CONVERSION, this field is required.&lt;/div&gt; 
    * @return conversionTrackerTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用コンバージョントラッカーIDです。<br> ADD時、このフィールドは省略可能となります。※conversionTrackerTypeがAPP_LINK_CONVERSIONの場合は必須です。</div> <div lang=\"en\">ConversionTracker ID for tracking.<br> This field is optional in ADD operation. *If conversionTrackerType is APP_LINK_CONVERSION, this field is required.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -374,8 +361,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョントラッカーの名称です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker Name.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation.&lt;/div&gt; 
    * @return conversionTrackerName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョントラッカーの名称です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。</div> <div lang=\"en\">ConversionTracker Name.<br> This field is required in ADD operation, and is optional in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -401,8 +387,7 @@ public class ConversionTracker {
    * Get conversionTrackerType
    * @return conversionTrackerType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -428,8 +413,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動入札設定対象のコンバージョン値です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion value to be included to auto bidding.&lt;/div&gt; 
    * @return conversionValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定対象のコンバージョン値です。</div> <div lang=\"en\">Conversion value to be included to auto bidding.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -455,8 +439,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動入札設定対象のコンバージョン数です。&lt;br&gt; ユニークコンバージョンか総コンバージョンかは、countingTypeに依存します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions which counts as included to Auto Bidding setting.&lt;br&gt; countingType specifies whether one-per-click or many-per-click.&lt;/div&gt; 
    * @return conversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動入札設定対象のコンバージョン数です。<br> ユニークコンバージョンか総コンバージョンかは、countingTypeに依存します。</div> <div lang=\"en\">Conversions which counts as included to Auto Bidding setting.<br> countingType specifies whether one-per-click or many-per-click.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -482,8 +465,7 @@ public class ConversionTracker {
    * Get excludeFromBidding
    * @return excludeFromBidding
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXCLUDE_FROM_BIDDING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -509,8 +491,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン計測期間です（単位：日)。&lt;br&gt; 7～90日間で設定可能です。&lt;br&gt;※アプリダウンロードの場合は30日間固定。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt;※ADD時のデフォルト設定値は30となります。&lt;br&gt; ※conversionTrackerTypeがAPP_LINK_CONVERSIONの場合、ADDおよびSET時にappEventTypeがfirst_openの場合は30のみ指定可能となります。&lt;br&gt; appEventTypeはConversionTrackerService/getAppEventTypeで取得されるappEvent.appEventTypeで確認できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Counting period of conversoins (days).&lt;br&gt;It is available between 7 to 90 days&lt;br&gt; * For Mobile App Download, this period is fixed as 30 days.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; * The default value in ADD operation will be 30.&lt;br&gt; * In ADD and SET operation, if conversionTrackerType is APP_LINK_CONVERSION and appEventType is first_open, Only 30 can be specified.&lt;br&gt; appEventType can be confirmed by appEvent.appEventType obtained by ConversionTrackerService/getAppEventType.&lt;/div&gt; 
    * @return measurementPeriod
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン計測期間です（単位：日)。<br> 7～90日間で設定可能です。<br>※アプリダウンロードの場合は30日間固定。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br>※ADD時のデフォルト設定値は30となります。<br> ※conversionTrackerTypeがAPP_LINK_CONVERSIONの場合、ADDおよびSET時にappEventTypeがfirst_openの場合は30のみ指定可能となります。<br> appEventTypeはConversionTrackerService/getAppEventTypeで取得されるappEvent.appEventTypeで確認できます。</div> <div lang=\"en\">Counting period of conversoins (days).<br>It is available between 7 to 90 days<br> * For Mobile App Download, this period is fixed as 30 days.<br> This field is optional in ADD and SET operation.<br> * The default value in ADD operation will be 30.<br> * In ADD and SET operation, if conversionTrackerType is APP_LINK_CONVERSION and appEventType is first_open, Only 30 can be specified.<br> appEventType can be confirmed by appEvent.appEventType obtained by ConversionTrackerService/getAppEventType.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -536,8 +517,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;直近のコンバージョン発生日です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The most latest date when conversion occured.&lt;/div&gt; 
    * @return mostRecentConversionDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">直近のコンバージョン発生日です。</div> <div lang=\"en\">The most latest date when conversion occured.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MOST_RECENT_CONVERSION_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -563,8 +543,7 @@ public class ConversionTracker {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -590,8 +569,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;このコンバージョントラッカーに対するユーザー指定の収益値です。&lt;br&gt; 1コンバージョンあたりの売上金額が固定値の場合、その金額を設定することで、売上金額をレポートなどで確認できます。&lt;br&gt; ADDリクエスト時に未指定の場合、0が設定されます。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となります。&lt;br&gt; ※conversionTrackerTypeがAPP_LINK_CONVERSIONの場合、ADDおよびSET時にappEventTypeがin_app_purchaseの場合は0のみ指定可能となります。&lt;br&gt; appEventTypeはConversionTrackerService/getAppEventTypeで取得されるappEvent.appEventTypeで確認できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The value of revenue of the conversion tracker specified by user.&lt;br&gt; When the sales revenue of 1 conversion is fixed value, you are able to review the total sales on reports by specifying the amount on this item.&lt;br&gt; If it is not specified on ADD request, the value &amp;#34;0&amp;#34; is set.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; * In ADD and SET operation, if conversionTrackerType is APP_LINK_CONVERSION and appEventType is in_app_purchase, Only 0 can be specified.&lt;br&gt; appEventType can be confirmed by appEvent.appEventType obtained by ConversionTrackerService/getAppEventType.&lt;/div&gt; 
    * @return userRevenueValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">このコンバージョントラッカーに対するユーザー指定の収益値です。<br> 1コンバージョンあたりの売上金額が固定値の場合、その金額を設定することで、売上金額をレポートなどで確認できます。<br> ADDリクエスト時に未指定の場合、0が設定されます。<br> このフィールドは、ADD時およびSET時に省略可能となります。<br> ※conversionTrackerTypeがAPP_LINK_CONVERSIONの場合、ADDおよびSET時にappEventTypeがin_app_purchaseの場合は0のみ指定可能となります。<br> appEventTypeはConversionTrackerService/getAppEventTypeで取得されるappEvent.appEventTypeで確認できます。</div> <div lang=\"en\">The value of revenue of the conversion tracker specified by user.<br> When the sales revenue of 1 conversion is fixed value, you are able to review the total sales on reports by specifying the amount on this item.<br> If it is not specified on ADD request, the value &#34;0&#34; is set.<br> This field is optional in ADD and SET operation.<br> * In ADD and SET operation, if conversionTrackerType is APP_LINK_CONVERSION and appEventType is in_app_purchase, Only 0 can be specified.<br> appEventType can be confirmed by appEvent.appEventType obtained by ConversionTrackerService/getAppEventType.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_REVENUE_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -617,8 +595,7 @@ public class ConversionTracker {
    * Get webConversion
    * @return webConversion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_WEB_CONVERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -632,7 +609,6 @@ public class ConversionTracker {
   public void setWebConversion(ConversionTrackerServiceWebConversion webConversion) {
     this.webConversion = webConversion;
   }
-
 
   @Override
   public boolean equals(Object o) {

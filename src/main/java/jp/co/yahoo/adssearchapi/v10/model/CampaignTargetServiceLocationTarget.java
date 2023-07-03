@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignTargetServiceExcludedType;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignTargetServiceTargetingStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceLocationTargetオブジェクトは、地域ターゲティング設定です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※targetTypeがLOCATIONの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceLocationTarget object is a location target setting.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If targetType is LOCATION,  this field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceLocationTargetオブジェクトは、地域ターゲティング設定です。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※targetTypeがLOCATIONの場合、このフィールドはADD時に必須となります。</div> <div lang=\"en\">CampaignTargetServiceLocationTarget object is a location target setting.<br> This field is optional in ADD and SET operation.<br> *If targetType is LOCATION,  this field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignTargetServiceLocationTarget.JSON_PROPERTY_CITY_NAME_E_N,
   CampaignTargetServiceLocationTarget.JSON_PROPERTY_CITY_NAME_J_A,
@@ -39,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignTargetServiceLocationTarget.JSON_PROPERTY_PROVINCE_NAME_J_A,
   CampaignTargetServiceLocationTarget.JSON_PROPERTY_TARGETING_STATUS
 })
-@JsonTypeName("CampaignTargetServiceLocationTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTargetServiceLocationTarget {
   public static final String JSON_PROPERTY_CITY_NAME_E_N = "cityNameEN";
   private String cityNameEN;
@@ -60,7 +56,7 @@ public class CampaignTargetServiceLocationTarget {
   public static final String JSON_PROPERTY_TARGETING_STATUS = "targetingStatus";
   private CampaignTargetServiceTargetingStatus targetingStatus;
 
-  public CampaignTargetServiceLocationTarget() { 
+  public CampaignTargetServiceLocationTarget() {
   }
 
   public CampaignTargetServiceLocationTarget cityNameEN(String cityNameEN) {
@@ -73,8 +69,7 @@ public class CampaignTargetServiceLocationTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;市区町村名（英語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;City(English).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return cityNameEN
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">市区町村名（英語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">City(English).<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CITY_NAME_E_N)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,8 +95,7 @@ public class CampaignTargetServiceLocationTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;市区町村名（日本語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;City(Japanese).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return cityNameJA
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">市区町村名（日本語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">City(Japanese).<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CITY_NAME_J_A)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,8 +121,7 @@ public class CampaignTargetServiceLocationTarget {
    * Get excludedType
    * @return excludedType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -154,8 +147,7 @@ public class CampaignTargetServiceLocationTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;都道府県名（英語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Prefecture(English).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return provinceNameEN
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">都道府県名（英語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Prefecture(English).<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PROVINCE_NAME_E_N)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -181,8 +173,7 @@ public class CampaignTargetServiceLocationTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;都道府県名（日本語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Prefecture(Japanese).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return provinceNameJA
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">都道府県名（日本語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Prefecture(Japanese).<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PROVINCE_NAME_J_A)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -208,8 +199,7 @@ public class CampaignTargetServiceLocationTarget {
    * Get targetingStatus
    * @return targetingStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGETING_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,7 +213,6 @@ public class CampaignTargetServiceLocationTarget {
   public void setTargetingStatus(CampaignTargetServiceTargetingStatus targetingStatus) {
     this.targetingStatus = targetingStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

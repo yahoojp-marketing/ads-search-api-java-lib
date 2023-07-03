@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.Error;
@@ -37,11 +35,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingListServiceGetCustomKeyResponse.JSON_PROPERTY_RID,
   RetargetingListServiceGetCustomKeyResponse.JSON_PROPERTY_RVAL
 })
-@JsonTypeName("RetargetingListServiceGetCustomKeyResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceGetCustomKeyResponse {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_RID = "rid";
   private String rid;
@@ -49,7 +46,7 @@ public class RetargetingListServiceGetCustomKeyResponse {
   public static final String JSON_PROPERTY_RVAL = "rval";
   private RetargetingListServiceCustomKeyPage rval;
 
-  public RetargetingListServiceGetCustomKeyResponse() { 
+  public RetargetingListServiceGetCustomKeyResponse() {
   }
 
   public RetargetingListServiceGetCustomKeyResponse errors(List<Error> errors) {
@@ -70,8 +67,7 @@ public class RetargetingListServiceGetCustomKeyResponse {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,8 +93,7 @@ public class RetargetingListServiceGetCustomKeyResponse {
    * Get rid
    * @return rid
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +119,7 @@ public class RetargetingListServiceGetCustomKeyResponse {
    * Get rval
    * @return rval
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RVAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +133,6 @@ public class RetargetingListServiceGetCustomKeyResponse {
   public void setRval(RetargetingListServiceCustomKeyPage rval) {
     this.rval = rval;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupCriterionServiceApprovalStatus;
@@ -34,7 +32,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceBiddableAdGroupCriterionオブジェクトは、広告グループの単価設定可能（包含）クライテリアです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceBiddableAdGroupCriterion object displays biddable criterion in ad group.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceBiddableAdGroupCriterionオブジェクトは、広告グループの単価設定可能（包含）クライテリアです。</div> <div lang=\"en\">AdGroupCriterionServiceBiddableAdGroupCriterion object displays biddable criterion in ad group.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionServiceBiddableAdGroupCriterion.JSON_PROPERTY_SMARTPHONE_FINAL_URL,
   AdGroupCriterionServiceBiddableAdGroupCriterion.JSON_PROPERTY_FINAL_URL,
@@ -51,8 +48,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupCriterionServiceBiddableAdGroupCriterion.JSON_PROPERTY_TRACKING_URL,
   AdGroupCriterionServiceBiddableAdGroupCriterion.JSON_PROPERTY_USER_STATUS
 })
-@JsonTypeName("AdGroupCriterionServiceBiddableAdGroupCriterion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   public static final String JSON_PROPERTY_SMARTPHONE_FINAL_URL = "smartphoneFinalUrl";
   private String smartphoneFinalUrl;
@@ -73,7 +69,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   private String destinationUrl;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL = "reviewSmartphoneFinalUrl";
   private String reviewSmartphoneFinalUrl;
@@ -96,7 +92,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
   private AdGroupCriterionServiceUserStatus userStatus;
 
-  public AdGroupCriterionServiceBiddableAdGroupCriterion() { 
+  public AdGroupCriterionServiceBiddableAdGroupCriterion() {
   }
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion smartphoneFinalUrl(String smartphoneFinalUrl) {
@@ -109,8 +105,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URL（スマートフォン）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※空で設定すると、既存の最終リンク先URL（スマートフォン）は削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded Final URL (Smartphone).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *When tag is set blank, existing upgraded Final URL (Smartphone) will be deleted.&lt;/div&gt; 
    * @return smartphoneFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存の最終リンク先URL（スマートフォン）は削除されます。</div> <div lang=\"en\">Upgraded Final URL (Smartphone).<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing upgraded Final URL (Smartphone) will be deleted.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,8 +131,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行後の最終リンク先URLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。&lt;br&gt; ※空で設定すると、既存の移行後の最終リンク先URLは削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded Final URL.&lt;br&gt; This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.&lt;br&gt; *When this is set blank, existing upgraded Final URL will be deleted.&lt;/div&gt; 
    * @return finalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">移行後の最終リンク先URLです。<br> ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。<br> ※空で設定すると、既存の移行後の最終リンク先URLは削除されます。</div> <div lang=\"en\">Upgraded Final URL.<br> This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.<br> *When this is set blank, existing upgraded Final URL will be deleted.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -163,8 +157,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -190,8 +183,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * Get bid
    * @return bid
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -217,8 +209,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -244,8 +235,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行前のカスタムURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※空で設定すると、既存の移行前のカスタムURLは削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom URL of before upgrading.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *When tag is set blank, existing Custom URL before upgrade will be deleted.&lt;/div&gt; 
    * @return destinationUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">移行前のカスタムURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存の移行前のカスタムURLは削除されます。</div> <div lang=\"en\">Custom URL of before upgrading.<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing Custom URL before upgrade will be deleted.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESTINATION_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,8 +269,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認コードです。&lt;br&gt; (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Code of Disapproval reason.&lt;br&gt; (Refer to DictionaryService getDisapprovalReason response for details)&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認コードです。<br> (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)</div> <div lang=\"en\">Code of Disapproval reason.<br> (Refer to DictionaryService getDisapprovalReason response for details)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -306,8 +295,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信審査中の最終リンク先URL（スマートフォン）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded Final URL (Smartphone), in review.&lt;/div&gt; 
    * @return reviewSmartphoneFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信審査中の最終リンク先URL（スマートフォン）です。</div> <div lang=\"en\">Upgraded Final URL (Smartphone), in review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -333,8 +321,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行後の配信審査中の最終リンク先URLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded Final URL, in review.&lt;/div&gt; 
    * @return reviewFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">移行後の配信審査中の最終リンク先URLです。</div> <div lang=\"en\">Upgraded Final URL, in review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -360,8 +347,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * Get reviewCustomParameters
    * @return reviewCustomParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -387,8 +373,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行前の配信審査中のカスタムURLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom URL of before upgrading, in review.&lt;/div&gt; 
    * @return reviewDestinationUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">移行前の配信審査中のカスタムURLです。</div> <div lang=\"en\">Custom URL of before upgrading, in review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_DESTINATION_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -414,8 +399,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信審査中のトラッキングURLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL, in review.&lt;/div&gt; 
    * @return reviewTrackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信審査中のトラッキングURLです。</div> <div lang=\"en\">Tracking URL, in review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -441,8 +425,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※空で設定すると、既存のトラッキングURLは削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *When tag is set blank, existing Tracking URL will be deleted.&lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※空で設定すると、既存のトラッキングURLは削除されます。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD and SET operation.<br> *When tag is set blank, existing Tracking URL will be deleted.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -468,8 +451,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * Get userStatus
    * @return userStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -483,7 +465,6 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   public void setUserStatus(AdGroupCriterionServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

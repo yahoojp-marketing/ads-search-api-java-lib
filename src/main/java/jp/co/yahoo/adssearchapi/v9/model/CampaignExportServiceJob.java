@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignExportServiceJobStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceJob オブジェクトは、ジョブの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceJob object describes the information of job settings.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignExportServiceJob オブジェクトは、ジョブの情報を表します。</div> <div lang=\"en\">CampaignExportServiceJob object describes the information of job settings.</div> ")
 @JsonPropertyOrder({
   CampaignExportServiceJob.JSON_PROPERTY_ACCOUNT_ID,
   CampaignExportServiceJob.JSON_PROPERTY_END_DATE,
@@ -43,8 +40,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignExportServiceJob.JSON_PROPERTY_START_DATE,
   CampaignExportServiceJob.JSON_PROPERTY_USER_NAME
 })
-@JsonTypeName("CampaignExportServiceJob")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignExportServiceJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -53,7 +49,7 @@ public class CampaignExportServiceJob {
   private String endDate;
 
   public static final String JSON_PROPERTY_EXPORT_FIELDS = "exportFields";
-  private List<String> exportFields = null;
+  private List<String> exportFields;
 
   public static final String JSON_PROPERTY_JOB_ID = "jobId";
   private Long jobId;
@@ -73,7 +69,7 @@ public class CampaignExportServiceJob {
   public static final String JSON_PROPERTY_USER_NAME = "userName";
   private String userName;
 
-  public CampaignExportServiceJob() { 
+  public CampaignExportServiceJob() {
   }
 
   public CampaignExportServiceJob accountId(Long accountId) {
@@ -86,8 +82,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +108,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの終了日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date and time of job setting&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの終了日時です。</div> <div lang=\"en\">End date and time of job setting</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,8 +142,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エクスポートするフィールドです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Fields to be exported&lt;/div&gt; 
    * @return exportFields
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">エクスポートするフィールドです。</div> <div lang=\"en\">Fields to be exported</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXPORT_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,8 +168,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceJob ID&lt;/div&gt; 
    * @return jobId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブIDです。</div> <div lang=\"en\">CampaignExportServiceJob ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -202,8 +194,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブ名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceJob name&lt;br&gt; ∗ Default: NULL&lt;/div&gt; 
    * @return jobName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブ名です。</div> <div lang=\"en\">CampaignExportServiceJob name<br> ∗ Default: NULL</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -229,8 +220,7 @@ public class CampaignExportServiceJob {
    * Get jobStatus
    * @return jobStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -256,8 +246,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理進捗です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Progress of job setting&lt;/div&gt; 
    * @return progress
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理進捗です。</div> <div lang=\"en\">Progress of job setting</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PROGRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -283,8 +272,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの開始日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date and time of job setting&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの開始日時です。</div> <div lang=\"en\">Start date and time of job setting</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,8 +298,7 @@ public class CampaignExportServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブ実行者のユーザー名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of user who run the job.&lt;/div&gt; 
    * @return userName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブ実行者のユーザー名です。</div> <div lang=\"en\">Name of user who run the job.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -325,7 +312,6 @@ public class CampaignExportServiceJob {
   public void setUserName(String userName) {
     this.userName = userName;
   }
-
 
   @Override
   public boolean equals(Object o) {

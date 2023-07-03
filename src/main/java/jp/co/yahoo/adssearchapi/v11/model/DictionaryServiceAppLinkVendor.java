@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceAppLinkVendor オブジェクトは、 アプリ計測ベンダー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceAppLinkVendor object is a container that stores App measurement vendor information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceAppLinkVendor オブジェクトは、 アプリ計測ベンダー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceAppLinkVendor object is a container that stores App measurement vendor information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceAppLinkVendor.JSON_PROPERTY_APP_VENDOR_ID,
   DictionaryServiceAppLinkVendor.JSON_PROPERTY_APP_VENDOR_NAME_JA,
   DictionaryServiceAppLinkVendor.JSON_PROPERTY_APP_VENDOR_NAME_EN
 })
-@JsonTypeName("DictionaryServiceAppLinkVendor")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceAppLinkVendor {
   public static final String JSON_PROPERTY_APP_VENDOR_ID = "appVendorId";
   private String appVendorId;
@@ -46,7 +42,7 @@ public class DictionaryServiceAppLinkVendor {
   public static final String JSON_PROPERTY_APP_VENDOR_NAME_EN = "appVendorNameEn";
   private String appVendorNameEn;
 
-  public DictionaryServiceAppLinkVendor() { 
+  public DictionaryServiceAppLinkVendor() {
   }
 
   public DictionaryServiceAppLinkVendor appVendorId(String appVendorId) {
@@ -59,8 +55,7 @@ public class DictionaryServiceAppLinkVendor {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダーIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App Vendor ID.&lt;/div&gt; 
    * @return appVendorId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダーIDです。</div> <div lang=\"en\">App Vendor ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class DictionaryServiceAppLinkVendor {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー名（日本語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App Vendor Name in Japanese.&lt;/div&gt; 
    * @return appVendorNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（日本語）です。</div> <div lang=\"en\">App Vendor Name in Japanese.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class DictionaryServiceAppLinkVendor {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー名（英語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App Vendor Name in English.&lt;/div&gt; 
    * @return appVendorNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（英語）です。</div> <div lang=\"en\">App Vendor Name in English.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class DictionaryServiceAppLinkVendor {
   public void setAppVendorNameEn(String appVendorNameEn) {
     this.appVendorNameEn = appVendorNameEn;
   }
-
 
   @Override
   public boolean equals(Object o) {

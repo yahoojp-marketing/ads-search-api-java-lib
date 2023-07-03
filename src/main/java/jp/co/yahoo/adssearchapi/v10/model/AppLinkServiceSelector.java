@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,21 +28,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkServiceSelectorオブジェクトは、操作の対象となるコンバージョントラッカーおよびフィルタ条件を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLinkServiceSelector object displays information and filter criteria of conversionTracker to be operated.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AppLinkServiceSelectorオブジェクトは、操作の対象となるコンバージョントラッカーおよびフィルタ条件を指定します。</div> <div lang=\"en\">AppLinkServiceSelector object displays information and filter criteria of conversionTracker to be operated.</div> ")
 @JsonPropertyOrder({
   AppLinkServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AppLinkServiceSelector.JSON_PROPERTY_APP_LINK_IDS,
   AppLinkServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AppLinkServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AppLinkServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AppLinkServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_APP_LINK_IDS = "appLinkIds";
-  private List<Long> appLinkIds = null;
+  private List<Long> appLinkIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -52,7 +48,7 @@ public class AppLinkServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AppLinkServiceSelector() { 
+  public AppLinkServiceSelector() {
   }
 
   public AppLinkServiceSelector accountId(Long accountId) {
@@ -65,8 +61,7 @@ public class AppLinkServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -100,8 +95,7 @@ public class AppLinkServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アプリリンクIDです。&lt;br&gt; ※指定しない場合は、フィルタ条件に すべてのアプリリンク情報が含まれます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: App Link ID&lt;br&gt; * All AppLink information will return, if no id are not specified.&lt;/div&gt; 
    * @return appLinkIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：アプリリンクIDです。<br> ※指定しない場合は、フィルタ条件に すべてのアプリリンク情報が含まれます。</div> <div lang=\"en\">Search condition: App Link ID<br> * All AppLink information will return, if no id are not specified.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +123,7 @@ public class AppLinkServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class AppLinkServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,7 +164,6 @@ public class AppLinkServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

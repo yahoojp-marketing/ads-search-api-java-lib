@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,21 +28,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaServiceKeywordAndUrlSeedオブジェクトは、キーワード候補作成条件としてキーワードとURLを指定するオブジェクトです。&lt;br&gt;seedTypeが&lt;code&gt;KEYWORD_AND_URL&lt;/code&gt;の場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordPlanIdeaServiceKeywordAndUrlSeed object is for specifying keywords and URL as related keywords creation conditions.&lt;br&gt;If seedType is &lt;code&gt;KEYWORD_AND_URL&lt;/code&gt;, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaServiceKeywordAndUrlSeedオブジェクトは、キーワード候補作成条件としてキーワードとURLを指定するオブジェクトです。<br>seedTypeが<code>KEYWORD_AND_URL</code>の場合は必須です。</div> <div lang=\"en\">KeywordPlanIdeaServiceKeywordAndUrlSeed object is for specifying keywords and URL as related keywords creation conditions.<br>If seedType is <code>KEYWORD_AND_URL</code>, this field is required.</div> ")
 @JsonPropertyOrder({
   KeywordPlanIdeaServiceKeywordAndUrlSeed.JSON_PROPERTY_KEYWORDS,
   KeywordPlanIdeaServiceKeywordAndUrlSeed.JSON_PROPERTY_URL
 })
-@JsonTypeName("KeywordPlanIdeaServiceKeywordAndUrlSeed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordPlanIdeaServiceKeywordAndUrlSeed {
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
-  private List<String> keywords = null;
+  private List<String> keywords;
 
   public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public KeywordPlanIdeaServiceKeywordAndUrlSeed() { 
+  public KeywordPlanIdeaServiceKeywordAndUrlSeed() {
   }
 
   public KeywordPlanIdeaServiceKeywordAndUrlSeed keywords(List<String> keywords) {
@@ -65,8 +61,7 @@ public class KeywordPlanIdeaServiceKeywordAndUrlSeed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Keyword.&lt;/div&gt; 
    * @return keywords
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。</div> <div lang=\"en\">Keyword.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,8 +87,7 @@ public class KeywordPlanIdeaServiceKeywordAndUrlSeed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;URLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;URL.&lt;/div&gt; 
    * @return url
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">URLです。</div> <div lang=\"en\">URL.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,7 +101,6 @@ public class KeywordPlanIdeaServiceKeywordAndUrlSeed {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(Object o) {

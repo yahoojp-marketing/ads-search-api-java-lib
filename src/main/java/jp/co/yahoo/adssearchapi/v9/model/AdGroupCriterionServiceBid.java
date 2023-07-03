@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupCriterionServiceBidSource;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceBidオブジェクトは、入札価格を表示します。 （AdGroupCriterionService用のオブジェクトです。）&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceBid object displays the bid values. *Object for AdGroupCriterionService.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceBidオブジェクトは、入札価格を表示します。 （AdGroupCriterionService用のオブジェクトです。）<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupCriterionServiceBid object displays the bid values. *Object for AdGroupCriterionService.<br> This field is optional in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionServiceBid.JSON_PROPERTY_AD_GROUP_CPC,
   AdGroupCriterionServiceBid.JSON_PROPERTY_BID_SOURCE,
   AdGroupCriterionServiceBid.JSON_PROPERTY_KEYWORD_CPC,
   AdGroupCriterionServiceBid.JSON_PROPERTY_CPC
 })
-@JsonTypeName("AdGroupCriterionServiceBid")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionServiceBid {
   public static final String JSON_PROPERTY_AD_GROUP_CPC = "adGroupCpc";
   private Long adGroupCpc;
@@ -51,7 +47,7 @@ public class AdGroupCriterionServiceBid {
   public static final String JSON_PROPERTY_CPC = "cpc";
   private Long cpc;
 
-  public AdGroupCriterionServiceBid() { 
+  public AdGroupCriterionServiceBid() {
   }
 
   public AdGroupCriterionServiceBid adGroupCpc(Long adGroupCpc) {
@@ -64,8 +60,7 @@ public class AdGroupCriterionServiceBid {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループ入札価格です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CPC of Ad group.&lt;/div&gt; 
    * @return adGroupCpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループ入札価格です。</div> <div lang=\"en\">CPC of Ad group.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class AdGroupCriterionServiceBid {
    * Get bidSource
    * @return bidSource
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_SOURCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class AdGroupCriterionServiceBid {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワード入札価格です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CPC of Keyword.&lt;/div&gt; 
    * @return keywordCpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワード入札価格です。</div> <div lang=\"en\">CPC of Keyword.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class AdGroupCriterionServiceBid {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワード入札価格です。&lt;br&gt; このフィールドは、省略可能となります。その際、ADD時のデフォルト設定値は1となります。&lt;br&gt; ※cpcが0の場合は、設定なしと同様です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CPC of Keyword.&lt;br&gt; This field is optional. The default value in ADD operation will be 1.&lt;br&gt; *Confirmed as no setting, if value is set &amp;#34;0&amp;#34;.&lt;/div&gt; 
    * @return cpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワード入札価格です。<br> このフィールドは、省略可能となります。その際、ADD時のデフォルト設定値は1となります。<br> ※cpcが0の場合は、設定なしと同様です。</div> <div lang=\"en\">CPC of Keyword.<br> This field is optional. The default value in ADD operation will be 1.<br> *Confirmed as no setting, if value is set &#34;0&#34;.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class AdGroupCriterionServiceBid {
   public void setCpc(Long cpc) {
     this.cpc = cpc;
   }
-
 
   @Override
   public boolean equals(Object o) {

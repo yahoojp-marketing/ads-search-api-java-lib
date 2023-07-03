@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignAsset;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignAssetServiceValueオブジェクトは、キャンペーンとアセット間の設定情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignAssetServiceValue is a container of configuration information between campaign and assets.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignAssetServiceValueオブジェクトは、キャンペーンとアセット間の設定情報を格納するコンテナです。</div> <div lang=\"en\">CampaignAssetServiceValue is a container of configuration information between campaign and assets.</div> ")
 @JsonPropertyOrder({
   CampaignAssetServiceValue.JSON_PROPERTY_CAMPAIGN_ASSET,
   CampaignAssetServiceValue.JSON_PROPERTY_ERRORS,
   CampaignAssetServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("CampaignAssetServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignAssetServiceValue {
   public static final String JSON_PROPERTY_CAMPAIGN_ASSET = "campaignAsset";
   private CampaignAsset campaignAsset;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public CampaignAssetServiceValue() { 
+  public CampaignAssetServiceValue() {
   }
 
   public CampaignAssetServiceValue campaignAsset(CampaignAsset campaignAsset) {
@@ -63,8 +59,7 @@ public class CampaignAssetServiceValue {
    * Get campaignAsset
    * @return campaignAsset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ASSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class CampaignAssetServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class CampaignAssetServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class CampaignAssetServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

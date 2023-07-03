@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignServiceAppStore;
@@ -42,7 +40,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Campaignオブジェクトは、キャンペーンの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign object describes Campaign information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Campaignオブジェクトは、キャンペーンの情報を表します。</div> <div lang=\"en\">Campaign object describes Campaign information.</div> ")
 @JsonPropertyOrder({
   Campaign.JSON_PROPERTY_ACCOUNT_ID,
   Campaign.JSON_PROPERTY_APP_ID,
@@ -67,8 +64,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Campaign.JSON_PROPERTY_USER_STATUS,
   Campaign.JSON_PROPERTY_CREATED_DATE
 })
-@JsonTypeName("Campaign")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Campaign {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -110,13 +106,13 @@ public class Campaign {
   private CampaignServiceBiddingStrategy failedBiddingStrategyConfiguration;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
-  private List<CampaignServiceLabel> labels = null;
+  private List<CampaignServiceLabel> labels;
 
   public static final String JSON_PROPERTY_SERVING_STATUS = "servingStatus";
   private CampaignServiceServingStatus servingStatus;
 
   public static final String JSON_PROPERTY_SETTINGS = "settings";
-  private List<CampaignServiceSettings> settings = null;
+  private List<CampaignServiceSettings> settings;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
@@ -136,7 +132,7 @@ public class Campaign {
   public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
   private String createdDate;
 
-  public Campaign() { 
+  public Campaign() {
   }
 
   public Campaign accountId(Long accountId) {
@@ -149,8 +145,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,8 +171,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリID（iOS）またはパッケージ名（Android）です。&lt;br&gt; ※アプリキャンペーンでiOSの場合、入力は数値のみです。&lt;br&gt; ADD時、campaignTypeがSTANDARD、またはDYNAMIC_ADS_FOR_SEARCH_SETTINGの場合、無視され、MOBILE_APPの場合、必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App ID (for iOS) or Package name (for Android).&lt;br&gt; *Input only the numbers for iOS in Mobile App Campaign.&lt;br&gt;  In ADD operation, this field will be ignored when campaignType is &#39;STANDARD&#39; or &#39;DYNAMIC_ADS_FOR_SEARCH_SETTING&#39;, and is required when campaignType is MOBILE_APP.&lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリID（iOS）またはパッケージ名（Android）です。<br> ※アプリキャンペーンでiOSの場合、入力は数値のみです。<br> ADD時、campaignTypeがSTANDARD、またはDYNAMIC_ADS_FOR_SEARCH_SETTINGの場合、無視され、MOBILE_APPの場合、必須となります。</div> <div lang=\"en\">App ID (for iOS) or Package name (for Android).<br> *Input only the numbers for iOS in Mobile App Campaign.<br>  In ADD operation, this field will be ignored when campaignType is 'STANDARD' or 'DYNAMIC_ADS_FOR_SEARCH_SETTING', and is required when campaignType is MOBILE_APP.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,8 +197,7 @@ public class Campaign {
    * Get appStore
    * @return appStore
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_STORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -230,8 +223,7 @@ public class Campaign {
    * Get biddingStrategyConfiguration
    * @return biddingStrategyConfiguration
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -257,8 +249,7 @@ public class Campaign {
    * Get biddingStrategyFailedReason
    * @return biddingStrategyFailedReason
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_FAILED_REASON)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -284,8 +275,7 @@ public class Campaign {
    * Get budget
    * @return budget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BUDGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -311,8 +301,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; SET時およびREMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> SET時およびREMOVE時、このフィールドは必須です。</div> <div lang=\"en\">Campaign ID.<br> This field is required in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -338,8 +327,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名です。&lt;br&gt;このフィールドは、ADD時に必須となり、SET時に省略可能となります。&lt;br&gt; ※入力制限：50文字以内です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign name.&lt;br&gt; *Insert limit: Up to 50 characters.&lt;br&gt;This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。<br>このフィールドは、ADD時に必須となり、SET時に省略可能となります。<br> ※入力制限：50文字以内です。</div> <div lang=\"en\">Campaign name.<br> *Insert limit: Up to 50 characters.<br>This field is required in ADD operation, and will be optional in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -365,8 +353,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキング用キャンペーンIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID for tracking.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return campaignTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用キャンペーンIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Campaign ID for tracking.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -392,8 +379,7 @@ public class Campaign {
    * Get conversionOptimizerEligibility
    * @return conversionOptimizerEligibility
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_OPTIMIZER_ELIGIBILITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -419,8 +405,7 @@ public class Campaign {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -446,8 +431,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンの終了日です。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。ADD時のデフォルト設定値は20371231となります。&lt;br&gt; 過去の日付、開始日以前の日付は指定できません。&lt;br&gt;※YYYYMMDD形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of Campaign.&lt;br&gt; This field is optional in ADD and SET operation. The default value in ADD operation will be 20371231.&lt;br&gt; *Cannot set the past date and date before the start date.&lt;br&gt; *In YYYYMMDD format.&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンの終了日です。<br> ADD時およびSET時、このフィールドは省略可能となります。ADD時のデフォルト設定値は20371231となります。<br> 過去の日付、開始日以前の日付は指定できません。<br>※YYYYMMDD形式です。</div> <div lang=\"en\">End date of Campaign.<br> This field is optional in ADD and SET operation. The default value in ADD operation will be 20371231.<br> *Cannot set the past date and date before the start date.<br> *In YYYYMMDD format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -473,8 +457,7 @@ public class Campaign {
    * Get failedBiddingStrategyConfiguration
    * @return failedBiddingStrategyConfiguration
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FAILED_BIDDING_STRATEGY_CONFIGURATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -508,8 +491,7 @@ public class Campaign {
    * Get labels
    * @return labels
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LABELS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -535,8 +517,7 @@ public class Campaign {
    * Get servingStatus
    * @return servingStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SERVING_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -570,8 +551,7 @@ public class Campaign {
    * Get settings
    * @return settings
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SETTINGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -597,8 +577,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンの開始日です。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。ADD時のデフォルト設定値は当日日付となります。&lt;br&gt; 過去の日付は指定できません。&lt;br&gt;※配信開始済みのキャンペーンは変更できません。&lt;br&gt; ※YYYYMMDD形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of Campaign.&lt;br&gt; This field is optional in ADD and SET operation. The default value in ADD operation will be Today&#39;s date.&lt;br&gt; *Cannot set the past date.&lt;br&gt;*Cannot change the date to the campaign that is already active.&lt;br&gt; *In YYYYMMDD format.&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンの開始日です。<br> ADD時およびSET時、このフィールドは省略可能となります。ADD時のデフォルト設定値は当日日付となります。<br> 過去の日付は指定できません。<br>※配信開始済みのキャンペーンは変更できません。<br> ※YYYYMMDD形式です。</div> <div lang=\"en\">Start date of Campaign.<br> This field is optional in ADD and SET operation. The default value in ADD operation will be Today's date.<br> *Cannot set the past date.<br>*Cannot change the date to the campaign that is already active.<br> *In YYYYMMDD format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -624,8 +603,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。&lt;br&gt; ※アプリキャンペーンがAndroidの場合、設定はできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *Cannot set if Mobile App Campaign is in Android.&lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時およびSET時、このフィールドは省略可能となります。<br> ※アプリキャンペーンがAndroidの場合、設定はできません。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD and SET operation.<br> *Cannot set if Mobile App Campaign is in Android.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -651,8 +629,7 @@ public class Campaign {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -678,8 +655,7 @@ public class Campaign {
    * Get urlReviewData
    * @return urlReviewData
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL_REVIEW_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -705,8 +681,7 @@ public class Campaign {
    * Get userStatus
    * @return userStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -732,8 +707,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンが作成された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Campaign made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンが作成された日です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date of Campaign made.<br>* Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CREATED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -747,7 +721,6 @@ public class Campaign {
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

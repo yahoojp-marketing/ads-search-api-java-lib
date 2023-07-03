@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignServiceDynamicAdsForSearchSetting;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignServiceGeoTargetTypeSetting;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignServiceSettingType;
@@ -32,15 +30,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceSettingsオブジェクトは、キャンペーンの地域ターゲットを格納するコンテナです。&lt;br&gt; ADD時、このフィールドは、campaignTypeがDYNAMIC_ADS_FOR_SEARCH_SETTINGの場合、必須となり、それ以外では省略可能となります。また、TargetingSettingが未設定の場合、デフォルト設定値は[SettingType:TARGET_LIST_SETTING, TargetAll:ACTIVE]となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceSettings object is container for geographic targeting  of campaign.&lt;br&gt; This field is required when campaignType is &#39;DYNAMIC_ADS_FOR_SEARCH_SETTING&#39; in ADD operation. For other campaignType, this field is optional in ADD operation. The default value will be TARGET_LIST_SETTING for SettingType or ACTIVE for TargetAll when TargetingSetting is not setting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceSettingsオブジェクトは、キャンペーンの地域ターゲットを格納するコンテナです。<br> ADD時、このフィールドは、campaignTypeがDYNAMIC_ADS_FOR_SEARCH_SETTINGの場合、必須となり、それ以外では省略可能となります。また、TargetingSettingが未設定の場合、デフォルト設定値は[SettingType:TARGET_LIST_SETTING, TargetAll:ACTIVE]となります。</div> <div lang=\"en\">CampaignServiceSettings object is container for geographic targeting  of campaign.<br> This field is required when campaignType is 'DYNAMIC_ADS_FOR_SEARCH_SETTING' in ADD operation. For other campaignType, this field is optional in ADD operation. The default value will be TARGET_LIST_SETTING for SettingType or ACTIVE for TargetAll when TargetingSetting is not setting.</div> ")
 @JsonPropertyOrder({
   CampaignServiceSettings.JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING,
   CampaignServiceSettings.JSON_PROPERTY_GEO_TARGET_TYPE_SETTING,
   CampaignServiceSettings.JSON_PROPERTY_SETTING_TYPE,
   CampaignServiceSettings.JSON_PROPERTY_TARGETING_SETTING
 })
-@JsonTypeName("CampaignServiceSettings")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceSettings {
   public static final String JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING = "dynamicAdsForSearchSetting";
   private CampaignServiceDynamicAdsForSearchSetting dynamicAdsForSearchSetting;
@@ -54,7 +50,7 @@ public class CampaignServiceSettings {
   public static final String JSON_PROPERTY_TARGETING_SETTING = "targetingSetting";
   private CampaignServiceTargetingSetting targetingSetting;
 
-  public CampaignServiceSettings() { 
+  public CampaignServiceSettings() {
   }
 
   public CampaignServiceSettings dynamicAdsForSearchSetting(CampaignServiceDynamicAdsForSearchSetting dynamicAdsForSearchSetting) {
@@ -67,8 +63,7 @@ public class CampaignServiceSettings {
    * Get dynamicAdsForSearchSetting
    * @return dynamicAdsForSearchSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class CampaignServiceSettings {
    * Get geoTargetTypeSetting
    * @return geoTargetTypeSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEO_TARGET_TYPE_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,8 +115,7 @@ public class CampaignServiceSettings {
    * Get settingType
    * @return settingType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SETTING_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,8 +141,7 @@ public class CampaignServiceSettings {
    * Get targetingSetting
    * @return targetingSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGETING_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -163,7 +155,6 @@ public class CampaignServiceSettings {
   public void setTargetingSetting(CampaignServiceTargetingSetting targetingSetting) {
     this.targetingSetting = targetingSetting;
   }
-
 
   @Override
   public boolean equals(Object o) {

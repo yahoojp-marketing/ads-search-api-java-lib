@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.FeedServicePlaceholderType;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceSelectorオブジェクトは、自動データ挿入のリストの基本情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceSelector describes the basic information of list of Data auto insertion.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedServiceSelectorオブジェクトは、自動データ挿入のリストの基本情報を格納します。</div> <div lang=\"en\">FeedServiceSelector describes the basic information of list of Data auto insertion.</div> ")
 @JsonPropertyOrder({
   FeedServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   FeedServiceSelector.JSON_PROPERTY_FEED_IDS,
@@ -39,25 +36,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedServiceSelector.JSON_PROPERTY_PLACEHOLDER_TYPES,
   FeedServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("FeedServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
-  private List<Long> feedIds = null;
+  private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 50;
 
   public static final String JSON_PROPERTY_PLACEHOLDER_TYPES = "placeholderTypes";
-  private List<FeedServicePlaceholderType> placeholderTypes = null;
+  private List<FeedServicePlaceholderType> placeholderTypes;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public FeedServiceSelector() { 
+  public FeedServiceSelector() {
   }
 
   public FeedServiceSelector accountId(Long accountId) {
@@ -70,8 +66,7 @@ public class FeedServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,8 +100,7 @@ public class FeedServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動データ挿入のリストのIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;List ID of Feed.&lt;/div&gt; 
    * @return feedIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動データ挿入のリストのIDです。</div> <div lang=\"en\">List ID of Feed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -134,8 +128,7 @@ public class FeedServiceSelector {
    * maximum: 50
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,8 +162,7 @@ public class FeedServiceSelector {
    * Get placeholderTypes
    * @return placeholderTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,8 +189,7 @@ public class FeedServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,7 +203,6 @@ public class FeedServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

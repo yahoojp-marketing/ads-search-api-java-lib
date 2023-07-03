@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupWebpageServiceWebpageParameter;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageオブジェクトは、配信/除外設定するAdGroupWebpageServiceWebpageの条件を保持します。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceWebpage object contains the rules of webpage to be allowed or excluded.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceWebpageオブジェクトは、配信/除外設定するAdGroupWebpageServiceWebpageの条件を保持します。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">AdGroupWebpageServiceWebpage object contains the rules of webpage to be allowed or excluded.<br> This field is required in any cases.</div> ")
 @JsonPropertyOrder({
   AdGroupWebpageServiceWebpage.JSON_PROPERTY_PARAMETER,
   AdGroupWebpageServiceWebpage.JSON_PROPERTY_TARGET_ID,
   AdGroupWebpageServiceWebpage.JSON_PROPERTY_TARGET_TRACK_ID
 })
-@JsonTypeName("AdGroupWebpageServiceWebpage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupWebpageServiceWebpage {
   public static final String JSON_PROPERTY_PARAMETER = "parameter";
   private AdGroupWebpageServiceWebpageParameter parameter;
@@ -47,7 +43,7 @@ public class AdGroupWebpageServiceWebpage {
   public static final String JSON_PROPERTY_TARGET_TRACK_ID = "targetTrackId";
   private Long targetTrackId;
 
-  public AdGroupWebpageServiceWebpage() { 
+  public AdGroupWebpageServiceWebpage() {
   }
 
   public AdGroupWebpageServiceWebpage parameter(AdGroupWebpageServiceWebpageParameter parameter) {
@@ -60,8 +56,7 @@ public class AdGroupWebpageServiceWebpage {
    * Get parameter
    * @return parameter
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARAMETER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class AdGroupWebpageServiceWebpage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageを識別するIDです。&lt;br&gt;このフィールドは、ADD時は無視され、SET時は必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Unique ID for each identify webpage.&lt;br&gt;This field will be ignored in ADD operation, and is required in SET operation.&lt;/div&gt; 
    * @return targetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">AdGroupWebpageServiceWebpageを識別するIDです。<br>このフィールドは、ADD時は無視され、SET時は必須となります。</div> <div lang=\"en\">Unique ID for each identify webpage.<br>This field will be ignored in ADD operation, and is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class AdGroupWebpageServiceWebpage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageを識別するトラッキングIDです。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID for each identify webpage.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return targetTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">AdGroupWebpageServiceWebpageを識別するトラッキングIDです。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Tracking ID for each identify webpage.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class AdGroupWebpageServiceWebpage {
   public void setTargetTrackId(Long targetTrackId) {
     this.targetTrackId = targetTrackId;
   }
-
 
   @Override
   public boolean equals(Object o) {

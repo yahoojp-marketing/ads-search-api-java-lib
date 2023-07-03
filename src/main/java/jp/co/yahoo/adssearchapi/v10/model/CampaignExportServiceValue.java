@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignExportServiceJob;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceValueオブジェクトは、実行結果（1 Entity）を含むジョブ情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceValue object describes the job information per entity in operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignExportServiceValueオブジェクトは、実行結果（1 Entity）を含むジョブ情報を表します。</div> <div lang=\"en\">CampaignExportServiceValue object describes the job information per entity in operation result.</div> ")
 @JsonPropertyOrder({
   CampaignExportServiceValue.JSON_PROPERTY_ERRORS,
   CampaignExportServiceValue.JSON_PROPERTY_JOB,
   CampaignExportServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("CampaignExportServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignExportServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_JOB = "job";
   private CampaignExportServiceJob job;
@@ -50,7 +46,7 @@ public class CampaignExportServiceValue {
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public CampaignExportServiceValue() { 
+  public CampaignExportServiceValue() {
   }
 
   public CampaignExportServiceValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class CampaignExportServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class CampaignExportServiceValue {
    * Get job
    * @return job
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class CampaignExportServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果を表示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Displays process result.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果を表示します。</div> <div lang=\"en\">Displays process result.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class CampaignExportServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

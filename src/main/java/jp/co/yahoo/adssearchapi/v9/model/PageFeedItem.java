@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedItemServiceApprovalStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemオブジェクトは、ページフィードアイテム情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItem object retains page feed Item.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedItemオブジェクトは、ページフィードアイテム情報を格納します。</div> <div lang=\"en\">PageFeedItem object retains page feed Item.</div> ")
 @JsonPropertyOrder({
   PageFeedItem.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedItem.JSON_PROPERTY_APPROVAL_STATUS,
@@ -42,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedItem.JSON_PROPERTY_PAGE_FEED_ITEM_ID,
   PageFeedItem.JSON_PROPERTY_PAGE_FEED_URL
 })
-@JsonTypeName("PageFeedItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedItem {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -52,7 +48,7 @@ public class PageFeedItem {
   private PageFeedItemServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT = "disapprovalReasonComment";
   private String disapprovalReasonComment;
@@ -69,7 +65,7 @@ public class PageFeedItem {
   public static final String JSON_PROPERTY_PAGE_FEED_URL = "pageFeedUrl";
   private String pageFeedUrl;
 
-  public PageFeedItem() { 
+  public PageFeedItem() {
   }
 
   public PageFeedItem accountId(Long accountId) {
@@ -82,8 +78,7 @@ public class PageFeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,8 +104,7 @@ public class PageFeedItem {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +138,7 @@ public class PageFeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由コード&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Codes of disapproval reason&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コード</div> <div lang=\"en\">Codes of disapproval reason</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,8 +164,7 @@ public class PageFeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由のコメント&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Comment of disapproval reason&lt;/div&gt; 
    * @return disapprovalReasonComment
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由のコメント</div> <div lang=\"en\">Comment of disapproval reason</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,8 +190,7 @@ public class PageFeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">Feed ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -225,8 +216,7 @@ public class PageFeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアイテムのカスタムラベル&lt;br&gt; 複数ある場合はカンマ区切り&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom label of Page feed item.&lt;br&gt; If multiple, comma separated.&lt;/div&gt; 
    * @return pageFeedCustomLabel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアイテムのカスタムラベル<br> 複数ある場合はカンマ区切り</div> <div lang=\"en\">Custom label of Page feed item.<br> If multiple, comma separated.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_CUSTOM_LABEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -252,8 +242,7 @@ public class PageFeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアイテムID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Page feed item ID&lt;/div&gt; 
    * @return pageFeedItemId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアイテムID</div> <div lang=\"en\">Page feed item ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ITEM_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,8 +268,7 @@ public class PageFeedItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードURL。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Url of page feed&lt;/div&gt; 
    * @return pageFeedUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードURL。</div> <div lang=\"en\">Url of page feed</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -294,7 +282,6 @@ public class PageFeedItem {
   public void setPageFeedUrl(String pageFeedUrl) {
     this.pageFeedUrl = pageFeedUrl;
   }
-
 
   @Override
   public boolean equals(Object o) {

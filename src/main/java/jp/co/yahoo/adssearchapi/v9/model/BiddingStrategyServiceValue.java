@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.BiddingStrategy;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceValueオブジェクトは、自動入札設定の実行をしたときの結果に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceValue object displays the results of auto bidding settings.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceValueオブジェクトは、自動入札設定の実行をしたときの結果に関する情報を表します。</div> <div lang=\"en\">BiddingStrategyServiceValue object displays the results of auto bidding settings.</div> ")
 @JsonPropertyOrder({
   BiddingStrategyServiceValue.JSON_PROPERTY_BIDDING_STRATEGY,
   BiddingStrategyServiceValue.JSON_PROPERTY_ERRORS,
   BiddingStrategyServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("BiddingStrategyServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BiddingStrategyServiceValue {
   public static final String JSON_PROPERTY_BIDDING_STRATEGY = "biddingStrategy";
   private BiddingStrategy biddingStrategy;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public BiddingStrategyServiceValue() { 
+  public BiddingStrategyServiceValue() {
   }
 
   public BiddingStrategyServiceValue biddingStrategy(BiddingStrategy biddingStrategy) {
@@ -63,8 +59,7 @@ public class BiddingStrategyServiceValue {
    * Get biddingStrategy
    * @return biddingStrategy
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class BiddingStrategyServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class BiddingStrategyServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Result of process.&lt;br&gt;- true: Process succeeded.&lt;br&gt;- false: Process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">Result of process.<br>- true: Process succeeded.<br>- false: Process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class BiddingStrategyServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

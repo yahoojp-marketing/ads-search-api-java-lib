@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceTargetRoasBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; ADD時、BiddingStrategyTypeがTARGET_ROASの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceTargetRoasBiddingScheme object displays Auto Bidding setting for Target ROAS. *This is an object for anything other than BiddingStrategyService.&lt;br&gt; This field is required when BiddingStrategyType is &#39;TARGET_ROAS&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceTargetRoasBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）<br> ADD時、BiddingStrategyTypeがTARGET_ROASの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceTargetRoasBiddingScheme object displays Auto Bidding setting for Target ROAS. *This is an object for anything other than BiddingStrategyService.<br> This field is required when BiddingStrategyType is 'TARGET_ROAS' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignServiceTargetRoasBiddingScheme.JSON_PROPERTY_BID_CEILING,
   CampaignServiceTargetRoasBiddingScheme.JSON_PROPERTY_BID_FLOOR,
   CampaignServiceTargetRoasBiddingScheme.JSON_PROPERTY_TARGET_ROAS
 })
-@JsonTypeName("CampaignServiceTargetRoasBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceTargetRoasBiddingScheme {
   public static final String JSON_PROPERTY_BID_CEILING = "bidCeiling";
   private Long bidCeiling;
@@ -46,7 +42,7 @@ public class CampaignServiceTargetRoasBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_ROAS = "targetRoas";
   private Double targetRoas;
 
-  public CampaignServiceTargetRoasBiddingScheme() { 
+  public CampaignServiceTargetRoasBiddingScheme() {
   }
 
   public CampaignServiceTargetRoasBiddingScheme bidCeiling(Long bidCeiling) {
@@ -59,8 +55,7 @@ public class CampaignServiceTargetRoasBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt;このフィールドの追加と編集は廃止され、現在設定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Limit of bid (CPC).&lt;br&gt;Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return bidCeiling
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br>このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Limit of bid (CPC).<br>Adding and editing this field is obsolete. Currently not available.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_CEILING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class CampaignServiceTargetRoasBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の下限です。&lt;br&gt;このフィールドの追加と編集は廃止され、現在設定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Minimum CPC.&lt;br&gt;Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return bidFloor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の下限です。<br>このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Minimum CPC.<br>Adding and editing this field is obsolete. Currently not available.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_FLOOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class CampaignServiceTargetRoasBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告費用対効果の目標値です。&lt;br&gt; 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。&lt;br&gt; ADD時およびSET時、このフィールドは必須となります。&lt;br&gt; ※ROAS:Return On Advertising Spend&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target ROAS (Return On Advertising Spend)&lt;br&gt; * Limit range: 0.01 - 1000.00 (1% - 100000%)&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return targetRoas
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値です。<br> 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。<br> ADD時およびSET時、このフィールドは必須となります。<br> ※ROAS:Return On Advertising Spend</div> <div lang=\"en\">Target ROAS (Return On Advertising Spend)<br> * Limit range: 0.01 - 1000.00 (1% - 100000%)<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class CampaignServiceTargetRoasBiddingScheme {
   public void setTargetRoas(Double targetRoas) {
     this.targetRoas = targetRoas;
   }
-
 
   @Override
   public boolean equals(Object o) {

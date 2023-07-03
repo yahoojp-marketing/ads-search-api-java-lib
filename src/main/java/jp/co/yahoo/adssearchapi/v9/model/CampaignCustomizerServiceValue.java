@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignCustomizer;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCustomizerServiceValueオブジェクトは、キャンペーンとカスタマイザー属性間の設定情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCustomizerServiceValue object contains the configuration information between the campaign and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignCustomizerServiceValueオブジェクトは、キャンペーンとカスタマイザー属性間の設定情報を格納します。</div> <div lang=\"en\">CampaignCustomizerServiceValue object contains the configuration information between the campaign and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   CampaignCustomizerServiceValue.JSON_PROPERTY_ERRORS,
   CampaignCustomizerServiceValue.JSON_PROPERTY_CAMPAIGN_CUSTOMIZER,
   CampaignCustomizerServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("CampaignCustomizerServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignCustomizerServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_CAMPAIGN_CUSTOMIZER = "campaignCustomizer";
   private CampaignCustomizer campaignCustomizer;
@@ -50,7 +46,7 @@ public class CampaignCustomizerServiceValue {
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public CampaignCustomizerServiceValue() { 
+  public CampaignCustomizerServiceValue() {
   }
 
   public CampaignCustomizerServiceValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class CampaignCustomizerServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class CampaignCustomizerServiceValue {
    * Get campaignCustomizer
    * @return campaignCustomizer
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_CUSTOMIZER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class CampaignCustomizerServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Result of process.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">Result of process.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class CampaignCustomizerServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

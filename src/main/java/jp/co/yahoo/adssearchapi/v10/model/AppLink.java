@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.AppLinkServiceAppLinkPlatform;
 import jp.co.yahoo.adssearchapi.v10.model.AppLinkServiceLinkStatus;
 import jp.co.yahoo.adssearchapi.v10.model.AppLinkServiceSyncStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkオブジェクトは、アプリリンク情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLink information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AppLinkオブジェクトは、アプリリンク情報を表します。</div> <div lang=\"en\">AppLink information.</div> ")
 @JsonPropertyOrder({
   AppLink.JSON_PROPERTY_ACCOUNT_ID,
   AppLink.JSON_PROPERTY_APP_LINK_ID,
@@ -44,8 +41,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppLink.JSON_PROPERTY_LINK_STATUS,
   AppLink.JSON_PROPERTY_SYNC_STATUS
 })
-@JsonTypeName("AppLink")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AppLink {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -77,7 +73,7 @@ public class AppLink {
   public static final String JSON_PROPERTY_SYNC_STATUS = "syncStatus";
   private AppLinkServiceSyncStatus syncStatus;
 
-  public AppLink() { 
+  public AppLink() {
   }
 
   public AppLink accountId(Long accountId) {
@@ -90,8 +86,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,8 +112,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリリンクIDです。&lt;br&gt; SETまたはREGENERATE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App Link ID.&lt;br&gt; This field is required in SET or REGENERATE operation.&lt;/div&gt; 
    * @return appLinkId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリリンクIDです。<br> SETまたはREGENERATE時、このフィールドは必須となります。</div> <div lang=\"en\">App Link ID.<br> This field is required in SET or REGENERATE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +138,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダーIDです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; ※DictionaryService/getAppLinkVendorで取得できるappVendorIdのみ使用できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App Vendor ID.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *Only the appVendorId that can be obtained with DictionaryService/getAppLinkVendor can be used.&lt;/div&gt; 
    * @return appVendorId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダーIDです。<br> ADD時、このフィールドは必須となります。<br> ※DictionaryService/getAppLinkVendorで取得できるappVendorIdのみ使用できます。</div> <div lang=\"en\">App Vendor ID.<br> This field is required in ADD operation.<br> *Only the appVendorId that can be obtained with DictionaryService/getAppLinkVendor can be used.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,8 +164,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー名（日本語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App Vendor Name in Japanese.&lt;/div&gt; 
    * @return appVendorNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（日本語）です。</div> <div lang=\"en\">App Vendor Name in Japanese.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,8 +190,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー名（英語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App Vendor Name in English.&lt;/div&gt; 
    * @return appVendorNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー名（英語）です。</div> <div lang=\"en\">App Vendor Name in English.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -225,8 +216,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリIDです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App ID.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリIDです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">App ID.<br> This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -252,8 +242,7 @@ public class AppLink {
    * Get appLinkPlatform
    * @return appLinkPlatform
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,8 +268,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リンクIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Link ID.&lt;/div&gt; 
    * @return linkId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リンクIDです。</div> <div lang=\"en\">Link ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LINK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -306,8 +294,7 @@ public class AppLink {
    * Get linkStatus
    * @return linkStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LINK_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -333,8 +320,7 @@ public class AppLink {
    * Get syncStatus
    * @return syncStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SYNC_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -348,7 +334,6 @@ public class AppLink {
   public void setSyncStatus(AppLinkServiceSyncStatus syncStatus) {
     this.syncStatus = syncStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

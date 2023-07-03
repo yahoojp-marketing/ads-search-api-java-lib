@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupCriterionServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceReturnValueオブジェクトは、処理結果を含む広告グループのクライテリアに関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceReturnValue object is a container which has ad group criteria information including its operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceReturnValueオブジェクトは、処理結果を含む広告グループのクライテリアに関する情報を表します。</div> <div lang=\"en\">AdGroupCriterionServiceReturnValue object is a container which has ad group criteria information including its operation results.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupCriterionServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupCriterionServiceValue> values = null;
+  private List<AdGroupCriterionServiceValue> values;
 
-  public AdGroupCriterionServiceReturnValue() { 
+  public AdGroupCriterionServiceReturnValue() {
   }
 
   public AdGroupCriterionServiceReturnValue values(List<AdGroupCriterionServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupCriterionServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupCriterionServiceReturnValue {
   public void setValues(List<AdGroupCriterionServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

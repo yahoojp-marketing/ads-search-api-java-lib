@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignTargetServicePlatformType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServicePlatformTargetオブジェクトは、デバイス設定を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となります。&lt;br&gt; ※TargetTypeがPLATFORMの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServicePlatformTarget object describes device setting.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If targetType is PLATFORM, this field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignTargetServicePlatformTargetオブジェクトは、デバイス設定を表します。<br> このフィールドは、ADD時およびSET時に省略可能となります。<br> ※TargetTypeがPLATFORMの場合、このフィールドはADD時に必須となります。</div> <div lang=\"en\">CampaignTargetServicePlatformTarget object describes device setting.<br> This field is optional in ADD and SET operation.<br> *If targetType is PLATFORM, this field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignTargetServicePlatformTarget.JSON_PROPERTY_PLATFORM_TYPE
 })
-@JsonTypeName("CampaignTargetServicePlatformTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTargetServicePlatformTarget {
   public static final String JSON_PROPERTY_PLATFORM_TYPE = "platformType";
   private CampaignTargetServicePlatformType platformType;
 
-  public CampaignTargetServicePlatformTarget() { 
+  public CampaignTargetServicePlatformTarget() {
   }
 
   public CampaignTargetServicePlatformTarget platformType(CampaignTargetServicePlatformType platformType) {
@@ -52,8 +48,7 @@ public class CampaignTargetServicePlatformTarget {
    * Get platformType
    * @return platformType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLATFORM_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class CampaignTargetServicePlatformTarget {
   public void setPlatformType(CampaignTargetServicePlatformType platformType) {
     this.platformType = platformType;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.LabelServiceCountLabeledEntity;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;LabelServiceSelectorオブジェクトは、操作の対象とするラベルの情報およびフィルタ条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;LabelServiceSelector object describes the information of label to be operated and filter conditions.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">LabelServiceSelectorオブジェクトは、操作の対象とするラベルの情報およびフィルタ条件を表します。</div> <div lang=\"en\">LabelServiceSelector object describes the information of label to be operated and filter conditions.</div> ")
 @JsonPropertyOrder({
   LabelServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   LabelServiceSelector.JSON_PROPERTY_COUNT_LABELED_ENTITY,
@@ -39,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   LabelServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   LabelServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("LabelServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class LabelServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -49,7 +45,7 @@ public class LabelServiceSelector {
   private LabelServiceCountLabeledEntity countLabeledEntity;
 
   public static final String JSON_PROPERTY_LABEL_IDS = "labelIds";
-  private List<Long> labelIds = null;
+  private List<Long> labelIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 2000;
@@ -57,7 +53,7 @@ public class LabelServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public LabelServiceSelector() { 
+  public LabelServiceSelector() {
   }
 
   public LabelServiceSelector accountId(Long accountId) {
@@ -70,8 +66,7 @@ public class LabelServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -97,8 +92,7 @@ public class LabelServiceSelector {
    * Get countLabeledEntity
    * @return countLabeledEntity
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COUNT_LABELED_ENTITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,8 +126,7 @@ public class LabelServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベルID&lt;br&gt;指定しない場合は、フィルタ条件に すべてのラベルが含まれます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Label ID.&lt;br&gt;If not specified, the filter condition includes all labels.&lt;/div&gt; 
    * @return labelIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ラベルID<br>指定しない場合は、フィルタ条件に すべてのラベルが含まれます。</div> <div lang=\"en\">Label ID.<br>If not specified, the filter condition includes all labels.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LABEL_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,8 +154,7 @@ public class LabelServiceSelector {
    * maximum: 2000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,8 +181,7 @@ public class LabelServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -204,7 +195,6 @@ public class LabelServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

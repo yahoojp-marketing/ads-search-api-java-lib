@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.SharedCriterionServiceKeywordMatchType;
 import jp.co.yahoo.adssearchapi.v9.model.SharedCriterionServiceUse;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionオブジェクトは、対象外キーワード情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterion object holds negative keyword information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SharedCriterionオブジェクトは、対象外キーワード情報を保持します。</div> <div lang=\"en\">SharedCriterion object holds negative keyword information.</div> ")
 @JsonPropertyOrder({
   SharedCriterion.JSON_PROPERTY_ACCOUNT_ID,
   SharedCriterion.JSON_PROPERTY_CRITERION_ID,
@@ -39,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SharedCriterion.JSON_PROPERTY_TEXT,
   SharedCriterion.JSON_PROPERTY_USE
 })
-@JsonTypeName("SharedCriterion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SharedCriterion {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -60,7 +56,7 @@ public class SharedCriterion {
   public static final String JSON_PROPERTY_USE = "use";
   private SharedCriterionServiceUse use;
 
-  public SharedCriterion() { 
+  public SharedCriterion() {
   }
 
   public SharedCriterion accountId(Long accountId) {
@@ -73,8 +69,7 @@ public class SharedCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,8 +95,7 @@ public class SharedCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリオンIDです。&lt;br&gt; REMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Criterion ID.&lt;br&gt; This field is required in REMOVE operation.&lt;/div&gt; 
    * @return criterionId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クライテリオンIDです。<br> REMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">Criterion ID.<br> This field is required in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,8 +121,7 @@ public class SharedCriterion {
    * Get keywordMatchType
    * @return keywordMatchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_MATCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -154,8 +147,7 @@ public class SharedCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント共有リストIDです。&lt;br&gt; ADDおよびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account shared list ID.&lt;br&gt; This field is required in ADD and REMOVE operation.&lt;/div&gt; 
    * @return sharedListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウント共有リストIDです。<br> ADDおよびREMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">Account shared list ID.<br> This field is required in ADD and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARED_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -181,8 +173,7 @@ public class SharedCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Keyword.&lt;br&gt;This field is required in ADD operation.&lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Keyword.<br>This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -208,8 +199,7 @@ public class SharedCriterion {
    * Get use
    * @return use
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,7 +213,6 @@ public class SharedCriterion {
   public void setUse(SharedCriterionServiceUse use) {
     this.use = use;
   }
-
 
   @Override
   public boolean equals(Object o) {

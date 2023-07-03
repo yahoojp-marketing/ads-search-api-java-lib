@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceIsAllVisitorRule;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleBaseTargetListは、ベースターゲットリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがRULEの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleBaseTargetList is an object that holds Rule based target list information.&lt;br&gt; This field is optional.&lt;br&gt;*If the targetListType is RULE, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceRuleBaseTargetListは、ベースターゲットリストの情報を保持するオブジェクトです。<br> このフィールドは、省略可能となります。<br> ※targetListTypeがRULEの場合、このフィールドは必須となります。</div> <div lang=\"en\">RetargetingListServiceRuleBaseTargetList is an object that holds Rule based target list information.<br> This field is optional.<br>*If the targetListType is RULE, this field is required.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceRuleBaseTargetList.JSON_PROPERTY_END_DATE,
   RetargetingListServiceRuleBaseTargetList.JSON_PROPERTY_IS_ALL_VISITOR_RULE,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingListServiceRuleBaseTargetList.JSON_PROPERTY_RULES,
   RetargetingListServiceRuleBaseTargetList.JSON_PROPERTY_START_DATE
 })
-@JsonTypeName("RetargetingListServiceRuleBaseTargetList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceRuleBaseTargetList {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
   private String endDate;
@@ -54,12 +50,12 @@ public class RetargetingListServiceRuleBaseTargetList {
   private RetargetingListServiceIsDateSpecificRule isDateSpecificRule;
 
   public static final String JSON_PROPERTY_RULES = "rules";
-  private List<RetargetingListServiceRuleGroup> rules = null;
+  private List<RetargetingListServiceRuleGroup> rules;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
 
-  public RetargetingListServiceRuleBaseTargetList() { 
+  public RetargetingListServiceRuleBaseTargetList() {
   }
 
   public RetargetingListServiceRuleBaseTargetList endDate(String endDate) {
@@ -72,8 +68,7 @@ public class RetargetingListServiceRuleBaseTargetList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用終了日です。&lt;br&gt; ※このフィールドの追加と編集は廃止され、現在設定できません。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of rule setting.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ルール適用終了日です。<br> ※このフィールドの追加と編集は廃止され、現在設定できません。<br> ※YYYYMMDD形式です。<br> ※リクエスト日は2037/12/30まで 指定可能です。</div> <div lang=\"en\">End date of rule setting.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30<br> *Adding and editing this field is obsolete. Currently not available.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,8 +94,7 @@ public class RetargetingListServiceRuleBaseTargetList {
    * Get isAllVisitorRule
    * @return isAllVisitorRule
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_ALL_VISITOR_RULE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class RetargetingListServiceRuleBaseTargetList {
    * Get isDateSpecificRule
    * @return isDateSpecificRule
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_DATE_SPECIFIC_RULE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,8 +154,7 @@ public class RetargetingListServiceRuleBaseTargetList {
    * Get rules
    * @return rules
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -188,8 +180,7 @@ public class RetargetingListServiceRuleBaseTargetList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用開始日です。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt;※リクエスト日は2037/12/30まで 指定可能です。&lt;br&gt; ※このフィールドの追加と編集は廃止され、現在設定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of rule setting.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ルール適用開始日です。<br> ※YYYYMMDD形式です。<br>※リクエスト日は2037/12/30まで 指定可能です。<br> ※このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Start date of rule setting.<br> *In YYYYMMDD format<br> *Request date can be set up to 2037/12/30<br> *Adding and editing this field is obsolete. Currently not available.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,7 +194,6 @@ public class RetargetingListServiceRuleBaseTargetList {
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

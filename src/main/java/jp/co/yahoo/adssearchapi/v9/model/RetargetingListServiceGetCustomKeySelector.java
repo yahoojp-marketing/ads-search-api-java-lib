@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.RetargetingListServiceTargetListOwner;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceGetCustomKeySelectorは、ターゲットリストの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceGetCustomKeySelector object holds search condition (execution parameter).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceGetCustomKeySelectorは、ターゲットリストの検索条件（実行パラメータ）を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceGetCustomKeySelector object holds search condition (execution parameter).</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceGetCustomKeySelector.JSON_PROPERTY_ACCOUNT_ID,
   RetargetingListServiceGetCustomKeySelector.JSON_PROPERTY_TARGET_LIST_OWNER
 })
-@JsonTypeName("RetargetingListServiceGetCustomKeySelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceGetCustomKeySelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -43,7 +39,7 @@ public class RetargetingListServiceGetCustomKeySelector {
   public static final String JSON_PROPERTY_TARGET_LIST_OWNER = "targetListOwner";
   private RetargetingListServiceTargetListOwner targetListOwner;
 
-  public RetargetingListServiceGetCustomKeySelector() { 
+  public RetargetingListServiceGetCustomKeySelector() {
   }
 
   public RetargetingListServiceGetCustomKeySelector accountId(Long accountId) {
@@ -56,8 +52,7 @@ public class RetargetingListServiceGetCustomKeySelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -83,8 +78,7 @@ public class RetargetingListServiceGetCustomKeySelector {
    * Get targetListOwner
    * @return targetListOwner
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_OWNER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class RetargetingListServiceGetCustomKeySelector {
   public void setTargetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
     this.targetListOwner = targetListOwner;
   }
-
 
   @Override
   public boolean equals(Object o) {

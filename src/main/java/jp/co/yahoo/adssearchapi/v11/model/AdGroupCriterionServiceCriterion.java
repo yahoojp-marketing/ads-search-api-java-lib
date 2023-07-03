@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupCriterionServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupCriterionServiceKeyword;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceCriterionオブジェクトは、クライテリアを表します。※広告グループ用クライテリアです。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceCriterion object displays criteria information. *Ad group criteria.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceCriterionオブジェクトは、クライテリアを表します。※広告グループ用クライテリアです。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">AdGroupCriterionServiceCriterion object displays criteria information. *Ad group criteria.<br> This field is required in any cases.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionServiceCriterion.JSON_PROPERTY_CRITERION_ID,
   AdGroupCriterionServiceCriterion.JSON_PROPERTY_CRITERION_TRACK_ID,
   AdGroupCriterionServiceCriterion.JSON_PROPERTY_CRITERION_TYPE,
   AdGroupCriterionServiceCriterion.JSON_PROPERTY_KEYWORD
 })
-@JsonTypeName("AdGroupCriterionServiceCriterion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionServiceCriterion {
   public static final String JSON_PROPERTY_CRITERION_ID = "criterionId";
   private Long criterionId;
@@ -52,7 +48,7 @@ public class AdGroupCriterionServiceCriterion {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
   private AdGroupCriterionServiceKeyword keyword;
 
-  public AdGroupCriterionServiceCriterion() { 
+  public AdGroupCriterionServiceCriterion() {
   }
 
   public AdGroupCriterionServiceCriterion criterionId(Long criterionId) {
@@ -65,8 +61,7 @@ public class AdGroupCriterionServiceCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリアIDです。&lt;br&gt; SETおよびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceCriterion ID.&lt;br&gt; This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return criterionId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クライテリアIDです。<br> SETおよびREMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupCriterionServiceCriterion ID.<br> This field is required in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,8 +87,7 @@ public class AdGroupCriterionServiceCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキング用クライテリアIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceCriterion ID for tracking.&lt;/div&gt; 
    * @return criterionTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用クライテリアIDです。</div> <div lang=\"en\">AdGroupCriterionServiceCriterion ID for tracking.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,8 +113,7 @@ public class AdGroupCriterionServiceCriterion {
    * Get criterionType
    * @return criterionType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,8 +139,7 @@ public class AdGroupCriterionServiceCriterion {
    * Get keyword
    * @return keyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,7 +153,6 @@ public class AdGroupCriterionServiceCriterion {
   public void setKeyword(AdGroupCriterionServiceKeyword keyword) {
     this.keyword = keyword;
   }
-
 
   @Override
   public boolean equals(Object o) {

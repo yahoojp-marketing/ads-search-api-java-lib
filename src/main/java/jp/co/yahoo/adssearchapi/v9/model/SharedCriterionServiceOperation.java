@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.SharedCriterion;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionServiceOperationは、操作対象キャンペーンを保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterionServiceOperation object holds campaign for operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SharedCriterionServiceOperationは、操作対象キャンペーンを保持するオブジェクトです。</div> <div lang=\"en\">SharedCriterionServiceOperation object holds campaign for operation.</div> ")
 @JsonPropertyOrder({
   SharedCriterionServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   SharedCriterionServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("SharedCriterionServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SharedCriterionServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<SharedCriterion> operand = new ArrayList<>();
+  private List<SharedCriterion> operand;
 
-  public SharedCriterionServiceOperation() { 
+  public SharedCriterionServiceOperation() {
   }
 
   public SharedCriterionServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class SharedCriterionServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class SharedCriterionServiceOperation {
   }
 
   public SharedCriterionServiceOperation addOperandItem(SharedCriterion operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class SharedCriterionServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class SharedCriterionServiceOperation {
   public void setOperand(List<SharedCriterion> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

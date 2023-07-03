@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupWebpageServiceOperator;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupWebpageServiceWebpageConditionType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,14 +28,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageConditionオブジェクトは、Webpageの条件を保持します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceWebpageCondition object contains the rules of webpage.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceWebpageConditionオブジェクトは、Webpageの条件を保持します。<br> このフィールドは、ADD時は必須となり、SET時は無視されます。</div> <div lang=\"en\">AdGroupWebpageServiceWebpageCondition object contains the rules of webpage.<br> This field is required in ADD operation, and will be ignored in SET operation.</div> ")
 @JsonPropertyOrder({
   AdGroupWebpageServiceWebpageCondition.JSON_PROPERTY_ARGUMENT,
   AdGroupWebpageServiceWebpageCondition.JSON_PROPERTY_WEBPAGE_CONDITION_TYPE,
   AdGroupWebpageServiceWebpageCondition.JSON_PROPERTY_OPERATOR
 })
-@JsonTypeName("AdGroupWebpageServiceWebpageCondition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupWebpageServiceWebpageCondition {
   public static final String JSON_PROPERTY_ARGUMENT = "argument";
   private String argument;
@@ -48,7 +44,7 @@ public class AdGroupWebpageServiceWebpageCondition {
   public static final String JSON_PROPERTY_OPERATOR = "operator";
   private AdGroupWebpageServiceOperator operator;
 
-  public AdGroupWebpageServiceWebpageCondition() { 
+  public AdGroupWebpageServiceWebpageCondition() {
   }
 
   public AdGroupWebpageServiceWebpageCondition argument(String argument) {
@@ -61,8 +57,7 @@ public class AdGroupWebpageServiceWebpageCondition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件の設定値です。&lt;br&gt;ADD時、このフィールドは必須です。※typeがALL_PAGESの場合は省略可能となります。SET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of rule setting.&lt;br&gt;This field is required in ADD operation, and will be ignored in SET operation. *If type is &#39;ALL_PAGES&#39;, this field is optional in ADD operation.&lt;/div&gt; 
    * @return argument
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">条件の設定値です。<br>ADD時、このフィールドは必須です。※typeがALL_PAGESの場合は省略可能となります。SET時、このフィールドは無視されます。</div> <div lang=\"en\">Value of rule setting.<br>This field is required in ADD operation, and will be ignored in SET operation. *If type is 'ALL_PAGES', this field is optional in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ARGUMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -88,8 +83,7 @@ public class AdGroupWebpageServiceWebpageCondition {
    * Get webpageConditionType
    * @return webpageConditionType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_WEBPAGE_CONDITION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,8 +109,7 @@ public class AdGroupWebpageServiceWebpageCondition {
    * Get operator
    * @return operator
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,7 +123,6 @@ public class AdGroupWebpageServiceWebpageCondition {
   public void setOperator(AdGroupWebpageServiceOperator operator) {
     this.operator = operator;
   }
-
 
   @Override
   public boolean equals(Object o) {

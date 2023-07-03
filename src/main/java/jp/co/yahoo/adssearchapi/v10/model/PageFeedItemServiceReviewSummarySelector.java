@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,21 +28,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceReviewSummarySelectorオブジェクトは、登録したページフィードアイテムの審査成績、状況サマリーを取得するための検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The PageFeedItemServiceReviewSummarySelector object stores search condition to acquire the examination results of the page feed item and the situation summary.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceReviewSummarySelectorオブジェクトは、登録したページフィードアイテムの審査成績、状況サマリーを取得するための検索条件を格納します。</div> <div lang=\"en\">The PageFeedItemServiceReviewSummarySelector object stores search condition to acquire the examination results of the page feed item and the situation summary.</div> ")
 @JsonPropertyOrder({
   PageFeedItemServiceReviewSummarySelector.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedItemServiceReviewSummarySelector.JSON_PROPERTY_FEED_IDS,
   PageFeedItemServiceReviewSummarySelector.JSON_PROPERTY_NUMBER_RESULTS,
   PageFeedItemServiceReviewSummarySelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("PageFeedItemServiceReviewSummarySelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedItemServiceReviewSummarySelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
-  private List<Long> feedIds = null;
+  private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -52,7 +48,7 @@ public class PageFeedItemServiceReviewSummarySelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public PageFeedItemServiceReviewSummarySelector() { 
+  public PageFeedItemServiceReviewSummarySelector() {
   }
 
   public PageFeedItemServiceReviewSummarySelector accountId(Long accountId) {
@@ -65,8 +61,7 @@ public class PageFeedItemServiceReviewSummarySelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -100,8 +95,7 @@ public class PageFeedItemServiceReviewSummarySelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID&lt;/div&gt; 
    * @return feedIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">Feed ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +123,7 @@ public class PageFeedItemServiceReviewSummarySelector {
    * maximum: 10000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class PageFeedItemServiceReviewSummarySelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,7 +164,6 @@ public class PageFeedItemServiceReviewSummarySelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

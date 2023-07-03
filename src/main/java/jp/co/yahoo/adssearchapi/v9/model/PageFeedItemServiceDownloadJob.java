@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedItemServiceBulkEncoding;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedItemServiceBulkLang;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedItemServiceBulkOutput;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceDownloadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceDownloadJob object retains contents of page feed item information for download.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceDownloadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。</div> <div lang=\"en\">PageFeedItemServiceDownloadJob object retains contents of page feed item information for download.</div> ")
 @JsonPropertyOrder({
   PageFeedItemServiceDownloadJob.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedItemServiceDownloadJob.JSON_PROPERTY_BULK_ENCODING,
@@ -45,8 +42,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedItemServiceDownloadJob.JSON_PROPERTY_PROGRESS,
   PageFeedItemServiceDownloadJob.JSON_PROPERTY_START_DATE
 })
-@JsonTypeName("PageFeedItemServiceDownloadJob")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedItemServiceDownloadJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -78,7 +74,7 @@ public class PageFeedItemServiceDownloadJob {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
 
-  public PageFeedItemServiceDownloadJob() { 
+  public PageFeedItemServiceDownloadJob() {
   }
 
   public PageFeedItemServiceDownloadJob accountId(Long accountId) {
@@ -91,8 +87,7 @@ public class PageFeedItemServiceDownloadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは必須です。</div> <div lang=\"en\">Account ID.<br> This field is required.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +113,7 @@ public class PageFeedItemServiceDownloadJob {
    * Get bulkEncoding
    * @return bulkEncoding
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BULK_ENCODING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +139,7 @@ public class PageFeedItemServiceDownloadJob {
    * Get bulkLang
    * @return bulkLang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BULK_LANG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,8 +165,7 @@ public class PageFeedItemServiceDownloadJob {
    * Get bulkOutput
    * @return bulkOutput
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BULK_OUTPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -199,8 +191,7 @@ public class PageFeedItemServiceDownloadJob {
    * Get downloadJobStatus
    * @return downloadJobStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DOWNLOAD_JOB_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -226,8 +217,7 @@ public class PageFeedItemServiceDownloadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの終了日です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; 形式：yyyyMMddHHmmss&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.  &lt;br&gt; Format:yyyyMMddHHmmss&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの終了日です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> 形式：yyyyMMddHHmmss</div><div lang=\"en\">End date of job.<br> Although this field will be returned in the response, it will be ignored on input.  <br> Format:yyyyMMddHHmmss</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -253,8 +243,7 @@ public class PageFeedItemServiceDownloadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードIDです。&lt;br&gt; このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;br&gt; This field is required.&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードIDです。<br> このフィールドは必須です。</div> <div lang=\"en\">Feed ID.<br> This field is required.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -280,8 +269,7 @@ public class PageFeedItemServiceDownloadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Job ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return jobId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Job ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -307,8 +295,7 @@ public class PageFeedItemServiceDownloadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの進捗状況です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Progress of page feed item job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return progress
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの進捗状況です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Progress of page feed item job.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PROGRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -334,8 +321,7 @@ public class PageFeedItemServiceDownloadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの開始日です。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;br&gt; 形式：yyyyMMddHHmmss &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; Format:yyyyMMddHHmmss&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの開始日です。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 <br> 形式：yyyyMMddHHmmss </div> <div lang=\"en\">Start date of job.<br> Although this field will be returned in the response, it will be ignored on input.<br> Format:yyyyMMddHHmmss</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -349,7 +335,6 @@ public class PageFeedItemServiceDownloadJob {
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

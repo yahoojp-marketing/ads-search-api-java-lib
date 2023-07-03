@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.ConversionTrackerServiceAppLinkPlatform;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppLinkConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by tag.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppLinkConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by tag.<br> This field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceAppLinkConversion.JSON_PROPERTY_APP_VENDOR_ID,
   ConversionTrackerServiceAppLinkConversion.JSON_PROPERTY_APP_ID,
@@ -37,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceAppLinkConversion.JSON_PROPERTY_APP_EVENT_TYPE,
   ConversionTrackerServiceAppLinkConversion.JSON_PROPERTY_ADVANCED_SNIPPET
 })
-@JsonTypeName("ConversionTrackerServiceAppLinkConversion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceAppLinkConversion {
   public static final String JSON_PROPERTY_APP_VENDOR_ID = "appVendorId";
   private String appVendorId;
@@ -55,7 +51,7 @@ public class ConversionTrackerServiceAppLinkConversion {
   public static final String JSON_PROPERTY_ADVANCED_SNIPPET = "advancedSnippet";
   private String advancedSnippet;
 
-  public ConversionTrackerServiceAppLinkConversion() { 
+  public ConversionTrackerServiceAppLinkConversion() {
   }
 
   public ConversionTrackerServiceAppLinkConversion appVendorId(String appVendorId) {
@@ -68,8 +64,7 @@ public class ConversionTrackerServiceAppLinkConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー識別子です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application Vendor ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return appVendorId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー識別子です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Application Vendor ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,8 +90,7 @@ public class ConversionTrackerServiceAppLinkConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Application ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -122,8 +116,7 @@ public class ConversionTrackerServiceAppLinkConversion {
    * Get appLinkPlatform
    * @return appLinkPlatform
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,8 +142,7 @@ public class ConversionTrackerServiceAppLinkConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリイベントタイプです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application Event Type.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return appEventType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリイベントタイプです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Application Event Type.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_EVENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,8 +168,7 @@ public class ConversionTrackerServiceAppLinkConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   リニューアル版のコンバージョンタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。&lt;br&gt;   詳細は以下のヘルプを参照してください。&lt;br&gt;   ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan&#x3D;ja&amp;aid&#x3D;1159\&quot;&gt;コンバージョン測定とは&lt;/a&gt;&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   The new format of conversion tag avoids the impacts such as changes made to the browser. &lt;br&gt;   See also the help below.&lt;br&gt;   * &lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan&#x3D;en&amp;aid&#x3D;353\&quot;&gt;Conversion Analytics&lt;/a&gt;&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return advancedSnippet
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   リニューアル版のコンバージョンタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。<br>   詳細は以下のヘルプを参照してください。<br>   ・<a href=\"https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan=ja&aid=1159\">コンバージョン測定とは</a><br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   The new format of conversion tag avoids the impacts such as changes made to the browser. <br>   See also the help below.<br>   * <a href=\"https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan=en&aid=353\">Conversion Analytics</a><br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ADVANCED_SNIPPET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,7 +182,6 @@ public class ConversionTrackerServiceAppLinkConversion {
   public void setAdvancedSnippet(String advancedSnippet) {
     this.advancedSnippet = advancedSnippet;
   }
-
 
   @Override
   public boolean equals(Object o) {

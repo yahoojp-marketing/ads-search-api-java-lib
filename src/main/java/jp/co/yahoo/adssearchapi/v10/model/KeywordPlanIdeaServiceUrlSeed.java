@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaServiceUrlSeedオブジェクトは、キーワード候補作成条件としてURLを指定するオブジェクトです。&lt;br&gt;seedTypeが&lt;code&gt;URL&lt;/code&gt;の場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordPlanIdeaServiceUrlSeed object is for specifying URL as related keywords creation conditions.&lt;br&gt;If seedType is &lt;code&gt;URL&lt;/code&gt;, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaServiceUrlSeedオブジェクトは、キーワード候補作成条件としてURLを指定するオブジェクトです。<br>seedTypeが<code>URL</code>の場合は必須です。</div> <div lang=\"en\">KeywordPlanIdeaServiceUrlSeed object is for specifying URL as related keywords creation conditions.<br>If seedType is <code>URL</code>, this field is required.</div> ")
 @JsonPropertyOrder({
   KeywordPlanIdeaServiceUrlSeed.JSON_PROPERTY_URL
 })
-@JsonTypeName("KeywordPlanIdeaServiceUrlSeed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordPlanIdeaServiceUrlSeed {
   public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public KeywordPlanIdeaServiceUrlSeed() { 
+  public KeywordPlanIdeaServiceUrlSeed() {
   }
 
   public KeywordPlanIdeaServiceUrlSeed url(String url) {
@@ -51,8 +47,7 @@ public class KeywordPlanIdeaServiceUrlSeed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;URLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;URL.&lt;/div&gt; 
    * @return url
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">URLです。</div> <div lang=\"en\">URL.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class KeywordPlanIdeaServiceUrlSeed {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(Object o) {

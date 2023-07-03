@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupCriterionLabelServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionLabelServiceReturnValueオブジェクトは、広告グループのクライテリアラベル情報を含む操作結果として戻される値を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionLabelServiceReturnValue object describes value returned as the operation result including ad group criterion label information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionLabelServiceReturnValueオブジェクトは、広告グループのクライテリアラベル情報を含む操作結果として戻される値を表します。</div> <div lang=\"en\">AdGroupCriterionLabelServiceReturnValue object describes value returned as the operation result including ad group criterion label information.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionLabelServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupCriterionLabelServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionLabelServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupCriterionLabelServiceValue> values = null;
+  private List<AdGroupCriterionLabelServiceValue> values;
 
-  public AdGroupCriterionLabelServiceReturnValue() { 
+  public AdGroupCriterionLabelServiceReturnValue() {
   }
 
   public AdGroupCriterionLabelServiceReturnValue values(List<AdGroupCriterionLabelServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupCriterionLabelServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupCriterionLabelServiceReturnValue {
   public void setValues(List<AdGroupCriterionLabelServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.Error;
@@ -33,21 +31,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServiceGetJobStatusValueは、upload、downloadの処理状況を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServiceGetJobStatusValue retains a container of the processing situation results (upload/download).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedAssetServiceGetJobStatusValueは、upload、downloadの処理状況を格納するコンテナです。</div> <div lang=\"en\">PageFeedAssetServiceGetJobStatusValue retains a container of the processing situation results (upload/download).</div> ")
 @JsonPropertyOrder({
   PageFeedAssetServiceGetJobStatusValue.JSON_PROPERTY_DOWNLOAD_JOB,
   PageFeedAssetServiceGetJobStatusValue.JSON_PROPERTY_ERRORS,
   PageFeedAssetServiceGetJobStatusValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   PageFeedAssetServiceGetJobStatusValue.JSON_PROPERTY_UPLOAD_JOB
 })
-@JsonTypeName("PageFeedAssetServiceGetJobStatusValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedAssetServiceGetJobStatusValue {
   public static final String JSON_PROPERTY_DOWNLOAD_JOB = "downloadJob";
   private PageFeedAssetServiceDownloadJob downloadJob;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
@@ -55,7 +51,7 @@ public class PageFeedAssetServiceGetJobStatusValue {
   public static final String JSON_PROPERTY_UPLOAD_JOB = "uploadJob";
   private PageFeedAssetServiceUploadJob uploadJob;
 
-  public PageFeedAssetServiceGetJobStatusValue() { 
+  public PageFeedAssetServiceGetJobStatusValue() {
   }
 
   public PageFeedAssetServiceGetJobStatusValue downloadJob(PageFeedAssetServiceDownloadJob downloadJob) {
@@ -68,8 +64,7 @@ public class PageFeedAssetServiceGetJobStatusValue {
    * Get downloadJob
    * @return downloadJob
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DOWNLOAD_JOB)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,8 +98,7 @@ public class PageFeedAssetServiceGetJobStatusValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,8 +124,7 @@ public class PageFeedAssetServiceGetJobStatusValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class PageFeedAssetServiceGetJobStatusValue {
    * Get uploadJob
    * @return uploadJob
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_JOB)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,7 +164,6 @@ public class PageFeedAssetServiceGetJobStatusValue {
   public void setUploadJob(PageFeedAssetServiceUploadJob uploadJob) {
     this.uploadJob = uploadJob;
   }
-
 
   @Override
   public boolean equals(Object o) {

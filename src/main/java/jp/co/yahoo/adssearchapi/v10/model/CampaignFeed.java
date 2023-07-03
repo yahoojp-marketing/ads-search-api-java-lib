@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignFeedServicePlaceholderType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignFeedオブジェクトは、キャンペーンに紐づけられたFeedItem情報を表します。&lt;br&gt; SET時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignFeed describes FeedItem information connected to campaign.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignFeedオブジェクトは、キャンペーンに紐づけられたFeedItem情報を表します。<br> SET時、このフィールドは必須です。</div> <div lang=\"en\">CampaignFeed describes FeedItem information connected to campaign.<br> This field is required in SET operation.</div> ")
 @JsonPropertyOrder({
   CampaignFeed.JSON_PROPERTY_ACCOUNT_ID,
   CampaignFeed.JSON_PROPERTY_CAMPAIGN_ID,
   CampaignFeed.JSON_PROPERTY_FEED_ITEM_ID,
   CampaignFeed.JSON_PROPERTY_PLACEHOLDER_TYPE
 })
-@JsonTypeName("CampaignFeed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignFeed {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -51,7 +47,7 @@ public class CampaignFeed {
   public static final String JSON_PROPERTY_PLACEHOLDER_TYPE = "placeholderType";
   private CampaignFeedServicePlaceholderType placeholderType;
 
-  public CampaignFeed() { 
+  public CampaignFeed() {
   }
 
   public CampaignFeed accountId(Long accountId) {
@@ -64,8 +60,7 @@ public class CampaignFeed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class CampaignFeed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class CampaignFeed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItem情報のIDです。&lt;br&gt; SET時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItem information ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return feedItemId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">FeedItem情報のIDです。<br> SET時、このフィールドは必須です。</div> <div lang=\"en\">FeedItem information ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ITEM_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class CampaignFeed {
    * Get placeholderType
    * @return placeholderType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class CampaignFeed {
   public void setPlaceholderType(CampaignFeedServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
-
 
   @Override
   public boolean equals(Object o) {

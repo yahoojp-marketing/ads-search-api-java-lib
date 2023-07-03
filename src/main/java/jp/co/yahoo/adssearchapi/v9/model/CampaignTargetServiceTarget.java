@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignTargetServiceLocationTarget;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignTargetServiceNetworkTarget;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignTargetServicePlatformTarget;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceTargetオブジェクトは、ターゲティング設定を表します。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceTarget object describes CampaignTargetServiceTarget information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceTargetオブジェクトは、ターゲティング設定を表します。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">CampaignTargetServiceTarget object describes CampaignTargetServiceTarget information.<br> This field is required in any cases.</div> ")
 @JsonPropertyOrder({
   CampaignTargetServiceTarget.JSON_PROPERTY_LOCATION_TARGET,
   CampaignTargetServiceTarget.JSON_PROPERTY_NETWORK_TARGET,
@@ -42,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignTargetServiceTarget.JSON_PROPERTY_TARGET_ID,
   CampaignTargetServiceTarget.JSON_PROPERTY_TARGET_TYPE
 })
-@JsonTypeName("CampaignTargetServiceTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTargetServiceTarget {
   public static final String JSON_PROPERTY_LOCATION_TARGET = "locationTarget";
   private CampaignTargetServiceLocationTarget locationTarget;
@@ -63,7 +59,7 @@ public class CampaignTargetServiceTarget {
   public static final String JSON_PROPERTY_TARGET_TYPE = "targetType";
   private CampaignTargetServiceTargetType targetType;
 
-  public CampaignTargetServiceTarget() { 
+  public CampaignTargetServiceTarget() {
   }
 
   public CampaignTargetServiceTarget locationTarget(CampaignTargetServiceLocationTarget locationTarget) {
@@ -76,8 +72,7 @@ public class CampaignTargetServiceTarget {
    * Get locationTarget
    * @return locationTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOCATION_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,8 +98,7 @@ public class CampaignTargetServiceTarget {
    * Get networkTarget
    * @return networkTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NETWORK_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,8 +124,7 @@ public class CampaignTargetServiceTarget {
    * Get platformTarget
    * @return platformTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLATFORM_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class CampaignTargetServiceTarget {
    * Get scheduleTarget
    * @return scheduleTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULE_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,8 +176,7 @@ public class CampaignTargetServiceTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。&lt;br&gt; ※LocationCampaignTargetServiceTargetの場合、ADD時に必須となります。&lt;br&gt; ※PlatformCampaignTargetServiceTargetの場合、SET時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceTarget ID.&lt;br&gt; This field will be ignored in ADD operation, and is required in ADD and REMOVE operation.&lt;br&gt; *For LocationCampaignTargetServiceTarget, this is required in ADD operation.&lt;br&gt; *For PlatformCampaignTargetServiceTarget, this will be ignored in SET operation.&lt;/div&gt; 
    * @return targetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットIDです。<br> このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。<br> ※LocationCampaignTargetServiceTargetの場合、ADD時に必須となります。<br> ※PlatformCampaignTargetServiceTargetの場合、SET時に無視されます。</div> <div lang=\"en\">CampaignTargetServiceTarget ID.<br> This field will be ignored in ADD operation, and is required in ADD and REMOVE operation.<br> *For LocationCampaignTargetServiceTarget, this is required in ADD operation.<br> *For PlatformCampaignTargetServiceTarget, this will be ignored in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,8 +202,7 @@ public class CampaignTargetServiceTarget {
    * Get targetType
    * @return targetType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -226,7 +216,6 @@ public class CampaignTargetServiceTarget {
   public void setTargetType(CampaignTargetServiceTargetType targetType) {
     this.targetType = targetType;
   }
-
 
   @Override
   public boolean equals(Object o) {

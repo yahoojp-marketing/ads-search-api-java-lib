@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignCriterionServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignCriterionServiceKeyword;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceCriterionオブジェクトは、クライテリアを表します。※キャンペーン用クライテリアです。&lt;br&gt; ADD時およびREMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceCriterion object describes criteria information. *This is a criteria for campaign.&lt;br&gt; This field is required in ADD and REMOVE operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceCriterionオブジェクトは、クライテリアを表します。※キャンペーン用クライテリアです。<br> ADD時およびREMOVE時、このフィールドは必須です。</div> <div lang=\"en\">CampaignCriterionServiceCriterion object describes criteria information. *This is a criteria for campaign.<br> This field is required in ADD and REMOVE operation.</div> ")
 @JsonPropertyOrder({
   CampaignCriterionServiceCriterion.JSON_PROPERTY_CRITERION_ID,
   CampaignCriterionServiceCriterion.JSON_PROPERTY_CRITERION_TRACK_ID,
   CampaignCriterionServiceCriterion.JSON_PROPERTY_CRITERION_TYPE,
   CampaignCriterionServiceCriterion.JSON_PROPERTY_KEYWORD
 })
-@JsonTypeName("CampaignCriterionServiceCriterion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignCriterionServiceCriterion {
   public static final String JSON_PROPERTY_CRITERION_ID = "criterionId";
   private Long criterionId;
@@ -52,7 +48,7 @@ public class CampaignCriterionServiceCriterion {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
   private CampaignCriterionServiceKeyword keyword;
 
-  public CampaignCriterionServiceCriterion() { 
+  public CampaignCriterionServiceCriterion() {
   }
 
   public CampaignCriterionServiceCriterion criterionId(Long criterionId) {
@@ -65,8 +61,7 @@ public class CampaignCriterionServiceCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリアIDです。&lt;br&gt; REMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceCriterion ID.&lt;br&gt; This field is required in REMOVE operation.&lt;/div&gt; 
    * @return criterionId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クライテリアIDです。<br> REMOVE時、このフィールドは必須です。</div> <div lang=\"en\">CampaignCriterionServiceCriterion ID.<br> This field is required in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,8 +87,7 @@ public class CampaignCriterionServiceCriterion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリオントラックIDです。&lt;br&gt; 対象外キーワードでは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceCriterion Track ID.&lt;br&gt; This is not returned for Negative keyword.&lt;/div&gt; 
    * @return criterionTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クライテリオントラックIDです。<br> 対象外キーワードでは返却されません。</div> <div lang=\"en\">CampaignCriterionServiceCriterion Track ID.<br> This is not returned for Negative keyword.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,8 +113,7 @@ public class CampaignCriterionServiceCriterion {
    * Get criterionType
    * @return criterionType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,8 +139,7 @@ public class CampaignCriterionServiceCriterion {
    * Get keyword
    * @return keyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,7 +153,6 @@ public class CampaignCriterionServiceCriterion {
   public void setKeyword(CampaignCriterionServiceKeyword keyword) {
     this.keyword = keyword;
   }
-
 
   @Override
   public boolean equals(Object o) {

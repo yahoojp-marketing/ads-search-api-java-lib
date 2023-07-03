@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupAssetServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAssetServiceReturnValueオブジェクトは、広告グループとアセット間の設定情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAssetServiceReturnValue is a container of configuration information between ad groups and assets.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAssetServiceReturnValueオブジェクトは、広告グループとアセット間の設定情報を格納するコンテナです。</div> <div lang=\"en\">AdGroupAssetServiceReturnValue is a container of configuration information between ad groups and assets.</div> ")
 @JsonPropertyOrder({
   AdGroupAssetServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupAssetServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAssetServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupAssetServiceValue> values = null;
+  private List<AdGroupAssetServiceValue> values;
 
-  public AdGroupAssetServiceReturnValue() { 
+  public AdGroupAssetServiceReturnValue() {
   }
 
   public AdGroupAssetServiceReturnValue values(List<AdGroupAssetServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupAssetServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupAssetServiceReturnValue {
   public void setValues(List<AdGroupAssetServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CustomizerAttributeServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CustomizerAttributeオブジェクトは、カスタマイザー属性の情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CustomizerAttribute object contains the information of CustomizerAttribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CustomizerAttributeオブジェクトは、カスタマイザー属性の情報を格納します。</div> <div lang=\"en\">CustomizerAttribute object contains the information of CustomizerAttribute.</div> ")
 @JsonPropertyOrder({
   CustomizerAttribute.JSON_PROPERTY_ACCOUNT_ID,
   CustomizerAttribute.JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_ID,
   CustomizerAttribute.JSON_PROPERTY_NAME,
   CustomizerAttribute.JSON_PROPERTY_TYPE
 })
-@JsonTypeName("CustomizerAttribute")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CustomizerAttribute {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -51,7 +47,7 @@ public class CustomizerAttribute {
   public static final String JSON_PROPERTY_TYPE = "type";
   private CustomizerAttributeServiceType type;
 
-  public CustomizerAttribute() { 
+  public CustomizerAttribute() {
   }
 
   public CustomizerAttribute accountId(Long accountId) {
@@ -64,8 +60,7 @@ public class CustomizerAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class CustomizerAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カスタマイザー属性IDです。&lt;br&gt; このフィールドは、REMOVE時に必須となり、ADD時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CustomizerAttribute ID.&lt;br&gt; This field is required in REMOVE operation, and will be ignored in ADD operation.&lt;/div&gt; 
    * @return customizerAttributeId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カスタマイザー属性IDです。<br> このフィールドは、REMOVE時に必須となり、ADD時に無視されます。</div> <div lang=\"en\">CustomizerAttribute ID.<br> This field is required in REMOVE operation, and will be ignored in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOMIZER_ATTRIBUTE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class CustomizerAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;属性名です。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Attribute name.&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVED operation.&lt;/div&gt; 
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">属性名です。<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。</div> <div lang=\"en\">Attribute name.<br> This field is required in ADD operation, and will be ignored in REMOVED operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class CustomizerAttribute {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class CustomizerAttribute {
   public void setType(CustomizerAttributeServiceType type) {
     this.type = type;
   }
-
 
   @Override
   public boolean equals(Object o) {

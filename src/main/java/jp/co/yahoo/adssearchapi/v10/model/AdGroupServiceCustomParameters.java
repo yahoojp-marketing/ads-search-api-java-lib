@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupServiceCustomParameter;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※SET時、トラッキングURLが審査中の場合、編集はできません。また、変更がない場合、審査対象とはなりません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional.&lt;br&gt; *In SET operation, cannot update it when Tracking URL is in editorial review. In addition, if there is no change, it will not to be reviewed.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。<br> このフィールドは、省略可能となります。<br> ※SET時、トラッキングURLが審査中の場合、編集はできません。また、変更がない場合、審査対象とはなりません。</div> <div lang=\"en\">AdGroupServiceCustomParameters displays the setting of custom parameters.<br> This field is optional.<br> *In SET operation, cannot update it when Tracking URL is in editorial review. In addition, if there is no change, it will not to be reviewed.</div> ")
 @JsonPropertyOrder({
   AdGroupServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   AdGroupServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@JsonTypeName("AdGroupServiceCustomParameters")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
   private AdGroupServiceIsRemove isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
-  private List<AdGroupServiceCustomParameter> parameters = null;
+  private List<AdGroupServiceCustomParameter> parameters;
 
-  public AdGroupServiceCustomParameters() { 
+  public AdGroupServiceCustomParameters() {
   }
 
   public AdGroupServiceCustomParameters isRemove(AdGroupServiceIsRemove isRemove) {
@@ -59,8 +55,7 @@ public class AdGroupServiceCustomParameters {
    * Get isRemove
    * @return isRemove
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class AdGroupServiceCustomParameters {
    * Get parameters
    * @return parameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class AdGroupServiceCustomParameters {
   public void setParameters(List<AdGroupServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
-
 
   @Override
   public boolean equals(Object o) {

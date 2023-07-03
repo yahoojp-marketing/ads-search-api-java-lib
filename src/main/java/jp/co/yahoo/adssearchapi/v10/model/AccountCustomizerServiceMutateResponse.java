@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AccountCustomizerServiceReturnValue;
@@ -37,11 +35,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountCustomizerServiceMutateResponse.JSON_PROPERTY_RID,
   AccountCustomizerServiceMutateResponse.JSON_PROPERTY_RVAL
 })
-@JsonTypeName("AccountCustomizerServiceMutateResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountCustomizerServiceMutateResponse {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_RID = "rid";
   private String rid;
@@ -49,7 +46,7 @@ public class AccountCustomizerServiceMutateResponse {
   public static final String JSON_PROPERTY_RVAL = "rval";
   private AccountCustomizerServiceReturnValue rval;
 
-  public AccountCustomizerServiceMutateResponse() { 
+  public AccountCustomizerServiceMutateResponse() {
   }
 
   public AccountCustomizerServiceMutateResponse errors(List<Error> errors) {
@@ -70,8 +67,7 @@ public class AccountCustomizerServiceMutateResponse {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,8 +93,7 @@ public class AccountCustomizerServiceMutateResponse {
    * Get rid
    * @return rid
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +119,7 @@ public class AccountCustomizerServiceMutateResponse {
    * Get rval
    * @return rval
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RVAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +133,6 @@ public class AccountCustomizerServiceMutateResponse {
   public void setRval(AccountCustomizerServiceReturnValue rval) {
     this.rval = rval;
   }
-
 
   @Override
   public boolean equals(Object o) {

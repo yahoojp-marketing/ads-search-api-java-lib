@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.ConversionTrackerServiceIsRemoveUrl;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポストバックURLです。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Postback URL.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ポストバックURLです。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">Postback URL.<br> This field is optional in any cases.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceAppPostbackUrl.JSON_PROPERTY_IS_REMOVE_URL,
   ConversionTrackerServiceAppPostbackUrl.JSON_PROPERTY_URL
 })
-@JsonTypeName("ConversionTrackerServiceAppPostbackUrl")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceAppPostbackUrl {
   public static final String JSON_PROPERTY_IS_REMOVE_URL = "isRemoveUrl";
   private ConversionTrackerServiceIsRemoveUrl isRemoveUrl;
@@ -43,7 +39,7 @@ public class ConversionTrackerServiceAppPostbackUrl {
   public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public ConversionTrackerServiceAppPostbackUrl() { 
+  public ConversionTrackerServiceAppPostbackUrl() {
   }
 
   public ConversionTrackerServiceAppPostbackUrl isRemoveUrl(ConversionTrackerServiceIsRemoveUrl isRemoveUrl) {
@@ -56,8 +52,7 @@ public class ConversionTrackerServiceAppPostbackUrl {
    * Get isRemoveUrl
    * @return isRemoveUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class ConversionTrackerServiceAppPostbackUrl {
    * Get url
    * @return url
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class ConversionTrackerServiceAppPostbackUrl {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(Object o) {

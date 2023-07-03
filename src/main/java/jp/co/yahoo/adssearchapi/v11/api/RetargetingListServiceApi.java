@@ -30,7 +30,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adssearchapi.v11.api.RetargetingListServiceApi")
 public class RetargetingListServiceApi {
     private ApiClient apiClient;
@@ -83,27 +83,27 @@ public class RetargetingListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<RetargetingListServiceMutateResponse> retargetingListServiceAddPostWithHttpInfo(RetargetingListServiceOperation retargetingListServiceOperation) throws RestClientException {
-        Object postBody = retargetingListServiceOperation;
+        Object localVarPostBody = retargetingListServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<RetargetingListServiceMutateResponse> returnType = new ParameterizedTypeReference<RetargetingListServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/RetargetingListService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<RetargetingListServiceMutateResponse> localReturnType = new ParameterizedTypeReference<RetargetingListServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/RetargetingListService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -136,27 +136,27 @@ public class RetargetingListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<RetargetingListServiceGetCustomKeyResponse> retargetingListServiceGetCustomKeyPostWithHttpInfo(RetargetingListServiceGetCustomKeySelector retargetingListServiceGetCustomKeySelector) throws RestClientException {
-        Object postBody = retargetingListServiceGetCustomKeySelector;
+        Object localVarPostBody = retargetingListServiceGetCustomKeySelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<RetargetingListServiceGetCustomKeyResponse> returnType = new ParameterizedTypeReference<RetargetingListServiceGetCustomKeyResponse>() {};
-        return apiClient.invokeAPI("/RetargetingListService/getCustomKey", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<RetargetingListServiceGetCustomKeyResponse> localReturnType = new ParameterizedTypeReference<RetargetingListServiceGetCustomKeyResponse>() {};
+        return apiClient.invokeAPI("/RetargetingListService/getCustomKey", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -189,27 +189,27 @@ public class RetargetingListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<RetargetingListServiceGetResponse> retargetingListServiceGetPostWithHttpInfo(RetargetingListServiceSelector retargetingListServiceSelector) throws RestClientException {
-        Object postBody = retargetingListServiceSelector;
+        Object localVarPostBody = retargetingListServiceSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<RetargetingListServiceGetResponse> returnType = new ParameterizedTypeReference<RetargetingListServiceGetResponse>() {};
-        return apiClient.invokeAPI("/RetargetingListService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<RetargetingListServiceGetResponse> localReturnType = new ParameterizedTypeReference<RetargetingListServiceGetResponse>() {};
+        return apiClient.invokeAPI("/RetargetingListService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -242,26 +242,26 @@ public class RetargetingListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<RetargetingListServiceMutateResponse> retargetingListServiceSetPostWithHttpInfo(RetargetingListServiceOperation retargetingListServiceOperation) throws RestClientException {
-        Object postBody = retargetingListServiceOperation;
+        Object localVarPostBody = retargetingListServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<RetargetingListServiceMutateResponse> returnType = new ParameterizedTypeReference<RetargetingListServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/RetargetingListService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<RetargetingListServiceMutateResponse> localReturnType = new ParameterizedTypeReference<RetargetingListServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/RetargetingListService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

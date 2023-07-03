@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAsset;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAssetServiceReplaceValueオブジェクトは、広告グループとアセット間の設定情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAssetServiceReplaceValue is a container of configuration information between ad groups and assets.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAssetServiceReplaceValueオブジェクトは、広告グループとアセット間の設定情報を格納するコンテナです。</div> <div lang=\"en\">AdGroupAssetServiceReplaceValue is a container of configuration information between ad groups and assets.</div> ")
 @JsonPropertyOrder({
   AdGroupAssetServiceReplaceValue.JSON_PROPERTY_AD_GROUP_ASSETS,
   AdGroupAssetServiceReplaceValue.JSON_PROPERTY_ERRORS,
   AdGroupAssetServiceReplaceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("AdGroupAssetServiceReplaceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAssetServiceReplaceValue {
   public static final String JSON_PROPERTY_AD_GROUP_ASSETS = "adGroupAssets";
-  private List<AdGroupAsset> adGroupAssets = null;
+  private List<AdGroupAsset> adGroupAssets;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public AdGroupAssetServiceReplaceValue() { 
+  public AdGroupAssetServiceReplaceValue() {
   }
 
   public AdGroupAssetServiceReplaceValue adGroupAssets(List<AdGroupAsset> adGroupAssets) {
@@ -71,8 +67,7 @@ public class AdGroupAssetServiceReplaceValue {
    * Get adGroupAssets
    * @return adGroupAssets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ASSETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,8 +101,7 @@ public class AdGroupAssetServiceReplaceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class AdGroupAssetServiceReplaceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果を表示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Showing operation results.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果を表示します。</div> <div lang=\"en\">Showing operation results.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,7 +141,6 @@ public class AdGroupAssetServiceReplaceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

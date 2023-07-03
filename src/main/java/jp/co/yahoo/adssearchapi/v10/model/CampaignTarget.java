@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignTargetServiceTarget;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetオブジェクトは、キャンペーンの各種ターゲティング設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTarget describes each type of targeting setting of Campaign.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignTargetオブジェクトは、キャンペーンの各種ターゲティング設定を表します。</div> <div lang=\"en\">CampaignTarget describes each type of targeting setting of Campaign.</div> ")
 @JsonPropertyOrder({
   CampaignTarget.JSON_PROPERTY_ACCOUNT_ID,
   CampaignTarget.JSON_PROPERTY_BID_MULTIPLIER,
@@ -37,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignTarget.JSON_PROPERTY_CAMPAIGN_NAME,
   CampaignTarget.JSON_PROPERTY_TARGET
 })
-@JsonTypeName("CampaignTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTarget {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -55,7 +51,7 @@ public class CampaignTarget {
   public static final String JSON_PROPERTY_TARGET = "target";
   private CampaignTargetServiceTarget target;
 
-  public CampaignTarget() { 
+  public CampaignTarget() {
   }
 
   public CampaignTarget accountId(Long accountId) {
@@ -68,8 +64,7 @@ public class CampaignTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">Account ID.<br> This field is required in any cases.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,8 +90,7 @@ public class CampaignTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   入札価格調整率です。0.10～10.00まで指定できます。&lt;br&gt;   0を指定した場合、広告は配信されません。&lt;br&gt;   また、入札価格調整率の値は小数点第二位まで指定可能です。&lt;br&gt;   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Bid adjustment rate.&lt;br&gt;   Can be specified between  0.10 to 10.00.&lt;br&gt;   When specified &amp;#39;0&amp;#39;, the ad will not be delivered.&lt;br&gt;   Bid adjustment rate can be specified up to two decimal places.&lt;br&gt;   This field is optional. The default value will be 1.0. &lt;/div&gt; 
    * @return bidMultiplier
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   入札価格調整率です。0.10～10.00まで指定できます。<br>   0を指定した場合、広告は配信されません。<br>   また、入札価格調整率の値は小数点第二位まで指定可能です。<br>   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 </div> <div lang=\"en\">   Bid adjustment rate.<br>   Can be specified between  0.10 to 10.00.<br>   When specified &#39;0&#39;, the ad will not be delivered.<br>   Bid adjustment rate can be specified up to two decimal places.<br>   This field is optional. The default value will be 1.0. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -122,8 +116,7 @@ public class CampaignTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">Campaign ID.<br> This field is required in any cases.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,8 +142,7 @@ public class CampaignTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign Name.&lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。</div> <div lang=\"en\">Campaign Name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,8 +168,7 @@ public class CampaignTarget {
    * Get target
    * @return target
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,7 +182,6 @@ public class CampaignTarget {
   public void setTarget(CampaignTargetServiceTarget target) {
     this.target = target;
   }
-
 
   @Override
   public boolean equals(Object o) {

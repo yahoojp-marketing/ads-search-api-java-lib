@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AssetServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetReturnオブジェクトは、アセットの情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetReturn contains the Asset information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetReturnオブジェクトは、アセットの情報を格納します。</div> <div lang=\"en\">AssetReturn contains the Asset information.</div> ")
 @JsonPropertyOrder({
   AssetServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AssetServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AssetServiceValue> values = null;
+  private List<AssetServiceValue> values;
 
-  public AssetServiceReturnValue() { 
+  public AssetServiceReturnValue() {
   }
 
   public AssetServiceReturnValue values(List<AssetServiceValue> values) {
@@ -62,8 +58,7 @@ public class AssetServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AssetServiceReturnValue {
   public void setValues(List<AssetServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

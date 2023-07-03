@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceLogicalGroup;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalTargetListは、組合せターゲットリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがLOGICALの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalTargetList is an object that holds the combination target list information.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is LOGICAL, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceLogicalTargetListは、組合せターゲットリストの情報を保持するオブジェクトです。<br> このフィールドは、省略可能となります。<br> ※targetListTypeがLOGICALの場合、このフィールドは必須となります。</div> <div lang=\"en\">RetargetingListServiceLogicalTargetList is an object that holds the combination target list information.<br> This field is optional.<br> If the targetListType is LOGICAL, this field is required.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceLogicalTargetList.JSON_PROPERTY_LOGICAL_GROUP
 })
-@JsonTypeName("RetargetingListServiceLogicalTargetList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceLogicalTargetList {
   public static final String JSON_PROPERTY_LOGICAL_GROUP = "logicalGroup";
-  private List<RetargetingListServiceLogicalGroup> logicalGroup = null;
+  private List<RetargetingListServiceLogicalGroup> logicalGroup;
 
-  public RetargetingListServiceLogicalTargetList() { 
+  public RetargetingListServiceLogicalTargetList() {
   }
 
   public RetargetingListServiceLogicalTargetList logicalGroup(List<RetargetingListServiceLogicalGroup> logicalGroup) {
@@ -62,8 +58,7 @@ public class RetargetingListServiceLogicalTargetList {
    * Get logicalGroup
    * @return logicalGroup
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGICAL_GROUP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RetargetingListServiceLogicalTargetList {
   public void setLogicalGroup(List<RetargetingListServiceLogicalGroup> logicalGroup) {
     this.logicalGroup = logicalGroup;
   }
-
 
   @Override
   public boolean equals(Object o) {

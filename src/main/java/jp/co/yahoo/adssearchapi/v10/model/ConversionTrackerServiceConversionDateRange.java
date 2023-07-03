@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceConversionDateRangeオブジェクトは、コンバージョンの取得期間を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceConversionDateRange object is used to specify a period to obtain conversion.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceConversionDateRangeオブジェクトは、コンバージョンの取得期間を指定します。</div> <div lang=\"en\">ConversionTrackerServiceConversionDateRange object is used to specify a period to obtain conversion.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceConversionDateRange.JSON_PROPERTY_END_DATE,
   ConversionTrackerServiceConversionDateRange.JSON_PROPERTY_START_DATE
 })
-@JsonTypeName("ConversionTrackerServiceConversionDateRange")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceConversionDateRange {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
   private String endDate;
@@ -42,7 +38,7 @@ public class ConversionTrackerServiceConversionDateRange {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
 
-  public ConversionTrackerServiceConversionDateRange() { 
+  public ConversionTrackerServiceConversionDateRange() {
   }
 
   public ConversionTrackerServiceConversionDateRange endDate(String endDate) {
@@ -55,8 +51,7 @@ public class ConversionTrackerServiceConversionDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン実績集計終了期間です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion performance aggregation period end&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン実績集計終了期間です。</div> <div lang=\"en\">Conversion performance aggregation period end</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class ConversionTrackerServiceConversionDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン実績集計開始期間です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion performance aggregation period start&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン実績集計開始期間です。</div> <div lang=\"en\">Conversion performance aggregation period start</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class ConversionTrackerServiceConversionDateRange {
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

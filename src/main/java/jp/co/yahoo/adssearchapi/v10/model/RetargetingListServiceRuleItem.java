@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceCustomKeyRuleItem;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceRuleOperator;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceRuleType;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleItemは、ルールの評価条件を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleItem is an object that holds evaluation condition of rule.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceRuleItemは、ルールの評価条件を保持するオブジェクトです。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">RetargetingListServiceRuleItem is an object that holds evaluation condition of rule.<br> This field is required in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceRuleItem.JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM,
   RetargetingListServiceRuleItem.JSON_PROPERTY_RULE_OPERATOR,
@@ -40,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingListServiceRuleItem.JSON_PROPERTY_URL_RULE_ITEM,
   RetargetingListServiceRuleItem.JSON_PROPERTY_VALUE
 })
-@JsonTypeName("RetargetingListServiceRuleItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceRuleItem {
   public static final String JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM = "customKeyRuleItem";
   private RetargetingListServiceCustomKeyRuleItem customKeyRuleItem;
@@ -58,7 +54,7 @@ public class RetargetingListServiceRuleItem {
   public static final String JSON_PROPERTY_VALUE = "value";
   private String value;
 
-  public RetargetingListServiceRuleItem() { 
+  public RetargetingListServiceRuleItem() {
   }
 
   public RetargetingListServiceRuleItem customKeyRuleItem(RetargetingListServiceCustomKeyRuleItem customKeyRuleItem) {
@@ -71,8 +67,7 @@ public class RetargetingListServiceRuleItem {
    * Get customKeyRuleItem
    * @return customKeyRuleItem
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class RetargetingListServiceRuleItem {
    * Get ruleOperator
    * @return ruleOperator
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULE_OPERATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class RetargetingListServiceRuleItem {
    * Get ruleType
    * @return ruleType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -152,8 +145,7 @@ public class RetargetingListServiceRuleItem {
    * Get urlRuleItem
    * @return urlRuleItem
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL_RULE_ITEM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -179,8 +171,7 @@ public class RetargetingListServiceRuleItem {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;評価値です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; ※括弧（()）、シングルクォート（&amp;#39;）、ダブルクォート（&amp;#34;）、タブ（\\t）は利用できません。&lt;br&gt; ※250文字まで指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Evaluation value.&lt;br&gt; *Cannot use: bracket, single quote, double quote, and tab.&lt;br&gt; *Can select up to 250 characters.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return value
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">評価値です。<br> ADDおよびSET時、このフィールドは必須となります。<br> ※括弧（()）、シングルクォート（&#39;）、ダブルクォート（&#34;）、タブ（\\t）は利用できません。<br> ※250文字まで指定可能です。</div> <div lang=\"en\">Evaluation value.<br> *Cannot use: bracket, single quote, double quote, and tab.<br> *Can select up to 250 characters.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -194,7 +185,6 @@ public class RetargetingListServiceRuleItem {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(Object o) {

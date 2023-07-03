@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceMaximizeClicksBiddingSchemeオブジェクトは、クリック数の最大化の自動入札設定情報を表します。（BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; ADD時、BiddingStrategyTypeがMAXIMIZE_CLICKSの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceMaximizeClicksBiddingScheme object describes auto bidding setting for Maximize Clicks. *This is an object for anything other than BiddingStrategyService.&lt;br&gt; This field is required when BiddingStrategyType is &#39;MAXIMIZE_CLICKS&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceMaximizeClicksBiddingSchemeオブジェクトは、クリック数の最大化の自動入札設定情報を表します。（BiddingStrategyService以外用のオブジェクトです。）<br> ADD時、BiddingStrategyTypeがMAXIMIZE_CLICKSの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceMaximizeClicksBiddingScheme object describes auto bidding setting for Maximize Clicks. *This is an object for anything other than BiddingStrategyService.<br> This field is required when BiddingStrategyType is 'MAXIMIZE_CLICKS' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignServiceMaximizeClicksBiddingScheme.JSON_PROPERTY_BID_CEILING
 })
-@JsonTypeName("CampaignServiceMaximizeClicksBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceMaximizeClicksBiddingScheme {
   public static final String JSON_PROPERTY_BID_CEILING = "bidCeiling";
   private Long bidCeiling;
 
-  public CampaignServiceMaximizeClicksBiddingScheme() { 
+  public CampaignServiceMaximizeClicksBiddingScheme() {
   }
 
   public CampaignServiceMaximizeClicksBiddingScheme bidCeiling(Long bidCeiling) {
@@ -51,8 +47,7 @@ public class CampaignServiceMaximizeClicksBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt;※「0」が設定された 場合、上限設定は ありません。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト設定値は0となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bid amount limit.&lt;br&gt;* If &amp;#34;0&amp;#34; is set, no bid limit.&lt;br&gt; This field is optional. The default value will be 0.&lt;/div&gt; 
    * @return bidCeiling
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br>※「0」が設定された 場合、上限設定は ありません。<br> このフィールドは省略可能となります。その際、デフォルト設定値は0となります。</div> <div lang=\"en\">Bid amount limit.<br>* If &#34;0&#34; is set, no bid limit.<br> This field is optional. The default value will be 0.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_CEILING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class CampaignServiceMaximizeClicksBiddingScheme {
   public void setBidCeiling(Long bidCeiling) {
     this.bidCeiling = bidCeiling;
   }
-
 
   @Override
   public boolean equals(Object o) {

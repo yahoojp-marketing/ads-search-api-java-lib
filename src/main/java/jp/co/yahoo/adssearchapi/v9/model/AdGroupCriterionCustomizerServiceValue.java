@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupCriterionCustomizer;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionCustomizerServiceValueオブジェクトは、キーワードとカスタマイザー属性間の設定情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionCustomizerServiceValue object contains the configuration information between the keyword and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionCustomizerServiceValueオブジェクトは、キーワードとカスタマイザー属性間の設定情報を格納します。</div> <div lang=\"en\">AdGroupCriterionCustomizerServiceValue object contains the configuration information between the keyword and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionCustomizerServiceValue.JSON_PROPERTY_ERRORS,
   AdGroupCriterionCustomizerServiceValue.JSON_PROPERTY_AD_GROUP_CUSTOMIZER,
   AdGroupCriterionCustomizerServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("AdGroupCriterionCustomizerServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionCustomizerServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_AD_GROUP_CUSTOMIZER = "adGroupCustomizer";
   private AdGroupCriterionCustomizer adGroupCustomizer;
@@ -50,7 +46,7 @@ public class AdGroupCriterionCustomizerServiceValue {
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public AdGroupCriterionCustomizerServiceValue() { 
+  public AdGroupCriterionCustomizerServiceValue() {
   }
 
   public AdGroupCriterionCustomizerServiceValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class AdGroupCriterionCustomizerServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class AdGroupCriterionCustomizerServiceValue {
    * Get adGroupCustomizer
    * @return adGroupCustomizer
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_CUSTOMIZER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class AdGroupCriterionCustomizerServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Result of process.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">Result of process.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class AdGroupCriterionCustomizerServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

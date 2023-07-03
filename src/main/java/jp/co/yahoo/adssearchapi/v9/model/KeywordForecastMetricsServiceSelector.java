@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.KeywordForecastMetricsServiceDateInterval;
 import jp.co.yahoo.adssearchapi.v9.model.KeywordForecastMetricsServiceKeywordPlanCampaign;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetricsServiceSelector オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetricsServiceSelector object contains estimate request.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordForecastMetricsServiceSelector オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetricsServiceSelector object contains estimate request.</div> ")
 @JsonPropertyOrder({
   KeywordForecastMetricsServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   KeywordForecastMetricsServiceSelector.JSON_PROPERTY_DATE_INTERVAL,
@@ -38,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   KeywordForecastMetricsServiceSelector.JSON_PROPERTY_END_DATE,
   KeywordForecastMetricsServiceSelector.JSON_PROPERTY_KEYWORD_PLAN_CAMPAIGN
 })
-@JsonTypeName("KeywordForecastMetricsServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordForecastMetricsServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -56,7 +52,7 @@ public class KeywordForecastMetricsServiceSelector {
   public static final String JSON_PROPERTY_KEYWORD_PLAN_CAMPAIGN = "keywordPlanCampaign";
   private KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanCampaign;
 
-  public KeywordForecastMetricsServiceSelector() { 
+  public KeywordForecastMetricsServiceSelector() {
   }
 
   public KeywordForecastMetricsServiceSelector accountId(Long accountId) {
@@ -69,8 +65,7 @@ public class KeywordForecastMetricsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -96,8 +91,7 @@ public class KeywordForecastMetricsServiceSelector {
    * Get dateInterval
    * @return dateInterval
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DATE_INTERVAL)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -123,8 +117,7 @@ public class KeywordForecastMetricsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;dateIntervalがCUSTOM_DATEのときに指定する開始日です。&lt;br&gt; 現在より先の日付、かつ一年未満である必要があります。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date specified when dateInterval is CUSTOM_DATE.&lt;br&gt; Must be earlier than the current date and less than a year old.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">dateIntervalがCUSTOM_DATEのときに指定する開始日です。<br> 現在より先の日付、かつ一年未満である必要があります。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\">Start date specified when dateInterval is CUSTOM_DATE.<br> Must be earlier than the current date and less than a year old.<br> * Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,8 +143,7 @@ public class KeywordForecastMetricsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;dateIntervalがCUSTOM_DATEのときに指定する終了日です。&lt;br&gt; 現在より先の日付、かつ一年未満である必要があります。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date specified when dateInterval is CUSTOM_DATE.&lt;br&gt; Must be earlier than the current date and less than a year old.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">dateIntervalがCUSTOM_DATEのときに指定する終了日です。<br> 現在より先の日付、かつ一年未満である必要があります。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\">End date specified when dateInterval is CUSTOM_DATE.<br> Must be earlier than the current date and less than a year old.<br> * Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,8 +169,7 @@ public class KeywordForecastMetricsServiceSelector {
    * Get keywordPlanCampaign
    * @return keywordPlanCampaign
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_PLAN_CAMPAIGN)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -192,7 +183,6 @@ public class KeywordForecastMetricsServiceSelector {
   public void setKeywordPlanCampaign(KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanCampaign) {
     this.keywordPlanCampaign = keywordPlanCampaign;
   }
-
 
   @Override
   public boolean equals(Object o) {

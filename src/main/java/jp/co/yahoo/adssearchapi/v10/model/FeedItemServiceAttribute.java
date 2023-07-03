@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.FeedItemServiceMultipleFeedItemAttribute;
 import jp.co.yahoo.adssearchapi.v10.model.FeedItemServicePlaceholderField;
 import jp.co.yahoo.adssearchapi.v10.model.FeedItemServiceSimpleFeedItemAttribute;
@@ -31,15 +29,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceAttributeオブジェクトは、フィードアイテムの属性情報の値を格納します。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; SET時にfeedItemAttributeを指定するとすべて上書きされます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceAttribute object holds the value of Feed Item information.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.&lt;br&gt; If feedItemAttribute is specified in SET operation, it will be overwritten. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedItemServiceAttributeオブジェクトは、フィードアイテムの属性情報の値を格納します。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。<br> SET時にfeedItemAttributeを指定するとすべて上書きされます。 </div> <div lang=\"en\">FeedItemServiceAttribute object holds the value of Feed Item information.<br> This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.<br> If feedItemAttribute is specified in SET operation, it will be overwritten. </div> ")
 @JsonPropertyOrder({
   FeedItemServiceAttribute.JSON_PROPERTY_FEED_ATTRIBUTE_ID,
   FeedItemServiceAttribute.JSON_PROPERTY_MULTIPLE_FEED_ITEM_ATTRIBUTE,
   FeedItemServiceAttribute.JSON_PROPERTY_PLACEHOLDER_FIELD,
   FeedItemServiceAttribute.JSON_PROPERTY_SIMPLE_FEED_ITEM_ATTRIBUTE
 })
-@JsonTypeName("FeedItemServiceAttribute")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedItemServiceAttribute {
   public static final String JSON_PROPERTY_FEED_ATTRIBUTE_ID = "feedAttributeId";
   private Long feedAttributeId;
@@ -53,7 +49,7 @@ public class FeedItemServiceAttribute {
   public static final String JSON_PROPERTY_SIMPLE_FEED_ITEM_ATTRIBUTE = "simpleFeedItemAttribute";
   private FeedItemServiceSimpleFeedItemAttribute simpleFeedItemAttribute;
 
-  public FeedItemServiceAttribute() { 
+  public FeedItemServiceAttribute() {
   }
 
   public FeedItemServiceAttribute feedAttributeId(Long feedAttributeId) {
@@ -66,8 +62,7 @@ public class FeedItemServiceAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィード属性IDです。&lt;br&gt; このフィールドは、ADDおよびSET時に無視されます。&lt;br&gt; ※アドカスタマイザーの場合は、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed attribute ID.&lt;br&gt; This field will be ignored in ADD and SET operation.&lt;br&gt; *For AD_CUSTOMIZER, this field is required in ADD and SET operation.&lt;/div&gt; 
    * @return feedAttributeId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィード属性IDです。<br> このフィールドは、ADDおよびSET時に無視されます。<br> ※アドカスタマイザーの場合は、ADDおよびSET時に必須となります。</div> <div lang=\"en\">Feed attribute ID.<br> This field will be ignored in ADD and SET operation.<br> *For AD_CUSTOMIZER, this field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ATTRIBUTE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class FeedItemServiceAttribute {
    * Get multipleFeedItemAttribute
    * @return multipleFeedItemAttribute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MULTIPLE_FEED_ITEM_ATTRIBUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,8 +114,7 @@ public class FeedItemServiceAttribute {
    * Get placeholderField
    * @return placeholderField
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -147,8 +140,7 @@ public class FeedItemServiceAttribute {
    * Get simpleFeedItemAttribute
    * @return simpleFeedItemAttribute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SIMPLE_FEED_ITEM_ATTRIBUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,7 +154,6 @@ public class FeedItemServiceAttribute {
   public void setSimpleFeedItemAttribute(FeedItemServiceSimpleFeedItemAttribute simpleFeedItemAttribute) {
     this.simpleFeedItemAttribute = simpleFeedItemAttribute;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.PageFeedAssetServiceApprovalStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetオブジェクトは、ページフィードアセット情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAsset object retains page feed asset.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedAssetオブジェクトは、ページフィードアセット情報を格納します。</div> <div lang=\"en\">PageFeedAsset object retains page feed asset.</div> ")
 @JsonPropertyOrder({
   PageFeedAsset.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedAsset.JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID,
@@ -42,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedAsset.JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL,
   PageFeedAsset.JSON_PROPERTY_PAGE_FEED_ASSET_URL
 })
-@JsonTypeName("PageFeedAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedAsset {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -58,7 +54,7 @@ public class PageFeedAsset {
   private PageFeedAssetServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT = "disapprovalReasonComment";
   private String disapprovalReasonComment;
@@ -69,7 +65,7 @@ public class PageFeedAsset {
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_URL = "pageFeedAssetUrl";
   private String pageFeedAssetUrl;
 
-  public PageFeedAsset() { 
+  public PageFeedAsset() {
   }
 
   public PageFeedAsset accountId(Long accountId) {
@@ -82,8 +78,7 @@ public class PageFeedAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,8 +104,7 @@ public class PageFeedAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet ID.&lt;/div&gt; 
    * @return pageFeedAssetSetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアセットセットID</div> <div lang=\"en\">PageFeedAssetSet ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,8 +130,7 @@ public class PageFeedAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAsset ID.&lt;/div&gt; 
    * @return pageFeedAssetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアセットID</div> <div lang=\"en\">PageFeedAsset ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -163,8 +156,7 @@ public class PageFeedAsset {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,8 +190,7 @@ public class PageFeedAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由コード&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Codes of disapproval reason.&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コード</div> <div lang=\"en\">Codes of disapproval reason.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -225,8 +216,7 @@ public class PageFeedAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由のコメント&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Comment of disapproval reason.&lt;/div&gt; 
    * @return disapprovalReasonComment
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由のコメント</div> <div lang=\"en\">Comment of disapproval reason.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -252,8 +242,7 @@ public class PageFeedAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットのカスタムラベル&lt;br&gt; 複数ある場合はカンマ区切り&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom label of page feed asset.&lt;br&gt; If multiple, comma separated.&lt;/div&gt; 
    * @return pageFeedAssetCustomLabel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアセットのカスタムラベル<br> 複数ある場合はカンマ区切り</div> <div lang=\"en\">Custom label of page feed asset.<br> If multiple, comma separated.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,8 +268,7 @@ public class PageFeedAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットのURL&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Url of page feed asset.&lt;/div&gt; 
    * @return pageFeedAssetUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアセットのURL</div> <div lang=\"en\">Url of page feed asset.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -294,7 +282,6 @@ public class PageFeedAsset {
   public void setPageFeedAssetUrl(String pageFeedAssetUrl) {
     this.pageFeedAssetUrl = pageFeedAssetUrl;
   }
-
 
   @Override
   public boolean equals(Object o) {

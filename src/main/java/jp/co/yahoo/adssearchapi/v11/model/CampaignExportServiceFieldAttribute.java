@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceFieldAttribute オブジェクトは、ジョブ作成に使用できるフィールドを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceFieldAttribute object displays available fields for creating jobs.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignExportServiceFieldAttribute オブジェクトは、ジョブ作成に使用できるフィールドを表します。</div> <div lang=\"en\">CampaignExportServiceFieldAttribute object displays available fields for creating jobs.</div> ")
 @JsonPropertyOrder({
   CampaignExportServiceFieldAttribute.JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N,
   CampaignExportServiceFieldAttribute.JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A,
   CampaignExportServiceFieldAttribute.JSON_PROPERTY_FIELD_NAME
 })
-@JsonTypeName("CampaignExportServiceFieldAttribute")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignExportServiceFieldAttribute {
   public static final String JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N = "displayFieldNameEN";
   private String displayFieldNameEN;
@@ -46,7 +42,7 @@ public class CampaignExportServiceFieldAttribute {
   public static final String JSON_PROPERTY_FIELD_NAME = "fieldName";
   private String fieldName;
 
-  public CampaignExportServiceFieldAttribute() { 
+  public CampaignExportServiceFieldAttribute() {
   }
 
   public CampaignExportServiceFieldAttribute displayFieldNameEN(String displayFieldNameEN) {
@@ -59,8 +55,7 @@ public class CampaignExportServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドの英語表示名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Display name (EN)&lt;/div&gt; 
    * @return displayFieldNameEN
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィールドの英語表示名です。</div> <div lang=\"en\">Display name (EN)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class CampaignExportServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドの日本語表示名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Display name (JA)&lt;/div&gt; 
    * @return displayFieldNameJA
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィールドの日本語表示名です。</div> <div lang=\"en\">Display name (JA)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class CampaignExportServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールド名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field name&lt;/div&gt; 
    * @return fieldName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィールド名です。</div> <div lang=\"en\">Field name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FIELD_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class CampaignExportServiceFieldAttribute {
   public void setFieldName(String fieldName) {
     this.fieldName = fieldName;
   }
-
 
   @Override
   public boolean equals(Object o) {

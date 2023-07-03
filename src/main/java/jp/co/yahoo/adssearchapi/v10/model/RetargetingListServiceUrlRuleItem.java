@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceUrlRuleKey;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceUrlRuleItemは、URLルールの評価式を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ruleTypeがURL_RULEの場合、ADDおよびSET時にこのフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceUrlRuleItem is an object that holds evaluation of URL rules.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If ruleType is  URL_RULE, this field is required in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceUrlRuleItemは、URLルールの評価式を保持するオブジェクトです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ruleTypeがURL_RULEの場合、ADDおよびSET時にこのフィールドは必須となります。</div> <div lang=\"en\">RetargetingListServiceUrlRuleItem is an object that holds evaluation of URL rules.<br> This field is optional in ADD and SET operation.<br> If ruleType is  URL_RULE, this field is required in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceUrlRuleItem.JSON_PROPERTY_URL_RULE_KEY
 })
-@JsonTypeName("RetargetingListServiceUrlRuleItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceUrlRuleItem {
   public static final String JSON_PROPERTY_URL_RULE_KEY = "urlRuleKey";
   private RetargetingListServiceUrlRuleKey urlRuleKey;
 
-  public RetargetingListServiceUrlRuleItem() { 
+  public RetargetingListServiceUrlRuleItem() {
   }
 
   public RetargetingListServiceUrlRuleItem urlRuleKey(RetargetingListServiceUrlRuleKey urlRuleKey) {
@@ -52,8 +48,7 @@ public class RetargetingListServiceUrlRuleItem {
    * Get urlRuleKey
    * @return urlRuleKey
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL_RULE_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class RetargetingListServiceUrlRuleItem {
   public void setUrlRuleKey(RetargetingListServiceUrlRuleKey urlRuleKey) {
     this.urlRuleKey = urlRuleKey;
   }
-
 
   @Override
   public boolean equals(Object o) {

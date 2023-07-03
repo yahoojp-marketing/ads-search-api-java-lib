@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionServiceSelectorオブジェクトは、検索条件を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterionServiceSelector object holds search criteria.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SharedCriterionServiceSelectorオブジェクトは、検索条件を保持します。</div> <div lang=\"en\">SharedCriterionServiceSelector object holds search criteria.</div> ")
 @JsonPropertyOrder({
   SharedCriterionServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   SharedCriterionServiceSelector.JSON_PROPERTY_CRITERION_IDS,
@@ -38,25 +35,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SharedCriterionServiceSelector.JSON_PROPERTY_SHARED_LIST_IDS,
   SharedCriterionServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("SharedCriterionServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SharedCriterionServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CRITERION_IDS = "criterionIds";
-  private List<Long> criterionIds = null;
+  private List<Long> criterionIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 1000;
 
   public static final String JSON_PROPERTY_SHARED_LIST_IDS = "sharedListIds";
-  private List<Long> sharedListIds = null;
+  private List<Long> sharedListIds;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public SharedCriterionServiceSelector() { 
+  public SharedCriterionServiceSelector() {
   }
 
   public SharedCriterionServiceSelector accountId(Long accountId) {
@@ -69,8 +65,7 @@ public class SharedCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -104,8 +99,7 @@ public class SharedCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリオンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Criterion ID.&lt;/div&gt; 
    * @return criterionIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クライテリオンIDです。</div> <div lang=\"en\">Criterion ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class SharedCriterionServiceSelector {
    * maximum: 1000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +161,7 @@ public class SharedCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有リストのIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Share list ID.&lt;/div&gt; 
    * @return sharedListIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">共有リストのIDです。</div> <div lang=\"en\">Share list ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARED_LIST_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -196,8 +188,7 @@ public class SharedCriterionServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,7 +202,6 @@ public class SharedCriterionServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

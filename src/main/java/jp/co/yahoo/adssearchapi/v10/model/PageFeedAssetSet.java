@@ -20,23 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetSetオブジェクトは、ページフィードアセットセットの情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet object stores page feed asset set information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedAssetSetオブジェクトは、ページフィードアセットセットの情報を格納します。</div> <div lang=\"en\">PageFeedAssetSet object stores page feed asset set information.</div> ")
 @JsonPropertyOrder({
   PageFeedAssetSet.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedAssetSet.JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID,
   PageFeedAssetSet.JSON_PROPERTY_PAGE_FEED_ASSET_SET_NAME,
   PageFeedAssetSet.JSON_PROPERTY_DOMAIN
 })
-@JsonTypeName("PageFeedAssetSet")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedAssetSet {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -50,7 +46,7 @@ public class PageFeedAssetSet {
   public static final String JSON_PROPERTY_DOMAIN = "domain";
   private String domain;
 
-  public PageFeedAssetSet() { 
+  public PageFeedAssetSet() {
   }
 
   public PageFeedAssetSet accountId(Long accountId) {
@@ -63,8 +59,7 @@ public class PageFeedAssetSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,8 +85,7 @@ public class PageFeedAssetSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセットIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となり、ADD時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet ID.&lt;br&gt; This field is required in SET and REMOVE operation, and will be ignored in ADD operation.&lt;/div&gt; 
    * @return pageFeedAssetSetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアセットセットIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時は無視されます。</div> <div lang=\"en\">PageFeedAssetSet ID.<br> This field is required in SET and REMOVE operation, and will be ignored in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,8 +111,7 @@ public class PageFeedAssetSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセット名です。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet name.&lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return pageFeedAssetSetName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアセットセット名です。<br> このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。</div> <div lang=\"en\">PageFeedAssetSet name.<br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +137,7 @@ public class PageFeedAssetSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ドメインです。&lt;br&gt; このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Domain.　&lt;br&gt; This field is required in ADD operation, and will be ignored in SET and REMOVE operation.&lt;/div&gt; 
    * @return domain
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ドメインです。<br> このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。</div> <div lang=\"en\">Domain.　<br> This field is required in ADD operation, and will be ignored in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DOMAIN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,7 +151,6 @@ public class PageFeedAssetSet {
   public void setDomain(String domain) {
     this.domain = domain;
   }
-
 
   @Override
   public boolean equals(Object o) {

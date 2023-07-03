@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceTargetCpaBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; ADD時、BiddingStrategyTypeがTARGET_CPAの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceTargetCpaBiddingScheme object displays Auto Bidding setting for Target CPA.&lt;br&gt; This field is required when BiddingStrategyType is &#39;TARGET_CPA&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceTargetCpaBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）<br> ADD時、BiddingStrategyTypeがTARGET_CPAの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceTargetCpaBiddingScheme object displays Auto Bidding setting for Target CPA.<br> This field is required when BiddingStrategyType is 'TARGET_CPA' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignServiceTargetCpaBiddingScheme.JSON_PROPERTY_BID_CEILING,
   CampaignServiceTargetCpaBiddingScheme.JSON_PROPERTY_BID_FLOOR,
   CampaignServiceTargetCpaBiddingScheme.JSON_PROPERTY_TARGET_CPA
 })
-@JsonTypeName("CampaignServiceTargetCpaBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceTargetCpaBiddingScheme {
   public static final String JSON_PROPERTY_BID_CEILING = "bidCeiling";
   private Long bidCeiling;
@@ -46,7 +42,7 @@ public class CampaignServiceTargetCpaBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
   private Long targetCpa;
 
-  public CampaignServiceTargetCpaBiddingScheme() { 
+  public CampaignServiceTargetCpaBiddingScheme() {
   }
 
   public CampaignServiceTargetCpaBiddingScheme bidCeiling(Long bidCeiling) {
@@ -59,8 +55,7 @@ public class CampaignServiceTargetCpaBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt; このフィールドの追加と編集は廃止され、現在設定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Limit of bid (CPC).&lt;br&gt; Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return bidCeiling
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br> このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Limit of bid (CPC).<br> Adding and editing this field is obsolete. Currently not available.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_CEILING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class CampaignServiceTargetCpaBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の下限です。&lt;br&gt; このフィールドの追加と編集は廃止され、現在設定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Minimum CPC.&lt;br&gt; Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return bidFloor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の下限です。<br> このフィールドの追加と編集は廃止され、現在設定できません。</div> <div lang=\"en\">Minimum CPC.<br> Adding and editing this field is obsolete. Currently not available.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_FLOOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class CampaignServiceTargetCpaBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン単価の目標値です。&lt;br&gt; ADD時およびSET時、このフィールドは必須となります。&lt;br&gt; ※制限値：1 ～ 800000&lt;br&gt;※日本円のみの設定です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target CPA (JPY).&lt;br&gt; This field is required in ADD and SET operation.&lt;br&gt; * Range limit: 1 - 800000&lt;/div&gt; 
    * @return targetCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です。<br> ADD時およびSET時、このフィールドは必須となります。<br> ※制限値：1 ～ 800000<br>※日本円のみの設定です。</div> <div lang=\"en\">Target CPA (JPY).<br> This field is required in ADD and SET operation.<br> * Range limit: 1 - 800000</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class CampaignServiceTargetCpaBiddingScheme {
   public void setTargetCpa(Long targetCpa) {
     this.targetCpa = targetCpa;
   }
-
 
   @Override
   public boolean equals(Object o) {

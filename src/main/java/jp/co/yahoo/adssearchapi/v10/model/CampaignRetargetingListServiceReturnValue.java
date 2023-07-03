@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignRetargetingListServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListPageオブジェクトは、キャンペーン階層のターゲットリスト設定における実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListPage object holds results (list of all entities) on Target List settings for campaign layer.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignRetargetingListPageオブジェクトは、キャンペーン階層のターゲットリスト設定における実行結果（全Entityのリスト）を保持します。</div> <div lang=\"en\">CampaignRetargetingListPage object holds results (list of all entities) on Target List settings for campaign layer.</div> ")
 @JsonPropertyOrder({
   CampaignRetargetingListServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignRetargetingListServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignRetargetingListServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignRetargetingListServiceValue> values = null;
+  private List<CampaignRetargetingListServiceValue> values;
 
-  public CampaignRetargetingListServiceReturnValue() { 
+  public CampaignRetargetingListServiceReturnValue() {
   }
 
   public CampaignRetargetingListServiceReturnValue values(List<CampaignRetargetingListServiceValue> values) {
@@ -62,8 +58,7 @@ public class CampaignRetargetingListServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignRetargetingListServiceReturnValue {
   public void setValues(List<CampaignRetargetingListServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

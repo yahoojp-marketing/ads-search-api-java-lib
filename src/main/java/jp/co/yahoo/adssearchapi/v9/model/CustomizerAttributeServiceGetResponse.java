@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CustomizerAttributeServicePage;
@@ -37,11 +35,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CustomizerAttributeServiceGetResponse.JSON_PROPERTY_RID,
   CustomizerAttributeServiceGetResponse.JSON_PROPERTY_RVAL
 })
-@JsonTypeName("CustomizerAttributeServiceGetResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CustomizerAttributeServiceGetResponse {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_RID = "rid";
   private String rid;
@@ -49,7 +46,7 @@ public class CustomizerAttributeServiceGetResponse {
   public static final String JSON_PROPERTY_RVAL = "rval";
   private CustomizerAttributeServicePage rval;
 
-  public CustomizerAttributeServiceGetResponse() { 
+  public CustomizerAttributeServiceGetResponse() {
   }
 
   public CustomizerAttributeServiceGetResponse errors(List<Error> errors) {
@@ -70,8 +67,7 @@ public class CustomizerAttributeServiceGetResponse {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,8 +93,7 @@ public class CustomizerAttributeServiceGetResponse {
    * Get rid
    * @return rid
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +119,7 @@ public class CustomizerAttributeServiceGetResponse {
    * Get rval
    * @return rval
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RVAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +133,6 @@ public class CustomizerAttributeServiceGetResponse {
   public void setRval(CustomizerAttributeServicePage rval) {
     this.rval = rval;
   }
-
 
   @Override
   public boolean equals(Object o) {

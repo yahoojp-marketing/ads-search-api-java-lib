@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignTargetServiceExcludedType;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceSelectorオブジェクトは、操作の対象とするキャンペーンのターゲティング設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetSelector object describes the targeting settings on the campaign to be operated.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceSelectorオブジェクトは、操作の対象とするキャンペーンのターゲティング設定を表します。</div> <div lang=\"en\">CampaignTargetSelector object describes the targeting settings on the campaign to be operated.</div> ")
 @JsonPropertyOrder({
   CampaignTargetServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   CampaignTargetServiceSelector.JSON_PROPERTY_CAMPAIGN_IDS,
@@ -44,14 +41,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignTargetServiceSelector.JSON_PROPERTY_TARGET_IDS,
   CampaignTargetServiceSelector.JSON_PROPERTY_TARGET_TYPES
 })
-@JsonTypeName("CampaignTargetServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTargetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_EXCLUDED_TYPE = "excludedType";
   private CampaignTargetServiceExcludedType excludedType;
@@ -60,18 +56,18 @@ public class CampaignTargetServiceSelector {
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_PLATFORM_TYPES = "platformTypes";
-  private List<CampaignTargetServicePlatformType> platformTypes = null;
+  private List<CampaignTargetServicePlatformType> platformTypes;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_TARGET_IDS = "targetIds";
-  private List<String> targetIds = null;
+  private List<String> targetIds;
 
   public static final String JSON_PROPERTY_TARGET_TYPES = "targetTypes";
-  private List<CampaignTargetServiceTargetType> targetTypes = null;
+  private List<CampaignTargetServiceTargetType> targetTypes;
 
-  public CampaignTargetServiceSelector() { 
+  public CampaignTargetServiceSelector() {
   }
 
   public CampaignTargetServiceSelector accountId(Long accountId) {
@@ -84,8 +80,7 @@ public class CampaignTargetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -119,8 +114,7 @@ public class CampaignTargetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,8 +140,7 @@ public class CampaignTargetServiceSelector {
    * Get excludedType
    * @return excludedType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,8 +168,7 @@ public class CampaignTargetServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,8 +202,7 @@ public class CampaignTargetServiceSelector {
    * Get platformTypes
    * @return platformTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLATFORM_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -238,8 +229,7 @@ public class CampaignTargetServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -273,8 +263,7 @@ public class CampaignTargetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target ID.&lt;/div&gt; 
    * @return targetIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットIDです。</div> <div lang=\"en\">Target ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -308,8 +297,7 @@ public class CampaignTargetServiceSelector {
    * Get targetTypes
    * @return targetTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -323,7 +311,6 @@ public class CampaignTargetServiceSelector {
   public void setTargetTypes(List<CampaignTargetServiceTargetType> targetTypes) {
     this.targetTypes = targetTypes;
   }
-
 
   @Override
   public boolean equals(Object o) {

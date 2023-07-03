@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceExtendedTextAdオブジェクトは、拡大テキスト広告に関する情報を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがEXTENDED_TEXT_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceExtendedTextAd object describes the information of Extended Text Ad.&lt;br&gt; This field is optional in ADD operation. *If adType is EXTENDED_TEXT_AD, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceExtendedTextAdオブジェクトは、拡大テキスト広告に関する情報を表します。<br> ADD時、このフィールドは省略可能となります。※adTypeがEXTENDED_TEXT_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceExtendedTextAd object describes the information of Extended Text Ad.<br> This field is optional in ADD operation. *If adType is EXTENDED_TEXT_AD, this field is required.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceExtendedTextAd.JSON_PROPERTY_HEADLINE2,
   AdGroupAdServiceExtendedTextAd.JSON_PROPERTY_HEADLINE3,
@@ -36,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceExtendedTextAd.JSON_PROPERTY_PATH1,
   AdGroupAdServiceExtendedTextAd.JSON_PROPERTY_PATH2
 })
-@JsonTypeName("AdGroupAdServiceExtendedTextAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceExtendedTextAd {
   public static final String JSON_PROPERTY_HEADLINE2 = "headline2";
   private String headline2;
@@ -54,7 +50,7 @@ public class AdGroupAdServiceExtendedTextAd {
   public static final String JSON_PROPERTY_PATH2 = "path2";
   private String path2;
 
-  public AdGroupAdServiceExtendedTextAd() { 
+  public AdGroupAdServiceExtendedTextAd() {
   }
 
   public AdGroupAdServiceExtendedTextAd headline2(String headline2) {
@@ -67,8 +63,7 @@ public class AdGroupAdServiceExtendedTextAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;2行目のタイトルです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Title on the second line.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return headline2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">2行目のタイトルです。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Title on the second line.<br> This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEADLINE2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class AdGroupAdServiceExtendedTextAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;3行目のタイトルです。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Title on the second line.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;/div&gt; 
    * @return headline3
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">3行目のタイトルです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。</div> <div lang=\"en\">Title on the second line.<br> This field is optional in ADD operation. The default value will be null.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEADLINE3)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,8 +115,7 @@ public class AdGroupAdServiceExtendedTextAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;2行目の説明文です。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description on the second line.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;/div&gt; 
    * @return description2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">2行目の説明文です。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。</div> <div lang=\"en\">Description on the second line.<br> This field is optional in ADD operation. The default value will be null.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,8 +141,7 @@ public class AdGroupAdServiceExtendedTextAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path2を指定する場合は、path1は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;br&gt;*To specify path2, path1 is required.&lt;/div&gt; 
    * @return path1
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path2を指定する場合は、path1は必須です。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*To specify path2, path1 is required.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PATH1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,8 +167,7 @@ public class AdGroupAdServiceExtendedTextAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path1を指定していない場合、path2は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;br&gt;*If path1 is not specified, path2 will be ignored.&lt;/div&gt; 
    * @return path2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path1を指定していない場合、path2は無視されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*If path1 is not specified, path2 will be ignored.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PATH2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -190,7 +181,6 @@ public class AdGroupAdServiceExtendedTextAd {
   public void setPath2(String path2) {
     this.path2 = path2;
   }
-
 
   @Override
   public boolean equals(Object o) {
