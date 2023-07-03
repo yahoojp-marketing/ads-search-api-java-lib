@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAdServiceDescriptionPinnedField;
@@ -32,15 +30,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceDescriptionTextAssetは、レスポンシブ検索広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceDescriptionTextAsset displays the text asset for the description that specify in responsive ads for search.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceDescriptionTextAssetは、レスポンシブ検索広告で指定する説明文のテキストアセットを表します。<br> descriptions[]には、2~4件の指定が可能です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceDescriptionTextAsset displays the text asset for the description that specify in responsive ads for search.<br> 2 to 4 items can be specified for descriptions[].<br> This field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceDescriptionTextAsset.JSON_PROPERTY_TEXT,
   AdGroupAdServiceDescriptionTextAsset.JSON_PROPERTY_PINNED_FIELD,
   AdGroupAdServiceDescriptionTextAsset.JSON_PROPERTY_APPROVAL_STATUS,
   AdGroupAdServiceDescriptionTextAsset.JSON_PROPERTY_DISAPPROVAL_REASON_CODES
 })
-@JsonTypeName("AdGroupAdServiceDescriptionTextAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceDescriptionTextAsset {
   public static final String JSON_PROPERTY_TEXT = "text";
   private String text;
@@ -52,9 +48,9 @@ public class AdGroupAdServiceDescriptionTextAsset {
   private AdGroupAdServiceTextAssetApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
-  public AdGroupAdServiceDescriptionTextAsset() { 
+  public AdGroupAdServiceDescriptionTextAsset() {
   }
 
   public AdGroupAdServiceDescriptionTextAsset text(String text) {
@@ -67,8 +63,7 @@ public class AdGroupAdServiceDescriptionTextAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;テキストです。&lt;br&gt;このフィールドは、ADD時は必須となり、SET時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text of parameter.&lt;br&gt;This field is required in ADD operation, and will be ignored in SET operation.&lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">テキストです。<br>このフィールドは、ADD時は必須となり、SET時は無視されます。</div> <div lang=\"en\">Text of parameter.<br>This field is required in ADD operation, and will be ignored in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class AdGroupAdServiceDescriptionTextAsset {
    * Get pinnedField
    * @return pinnedField
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PINNED_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,8 +115,7 @@ public class AdGroupAdServiceDescriptionTextAsset {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +149,7 @@ public class AdGroupAdServiceDescriptionTextAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認の理由コードです。&lt;br&gt; (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Code of Disapproval reason.&lt;br&gt; (Refer to DictionaryService getDisapprovalReason response for details) &lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認の理由コードです。<br> (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Code of Disapproval reason.<br> (Refer to DictionaryService getDisapprovalReason response for details) <br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,7 +163,6 @@ public class AdGroupAdServiceDescriptionTextAsset {
   public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
-
 
   @Override
   public boolean equals(Object o) {

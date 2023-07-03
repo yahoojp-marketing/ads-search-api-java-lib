@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignServiceTargetImpressionShareLocation;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceTargetImpressionShareSchemeオブジェクトは、インプレッションシェアの目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）&lt;br&gt; ADD時、BiddingStrategyTypeがTARGET_IMPRESSION_SHAREの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceTargetImpressionShareScheme object describes automatic bid setting information of the impression share target value. (Object for anything other than BiddingStrategyService.)&lt;br&gt; If BiddingStrategyType is TARGET_IMPRESSION_SHARE, this field is required in ADD operation, and it is optional when BiddingStrategyType is the others.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceTargetImpressionShareSchemeオブジェクトは、インプレッションシェアの目標値の自動入札設定情報を表します。 （BiddingStrategyService以外用のオブジェクトです。）<br> ADD時、BiddingStrategyTypeがTARGET_IMPRESSION_SHAREの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceTargetImpressionShareScheme object describes automatic bid setting information of the impression share target value. (Object for anything other than BiddingStrategyService.)<br> If BiddingStrategyType is TARGET_IMPRESSION_SHARE, this field is required in ADD operation, and it is optional when BiddingStrategyType is the others.</div> ")
 @JsonPropertyOrder({
   CampaignServiceTargetImpressionShareScheme.JSON_PROPERTY_LOCATION,
   CampaignServiceTargetImpressionShareScheme.JSON_PROPERTY_BID_CEILING,
   CampaignServiceTargetImpressionShareScheme.JSON_PROPERTY_TARGET_IMPRESSION_SHARE
 })
-@JsonTypeName("CampaignServiceTargetImpressionShareScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceTargetImpressionShareScheme {
   public static final String JSON_PROPERTY_LOCATION = "location";
   private CampaignServiceTargetImpressionShareLocation location;
@@ -47,7 +43,7 @@ public class CampaignServiceTargetImpressionShareScheme {
   public static final String JSON_PROPERTY_TARGET_IMPRESSION_SHARE = "targetImpressionShare";
   private Long targetImpressionShare;
 
-  public CampaignServiceTargetImpressionShareScheme() { 
+  public CampaignServiceTargetImpressionShareScheme() {
   }
 
   public CampaignServiceTargetImpressionShareScheme location(CampaignServiceTargetImpressionShareLocation location) {
@@ -60,8 +56,7 @@ public class CampaignServiceTargetImpressionShareScheme {
    * Get location
    * @return location
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOCATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class CampaignServiceTargetImpressionShareScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト設定値は0となります。&lt;br&gt; ※「0」が設定された場合、上限設定はありません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Limit of bid (CPC).&lt;br&gt; This field is optional. The default value will be 0.&lt;br&gt; * No limits if &amp;#34;0&amp;#34; is set.&lt;/div&gt; 
    * @return bidCeiling
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br> このフィールドは省略可能となります。その際、デフォルト設定値は0となります。<br> ※「0」が設定された場合、上限設定はありません。</div> <div lang=\"en\">Limit of bid (CPC).<br> This field is optional. The default value will be 0.<br> * No limits if &#34;0&#34; is set.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_CEILING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class CampaignServiceTargetImpressionShareScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;目標のインプレッションシェアです。&lt;br&gt; ADD時およびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target impression share.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return targetImpressionShare
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">目標のインプレッションシェアです。<br> ADD時およびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Target impression share.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_IMPRESSION_SHARE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class CampaignServiceTargetImpressionShareScheme {
   public void setTargetImpressionShare(Long targetImpressionShare) {
     this.targetImpressionShare = targetImpressionShare;
   }
-
 
   @Override
   public boolean equals(Object o) {

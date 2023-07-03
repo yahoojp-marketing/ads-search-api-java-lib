@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オフラインコンバージョンデータのファイルダウンロード処理を実施します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download file of offline conversion data.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">オフラインコンバージョンデータのファイルダウンロード処理を実施します。</div> <div lang=\"en\">Download file of offline conversion data.</div> ")
 @JsonPropertyOrder({
   OfflineConversionServiceDownloadSelector.JSON_PROPERTY_ACCOUNT_ID,
   OfflineConversionServiceDownloadSelector.JSON_PROPERTY_UPLOAD_ID
 })
-@JsonTypeName("OfflineConversionServiceDownloadSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class OfflineConversionServiceDownloadSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -42,7 +38,7 @@ public class OfflineConversionServiceDownloadSelector {
   public static final String JSON_PROPERTY_UPLOAD_ID = "uploadId";
   private Long uploadId;
 
-  public OfflineConversionServiceDownloadSelector() { 
+  public OfflineConversionServiceDownloadSelector() {
   }
 
   public OfflineConversionServiceDownloadSelector accountId(Long accountId) {
@@ -55,8 +51,7 @@ public class OfflineConversionServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search conditon: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search conditon: Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,8 +77,7 @@ public class OfflineConversionServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アップロードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search conditon: Upload ID.&lt;/div&gt; 
    * @return uploadId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アップロードIDです。</div> <div lang=\"en\">Search conditon: Upload ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -97,7 +91,6 @@ public class OfflineConversionServiceDownloadSelector {
   public void setUploadId(Long uploadId) {
     this.uploadId = uploadId;
   }
-
 
   @Override
   public boolean equals(Object o) {

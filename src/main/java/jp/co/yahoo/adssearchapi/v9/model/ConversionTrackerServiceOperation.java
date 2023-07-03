@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.ConversionTracker;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョン設定および操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceOperation object describes ConversionTracker settings and operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceOperationオブジェクトは、操作の対象となるコンバージョン設定および操作の内容を表します。</div> <div lang=\"en\">ConversionTrackerServiceOperation object describes ConversionTracker settings and operation.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   ConversionTrackerServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("ConversionTrackerServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<ConversionTracker> operand = new ArrayList<>();
+  private List<ConversionTracker> operand;
 
-  public ConversionTrackerServiceOperation() { 
+  public ConversionTrackerServiceOperation() {
   }
 
   public ConversionTrackerServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class ConversionTrackerServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class ConversionTrackerServiceOperation {
   }
 
   public ConversionTrackerServiceOperation addOperandItem(ConversionTracker operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class ConversionTrackerServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class ConversionTrackerServiceOperation {
   public void setOperand(List<ConversionTracker> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

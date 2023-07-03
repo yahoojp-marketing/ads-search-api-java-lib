@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignCriterionServiceUse;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceSelectorオブジェクトは、操作の対象となるキャンペーンのクライテリアを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceSelector object describes campaign criteria for operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceSelectorオブジェクトは、操作の対象となるキャンペーンのクライテリアを表します。</div> <div lang=\"en\">CampaignCriterionServiceSelector object describes campaign criteria for operation.</div> ")
 @JsonPropertyOrder({
   CampaignCriterionServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   CampaignCriterionServiceSelector.JSON_PROPERTY_CAMPAIGN_IDS,
@@ -40,17 +37,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignCriterionServiceSelector.JSON_PROPERTY_START_INDEX,
   CampaignCriterionServiceSelector.JSON_PROPERTY_USE
 })
-@JsonTypeName("CampaignCriterionServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignCriterionServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_CRITERION_IDS = "criterionIds";
-  private List<Long> criterionIds = null;
+  private List<Long> criterionIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -61,7 +57,7 @@ public class CampaignCriterionServiceSelector {
   public static final String JSON_PROPERTY_USE = "use";
   private CampaignCriterionServiceUse use;
 
-  public CampaignCriterionServiceSelector() { 
+  public CampaignCriterionServiceSelector() {
   }
 
   public CampaignCriterionServiceSelector accountId(Long accountId) {
@@ -74,8 +70,7 @@ public class CampaignCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -109,8 +104,7 @@ public class CampaignCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDの配列です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID array.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDの配列です。</div> <div lang=\"en\">Campaign ID array.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +138,7 @@ public class CampaignCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリオンIDの配列です。&lt;br&gt; 指定しない場合は、キャンペーンID以下のすべてのクライテリアが含まれます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Criterion ID array.&lt;br&gt; If no criterionIds, all of criterionIds under the campaign ID are returned.&lt;/div&gt; 
    * @return criterionIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クライテリオンIDの配列です。<br> 指定しない場合は、キャンペーンID以下のすべてのクライテリアが含まれます。</div> <div lang=\"en\">Criterion ID array.<br> If no criterionIds, all of criterionIds under the campaign ID are returned.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -173,8 +166,7 @@ public class CampaignCriterionServiceSelector {
    * maximum: 10000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -201,8 +193,7 @@ public class CampaignCriterionServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -228,8 +219,7 @@ public class CampaignCriterionServiceSelector {
    * Get use
    * @return use
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -243,7 +233,6 @@ public class CampaignCriterionServiceSelector {
   public void setUse(CampaignCriterionServiceUse use) {
     this.use = use;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignServiceEnhancedCpcEnabled;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceCpcBiddingSchemeオブジェクトは、手動入札の設定情報を表します。&lt;br&gt; ADD時、BiddingStrategyTypeがCPCの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceCpcBiddingScheme object displays a setting of Manual Bid.&lt;br&gt; This field is required when BiddingStrategyType is &#39;CPC&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceCpcBiddingSchemeオブジェクトは、手動入札の設定情報を表します。<br> ADD時、BiddingStrategyTypeがCPCの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceCpcBiddingScheme object displays a setting of Manual Bid.<br> This field is required when BiddingStrategyType is 'CPC' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignServiceCpcBiddingScheme.JSON_PROPERTY_ENHANCED_CPC_ENABLED
 })
-@JsonTypeName("CampaignServiceCpcBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceCpcBiddingScheme {
   public static final String JSON_PROPERTY_ENHANCED_CPC_ENABLED = "enhancedCpcEnabled";
   private CampaignServiceEnhancedCpcEnabled enhancedCpcEnabled;
 
-  public CampaignServiceCpcBiddingScheme() { 
+  public CampaignServiceCpcBiddingScheme() {
   }
 
   public CampaignServiceCpcBiddingScheme enhancedCpcEnabled(CampaignServiceEnhancedCpcEnabled enhancedCpcEnabled) {
@@ -52,8 +48,7 @@ public class CampaignServiceCpcBiddingScheme {
    * Get enhancedCpcEnabled
    * @return enhancedCpcEnabled
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ENHANCED_CPC_ENABLED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class CampaignServiceCpcBiddingScheme {
   public void setEnhancedCpcEnabled(CampaignServiceEnhancedCpcEnabled enhancedCpcEnabled) {
     this.enhancedCpcEnabled = enhancedCpcEnabled;
   }
-
 
   @Override
   public boolean equals(Object o) {

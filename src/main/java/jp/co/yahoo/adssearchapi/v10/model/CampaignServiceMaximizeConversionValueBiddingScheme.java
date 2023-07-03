@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignServiceIsRemove;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。&lt;br&gt; ADD時、BiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.&lt;br&gt; This field is required when BiddingStrategyType is &#39;MAXIMIZE_CONVERSION_VALUE&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。<br> ADD時、BiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceMaximizeConversionValueBiddingScheme object displays Auto Bidding setting for Target ROAS.<br> This field is required when BiddingStrategyType is 'MAXIMIZE_CONVERSION_VALUE' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_TARGET_ROAS,
   CampaignServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_ROAS
 })
-@JsonTypeName("CampaignServiceMaximizeConversionValueBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceMaximizeConversionValueBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_ROAS = "targetRoas";
   private Double targetRoas;
@@ -43,7 +39,7 @@ public class CampaignServiceMaximizeConversionValueBiddingScheme {
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_ROAS = "isRemoveTargetRoas";
   private CampaignServiceIsRemove isRemoveTargetRoas;
 
-  public CampaignServiceMaximizeConversionValueBiddingScheme() { 
+  public CampaignServiceMaximizeConversionValueBiddingScheme() {
   }
 
   public CampaignServiceMaximizeConversionValueBiddingScheme targetRoas(Double targetRoas) {
@@ -56,8 +52,7 @@ public class CampaignServiceMaximizeConversionValueBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告費用対効果の目標値です。&lt;br&gt; 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。&lt;br&gt; ※ROAS:Return On Advertising Spend&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target ROAS (Return On Advertising Spend)&lt;br&gt; * Limit range: 0.01 - 1000.00 (1% - 100000%)&lt;/div&gt; 
    * @return targetRoas
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告費用対効果の目標値です。<br> 0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。<br> ※ROAS:Return On Advertising Spend</div> <div lang=\"en\">Target ROAS (Return On Advertising Spend)<br> * Limit range: 0.01 - 1000.00 (1% - 100000%)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class CampaignServiceMaximizeConversionValueBiddingScheme {
    * Get isRemoveTargetRoas
    * @return isRemoveTargetRoas
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_ROAS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class CampaignServiceMaximizeConversionValueBiddingScheme {
   public void setIsRemoveTargetRoas(CampaignServiceIsRemove isRemoveTargetRoas) {
     this.isRemoveTargetRoas = isRemoveTargetRoas;
   }
-
 
   @Override
   public boolean equals(Object o) {

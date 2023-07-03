@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,17 +28,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceCustomKeyは、カスタムキールールの評価式を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceCustomKey is an object that holds evaluation of custom key rules.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceCustomKeyは、カスタムキールールの評価式を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceCustomKey is an object that holds evaluation of custom key rules.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceCustomKey.JSON_PROPERTY_TEXT_KEY
 })
-@JsonTypeName("RetargetingListServiceCustomKey")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceCustomKey {
   public static final String JSON_PROPERTY_TEXT_KEY = "textKey";
-  private List<String> textKey = null;
+  private List<String> textKey;
 
-  public RetargetingListServiceCustomKey() { 
+  public RetargetingListServiceCustomKey() {
   }
 
   public RetargetingListServiceCustomKey textKey(List<String> textKey) {
@@ -61,8 +57,7 @@ public class RetargetingListServiceCustomKey {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;評価項目&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Evaluation items.&lt;/div&gt; 
    * @return textKey
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">評価項目</div> <div lang=\"en\">Evaluation items.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -76,7 +71,6 @@ public class RetargetingListServiceCustomKey {
   public void setTextKey(List<String> textKey) {
     this.textKey = textKey;
   }
-
 
   @Override
   public boolean equals(Object o) {

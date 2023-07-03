@@ -28,7 +28,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adssearchapi.v11.api.AccountSharedServiceApi")
 public class AccountSharedServiceApi {
     private ApiClient apiClient;
@@ -81,27 +81,27 @@ public class AccountSharedServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AccountSharedServiceMutateResponse> accountSharedServiceAddPostWithHttpInfo(AccountSharedServiceOperation accountSharedServiceOperation) throws RestClientException {
-        Object postBody = accountSharedServiceOperation;
+        Object localVarPostBody = accountSharedServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AccountSharedServiceMutateResponse> returnType = new ParameterizedTypeReference<AccountSharedServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AccountSharedService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AccountSharedServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AccountSharedServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AccountSharedService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -134,27 +134,27 @@ public class AccountSharedServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AccountSharedServiceGetResponse> accountSharedServiceGetPostWithHttpInfo(AccountSharedServiceSelector accountSharedServiceSelector) throws RestClientException {
-        Object postBody = accountSharedServiceSelector;
+        Object localVarPostBody = accountSharedServiceSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AccountSharedServiceGetResponse> returnType = new ParameterizedTypeReference<AccountSharedServiceGetResponse>() {};
-        return apiClient.invokeAPI("/AccountSharedService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AccountSharedServiceGetResponse> localReturnType = new ParameterizedTypeReference<AccountSharedServiceGetResponse>() {};
+        return apiClient.invokeAPI("/AccountSharedService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -187,27 +187,27 @@ public class AccountSharedServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AccountSharedServiceMutateResponse> accountSharedServiceRemovePostWithHttpInfo(AccountSharedServiceOperation accountSharedServiceOperation) throws RestClientException {
-        Object postBody = accountSharedServiceOperation;
+        Object localVarPostBody = accountSharedServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AccountSharedServiceMutateResponse> returnType = new ParameterizedTypeReference<AccountSharedServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AccountSharedService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AccountSharedServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AccountSharedServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AccountSharedService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -240,26 +240,26 @@ public class AccountSharedServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AccountSharedServiceMutateResponse> accountSharedServiceSetPostWithHttpInfo(AccountSharedServiceOperation accountSharedServiceOperation) throws RestClientException {
-        Object postBody = accountSharedServiceOperation;
+        Object localVarPostBody = accountSharedServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AccountSharedServiceMutateResponse> returnType = new ParameterizedTypeReference<AccountSharedServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AccountSharedService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AccountSharedServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AccountSharedServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AccountSharedService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

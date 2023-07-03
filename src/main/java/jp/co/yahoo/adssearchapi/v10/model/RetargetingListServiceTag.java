@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceTagは、サイトリターゲティングのタグを保持するオブジェクトです。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceTag is an object that holds tag of Site Retargeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceTagは、サイトリターゲティングのタグを保持するオブジェクトです。</div><div lang=\"en\">RetargetingListServiceTag is an object that holds tag of Site Retargeting.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceTag.JSON_PROPERTY_ADVANCED_SNIPPET
 })
-@JsonTypeName("RetargetingListServiceTag")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceTag {
   public static final String JSON_PROPERTY_ADVANCED_SNIPPET = "advancedSnippet";
   private String advancedSnippet;
 
-  public RetargetingListServiceTag() { 
+  public RetargetingListServiceTag() {
   }
 
   public RetargetingListServiceTag advancedSnippet(String advancedSnippet) {
@@ -51,8 +47,7 @@ public class RetargetingListServiceTag {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   リニューアル版のサイトリターゲティングタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットのタグです。 &lt;br/&gt;   詳細は以下のヘルプを参照してください。&lt;br&gt;   ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan&#x3D;ja&amp;aid&#x3D;7460\&quot;&gt;サイトリターゲティング用タグの取得とサイトへの設置&lt;/a&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   The new format of site retargeting tag avoids the impacts such as changes made to the browser. &lt;br/&gt;   See also the help below.&lt;br&gt;   * &lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan&#x3D;en&amp;aid&#x3D;6133\&quot;&gt;Acquire Site Retargeting Tag and Tagging on Site&lt;/a&gt; &lt;/div&gt; 
    * @return advancedSnippet
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   リニューアル版のサイトリターゲティングタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットのタグです。 <br/>   詳細は以下のヘルプを参照してください。<br>   ・<a href=\"https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan=ja&aid=7460\">サイトリターゲティング用タグの取得とサイトへの設置</a> </div> <div lang=\"en\">   The new format of site retargeting tag avoids the impacts such as changes made to the browser. <br/>   See also the help below.<br>   * <a href=\"https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan=en&aid=6133\">Acquire Site Retargeting Tag and Tagging on Site</a> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ADVANCED_SNIPPET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class RetargetingListServiceTag {
   public void setAdvancedSnippet(String advancedSnippet) {
     this.advancedSnippet = advancedSnippet;
   }
-
 
   @Override
   public boolean equals(Object o) {

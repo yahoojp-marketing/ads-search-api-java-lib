@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.DictionaryServiceAppLinkVendor;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceAppLinkVendorValueオブジェクトは、 操作結果を含むアプリ計測ベンダー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceAppLinkVendorValue object is a container for App measurement vendor information includes operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceAppLinkVendorValueオブジェクトは、 操作結果を含むアプリ計測ベンダー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceAppLinkVendorValue object is a container for App measurement vendor information includes operation results.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceAppLinkVendorValue.JSON_PROPERTY_APP_LINK_VENDOR,
   DictionaryServiceAppLinkVendorValue.JSON_PROPERTY_ERRORS,
   DictionaryServiceAppLinkVendorValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("DictionaryServiceAppLinkVendorValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceAppLinkVendorValue {
   public static final String JSON_PROPERTY_APP_LINK_VENDOR = "appLinkVendor";
   private DictionaryServiceAppLinkVendor appLinkVendor;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public DictionaryServiceAppLinkVendorValue() { 
+  public DictionaryServiceAppLinkVendorValue() {
   }
 
   public DictionaryServiceAppLinkVendorValue appLinkVendor(DictionaryServiceAppLinkVendor appLinkVendor) {
@@ -63,8 +59,7 @@ public class DictionaryServiceAppLinkVendorValue {
    * Get appLinkVendor
    * @return appLinkVendor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_VENDOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class DictionaryServiceAppLinkVendorValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class DictionaryServiceAppLinkVendorValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class DictionaryServiceAppLinkVendorValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

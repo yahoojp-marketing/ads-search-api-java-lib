@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedAssetSetServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetSetServicePageオブジェクトは、ページフィードアセットセットの結果を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSetServicePage contains the result of page feed asset set.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedAssetSetServicePageオブジェクトは、ページフィードアセットセットの結果を格納するコンテナです。</div> <div lang=\"en\">PageFeedAssetSetServicePage contains the result of page feed asset set.</div> ")
 @JsonPropertyOrder({
   PageFeedAssetSetServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   PageFeedAssetSetServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("PageFeedAssetSetServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedAssetSetServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<PageFeedAssetSetServiceValue> values = null;
+  private List<PageFeedAssetSetServiceValue> values;
 
-  public PageFeedAssetSetServicePage() { 
+  public PageFeedAssetSetServicePage() {
   }
 
   public PageFeedAssetSetServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class PageFeedAssetSetServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries in the result that this page is a part of.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of entries in the result that this page is a part of.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class PageFeedAssetSetServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class PageFeedAssetSetServicePage {
   public void setValues(List<PageFeedAssetSetServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

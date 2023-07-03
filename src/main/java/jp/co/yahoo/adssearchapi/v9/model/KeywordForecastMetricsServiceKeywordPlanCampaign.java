@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.KeywordForecastMetricsServiceKeywordPlanAdGroup;
@@ -32,15 +30,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanCampaign オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanCampaign object is a container for the estimate request.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordForecastMetricsServiceKeywordPlanCampaign オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetricsServiceKeywordPlanCampaign object is a container for the estimate request.</div> ")
 @JsonPropertyOrder({
   KeywordForecastMetricsServiceKeywordPlanCampaign.JSON_PROPERTY_KEYWORD_PLAN_NETWORK,
   KeywordForecastMetricsServiceKeywordPlanCampaign.JSON_PROPERTY_CPC,
   KeywordForecastMetricsServiceKeywordPlanCampaign.JSON_PROPERTY_GEO_TARGETS,
   KeywordForecastMetricsServiceKeywordPlanCampaign.JSON_PROPERTY_KEYWORD_PLAN_AD_GROUP
 })
-@JsonTypeName("KeywordForecastMetricsServiceKeywordPlanCampaign")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordForecastMetricsServiceKeywordPlanCampaign {
   public static final String JSON_PROPERTY_KEYWORD_PLAN_NETWORK = "keywordPlanNetwork";
   private KeywordForecastMetricsServiceKeywordPlanNetwork keywordPlanNetwork;
@@ -49,12 +45,12 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign {
   private Long cpc;
 
   public static final String JSON_PROPERTY_GEO_TARGETS = "geoTargets";
-  private List<String> geoTargets = null;
+  private List<String> geoTargets;
 
   public static final String JSON_PROPERTY_KEYWORD_PLAN_AD_GROUP = "keywordPlanAdGroup";
   private KeywordForecastMetricsServiceKeywordPlanAdGroup keywordPlanAdGroup;
 
-  public KeywordForecastMetricsServiceKeywordPlanCampaign() { 
+  public KeywordForecastMetricsServiceKeywordPlanCampaign() {
   }
 
   public KeywordForecastMetricsServiceKeywordPlanCampaign keywordPlanNetwork(KeywordForecastMetricsServiceKeywordPlanNetwork keywordPlanNetwork) {
@@ -67,8 +63,7 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign {
    * Get keywordPlanNetwork
    * @return keywordPlanNetwork
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_PLAN_NETWORK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最大クリック単価です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum CPC.&lt;/div&gt; 
    * @return cpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">最大クリック単価です。</div> <div lang=\"en\">Maximum CPC.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -129,8 +123,7 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域情報です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Area information.&lt;/div&gt; 
    * @return geoTargets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">地域情報です。</div> <div lang=\"en\">Area information.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEO_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +149,7 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign {
    * Get keywordPlanAdGroup
    * @return keywordPlanAdGroup
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_PLAN_AD_GROUP)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -171,7 +163,6 @@ public class KeywordForecastMetricsServiceKeywordPlanCampaign {
   public void setKeywordPlanAdGroup(KeywordForecastMetricsServiceKeywordPlanAdGroup keywordPlanAdGroup) {
     this.keywordPlanAdGroup = keywordPlanAdGroup;
   }
-
 
   @Override
   public boolean equals(Object o) {

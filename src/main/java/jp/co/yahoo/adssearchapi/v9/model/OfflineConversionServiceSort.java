@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.OfflineConversionServiceSortField;
 import jp.co.yahoo.adssearchapi.v9.model.OfflineConversionServiceSortType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,13 +28,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索結果のソート指定です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Specify sorting of search results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">検索結果のソート指定です。</div> <div lang=\"en\">Specify sorting of search results.</div> ")
 @JsonPropertyOrder({
   OfflineConversionServiceSort.JSON_PROPERTY_SORT_TYPE,
   OfflineConversionServiceSort.JSON_PROPERTY_SORT_FIELD
 })
-@JsonTypeName("OfflineConversionServiceSort")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class OfflineConversionServiceSort {
   public static final String JSON_PROPERTY_SORT_TYPE = "sortType";
   private OfflineConversionServiceSortType sortType;
@@ -44,7 +40,7 @@ public class OfflineConversionServiceSort {
   public static final String JSON_PROPERTY_SORT_FIELD = "sortField";
   private OfflineConversionServiceSortField sortField;
 
-  public OfflineConversionServiceSort() { 
+  public OfflineConversionServiceSort() {
   }
 
   public OfflineConversionServiceSort sortType(OfflineConversionServiceSortType sortType) {
@@ -57,8 +53,7 @@ public class OfflineConversionServiceSort {
    * Get sortType
    * @return sortType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SORT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class OfflineConversionServiceSort {
    * Get sortField
    * @return sortField
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SORT_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,7 +93,6 @@ public class OfflineConversionServiceSort {
   public void setSortField(OfflineConversionServiceSortField sortField) {
     this.sortField = sortField;
   }
-
 
   @Override
   public boolean equals(Object o) {

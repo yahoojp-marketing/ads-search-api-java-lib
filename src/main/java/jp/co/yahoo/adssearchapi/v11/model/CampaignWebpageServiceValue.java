@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignWebpage;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceValueオブジェクトは、操作結果を含むPageFeedAssetの除外設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceValue object describes excluded settings including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceValueオブジェクトは、操作結果を含むPageFeedAssetの除外設定を表します。</div> <div lang=\"en\">CampaignWebpageServiceValue object describes excluded settings including operation result.</div> ")
 @JsonPropertyOrder({
   CampaignWebpageServiceValue.JSON_PROPERTY_CAMPAIGN_WEBPAGE,
   CampaignWebpageServiceValue.JSON_PROPERTY_ERRORS,
   CampaignWebpageServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("CampaignWebpageServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignWebpageServiceValue {
   public static final String JSON_PROPERTY_CAMPAIGN_WEBPAGE = "campaignWebpage";
   private CampaignWebpage campaignWebpage;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public CampaignWebpageServiceValue() { 
+  public CampaignWebpageServiceValue() {
   }
 
   public CampaignWebpageServiceValue campaignWebpage(CampaignWebpage campaignWebpage) {
@@ -63,8 +59,7 @@ public class CampaignWebpageServiceValue {
    * Get campaignWebpage
    * @return campaignWebpage
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_WEBPAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class CampaignWebpageServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class CampaignWebpageServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Operation result&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果</div> <div lang=\"en\">Operation result</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class CampaignWebpageServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAdServiceAdType;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAdServiceAppAd;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAdServiceCustomParameters;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAd object describes ad information.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceAdオブジェクトは、広告に関する情報を表します。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceAd object describes ad information.<br> This field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceAd.JSON_PROPERTY_AD_TYPE,
   AdGroupAdServiceAd.JSON_PROPERTY_SMARTPHONE_FINAL_URL,
@@ -54,8 +51,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceAd.JSON_PROPERTY_TRACKING_URL,
   AdGroupAdServiceAd.JSON_PROPERTY_URL
 })
-@JsonTypeName("AdGroupAdServiceAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceAd {
   public static final String JSON_PROPERTY_AD_TYPE = "adType";
   private AdGroupAdServiceAdType adType;
@@ -102,7 +98,7 @@ public class AdGroupAdServiceAd {
   public static final String JSON_PROPERTY_URL = "url";
   private String url;
 
-  public AdGroupAdServiceAd() { 
+  public AdGroupAdServiceAd() {
   }
 
   public AdGroupAdServiceAd adType(AdGroupAdServiceAdType adType) {
@@ -115,8 +111,7 @@ public class AdGroupAdServiceAd {
    * Get adType
    * @return adType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -142,8 +137,7 @@ public class AdGroupAdServiceAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URL（スマートフォン）です。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL (Smartphone).&lt;br&gt; This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
    * @return smartphoneFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URL（スマートフォン）です。<br> ADD時、このフィールドは省略可能となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">Landing Page URL (Smartphone).<br> This field is optional in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,8 +163,7 @@ public class AdGroupAdServiceAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing Page URL.&lt;br&gt; This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.&lt;/div&gt; 
    * @return finalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_ADの場合は無視されます。</div> <div lang=\"en\">Landing Page URL.<br> This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD, this field will be ignored.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -196,8 +189,7 @@ public class AdGroupAdServiceAd {
    * Get appAd
    * @return appAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,8 +215,7 @@ public class AdGroupAdServiceAd {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -250,8 +241,7 @@ public class AdGroupAdServiceAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文です。&lt;br&gt; ADD時、このフィールドは必須となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は無視されます。&lt;br&gt;自動挿入をサポートしていません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of ad.&lt;br&gt; This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.&lt;br&gt;Does not support Data Auto Insertion.&lt;/div&gt; 
    * @return description1
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文です。<br> ADD時、このフィールドは必須となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は無視されます。<br>自動挿入をサポートしていません。</div> <div lang=\"en\">Description of ad.<br> This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.<br>Does not support Data Auto Insertion.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -277,8 +267,7 @@ public class AdGroupAdServiceAd {
    * Get devicePreference
    * @return devicePreference
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_PREFERENCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -304,8 +293,7 @@ public class AdGroupAdServiceAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;表示URLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Display URL.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return displayUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">表示URLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Display URL.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -331,8 +319,7 @@ public class AdGroupAdServiceAd {
    * Get extendedTextAd
    * @return extendedTextAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXTENDED_TEXT_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -358,8 +345,7 @@ public class AdGroupAdServiceAd {
    * Get responsiveSearchAd
    * @return responsiveSearchAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RESPONSIVE_SEARCH_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -385,8 +371,7 @@ public class AdGroupAdServiceAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;タイトル文です。&lt;br&gt; ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_AD、またはRESPONSIVE_SEARCH_ADの場合は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Title of ad.&lt;br&gt; This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD or RESPONSIVE_SEARCH_AD, this field will be ignored.&lt;/div&gt; 
    * @return headline1
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">タイトル文です。<br> ADD時、このフィールドは必須となります。※adTypeがDYNAMIC_SEARCH_LINKED_AD、またはRESPONSIVE_SEARCH_ADの場合は無視されます。</div> <div lang=\"en\">Title of ad.<br> This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD or RESPONSIVE_SEARCH_AD, this field will be ignored.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEADLINE1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -412,8 +397,7 @@ public class AdGroupAdServiceAd {
    * Get textAd2
    * @return textAd2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT_AD2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -439,8 +423,7 @@ public class AdGroupAdServiceAd {
    * Get dynamicSearchLinkedAd
    * @return dynamicSearchLinkedAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DYNAMIC_SEARCH_LINKED_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -466,8 +449,7 @@ public class AdGroupAdServiceAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -493,8 +475,7 @@ public class AdGroupAdServiceAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行前のリンク先URLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Destination URL before upgrading. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return url
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">移行前のリンク先URLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Destination URL before upgrading. <br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -508,7 +489,6 @@ public class AdGroupAdServiceAd {
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(Object o) {

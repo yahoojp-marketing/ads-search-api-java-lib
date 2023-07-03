@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalRuleOperandは、組合せ対象のターゲットリストを保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalRuleOperand is an object that holds target list of combination.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceLogicalRuleOperandは、組合せ対象のターゲットリストを保持するオブジェクトです。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">RetargetingListServiceLogicalRuleOperand is an object that holds target list of combination.<br> This field is required in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceLogicalRuleOperand.JSON_PROPERTY_TARGET_LIST_ID
 })
-@JsonTypeName("RetargetingListServiceLogicalRuleOperand")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceLogicalRuleOperand {
   public static final String JSON_PROPERTY_TARGET_LIST_ID = "targetListId";
   private Long targetListId;
 
-  public RetargetingListServiceLogicalRuleOperand() { 
+  public RetargetingListServiceLogicalRuleOperand() {
   }
 
   public RetargetingListServiceLogicalRuleOperand targetListId(Long targetListId) {
@@ -51,8 +47,7 @@ public class RetargetingListServiceLogicalRuleOperand {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストIDです。&lt;br&gt;組合せのターゲットリストは設定できません。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target list ID.&lt;br&gt;Cannot set the combination target list.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return targetListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストIDです。<br>組合せのターゲットリストは設定できません。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">Target list ID.<br>Cannot set the combination target list.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class RetargetingListServiceLogicalRuleOperand {
   public void setTargetListId(Long targetListId) {
     this.targetListId = targetListId;
   }
-
 
   @Override
   public boolean equals(Object o) {

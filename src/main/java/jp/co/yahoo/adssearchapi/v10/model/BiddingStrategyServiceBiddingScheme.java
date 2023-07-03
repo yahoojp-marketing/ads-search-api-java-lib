@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.BiddingStrategyServiceMaximizeClicksBiddingScheme;
 import jp.co.yahoo.adssearchapi.v10.model.BiddingStrategyServiceTargetCpaBiddingScheme;
 import jp.co.yahoo.adssearchapi.v10.model.BiddingStrategyServiceTargetImpressionShareScheme;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。（BiddingStrategyService用のオブジェクトです。）&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceBiddingScheme object displays the details of Auto Bidding setting. (This is for BiddingStrategyService)&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BiddingStrategyServiceBiddingSchemeオブジェクトは、自動入札設定の詳細情報を表します。（BiddingStrategyService用のオブジェクトです。）<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">BiddingStrategyServiceBiddingScheme object displays the details of Auto Bidding setting. (This is for BiddingStrategyService)<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
 @JsonPropertyOrder({
   BiddingStrategyServiceBiddingScheme.JSON_PROPERTY_TARGET_CPA_BIDDING_SCHEME,
   BiddingStrategyServiceBiddingScheme.JSON_PROPERTY_TARGET_ROAS_BIDDING_SCHEME,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BiddingStrategyServiceBiddingScheme.JSON_PROPERTY_TARGET_IMPRESSION_SHARE_SCHEME,
   BiddingStrategyServiceBiddingScheme.JSON_PROPERTY_TYPE
 })
-@JsonTypeName("BiddingStrategyServiceBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BiddingStrategyServiceBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA_BIDDING_SCHEME = "targetCpaBiddingScheme";
   private BiddingStrategyServiceTargetCpaBiddingScheme targetCpaBiddingScheme;
@@ -59,7 +55,7 @@ public class BiddingStrategyServiceBiddingScheme {
   public static final String JSON_PROPERTY_TYPE = "type";
   private BiddingStrategyServiceType type;
 
-  public BiddingStrategyServiceBiddingScheme() { 
+  public BiddingStrategyServiceBiddingScheme() {
   }
 
   public BiddingStrategyServiceBiddingScheme targetCpaBiddingScheme(BiddingStrategyServiceTargetCpaBiddingScheme targetCpaBiddingScheme) {
@@ -72,8 +68,7 @@ public class BiddingStrategyServiceBiddingScheme {
    * Get targetCpaBiddingScheme
    * @return targetCpaBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_CPA_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,8 +94,7 @@ public class BiddingStrategyServiceBiddingScheme {
    * Get targetRoasBiddingScheme
    * @return targetRoasBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ROAS_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class BiddingStrategyServiceBiddingScheme {
    * Get maximizeClicksBiddingScheme
    * @return maximizeClicksBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_CLICKS_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +146,7 @@ public class BiddingStrategyServiceBiddingScheme {
    * Get targetImpressionShareScheme
    * @return targetImpressionShareScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_IMPRESSION_SHARE_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,8 +172,7 @@ public class BiddingStrategyServiceBiddingScheme {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,7 +186,6 @@ public class BiddingStrategyServiceBiddingScheme {
   public void setType(BiddingStrategyServiceType type) {
     this.type = type;
   }
-
 
   @Override
   public boolean equals(Object o) {

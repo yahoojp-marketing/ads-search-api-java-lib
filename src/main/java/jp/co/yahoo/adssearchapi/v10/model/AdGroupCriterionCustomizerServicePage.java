@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupCriterionCustomizerServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionCustomizerServicePageオブジェクトは、キーワードとカスタマイザー属性間の設定情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionCustomizerServicePage object contains the configuration information between the keyword and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionCustomizerServicePageオブジェクトは、キーワードとカスタマイザー属性間の設定情報を格納します。</div> <div lang=\"en\">AdGroupCriterionCustomizerServicePage object contains the configuration information between the keyword and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionCustomizerServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   AdGroupCriterionCustomizerServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupCriterionCustomizerServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionCustomizerServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupCriterionCustomizerServiceValue> values = null;
+  private List<AdGroupCriterionCustomizerServiceValue> values;
 
-  public AdGroupCriterionCustomizerServicePage() { 
+  public AdGroupCriterionCustomizerServicePage() {
   }
 
   public AdGroupCriterionCustomizerServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class AdGroupCriterionCustomizerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries in the result.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of entries in the result.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class AdGroupCriterionCustomizerServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class AdGroupCriterionCustomizerServicePage {
   public void setValues(List<AdGroupCriterionCustomizerServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

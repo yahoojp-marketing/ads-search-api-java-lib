@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.RetargetingListServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceReturnValueは、ターゲットリストの実行結果（全Entityのリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceReturnValue is an object that holds results (list of all entity).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceReturnValueは、ターゲットリストの実行結果（全Entityのリスト）を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceReturnValue is an object that holds results (list of all entity).</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("RetargetingListServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<RetargetingListServiceValue> values = null;
+  private List<RetargetingListServiceValue> values;
 
-  public RetargetingListServiceReturnValue() { 
+  public RetargetingListServiceReturnValue() {
   }
 
   public RetargetingListServiceReturnValue values(List<RetargetingListServiceValue> values) {
@@ -62,8 +58,7 @@ public class RetargetingListServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RetargetingListServiceReturnValue {
   public void setValues(List<RetargetingListServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

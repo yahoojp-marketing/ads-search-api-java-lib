@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountSharedオブジェクトは、アカウント内で共有できる対象外キーワードリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountShared object describes negative keyword list which can be shared within the account.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountSharedオブジェクトは、アカウント内で共有できる対象外キーワードリストの情報を表します。</div> <div lang=\"en\">AccountShared object describes negative keyword list which can be shared within the account.</div> ")
 @JsonPropertyOrder({
   AccountShared.JSON_PROPERTY_ACCOUNT_ID,
   AccountShared.JSON_PROPERTY_MEMBER_COUNT,
@@ -36,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountShared.JSON_PROPERTY_REFERENCE_COUNT,
   AccountShared.JSON_PROPERTY_SHARED_LIST_ID
 })
-@JsonTypeName("AccountShared")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountShared {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -54,7 +50,7 @@ public class AccountShared {
   public static final String JSON_PROPERTY_SHARED_LIST_ID = "sharedListId";
   private Long sharedListId;
 
-  public AccountShared() { 
+  public AccountShared() {
   }
 
   public AccountShared accountId(Long accountId) {
@@ -67,8 +63,7 @@ public class AccountShared {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class AccountShared {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリストに含まれるアイテム（検索対象外キーワード）数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of items on Negative keyword list (keyword excluded on search).&lt;/div&gt; 
    * @return memberCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリストに含まれるアイテム（検索対象外キーワード）数です。</div> <div lang=\"en\">Number of items on Negative keyword list (keyword excluded on search).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEMBER_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,8 +115,7 @@ public class AccountShared {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリスト名です。&lt;br&gt;ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Negative keyword list name.&lt;br&gt;This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリスト名です。<br>ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Negative keyword list name.<br>This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,8 +141,7 @@ public class AccountShared {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリストを使用している キャンペーン数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of campaigns which use negative keyword list.&lt;/div&gt; 
    * @return referenceCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリストを使用している キャンペーン数です。</div> <div lang=\"en\">Number of campaigns which use negative keyword list.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REFERENCE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,8 +167,7 @@ public class AccountShared {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリストIDです。&lt;br&gt;SETおよびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Negative keyword list ID.&lt;br&gt;This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return sharedListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">対象外キーワードリストIDです。<br>SETおよびREMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">Negative keyword list ID.<br>This field is required in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARED_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -190,7 +181,6 @@ public class AccountShared {
   public void setSharedListId(Long sharedListId) {
     this.sharedListId = sharedListId;
   }
-
 
   @Override
   public boolean equals(Object o) {

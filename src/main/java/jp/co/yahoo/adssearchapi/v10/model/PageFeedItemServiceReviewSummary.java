@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceReviewSummaryオブジェクトは、ページフィードアイテムの審査成績、状況サマリーを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceReviewSummary object retains the examination results of the page feed item, the situation summary acquisition result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceReviewSummaryオブジェクトは、ページフィードアイテムの審査成績、状況サマリーを格納します。</div> <div lang=\"en\">PageFeedItemServiceReviewSummary object retains the examination results of the page feed item, the situation summary acquisition result.</div> ")
 @JsonPropertyOrder({
   PageFeedItemServiceReviewSummary.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedItemServiceReviewSummary.JSON_PROPERTY_APPROVED_COUNT,
@@ -39,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedItemServiceReviewSummary.JSON_PROPERTY_PRE_DISAPPROVED_COUNT,
   PageFeedItemServiceReviewSummary.JSON_PROPERTY_REVIEW_COUNT
 })
-@JsonTypeName("PageFeedItemServiceReviewSummary")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedItemServiceReviewSummary {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -66,7 +62,7 @@ public class PageFeedItemServiceReviewSummary {
   public static final String JSON_PROPERTY_REVIEW_COUNT = "reviewCount";
   private Long reviewCount;
 
-  public PageFeedItemServiceReviewSummary() { 
+  public PageFeedItemServiceReviewSummary() {
   }
 
   public PageFeedItemServiceReviewSummary accountId(Long accountId) {
@@ -79,8 +75,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,8 +101,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;承認済みの件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of approved&lt;/div&gt; 
    * @return approvedCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">承認済みの件数</div> <div lang=\"en\">Count of approved</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVED_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;編集内容審査中の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of approved with review&lt;/div&gt; 
    * @return approvedWithReviewCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">編集内容審査中の件数</div> <div lang=\"en\">Count of approved with review</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVED_WITH_REVIEW_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,8 +153,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードフォルダ内にあるページフィードアイテムの総件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total count of page feed item in feed folder&lt;/div&gt; 
    * @return entityCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードフォルダ内にあるページフィードアイテムの総件数</div> <div lang=\"en\">Total count of page feed item in feed folder</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ENTITY_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,8 +179,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">Feed ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -214,8 +205,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信停止の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of distribution cancelled&lt;/div&gt; 
    * @return postDisapprovedCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信停止の件数</div> <div lang=\"en\">Count of distribution cancelled</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_POST_DISAPPROVED_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,8 +231,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載不可の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of disapproved&lt;/div&gt; 
    * @return preDisapprovedCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">掲載不可の件数</div> <div lang=\"en\">Count of disapproved</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PRE_DISAPPROVED_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -268,8 +257,7 @@ public class PageFeedItemServiceReviewSummary {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of review&lt;/div&gt; 
    * @return reviewCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の件数</div> <div lang=\"en\">Count of review</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -283,7 +271,6 @@ public class PageFeedItemServiceReviewSummary {
   public void setReviewCount(Long reviewCount) {
     this.reviewCount = reviewCount;
   }
-
 
   @Override
   public boolean equals(Object o) {

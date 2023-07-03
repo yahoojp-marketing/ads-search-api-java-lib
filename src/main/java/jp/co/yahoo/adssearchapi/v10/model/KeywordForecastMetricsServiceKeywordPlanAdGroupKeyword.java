@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.KeywordForecastMetricsServiceMatchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword オブジェクトは、見積もりリクエストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword object contains the estimate request.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword オブジェクトは、見積もりリクエストを格納します。</div> <div lang=\"en\">KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword object contains the estimate request.</div> ")
 @JsonPropertyOrder({
   KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword.JSON_PROPERTY_TEXT,
   KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword.JSON_PROPERTY_MATCH_TYPE,
   KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword.JSON_PROPERTY_CPC,
   KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword.JSON_PROPERTY_IS_NEGATIVE
 })
-@JsonTypeName("KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword {
   public static final String JSON_PROPERTY_TEXT = "text";
   private String text;
@@ -51,7 +47,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword {
   public static final String JSON_PROPERTY_IS_NEGATIVE = "isNegative";
   private Boolean isNegative;
 
-  public KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword() { 
+  public KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword() {
   }
 
   public KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword text(String text) {
@@ -64,8 +60,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Keyword&lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">キーワードです。</div> <div lang=\"en\">Keyword</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -91,8 +86,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword {
    * Get matchType
    * @return matchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -118,8 +112,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最大クリック単価です。&lt;br&gt; isNegativeがTRUEのときにcpcを指定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum CPC.&lt;br&gt; When isNegative is TRUE, CPC cannot be specified.&lt;/div&gt; 
    * @return cpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最大クリック単価です。<br> isNegativeがTRUEのときにcpcを指定することはできません。</div> <div lang=\"en\">Maximum CPC.<br> When isNegative is TRUE, CPC cannot be specified.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;除外キーワードです。&lt;br&gt; デフォルト値はfalseです。&lt;br&gt; 除外キーワードのみでのリクエストはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Refine keyword.&lt;br&gt; The default value will be FALSE.&lt;br&gt; Cannot request with only refine keyword.&lt;/div&gt; 
    * @return isNegative
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">除外キーワードです。<br> デフォルト値はfalseです。<br> 除外キーワードのみでのリクエストはできません。</div> <div lang=\"en\">Refine keyword.<br> The default value will be FALSE.<br> Cannot request with only refine keyword.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_NEGATIVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class KeywordForecastMetricsServiceKeywordPlanAdGroupKeyword {
   public void setIsNegative(Boolean isNegative) {
     this.isNegative = isNegative;
   }
-
 
   @Override
   public boolean equals(Object o) {

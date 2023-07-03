@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.OfflineConversionServiceProcessStatus;
 import jp.co.yahoo.adssearchapi.v9.model.OfflineConversionServiceUploadSourceType;
 import jp.co.yahoo.adssearchapi.v9.model.OfflineConversionServiceUploadType;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オフラインコンバージョンデータをアップロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This object contains contents of offline conversion information for upload.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">オフラインコンバージョンデータをアップロードする処理内容を格納します。</div> <div lang=\"en\">This object contains contents of offline conversion information for upload.</div> ")
 @JsonPropertyOrder({
   OfflineConversionFile.JSON_PROPERTY_ACCOUNT_ID,
   OfflineConversionFile.JSON_PROPERTY_UPLOAD_ID,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   OfflineConversionFile.JSON_PROPERTY_UPLOAD_SOURCE_TYPE,
   OfflineConversionFile.JSON_PROPERTY_PROCESS_STATUS
 })
-@JsonTypeName("OfflineConversionFile")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class OfflineConversionFile {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -65,7 +61,7 @@ public class OfflineConversionFile {
   public static final String JSON_PROPERTY_PROCESS_STATUS = "processStatus";
   private OfflineConversionServiceProcessStatus processStatus;
 
-  public OfflineConversionFile() { 
+  public OfflineConversionFile() {
   }
 
   public OfflineConversionFile accountId(Long accountId) {
@@ -78,8 +74,7 @@ public class OfflineConversionFile {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -105,8 +100,7 @@ public class OfflineConversionFile {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload ID.&lt;/div&gt; 
    * @return uploadId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロードIDです。</div> <div lang=\"en\">Upload ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,8 +126,7 @@ public class OfflineConversionFile {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードファイル名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload file name.&lt;/div&gt; 
    * @return uploadFileName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロードファイル名です。</div> <div lang=\"en\">Upload file name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_FILE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,8 +152,7 @@ public class OfflineConversionFile {
    * Get uploadType
    * @return uploadType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -186,8 +178,7 @@ public class OfflineConversionFile {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロード日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload date and time.&lt;/div&gt; 
    * @return uploadedDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロード日時です。</div> <div lang=\"en\">Upload date and time.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOADED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -213,8 +204,7 @@ public class OfflineConversionFile {
    * Get uploadSourceType
    * @return uploadSourceType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_SOURCE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -240,8 +230,7 @@ public class OfflineConversionFile {
    * Get processStatus
    * @return processStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PROCESS_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -255,7 +244,6 @@ public class OfflineConversionFile {
   public void setProcessStatus(OfflineConversionServiceProcessStatus processStatus) {
     this.processStatus = processStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

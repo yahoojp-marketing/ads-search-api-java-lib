@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceSetTrademarkStatusオブジェクトは、フィードアイテムの情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceSetTrademarkStatus object holds feed item information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedItemServiceSetTrademarkStatusオブジェクトは、フィードアイテムの情報を格納します。</div> <div lang=\"en\">FeedItemServiceSetTrademarkStatus object holds feed item information.</div> ")
 @JsonPropertyOrder({
   FeedItemServiceSetTrademarkStatus.JSON_PROPERTY_FEED_ITEM_ID
 })
-@JsonTypeName("FeedItemServiceSetTrademarkStatus")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedItemServiceSetTrademarkStatus {
   public static final String JSON_PROPERTY_FEED_ITEM_ID = "feedItemId";
   private Long feedItemId;
 
-  public FeedItemServiceSetTrademarkStatus() { 
+  public FeedItemServiceSetTrademarkStatus() {
   }
 
   public FeedItemServiceSetTrademarkStatus feedItemId(Long feedItemId) {
@@ -51,8 +47,7 @@ public class FeedItemServiceSetTrademarkStatus {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードアイテムIDです。&lt;br&gt; このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItem ID.&lt;br&gt;This field is required.&lt;/div&gt; 
    * @return feedItemId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードアイテムIDです。<br> このフィールドは必須となります。</div> <div lang=\"en\">FeedItem ID.<br>This field is required.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ITEM_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class FeedItemServiceSetTrademarkStatus {
   public void setFeedItemId(Long feedItemId) {
     this.feedItemId = feedItemId;
   }
-
 
   @Override
   public boolean equals(Object o) {

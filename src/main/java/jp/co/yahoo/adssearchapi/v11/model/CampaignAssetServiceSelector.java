@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignAssetServiceType;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignAssetServiceSelectorオブジェクトは、アセット情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignAssetServiceSelector describes the Asset information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignAssetServiceSelectorオブジェクトは、アセット情報を指定します。</div> <div lang=\"en\">CampaignAssetServiceSelector describes the Asset information.</div> ")
 @JsonPropertyOrder({
   CampaignAssetServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   CampaignAssetServiceSelector.JSON_PROPERTY_CAMPAIGN_IDS,
@@ -42,23 +39,22 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignAssetServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   CampaignAssetServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("CampaignAssetServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignAssetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_ASSET_IDS = "assetIds";
-  private List<Long> assetIds = null;
+  private List<Long> assetIds;
 
   public static final String JSON_PROPERTY_TYPES = "types";
-  private List<CampaignAssetServiceType> types = null;
+  private List<CampaignAssetServiceType> types;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
-  private List<CampaignAssetServiceUserStatus> userStatuses = null;
+  private List<CampaignAssetServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -66,7 +62,7 @@ public class CampaignAssetServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public CampaignAssetServiceSelector() { 
+  public CampaignAssetServiceSelector() {
   }
 
   public CampaignAssetServiceSelector accountId(Long accountId) {
@@ -79,8 +75,7 @@ public class CampaignAssetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -114,8 +109,7 @@ public class CampaignAssetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,8 +143,7 @@ public class CampaignAssetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセット情報のIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset information ID.&lt;/div&gt; 
    * @return assetIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アセット情報のIDです。</div> <div lang=\"en\">Asset information ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASSET_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,8 +177,7 @@ public class CampaignAssetServiceSelector {
    * Get types
    * @return types
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -219,8 +211,7 @@ public class CampaignAssetServiceSelector {
    * Get userStatuses
    * @return userStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,8 +239,7 @@ public class CampaignAssetServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +266,7 @@ public class CampaignAssetServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,7 +280,6 @@ public class CampaignAssetServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

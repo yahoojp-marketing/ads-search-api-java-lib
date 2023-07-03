@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAssetServiceType;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAssetServiceSelectorオブジェクトは、アセット情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAssetServiceSelector describes the Asset information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAssetServiceSelectorオブジェクトは、アセット情報を指定します。</div> <div lang=\"en\">AdGroupAssetServiceSelector describes the Asset information.</div> ")
 @JsonPropertyOrder({
   AdGroupAssetServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupAssetServiceSelector.JSON_PROPERTY_AD_GROUP_IDS,
@@ -43,26 +40,25 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAssetServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AdGroupAssetServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AdGroupAssetServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAssetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
-  private List<Long> adGroupIds = null;
+  private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_ASSET_IDS = "assetIds";
-  private List<Long> assetIds = null;
+  private List<Long> assetIds;
 
   public static final String JSON_PROPERTY_TYPES = "types";
-  private List<AdGroupAssetServiceType> types = null;
+  private List<AdGroupAssetServiceType> types;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
-  private List<AdGroupAssetServiceUserStatus> userStatuses = null;
+  private List<AdGroupAssetServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -70,7 +66,7 @@ public class AdGroupAssetServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AdGroupAssetServiceSelector() { 
+  public AdGroupAssetServiceSelector() {
   }
 
   public AdGroupAssetServiceSelector accountId(Long accountId) {
@@ -83,8 +79,7 @@ public class AdGroupAssetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -118,8 +113,7 @@ public class AdGroupAssetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID.&lt;/div&gt; 
    * @return adGroupIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。</div> <div lang=\"en\">Ad group ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +147,7 @@ public class AdGroupAssetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -188,8 +181,7 @@ public class AdGroupAssetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセット情報のIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset information ID.&lt;/div&gt; 
    * @return assetIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アセット情報のIDです。</div> <div lang=\"en\">Asset information ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASSET_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,8 +215,7 @@ public class AdGroupAssetServiceSelector {
    * Get types
    * @return types
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -258,8 +249,7 @@ public class AdGroupAssetServiceSelector {
    * Get userStatuses
    * @return userStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -287,8 +277,7 @@ public class AdGroupAssetServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -315,8 +304,7 @@ public class AdGroupAssetServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,7 +318,6 @@ public class AdGroupAssetServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

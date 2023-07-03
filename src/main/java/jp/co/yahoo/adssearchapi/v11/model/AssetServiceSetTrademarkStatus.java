@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceSetTrademarkStatusオブジェクトは、アセットの情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceSetTrademarkStatus object holds asset information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceSetTrademarkStatusオブジェクトは、アセットの情報を格納します。</div> <div lang=\"en\">AssetServiceSetTrademarkStatus object holds asset information.</div> ")
 @JsonPropertyOrder({
   AssetServiceSetTrademarkStatus.JSON_PROPERTY_ASSET_ID
 })
-@JsonTypeName("AssetServiceSetTrademarkStatus")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceSetTrademarkStatus {
   public static final String JSON_PROPERTY_ASSET_ID = "assetId";
   private Long assetId;
 
-  public AssetServiceSetTrademarkStatus() { 
+  public AssetServiceSetTrademarkStatus() {
   }
 
   public AssetServiceSetTrademarkStatus assetId(Long assetId) {
@@ -51,8 +47,7 @@ public class AssetServiceSetTrademarkStatus {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセットIDです。&lt;br&gt; このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset ID.&lt;br&gt;This field is required.&lt;/div&gt; 
    * @return assetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アセットIDです。<br> このフィールドは必須となります。</div> <div lang=\"en\">Asset ID.<br>This field is required.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASSET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class AssetServiceSetTrademarkStatus {
   public void setAssetId(Long assetId) {
     this.assetId = assetId;
   }
-
 
   @Override
   public boolean equals(Object o) {

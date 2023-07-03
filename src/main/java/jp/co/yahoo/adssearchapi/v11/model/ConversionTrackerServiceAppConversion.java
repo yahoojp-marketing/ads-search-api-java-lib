@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.ConversionTrackerServiceAppConversionType;
 import jp.co.yahoo.adssearchapi.v11.model.ConversionTrackerServiceAppPlatform;
 import jp.co.yahoo.adssearchapi.v11.model.ConversionTrackerServiceAppPostbackUrl;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※ADD時、conversionTrackerTypeがAPP_CONVERSIONの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by  tag.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If the conversionTrackerType is APP_CONVERSION, this field will be required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppConversionオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※ADD時、conversionTrackerTypeがAPP_CONVERSIONの場合は必須です。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by  tag.<br> This field is optional in ADD and SET operation.<br> *If the conversionTrackerType is APP_CONVERSION, this field will be required in ADD operation.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceAppConversion.JSON_PROPERTY_APP_CONVERSION_TYPE,
   ConversionTrackerServiceAppConversion.JSON_PROPERTY_APP_ID,
@@ -40,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceAppConversion.JSON_PROPERTY_SNIPPET_ID,
   ConversionTrackerServiceAppConversion.JSON_PROPERTY_SNIPPET_LABEL
 })
-@JsonTypeName("ConversionTrackerServiceAppConversion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceAppConversion {
   public static final String JSON_PROPERTY_APP_CONVERSION_TYPE = "appConversionType";
   private ConversionTrackerServiceAppConversionType appConversionType;
@@ -61,7 +57,7 @@ public class ConversionTrackerServiceAppConversion {
   public static final String JSON_PROPERTY_SNIPPET_LABEL = "snippetLabel";
   private String snippetLabel;
 
-  public ConversionTrackerServiceAppConversion() { 
+  public ConversionTrackerServiceAppConversion() {
   }
 
   public ConversionTrackerServiceAppConversion appConversionType(ConversionTrackerServiceAppConversionType appConversionType) {
@@ -74,8 +70,7 @@ public class ConversionTrackerServiceAppConversion {
    * Get appConversionType
    * @return appConversionType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_CONVERSION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -101,8 +96,7 @@ public class ConversionTrackerServiceAppConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SET時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application ID.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET operation.&lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。<br> このフィールドは、ADD時に省略可能となり、SET時は無視されます。</div> <div lang=\"en\">Application ID.<br> This field is optional in ADD operation, and will be ignored in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,8 +122,7 @@ public class ConversionTrackerServiceAppConversion {
    * Get appPlatform
    * @return appPlatform
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -155,8 +148,7 @@ public class ConversionTrackerServiceAppConversion {
    * Get appPostbackUrl
    * @return appPostbackUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_POSTBACK_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,8 +174,7 @@ public class ConversionTrackerServiceAppConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Converison ID&lt;/div&gt; 
    * @return snippetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンIDです。</div> <div lang=\"en\">Converison ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SNIPPET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -209,8 +200,7 @@ public class ConversionTrackerServiceAppConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョントラッカーラベルです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Converison tracker label&lt;/div&gt; 
    * @return snippetLabel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョントラッカーラベルです。</div> <div lang=\"en\">Converison tracker label</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SNIPPET_LABEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -224,7 +214,6 @@ public class ConversionTrackerServiceAppConversion {
   public void setSnippetLabel(String snippetLabel) {
     this.snippetLabel = snippetLabel;
   }
-
 
   @Override
   public boolean equals(Object o) {

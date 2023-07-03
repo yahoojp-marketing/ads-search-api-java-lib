@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.FeedItemServiceCriterionTypeFeedItem;
 import jp.co.yahoo.adssearchapi.v11.model.FeedItemServiceGeoRestriction;
 import jp.co.yahoo.adssearchapi.v11.model.FeedItemServiceIsRemove;
@@ -31,15 +29,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceLocationオブジェクトは、地域設定情報を格納します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※アドカスタマイザーの場合は、ADD時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceLocation object contains the information of Geographic FeedItemServiceLocation.&lt;br&gt; Although this field will be returned in the  response, it will be ignored on input.&lt;br&gt; *For AD_CUSTOMIZER, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedItemServiceLocationオブジェクトは、地域設定情報を格納します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※アドカスタマイザーの場合は、ADD時に省略可能となります。</div> <div lang=\"en\">FeedItemServiceLocation object contains the information of Geographic FeedItemServiceLocation.<br> Although this field will be returned in the  response, it will be ignored on input.<br> *For AD_CUSTOMIZER, this field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   FeedItemServiceLocation.JSON_PROPERTY_CRITERION_TYPE_FEED_ITEM,
   FeedItemServiceLocation.JSON_PROPERTY_GEO_RESTRICTION,
   FeedItemServiceLocation.JSON_PROPERTY_IS_REMOVE,
   FeedItemServiceLocation.JSON_PROPERTY_TARGET_ID
 })
-@JsonTypeName("FeedItemServiceLocation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedItemServiceLocation {
   public static final String JSON_PROPERTY_CRITERION_TYPE_FEED_ITEM = "criterionTypeFeedItem";
   private FeedItemServiceCriterionTypeFeedItem criterionTypeFeedItem;
@@ -53,7 +49,7 @@ public class FeedItemServiceLocation {
   public static final String JSON_PROPERTY_TARGET_ID = "targetId";
   private String targetId;
 
-  public FeedItemServiceLocation() { 
+  public FeedItemServiceLocation() {
   }
 
   public FeedItemServiceLocation criterionTypeFeedItem(FeedItemServiceCriterionTypeFeedItem criterionTypeFeedItem) {
@@ -66,8 +62,7 @@ public class FeedItemServiceLocation {
    * Get criterionTypeFeedItem
    * @return criterionTypeFeedItem
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_TYPE_FEED_ITEM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class FeedItemServiceLocation {
    * Get geoRestriction
    * @return geoRestriction
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEO_RESTRICTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,8 +114,7 @@ public class FeedItemServiceLocation {
    * Get isRemove
    * @return isRemove
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -147,8 +140,7 @@ public class FeedItemServiceLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域種別コードです。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceLocation Type Code.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return targetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">地域種別コードです。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">FeedItemServiceLocation Type Code.<br> This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,7 +154,6 @@ public class FeedItemServiceLocation {
   public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
-
 
   @Override
   public boolean equals(Object o) {

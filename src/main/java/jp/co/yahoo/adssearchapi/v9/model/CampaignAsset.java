@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignAssetServiceType;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignAssetServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignAssetオブジェクトは、キャンペーンとアセット間の設定情報を表します。&lt;br&gt; SETおよびREPLACE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAsset describes configuration information between campaign and assets.&lt;br&gt; This field is required in SET and REPLACE operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignAssetオブジェクトは、キャンペーンとアセット間の設定情報を表します。<br> SETおよびREPLACE時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAsset describes configuration information between campaign and assets.<br> This field is required in SET and REPLACE operation.</div> ")
 @JsonPropertyOrder({
   CampaignAsset.JSON_PROPERTY_ACCOUNT_ID,
   CampaignAsset.JSON_PROPERTY_CAMPAIGN_ID,
@@ -38,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignAsset.JSON_PROPERTY_TYPE,
   CampaignAsset.JSON_PROPERTY_USER_STATUS
 })
-@JsonTypeName("CampaignAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignAsset {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -56,7 +52,7 @@ public class CampaignAsset {
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
   private CampaignAssetServiceUserStatus userStatus;
 
-  public CampaignAsset() { 
+  public CampaignAsset() {
   }
 
   public CampaignAsset accountId(Long accountId) {
@@ -69,8 +65,7 @@ public class CampaignAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,8 +91,7 @@ public class CampaignAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">Campaign ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,8 +117,7 @@ public class CampaignAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセットのIDです。&lt;br&gt; SETおよびREPLACE時、このフィールドは必須となります。&lt;br&gt; SET時、このフィールドは更新対象のアセットIDを入力してください。&lt;br&gt; REPLACE時、このフィールドはキャンペーンに設定するアセットIDを入力してください。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset ID.&lt;br&gt; This field is required in SET and REPLACE operation.&lt;br&gt; In SET operation, enter the asset ID to be updated.&lt;br&gt; In REPLACE operation, enter the asset ID to be set for the campaign.&lt;/div&gt; 
    * @return assetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アセットのIDです。<br> SETおよびREPLACE時、このフィールドは必須となります。<br> SET時、このフィールドは更新対象のアセットIDを入力してください。<br> REPLACE時、このフィールドはキャンペーンに設定するアセットIDを入力してください。</div> <div lang=\"en\">Asset ID.<br> This field is required in SET and REPLACE operation.<br> In SET operation, enter the asset ID to be updated.<br> In REPLACE operation, enter the asset ID to be set for the campaign.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASSET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,8 +143,7 @@ public class CampaignAsset {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,8 +169,7 @@ public class CampaignAsset {
    * Get userStatus
    * @return userStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -192,7 +183,6 @@ public class CampaignAsset {
   public void setUserStatus(CampaignAssetServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

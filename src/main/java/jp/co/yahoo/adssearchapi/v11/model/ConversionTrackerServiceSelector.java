@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.ConversionTrackerServiceCategory;
@@ -37,7 +35,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceSelectorオブジェクトは、操作の対象となるコンバージョン設定および操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceSelector object specifies ConversionTracker settings and operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceSelectorオブジェクトは、操作の対象となるコンバージョン設定および操作の内容を表します。</div> <div lang=\"en\">ConversionTrackerServiceSelector object specifies ConversionTracker settings and operation.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   ConversionTrackerServiceSelector.JSON_PROPERTY_APP_IDS,
@@ -52,32 +49,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceSelector.JSON_PROPERTY_STATUSES,
   ConversionTrackerServiceSelector.JSON_PROPERTY_TRACKING_CODE_TYPES
 })
-@JsonTypeName("ConversionTrackerServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_APP_IDS = "appIds";
-  private List<String> appIds = null;
+  private List<String> appIds;
 
   public static final String JSON_PROPERTY_CATEGORIES = "categories";
-  private List<ConversionTrackerServiceCategory> categories = null;
+  private List<ConversionTrackerServiceCategory> categories;
 
   public static final String JSON_PROPERTY_CONVERSION_COUNTING_TYPES = "conversionCountingTypes";
-  private List<ConversionTrackerServiceConversionCountingType> conversionCountingTypes = null;
+  private List<ConversionTrackerServiceConversionCountingType> conversionCountingTypes;
 
   public static final String JSON_PROPERTY_CONVERSION_DATE_RANGE = "conversionDateRange";
   private ConversionTrackerServiceConversionDateRange conversionDateRange;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_IDS = "conversionTrackerIds";
-  private List<Long> conversionTrackerIds = null;
+  private List<Long> conversionTrackerIds;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_TYPES = "conversionTrackerTypes";
-  private List<ConversionTrackerServiceConversionTrackerType> conversionTrackerTypes = null;
+  private List<ConversionTrackerServiceConversionTrackerType> conversionTrackerTypes;
 
   public static final String JSON_PROPERTY_EXCLUDE_FROM_BIDDINGS = "excludeFromBiddings";
-  private List<ConversionTrackerServiceExcludeFromBidding> excludeFromBiddings = null;
+  private List<ConversionTrackerServiceExcludeFromBidding> excludeFromBiddings;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -86,12 +82,12 @@ public class ConversionTrackerServiceSelector {
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_STATUSES = "statuses";
-  private List<ConversionTrackerServiceStatus> statuses = null;
+  private List<ConversionTrackerServiceStatus> statuses;
 
   public static final String JSON_PROPERTY_TRACKING_CODE_TYPES = "trackingCodeTypes";
-  private List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes = null;
+  private List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes;
 
-  public ConversionTrackerServiceSelector() { 
+  public ConversionTrackerServiceSelector() {
   }
 
   public ConversionTrackerServiceSelector accountId(Long accountId) {
@@ -104,8 +100,7 @@ public class ConversionTrackerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -139,8 +134,7 @@ public class ConversionTrackerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App ID.&lt;/div&gt; 
    * @return appIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。</div> <div lang=\"en\">App ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,8 +168,7 @@ public class ConversionTrackerServiceSelector {
    * Get categories
    * @return categories
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -209,8 +202,7 @@ public class ConversionTrackerServiceSelector {
    * Get conversionCountingTypes
    * @return conversionCountingTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_COUNTING_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -236,8 +228,7 @@ public class ConversionTrackerServiceSelector {
    * Get conversionDateRange
    * @return conversionDateRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_DATE_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -271,8 +262,7 @@ public class ConversionTrackerServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョントラッカーIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion Tracker ID.&lt;/div&gt; 
    * @return conversionTrackerIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョントラッカーIDです。</div> <div lang=\"en\">Conversion Tracker ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -306,8 +296,7 @@ public class ConversionTrackerServiceSelector {
    * Get conversionTrackerTypes
    * @return conversionTrackerTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -341,8 +330,7 @@ public class ConversionTrackerServiceSelector {
    * Get excludeFromBiddings
    * @return excludeFromBiddings
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXCLUDE_FROM_BIDDINGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -370,8 +358,7 @@ public class ConversionTrackerServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -398,8 +385,7 @@ public class ConversionTrackerServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -433,8 +419,7 @@ public class ConversionTrackerServiceSelector {
    * Get statuses
    * @return statuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -468,8 +453,7 @@ public class ConversionTrackerServiceSelector {
    * Get trackingCodeTypes
    * @return trackingCodeTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_CODE_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -483,7 +467,6 @@ public class ConversionTrackerServiceSelector {
   public void setTrackingCodeTypes(List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes) {
     this.trackingCodeTypes = trackingCodeTypes;
   }
-
 
   @Override
   public boolean equals(Object o) {

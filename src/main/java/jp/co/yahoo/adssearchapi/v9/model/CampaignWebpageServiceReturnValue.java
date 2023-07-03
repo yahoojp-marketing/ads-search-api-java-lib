@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignWebpageServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceReturnValueオブジェクトは、操作結果を含む除外設定のコンテナを保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceReturnValue object contains container for excluded settings including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceReturnValueオブジェクトは、操作結果を含む除外設定のコンテナを保持します。</div> <div lang=\"en\">CampaignWebpageServiceReturnValue object contains container for excluded settings including operation result.</div> ")
 @JsonPropertyOrder({
   CampaignWebpageServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignWebpageServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignWebpageServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignWebpageServiceValue> values = null;
+  private List<CampaignWebpageServiceValue> values;
 
-  public CampaignWebpageServiceReturnValue() { 
+  public CampaignWebpageServiceReturnValue() {
   }
 
   public CampaignWebpageServiceReturnValue values(List<CampaignWebpageServiceValue> values) {
@@ -62,8 +58,7 @@ public class CampaignWebpageServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignWebpageServiceReturnValue {
   public void setValues(List<CampaignWebpageServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

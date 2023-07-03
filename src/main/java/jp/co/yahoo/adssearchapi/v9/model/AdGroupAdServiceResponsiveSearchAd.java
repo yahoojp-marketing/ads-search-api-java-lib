@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAdServiceDescriptionTextAsset;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ広告を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceResponsiveSearchAd object is Responsive ads.&lt;br&gt; This field is optional in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ広告を表します。<br> ADD時、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceResponsiveSearchAd object is Responsive ads.<br> This field is optional in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_HEADLINES,
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_DESCRIPTIONS,
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_PATH1,
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_PATH2
 })
-@JsonTypeName("AdGroupAdServiceResponsiveSearchAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceResponsiveSearchAd {
   public static final String JSON_PROPERTY_HEADLINES = "headlines";
-  private List<AdGroupAdServiceHeadlineTextAsset> headlines = null;
+  private List<AdGroupAdServiceHeadlineTextAsset> headlines;
 
   public static final String JSON_PROPERTY_DESCRIPTIONS = "descriptions";
-  private List<AdGroupAdServiceDescriptionTextAsset> descriptions = null;
+  private List<AdGroupAdServiceDescriptionTextAsset> descriptions;
 
   public static final String JSON_PROPERTY_PATH1 = "path1";
   private String path1;
@@ -54,7 +50,7 @@ public class AdGroupAdServiceResponsiveSearchAd {
   public static final String JSON_PROPERTY_PATH2 = "path2";
   private String path2;
 
-  public AdGroupAdServiceResponsiveSearchAd() { 
+  public AdGroupAdServiceResponsiveSearchAd() {
   }
 
   public AdGroupAdServiceResponsiveSearchAd headlines(List<AdGroupAdServiceHeadlineTextAsset> headlines) {
@@ -75,8 +71,7 @@ public class AdGroupAdServiceResponsiveSearchAd {
    * Get headlines
    * @return headlines
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEADLINES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -110,8 +105,7 @@ public class AdGroupAdServiceResponsiveSearchAd {
    * Get descriptions
    * @return descriptions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -137,8 +131,7 @@ public class AdGroupAdServiceResponsiveSearchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path2を指定する場合は、path1は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;br&gt;*To specify path2, path1 is required.&lt;/div&gt; 
    * @return path1
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path2を指定する場合は、path1は必須です。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*To specify path2, path1 is required.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PATH1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -164,8 +157,7 @@ public class AdGroupAdServiceResponsiveSearchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path1を指定していない場合、path2は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;br&gt;*If path1 is not specified, path2 will be ignored.&lt;/div&gt; 
    * @return path2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動作成される表示URLを補足するパスです。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。<br>※path1を指定していない場合、path2は無視されます。</div> <div lang=\"en\">The path information which complements display URL generated automatically.<br> This field is optional in ADD operation. The default value will be null.<br>*If path1 is not specified, path2 will be ignored.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PATH2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -179,7 +171,6 @@ public class AdGroupAdServiceResponsiveSearchAd {
   public void setPath2(String path2) {
     this.path2 = path2;
   }
-
 
   @Override
   public boolean equals(Object o) {

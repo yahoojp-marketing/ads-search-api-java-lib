@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.DictionaryServiceGeographicLocationValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationPageオブジェクトは、取得する地域情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocationPage contains retrieved geographic location information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationPageオブジェクトは、取得する地域情報を格納します。</div> <div lang=\"en\">DictionaryServiceGeographicLocationPage contains retrieved geographic location information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceGeographicLocationPage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   DictionaryServiceGeographicLocationPage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("DictionaryServiceGeographicLocationPage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceGeographicLocationPage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<DictionaryServiceGeographicLocationValue> values = null;
+  private List<DictionaryServiceGeographicLocationValue> values;
 
-  public DictionaryServiceGeographicLocationPage() { 
+  public DictionaryServiceGeographicLocationPage() {
   }
 
   public DictionaryServiceGeographicLocationPage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class DictionaryServiceGeographicLocationPage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得全件数(ページ毎ではなく全件)です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries. (Sum total,  Not per page)&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得全件数(ページ毎ではなく全件)です。</div> <div lang=\"en\">Total number of entries. (Sum total,  Not per page)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class DictionaryServiceGeographicLocationPage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class DictionaryServiceGeographicLocationPage {
   public void setValues(List<DictionaryServiceGeographicLocationValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

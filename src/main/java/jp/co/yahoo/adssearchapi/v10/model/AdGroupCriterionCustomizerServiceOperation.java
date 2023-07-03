@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupCriterionCustomizer;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionCustomizerServiceOperationオブジェクトは、キーワードとカスタマイザー属性間の設定情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionCustomizerServiceOperation is a container of configuration information between the keyword and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionCustomizerServiceOperationオブジェクトは、キーワードとカスタマイザー属性間の設定情報を格納するコンテナです。</div> <div lang=\"en\">AdGroupCriterionCustomizerServiceOperation is a container of configuration information between the keyword and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionCustomizerServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupCriterionCustomizerServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("AdGroupCriterionCustomizerServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionCustomizerServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<AdGroupCriterionCustomizer> operand = new ArrayList<>();
+  private List<AdGroupCriterionCustomizer> operand;
 
-  public AdGroupCriterionCustomizerServiceOperation() { 
+  public AdGroupCriterionCustomizerServiceOperation() {
   }
 
   public AdGroupCriterionCustomizerServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class AdGroupCriterionCustomizerServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class AdGroupCriterionCustomizerServiceOperation {
   }
 
   public AdGroupCriterionCustomizerServiceOperation addOperandItem(AdGroupCriterionCustomizer operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class AdGroupCriterionCustomizerServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class AdGroupCriterionCustomizerServiceOperation {
   public void setOperand(List<AdGroupCriterionCustomizer> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

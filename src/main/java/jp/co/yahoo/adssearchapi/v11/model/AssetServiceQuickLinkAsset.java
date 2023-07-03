@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AssetServiceSchedule;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceQuickLinkAssetオブジェクトは、クイックリンクオプションのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがQUICKLINKの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceQuickLinkAsset contains Asset value information for quicklink options.&lt;br&gt; This field is optional in ADD operation. *If type is QUICKLINK, this field is required.&lt;br&gt;&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceQuickLinkAssetオブジェクトは、クイックリンクオプションのアセット情報を格納します。<br> ADD時、このフィールドは省略可能となります。※typeがQUICKLINKの場合は必須です。</div> <div lang=\"en\">AssetServiceQuickLinkAsset contains Asset value information for quicklink options.<br> This field is optional in ADD operation. *If type is QUICKLINK, this field is required.<br></div> ")
 @JsonPropertyOrder({
   AssetServiceQuickLinkAsset.JSON_PROPERTY_LINK_TEXT,
   AssetServiceQuickLinkAsset.JSON_PROPERTY_REVIEW_LINK_TEXT,
@@ -43,8 +40,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceQuickLinkAsset.JSON_PROPERTY_END_DATE,
   AssetServiceQuickLinkAsset.JSON_PROPERTY_SCHEDULES
 })
-@JsonTypeName("AssetServiceQuickLinkAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceQuickLinkAsset {
   public static final String JSON_PROPERTY_LINK_TEXT = "linkText";
   private String linkText;
@@ -71,9 +67,9 @@ public class AssetServiceQuickLinkAsset {
   private String endDate;
 
   public static final String JSON_PROPERTY_SCHEDULES = "schedules";
-  private List<AssetServiceSchedule> schedules = null;
+  private List<AssetServiceSchedule> schedules;
 
-  public AssetServiceQuickLinkAsset() { 
+  public AssetServiceQuickLinkAsset() {
   }
 
   public AssetServiceQuickLinkAsset linkText(String linkText) {
@@ -86,8 +82,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リンクテキストです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Link text.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return linkText
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リンクテキストです。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Link text.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LINK_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +108,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のリンクテキストです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Link text on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewLinkText
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中のリンクテキストです。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Link text on editorial review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_LINK_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,8 +134,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文1です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description 1.&lt;/div&gt; 
    * @return description1
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文1です。</div> <div lang=\"en\">Description 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -167,8 +160,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の説明文1です。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description 1 on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewDescription1
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の説明文1です。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Description 1 on editorial review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_DESCRIPTION1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -194,8 +186,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文2です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description 2.&lt;/div&gt; 
    * @return description2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文2です。</div> <div lang=\"en\">Description 2.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -221,8 +212,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の説明文2です。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description 2 on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewDescription2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の説明文2です。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Description 2 on editorial review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_DESCRIPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,8 +238,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信開始日です。&lt;br&gt; ※空で設定すると、既存の配信開始日は削除されます。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of ad display&lt;br&gt; *On setting blank, existing start date of ad display will be deleted.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信開始日です。<br> ※空で設定すると、既存の配信開始日は削除されます。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">Start date of ad display<br> *On setting blank, existing start date of ad display will be deleted.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -275,8 +264,7 @@ public class AssetServiceQuickLinkAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信終了日です。&lt;br&gt; ※空で設定すると、既存の配信終了日は削除されます。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of ad display.&lt;br&gt; *By setting blank, existing end date of ad display will be deleted.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信終了日です。<br> ※空で設定すると、既存の配信終了日は削除されます。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">End date of ad display.<br> *By setting blank, existing end date of ad display will be deleted.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,8 +298,7 @@ public class AssetServiceQuickLinkAsset {
    * Get schedules
    * @return schedules
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -325,7 +312,6 @@ public class AssetServiceQuickLinkAsset {
   public void setSchedules(List<AssetServiceSchedule> schedules) {
     this.schedules = schedules;
   }
-
 
   @Override
   public boolean equals(Object o) {

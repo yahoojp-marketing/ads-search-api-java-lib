@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.FeedItemServiceCustomParameter;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; CustomParametersおよびReviewCustomParameters配下では、このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※CustomParameters配下でのみ、クイックリンクオプションの場合、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; Under customParameters and ReviewCustomParameters, this field will be  returned in the response, but it will be ignored on input.&lt;br&gt; *Under customParameters, this field will be optional  in ADD and SET operation for QUICKLINK option.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedItemServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。<br> CustomParametersおよびReviewCustomParameters配下では、このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※CustomParameters配下でのみ、クイックリンクオプションの場合、ADDおよびSET時に省略可能となります。</div> <div lang=\"en\">FeedItemServiceCustomParameters displays the setting of custom parameters.<br> Under customParameters and ReviewCustomParameters, this field will be  returned in the response, but it will be ignored on input.<br> *Under customParameters, this field will be optional  in ADD and SET operation for QUICKLINK option.</div> ")
 @JsonPropertyOrder({
   FeedItemServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   FeedItemServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@JsonTypeName("FeedItemServiceCustomParameters")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedItemServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
   private FeedItemServiceIsRemove isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
-  private List<FeedItemServiceCustomParameter> parameters = null;
+  private List<FeedItemServiceCustomParameter> parameters;
 
-  public FeedItemServiceCustomParameters() { 
+  public FeedItemServiceCustomParameters() {
   }
 
   public FeedItemServiceCustomParameters isRemove(FeedItemServiceIsRemove isRemove) {
@@ -59,8 +55,7 @@ public class FeedItemServiceCustomParameters {
    * Get isRemove
    * @return isRemove
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class FeedItemServiceCustomParameters {
    * Get parameters
    * @return parameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class FeedItemServiceCustomParameters {
   public void setParameters(List<FeedItemServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
-
 
   @Override
   public boolean equals(Object o) {

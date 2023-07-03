@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceTextAd2オブジェクトは、検索広告のPCおよびスマートフォン向けの広告を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがTEXT_AD2の場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceTextAd2 object is a text ad type for Sponsored Search on PC and smartphone.&lt;br&gt; This field is optional in ADD operation. *If adType is TEXT_AD2, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceTextAd2オブジェクトは、検索広告のPCおよびスマートフォン向けの広告を表します。<br> ADD時、このフィールドは省略可能となります。※adTypeがTEXT_AD2の場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceTextAd2 object is a text ad type for Sponsored Search on PC and smartphone.<br> This field is optional in ADD operation. *If adType is TEXT_AD2, this field is required.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceTextAd2.JSON_PROPERTY_HEADLINE,
   AdGroupAdServiceTextAd2.JSON_PROPERTY_DESCRIPTION,
   AdGroupAdServiceTextAd2.JSON_PROPERTY_DESCRIPTION2
 })
-@JsonTypeName("AdGroupAdServiceTextAd2")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceTextAd2 {
   public static final String JSON_PROPERTY_HEADLINE = "headline";
   private String headline;
@@ -46,7 +42,7 @@ public class AdGroupAdServiceTextAd2 {
   public static final String JSON_PROPERTY_DESCRIPTION2 = "description2";
   private String description2;
 
-  public AdGroupAdServiceTextAd2() { 
+  public AdGroupAdServiceTextAd2() {
   }
 
   public AdGroupAdServiceTextAd2 headline(String headline) {
@@ -59,8 +55,7 @@ public class AdGroupAdServiceTextAd2 {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;タイトル文です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Title of ad.&lt;br&gt; This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD or RESPONSIVE_SEARCH_AD, this field will be ignored.&lt;/div&gt; 
    * @return headline
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">タイトル文です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Title of ad.<br> This field is required in ADD operation. *If adType is DYNAMIC_SEARCH_LINKED_AD or RESPONSIVE_SEARCH_AD, this field will be ignored.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEADLINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class AdGroupAdServiceTextAd2 {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt;自動挿入をサポートしていません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of ad.&lt;br&gt; This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.&lt;br&gt;Does not support Data Auto Insertion.&lt;/div&gt; 
    * @return description
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文です。<br> ADD時、このフィールドは必須となります。<br>自動挿入をサポートしていません。</div> <div lang=\"en\">Description of ad.<br> This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.<br>Does not support Data Auto Insertion.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class AdGroupAdServiceTextAd2 {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文2（2行目）です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description2 (line2) of the ad.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return description2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文2（2行目）です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Description2 (line2) of the ad.<br> This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class AdGroupAdServiceTextAd2 {
   public void setDescription2(String description2) {
     this.description2 = description2;
   }
-
 
   @Override
   public boolean equals(Object o) {

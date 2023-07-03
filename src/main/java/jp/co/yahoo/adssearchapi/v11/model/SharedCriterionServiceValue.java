@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.Error;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionServiceValueは、実行結果（1エンティティ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterionServiceValue object holds exec result (1 entity).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SharedCriterionServiceValueは、実行結果（1エンティティ）を保持するオブジェクトです。</div> <div lang=\"en\">SharedCriterionServiceValue object holds exec result (1 entity).</div> ")
 @JsonPropertyOrder({
   SharedCriterionServiceValue.JSON_PROPERTY_ERRORS,
   SharedCriterionServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   SharedCriterionServiceValue.JSON_PROPERTY_SHARED_CRITERION
 })
-@JsonTypeName("SharedCriterionServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SharedCriterionServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
@@ -50,7 +46,7 @@ public class SharedCriterionServiceValue {
   public static final String JSON_PROPERTY_SHARED_CRITERION = "sharedCriterion";
   private SharedCriterion sharedCriterion;
 
-  public SharedCriterionServiceValue() { 
+  public SharedCriterionServiceValue() {
   }
 
   public SharedCriterionServiceValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class SharedCriterionServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class SharedCriterionServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果を表示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Showing operation result.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果を表示します。</div> <div lang=\"en\">Showing operation result.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class SharedCriterionServiceValue {
    * Get sharedCriterion
    * @return sharedCriterion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARED_CRITERION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class SharedCriterionServiceValue {
   public void setSharedCriterion(SharedCriterion sharedCriterion) {
     this.sharedCriterion = sharedCriterion;
   }
-
 
   @Override
   public boolean equals(Object o) {

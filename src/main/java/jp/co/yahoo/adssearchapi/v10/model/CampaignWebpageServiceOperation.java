@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignWebpage;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedAssetの除外設定を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceOperation object contains the excluded setting of PageFeedAsset which is the target of mutate operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceOperationオブジェクトは、mutateメソッドで操作対象となるPageFeedAssetの除外設定を保持します。</div> <div lang=\"en\">CampaignWebpageServiceOperation object contains the excluded setting of PageFeedAsset which is the target of mutate operation.</div> ")
 @JsonPropertyOrder({
   CampaignWebpageServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   CampaignWebpageServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("CampaignWebpageServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignWebpageServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<CampaignWebpage> operand = new ArrayList<>();
+  private List<CampaignWebpage> operand;
 
-  public CampaignWebpageServiceOperation() { 
+  public CampaignWebpageServiceOperation() {
   }
 
   public CampaignWebpageServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class CampaignWebpageServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class CampaignWebpageServiceOperation {
   }
 
   public CampaignWebpageServiceOperation addOperandItem(CampaignWebpage operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class CampaignWebpageServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class CampaignWebpageServiceOperation {
   public void setOperand(List<CampaignWebpage> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

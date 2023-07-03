@@ -30,7 +30,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adssearchapi.v10.api.DictionaryServiceApi")
 public class DictionaryServiceApi {
     private ApiClient apiClient;
@@ -83,27 +83,27 @@ public class DictionaryServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<DictionaryServiceGetAppLinkVendorResponse> dictionaryServiceGetAppLinkVendorPostWithHttpInfo(DictionaryServiceAppLinkVendorSelector dictionaryServiceAppLinkVendorSelector) throws RestClientException {
-        Object postBody = dictionaryServiceAppLinkVendorSelector;
+        Object localVarPostBody = dictionaryServiceAppLinkVendorSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<DictionaryServiceGetAppLinkVendorResponse> returnType = new ParameterizedTypeReference<DictionaryServiceGetAppLinkVendorResponse>() {};
-        return apiClient.invokeAPI("/DictionaryService/getAppLinkVendor", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<DictionaryServiceGetAppLinkVendorResponse> localReturnType = new ParameterizedTypeReference<DictionaryServiceGetAppLinkVendorResponse>() {};
+        return apiClient.invokeAPI("/DictionaryService/getAppLinkVendor", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -136,27 +136,27 @@ public class DictionaryServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<DictionaryServiceGetDisapprovalReasonResponse> dictionaryServiceGetDisapprovalReasonPostWithHttpInfo(DictionaryServiceDisapprovalReasonSelector dictionaryServiceDisapprovalReasonSelector) throws RestClientException {
-        Object postBody = dictionaryServiceDisapprovalReasonSelector;
+        Object localVarPostBody = dictionaryServiceDisapprovalReasonSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<DictionaryServiceGetDisapprovalReasonResponse> returnType = new ParameterizedTypeReference<DictionaryServiceGetDisapprovalReasonResponse>() {};
-        return apiClient.invokeAPI("/DictionaryService/getDisapprovalReason", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<DictionaryServiceGetDisapprovalReasonResponse> localReturnType = new ParameterizedTypeReference<DictionaryServiceGetDisapprovalReasonResponse>() {};
+        return apiClient.invokeAPI("/DictionaryService/getDisapprovalReason", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -189,26 +189,26 @@ public class DictionaryServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<DictionaryServiceGetGeographicLocationResponse> dictionaryServiceGetGeographicLocationPostWithHttpInfo(DictionaryServiceGeographicLocationSelector dictionaryServiceGeographicLocationSelector) throws RestClientException {
-        Object postBody = dictionaryServiceGeographicLocationSelector;
+        Object localVarPostBody = dictionaryServiceGeographicLocationSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<DictionaryServiceGetGeographicLocationResponse> returnType = new ParameterizedTypeReference<DictionaryServiceGetGeographicLocationResponse>() {};
-        return apiClient.invokeAPI("/DictionaryService/getGeographicLocation", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<DictionaryServiceGetGeographicLocationResponse> localReturnType = new ParameterizedTypeReference<DictionaryServiceGetGeographicLocationResponse>() {};
+        return apiClient.invokeAPI("/DictionaryService/getGeographicLocation", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

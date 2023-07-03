@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.BiddingStrategyServiceBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyオブジェクトは、入札戦略を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bidding strategy object displays the type of bid strategy.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BiddingStrategyオブジェクトは、入札戦略を表します。</div> <div lang=\"en\">Bidding strategy object displays the type of bid strategy.</div> ")
 @JsonPropertyOrder({
   BiddingStrategy.JSON_PROPERTY_ACCOUNT_ID,
   BiddingStrategy.JSON_PROPERTY_BIDDING_SCHEME,
   BiddingStrategy.JSON_PROPERTY_PORTFOLIO_BIDDING_ID,
   BiddingStrategy.JSON_PROPERTY_PORTFOLIO_BIDDING_NAME
 })
-@JsonTypeName("BiddingStrategy")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BiddingStrategy {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -51,7 +47,7 @@ public class BiddingStrategy {
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_NAME = "portfolioBiddingName";
   private String portfolioBiddingName;
 
-  public BiddingStrategy() { 
+  public BiddingStrategy() {
   }
 
   public BiddingStrategy accountId(Long accountId) {
@@ -64,8 +60,7 @@ public class BiddingStrategy {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Account ID.<br> This field is required in any cases.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class BiddingStrategy {
    * Get biddingScheme
    * @return biddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class BiddingStrategy {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札IDです。&lt;br&gt; SET時およびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding ID.&lt;br&gt; This field is optional in SET and REMOVE operation.&lt;/div&gt; 
    * @return portfolioBiddingId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ポートフォリオ入札IDです。<br> SET時およびREMOVE時、このフィールドは必須となります。</div> <div lang=\"en\">Portfolio bidding ID.<br> This field is optional in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class BiddingStrategy {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札名です（50文字以内になります）。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding name(Can set up to 50 characters).&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return portfolioBiddingName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ポートフォリオ入札名です（50文字以内になります）。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Portfolio bidding name(Can set up to 50 characters).<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class BiddingStrategy {
   public void setPortfolioBiddingName(String portfolioBiddingName) {
     this.portfolioBiddingName = portfolioBiddingName;
   }
-
 
   @Override
   public boolean equals(Object o) {

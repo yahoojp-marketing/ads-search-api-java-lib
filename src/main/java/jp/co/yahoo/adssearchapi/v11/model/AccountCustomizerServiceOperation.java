@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AccountCustomizer;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountCustomizerServiceOperationオブジェクトは、アカウントとカスタマイザー属性間の設定情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountCustomizerServiceOperation is a container of configuration information between the account and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountCustomizerServiceOperationオブジェクトは、アカウントとカスタマイザー属性間の設定情報を格納するコンテナです。</div> <div lang=\"en\">AccountCustomizerServiceOperation is a container of configuration information between the account and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   AccountCustomizerServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   AccountCustomizerServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("AccountCustomizerServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountCustomizerServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<AccountCustomizer> operand = new ArrayList<>();
+  private List<AccountCustomizer> operand;
 
-  public AccountCustomizerServiceOperation() { 
+  public AccountCustomizerServiceOperation() {
   }
 
   public AccountCustomizerServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class AccountCustomizerServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class AccountCustomizerServiceOperation {
   }
 
   public AccountCustomizerServiceOperation addOperandItem(AccountCustomizer operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class AccountCustomizerServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class AccountCustomizerServiceOperation {
   public void setOperand(List<AccountCustomizer> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

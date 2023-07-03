@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.FeedServicePlaceholderField;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceAttributeオブジェクトは、自動データ挿入のリストの属性を格納します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceAttribute object contains the attribute of auto data insertion list.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedServiceAttributeオブジェクトは、自動データ挿入のリストの属性を格納します。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">FeedServiceAttribute object contains the attribute of auto data insertion list.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
 @JsonPropertyOrder({
   FeedServiceAttribute.JSON_PROPERTY_FEED_ATTRIBUTE_ID,
   FeedServiceAttribute.JSON_PROPERTY_FEED_ATTRIBUTE_NAME,
   FeedServiceAttribute.JSON_PROPERTY_PLACEHOLDER_FIELD
 })
-@JsonTypeName("FeedServiceAttribute")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedServiceAttribute {
   public static final String JSON_PROPERTY_FEED_ATTRIBUTE_ID = "feedAttributeId";
   private Long feedAttributeId;
@@ -47,7 +43,7 @@ public class FeedServiceAttribute {
   public static final String JSON_PROPERTY_PLACEHOLDER_FIELD = "placeholderField";
   private FeedServicePlaceholderField placeholderField;
 
-  public FeedServiceAttribute() { 
+  public FeedServiceAttribute() {
   }
 
   public FeedServiceAttribute feedAttributeId(Long feedAttributeId) {
@@ -60,8 +56,7 @@ public class FeedServiceAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動データ挿入のリストの属性（カラム）IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Attribute ID (column ID) of auto data insertion list.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return feedAttributeId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動データ挿入のリストの属性（カラム）IDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Attribute ID (column ID) of auto data insertion list.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ATTRIBUTE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class FeedServiceAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動データ挿入のリストの属性（カラム）名です。&lt;br&gt; このフィールドはADDおよびSET時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Attribute name (column name) of auto data insertion list.&lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return feedAttributeName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">自動データ挿入のリストの属性（カラム）名です。<br> このフィールドはADDおよびSET時に必須となり、REMOVE時に無視されます。</div> <div lang=\"en\">Attribute name (column name) of auto data insertion list.<br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ATTRIBUTE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class FeedServiceAttribute {
    * Get placeholderField
    * @return placeholderField
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class FeedServiceAttribute {
   public void setPlaceholderField(FeedServicePlaceholderField placeholderField) {
     this.placeholderField = placeholderField;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignWebpageServiceWebpageCondition;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceWebpageParameterは、除外設定するWebpageの条件リストを保持します。 条件リストはAND条件で適用されます。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceWebpageParameter contains the rule list of webpage to be excluded. The rule list is applied in the AND condition.&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignWebpageServiceWebpageParameterは、除外設定するWebpageの条件リストを保持します。 条件リストはAND条件で適用されます。<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。</div> <div lang=\"en\">CampaignWebpageServiceWebpageParameter contains the rule list of webpage to be excluded. The rule list is applied in the AND condition.<br> This field is required in ADD operation, and will be ignored in REMOVE operation.</div> ")
 @JsonPropertyOrder({
   CampaignWebpageServiceWebpageParameter.JSON_PROPERTY_CONDITIONS
 })
-@JsonTypeName("CampaignWebpageServiceWebpageParameter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignWebpageServiceWebpageParameter {
   public static final String JSON_PROPERTY_CONDITIONS = "conditions";
-  private List<CampaignWebpageServiceWebpageCondition> conditions = null;
+  private List<CampaignWebpageServiceWebpageCondition> conditions;
 
-  public CampaignWebpageServiceWebpageParameter() { 
+  public CampaignWebpageServiceWebpageParameter() {
   }
 
   public CampaignWebpageServiceWebpageParameter conditions(List<CampaignWebpageServiceWebpageCondition> conditions) {
@@ -62,8 +58,7 @@ public class CampaignWebpageServiceWebpageParameter {
    * Get conditions
    * @return conditions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONDITIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignWebpageServiceWebpageParameter {
   public void setConditions(List<CampaignWebpageServiceWebpageCondition> conditions) {
     this.conditions = conditions;
   }
-
 
   @Override
   public boolean equals(Object o) {

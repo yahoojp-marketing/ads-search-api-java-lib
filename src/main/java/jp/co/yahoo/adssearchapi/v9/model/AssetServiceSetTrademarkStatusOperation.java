@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AssetServiceSetTrademarkStatus;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceSetTrademarkStatusOperationオブジェクトは、操作対象の商標使用制限の情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceSetTrademarkStatusOperation object holds the target&#39;s trademark restriction information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceSetTrademarkStatusOperationオブジェクトは、操作対象の商標使用制限の情報を格納します。</div> <div lang=\"en\">AssetServiceSetTrademarkStatusOperation object holds the target's trademark restriction information.</div> ")
 @JsonPropertyOrder({
   AssetServiceSetTrademarkStatusOperation.JSON_PROPERTY_ACCOUNT_ID,
   AssetServiceSetTrademarkStatusOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("AssetServiceSetTrademarkStatusOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceSetTrademarkStatusOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<AssetServiceSetTrademarkStatus> operand = new ArrayList<>();
+  private List<AssetServiceSetTrademarkStatus> operand;
 
-  public AssetServiceSetTrademarkStatusOperation() { 
+  public AssetServiceSetTrademarkStatusOperation() {
   }
 
   public AssetServiceSetTrademarkStatusOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class AssetServiceSetTrademarkStatusOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class AssetServiceSetTrademarkStatusOperation {
   }
 
   public AssetServiceSetTrademarkStatusOperation addOperandItem(AssetServiceSetTrademarkStatus operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class AssetServiceSetTrademarkStatusOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class AssetServiceSetTrademarkStatusOperation {
   public void setOperand(List<AssetServiceSetTrademarkStatus> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.CampaignAsset;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignAssetServiceListオブジェクトは、キャンペーンとアセット間の設定情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignAssetServiceList object describes configuration information between campaign and assets.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignAssetServiceListオブジェクトは、キャンペーンとアセット間の設定情報を表します。</div> <div lang=\"en\">CampaignAssetServiceList object describes configuration information between campaign and assets.</div> ")
 @JsonPropertyOrder({
   CampaignAssetServiceList.JSON_PROPERTY_CAMPAIGN_ASSETS,
   CampaignAssetServiceList.JSON_PROPERTY_CAMPAIGN_ID,
   CampaignAssetServiceList.JSON_PROPERTY_TYPE
 })
-@JsonTypeName("CampaignAssetServiceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignAssetServiceList {
   public static final String JSON_PROPERTY_CAMPAIGN_ASSETS = "campaignAssets";
-  private List<CampaignAsset> campaignAssets = null;
+  private List<CampaignAsset> campaignAssets;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
   private Long campaignId;
@@ -50,7 +46,7 @@ public class CampaignAssetServiceList {
   public static final String JSON_PROPERTY_TYPE = "type";
   private CampaignAssetServiceType type;
 
-  public CampaignAssetServiceList() { 
+  public CampaignAssetServiceList() {
   }
 
   public CampaignAssetServiceList campaignAssets(List<CampaignAsset> campaignAssets) {
@@ -71,8 +67,7 @@ public class CampaignAssetServiceList {
    * Get campaignAssets
    * @return campaignAssets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ASSETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class CampaignAssetServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; REPLACE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in REPLACE operation.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> REPLACE時、このフィールドは必須です。</div> <div lang=\"en\">Campaign ID.<br> This field is required in REPLACE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class CampaignAssetServiceList {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class CampaignAssetServiceList {
   public void setType(CampaignAssetServiceType type) {
     this.type = type;
   }
-
 
   @Override
   public boolean equals(Object o) {

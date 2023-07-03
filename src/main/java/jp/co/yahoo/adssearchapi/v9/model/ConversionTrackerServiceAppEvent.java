@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.ConversionTrackerServiceAppLinkPlatform;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by  tag.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。</div> <div lang=\"en\">ConversionTrackerServiceAppConversion object describes the App ConversionTracker settings such as App ConversionTag and performance data by  tag.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID,
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_APP_VENDOR_ID,
@@ -37,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_APP_LINK_PLATFORM,
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_APP_EVENT_TYPE
 })
-@JsonTypeName("ConversionTrackerServiceAppEvent")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceAppEvent {
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID = "conversionTrackerTrackId";
   private Long conversionTrackerTrackId;
@@ -55,7 +51,7 @@ public class ConversionTrackerServiceAppEvent {
   public static final String JSON_PROPERTY_APP_EVENT_TYPE = "appEventType";
   private String appEventType;
 
-  public ConversionTrackerServiceAppEvent() { 
+  public ConversionTrackerServiceAppEvent() {
   }
 
   public ConversionTrackerServiceAppEvent conversionTrackerTrackId(Long conversionTrackerTrackId) {
@@ -68,8 +64,7 @@ public class ConversionTrackerServiceAppEvent {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキング用コンバージョントラッカーIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker ID for tracking.&lt;/div&gt; 
    * @return conversionTrackerTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキング用コンバージョントラッカーIDです。</div> <div lang=\"en\">ConversionTracker ID for tracking.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,8 +90,7 @@ public class ConversionTrackerServiceAppEvent {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー識別子です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application Vendor ID.&lt;/div&gt; 
    * @return appVendorId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリ計測ベンダー識別子です。</div> <div lang=\"en\">Application Vendor ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -122,8 +116,7 @@ public class ConversionTrackerServiceAppEvent {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application ID.&lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションIDです。</div> <div lang=\"en\">Application ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,8 +142,7 @@ public class ConversionTrackerServiceAppEvent {
    * Get appLinkPlatform
    * @return appLinkPlatform
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,8 +168,7 @@ public class ConversionTrackerServiceAppEvent {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリイベントタイプです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application Event Type.&lt;/div&gt; 
    * @return appEventType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリイベントタイプです。</div> <div lang=\"en\">Application Event Type.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_EVENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,7 +182,6 @@ public class ConversionTrackerServiceAppEvent {
   public void setAppEventType(String appEventType) {
     this.appEventType = appEventType;
   }
-
 
   @Override
   public boolean equals(Object o) {

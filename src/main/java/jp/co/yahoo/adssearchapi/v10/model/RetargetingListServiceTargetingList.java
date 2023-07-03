@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceClosingReason;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceDefaultTargetList;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceLogicalTargetList;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceTargetingListは、リターゲティング情報（ターゲットリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceTargetingList is an object that holds retargeting information (target list).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceTargetingListは、リターゲティング情報（ターゲットリスト）を保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceTargetingList is an object that holds retargeting information (target list).</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceTargetingList.JSON_PROPERTY_ACCOUNT_ID,
   RetargetingListServiceTargetingList.JSON_PROPERTY_CLOSING_REASON,
@@ -54,8 +51,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingListServiceTargetingList.JSON_PROPERTY_TARGET_LIST_TRACK_ID,
   RetargetingListServiceTargetingList.JSON_PROPERTY_TARGET_LIST_TYPE
 })
-@JsonTypeName("RetargetingListServiceTargetingList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceTargetingList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -102,7 +98,7 @@ public class RetargetingListServiceTargetingList {
   public static final String JSON_PROPERTY_TARGET_LIST_TYPE = "targetListType";
   private RetargetingListServiceTargetListType targetListType;
 
-  public RetargetingListServiceTargetingList() { 
+  public RetargetingListServiceTargetingList() {
   }
 
   public RetargetingListServiceTargetingList accountId(Long accountId) {
@@ -115,8 +111,7 @@ public class RetargetingListServiceTargetingList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt;This field is required in any cases.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、いずれの場合でも必須となります。</div> <div lang=\"en\">Account ID.<br>This field is required in any cases.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -142,8 +137,7 @@ public class RetargetingListServiceTargetingList {
    * Get closingReason
    * @return closingReason
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CLOSING_REASON)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,8 +163,7 @@ public class RetargetingListServiceTargetingList {
    * Get defaultTargetList
    * @return defaultTargetList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEFAULT_TARGET_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -196,8 +189,7 @@ public class RetargetingListServiceTargetingList {
    * Get logicalTargetList
    * @return logicalTargetList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGICAL_TARGET_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,8 +215,7 @@ public class RetargetingListServiceTargetingList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リストに蓄積されているユーザー数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of users stored to the list.&lt;/div&gt; 
    * @return reach
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リストに蓄積されているユーザー数です。</div> <div lang=\"en\">Number of users stored to the list.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -250,8 +241,7 @@ public class RetargetingListServiceTargetingList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Cookieを保持する日数です。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt;LogicalTargetListの場合、SET時にこのフィールドは無視されます。&lt;br&gt; ※Default：180&lt;br&gt; ※1-540日まで設定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Days to hold Cookie.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; For LogicalTargetList, this field will be ignored in SET operation.&lt;br&gt; *Default: 180&lt;br&gt; *Can set from 1-540 days.&lt;/div&gt; 
    * @return reachStorageSpan
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">Cookieを保持する日数です。<br> SET時、このフィールドは省略可能となります。<br>LogicalTargetListの場合、SET時にこのフィールドは無視されます。<br> ※Default：180<br> ※1-540日まで設定可能です。</div> <div lang=\"en\">Days to hold Cookie.<br> This field is optional in SET operation.<br> For LogicalTargetList, this field will be ignored in SET operation.<br> *Default: 180<br> *Can set from 1-540 days.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH_STORAGE_SPAN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -277,8 +267,7 @@ public class RetargetingListServiceTargetingList {
    * Get reachStorageStatus
    * @return reachStorageStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH_STORAGE_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -304,8 +293,7 @@ public class RetargetingListServiceTargetingList {
    * Get retargetingAccountStatus
    * @return retargetingAccountStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -331,8 +319,7 @@ public class RetargetingListServiceTargetingList {
    * Get ruleBaseTargetList
    * @return ruleBaseTargetList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULE_BASE_TARGET_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -358,8 +345,7 @@ public class RetargetingListServiceTargetingList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストの説明です。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of Target List.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
    * @return targetListDescription
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストの説明です。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">Description of Target List.<br> This field is optional in any cases.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -385,8 +371,7 @@ public class RetargetingListServiceTargetingList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target List ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return targetListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストIDです。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">Target List ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -412,8 +397,7 @@ public class RetargetingListServiceTargetingList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリスト名です。&lt;br&gt; ADD時にこのフィールドは必須となり、SET時にこのフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target List name.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation.&lt;/div&gt; 
    * @return targetListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリスト名です。<br> ADD時にこのフィールドは必須となり、SET時にこのフィールドは省略可能となります。</div> <div lang=\"en\">Target List name.<br> This field is required in ADD operation, and is optional in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -439,8 +423,7 @@ public class RetargetingListServiceTargetingList {
    * Get targetListOwner
    * @return targetListOwner
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_OWNER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -466,8 +449,7 @@ public class RetargetingListServiceTargetingList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストのトラッキング用IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID of Target list.&lt;/div&gt; 
    * @return targetListTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストのトラッキング用IDです。</div> <div lang=\"en\">Tracking ID of Target list.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -493,8 +475,7 @@ public class RetargetingListServiceTargetingList {
    * Get targetListType
    * @return targetListType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -508,7 +489,6 @@ public class RetargetingListServiceTargetingList {
   public void setTargetListType(RetargetingListServiceTargetListType targetListType) {
     this.targetListType = targetListType;
   }
-
 
   @Override
   public boolean equals(Object o) {

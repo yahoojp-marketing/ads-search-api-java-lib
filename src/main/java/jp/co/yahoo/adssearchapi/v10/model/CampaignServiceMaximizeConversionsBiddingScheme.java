@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignServiceIsRemove;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceMaximizeConversionsBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。&lt;br&gt; ADD時、BiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceMaximizeConversionsBiddingScheme object displays Auto Bidding setting for Target CPA.&lt;br&gt; This field is required when BiddingStrategyType is &#39;MAXIMIZE_CONVERSIONS&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceMaximizeConversionsBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。<br> ADD時、BiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合、必須となり、それ以外では省略可能となります。</div> <div lang=\"en\">CampaignServiceMaximizeConversionsBiddingScheme object displays Auto Bidding setting for Target CPA.<br> This field is required when BiddingStrategyType is 'MAXIMIZE_CONVERSIONS' in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   CampaignServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_TARGET_CPA,
   CampaignServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_CPA
 })
-@JsonTypeName("CampaignServiceMaximizeConversionsBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceMaximizeConversionsBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
   private Long targetCpa;
@@ -43,7 +39,7 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_CPA = "isRemoveTargetCpa";
   private CampaignServiceIsRemove isRemoveTargetCpa;
 
-  public CampaignServiceMaximizeConversionsBiddingScheme() { 
+  public CampaignServiceMaximizeConversionsBiddingScheme() {
   }
 
   public CampaignServiceMaximizeConversionsBiddingScheme targetCpa(Long targetCpa) {
@@ -56,8 +52,7 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン単価の目標値です。&lt;br&gt; ※制限値：1 ～ 800000&lt;br&gt; ※日本円のみの設定です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target CPA (JPY).&lt;br&gt; * Range limit: 1 - 800000&lt;/div&gt; 
    * @return targetCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価の目標値です。<br> ※制限値：1 ～ 800000<br> ※日本円のみの設定です。</div> <div lang=\"en\">Target CPA (JPY).<br> * Range limit: 1 - 800000</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
    * Get isRemoveTargetCpa
    * @return isRemoveTargetCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
   public void setIsRemoveTargetCpa(CampaignServiceIsRemove isRemoveTargetCpa) {
     this.isRemoveTargetCpa = isRemoveTargetCpa;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告グループ費用対効果（tROAS）の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingScheme object holds configuration information of Target ROAS (tROAS) of ad group. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告グループ費用対効果（tROAS）の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceMaximizeConversionValueBiddingScheme object holds configuration information of Target ROAS (tROAS) of ad group. </div> ")
 @JsonPropertyOrder({
   AdGroupServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_TARGET_ROAS,
   AdGroupServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_ROAS
 })
-@JsonTypeName("AdGroupServiceMaximizeConversionValueBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceMaximizeConversionValueBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_ROAS = "targetRoas";
   private Double targetRoas;
@@ -43,7 +39,7 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_ROAS = "isRemoveTargetRoas";
   private AdGroupServiceIsRemoveFlg isRemoveTargetRoas;
 
-  public AdGroupServiceMaximizeConversionValueBiddingScheme() { 
+  public AdGroupServiceMaximizeConversionValueBiddingScheme() {
   }
 
   public AdGroupServiceMaximizeConversionValueBiddingScheme targetRoas(Double targetRoas) {
@@ -56,8 +52,7 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ費用対効果（tROAS）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ROAS (tROAS) of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *Limit range: 0.01 - 1000.00 (1% - 100000%)&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. &lt;/div&gt; 
    * @return targetRoas
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ費用対効果（tROAS）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※0.01 ～ 1000.00（1% ～ 100000%）の範囲内のみ 許容します。<br> ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合のみ指定可能です。 </div> <div lang=\"en\"> Target ROAS (tROAS) of ad group.<br> This field is optional in ADD and SET operation.<br> *Limit range: 0.01 - 1000.00 (1% - 100000%)<br> *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
    * Get isRemoveTargetRoas
    * @return isRemoveTargetRoas
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_ROAS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
   public void setIsRemoveTargetRoas(AdGroupServiceIsRemoveFlg isRemoveTargetRoas) {
     this.isRemoveTargetRoas = isRemoveTargetRoas;
   }
-
 
   @Override
   public boolean equals(Object o) {

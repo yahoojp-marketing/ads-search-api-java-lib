@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignCriterionServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceReturnValueオブジェクトは、操作結果を含むキャンペーンのクライテリアに関する情報のコンテナを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for campaign criteria including operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignCriterionServiceReturnValueオブジェクトは、操作結果を含むキャンペーンのクライテリアに関する情報のコンテナを表します。</div> <div lang=\"en\">Container for campaign criteria including operation results.</div> ")
 @JsonPropertyOrder({
   CampaignCriterionServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignCriterionServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignCriterionServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignCriterionServiceValue> values = null;
+  private List<CampaignCriterionServiceValue> values;
 
-  public CampaignCriterionServiceReturnValue() { 
+  public CampaignCriterionServiceReturnValue() {
   }
 
   public CampaignCriterionServiceReturnValue values(List<CampaignCriterionServiceValue> values) {
@@ -62,8 +58,7 @@ public class CampaignCriterionServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignCriterionServiceReturnValue {
   public void setValues(List<CampaignCriterionServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

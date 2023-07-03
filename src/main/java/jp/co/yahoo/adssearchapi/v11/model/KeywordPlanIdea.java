@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaオブジェクトは、提案結果のキーワードを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A container of keywords related to specified keyword.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaオブジェクトは、提案結果のキーワードを格納するコンテナです。</div> <div lang=\"en\">A container of keywords related to specified keyword.</div> ")
 @JsonPropertyOrder({
   KeywordPlanIdea.JSON_PROPERTY_TEXT
 })
-@JsonTypeName("KeywordPlanIdea")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordPlanIdea {
   public static final String JSON_PROPERTY_TEXT = "text";
   private String text;
 
-  public KeywordPlanIdea() { 
+  public KeywordPlanIdea() {
   }
 
   public KeywordPlanIdea text(String text) {
@@ -51,8 +47,7 @@ public class KeywordPlanIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Keyword&lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。</div> <div lang=\"en\">Keyword</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class KeywordPlanIdea {
   public void setText(String text) {
     this.text = text;
   }
-
 
   @Override
   public boolean equals(Object o) {

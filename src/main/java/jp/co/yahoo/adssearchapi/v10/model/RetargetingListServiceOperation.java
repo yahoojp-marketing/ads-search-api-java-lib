@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceTargetListOwner;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceOperationは、操作対象のターゲットリストを保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceOperation is an object that holds target retargeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceOperationは、操作対象のターゲットリストを保持するオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceOperation is an object that holds target retargeting.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   RetargetingListServiceOperation.JSON_PROPERTY_OPERAND,
   RetargetingListServiceOperation.JSON_PROPERTY_TARGET_LIST_OWNER
 })
-@JsonTypeName("RetargetingListServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<RetargetingListServiceTargetingList> operand = new ArrayList<>();
+  private List<RetargetingListServiceTargetingList> operand;
 
   public static final String JSON_PROPERTY_TARGET_LIST_OWNER = "targetListOwner";
   private RetargetingListServiceTargetListOwner targetListOwner;
 
-  public RetargetingListServiceOperation() { 
+  public RetargetingListServiceOperation() {
   }
 
   public RetargetingListServiceOperation accountId(Long accountId) {
@@ -63,8 +59,7 @@ public class RetargetingListServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -87,6 +82,9 @@ public class RetargetingListServiceOperation {
   }
 
   public RetargetingListServiceOperation addOperandItem(RetargetingListServiceTargetingList operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -95,8 +93,7 @@ public class RetargetingListServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -122,8 +119,7 @@ public class RetargetingListServiceOperation {
    * Get targetListOwner
    * @return targetListOwner
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_OWNER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -137,7 +133,6 @@ public class RetargetingListServiceOperation {
   public void setTargetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
     this.targetListOwner = targetListOwner;
   }
-
 
   @Override
   public boolean equals(Object o) {

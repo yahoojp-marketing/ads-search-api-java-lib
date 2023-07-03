@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.FeedItemServiceSchedule;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceSchedulingオブジェクトは、広告配信スケジュールを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceScheduling object describes ad display schedule.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedItemServiceSchedulingオブジェクトは、広告配信スケジュールを表します。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。</div> <div lang=\"en\">FeedItemServiceScheduling object describes ad display schedule.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.</div> ")
 @JsonPropertyOrder({
   FeedItemServiceScheduling.JSON_PROPERTY_SCHEDULES
 })
-@JsonTypeName("FeedItemServiceScheduling")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedItemServiceScheduling {
   public static final String JSON_PROPERTY_SCHEDULES = "schedules";
-  private List<FeedItemServiceSchedule> schedules = null;
+  private List<FeedItemServiceSchedule> schedules;
 
-  public FeedItemServiceScheduling() { 
+  public FeedItemServiceScheduling() {
   }
 
   public FeedItemServiceScheduling schedules(List<FeedItemServiceSchedule> schedules) {
@@ -62,8 +58,7 @@ public class FeedItemServiceScheduling {
    * Get schedules
    * @return schedules
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class FeedItemServiceScheduling {
   public void setSchedules(List<FeedItemServiceSchedule> schedules) {
     this.schedules = schedules;
   }
-
 
   @Override
   public boolean equals(Object o) {

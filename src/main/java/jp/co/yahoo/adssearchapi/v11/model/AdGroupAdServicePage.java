@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupAdServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServicePageオブジェクトは、取得される広告に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Entry of the ad.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServicePageオブジェクトは、取得される広告に関するエントリーを表します。</div> <div lang=\"en\">Entry of the ad.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   AdGroupAdServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupAdServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupAdServiceValue> values = null;
+  private List<AdGroupAdServiceValue> values;
 
-  public AdGroupAdServicePage() { 
+  public AdGroupAdServicePage() {
   }
 
   public AdGroupAdServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class AdGroupAdServicePage {
    * Get totalNumEntries
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class AdGroupAdServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class AdGroupAdServicePage {
   public void setValues(List<AdGroupAdServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignServiceBudgetAmountRange;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceSelectorオブジェクトは、操作の対象とするキャンペーンの情報およびフィルタ条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceSelector object displays information and filter criteria of campaign to be operated.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceSelectorオブジェクトは、操作の対象とするキャンペーンの情報およびフィルタ条件を表します。</div> <div lang=\"en\">CampaignServiceSelector object displays information and filter criteria of campaign to be operated.</div> ")
 @JsonPropertyOrder({
   CampaignServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   CampaignServiceSelector.JSON_PROPERTY_PORTFOLIO_BIDDING_IDS,
@@ -46,23 +43,22 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceSelector.JSON_PROPERTY_CREATED_DATE_RANGE,
   CampaignServiceSelector.JSON_PROPERTY_BUDGET_AMOUNT_RANGE
 })
-@JsonTypeName("CampaignServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_IDS = "portfolioBiddingIds";
-  private List<Long> portfolioBiddingIds = null;
+  private List<Long> portfolioBiddingIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_CONTAINS_LABEL = "containsLabel";
   private Boolean containsLabel;
 
   public static final String JSON_PROPERTY_LABEL_IDS = "labelIds";
-  private List<Long> labelIds = null;
+  private List<Long> labelIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -71,7 +67,7 @@ public class CampaignServiceSelector {
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
-  private List<CampaignServiceUserStatus> userStatuses = null;
+  private List<CampaignServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_CREATED_DATE_RANGE = "createdDateRange";
   private CampaignServiceCreatedDateRange createdDateRange;
@@ -79,7 +75,7 @@ public class CampaignServiceSelector {
   public static final String JSON_PROPERTY_BUDGET_AMOUNT_RANGE = "budgetAmountRange";
   private CampaignServiceBudgetAmountRange budgetAmountRange;
 
-  public CampaignServiceSelector() { 
+  public CampaignServiceSelector() {
   }
 
   public CampaignServiceSelector accountId(Long accountId) {
@@ -92,8 +88,7 @@ public class CampaignServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -127,8 +122,7 @@ public class CampaignServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ポートフォリオ入札IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Portfolio bidding ID.&lt;/div&gt; 
    * @return portfolioBiddingIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ポートフォリオ入札IDです。</div> <div lang=\"en\">Search condition: Portfolio bidding ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,8 +156,7 @@ public class CampaignServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：キャンペーンIDです。&lt;br&gt; ※指定しない場合は、フィルタ条件に すべてのキャンペーンが含まれます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign ID&lt;br&gt; * All campaign will return, if no campaign are not specified.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：キャンペーンIDです。<br> ※指定しない場合は、フィルタ条件に すべてのキャンペーンが含まれます。</div> <div lang=\"en\">Search condition: Campaign ID<br> * All campaign will return, if no campaign are not specified.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,8 +182,7 @@ public class CampaignServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベルID取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label ID.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
    * @return containsLabel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ラベルID取得フラグです。<br> このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 </div> <div lang=\"en\">Flag of contains label ID.<br> This field is optional. The default value will be false. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -224,8 +216,7 @@ public class CampaignServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ラベルIDです。&lt;br&gt; ※labelIdsを指定した場合は、取得結果にcontainsLabelの情報が付与されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Label ID.&lt;br&gt; *When specified labelIds, containsLabel information is added to the result.&lt;/div&gt; 
    * @return labelIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ラベルIDです。<br> ※labelIdsを指定した場合は、取得結果にcontainsLabelの情報が付与されます。</div> <div lang=\"en\">Search condition: Label ID.<br> *When specified labelIds, containsLabel information is added to the result.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LABEL_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -253,8 +244,7 @@ public class CampaignServiceSelector {
    * maximum: 10000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -281,8 +271,7 @@ public class CampaignServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -316,8 +305,7 @@ public class CampaignServiceSelector {
    * Get userStatuses
    * @return userStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -343,8 +331,7 @@ public class CampaignServiceSelector {
    * Get createdDateRange
    * @return createdDateRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CREATED_DATE_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -370,8 +357,7 @@ public class CampaignServiceSelector {
    * Get budgetAmountRange
    * @return budgetAmountRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BUDGET_AMOUNT_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -385,7 +371,6 @@ public class CampaignServiceSelector {
   public void setBudgetAmountRange(CampaignServiceBudgetAmountRange budgetAmountRange) {
     this.budgetAmountRange = budgetAmountRange;
   }
-
 
   @Override
   public boolean equals(Object o) {

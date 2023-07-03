@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedItemServiceDownloadJob;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceDownloadJobOperationオブジェクトは、ページフィードアイテムを一括でダウンロードするための処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceDownloadJobOperation object displays content of page feed item for download collectively.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceDownloadJobOperationオブジェクトは、ページフィードアイテムを一括でダウンロードするための処理の内容を表します。</div> <div lang=\"en\">PageFeedItemServiceDownloadJobOperation object displays content of page feed item for download collectively.</div> ")
 @JsonPropertyOrder({
   PageFeedItemServiceDownloadJobOperation.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedItemServiceDownloadJobOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("PageFeedItemServiceDownloadJobOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedItemServiceDownloadJobOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
-  private List<PageFeedItemServiceDownloadJob> operand = new ArrayList<>();
+  private List<PageFeedItemServiceDownloadJob> operand;
 
-  public PageFeedItemServiceDownloadJobOperation() { 
+  public PageFeedItemServiceDownloadJobOperation() {
   }
 
   public PageFeedItemServiceDownloadJobOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class PageFeedItemServiceDownloadJobOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,6 +77,9 @@ public class PageFeedItemServiceDownloadJobOperation {
   }
 
   public PageFeedItemServiceDownloadJobOperation addOperandItem(PageFeedItemServiceDownloadJob operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class PageFeedItemServiceDownloadJobOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class PageFeedItemServiceDownloadJobOperation {
   public void setOperand(List<PageFeedItemServiceDownloadJob> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

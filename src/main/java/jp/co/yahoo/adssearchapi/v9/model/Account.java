@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AccountServiceAuthType;
 import jp.co.yahoo.adssearchapi.v9.model.AccountServiceAutoTaggingEnabled;
 import jp.co.yahoo.adssearchapi.v9.model.AccountServiceDeliveryStatus;
@@ -35,7 +33,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Accountオブジェクトは、アカウントを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account object describes the account information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Accountオブジェクトは、アカウントを表します。</div> <div lang=\"en\">Account object describes the account information.</div> ")
 @JsonPropertyOrder({
   Account.JSON_PROPERTY_ACCOUNT_ID,
   Account.JSON_PROPERTY_ACCOUNT_NAME,
@@ -50,8 +47,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Account.JSON_PROPERTY_IS_MANAGER_ACCOUNT,
   Account.JSON_PROPERTY_CONTACT_BIZ_ID
 })
-@JsonTypeName("Account")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Account {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -89,7 +85,7 @@ public class Account {
   public static final String JSON_PROPERTY_CONTACT_BIZ_ID = "contactBizId";
   private String contactBizId;
 
-  public Account() { 
+  public Account() {
   }
 
   public Account accountId(Long accountId) {
@@ -102,8 +98,7 @@ public class Account {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> SET時、このフィールドは必須となります。</div> <div lang=\"en\">Account ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +124,7 @@ public class Account {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account Name.&lt;br&gt; This field is optional in SET operation.&lt;/div&gt; 
    * @return accountName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウント名です。<br> SET時、このフィールドは省略可能となります。</div> <div lang=\"en\">Account Name.<br> This field is optional in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +150,7 @@ public class Account {
    * Get accountStatus
    * @return accountStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -183,8 +176,7 @@ public class Account {
    * Get accountType
    * @return accountType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,8 +202,7 @@ public class Account {
    * Get authType
    * @return authType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUTH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -237,8 +228,7 @@ public class Account {
    * Get autoTaggingEnabled
    * @return autoTaggingEnabled
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUTO_TAGGING_ENABLED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -264,8 +254,7 @@ public class Account {
    * Get deliveryStatus
    * @return deliveryStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,8 +280,7 @@ public class Account {
    * Get isTestAccount
    * @return isTestAccount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_TEST_ACCOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -318,8 +306,7 @@ public class Account {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載開始日です。&lt;br&gt; 「yyyyMMdd」形式で表示されます。&lt;br&gt; SET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of ad serving.&lt;br&gt; This field will be ignored in SET operation.&lt;br&gt; It is displayed in &amp;#39;yyyyMMdd&amp;#39; format.&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">掲載開始日です。<br> 「yyyyMMdd」形式で表示されます。<br> SET時、このフィールドは無視されます。</div> <div lang=\"en\">Start date of ad serving.<br> This field will be ignored in SET operation.<br> It is displayed in &#39;yyyyMMdd&#39; format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -345,8 +332,7 @@ public class Account {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載終了日です。&lt;br&gt; SET時、このフィールドは無視されます。&lt;br&gt;「yyyyMMdd」形式で表示されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of ad serving.&lt;br&gt;This field will be ignored in SET operation.&lt;br&gt; It is displayed in &amp;#39;yyyyMMdd&amp;#39; format.&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">掲載終了日です。<br> SET時、このフィールドは無視されます。<br>「yyyyMMdd」形式で表示されます。</div> <div lang=\"en\">End date of ad serving.<br>This field will be ignored in SET operation.<br> It is displayed in &#39;yyyyMMdd&#39; format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -372,8 +358,7 @@ public class Account {
    * Get isManagerAccount
    * @return isManagerAccount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_MANAGER_ACCOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -399,8 +384,7 @@ public class Account {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のYahoo! JAPANビジネスIDです。&lt;br&gt; MCCアカウントの場合、このフィールドは返却されず、リクエストの際も無視されます。&lt;br&gt; テストアカウントの場合、このフィールドは更新できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact Business ID.&lt;br&gt; If isManagerAccount is \&quot;TRUE\&quot;, this field will not be returned and will be ignored on request.&lt;br&gt; If isTestAccount is \&quot;TRUE\&quot;, this field cannot be set.&lt;/div&gt; 
    * @return contactBizId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウント管理者のYahoo! JAPANビジネスIDです。<br> MCCアカウントの場合、このフィールドは返却されず、リクエストの際も無視されます。<br> テストアカウントの場合、このフィールドは更新できません。</div> <div lang=\"en\">Contact Business ID.<br> If isManagerAccount is \"TRUE\", this field will not be returned and will be ignored on request.<br> If isTestAccount is \"TRUE\", this field cannot be set.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTACT_BIZ_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -414,7 +398,6 @@ public class Account {
   public void setContactBizId(String contactBizId) {
     this.contactBizId = contactBizId;
   }
-
 
   @Override
   public boolean equals(Object o) {

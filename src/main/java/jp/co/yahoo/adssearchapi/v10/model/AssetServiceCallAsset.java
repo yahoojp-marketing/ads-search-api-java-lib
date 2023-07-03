@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AssetServiceSchedule;
@@ -31,14 +29,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCallAssetオブジェクトは、電話番号オプションのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCallAsset contains Asset value information for phone number options.&lt;br&gt; This field is optional in ADD operation. *If type is CALL, this field is required.&lt;br&gt;&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceCallAssetオブジェクトは、電話番号オプションのアセット情報を格納します。<br> ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。</div> <div lang=\"en\">AssetServiceCallAsset contains Asset value information for phone number options.<br> This field is optional in ADD operation. *If type is CALL, this field is required.<br></div> ")
 @JsonPropertyOrder({
   AssetServiceCallAsset.JSON_PROPERTY_PHONE_NUMBER,
   AssetServiceCallAsset.JSON_PROPERTY_REVIEW_PHONE_NUMBER,
   AssetServiceCallAsset.JSON_PROPERTY_SCHEDULES
 })
-@JsonTypeName("AssetServiceCallAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AssetServiceCallAsset {
   public static final String JSON_PROPERTY_PHONE_NUMBER = "phoneNumber";
   private String phoneNumber;
@@ -47,9 +43,9 @@ public class AssetServiceCallAsset {
   private String reviewPhoneNumber;
 
   public static final String JSON_PROPERTY_SCHEDULES = "schedules";
-  private List<AssetServiceSchedule> schedules = null;
+  private List<AssetServiceSchedule> schedules;
 
-  public AssetServiceCallAsset() { 
+  public AssetServiceCallAsset() {
   }
 
   public AssetServiceCallAsset phoneNumber(String phoneNumber) {
@@ -62,8 +58,7 @@ public class AssetServiceCallAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;電話番号です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Phone Number.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return phoneNumber
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">電話番号です。<br> ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Phone Number.<br> This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -89,8 +84,7 @@ public class AssetServiceCallAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の電話番号です。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Phone Number on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewPhoneNumber
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査中の電話番号です。<br> このフィールドは、リクエストの際には無視されます。<br> 審査中の間のみ、レスポンスの際に返却されます。</div> <div lang=\"en\">Phone Number on editorial review.<br> This field will be ignored on input.<br> It will be returned at the time of response only during the review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_PHONE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +118,7 @@ public class AssetServiceCallAsset {
    * Get schedules
    * @return schedules
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +132,6 @@ public class AssetServiceCallAsset {
   public void setSchedules(List<AssetServiceSchedule> schedules) {
     this.schedules = schedules;
   }
-
 
   @Override
   public boolean equals(Object o) {

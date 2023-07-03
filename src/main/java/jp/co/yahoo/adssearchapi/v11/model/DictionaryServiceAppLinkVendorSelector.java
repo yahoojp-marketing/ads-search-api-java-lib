@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceAppLinkVendorSelectorオブジェクトは、 アプリ計測ベンダー情報一覧取得のリクエストを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceAppLinkVendorSelectorobject is a containter that stores the request to get the App measurement vendor information list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceAppLinkVendorSelectorオブジェクトは、 アプリ計測ベンダー情報一覧取得のリクエストを格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceAppLinkVendorSelectorobject is a containter that stores the request to get the App measurement vendor information list.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceAppLinkVendorSelector.JSON_PROPERTY_START_INDEX,
   DictionaryServiceAppLinkVendorSelector.JSON_PROPERTY_NUMBER_RESULTS
 })
-@JsonTypeName("DictionaryServiceAppLinkVendorSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceAppLinkVendorSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
@@ -42,7 +38,7 @@ public class DictionaryServiceAppLinkVendorSelector {
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults;
 
-  public DictionaryServiceAppLinkVendorSelector() { 
+  public DictionaryServiceAppLinkVendorSelector() {
   }
 
   public DictionaryServiceAppLinkVendorSelector startIndex(Integer startIndex) {
@@ -56,8 +52,7 @@ public class DictionaryServiceAppLinkVendorSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class DictionaryServiceAppLinkVendorSelector {
    * minimum: 1
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,7 +93,6 @@ public class DictionaryServiceAppLinkVendorSelector {
   public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
-
 
   @Override
   public boolean equals(Object o) {

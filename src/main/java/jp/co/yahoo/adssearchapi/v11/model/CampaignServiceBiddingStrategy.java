@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignServiceBiddingScheme;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignServiceBiddingStrategySource;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceBiddingStrategyオブジェクトは、自動入札設定方法を表します。&lt;br&gt; ADD時、biddingStrategyConfigurationは必須となります。また、failedBiddingStrategyConfigurationはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceBiddingStrategy object describes Auto Bidding setting.&lt;br&gt; biddingStrategyConfiguration is required in ADD operation. Although failedBiddingStrategyConfiguration will be returned in the response, it will be ignored on input.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceBiddingStrategyオブジェクトは、自動入札設定方法を表します。<br> ADD時、biddingStrategyConfigurationは必須となります。また、failedBiddingStrategyConfigurationはレスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">CampaignServiceBiddingStrategy object describes Auto Bidding setting.<br> biddingStrategyConfiguration is required in ADD operation. Although failedBiddingStrategyConfiguration will be returned in the response, it will be ignored on input.</div> ")
 @JsonPropertyOrder({
   CampaignServiceBiddingStrategy.JSON_PROPERTY_BIDDING_SCHEME,
   CampaignServiceBiddingStrategy.JSON_PROPERTY_PORTFOLIO_BIDDING_ID,
   CampaignServiceBiddingStrategy.JSON_PROPERTY_PORTFOLIO_BIDDING_NAME,
   CampaignServiceBiddingStrategy.JSON_PROPERTY_BIDDING_STRATEGY_SOURCE
 })
-@JsonTypeName("CampaignServiceBiddingStrategy")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceBiddingStrategy {
   public static final String JSON_PROPERTY_BIDDING_SCHEME = "biddingScheme";
   private CampaignServiceBiddingScheme biddingScheme;
@@ -52,7 +48,7 @@ public class CampaignServiceBiddingStrategy {
   public static final String JSON_PROPERTY_BIDDING_STRATEGY_SOURCE = "biddingStrategySource";
   private CampaignServiceBiddingStrategySource biddingStrategySource;
 
-  public CampaignServiceBiddingStrategy() { 
+  public CampaignServiceBiddingStrategy() {
   }
 
   public CampaignServiceBiddingStrategy biddingScheme(CampaignServiceBiddingScheme biddingScheme) {
@@ -65,8 +61,7 @@ public class CampaignServiceBiddingStrategy {
    * Get biddingScheme
    * @return biddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,8 +87,7 @@ public class CampaignServiceBiddingStrategy {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札IDです。&lt;br&gt; ADD時、標準入札設定の場合、このフィールドは設定不可となり、ポートフォリオ入札設定の場合、必須となります。また、biddingSchemeと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding ID.&lt;br&gt; This field cannot be specified when Standard bidding is setting, and is required when Portfolio bidding is setting in ADD operation. It cannot be specified at the same times as biddingScheme.&lt;/div&gt; 
    * @return portfolioBiddingId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ポートフォリオ入札IDです。<br> ADD時、標準入札設定の場合、このフィールドは設定不可となり、ポートフォリオ入札設定の場合、必須となります。また、biddingSchemeと同時に設定することはできません。</div> <div lang=\"en\">Portfolio bidding ID.<br> This field cannot be specified when Standard bidding is setting, and is required when Portfolio bidding is setting in ADD operation. It cannot be specified at the same times as biddingScheme.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,8 +113,7 @@ public class CampaignServiceBiddingStrategy {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札名です。&lt;br&gt; ADD時、このフィールドは無視されます。&lt;br&gt; ※50文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding name.&lt;br&gt; This field will be ignored in ADD operation.&lt;br&gt;* Up to 50 characters.&lt;/div&gt; 
    * @return portfolioBiddingName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ポートフォリオ入札名です。<br> ADD時、このフィールドは無視されます。<br> ※50文字以内になります。</div> <div lang=\"en\">Portfolio bidding name.<br> This field will be ignored in ADD operation.<br>* Up to 50 characters.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,8 +139,7 @@ public class CampaignServiceBiddingStrategy {
    * Get biddingStrategySource
    * @return biddingStrategySource
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_SOURCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,7 +153,6 @@ public class CampaignServiceBiddingStrategy {
   public void setBiddingStrategySource(CampaignServiceBiddingStrategySource biddingStrategySource) {
     this.biddingStrategySource = biddingStrategySource;
   }
-
 
   @Override
   public boolean equals(Object o) {

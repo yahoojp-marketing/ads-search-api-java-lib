@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceSelectorオブジェクトは、取得する条件を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceSelector object contains the rules to be acquired.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceSelectorオブジェクトは、取得する条件を保持します。</div> <div lang=\"en\">AdGroupWebpageServiceSelector object contains the rules to be acquired.</div> ")
 @JsonPropertyOrder({
   AdGroupWebpageServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupWebpageServiceSelector.JSON_PROPERTY_AD_GROUP_IDS,
@@ -39,17 +36,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupWebpageServiceSelector.JSON_PROPERTY_START_INDEX,
   AdGroupWebpageServiceSelector.JSON_PROPERTY_TARGET_IDS
 })
-@JsonTypeName("AdGroupWebpageServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupWebpageServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
-  private List<Long> adGroupIds = null;
+  private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -58,9 +54,9 @@ public class AdGroupWebpageServiceSelector {
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_TARGET_IDS = "targetIds";
-  private List<Long> targetIds = null;
+  private List<Long> targetIds;
 
-  public AdGroupWebpageServiceSelector() { 
+  public AdGroupWebpageServiceSelector() {
   }
 
   public AdGroupWebpageServiceSelector accountId(Long accountId) {
@@ -73,8 +69,7 @@ public class AdGroupWebpageServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -108,8 +103,7 @@ public class AdGroupWebpageServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroup ID&lt;/div&gt; 
    * @return adGroupIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループID</div> <div lang=\"en\">AdGroup ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -143,8 +137,7 @@ public class AdGroupWebpageServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンID</div> <div lang=\"en\">Campaign ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,8 +165,7 @@ public class AdGroupWebpageServiceSelector {
    * maximum: 2000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -200,8 +192,7 @@ public class AdGroupWebpageServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -235,8 +226,7 @@ public class AdGroupWebpageServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信/除外設定を識別するID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Unique ID to identify &amp;#39;Allow&amp;#39; or &amp;#39;Exclude&amp;#39; settings&lt;/div&gt; 
    * @return targetIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">配信/除外設定を識別するID</div> <div lang=\"en\">Unique ID to identify &#39;Allow&#39; or &#39;Exclude&#39; settings</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -250,7 +240,6 @@ public class AdGroupWebpageServiceSelector {
   public void setTargetIds(List<Long> targetIds) {
     this.targetIds = targetIds;
   }
-
 
   @Override
   public boolean equals(Object o) {

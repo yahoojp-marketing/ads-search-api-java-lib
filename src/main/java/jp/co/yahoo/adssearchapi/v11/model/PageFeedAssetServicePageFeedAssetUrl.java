@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.PageFeedAssetServiceMatchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServicePageFeedAssetUrlオブジェクトは、ページフィードアセットURL検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServicePageFeedAssetUrl object stores search condition of page feed asset URL.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedAssetServicePageFeedAssetUrlオブジェクトは、ページフィードアセットURL検索条件を格納します。</div> <div lang=\"en\">PageFeedAssetServicePageFeedAssetUrl object stores search condition of page feed asset URL.</div> ")
 @JsonPropertyOrder({
   PageFeedAssetServicePageFeedAssetUrl.JSON_PROPERTY_MATCH_TYPE,
   PageFeedAssetServicePageFeedAssetUrl.JSON_PROPERTY_TEXT
 })
-@JsonTypeName("PageFeedAssetServicePageFeedAssetUrl")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedAssetServicePageFeedAssetUrl {
   public static final String JSON_PROPERTY_MATCH_TYPE = "matchType";
   private PageFeedAssetServiceMatchType matchType;
@@ -43,7 +39,7 @@ public class PageFeedAssetServicePageFeedAssetUrl {
   public static final String JSON_PROPERTY_TEXT = "text";
   private String text;
 
-  public PageFeedAssetServicePageFeedAssetUrl() { 
+  public PageFeedAssetServicePageFeedAssetUrl() {
   }
 
   public PageFeedAssetServicePageFeedAssetUrl matchType(PageFeedAssetServiceMatchType matchType) {
@@ -56,8 +52,7 @@ public class PageFeedAssetServicePageFeedAssetUrl {
    * Get matchType
    * @return matchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class PageFeedAssetServicePageFeedAssetUrl {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットのURL&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Url of page feed asset.&lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページフィードアセットのURL</div> <div lang=\"en\">Url of page feed asset.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class PageFeedAssetServicePageFeedAssetUrl {
   public void setText(String text) {
     this.text = text;
   }
-
 
   @Override
   public boolean equals(Object o) {

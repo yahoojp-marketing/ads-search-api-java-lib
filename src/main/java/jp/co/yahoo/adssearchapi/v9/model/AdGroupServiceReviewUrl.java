@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupServiceCustomParameter;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceReviewUrlオブジェクトは、トラッキングURLとカスタムパラメータを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceReviewUrl object siplays the Tracking URL and Custom Parameter.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceReviewUrlオブジェクトは、トラッキングURLとカスタムパラメータを表します。</div> <div lang=\"en\">AdGroupServiceReviewUrl object siplays the Tracking URL and Custom Parameter.</div> ")
 @JsonPropertyOrder({
   AdGroupServiceReviewUrl.JSON_PROPERTY_PARAMETERS,
   AdGroupServiceReviewUrl.JSON_PROPERTY_TRACKING_URL
 })
-@JsonTypeName("AdGroupServiceReviewUrl")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceReviewUrl {
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
-  private List<AdGroupServiceCustomParameter> parameters = null;
+  private List<AdGroupServiceCustomParameter> parameters;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
   private String trackingUrl;
 
-  public AdGroupServiceReviewUrl() { 
+  public AdGroupServiceReviewUrl() {
   }
 
   public AdGroupServiceReviewUrl parameters(List<AdGroupServiceCustomParameter> parameters) {
@@ -66,8 +62,7 @@ public class AdGroupServiceReviewUrl {
    * Get parameters
    * @return parameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class AdGroupServiceReviewUrl {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。</div> <div lang=\"en\">Tracking URL.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class AdGroupServiceReviewUrl {
   public void setTrackingUrl(String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
-
 
   @Override
   public boolean equals(Object o) {

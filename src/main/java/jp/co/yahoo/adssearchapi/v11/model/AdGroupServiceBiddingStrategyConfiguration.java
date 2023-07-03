@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupServiceBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceBiddingStrategyConfigurationオブジェクトは、自動入札設定方法を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceBiddingStrategyConfiguration object describes Auto Bidding setting.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceBiddingStrategyConfigurationオブジェクトは、自動入札設定方法を表します。<br> </div> <div lang=\"en\">AdGroupServiceBiddingStrategyConfiguration object describes Auto Bidding setting.<br> </div> ")
 @JsonPropertyOrder({
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_BIDDING_SCHEME,
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_PORTFOLIO_BIDDING_ID,
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_PORTFOLIO_BIDDING_NAME
 })
-@JsonTypeName("AdGroupServiceBiddingStrategyConfiguration")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceBiddingStrategyConfiguration {
   public static final String JSON_PROPERTY_BIDDING_SCHEME = "biddingScheme";
   private AdGroupServiceBiddingScheme biddingScheme;
@@ -47,7 +43,7 @@ public class AdGroupServiceBiddingStrategyConfiguration {
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_NAME = "portfolioBiddingName";
   private String portfolioBiddingName;
 
-  public AdGroupServiceBiddingStrategyConfiguration() { 
+  public AdGroupServiceBiddingStrategyConfiguration() {
   }
 
   public AdGroupServiceBiddingStrategyConfiguration biddingScheme(AdGroupServiceBiddingScheme biddingScheme) {
@@ -60,8 +56,7 @@ public class AdGroupServiceBiddingStrategyConfiguration {
    * Get biddingScheme
    * @return biddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class AdGroupServiceBiddingStrategyConfiguration {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return portfolioBiddingId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ポートフォリオ入札IDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Portfolio bidding ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class AdGroupServiceBiddingStrategyConfiguration {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札名です。&lt;br&gt; ADD時、このフィールドは無視されます。&lt;br&gt; ※50文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding name.&lt;br&gt; This field will be ignored in ADD operation.&lt;br&gt;* Up to 50 characters.&lt;/div&gt; 
    * @return portfolioBiddingName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ポートフォリオ入札名です。<br> ADD時、このフィールドは無視されます。<br> ※50文字以内になります。</div> <div lang=\"en\">Portfolio bidding name.<br> This field will be ignored in ADD operation.<br>* Up to 50 characters.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class AdGroupServiceBiddingStrategyConfiguration {
   public void setPortfolioBiddingName(String portfolioBiddingName) {
     this.portfolioBiddingName = portfolioBiddingName;
   }
-
 
   @Override
   public boolean equals(Object o) {

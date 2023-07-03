@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedAssetSetServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetSetServiceReturnValueは、操作結果を含むページフィードアセットセットのコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSetReturn contains the result value of page feed asset set.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedAssetSetServiceReturnValueは、操作結果を含むページフィードアセットセットのコンテナです。</div> <div lang=\"en\">PageFeedAssetSetReturn contains the result value of page feed asset set.</div> ")
 @JsonPropertyOrder({
   PageFeedAssetSetServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("PageFeedAssetSetServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedAssetSetServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<PageFeedAssetSetServiceValue> values = null;
+  private List<PageFeedAssetSetServiceValue> values;
 
-  public PageFeedAssetSetServiceReturnValue() { 
+  public PageFeedAssetSetServiceReturnValue() {
   }
 
   public PageFeedAssetSetServiceReturnValue values(List<PageFeedAssetSetServiceValue> values) {
@@ -62,8 +58,7 @@ public class PageFeedAssetSetServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class PageFeedAssetSetServiceReturnValue {
   public void setValues(List<PageFeedAssetSetServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

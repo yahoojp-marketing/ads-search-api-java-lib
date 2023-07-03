@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.ReportDefinitionServiceReportJobStatus;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionServiceSelectorオブジェクトは、操作の対象とするレポートです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ReportDefinitionServiceSelector is a detail of requested report.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ReportDefinitionServiceSelectorオブジェクトは、操作の対象とするレポートです。</div> <div lang=\"en\">ReportDefinitionServiceSelector is a detail of requested report.</div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   ReportDefinitionServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceSelector.JSON_PROPERTY_REPORT_TYPES,
   ReportDefinitionServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("ReportDefinitionServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -51,18 +47,18 @@ public class ReportDefinitionServiceSelector {
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_REPORT_JOB_IDS = "reportJobIds";
-  private List<Long> reportJobIds = null;
+  private List<Long> reportJobIds;
 
   public static final String JSON_PROPERTY_REPORT_JOB_STATUSES = "reportJobStatuses";
-  private List<ReportDefinitionServiceReportJobStatus> reportJobStatuses = null;
+  private List<ReportDefinitionServiceReportJobStatus> reportJobStatuses;
 
   public static final String JSON_PROPERTY_REPORT_TYPES = "reportTypes";
-  private List<ReportDefinitionServiceReportType> reportTypes = null;
+  private List<ReportDefinitionServiceReportType> reportTypes;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public ReportDefinitionServiceSelector() { 
+  public ReportDefinitionServiceSelector() {
   }
 
   public ReportDefinitionServiceSelector accountId(Long accountId) {
@@ -75,8 +71,7 @@ public class ReportDefinitionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件： アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件： アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -104,8 +99,7 @@ public class ReportDefinitionServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,8 +133,7 @@ public class ReportDefinitionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件： レポートジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Report Job ID.&lt;/div&gt; 
    * @return reportJobIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件： レポートジョブIDです。</div> <div lang=\"en\">Search condition: Report Job ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_JOB_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,8 +167,7 @@ public class ReportDefinitionServiceSelector {
    * Get reportJobStatuses
    * @return reportJobStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_JOB_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -209,8 +201,7 @@ public class ReportDefinitionServiceSelector {
    * Get reportTypes
    * @return reportTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -237,8 +228,7 @@ public class ReportDefinitionServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -252,7 +242,6 @@ public class ReportDefinitionServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

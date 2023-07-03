@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,17 +28,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountTrackingUrlServiceSelectorオブジェクトは、アカウントトラッキング情報のget処理の検索条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountTrackingUrlServiceSelector object describes the account tracking details.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountTrackingUrlServiceSelectorオブジェクトは、アカウントトラッキング情報のget処理の検索条件を表します。</div> <div lang=\"en\">AccountTrackingUrlServiceSelector object describes the account tracking details.</div> ")
 @JsonPropertyOrder({
   AccountTrackingUrlServiceSelector.JSON_PROPERTY_ACCOUNT_IDS,
   AccountTrackingUrlServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AccountTrackingUrlServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AccountTrackingUrlServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountTrackingUrlServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_IDS = "accountIds";
-  private List<Long> accountIds = null;
+  private List<Long> accountIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 1000;
@@ -48,7 +44,7 @@ public class AccountTrackingUrlServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AccountTrackingUrlServiceSelector() { 
+  public AccountTrackingUrlServiceSelector() {
   }
 
   public AccountTrackingUrlServiceSelector accountIds(List<Long> accountIds) {
@@ -69,8 +65,7 @@ public class AccountTrackingUrlServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class AccountTrackingUrlServiceSelector {
    * maximum: 1000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class AccountTrackingUrlServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,7 +134,6 @@ public class AccountTrackingUrlServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

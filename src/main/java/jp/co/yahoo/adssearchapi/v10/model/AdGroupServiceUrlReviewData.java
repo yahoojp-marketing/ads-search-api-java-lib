@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupServiceReviewUrl;
@@ -32,18 +30,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceUrlReviewDataオブジェクトは、URLの審査状況を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceUrlReviewData object displays review status of URL.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceUrlReviewDataオブジェクトは、URLの審査状況を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">AdGroupServiceUrlReviewData object displays review status of URL.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 @JsonPropertyOrder({
   AdGroupServiceUrlReviewData.JSON_PROPERTY_DISAPPROVAL_REASON_CODES,
   AdGroupServiceUrlReviewData.JSON_PROPERTY_DISAPPROVAL_REVIEW_URL,
   AdGroupServiceUrlReviewData.JSON_PROPERTY_IN_REVIEW_URL,
   AdGroupServiceUrlReviewData.JSON_PROPERTY_URL_APPROVAL_STATUS
 })
-@JsonTypeName("AdGroupServiceUrlReviewData")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceUrlReviewData {
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REVIEW_URL = "disapprovalReviewUrl";
   private AdGroupServiceReviewUrl disapprovalReviewUrl;
@@ -54,7 +50,7 @@ public class AdGroupServiceUrlReviewData {
   public static final String JSON_PROPERTY_URL_APPROVAL_STATUS = "urlApprovalStatus";
   private AdGroupServiceUrlApprovalStatus urlApprovalStatus;
 
-  public AdGroupServiceUrlReviewData() { 
+  public AdGroupServiceUrlReviewData() {
   }
 
   public AdGroupServiceUrlReviewData disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
@@ -75,8 +71,7 @@ public class AdGroupServiceUrlReviewData {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Code of Disapproval reason.&lt;br&gt;&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コードです。</div> <div lang=\"en\">Code of Disapproval reason.<br></div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,8 +97,7 @@ public class AdGroupServiceUrlReviewData {
    * Get disapprovalReviewUrl
    * @return disapprovalReviewUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REVIEW_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +123,7 @@ public class AdGroupServiceUrlReviewData {
    * Get inReviewUrl
    * @return inReviewUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IN_REVIEW_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +149,7 @@ public class AdGroupServiceUrlReviewData {
    * Get urlApprovalStatus
    * @return urlApprovalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,7 +163,6 @@ public class AdGroupServiceUrlReviewData {
   public void setUrlApprovalStatus(AdGroupServiceUrlApprovalStatus urlApprovalStatus) {
     this.urlApprovalStatus = urlApprovalStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

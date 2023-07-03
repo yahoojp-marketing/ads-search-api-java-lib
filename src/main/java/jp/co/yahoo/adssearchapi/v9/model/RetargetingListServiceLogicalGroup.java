@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.RetargetingListServiceLogicalCondition;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalGroupは、組合せグループの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalGroup is an object that holds combination group information.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceLogicalGroupは、組合せグループの情報を保持するオブジェクトです。<br> このフィールドは、ADDおよびSET時に必須となります。</div> <div lang=\"en\">RetargetingListServiceLogicalGroup is an object that holds combination group information.<br> This field is required in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceLogicalGroup.JSON_PROPERTY_LOGICAL_CONDITION,
   RetargetingListServiceLogicalGroup.JSON_PROPERTY_LOGICAL_OPERAND
 })
-@JsonTypeName("RetargetingListServiceLogicalGroup")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceLogicalGroup {
   public static final String JSON_PROPERTY_LOGICAL_CONDITION = "logicalCondition";
   private RetargetingListServiceLogicalCondition logicalCondition;
 
   public static final String JSON_PROPERTY_LOGICAL_OPERAND = "logicalOperand";
-  private List<RetargetingListServiceLogicalRuleOperand> logicalOperand = null;
+  private List<RetargetingListServiceLogicalRuleOperand> logicalOperand;
 
-  public RetargetingListServiceLogicalGroup() { 
+  public RetargetingListServiceLogicalGroup() {
   }
 
   public RetargetingListServiceLogicalGroup logicalCondition(RetargetingListServiceLogicalCondition logicalCondition) {
@@ -59,8 +55,7 @@ public class RetargetingListServiceLogicalGroup {
    * Get logicalCondition
    * @return logicalCondition
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGICAL_CONDITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class RetargetingListServiceLogicalGroup {
    * Get logicalOperand
    * @return logicalOperand
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGICAL_OPERAND)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class RetargetingListServiceLogicalGroup {
   public void setLogicalOperand(List<RetargetingListServiceLogicalRuleOperand> logicalOperand) {
     this.logicalOperand = logicalOperand;
   }
-
 
   @Override
   public boolean equals(Object o) {

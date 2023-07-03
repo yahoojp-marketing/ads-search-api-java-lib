@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupServiceTargetAll;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceTargetingSettingは、ターゲット設定を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceTargetingSetting is object that holds target setting.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceTargetingSettingは、ターゲット設定を保持するオブジェクトです。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupServiceTargetingSetting is object that holds target setting.<br> This field is optional in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   AdGroupServiceTargetingSetting.JSON_PROPERTY_TARGET_ALL
 })
-@JsonTypeName("AdGroupServiceTargetingSetting")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceTargetingSetting {
   public static final String JSON_PROPERTY_TARGET_ALL = "targetAll";
   private AdGroupServiceTargetAll targetAll;
 
-  public AdGroupServiceTargetingSetting() { 
+  public AdGroupServiceTargetingSetting() {
   }
 
   public AdGroupServiceTargetingSetting targetAll(AdGroupServiceTargetAll targetAll) {
@@ -52,8 +48,7 @@ public class AdGroupServiceTargetingSetting {
    * Get targetAll
    * @return targetAll
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ALL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class AdGroupServiceTargetingSetting {
   public void setTargetAll(AdGroupServiceTargetAll targetAll) {
     this.targetAll = targetAll;
   }
-
 
   @Override
   public boolean equals(Object o) {

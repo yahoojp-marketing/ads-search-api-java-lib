@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupRetargetingListServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListServiceReturnValueは、広告グループレベルでのターゲットリスト設定の実行結果（全Entityのリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingListServiceReturnValue is an object that holds results (list of all entity).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupRetargetingListServiceReturnValueは、広告グループレベルでのターゲットリスト設定の実行結果（全Entityのリスト）を保持するオブジェクトです。</div> <div lang=\"en\">AdGroupRetargetingListServiceReturnValue is an object that holds results (list of all entity).</div> ")
 @JsonPropertyOrder({
   AdGroupRetargetingListServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupRetargetingListServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupRetargetingListServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupRetargetingListServiceValue> values = null;
+  private List<AdGroupRetargetingListServiceValue> values;
 
-  public AdGroupRetargetingListServiceReturnValue() { 
+  public AdGroupRetargetingListServiceReturnValue() {
   }
 
   public AdGroupRetargetingListServiceReturnValue values(List<AdGroupRetargetingListServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupRetargetingListServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupRetargetingListServiceReturnValue {
   public void setValues(List<AdGroupRetargetingListServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

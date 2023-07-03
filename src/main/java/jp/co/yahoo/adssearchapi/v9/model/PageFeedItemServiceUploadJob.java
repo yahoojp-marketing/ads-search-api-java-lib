@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedItemServiceUploadJobStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceUploadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceUploadJob object retains contents of page feed item information for upload.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceUploadJobオブジェクトは、ページフィードアイテム情報をダウンロードする処理内容を格納します。</div> <div lang=\"en\">PageFeedItemServiceUploadJob object retains contents of page feed item information for upload.</div> ")
 @JsonPropertyOrder({
   PageFeedItemServiceUploadJob.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedItemServiceUploadJob.JSON_PROPERTY_END_DATE,
@@ -42,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedItemServiceUploadJob.JSON_PROPERTY_START_DATE,
   PageFeedItemServiceUploadJob.JSON_PROPERTY_UPLOAD_JOB_STATUS
 })
-@JsonTypeName("PageFeedItemServiceUploadJob")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedItemServiceUploadJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -55,7 +51,7 @@ public class PageFeedItemServiceUploadJob {
   private Integer errorCount;
 
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
-  private List<Long> feedIds = null;
+  private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_JOB_ID = "jobId";
   private Long jobId;
@@ -69,7 +65,7 @@ public class PageFeedItemServiceUploadJob {
   public static final String JSON_PROPERTY_UPLOAD_JOB_STATUS = "uploadJobStatus";
   private PageFeedItemServiceUploadJobStatus uploadJobStatus;
 
-  public PageFeedItemServiceUploadJob() { 
+  public PageFeedItemServiceUploadJob() {
   }
 
   public PageFeedItemServiceUploadJob accountId(Long accountId) {
@@ -82,8 +78,7 @@ public class PageFeedItemServiceUploadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,8 +104,7 @@ public class PageFeedItemServiceUploadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの終了日&lt;br&gt; 形式：yyyyMMddHHmmss&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of job&lt;br&gt; Format:yyyyMMddHHmmss&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの終了日<br> 形式：yyyyMMddHHmmss</div> <div lang=\"en\">End date of job<br> Format:yyyyMMddHHmmss</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,8 +130,7 @@ public class PageFeedItemServiceUploadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エラーの件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;count of error occured&lt;/div&gt; 
    * @return errorCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">エラーの件数</div> <div lang=\"en\">count of error occured</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERROR_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,8 +164,7 @@ public class PageFeedItemServiceUploadJob {
    * Get feedIds
    * @return feedIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,8 +190,7 @@ public class PageFeedItemServiceUploadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Job ID.&lt;/div&gt; 
    * @return jobId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブID</div> <div lang=\"en\">Job ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -225,8 +216,7 @@ public class PageFeedItemServiceUploadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの進捗状況&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Progress of page feed item job&lt;/div&gt; 
    * @return progress
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの進捗状況</div> <div lang=\"en\">Progress of page feed item job</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PROGRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -252,8 +242,7 @@ public class PageFeedItemServiceUploadJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの開始日&lt;br&gt; 形式：yyyyMMddHHmmss&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of job&lt;br&gt; Format:yyyyMMddHHmmss&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブの開始日<br> 形式：yyyyMMddHHmmss</div> <div lang=\"en\">Start date of job<br> Format:yyyyMMddHHmmss</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,8 +268,7 @@ public class PageFeedItemServiceUploadJob {
    * Get uploadJobStatus
    * @return uploadJobStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_JOB_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -294,7 +282,6 @@ public class PageFeedItemServiceUploadJob {
   public void setUploadJobStatus(PageFeedItemServiceUploadJobStatus uploadJobStatus) {
     this.uploadJobStatus = uploadJobStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

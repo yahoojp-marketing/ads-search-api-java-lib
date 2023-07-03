@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupAdServiceAppStore;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceAppAdオブジェクトは、アプリ向けの広告です。&lt;br&gt; ADD時、このフィールドは省略可能となります。※adTypeがAPP_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceAppAd object is for Mobile App ads.&lt;br&gt; This field is optional in ADD operation. *If adType is APP_AD, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceAppAdオブジェクトは、アプリ向けの広告です。<br> ADD時、このフィールドは省略可能となります。※adTypeがAPP_ADの場合は必須です。</div> <div lang=\"en\">AdGroupAdServiceAppAd object is for Mobile App ads.<br> This field is optional in ADD operation. *If adType is APP_AD, this field is required.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceAppAd.JSON_PROPERTY_APP_ID,
   AdGroupAdServiceAppAd.JSON_PROPERTY_APP_STORE,
   AdGroupAdServiceAppAd.JSON_PROPERTY_DESCRIPTION2
 })
-@JsonTypeName("AdGroupAdServiceAppAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceAppAd {
   public static final String JSON_PROPERTY_APP_ID = "appId";
   private String appId;
@@ -47,7 +43,7 @@ public class AdGroupAdServiceAppAd {
   public static final String JSON_PROPERTY_DESCRIPTION2 = "description2";
   private String description2;
 
-  public AdGroupAdServiceAppAd() { 
+  public AdGroupAdServiceAppAd() {
   }
 
   public AdGroupAdServiceAppAd appId(String appId) {
@@ -60,8 +56,7 @@ public class AdGroupAdServiceAppAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリIDです。&lt;br&gt; ※アプリキャンペーンの 場合、自動で設定され ます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App ID.&lt;br&gt; *Automatically set for Mobile app campaign.&lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリIDです。<br> ※アプリキャンペーンの 場合、自動で設定され ます。</div> <div lang=\"en\">App ID.<br> *Automatically set for Mobile app campaign.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class AdGroupAdServiceAppAd {
    * Get appStore
    * @return appStore
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_STORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class AdGroupAdServiceAppAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文（2行目）2です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description2 (line2) of the ad.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return description2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文（2行目）2です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Description2 (line2) of the ad.<br> This field is required in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class AdGroupAdServiceAppAd {
   public void setDescription2(String description2) {
     this.description2 = description2;
   }
-
 
   @Override
   public boolean equals(Object o) {

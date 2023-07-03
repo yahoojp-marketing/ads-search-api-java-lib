@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.FeedServiceAttribute;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Feedオブジェクトは、自動データ挿入のリストを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed object is the list of Data elements on auto data insertion.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Feedオブジェクトは、自動データ挿入のリストを格納します。</div> <div lang=\"en\">Feed object is the list of Data elements on auto data insertion.</div> ")
 @JsonPropertyOrder({
   Feed.JSON_PROPERTY_ACCOUNT_ID,
   Feed.JSON_PROPERTY_DOMAIN,
@@ -42,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Feed.JSON_PROPERTY_FEED_TRACK_ID,
   Feed.JSON_PROPERTY_PLACEHOLDER_TYPE
 })
-@JsonTypeName("Feed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Feed {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -52,7 +48,7 @@ public class Feed {
   private String domain;
 
   public static final String JSON_PROPERTY_FEED_ATTRIBUTE = "feedAttribute";
-  private List<FeedServiceAttribute> feedAttribute = null;
+  private List<FeedServiceAttribute> feedAttribute;
 
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
   private Long feedId;
@@ -66,7 +62,7 @@ public class Feed {
   public static final String JSON_PROPERTY_PLACEHOLDER_TYPE = "placeholderType";
   private FeedServicePlaceholderType placeholderType;
 
-  public Feed() { 
+  public Feed() {
   }
 
   public Feed accountId(Long accountId) {
@@ -79,8 +75,7 @@ public class Feed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; ※入稿の仕様変更により不要になりました。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; *Not required by design change on editorials.　&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> ※入稿の仕様変更により不要になりました。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Account ID.<br> *Not required by design change on editorials.　<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,8 +101,7 @@ public class Feed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ドメインです。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Domain.　&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.&lt;/div&gt; 
    * @return domain
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ドメインです。<br> このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時に無視されます。</div> <div lang=\"en\">Domain.　<br> This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DOMAIN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,8 +135,7 @@ public class Feed {
    * Get feedAttribute
    * @return feedAttribute
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ATTRIBUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +161,7 @@ public class Feed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となり、ADD時は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;br&gt; This field is required in SET and REMOVE operation, and will be ignored in ADD operation.&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">FeedIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時は無視されます。</div> <div lang=\"en\">Feed ID.<br> This field is required in SET and REMOVE operation, and will be ignored in ADD operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +187,7 @@ public class Feed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Feedのリスト名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;List name of Feed.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET and REMOVE operation.&lt;/div&gt; 
    * @return feedName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">Feedのリスト名です。<br> このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。</div> <div lang=\"en\">List name of Feed.<br> This field is required in ADD operation, and will be ignored in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +213,7 @@ public class Feed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Feedのトラッキング用IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID of Feed.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return feedTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">Feedのトラッキング用IDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Tracking ID of Feed.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +239,7 @@ public class Feed {
    * Get placeholderType
    * @return placeholderType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -264,7 +253,6 @@ public class Feed {
   public void setPlaceholderType(FeedServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
-
 
   @Override
   public boolean equals(Object o) {

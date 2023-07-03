@@ -35,7 +35,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adssearchapi.v9.api.PageFeedAssetServiceApi")
 public class PageFeedAssetServiceApi {
     private ApiClient apiClient;
@@ -88,27 +88,27 @@ public class PageFeedAssetServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PageFeedAssetServiceAddDownloadJobResponse> pageFeedAssetServiceAddDownloadJobPostWithHttpInfo(PageFeedAssetServiceAddDownloadJobOperation pageFeedAssetServiceAddDownloadJobOperation) throws RestClientException {
-        Object postBody = pageFeedAssetServiceAddDownloadJobOperation;
+        Object localVarPostBody = pageFeedAssetServiceAddDownloadJobOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<PageFeedAssetServiceAddDownloadJobResponse> returnType = new ParameterizedTypeReference<PageFeedAssetServiceAddDownloadJobResponse>() {};
-        return apiClient.invokeAPI("/PageFeedAssetService/addDownloadJob", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<PageFeedAssetServiceAddDownloadJobResponse> localReturnType = new ParameterizedTypeReference<PageFeedAssetServiceAddDownloadJobResponse>() {};
+        return apiClient.invokeAPI("/PageFeedAssetService/addDownloadJob", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -141,27 +141,27 @@ public class PageFeedAssetServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<org.springframework.core.io.Resource> pageFeedAssetServiceDownloadErrorFilePostWithHttpInfo(PageFeedAssetServiceDownloadSelector pageFeedAssetServiceDownloadSelector) throws RestClientException {
-        Object postBody = pageFeedAssetServiceDownloadSelector;
+        Object localVarPostBody = pageFeedAssetServiceDownloadSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<org.springframework.core.io.Resource> returnType = new ParameterizedTypeReference<org.springframework.core.io.Resource>() {};
-        return apiClient.invokeAPI("/PageFeedAssetService/downloadErrorFile", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<org.springframework.core.io.Resource> localReturnType = new ParameterizedTypeReference<org.springframework.core.io.Resource>() {};
+        return apiClient.invokeAPI("/PageFeedAssetService/downloadErrorFile", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -194,27 +194,27 @@ public class PageFeedAssetServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<org.springframework.core.io.Resource> pageFeedAssetServiceDownloadPostWithHttpInfo(PageFeedAssetServiceDownloadSelector pageFeedAssetServiceDownloadSelector) throws RestClientException {
-        Object postBody = pageFeedAssetServiceDownloadSelector;
+        Object localVarPostBody = pageFeedAssetServiceDownloadSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<org.springframework.core.io.Resource> returnType = new ParameterizedTypeReference<org.springframework.core.io.Resource>() {};
-        return apiClient.invokeAPI("/PageFeedAssetService/download", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<org.springframework.core.io.Resource> localReturnType = new ParameterizedTypeReference<org.springframework.core.io.Resource>() {};
+        return apiClient.invokeAPI("/PageFeedAssetService/download", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -247,27 +247,27 @@ public class PageFeedAssetServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PageFeedAssetServiceGetJobStatusResponse> pageFeedAssetServiceGetJobStatusPostWithHttpInfo(PageFeedAssetServiceGetJobStatusSelector pageFeedAssetServiceGetJobStatusSelector) throws RestClientException {
-        Object postBody = pageFeedAssetServiceGetJobStatusSelector;
+        Object localVarPostBody = pageFeedAssetServiceGetJobStatusSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<PageFeedAssetServiceGetJobStatusResponse> returnType = new ParameterizedTypeReference<PageFeedAssetServiceGetJobStatusResponse>() {};
-        return apiClient.invokeAPI("/PageFeedAssetService/getJobStatus", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<PageFeedAssetServiceGetJobStatusResponse> localReturnType = new ParameterizedTypeReference<PageFeedAssetServiceGetJobStatusResponse>() {};
+        return apiClient.invokeAPI("/PageFeedAssetService/getJobStatus", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -300,27 +300,27 @@ public class PageFeedAssetServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PageFeedAssetServiceGetResponse> pageFeedAssetServiceGetPostWithHttpInfo(PageFeedAssetServiceSelector pageFeedAssetServiceSelector) throws RestClientException {
-        Object postBody = pageFeedAssetServiceSelector;
+        Object localVarPostBody = pageFeedAssetServiceSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<PageFeedAssetServiceGetResponse> returnType = new ParameterizedTypeReference<PageFeedAssetServiceGetResponse>() {};
-        return apiClient.invokeAPI("/PageFeedAssetService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<PageFeedAssetServiceGetResponse> localReturnType = new ParameterizedTypeReference<PageFeedAssetServiceGetResponse>() {};
+        return apiClient.invokeAPI("/PageFeedAssetService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -353,27 +353,27 @@ public class PageFeedAssetServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PageFeedAssetServiceGetReviewSummaryResponse> pageFeedAssetServiceGetReviewSummaryPostWithHttpInfo(PageFeedAssetServiceGetReviewSummarySelector pageFeedAssetServiceGetReviewSummarySelector) throws RestClientException {
-        Object postBody = pageFeedAssetServiceGetReviewSummarySelector;
+        Object localVarPostBody = pageFeedAssetServiceGetReviewSummarySelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<PageFeedAssetServiceGetReviewSummaryResponse> returnType = new ParameterizedTypeReference<PageFeedAssetServiceGetReviewSummaryResponse>() {};
-        return apiClient.invokeAPI("/PageFeedAssetService/getReviewSummary", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<PageFeedAssetServiceGetReviewSummaryResponse> localReturnType = new ParameterizedTypeReference<PageFeedAssetServiceGetReviewSummaryResponse>() {};
+        return apiClient.invokeAPI("/PageFeedAssetService/getReviewSummary", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -412,7 +412,7 @@ public class PageFeedAssetServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PageFeedAssetServiceUploadResponse> pageFeedAssetServiceUploadPostWithHttpInfo(Long accountId, String uploadType, Long pageFeedAssetSetId, org.springframework.core.io.Resource _file) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
@@ -430,30 +430,30 @@ public class PageFeedAssetServiceApi {
         }
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "accountId", accountId));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "uploadType", uploadType));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "pageFeedAssetSetId", pageFeedAssetSetId));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "accountId", accountId));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "uploadType", uploadType));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "pageFeedAssetSetId", pageFeedAssetSetId));
 
         if (_file != null)
-            formParams.add("file", _file);
+            localVarFormParams.add("file", _file);
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<PageFeedAssetServiceUploadResponse> returnType = new ParameterizedTypeReference<PageFeedAssetServiceUploadResponse>() {};
-        return apiClient.invokeAPI("/PageFeedAssetService/upload", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<PageFeedAssetServiceUploadResponse> localReturnType = new ParameterizedTypeReference<PageFeedAssetServiceUploadResponse>() {};
+        return apiClient.invokeAPI("/PageFeedAssetService/upload", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.PageFeedItemServiceJobType;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedItemServiceJobStatusSelectorオブジェクトは、upload、downloadの処理状況を取得するための検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedItemServiceJobStatusSelector object retains search condition for The processing situation upload/download.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PageFeedItemServiceJobStatusSelectorオブジェクトは、upload、downloadの処理状況を取得するための検索条件を格納します。</div> <div lang=\"en\">PageFeedItemServiceJobStatusSelector object retains search condition for The processing situation upload/download.</div> ")
 @JsonPropertyOrder({
   PageFeedItemServiceJobStatusSelector.JSON_PROPERTY_ACCOUNT_ID,
   PageFeedItemServiceJobStatusSelector.JSON_PROPERTY_JOB_IDS,
@@ -39,14 +36,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedItemServiceJobStatusSelector.JSON_PROPERTY_NUMBER_RESULTS,
   PageFeedItemServiceJobStatusSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("PageFeedItemServiceJobStatusSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PageFeedItemServiceJobStatusSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_JOB_IDS = "jobIds";
-  private List<Long> jobIds = null;
+  private List<Long> jobIds;
 
   public static final String JSON_PROPERTY_JOB_TYPE = "jobType";
   private PageFeedItemServiceJobType jobType;
@@ -57,7 +53,7 @@ public class PageFeedItemServiceJobStatusSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public PageFeedItemServiceJobStatusSelector() { 
+  public PageFeedItemServiceJobStatusSelector() {
   }
 
   public PageFeedItemServiceJobStatusSelector accountId(Long accountId) {
@@ -70,8 +66,7 @@ public class PageFeedItemServiceJobStatusSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,8 +100,7 @@ public class PageFeedItemServiceJobStatusSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;登録したジョブのID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Registered job ID&lt;/div&gt; 
    * @return jobIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">登録したジョブのID</div> <div lang=\"en\">Registered job ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,8 +126,7 @@ public class PageFeedItemServiceJobStatusSelector {
    * Get jobType
    * @return jobType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -161,8 +154,7 @@ public class PageFeedItemServiceJobStatusSelector {
    * maximum: 10000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,8 +181,7 @@ public class PageFeedItemServiceJobStatusSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -204,7 +195,6 @@ public class PageFeedItemServiceJobStatusSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupServiceTargetingSetting;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,13 +28,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceSettingsは、ターゲットタイプを保持するオブジェクトです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceSettings is object that holds target type.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceSettingsは、ターゲットタイプを保持するオブジェクトです。<br> ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupServiceSettings is object that holds target type.<br> This field is optional in ADD and SET operation.</div> ")
 @JsonPropertyOrder({
   AdGroupServiceSettings.JSON_PROPERTY_CRITERION_TYPE,
   AdGroupServiceSettings.JSON_PROPERTY_TARGETING_SETTING
 })
-@JsonTypeName("AdGroupServiceSettings")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceSettings {
   public static final String JSON_PROPERTY_CRITERION_TYPE = "criterionType";
   private AdGroupServiceCriterionType criterionType;
@@ -44,7 +40,7 @@ public class AdGroupServiceSettings {
   public static final String JSON_PROPERTY_TARGETING_SETTING = "targetingSetting";
   private AdGroupServiceTargetingSetting targetingSetting;
 
-  public AdGroupServiceSettings() { 
+  public AdGroupServiceSettings() {
   }
 
   public AdGroupServiceSettings criterionType(AdGroupServiceCriterionType criterionType) {
@@ -57,8 +53,7 @@ public class AdGroupServiceSettings {
    * Get criterionType
    * @return criterionType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class AdGroupServiceSettings {
    * Get targetingSetting
    * @return targetingSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGETING_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,7 +93,6 @@ public class AdGroupServiceSettings {
   public void setTargetingSetting(AdGroupServiceTargetingSetting targetingSetting) {
     this.targetingSetting = targetingSetting;
   }
-
 
   @Override
   public boolean equals(Object o) {

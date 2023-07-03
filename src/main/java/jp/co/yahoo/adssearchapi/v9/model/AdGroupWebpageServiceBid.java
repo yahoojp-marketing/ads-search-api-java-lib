@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v9.model.AdGroupWebpageServiceBidSource;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceBidオブジェクトは、入札価格を表示します。 （AdGroupWebpageService用のオブジェクトです。）&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。※ExcludedTypeがINCLUDEDのみ更新可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceBid object describes bid. (Object for AdGroupWebpageService.)&lt;br&gt; This field is optional in ADD and SET operation. *This field can be updated when ExcludedType is &#39;INCLUDED&#39;.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupWebpageServiceBidオブジェクトは、入札価格を表示します。 （AdGroupWebpageService用のオブジェクトです。）<br> ADD時およびSET時、このフィールドは省略可能となります。※ExcludedTypeがINCLUDEDのみ更新可能です。</div> <div lang=\"en\">AdGroupWebpageServiceBid object describes bid. (Object for AdGroupWebpageService.)<br> This field is optional in ADD and SET operation. *This field can be updated when ExcludedType is 'INCLUDED'.</div> ")
 @JsonPropertyOrder({
   AdGroupWebpageServiceBid.JSON_PROPERTY_AD_GROUP_CPC,
   AdGroupWebpageServiceBid.JSON_PROPERTY_BID_SOURCE,
   AdGroupWebpageServiceBid.JSON_PROPERTY_KEYWORD_CPC,
   AdGroupWebpageServiceBid.JSON_PROPERTY_CPC
 })
-@JsonTypeName("AdGroupWebpageServiceBid")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupWebpageServiceBid {
   public static final String JSON_PROPERTY_AD_GROUP_CPC = "adGroupCpc";
   private Long adGroupCpc;
@@ -51,7 +47,7 @@ public class AdGroupWebpageServiceBid {
   public static final String JSON_PROPERTY_CPC = "cpc";
   private Long cpc;
 
-  public AdGroupWebpageServiceBid() { 
+  public AdGroupWebpageServiceBid() {
   }
 
   public AdGroupWebpageServiceBid adGroupCpc(Long adGroupCpc) {
@@ -64,8 +60,7 @@ public class AdGroupWebpageServiceBid {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループの最大入札価格です。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Max bid of ad group.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return adGroupCpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループの最大入札価格です。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Max bid of ad group.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class AdGroupWebpageServiceBid {
    * Get bidSource
    * @return bidSource
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BID_SOURCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class AdGroupWebpageServiceBid {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードの最大入札価格です。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Max bid of keyword.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return keywordCpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワードの最大入札価格です。<br>このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Max bid of keyword.<br>Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class AdGroupWebpageServiceBid {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最大入札価格です。&lt;br&gt;ADD時、このフィールドは省略可能となります。その際、デフォルト値は1となります。SET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Max bid.&lt;br&gt;This field is optional in ADD and SET operation. The default value in ADD operation will be 1.&lt;/div&gt; 
    * @return cpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最大入札価格です。<br>ADD時、このフィールドは省略可能となります。その際、デフォルト値は1となります。SET時、このフィールドは省略可能となります。</div> <div lang=\"en\">Max bid.<br>This field is optional in ADD and SET operation. The default value in ADD operation will be 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class AdGroupWebpageServiceBid {
   public void setCpc(Long cpc) {
     this.cpc = cpc;
   }
-
 
   @Override
   public boolean equals(Object o) {

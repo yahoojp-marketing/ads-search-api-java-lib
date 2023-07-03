@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupBidMultiplierServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupBidMultiplierServiceReturnValueオブジェクトは、入札価格調整率を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for bid multiplier.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupBidMultiplierServiceReturnValueオブジェクトは、入札価格調整率を格納するコンテナです。</div> <div lang=\"en\">Container for bid multiplier.</div> ")
 @JsonPropertyOrder({
   AdGroupBidMultiplierServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupBidMultiplierServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupBidMultiplierServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupBidMultiplierServiceValue> values = null;
+  private List<AdGroupBidMultiplierServiceValue> values;
 
-  public AdGroupBidMultiplierServiceReturnValue() { 
+  public AdGroupBidMultiplierServiceReturnValue() {
   }
 
   public AdGroupBidMultiplierServiceReturnValue values(List<AdGroupBidMultiplierServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupBidMultiplierServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupBidMultiplierServiceReturnValue {
   public void setValues(List<AdGroupBidMultiplierServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

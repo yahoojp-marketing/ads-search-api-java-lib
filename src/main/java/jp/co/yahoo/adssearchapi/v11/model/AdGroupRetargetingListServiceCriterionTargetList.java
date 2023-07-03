@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListServiceCriterionTargetListは、ターゲットリスト情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingListServiceCriterionTargetList is an object that holds target list information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupRetargetingListServiceCriterionTargetListは、ターゲットリスト情報を保持するオブジェクトです。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">AdGroupRetargetingListServiceCriterionTargetList is an object that holds target list information.<br> This field is required in any cases.</div> ")
 @JsonPropertyOrder({
   AdGroupRetargetingListServiceCriterionTargetList.JSON_PROPERTY_RETARGETING_TRACK_ID,
   AdGroupRetargetingListServiceCriterionTargetList.JSON_PROPERTY_TARGET_LIST_ID,
   AdGroupRetargetingListServiceCriterionTargetList.JSON_PROPERTY_TARGET_LIST_NAME
 })
-@JsonTypeName("AdGroupRetargetingListServiceCriterionTargetList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupRetargetingListServiceCriterionTargetList {
   public static final String JSON_PROPERTY_RETARGETING_TRACK_ID = "retargetingTrackId";
   private Long retargetingTrackId;
@@ -46,7 +42,7 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
   public static final String JSON_PROPERTY_TARGET_LIST_NAME = "targetListName";
   private String targetListName;
 
-  public AdGroupRetargetingListServiceCriterionTargetList() { 
+  public AdGroupRetargetingListServiceCriterionTargetList() {
   }
 
   public AdGroupRetargetingListServiceCriterionTargetList retargetingTrackId(Long retargetingTrackId) {
@@ -59,8 +55,7 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リターゲティングトラックIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Retargeting Track ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return retargetingTrackId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リターゲティングトラックIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Retargeting Track ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RETARGETING_TRACK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target list ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return targetListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストIDです。<br> このフィールドは、いずれの場合でも必須です。</div> <div lang=\"en\">Target list ID.<br> This field is required in any cases.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target list name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return targetListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Target list name.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
   public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

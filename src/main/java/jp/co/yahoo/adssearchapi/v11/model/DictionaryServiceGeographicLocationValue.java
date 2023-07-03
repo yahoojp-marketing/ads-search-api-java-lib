@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.DictionaryServiceGeographicLocation;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationValueオブジェクトは、地域情報と処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocationValue object describes Geographic location and operation information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationValueオブジェクトは、地域情報と処理の内容を表します。</div> <div lang=\"en\">DictionaryServiceGeographicLocationValue object describes Geographic location and operation information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceGeographicLocationValue.JSON_PROPERTY_ERRORS,
   DictionaryServiceGeographicLocationValue.JSON_PROPERTY_GEOGRAPHIC_LOCATION,
   DictionaryServiceGeographicLocationValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("DictionaryServiceGeographicLocationValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceGeographicLocationValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_GEOGRAPHIC_LOCATION = "geographicLocation";
   private DictionaryServiceGeographicLocation geographicLocation;
@@ -50,7 +46,7 @@ public class DictionaryServiceGeographicLocationValue {
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public DictionaryServiceGeographicLocationValue() { 
+  public DictionaryServiceGeographicLocationValue() {
   }
 
   public DictionaryServiceGeographicLocationValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class DictionaryServiceGeographicLocationValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class DictionaryServiceGeographicLocationValue {
    * Get geographicLocation
    * @return geographicLocation
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEOGRAPHIC_LOCATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class DictionaryServiceGeographicLocationValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オペレーション成功です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Operation is successful.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">オペレーション成功です。</div> <div lang=\"en\">Operation is successful.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class DictionaryServiceGeographicLocationValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

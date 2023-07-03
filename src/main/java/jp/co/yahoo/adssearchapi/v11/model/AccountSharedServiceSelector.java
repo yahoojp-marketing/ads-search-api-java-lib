@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountSharedServiceSelectorオブジェクトは、検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountSharedServiceSelector object holds search criteria (exec parameter).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountSharedServiceSelectorオブジェクトは、検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">AccountSharedServiceSelector object holds search criteria (exec parameter).</div> ")
 @JsonPropertyOrder({
   AccountSharedServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AccountSharedServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AccountSharedServiceSelector.JSON_PROPERTY_SHARED_LIST_IDS,
   AccountSharedServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AccountSharedServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountSharedServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -47,12 +43,12 @@ public class AccountSharedServiceSelector {
   private Integer numberResults = 20;
 
   public static final String JSON_PROPERTY_SHARED_LIST_IDS = "sharedListIds";
-  private List<Long> sharedListIds = null;
+  private List<Long> sharedListIds;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AccountSharedServiceSelector() { 
+  public AccountSharedServiceSelector() {
   }
 
   public AccountSharedServiceSelector accountId(Long accountId) {
@@ -65,8 +61,7 @@ public class AccountSharedServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -94,8 +89,7 @@ public class AccountSharedServiceSelector {
    * maximum: 20
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +123,7 @@ public class AccountSharedServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索対象外キーワードリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Negative keyword list ID.&lt;/div&gt; 
    * @return sharedListIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索対象外キーワードリストIDです。</div> <div lang=\"en\">Negative keyword list ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARED_LIST_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class AccountSharedServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,7 +164,6 @@ public class AccountSharedServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v11.model.AdGroupCustomizerServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCustomizerServiceReturnValueオブジェクトは、広告グループとカスタマイザー属性間の設定情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCustomizerServiceReturnValue object contains the configuration information between the adgroup and the customizer attribute.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCustomizerServiceReturnValueオブジェクトは、広告グループとカスタマイザー属性間の設定情報を格納します。</div> <div lang=\"en\">AdGroupCustomizerServiceReturnValue object contains the configuration information between the adgroup and the customizer attribute.</div> ")
 @JsonPropertyOrder({
   AdGroupCustomizerServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupCustomizerServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCustomizerServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupCustomizerServiceValue> values = null;
+  private List<AdGroupCustomizerServiceValue> values;
 
-  public AdGroupCustomizerServiceReturnValue() { 
+  public AdGroupCustomizerServiceReturnValue() {
   }
 
   public AdGroupCustomizerServiceReturnValue values(List<AdGroupCustomizerServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupCustomizerServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupCustomizerServiceReturnValue {
   public void setValues(List<AdGroupCustomizerServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

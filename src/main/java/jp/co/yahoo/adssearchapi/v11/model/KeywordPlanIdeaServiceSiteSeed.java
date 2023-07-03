@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaServiceSiteSeedオブジェクトは、キーワード候補作成条件としてサイト（ドメインURL）を指定するオブジェクトです。&lt;br&gt;seedTypeが&lt;code&gt;SITE&lt;/code&gt;の場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordPlanIdeaServiceSiteSeed object is for specifying site (domain URL) as related keywords creation conditions.&lt;br&gt;If seedType is &lt;code&gt;SITE&lt;/code&gt;, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">KeywordPlanIdeaServiceSiteSeedオブジェクトは、キーワード候補作成条件としてサイト（ドメインURL）を指定するオブジェクトです。<br>seedTypeが<code>SITE</code>の場合は必須です。</div> <div lang=\"en\">KeywordPlanIdeaServiceSiteSeed object is for specifying site (domain URL) as related keywords creation conditions.<br>If seedType is <code>SITE</code>, this field is required.</div> ")
 @JsonPropertyOrder({
   KeywordPlanIdeaServiceSiteSeed.JSON_PROPERTY_SITE
 })
-@JsonTypeName("KeywordPlanIdeaServiceSiteSeed")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class KeywordPlanIdeaServiceSiteSeed {
   public static final String JSON_PROPERTY_SITE = "site";
   private String site;
 
-  public KeywordPlanIdeaServiceSiteSeed() { 
+  public KeywordPlanIdeaServiceSiteSeed() {
   }
 
   public KeywordPlanIdeaServiceSiteSeed site(String site) {
@@ -51,8 +47,7 @@ public class KeywordPlanIdeaServiceSiteSeed {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サイト（ドメインURL）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Site (domain URL).&lt;/div&gt; 
    * @return site
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サイト（ドメインURL）です。</div> <div lang=\"en\">Site (domain URL).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SITE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class KeywordPlanIdeaServiceSiteSeed {
   public void setSite(String site) {
     this.site = site;
   }
-
 
   @Override
   public boolean equals(Object o) {

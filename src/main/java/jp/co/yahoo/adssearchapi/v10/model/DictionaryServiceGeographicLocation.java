@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.DictionaryServiceGeographicLocationStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationオブジェクトは、地域情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocation contains geographic location information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationオブジェクトは、地域情報を格納します。</div> <div lang=\"en\">DictionaryServiceGeographicLocation contains geographic location information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceGeographicLocation.JSON_PROPERTY_CHILD,
   DictionaryServiceGeographicLocation.JSON_PROPERTY_CODE,
@@ -41,11 +38,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceGeographicLocation.JSON_PROPERTY_ORDER,
   DictionaryServiceGeographicLocation.JSON_PROPERTY_PARENT
 })
-@JsonTypeName("DictionaryServiceGeographicLocation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceGeographicLocation {
   public static final String JSON_PROPERTY_CHILD = "child";
-  private List<DictionaryServiceGeographicLocation> child = null;
+  private List<DictionaryServiceGeographicLocation> child;
 
   public static final String JSON_PROPERTY_CODE = "code";
   private String code;
@@ -65,7 +61,7 @@ public class DictionaryServiceGeographicLocation {
   public static final String JSON_PROPERTY_PARENT = "parent";
   private String parent;
 
-  public DictionaryServiceGeographicLocation() { 
+  public DictionaryServiceGeographicLocation() {
   }
 
   public DictionaryServiceGeographicLocation child(List<DictionaryServiceGeographicLocation> child) {
@@ -86,8 +82,7 @@ public class DictionaryServiceGeographicLocation {
    * Get child
    * @return child
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CHILD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +108,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Geographic code&lt;/div&gt; 
    * @return code
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">地域コードです。</div> <div lang=\"en\">Geographic code</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,8 +134,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域名(都道府県名からすべて)です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of places (Prefecture and all)&lt;/div&gt; 
    * @return fullName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">地域名(都道府県名からすべて)です。</div> <div lang=\"en\">Name of places (Prefecture and all)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -167,8 +160,7 @@ public class DictionaryServiceGeographicLocation {
    * Get geographicLocationStatus
    * @return geographicLocationStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEOGRAPHIC_LOCATION_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -194,8 +186,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域名(市区町村のみ)です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of places (City Only)&lt;/div&gt; 
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">地域名(市区町村のみ)です。</div> <div lang=\"en\">Name of places (City Only)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -221,8 +212,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;並び順です。&lt;br&gt;下記の順序に基づいた連番となります。&lt;br&gt; 都道府県は北海道、青森、・・・・沖縄の順&lt;br&gt;都道府県配下の市区町村は五十音順&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Order of list&lt;br&gt;&lt;br&gt;Sequential number based on the order below.&lt;br&gt;&lt;br&gt; - Prefecture is in order of Hokkaido, Aomori to Okinawa. (North to South)&lt;br&gt;&lt;br&gt; - Cities under prefecture are listed in the order of the 50-character Japanese kana syllabary.&lt;/div&gt; 
    * @return order
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">並び順です。<br>下記の順序に基づいた連番となります。<br> 都道府県は北海道、青森、・・・・沖縄の順<br>都道府県配下の市区町村は五十音順</div> <div lang=\"en\">Order of list<br><br>Sequential number based on the order below.<br><br> - Prefecture is in order of Hokkaido, Aomori to Okinawa. (North to South)<br><br> - Cities under prefecture are listed in the order of the 50-character Japanese kana syllabary.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ORDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,8 +238,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;上位地域コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Parent geographic code&lt;/div&gt; 
    * @return parent
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">上位地域コードです。</div> <div lang=\"en\">Parent geographic code</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -263,7 +252,6 @@ public class DictionaryServiceGeographicLocation {
   public void setParent(String parent) {
     this.parent = parent;
   }
-
 
   @Override
   public boolean equals(Object o) {

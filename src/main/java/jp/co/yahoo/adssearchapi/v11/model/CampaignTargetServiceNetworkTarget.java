@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v11.model.CampaignTargetServiceNetworkCoverageType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceNetworkTargetオブジェクトは、広告を表示する検索画面を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※targetTypeがNETWORKの場合、このフィールドはADD時に必須となります。&lt;br&gt; なおNetworkTargetを設定しない場合、「YAHOO_SEARCH」を含むすべての検索画面に広告は配信されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceNetworkTarget represents a search screen that displays an ad.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If targetType is NETWORK, this field is required in ADD operation.&lt;br&gt; If you do not set the NetworkTarget, ads are delivered to the advertising system including all \&quot;YAHOO_SEARCH\&quot;.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignTargetServiceNetworkTargetオブジェクトは、広告を表示する検索画面を表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※targetTypeがNETWORKの場合、このフィールドはADD時に必須となります。<br> なおNetworkTargetを設定しない場合、「YAHOO_SEARCH」を含むすべての検索画面に広告は配信されます。</div> <div lang=\"en\">CampaignTargetServiceNetworkTarget represents a search screen that displays an ad.<br> This field is optional in ADD and SET operation.<br> *If targetType is NETWORK, this field is required in ADD operation.<br> If you do not set the NetworkTarget, ads are delivered to the advertising system including all \"YAHOO_SEARCH\".</div> ")
 @JsonPropertyOrder({
   CampaignTargetServiceNetworkTarget.JSON_PROPERTY_NETWORK_COVERAGE_TYPE
 })
-@JsonTypeName("CampaignTargetServiceNetworkTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignTargetServiceNetworkTarget {
   public static final String JSON_PROPERTY_NETWORK_COVERAGE_TYPE = "networkCoverageType";
   private CampaignTargetServiceNetworkCoverageType networkCoverageType;
 
-  public CampaignTargetServiceNetworkTarget() { 
+  public CampaignTargetServiceNetworkTarget() {
   }
 
   public CampaignTargetServiceNetworkTarget networkCoverageType(CampaignTargetServiceNetworkCoverageType networkCoverageType) {
@@ -52,8 +48,7 @@ public class CampaignTargetServiceNetworkTarget {
    * Get networkCoverageType
    * @return networkCoverageType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NETWORK_COVERAGE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class CampaignTargetServiceNetworkTarget {
   public void setNetworkCoverageType(CampaignTargetServiceNetworkCoverageType networkCoverageType) {
     this.networkCoverageType = networkCoverageType;
   }
-
 
   @Override
   public boolean equals(Object o) {

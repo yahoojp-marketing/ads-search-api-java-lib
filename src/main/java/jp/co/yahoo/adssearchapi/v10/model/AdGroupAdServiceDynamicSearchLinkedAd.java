@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceDynamicSearchLinkedAdオブジェクトは、動的検索連動型広告を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceDynamicSearchLinkedAd object describes the information of Dynamic Search Ad.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceDynamicSearchLinkedAdオブジェクトは、動的検索連動型広告を表します。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">AdGroupAdServiceDynamicSearchLinkedAd object describes the information of Dynamic Search Ad.<br> This field is optional in ADD operation.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceDynamicSearchLinkedAd.JSON_PROPERTY_DESCRIPTION,
   AdGroupAdServiceDynamicSearchLinkedAd.JSON_PROPERTY_DESCRIPTION2
 })
-@JsonTypeName("AdGroupAdServiceDynamicSearchLinkedAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceDynamicSearchLinkedAd {
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
   private String description;
@@ -42,7 +38,7 @@ public class AdGroupAdServiceDynamicSearchLinkedAd {
   public static final String JSON_PROPERTY_DESCRIPTION2 = "description2";
   private String description2;
 
-  public AdGroupAdServiceDynamicSearchLinkedAd() { 
+  public AdGroupAdServiceDynamicSearchLinkedAd() {
   }
 
   public AdGroupAdServiceDynamicSearchLinkedAd description(String description) {
@@ -55,8 +51,7 @@ public class AdGroupAdServiceDynamicSearchLinkedAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt;自動挿入をサポートしていません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of ad.&lt;br&gt; This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.&lt;br&gt;Does not support Data Auto Insertion.&lt;/div&gt; 
    * @return description
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文です。<br> ADD時、このフィールドは必須となります。<br>自動挿入をサポートしていません。</div> <div lang=\"en\">Description of ad.<br> This field is required in ADD operation. *If adType is RESPONSIVE_SEARCH_AD, this field will be ignored.<br>Does not support Data Auto Insertion.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class AdGroupAdServiceDynamicSearchLinkedAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文2です。&lt;br&gt;※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description2 of the ad.&lt;br&gt;*Currently this field is not available.&lt;/div&gt; 
    * @return description2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文2です。<br>※現在、こちらのフィールドは利用できません。</div> <div lang=\"en\">Description2 of the ad.<br>*Currently this field is not available.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class AdGroupAdServiceDynamicSearchLinkedAd {
   public void setDescription2(String description2) {
     this.description2 = description2;
   }
-
 
   @Override
   public boolean equals(Object o) {

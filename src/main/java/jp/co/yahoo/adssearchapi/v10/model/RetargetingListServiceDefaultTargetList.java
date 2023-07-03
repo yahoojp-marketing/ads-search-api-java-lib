@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adssearchapi.v10.model.RetargetingListServiceTag;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceDefaultTargetListは、デフォルトターゲットリストを保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがDEFAULTの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceDefaultTargetList is an object that holds default target list.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is DEFAULT, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingListServiceDefaultTargetListは、デフォルトターゲットリストを保持するオブジェクトです。<br> このフィールドは、省略可能となります。<br> ※targetListTypeがDEFAULTの場合、このフィールドは必須となります。</div> <div lang=\"en\">RetargetingListServiceDefaultTargetList is an object that holds default target list.<br> This field is optional.<br> If the targetListType is DEFAULT, this field is required.</div> ")
 @JsonPropertyOrder({
   RetargetingListServiceDefaultTargetList.JSON_PROPERTY_TAG
 })
-@JsonTypeName("RetargetingListServiceDefaultTargetList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingListServiceDefaultTargetList {
   public static final String JSON_PROPERTY_TAG = "tag";
   private RetargetingListServiceTag tag;
 
-  public RetargetingListServiceDefaultTargetList() { 
+  public RetargetingListServiceDefaultTargetList() {
   }
 
   public RetargetingListServiceDefaultTargetList tag(RetargetingListServiceTag tag) {
@@ -52,8 +48,7 @@ public class RetargetingListServiceDefaultTargetList {
    * Get tag
    * @return tag
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class RetargetingListServiceDefaultTargetList {
   public void setTag(RetargetingListServiceTag tag) {
     this.tag = tag;
   }
-
 
   @Override
   public boolean equals(Object o) {

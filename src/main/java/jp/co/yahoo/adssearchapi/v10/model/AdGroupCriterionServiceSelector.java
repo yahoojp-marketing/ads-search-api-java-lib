@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.AdGroupCriterionServiceApprovalStatus;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceSelectorオブジェクトは、操作の対象となる広告グループのクライテリアを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceSelector object displays criteria of ad group to be operated.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupCriterionServiceSelectorオブジェクトは、操作の対象となる広告グループのクライテリアを表します。</div> <div lang=\"en\">AdGroupCriterionServiceSelector object displays criteria of ad group to be operated.</div> ")
 @JsonPropertyOrder({
   AdGroupCriterionServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupCriterionServiceSelector.JSON_PROPERTY_AD_GROUP_IDS,
@@ -53,32 +50,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupCriterionServiceSelector.JSON_PROPERTY_KEYWORD,
   AdGroupCriterionServiceSelector.JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE
 })
-@JsonTypeName("AdGroupCriterionServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupCriterionServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
-  private List<Long> adGroupIds = null;
+  private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUSES = "approvalStatuses";
-  private List<AdGroupCriterionServiceApprovalStatus> approvalStatuses = null;
+  private List<AdGroupCriterionServiceApprovalStatus> approvalStatuses;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_IDS = "portfolioBiddingIds";
-  private List<Long> portfolioBiddingIds = null;
+  private List<Long> portfolioBiddingIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_CONTAINS_LABEL_ID = "containsLabelId";
   private AdGroupCriterionServiceContainsLabelId containsLabelId;
 
   public static final String JSON_PROPERTY_CRITERION_IDS = "criterionIds";
-  private List<Long> criterionIds = null;
+  private List<Long> criterionIds;
 
   public static final String JSON_PROPERTY_LABEL_IDS = "labelIds";
-  private List<Long> labelIds = null;
+  private List<Long> labelIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -90,7 +86,7 @@ public class AdGroupCriterionServiceSelector {
   private AdGroupCriterionServiceUse use;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
-  private List<AdGroupCriterionServiceUserStatus> userStatuses = null;
+  private List<AdGroupCriterionServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
   private AdGroupCriterionServiceKeyword keyword;
@@ -98,7 +94,7 @@ public class AdGroupCriterionServiceSelector {
   public static final String JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE = "biddingKeywordCpcRange";
   private AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange;
 
-  public AdGroupCriterionServiceSelector() { 
+  public AdGroupCriterionServiceSelector() {
   }
 
   public AdGroupCriterionServiceSelector accountId(Long accountId) {
@@ -111,8 +107,7 @@ public class AdGroupCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントID</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -146,8 +141,7 @@ public class AdGroupCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：広告グループID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Ad group ID.&lt;/div&gt; 
    * @return adGroupIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：広告グループID</div> <div lang=\"en\">Search condition: Ad group ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -181,8 +175,7 @@ public class AdGroupCriterionServiceSelector {
    * Get approvalStatuses
    * @return approvalStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,8 +209,7 @@ public class AdGroupCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ポートフォリオ入札ID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Portfolio bidding ID.&lt;/div&gt; 
    * @return portfolioBiddingIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ポートフォリオ入札ID</div> <div lang=\"en\">Search condition: Portfolio bidding ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -251,8 +243,7 @@ public class AdGroupCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign ID.&lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：キャンペーンID</div> <div lang=\"en\">Search condition: Campaign ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -278,8 +269,7 @@ public class AdGroupCriterionServiceSelector {
    * Get containsLabelId
    * @return containsLabelId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -313,8 +303,7 @@ public class AdGroupCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：クライテリオンID&lt;br&gt;指定しない場合は、広告グループID以下のすべてのクライ テリアが含まれます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Criterion ID.&lt;br&gt;* All criteria under the Ad group ID will return if theres is no designation.&lt;/div&gt; 
    * @return criterionIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：クライテリオンID<br>指定しない場合は、広告グループID以下のすべてのクライ テリアが含まれます。</div> <div lang=\"en\">Search condition: Criterion ID.<br>* All criteria under the Ad group ID will return if theres is no designation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CRITERION_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -348,8 +337,7 @@ public class AdGroupCriterionServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ラベルID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Label ID&lt;/div&gt; 
    * @return labelIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：ラベルID</div> <div lang=\"en\">Search condition: Label ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LABEL_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -377,8 +365,7 @@ public class AdGroupCriterionServiceSelector {
    * maximum: 10000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -405,8 +392,7 @@ public class AdGroupCriterionServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -432,8 +418,7 @@ public class AdGroupCriterionServiceSelector {
    * Get use
    * @return use
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -467,8 +452,7 @@ public class AdGroupCriterionServiceSelector {
    * Get userStatuses
    * @return userStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -494,8 +478,7 @@ public class AdGroupCriterionServiceSelector {
    * Get keyword
    * @return keyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -521,8 +504,7 @@ public class AdGroupCriterionServiceSelector {
    * Get biddingKeywordCpcRange
    * @return biddingKeywordCpcRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -536,7 +518,6 @@ public class AdGroupCriterionServiceSelector {
   public void setBiddingKeywordCpcRange(AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange) {
     this.biddingKeywordCpcRange = biddingKeywordCpcRange;
   }
-
 
   @Override
   public boolean equals(Object o) {

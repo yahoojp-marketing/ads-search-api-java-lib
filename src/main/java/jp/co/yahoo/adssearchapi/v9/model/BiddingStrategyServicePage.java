@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v9.model.BiddingStrategyServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServicePageオブジェクトは、自動入札設定を取得したときの結果に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServicePage object displays the results of auto bidding setting retrieval.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BiddingStrategyServicePageオブジェクトは、自動入札設定を取得したときの結果に関する情報を表します。</div> <div lang=\"en\">BiddingStrategyServicePage object displays the results of auto bidding setting retrieval.</div> ")
 @JsonPropertyOrder({
   BiddingStrategyServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   BiddingStrategyServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("BiddingStrategyServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BiddingStrategyServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<BiddingStrategyServiceValue> values = null;
+  private List<BiddingStrategyServiceValue> values;
 
-  public BiddingStrategyServicePage() { 
+  public BiddingStrategyServicePage() {
   }
 
   public BiddingStrategyServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class BiddingStrategyServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of entries.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class BiddingStrategyServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class BiddingStrategyServicePage {
   public void setValues(List<BiddingStrategyServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v10.model.CampaignFeed;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignFeedServiceListオブジェクトは、キャンペーンに関連付けられたFeedItem情報を表します。&lt;br&gt; 更新時にcampaignFeedを指定するとすべて上書きされ、未指定のcampaignFeedの属性情報は削除されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignFeedServiceList object describes FeedItem information connected to campaign.&lt;br&gt; Upon updating, if campaignFeed is specified, the attribute information will be overwritten, but if campaignFeed is not specified, it will be deleted. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignFeedServiceListオブジェクトは、キャンペーンに関連付けられたFeedItem情報を表します。<br> 更新時にcampaignFeedを指定するとすべて上書きされ、未指定のcampaignFeedの属性情報は削除されます。 </div> <div lang=\"en\">CampaignFeedServiceList object describes FeedItem information connected to campaign.<br> Upon updating, if campaignFeed is specified, the attribute information will be overwritten, but if campaignFeed is not specified, it will be deleted. </div> ")
 @JsonPropertyOrder({
   CampaignFeedServiceList.JSON_PROPERTY_ACCOUNT_ID,
   CampaignFeedServiceList.JSON_PROPERTY_CAMPAIGN_FEED,
   CampaignFeedServiceList.JSON_PROPERTY_CAMPAIGN_ID,
   CampaignFeedServiceList.JSON_PROPERTY_PLACEHOLDER_TYPE
 })
-@JsonTypeName("CampaignFeedServiceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignFeedServiceList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_FEED = "campaignFeed";
-  private List<CampaignFeed> campaignFeed = null;
+  private List<CampaignFeed> campaignFeed;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
   private Long campaignId;
@@ -54,7 +50,7 @@ public class CampaignFeedServiceList {
   public static final String JSON_PROPERTY_PLACEHOLDER_TYPE = "placeholderType";
   private CampaignFeedServicePlaceholderType placeholderType;
 
-  public CampaignFeedServiceList() { 
+  public CampaignFeedServiceList() {
   }
 
   public CampaignFeedServiceList accountId(Long accountId) {
@@ -67,8 +63,7 @@ public class CampaignFeedServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; SET時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt;This field is required in SET operation.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> SET時、このフィールドは必須です。</div> <div lang=\"en\">Account ID.<br>This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,8 +97,7 @@ public class CampaignFeedServiceList {
    * Get campaignFeed
    * @return campaignFeed
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_FEED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +123,7 @@ public class CampaignFeedServiceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; SET時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> SET時、このフィールドは必須です。</div> <div lang=\"en\">Campaign ID.<br> This field is required in SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +149,7 @@ public class CampaignFeedServiceList {
    * Get placeholderType
    * @return placeholderType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEHOLDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,7 +163,6 @@ public class CampaignFeedServiceList {
   public void setPlaceholderType(CampaignFeedServicePlaceholderType placeholderType) {
     this.placeholderType = placeholderType;
   }
-
 
   @Override
   public boolean equals(Object o) {
