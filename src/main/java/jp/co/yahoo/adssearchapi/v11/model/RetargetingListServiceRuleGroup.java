@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleGroupは、URL/LABELのルールをグループ化した情報を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時に、このフィールドは省略可能となります。&lt;br&gt; isAllVisitorがTRUEである場合、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleGroup is an object that holds grouped URL/LABEL rules.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If isAllVisitor is TRUE, this field is required in ADD and SET operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleGroupは、URL/LABELのルールをグループ化した情報を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時に、このフィールドは省略可能となります。&lt;br&gt; isAllVisitorがTRUEである場合、ADDおよびSET時に必須となります。&lt;br&gt; ※SET時、isAllVisitorRule &#x3D; TRUEを指定してリクエストすると、このフィールドは無視されます。&lt;br&gt; ruleBaseTargetList.isDateSpecificRule &#x3D; TRUEの場合には、このフィールドは変更出来ません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleGroup is an object that holds grouped URL/LABEL rules.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If isAllVisitor is TRUE, this field is required in ADD and SET operation.&lt;br&gt; *In SET operation, if isAllVisitorRule &#x3D; TRUE, this field is ignored on request.&lt;br&gt; If ruleBaseTargetList.isDateSpecificRule &#x3D; TRUE, it is can not change.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   RetargetingListServiceRuleGroup.JSON_PROPERTY_RULE_ITEMS
