@@ -48,11 +48,11 @@ public class AdGroupServiceCpcBiddingScheme {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ最大入札価格（CPC）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがCPCの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of ad group (CPC).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is CPC. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ最大入札価格（CPC）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of ad group (CPC).&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return cpc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ最大入札価格（CPC）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※campaignBiddingStrategyTypeがCPCの場合のみ指定可能です。 </div> <div lang=\"en\"> Max bid of ad group (CPC).<br> This field is optional in ADD and SET operation.<br> *This can only be specified when campaignBiddingStrategyType is CPC. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ最大入札価格（CPC）です。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Max bid of ad group (CPC).<br> This field is optional in ADD and SET operation. </div> ")
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
