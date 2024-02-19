@@ -198,11 +198,11 @@ public class CampaignServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：共有予算IDです。&lt;br&gt;※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign budget ID.&lt;br&gt;*Currently this field is not available.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：共有予算IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign budget ID.&lt;/div&gt; 
    * @return campaignBudgetIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：共有予算IDです。<br>※現在、こちらのフィールドは利用できません。</div> <div lang=\"en\">Search condition: Campaign budget ID.<br>*Currently this field is not available.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：共有予算IDです。</div> <div lang=\"en\">Search condition: Campaign budget ID.</div> ")
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

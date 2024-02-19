@@ -83,11 +83,11 @@ public class CampaignServiceBudget {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; ※現在、こちらのフィールドは利用できません。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; *Currently this field is not available.&lt;br&gt; In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.&lt;/div&gt; 
    * @return campaignBudgetId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">共有予算IDです。<br> ※現在、こちらのフィールドは利用できません。<br> ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。</div> <div lang=\"en\">CampaignBudget ID.<br> *Currently this field is not available.<br> In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">共有予算IDです。<br> ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。</div> <div lang=\"en\">CampaignBudget ID.<br> In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.</div> ")
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -110,11 +110,11 @@ public class CampaignServiceBudget {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算名です。&lt;br&gt; ※現在、こちらのフィールドは利用できません。&lt;br&gt; ADDおよびSET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget name.&lt;br&gt; *Currently this field is not available.&lt;br&gt; This field will be ignored in ADD and SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算名です。&lt;br&gt; ADDおよびSET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget name.&lt;br&gt; This field will be ignored in ADD and SET operation.&lt;/div&gt; 
    * @return campaignBudgetName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">共有予算名です。<br> ※現在、こちらのフィールドは利用できません。<br> ADDおよびSET時、このフィールドは無視されます。</div> <div lang=\"en\">CampaignBudget name.<br> *Currently this field is not available.<br> This field will be ignored in ADD and SET operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">共有予算名です。<br> ADDおよびSET時、このフィールドは無視されます。</div> <div lang=\"en\">CampaignBudget name.<br> This field will be ignored in ADD and SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
