@@ -83,13 +83,13 @@ public class ConversionTrackerServiceAppEventTypeSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページの最大件数です。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページの最大件数です。このフィールドは、1以上を指定する必要があります。&lt;br&gt; ※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.&lt;br&gt; *Currently this field is not available.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。<br> ※現在、こちらのフィールドは利用できません。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.<br> *Currently this field is not available.</div> ")
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -112,12 +112,12 @@ public class ConversionTrackerServiceAppEventTypeSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Index of the first result to return in this page. This field must be greater than or equal to 1.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。&lt;br&gt; ※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Index of the first result to return in this page. This field must be greater than or equal to 1.&lt;br&gt; *Currently this field is not available.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。<br> ※現在、こちらのフィールドは利用できません。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.<br> *Currently this field is not available.</div> ")
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
