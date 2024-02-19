@@ -191,7 +191,7 @@ public class CampaignServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：共有予算IDです。&lt;br&gt;※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign budget ID.&lt;br&gt;*Currently this field is not available.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：共有予算IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign budget ID.&lt;/div&gt; 
    * @return campaignBudgetIds
   **/
   @jakarta.annotation.Nullable

@@ -78,7 +78,7 @@ public class CampaignServiceBudget {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; ※現在、こちらのフィールドは利用できません。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; *Currently this field is not available.&lt;br&gt; In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.&lt;/div&gt; 
    * @return campaignBudgetId
   **/
   @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class CampaignServiceBudget {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算名です。&lt;br&gt; ※現在、こちらのフィールドは利用できません。&lt;br&gt; ADDおよびSET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget name.&lt;br&gt; *Currently this field is not available.&lt;br&gt; This field will be ignored in ADD and SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算名です。&lt;br&gt; ADDおよびSET時、このフィールドは無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget name.&lt;br&gt; This field will be ignored in ADD and SET operation.&lt;/div&gt; 
    * @return campaignBudgetName
   **/
   @jakarta.annotation.Nullable
