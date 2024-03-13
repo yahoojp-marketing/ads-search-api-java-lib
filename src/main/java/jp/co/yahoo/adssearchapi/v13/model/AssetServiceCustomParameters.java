@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※CustomParameters配下でのみ、クイックリンクオプションの場合、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field will be returned in the response, but it will be ignored on input.&lt;br&gt; *Under customParameters, this field will be optional in ADD and SET operation for QUICKLINK option.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※CustomParameters配下でのみ、クイックリンクアセットの場合、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field will be returned in the response, but it will be ignored on input.&lt;br&gt; *Under customParameters, this field will be optional in ADD and SET operation for QUICKLINK asset.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。<br> このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※CustomParameters配下でのみ、クイックリンクオプションの場合、ADDおよびSET時に省略可能となります。</div> <div lang=\"en\">AssetServiceCustomParameters displays the setting of custom parameters.<br> This field will be returned in the response, but it will be ignored on input.<br> *Under customParameters, this field will be optional in ADD and SET operation for QUICKLINK option.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AssetServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。<br> このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※CustomParameters配下でのみ、クイックリンクアセットの場合、ADDおよびSET時に省略可能となります。</div> <div lang=\"en\">AssetServiceCustomParameters displays the setting of custom parameters.<br> This field will be returned in the response, but it will be ignored on input.<br> *Under customParameters, this field will be optional in ADD and SET operation for QUICKLINK asset.</div> ")
 @JsonPropertyOrder({
   AssetServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   AssetServiceCustomParameters.JSON_PROPERTY_PARAMETERS
