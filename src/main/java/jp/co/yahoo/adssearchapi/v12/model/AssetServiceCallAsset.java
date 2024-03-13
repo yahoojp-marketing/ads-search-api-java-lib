@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCallAssetオブジェクトは、電話番号オプションのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCallAsset contains Asset value information for phone number options.&lt;br&gt; This field is optional in ADD operation. *If type is CALL, this field is required.&lt;br&gt;&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCallAssetオブジェクトは、電話番号アセットのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCallAsset contains Asset value information for call assets.&lt;br&gt; This field is optional in ADD operation. *If type is CALL, this field is required.&lt;br&gt;&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceCallAssetオブジェクトは、電話番号オプションのアセット情報を格納します。<br> ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。</div> <div lang=\"en\">AssetServiceCallAsset contains Asset value information for phone number options.<br> This field is optional in ADD operation. *If type is CALL, this field is required.<br></div> ")
+@ApiModel(description = "<div lang=\"ja\">AssetServiceCallAssetオブジェクトは、電話番号アセットのアセット情報を格納します。<br> ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。</div> <div lang=\"en\">AssetServiceCallAsset contains Asset value information for call assets.<br> This field is optional in ADD operation. *If type is CALL, this field is required.<br></div> ")
 @JsonPropertyOrder({
   AssetServiceCallAsset.JSON_PROPERTY_PHONE_NUMBER,
   AssetServiceCallAsset.JSON_PROPERTY_REVIEW_PHONE_NUMBER,

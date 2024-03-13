@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCalloutAssetオブジェクトは、テキスト補足オプションのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLOUTの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCalloutAsset contains Asset value information for callout options.&lt;br&gt; This field is optional in ADD operation. *If type is CALLOUT, this field is required.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCalloutAssetオブジェクトは、テキスト補足アセットのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLOUTの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCalloutAsset contains Asset value information for callout options.&lt;br&gt; This field is optional in ADD operation. *If type is CALLOUT, this field is required.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AssetServiceCalloutAssetオブジェクトは、テキスト補足オプションのアセット情報を格納します。<br> ADD時、このフィールドは省略可能となります。※typeがCALLOUTの場合は必須です。</div> <div lang=\"en\">AssetServiceCalloutAsset contains Asset value information for callout options.<br> This field is optional in ADD operation. *If type is CALLOUT, this field is required.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AssetServiceCalloutAssetオブジェクトは、テキスト補足アセットのアセット情報を格納します。<br> ADD時、このフィールドは省略可能となります。※typeがCALLOUTの場合は必須です。</div> <div lang=\"en\">AssetServiceCalloutAsset contains Asset value information for callout options.<br> This field is optional in ADD operation. *If type is CALLOUT, this field is required.</div> ")
 @JsonPropertyOrder({
   AssetServiceCalloutAsset.JSON_PROPERTY_CALLOUT_TEXT,
   AssetServiceCalloutAsset.JSON_PROPERTY_REVIEW_CALLOUT_TEXT,
