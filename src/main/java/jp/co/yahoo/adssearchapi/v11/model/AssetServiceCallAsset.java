@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCallAssetオブジェクトは、電話番号オプションのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCallAsset contains Asset value information for phone number options.&lt;br&gt; This field is optional in ADD operation. *If type is CALL, this field is required.&lt;br&gt;&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCallAssetオブジェクトは、電話番号アセットのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCallAsset contains Asset value information for call assets.&lt;br&gt; This field is optional in ADD operation. *If type is CALL, this field is required.&lt;br&gt;&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AssetServiceCallAsset.JSON_PROPERTY_PHONE_NUMBER,

@@ -28,7 +28,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; CustomParametersおよびReviewCustomParameters配下では、このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※CustomParameters配下でのみ、クイックリンクオプションの場合、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; Under customParameters and ReviewCustomParameters, this field will be  returned in the response, but it will be ignored on input.&lt;br&gt; *Under customParameters, this field will be optional  in ADD and SET operation for QUICKLINK option.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; CustomParametersおよびReviewCustomParameters配下では、このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※CustomParameters配下でのみ、クイックリンクアセットの場合、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; Under customParameters and ReviewCustomParameters, this field will be  returned in the response, but it will be ignored on input.&lt;br&gt; *Under customParameters, this field will be optional  in ADD and SET operation for QUICKLINK asset.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   FeedItemServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
