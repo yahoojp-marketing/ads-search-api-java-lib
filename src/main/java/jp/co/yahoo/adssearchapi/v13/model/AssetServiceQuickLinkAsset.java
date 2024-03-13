@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceQuickLinkAssetオブジェクトは、クイックリンクオプションのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがQUICKLINKの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceQuickLinkAsset contains Asset value information for quicklink options.&lt;br&gt; This field is optional in ADD operation. *If type is QUICKLINK, this field is required.&lt;br&gt;&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceQuickLinkAssetオブジェクトは、クイックリンクアセットのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがQUICKLINKの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceQuickLinkAsset contains Asset value information for quick link asset.&lt;br&gt; This field is optional in ADD operation. *If type is QUICKLINK, this field is required.&lt;br&gt;&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AssetServiceQuickLinkAsset.JSON_PROPERTY_LINK_TEXT,
