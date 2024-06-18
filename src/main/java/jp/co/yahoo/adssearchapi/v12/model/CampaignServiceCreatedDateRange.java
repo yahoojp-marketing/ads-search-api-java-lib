@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceCreatedDateRangeは、作成日時による検索対象期間を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceCreatedDateRange represents the search target period by the creation date. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceCreatedDateRangeは、作成日による検索対象期間を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceCreatedDateRange represents the search target period by the creation date. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignServiceCreatedDateRange.JSON_PROPERTY_START_DATE,
