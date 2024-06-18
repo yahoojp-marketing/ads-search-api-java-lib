@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceImageAssetオブジェクトは、画像アセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがIMAGEの場合は必須です。&lt;br&gt; ※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceImageAsset contains Asset value information for image asset.&lt;br&gt; This field is optional in ADD operation. *If type is IMAGE, this field is required.&lt;br&gt; *Currently this field is not available.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceImageAssetオブジェクトは、画像アセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがIMAGEの場合は必須です。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051554?language&#x3D;ja\&quot;&gt;画像アセットについて&lt;/a&gt;&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051555?language&#x3D;ja\&quot;&gt;画像アセットの作成&lt;/a&gt;&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceImageAsset contains Asset value information for image asset.&lt;br&gt; This field is optional in ADD operation. *If type is IMAGE, this field is required.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051554?language&#x3D;en_US\&quot;&gt;About image asset&lt;/a&gt;&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051555?language&#x3D;en_US\&quot;&gt;Create image asset&lt;/a&gt;&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AssetServiceImageAsset.JSON_PROPERTY_IMAGE_NAME,

@@ -74,7 +74,7 @@ public class AdGroupAdServiceDynamicSearchLinkedAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文2です。&lt;br&gt;※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description2 of the ad.&lt;br&gt;*Currently this field is not available.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文2です。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description2 of the ad.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;/div&gt; 
    * @return description2
   **/
   @jakarta.annotation.Nullable
