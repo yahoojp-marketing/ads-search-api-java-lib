@@ -79,11 +79,11 @@ public class AdGroupAdServiceDynamicSearchLinkedAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文2です。&lt;br&gt;※現在、こちらのフィールドは利用できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description2 of the ad.&lt;br&gt;*Currently this field is not available.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文2です。&lt;br&gt; ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description2 of the ad.&lt;br&gt; This field is optional in ADD operation. The default value will be null.&lt;/div&gt; 
    * @return description2
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">説明文2です。<br>※現在、こちらのフィールドは利用できません。</div> <div lang=\"en\">Description2 of the ad.<br>*Currently this field is not available.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">説明文2です。<br> ADD時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。</div> <div lang=\"en\">Description2 of the ad.<br> This field is optional in ADD operation. The default value will be null.</div> ")
   @JsonProperty(JSON_PROPERTY_DESCRIPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
