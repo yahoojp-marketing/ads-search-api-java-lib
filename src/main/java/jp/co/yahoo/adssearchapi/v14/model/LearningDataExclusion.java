@@ -106,11 +106,11 @@ public class LearningDataExclusion {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;学習データ除外名です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; ※128文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Learning Data Exclusion name.&lt;br&gt; This field is required in ADD and SET operation.&lt;br&gt; *Up to 128 characters.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;学習データ除外名です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; ※128文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Learning Data Exclusion name.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *Up to 128 characters.&lt;/div&gt; 
    * @return learningDataExclusionName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">学習データ除外名です。<br> ADDおよびSET時、このフィールドは必須となります。<br> ※128文字以内になります。</div> <div lang=\"en\">Learning Data Exclusion name.<br> This field is required in ADD and SET operation.<br> *Up to 128 characters.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">学習データ除外名です。<br> ADD時、このフィールドは必須となります。<br> ※128文字以内になります。</div> <div lang=\"en\">Learning Data Exclusion name.<br> This field is required in ADD operation.<br> *Up to 128 characters.</div> ")
   @JsonProperty(JSON_PROPERTY_LEARNING_DATA_EXCLUSION_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
