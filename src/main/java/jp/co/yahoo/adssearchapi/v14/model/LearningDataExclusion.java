@@ -101,7 +101,7 @@ public class LearningDataExclusion {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;学習データ除外名です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; ※128文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Learning Data Exclusion name.&lt;br&gt; This field is required in ADD and SET operation.&lt;br&gt; *Up to 128 characters.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;学習データ除外名です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; ※128文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Learning Data Exclusion name.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *Up to 128 characters.&lt;/div&gt; 
    * @return learningDataExclusionName
   **/
   @jakarta.annotation.Nullable
