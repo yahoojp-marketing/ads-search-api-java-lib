@@ -84,11 +84,11 @@ public class CampaignServiceTargetImpressionShareScheme {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト設定値は0となります。&lt;br&gt; ※「0」が設定された場合、上限設定はありません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Limit of bid (CPC).&lt;br&gt; This field is optional. The default value will be 0.&lt;br&gt; * No limits if &amp;#34;0&amp;#34; is set.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt; 入札価格の上限の詳細は以下のヘルプを参照してください。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044401?language&#x3D;ja\&quot;&gt;自動入札タイプ「ページ最上部掲載」【検索広告】&lt;/a&gt;&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ただし、他の入札戦略から「ページ最上部掲載」へ変更される場合はSET時でも必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bid Limit.&lt;br&gt; Refer to the following help.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044401?language&#x3D;en_US\&quot;&gt;Autobidding type absolute top placement [Search Ads]&lt;/a&gt;&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; If the &#39;Absolute top placement&#39; type is specified in a SET operation from another bidding strategy type, this field will be required. &lt;/div&gt; 
    * @return bidCeiling
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br> このフィールドは省略可能となります。その際、デフォルト設定値は0となります。<br> ※「0」が設定された場合、上限設定はありません。</div> <div lang=\"en\">Limit of bid (CPC).<br> This field is optional. The default value will be 0.<br> * No limits if &#34;0&#34; is set.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br> 入札価格の上限の詳細は以下のヘルプを参照してください。<br> ・<a href=\"https://ads-help.yahoo-net.jp/s/article/H000044401?language=ja\">自動入札タイプ「ページ最上部掲載」【検索広告】</a><br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。<br> ただし、他の入札戦略から「ページ最上部掲載」へ変更される場合はSET時でも必須となります。 </div> <div lang=\"en\">Bid Limit.<br> Refer to the following help.<br> * <a href=\"https://ads-help.yahoo-net.jp/s/article/H000044401?language=en_US\">Autobidding type absolute top placement [Search Ads]</a><br> This field is required in ADD operation, and will be optional in SET operation.<br> If the 'Absolute top placement' type is specified in a SET operation from another bidding strategy type, this field will be required. </div> ")
   @JsonProperty(JSON_PROPERTY_BID_CEILING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
