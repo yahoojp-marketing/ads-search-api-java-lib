@@ -84,11 +84,11 @@ public class BiddingStrategyServiceTargetImpressionShareScheme {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。（0〜50000）&lt;br&gt; ※「0」が設定された場合、上限設定はありません。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CPC limit (0-50000).&lt;br&gt; * No limits if &amp;#34;0&amp;#34; is set.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt; 入札価格の上限の詳細は以下のヘルプを参照してください。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044401?language&#x3D;ja\&quot;&gt;自動入札タイプ「ページ最上部掲載」【検索広告】&lt;/a&gt;&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bid Limit.&lt;br&gt; Refer to the following help.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044401?language&#x3D;en_US\&quot;&gt;Autobidding type absolute top placement [Search Ads]&lt;/a&gt;&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return bidCeiling
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。（0〜50000）<br> ※「0」が設定された場合、上限設定はありません。<br> このフィールドは、いずれの場合でも省略可能となります。</div> <div lang=\"en\">CPC limit (0-50000).<br> * No limits if &#34;0&#34; is set.<br> This field is optional in any cases.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">入札価格の上限です。<br> 入札価格の上限の詳細は以下のヘルプを参照してください。<br> ・<a href=\"https://ads-help.yahoo-net.jp/s/article/H000044401?language=ja\">自動入札タイプ「ページ最上部掲載」【検索広告】</a><br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Bid Limit.<br> Refer to the following help.<br> * <a href=\"https://ads-help.yahoo-net.jp/s/article/H000044401?language=en_US\">Autobidding type absolute top placement [Search Ads]</a><br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
   @JsonProperty(JSON_PROPERTY_BID_CEILING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
