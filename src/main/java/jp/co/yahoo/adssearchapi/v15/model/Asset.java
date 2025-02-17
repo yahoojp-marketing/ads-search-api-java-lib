@@ -141,11 +141,11 @@ public class Asset {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセットIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となり、ADD時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset ID.&lt;br&gt;This field is required in SET and REMOVE operation, and will be ignored in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセットIDです。&lt;br&gt; このフィールドは、SET時に必須となり、ADD時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset ID.&lt;br&gt;This field is required in SET operation, and will be ignored in ADD operation.&lt;/div&gt; 
    * @return assetId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アセットIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時に無視されます。</div> <div lang=\"en\">Asset ID.<br>This field is required in SET and REMOVE operation, and will be ignored in ADD operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">アセットIDです。<br> このフィールドは、SET時に必須となり、ADD時に無視されます。</div> <div lang=\"en\">Asset ID.<br>This field is required in SET operation, and will be ignored in ADD operation.</div> ")
   @JsonProperty(JSON_PROPERTY_ASSET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

@@ -97,11 +97,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。&lt;br&gt; headlines[]には、3~15件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline that specify in responsive ads for search.&lt;br&gt; 3 to 15 items can be specified for headlines[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。&lt;br&gt; headlines[]には、3~15件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※ descriptionsを指定する場合は、headlinesは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline that specify in responsive ads for search.&lt;br&gt; 3 to 15 items can be specified for headlines[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *To specify descriptions, headlines is required.&lt;/div&gt; 
    * @return headlines
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。<br> headlines[]には、3~15件の指定が可能です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Text asset for the headline that specify in responsive ads for search.<br> 3 to 15 items can be specified for headlines[].<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。<br> headlines[]には、3~15件の指定が可能です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。<br> ※ descriptionsを指定する場合は、headlinesは必須です。</div> <div lang=\"en\">Text asset for the headline that specify in responsive ads for search.<br> 3 to 15 items can be specified for headlines[].<br> This field is required in ADD operation, and will be optional in SET operation.<br> *To specify descriptions, headlines is required.</div> ")
   @JsonProperty(JSON_PROPERTY_HEADLINES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,11 +132,11 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description that specify in responsive ads for search.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※ headlinesを指定する場合は、descriptionsは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description that specify in responsive ads for search.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *To specify headlines, descriptions is required.&lt;/div&gt; 
    * @return descriptions
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定する説明文のテキストアセットを表します。<br> descriptions[]には、2~4件の指定が可能です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Text asset for the description that specify in responsive ads for search.<br> 2 to 4 items can be specified for descriptions[].<br> This field is required in ADD operation, and will be optional in SET operation.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">レスポンシブ検索広告で指定する説明文のテキストアセットを表します。<br> descriptions[]には、2~4件の指定が可能です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。<br> ※ headlinesを指定する場合は、descriptionsは必須です。</div> <div lang=\"en\">Text asset for the description that specify in responsive ads for search.<br> 2 to 4 items can be specified for descriptions[].<br> This field is required in ADD operation, and will be optional in SET operation.<br> *To specify headlines, descriptions is required.</div> ")
   @JsonProperty(JSON_PROPERTY_DESCRIPTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
