@@ -97,11 +97,11 @@ public class CampaignRetargetingList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   入札価格調整率です。0.10～10.00まで指定できます。&lt;br&gt;   0を指定した場合、広告は配信されません。&lt;br&gt;   また、入札価格調整率の値は小数点第二位まで指定可能です。&lt;br&gt;   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Bid adjustment rate.&lt;br&gt;   Can be specified between  0.10 to 10.00.&lt;br&gt;   When specified &amp;#39;0&amp;#39;, the ad will not be delivered.&lt;br&gt;   Bid adjustment rate can be specified up to two decimal places.&lt;br&gt;   This field is optional. The default value will be 1.0. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   入札価格調整率です。0.10～10.00まで指定できます。&lt;br&gt;   また、入札価格調整率の値は小数点第二位まで指定可能です。&lt;br&gt;   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Bid adjustment rate.&lt;br&gt;   Can be specified between  0.10 to 10.00.&lt;br&gt;   Bid adjustment rate can be specified up to two decimal places.&lt;br&gt;   This field is optional. The default value will be 1.0. &lt;/div&gt; 
    * @return bidMultiplier
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   入札価格調整率です。0.10～10.00まで指定できます。<br>   0を指定した場合、広告は配信されません。<br>   また、入札価格調整率の値は小数点第二位まで指定可能です。<br>   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 </div> <div lang=\"en\">   Bid adjustment rate.<br>   Can be specified between  0.10 to 10.00.<br>   When specified &#39;0&#39;, the ad will not be delivered.<br>   Bid adjustment rate can be specified up to two decimal places.<br>   This field is optional. The default value will be 1.0. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">   入札価格調整率です。0.10～10.00まで指定できます。<br>   また、入札価格調整率の値は小数点第二位まで指定可能です。<br>   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 </div> <div lang=\"en\">   Bid adjustment rate.<br>   Can be specified between  0.10 to 10.00.<br>   Bid adjustment rate can be specified up to two decimal places.<br>   This field is optional. The default value will be 1.0. </div> ")
   @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
