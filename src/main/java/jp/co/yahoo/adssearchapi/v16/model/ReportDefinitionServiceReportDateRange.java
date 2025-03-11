@@ -48,7 +48,7 @@ public class ReportDefinitionServiceReportDateRange {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;集計の終了日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;br&gt;DateRangeTypeがCUSTOM_DATEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date.&lt;br&gt;∗ Format: yyyyMMdd&lt;br&gt;If DateRangeType is CUSTOM_DATE, this field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;集計の終了日です。&lt;br&gt;指定可能な値は&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;ja\&quot;&gt;こちらのページ&lt;/a&gt;をご参照下さい。&lt;br&gt;※フォーマット：yyyyMMdd&lt;br&gt;DateRangeTypeがCUSTOM_DATEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date.&lt;br&gt;Please refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;en_US\&quot;&gt;this page&lt;/a&gt; for available values.&lt;br&gt;* Format: yyyyMMdd&lt;br&gt;If DateRangeType is CUSTOM_DATE, this field is required in ADD operation.&lt;/div&gt; 
    * @return endDate
   **/
   @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class ReportDefinitionServiceReportDateRange {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;集計の開始日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;br&gt;DateRangeTypeがCUSTOM_DATEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date. &lt;br&gt;∗ Format: yyyyMMdd&lt;br&gt;If DateRangeType is CUSTOM_DATE, this field is required in ADD operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;集計の開始日です。&lt;br&gt;指定可能な値は&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;ja\&quot;&gt;こちらのページ&lt;/a&gt;をご参照下さい。&lt;br&gt;※フォーマット：yyyyMMdd&lt;br&gt;DateRangeTypeがCUSTOM_DATEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date. &lt;br&gt;Please refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;en_US\&quot;&gt;this page&lt;/a&gt; for available values.&lt;br&gt;&lt;br&gt;* Format: yyyyMMdd&lt;br&gt;If DateRangeType is CUSTOM_DATE, this field is required in ADD operation.&lt;/div&gt; 
    * @return startDate
   **/
   @jakarta.annotation.Nullable
