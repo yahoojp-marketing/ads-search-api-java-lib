@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Assetオブジェクトは、アセット情報を格納します。&lt;br&gt; ※type&#x3D;IMAGE, FAVICONのアセットを登録するときは最大1件となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset object contains the information of Asset.&lt;br&gt; *In the case of &#x60;type&#x3D;IMAGE, FAVICON&#x60;, the operand size is limited to one item.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Assetオブジェクトは、アセット情報を格納します。&lt;br&gt; ※type&#x3D;IMAGE, FAVICONのアセットを登録するときは最大1件となります。&lt;br&gt; ※REMOVE時は最大100件となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset object contains the information of Asset.&lt;br&gt; *In the case of &#x60;type&#x3D;IMAGE, FAVICON&#x60;, the operand size is limited to one item.&lt;br&gt; *In the case of &#x60;REMOVE&#x60;, the operand size is limited to 100 items.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   Asset.JSON_PROPERTY_ACCOUNT_ID,
