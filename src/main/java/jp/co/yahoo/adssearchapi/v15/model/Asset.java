@@ -32,9 +32,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Assetオブジェクトは、アセット情報を格納します。&lt;br&gt; ※type&#x3D;IMAGEのアセットを登録するときは最大1件となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset object contains the information of Asset.&lt;br&gt; *In the case of &#x60;type&#x3D;IMAGE&#x60;, the operand size is limited to one item.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Assetオブジェクトは、アセット情報を格納します。&lt;br&gt; ※type&#x3D;IMAGE, FAVICONのアセットを登録するときは最大1件となります。&lt;br&gt; ※REMOVE時は最大100件となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset object contains the information of Asset.&lt;br&gt; *In the case of &#x60;type&#x3D;IMAGE, FAVICON&#x60;, the operand size is limited to one item.&lt;br&gt; *In the case of &#x60;REMOVE&#x60;, the operand size is limited to 100 items.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Assetオブジェクトは、アセット情報を格納します。<br> ※type=IMAGEのアセットを登録するときは最大1件となります。</div> <div lang=\"en\">Asset object contains the information of Asset.<br> *In the case of `type=IMAGE`, the operand size is limited to one item.</div> ")
+@ApiModel(description = "<div lang=\"ja\">Assetオブジェクトは、アセット情報を格納します。<br> ※type=IMAGE, FAVICONのアセットを登録するときは最大1件となります。<br> ※REMOVE時は最大100件となります。</div> <div lang=\"en\">Asset object contains the information of Asset.<br> *In the case of `type=IMAGE, FAVICON`, the operand size is limited to one item.<br> *In the case of `REMOVE`, the operand size is limited to 100 items.</div> ")
 @JsonPropertyOrder({
   Asset.JSON_PROPERTY_ACCOUNT_ID,
   Asset.JSON_PROPERTY_ASSET_ID,
