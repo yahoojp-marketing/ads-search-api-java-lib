@@ -319,7 +319,7 @@ public class SsaAccount {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のYahoo! JAPANビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact Business ID.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact Business ID.&lt;/div&gt; 
    * @return contactBizId
   **/
   @jakarta.annotation.Nullable
