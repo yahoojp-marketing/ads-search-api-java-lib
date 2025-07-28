@@ -300,11 +300,11 @@ public class SsaAccount {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のYahoo! JAPANビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact Business ID.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact Business ID.&lt;/div&gt; 
    * @return contactBizId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウント管理者のYahoo! JAPANビジネスIDです。</div> <div lang=\"en\">Contact Business ID.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">アカウント管理者のビジネスIDです。</div> <div lang=\"en\">Contact Business ID.</div> ")
   @JsonProperty(JSON_PROPERTY_CONTACT_BIZ_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
