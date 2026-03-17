@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceGetCustomKeySelectorは、ターゲットリストの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceGetCustomKeySelector object holds search condition (execution parameter).&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceGetCustomKeySelectorは、オーディエンスリストの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceGetCustomKeySelector object holds search condition (execution parameter).&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   RetargetingListServiceGetCustomKeySelector.JSON_PROPERTY_ACCOUNT_ID,

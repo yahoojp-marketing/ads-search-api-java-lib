@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalTargetListは、組合せターゲットリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがLOGICALの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalTargetList is an object that holds the combination target list information.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is LOGICAL, this field is required.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalTargetListは、組合せオーディエンスリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがLOGICALの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalTargetList is an object that holds the combination audience list information.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is LOGICAL, this field is required.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   RetargetingListServiceLogicalTargetList.JSON_PROPERTY_LOGICAL_GROUP

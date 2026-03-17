@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceCriterionTargetListは、ターゲットリスト情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceCriterionTargetList is an object that holds target list information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceCriterionTargetListは、オーディエンスリスト情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceCriterionTargetList is an object that holds audience list information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignRetargetingListServiceCriterionTargetList.JSON_PROPERTY_RETARGETING_TRACK_ID,
@@ -78,7 +78,7 @@ public class CampaignRetargetingListServiceCriterionTargetList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target list ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return targetListId
   **/
   @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class CampaignRetargetingListServiceCriterionTargetList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target list name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return targetListName
   **/
   @jakarta.annotation.Nullable

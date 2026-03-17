@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceSelectorオブジェクトは、キャンペーン階層におけるターゲットリストの設定情報を取得するための検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceSelector object holds search conditions (exec parameters) to get Target List settings on the campaign level.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceSelectorオブジェクトは、キャンペーン階層におけるオーディエンスリストの設定情報を取得するための検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceSelector object holds search conditions (exec parameters) to get audience list settings on the campaign level.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignRetargetingListServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
@@ -216,7 +216,7 @@ public class CampaignRetargetingListServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search conditon: Target List ID.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search conditon: audience list ID.&lt;/div&gt; 
    * @return targetListIds
   **/
   @jakarta.annotation.Nullable

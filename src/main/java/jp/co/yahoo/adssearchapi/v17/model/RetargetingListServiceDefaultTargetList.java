@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceDefaultTargetListは、デフォルトターゲットリストを保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがDEFAULTの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceDefaultTargetList is an object that holds default target list.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is DEFAULT, this field is required.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceDefaultTargetListは、デフォルトオーディエンスリストを保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがDEFAULTの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceDefaultTargetList is an object that holds default audience list.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is DEFAULT, this field is required.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   RetargetingListServiceDefaultTargetList.JSON_PROPERTY_TAG

@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceCustomKeyPageは、ターゲットリストのカスタムキー情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceCustomKeyPage is an object that holds custom key information of target list.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceCustomKeyPageは、オーディエンスリストのカスタムキー情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceCustomKeyPage is an object that holds custom key information of audience list.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   RetargetingListServiceCustomKeyPage.JSON_PROPERTY_CUSTOM_KEYS,
