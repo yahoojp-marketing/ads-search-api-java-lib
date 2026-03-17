@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListServiceOperationは、操作対象の広告グループレベルでのターゲットリスト設定を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingListServiceOperation is an object that holds target ad group retargeting.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListServiceOperationは、操作対象の広告グループレベルでのオーディエンスリスト設定を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingListServiceOperation is an object that holds target ad group retargeting.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AdGroupRetargetingListServiceOperation.JSON_PROPERTY_ACCOUNT_ID,

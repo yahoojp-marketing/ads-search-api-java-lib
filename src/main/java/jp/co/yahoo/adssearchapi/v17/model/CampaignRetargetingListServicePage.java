@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServicePageオブジェクトは、キャンペーン階層におけるターゲットリストの設定に関する実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServicePage  object holds execution results (list of all entities) for Target List settings on the campaign level.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServicePageオブジェクトは、キャンペーン階層におけるオーディエンスリストの設定に関する実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServicePage  object holds execution results (list of all entities) for audience list settings on the campaign level.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignRetargetingListServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,

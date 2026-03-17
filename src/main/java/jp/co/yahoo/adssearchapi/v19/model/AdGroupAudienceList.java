@@ -26,7 +26,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAudienceListは、広告グループレベルでのオーディエンスリスト設定を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAudienceList is an object that holds ad group user list information.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAudienceListは、広告グループレベルでのオーディエンスリスト設定を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAudienceList is an object that holds ad group audience list information.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AdGroupAudienceList.JSON_PROPERTY_ACCOUNT_ID,

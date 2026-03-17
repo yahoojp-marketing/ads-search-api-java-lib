@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceTargetingListは、リターゲティング情報（ターゲットリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceTargetingList is an object that holds retargeting information (target list).&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceTargetingListは、リターゲティング情報（オーディエンスリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceTargetingList is an object that holds retargeting information (audience list).&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   RetargetingListServiceTargetingList.JSON_PROPERTY_ACCOUNT_ID,
@@ -342,7 +342,7 @@ public class RetargetingListServiceTargetingList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストの説明です。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of Target List.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストの説明です。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of audience list.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
    * @return targetListDescription
   **/
   @jakarta.annotation.Nullable
@@ -368,7 +368,7 @@ public class RetargetingListServiceTargetingList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target List ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return targetListId
   **/
   @jakarta.annotation.Nullable
@@ -394,7 +394,7 @@ public class RetargetingListServiceTargetingList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリスト名です。&lt;br&gt; ADD時にこのフィールドは必須となり、SET時にこのフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target List name.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です。&lt;br&gt; ADD時にこのフィールドは必須となり、SET時にこのフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation.&lt;/div&gt; 
    * @return targetListName
   **/
   @jakarta.annotation.Nullable
@@ -446,7 +446,7 @@ public class RetargetingListServiceTargetingList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストのトラッキング用IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID of Target list.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストのトラッキング用IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID of audience list.&lt;/div&gt; 
    * @return targetListTrackId
   **/
   @jakarta.annotation.Nullable

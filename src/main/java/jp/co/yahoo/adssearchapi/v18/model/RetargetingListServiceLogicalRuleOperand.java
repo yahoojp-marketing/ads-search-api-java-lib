@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalRuleOperandは、組合せ対象のターゲットリストを保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalRuleOperand is an object that holds target list of combination.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalRuleOperandは、組合せ対象のオーディエンスリストを保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalRuleOperand is an object that holds audience list of combination.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
  */
 @JsonPropertyOrder({
   RetargetingListServiceLogicalRuleOperand.JSON_PROPERTY_TARGET_LIST_ID
@@ -44,7 +44,7 @@ public class RetargetingListServiceLogicalRuleOperand {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットリストIDです。&lt;br&gt;組合せのターゲットリストは設定できません。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target list ID.&lt;br&gt;Cannot set the combination target list.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;br&gt;組合せのオーディエンスリストは設定できません。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;br&gt;Cannot set the combination audience list.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return targetListId
   **/
   @jakarta.annotation.Nullable
