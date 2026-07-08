@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AssetServiceSchedule;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCalloutAssetオブジェクトは、テキスト補足アセットのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがCALLOUTの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCalloutAsset contains Asset value information for callout options.&lt;br&gt; This field is optional in ADD operation. *If type is CALLOUT, this field is required.&lt;/div&gt; 
@@ -36,38 +37,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceCalloutAsset.JSON_PROPERTY_END_DATE,
   AssetServiceCalloutAsset.JSON_PROPERTY_SCHEDULES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AssetServiceCalloutAsset {
   public static final String JSON_PROPERTY_CALLOUT_TEXT = "calloutText";
+  @jakarta.annotation.Nullable
   private String calloutText;
 
   public static final String JSON_PROPERTY_REVIEW_CALLOUT_TEXT = "reviewCalloutText";
+  @jakarta.annotation.Nullable
   private String reviewCalloutText;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_SCHEDULES = "schedules";
+  @jakarta.annotation.Nullable
   private List<AssetServiceSchedule> schedules;
 
   public AssetServiceCalloutAsset() {
   }
 
-  public AssetServiceCalloutAsset calloutText(String calloutText) {
+  public AssetServiceCalloutAsset calloutText(@jakarta.annotation.Nullable String calloutText) {
     
     this.calloutText = calloutText;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コールアウトテキストです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Callout text.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return calloutText
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CALLOUT_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_CALLOUT_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCalloutText() {
@@ -75,25 +81,24 @@ public class AssetServiceCalloutAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CALLOUT_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_CALLOUT_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCalloutText(String calloutText) {
+  public void setCalloutText(@jakarta.annotation.Nullable String calloutText) {
     this.calloutText = calloutText;
   }
 
-
-  public AssetServiceCalloutAsset reviewCalloutText(String reviewCalloutText) {
+  public AssetServiceCalloutAsset reviewCalloutText(@jakarta.annotation.Nullable String reviewCalloutText) {
     
     this.reviewCalloutText = reviewCalloutText;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のコールアウトテキストです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Callout text on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewCalloutText
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_CALLOUT_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_CALLOUT_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewCalloutText() {
@@ -101,25 +106,24 @@ public class AssetServiceCalloutAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_CALLOUT_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_CALLOUT_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewCalloutText(String reviewCalloutText) {
+  public void setReviewCalloutText(@jakarta.annotation.Nullable String reviewCalloutText) {
     this.reviewCalloutText = reviewCalloutText;
   }
 
-
-  public AssetServiceCalloutAsset startDate(String startDate) {
+  public AssetServiceCalloutAsset startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信開始日です。&lt;br&gt; ※空で設定すると、既存の配信開始日は削除されます。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of ad display&lt;br&gt; *On setting blank, existing start date of ad display will be deleted.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -127,25 +131,24 @@ public class AssetServiceCalloutAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public AssetServiceCalloutAsset endDate(String endDate) {
+  public AssetServiceCalloutAsset endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信終了日です。&lt;br&gt; ※空で設定すると、既存の配信終了日は削除されます。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of ad display.&lt;br&gt; *By setting blank, existing end date of ad display will be deleted.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -153,14 +156,13 @@ public class AssetServiceCalloutAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public AssetServiceCalloutAsset schedules(List<AssetServiceSchedule> schedules) {
+  public AssetServiceCalloutAsset schedules(@jakarta.annotation.Nullable List<AssetServiceSchedule> schedules) {
     
     this.schedules = schedules;
     return this;
@@ -174,12 +176,12 @@ public class AssetServiceCalloutAsset {
     return this;
   }
 
-   /**
+  /**
    * Get schedules
    * @return schedules
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULES)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AssetServiceSchedule> getSchedules() {
@@ -187,11 +189,12 @@ public class AssetServiceCalloutAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULES)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSchedules(List<AssetServiceSchedule> schedules) {
+  public void setSchedules(@jakarta.annotation.Nullable List<AssetServiceSchedule> schedules) {
     this.schedules = schedules;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -232,10 +235,7 @@ public class AssetServiceCalloutAsset {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

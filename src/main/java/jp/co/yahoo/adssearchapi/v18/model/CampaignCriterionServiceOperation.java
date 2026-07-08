@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v18.model.CampaignCriterion;
 import jp.co.yahoo.adssearchapi.v18.model.CampaignCriterionServiceUse;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceOperationオブジェクトは、操作の対象となるキャンペーンのクライテリアと処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceOperation object describes campaign criteria for operation and list of operations.&lt;/div&gt; 
@@ -36,35 +37,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignCriterionServiceOperation.JSON_PROPERTY_OPERAND,
   CampaignCriterionServiceOperation.JSON_PROPERTY_USE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignCriterionServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
+  @jakarta.annotation.Nullable
   private List<CampaignCriterion> operand;
 
   public static final String JSON_PROPERTY_USE = "use";
+  @jakarta.annotation.Nullable
   private CampaignCriterionServiceUse use;
 
   public CampaignCriterionServiceOperation() {
   }
 
-  public CampaignCriterionServiceOperation accountId(Long accountId) {
+  public CampaignCriterionServiceOperation accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -72,25 +77,24 @@ public class CampaignCriterionServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public CampaignCriterionServiceOperation campaignId(Long campaignId) {
+  public CampaignCriterionServiceOperation campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -98,14 +102,13 @@ public class CampaignCriterionServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public CampaignCriterionServiceOperation operand(List<CampaignCriterion> operand) {
+  public CampaignCriterionServiceOperation operand(@jakarta.annotation.Nullable List<CampaignCriterion> operand) {
     
     this.operand = operand;
     return this;
@@ -119,12 +122,12 @@ public class CampaignCriterionServiceOperation {
     return this;
   }
 
-   /**
+  /**
    * Get operand
    * @return operand
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_OPERAND, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public List<CampaignCriterion> getOperand() {
@@ -132,25 +135,24 @@ public class CampaignCriterionServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_OPERAND, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setOperand(List<CampaignCriterion> operand) {
+  public void setOperand(@jakarta.annotation.Nullable List<CampaignCriterion> operand) {
     this.operand = operand;
   }
 
-
-  public CampaignCriterionServiceOperation use(CampaignCriterionServiceUse use) {
+  public CampaignCriterionServiceOperation use(@jakarta.annotation.Nullable CampaignCriterionServiceUse use) {
     
     this.use = use;
     return this;
   }
 
-   /**
+  /**
    * Get use
    * @return use
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USE)
+  @JsonProperty(value = JSON_PROPERTY_USE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignCriterionServiceUse getUse() {
@@ -158,11 +160,12 @@ public class CampaignCriterionServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USE)
+  @JsonProperty(value = JSON_PROPERTY_USE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUse(CampaignCriterionServiceUse use) {
+  public void setUse(@jakarta.annotation.Nullable CampaignCriterionServiceUse use) {
     this.use = use;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -201,10 +204,7 @@ public class CampaignCriterionServiceOperation {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

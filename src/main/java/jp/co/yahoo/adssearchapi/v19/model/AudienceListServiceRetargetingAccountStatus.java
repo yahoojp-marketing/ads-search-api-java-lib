@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceReviewStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceRetargetingAccountStatusは、アカウントのリタゲ審査ステータスを保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceRetargetingAccountStatus is an object that holds audience review status of account.&lt;/div&gt; 
@@ -32,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceRetargetingAccountStatus.JSON_PROPERTY_REVIEW_REQUEST_DATE,
   AudienceListServiceRetargetingAccountStatus.JSON_PROPERTY_REVIEW_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceRetargetingAccountStatus {
   public static final String JSON_PROPERTY_AGREE_DATE = "agreeDate";
+  @jakarta.annotation.Nullable
   private String agreeDate;
 
   public static final String JSON_PROPERTY_REVIEW_REQUEST_DATE = "reviewRequestDate";
+  @jakarta.annotation.Nullable
   private String reviewRequestDate;
 
   public static final String JSON_PROPERTY_REVIEW_STATUS = "reviewStatus";
+  @jakarta.annotation.Nullable
   private AudienceListServiceReviewStatus reviewStatus;
 
   public AudienceListServiceRetargetingAccountStatus() {
   }
 
-  public AudienceListServiceRetargetingAccountStatus agreeDate(String agreeDate) {
+  public AudienceListServiceRetargetingAccountStatus agreeDate(@jakarta.annotation.Nullable String agreeDate) {
     
     this.agreeDate = agreeDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;規約同意日です。&lt;br&gt; ※YYYYMMDD形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Agreement date.&lt;br&gt; *In YYYYMMDD format.&lt;/div&gt; 
    * @return agreeDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AGREE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_AGREE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAgreeDate() {
@@ -65,25 +68,24 @@ public class AudienceListServiceRetargetingAccountStatus {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AGREE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_AGREE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAgreeDate(String agreeDate) {
+  public void setAgreeDate(@jakarta.annotation.Nullable String agreeDate) {
     this.agreeDate = agreeDate;
   }
 
-
-  public AudienceListServiceRetargetingAccountStatus reviewRequestDate(String reviewRequestDate) {
+  public AudienceListServiceRetargetingAccountStatus reviewRequestDate(@jakarta.annotation.Nullable String reviewRequestDate) {
     
     this.reviewRequestDate = reviewRequestDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;再審査依頼日です。&lt;br&gt; ※YYYYMMDD形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Re-examination review request date.&lt;br&gt; *In YYYYMMDD format.&lt;/div&gt; 
    * @return reviewRequestDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_REQUEST_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_REQUEST_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewRequestDate() {
@@ -91,25 +93,24 @@ public class AudienceListServiceRetargetingAccountStatus {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_REQUEST_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_REQUEST_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewRequestDate(String reviewRequestDate) {
+  public void setReviewRequestDate(@jakarta.annotation.Nullable String reviewRequestDate) {
     this.reviewRequestDate = reviewRequestDate;
   }
 
-
-  public AudienceListServiceRetargetingAccountStatus reviewStatus(AudienceListServiceReviewStatus reviewStatus) {
+  public AudienceListServiceRetargetingAccountStatus reviewStatus(@jakarta.annotation.Nullable AudienceListServiceReviewStatus reviewStatus) {
     
     this.reviewStatus = reviewStatus;
     return this;
   }
 
-   /**
+  /**
    * Get reviewStatus
    * @return reviewStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceReviewStatus getReviewStatus() {
@@ -117,11 +118,12 @@ public class AudienceListServiceRetargetingAccountStatus {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewStatus(AudienceListServiceReviewStatus reviewStatus) {
+  public void setReviewStatus(@jakarta.annotation.Nullable AudienceListServiceReviewStatus reviewStatus) {
     this.reviewStatus = reviewStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +160,7 @@ public class AudienceListServiceRetargetingAccountStatus {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

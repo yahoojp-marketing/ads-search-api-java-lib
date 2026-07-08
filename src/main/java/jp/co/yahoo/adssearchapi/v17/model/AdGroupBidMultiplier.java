@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupBidMultiplierServicePlatformType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupBidMultiplierオブジェクトは、入札価格調整率を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Container for bid multiplier.&lt;/div&gt; 
@@ -34,38 +34,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupBidMultiplier.JSON_PROPERTY_CAMPAIGN_ID,
   AdGroupBidMultiplier.JSON_PROPERTY_PLATFORM_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupBidMultiplier {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_BID_MULTIPLIER = "bidMultiplier";
+  @jakarta.annotation.Nullable
   private Double bidMultiplier;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_PLATFORM_TYPE = "platformType";
+  @jakarta.annotation.Nullable
   private AdGroupBidMultiplierServicePlatformType platformType;
 
   public AdGroupBidMultiplier() {
   }
 
-  public AdGroupBidMultiplier accountId(Long accountId) {
+  public AdGroupBidMultiplier accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -73,25 +78,24 @@ public class AdGroupBidMultiplier {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AdGroupBidMultiplier adGroupId(Long adGroupId) {
+  public AdGroupBidMultiplier adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループIDです。&lt;br&gt; SETおよびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID.&lt;br&gt; This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -99,25 +103,24 @@ public class AdGroupBidMultiplier {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public AdGroupBidMultiplier bidMultiplier(Double bidMultiplier) {
+  public AdGroupBidMultiplier bidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     
     this.bidMultiplier = bidMultiplier;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格調整率です。0.1～10.00まで指定できます。0を指定した場合、広告は配信されません。&lt;br&gt; また、入札価格調整率の値は小数点第二位まで指定可能です。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bid adjustment rate.&lt;br&gt; Can be specified between  0.1 to 10.00.&lt;br&gt; When specified &amp;#39;0&amp;#39;, the ad will not be delivered.&lt;br&gt; Bid adjustment rate can be specified up to two decimal places.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return bidMultiplier
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getBidMultiplier() {
@@ -125,25 +128,24 @@ public class AdGroupBidMultiplier {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidMultiplier(Double bidMultiplier) {
+  public void setBidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     this.bidMultiplier = bidMultiplier;
   }
 
-
-  public AdGroupBidMultiplier campaignId(Long campaignId) {
+  public AdGroupBidMultiplier campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; SETおよびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -151,25 +153,24 @@ public class AdGroupBidMultiplier {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public AdGroupBidMultiplier platformType(AdGroupBidMultiplierServicePlatformType platformType) {
+  public AdGroupBidMultiplier platformType(@jakarta.annotation.Nullable AdGroupBidMultiplierServicePlatformType platformType) {
     
     this.platformType = platformType;
     return this;
   }
 
-   /**
+  /**
    * Get platformType
    * @return platformType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLATFORM_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_PLATFORM_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupBidMultiplierServicePlatformType getPlatformType() {
@@ -177,11 +178,12 @@ public class AdGroupBidMultiplier {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLATFORM_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_PLATFORM_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlatformType(AdGroupBidMultiplierServicePlatformType platformType) {
+  public void setPlatformType(@jakarta.annotation.Nullable AdGroupBidMultiplierServicePlatformType platformType) {
     this.platformType = platformType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -222,10 +224,7 @@ public class AdGroupBidMultiplier {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

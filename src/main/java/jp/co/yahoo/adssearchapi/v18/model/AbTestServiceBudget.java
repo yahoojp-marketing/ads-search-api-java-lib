@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AbTestServiceBudgetオブジェクトは、キャンペーン予算に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AbTestServiceBudget object displays budget information for campaign.&lt;/div&gt; 
@@ -30,29 +30,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AbTestServiceBudget.JSON_PROPERTY_CAMPAIGN_BUDGET_ID,
   AbTestServiceBudget.JSON_PROPERTY_AMOUNT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AbTestServiceBudget {
   public static final String JSON_PROPERTY_CAMPAIGN_BUDGET_ID = "campaignBudgetId";
+  @jakarta.annotation.Nullable
   private Long campaignBudgetId;
 
   public static final String JSON_PROPERTY_AMOUNT = "amount";
+  @jakarta.annotation.Nullable
   private Long amount;
 
   public AbTestServiceBudget() {
   }
 
-  public AbTestServiceBudget campaignBudgetId(Long campaignBudgetId) {
+  public AbTestServiceBudget campaignBudgetId(@jakarta.annotation.Nullable Long campaignBudgetId) {
     
     this.campaignBudgetId = campaignBudgetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; amountと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt;  This field cannot be set at the same time as amount.&lt;/div&gt; 
    * @return campaignBudgetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignBudgetId() {
@@ -60,25 +62,24 @@ public class AbTestServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBudgetId(Long campaignBudgetId) {
+  public void setCampaignBudgetId(@jakarta.annotation.Nullable Long campaignBudgetId) {
     this.campaignBudgetId = campaignBudgetId;
   }
 
-
-  public AbTestServiceBudget amount(Long amount) {
+  public AbTestServiceBudget amount(@jakarta.annotation.Nullable Long amount) {
     
     this.amount = amount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;1日単位のキャンペーン予算利用金額です。&lt;br&gt; campaignBudgetIdと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Amount of budget of Campaign.&lt;br&gt; This field cannot be set at the same time as campaignBudgetId.&lt;/div&gt; 
    * @return amount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAmount() {
@@ -86,11 +87,12 @@ public class AbTestServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAmount(Long amount) {
+  public void setAmount(@jakarta.annotation.Nullable Long amount) {
     this.amount = amount;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -125,10 +127,7 @@ public class AbTestServiceBudget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

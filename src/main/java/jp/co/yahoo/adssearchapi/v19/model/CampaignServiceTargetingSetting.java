@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignServiceTargetAll;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceTargetingSettingは、ターゲット設定を保持するオブジェクトです。&lt;br&gt; ADD時、settingTypeがAUDIENCE_LIST_SETTINGの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceTargetingSetting is object that holds target setting.&lt;br&gt; This field is optional. However, in ADD operation, this field is required only when settingType is &#39;AUDIENCE_LIST_SETTING&#39;, and it is optional when settingType is the others.&lt;/div&gt; 
@@ -30,26 +30,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   CampaignServiceTargetingSetting.JSON_PROPERTY_TARGET_ALL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceTargetingSetting {
   public static final String JSON_PROPERTY_TARGET_ALL = "targetAll";
+  @jakarta.annotation.Nullable
   private CampaignServiceTargetAll targetAll;
 
   public CampaignServiceTargetingSetting() {
   }
 
-  public CampaignServiceTargetingSetting targetAll(CampaignServiceTargetAll targetAll) {
+  public CampaignServiceTargetingSetting targetAll(@jakarta.annotation.Nullable CampaignServiceTargetAll targetAll) {
     
     this.targetAll = targetAll;
     return this;
   }
 
-   /**
+  /**
    * Get targetAll
    * @return targetAll
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_ALL)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ALL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceTargetAll getTargetAll() {
@@ -57,11 +58,12 @@ public class CampaignServiceTargetingSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_ALL)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ALL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetAll(CampaignServiceTargetAll targetAll) {
+  public void setTargetAll(@jakarta.annotation.Nullable CampaignServiceTargetAll targetAll) {
     this.targetAll = targetAll;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -94,10 +96,7 @@ public class CampaignServiceTargetingSetting {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

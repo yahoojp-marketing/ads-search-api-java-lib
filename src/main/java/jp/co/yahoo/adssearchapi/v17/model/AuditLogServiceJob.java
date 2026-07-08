@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.AuditLogServiceDateRange;
 import jp.co.yahoo.adssearchapi.v17.model.AuditLogServiceEncoding;
@@ -31,6 +31,7 @@ import jp.co.yahoo.adssearchapi.v17.model.AuditLogServiceOutput;
 import jp.co.yahoo.adssearchapi.v17.model.AuditLogServiceSourceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AuditLogServiceJobオブジェクトは、操作履歴取得で登録するジョブの情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AuditLogServiceJob object retains the job information to be added for getting operation history data.&lt;/div&gt; 
@@ -47,53 +48,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AuditLogServiceJob.JSON_PROPERTY_OUTPUT,
   AuditLogServiceJob.JSON_PROPERTY_SOURCE_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AuditLogServiceJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_DATE_RANGE = "dateRange";
+  @jakarta.annotation.Nullable
   private AuditLogServiceDateRange dateRange;
 
   public static final String JSON_PROPERTY_ENCODING = "encoding";
+  @jakarta.annotation.Nullable
   private AuditLogServiceEncoding encoding;
 
   public static final String JSON_PROPERTY_EVENT_SELECTOR = "eventSelector";
+  @jakarta.annotation.Nullable
   private List<AuditLogServiceEventSelector> eventSelector;
 
   public static final String JSON_PROPERTY_JOB_ID = "jobId";
+  @jakarta.annotation.Nullable
   private Long jobId;
 
   public static final String JSON_PROPERTY_JOB_NAME = "jobName";
+  @jakarta.annotation.Nullable
   private String jobName;
 
   public static final String JSON_PROPERTY_JOB_STATUS = "jobStatus";
+  @jakarta.annotation.Nullable
   private AuditLogServiceJobStatus jobStatus;
 
   public static final String JSON_PROPERTY_LANG = "lang";
+  @jakarta.annotation.Nullable
   private AuditLogServiceLang lang;
 
   public static final String JSON_PROPERTY_OUTPUT = "output";
+  @jakarta.annotation.Nullable
   private AuditLogServiceOutput output;
 
   public static final String JSON_PROPERTY_SOURCE_TYPE = "sourceType";
+  @jakarta.annotation.Nullable
   private AuditLogServiceSourceType sourceType;
 
   public AuditLogServiceJob() {
   }
 
-  public AuditLogServiceJob accountId(Long accountId) {
+  public AuditLogServiceJob accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -101,25 +112,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AuditLogServiceJob dateRange(AuditLogServiceDateRange dateRange) {
+  public AuditLogServiceJob dateRange(@jakarta.annotation.Nullable AuditLogServiceDateRange dateRange) {
     
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceDateRange getDateRange() {
@@ -127,25 +137,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDateRange(AuditLogServiceDateRange dateRange) {
+  public void setDateRange(@jakarta.annotation.Nullable AuditLogServiceDateRange dateRange) {
     this.dateRange = dateRange;
   }
 
-
-  public AuditLogServiceJob encoding(AuditLogServiceEncoding encoding) {
+  public AuditLogServiceJob encoding(@jakarta.annotation.Nullable AuditLogServiceEncoding encoding) {
     
     this.encoding = encoding;
     return this;
   }
 
-   /**
+  /**
    * Get encoding
    * @return encoding
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceEncoding getEncoding() {
@@ -153,14 +162,13 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEncoding(AuditLogServiceEncoding encoding) {
+  public void setEncoding(@jakarta.annotation.Nullable AuditLogServiceEncoding encoding) {
     this.encoding = encoding;
   }
 
-
-  public AuditLogServiceJob eventSelector(List<AuditLogServiceEventSelector> eventSelector) {
+  public AuditLogServiceJob eventSelector(@jakarta.annotation.Nullable List<AuditLogServiceEventSelector> eventSelector) {
     
     this.eventSelector = eventSelector;
     return this;
@@ -174,12 +182,12 @@ public class AuditLogServiceJob {
     return this;
   }
 
-   /**
+  /**
    * Get eventSelector
    * @return eventSelector
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EVENT_SELECTOR)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_SELECTOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AuditLogServiceEventSelector> getEventSelector() {
@@ -187,25 +195,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EVENT_SELECTOR)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_SELECTOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEventSelector(List<AuditLogServiceEventSelector> eventSelector) {
+  public void setEventSelector(@jakarta.annotation.Nullable List<AuditLogServiceEventSelector> eventSelector) {
     this.eventSelector = eventSelector;
   }
 
-
-  public AuditLogServiceJob jobId(Long jobId) {
+  public AuditLogServiceJob jobId(@jakarta.annotation.Nullable Long jobId) {
     
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブIDです。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Job ID.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return jobId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getJobId() {
@@ -213,25 +220,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobId(Long jobId) {
+  public void setJobId(@jakarta.annotation.Nullable Long jobId) {
     this.jobId = jobId;
   }
 
-
-  public AuditLogServiceJob jobName(String jobName) {
+  public AuditLogServiceJob jobName(@jakarta.annotation.Nullable String jobName) {
     
     this.jobName = jobName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブ名です。&lt;br&gt;このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of job.&lt;br&gt;This field is optional.&lt;/div&gt; 
    * @return jobName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_NAME)
+  @JsonProperty(value = JSON_PROPERTY_JOB_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getJobName() {
@@ -239,25 +245,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_NAME)
+  @JsonProperty(value = JSON_PROPERTY_JOB_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobName(String jobName) {
+  public void setJobName(@jakarta.annotation.Nullable String jobName) {
     this.jobName = jobName;
   }
 
-
-  public AuditLogServiceJob jobStatus(AuditLogServiceJobStatus jobStatus) {
+  public AuditLogServiceJob jobStatus(@jakarta.annotation.Nullable AuditLogServiceJobStatus jobStatus) {
     
     this.jobStatus = jobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get jobStatus
    * @return jobStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceJobStatus getJobStatus() {
@@ -265,25 +270,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobStatus(AuditLogServiceJobStatus jobStatus) {
+  public void setJobStatus(@jakarta.annotation.Nullable AuditLogServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
-
-  public AuditLogServiceJob lang(AuditLogServiceLang lang) {
+  public AuditLogServiceJob lang(@jakarta.annotation.Nullable AuditLogServiceLang lang) {
     
     this.lang = lang;
     return this;
   }
 
-   /**
+  /**
    * Get lang
    * @return lang
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceLang getLang() {
@@ -291,25 +295,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLang(AuditLogServiceLang lang) {
+  public void setLang(@jakarta.annotation.Nullable AuditLogServiceLang lang) {
     this.lang = lang;
   }
 
-
-  public AuditLogServiceJob output(AuditLogServiceOutput output) {
+  public AuditLogServiceJob output(@jakarta.annotation.Nullable AuditLogServiceOutput output) {
     
     this.output = output;
     return this;
   }
 
-   /**
+  /**
    * Get output
    * @return output
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceOutput getOutput() {
@@ -317,25 +320,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOutput(AuditLogServiceOutput output) {
+  public void setOutput(@jakarta.annotation.Nullable AuditLogServiceOutput output) {
     this.output = output;
   }
 
-
-  public AuditLogServiceJob sourceType(AuditLogServiceSourceType sourceType) {
+  public AuditLogServiceJob sourceType(@jakarta.annotation.Nullable AuditLogServiceSourceType sourceType) {
     
     this.sourceType = sourceType;
     return this;
   }
 
-   /**
+  /**
    * Get sourceType
    * @return sourceType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceSourceType getSourceType() {
@@ -343,11 +345,12 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSourceType(AuditLogServiceSourceType sourceType) {
+  public void setSourceType(@jakarta.annotation.Nullable AuditLogServiceSourceType sourceType) {
     this.sourceType = sourceType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -398,10 +401,7 @@ public class AuditLogServiceJob {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

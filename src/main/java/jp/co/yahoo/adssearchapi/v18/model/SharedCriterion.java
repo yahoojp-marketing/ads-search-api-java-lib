@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v18.model.SharedCriterionServiceKeywordMatchType;
 import jp.co.yahoo.adssearchapi.v18.model.SharedCriterionServiceUse;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SharedCriterionオブジェクトは、対象外キーワード情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SharedCriterion object holds negative keyword information.&lt;/div&gt; 
@@ -36,41 +36,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SharedCriterion.JSON_PROPERTY_TEXT,
   SharedCriterion.JSON_PROPERTY_USE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class SharedCriterion {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CRITERION_ID = "criterionId";
+  @jakarta.annotation.Nullable
   private Long criterionId;
 
   public static final String JSON_PROPERTY_KEYWORD_MATCH_TYPE = "keywordMatchType";
+  @jakarta.annotation.Nullable
   private SharedCriterionServiceKeywordMatchType keywordMatchType;
 
   public static final String JSON_PROPERTY_SHARED_LIST_ID = "sharedListId";
+  @jakarta.annotation.Nullable
   private Long sharedListId;
 
   public static final String JSON_PROPERTY_TEXT = "text";
+  @jakarta.annotation.Nullable
   private String text;
 
   public static final String JSON_PROPERTY_USE = "use";
+  @jakarta.annotation.Nullable
   private SharedCriterionServiceUse use;
 
   public SharedCriterion() {
   }
 
-  public SharedCriterion accountId(Long accountId) {
+  public SharedCriterion accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -78,25 +84,24 @@ public class SharedCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public SharedCriterion criterionId(Long criterionId) {
+  public SharedCriterion criterionId(@jakarta.annotation.Nullable Long criterionId) {
     
     this.criterionId = criterionId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリオンIDです。&lt;br&gt; REMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Criterion ID.&lt;br&gt; This field is required in REMOVE operation.&lt;/div&gt; 
    * @return criterionId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_ID)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCriterionId() {
@@ -104,25 +109,24 @@ public class SharedCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_ID)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionId(Long criterionId) {
+  public void setCriterionId(@jakarta.annotation.Nullable Long criterionId) {
     this.criterionId = criterionId;
   }
 
-
-  public SharedCriterion keywordMatchType(SharedCriterionServiceKeywordMatchType keywordMatchType) {
+  public SharedCriterion keywordMatchType(@jakarta.annotation.Nullable SharedCriterionServiceKeywordMatchType keywordMatchType) {
     
     this.keywordMatchType = keywordMatchType;
     return this;
   }
 
-   /**
+  /**
    * Get keywordMatchType
    * @return keywordMatchType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SharedCriterionServiceKeywordMatchType getKeywordMatchType() {
@@ -130,25 +134,24 @@ public class SharedCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordMatchType(SharedCriterionServiceKeywordMatchType keywordMatchType) {
+  public void setKeywordMatchType(@jakarta.annotation.Nullable SharedCriterionServiceKeywordMatchType keywordMatchType) {
     this.keywordMatchType = keywordMatchType;
   }
 
-
-  public SharedCriterion sharedListId(Long sharedListId) {
+  public SharedCriterion sharedListId(@jakarta.annotation.Nullable Long sharedListId) {
     
     this.sharedListId = sharedListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント共有リストIDです。&lt;br&gt; ADDおよびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account shared list ID.&lt;br&gt; This field is required in ADD and REMOVE operation.&lt;/div&gt; 
    * @return sharedListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SHARED_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_SHARED_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSharedListId() {
@@ -156,25 +159,24 @@ public class SharedCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SHARED_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_SHARED_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSharedListId(Long sharedListId) {
+  public void setSharedListId(@jakarta.annotation.Nullable Long sharedListId) {
     this.sharedListId = sharedListId;
   }
 
-
-  public SharedCriterion text(String text) {
+  public SharedCriterion text(@jakarta.annotation.Nullable String text) {
     
     this.text = text;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Keyword.&lt;br&gt;This field is required in ADD operation.&lt;/div&gt; 
    * @return text
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getText() {
@@ -182,25 +184,24 @@ public class SharedCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setText(String text) {
+  public void setText(@jakarta.annotation.Nullable String text) {
     this.text = text;
   }
 
-
-  public SharedCriterion use(SharedCriterionServiceUse use) {
+  public SharedCriterion use(@jakarta.annotation.Nullable SharedCriterionServiceUse use) {
     
     this.use = use;
     return this;
   }
 
-   /**
+  /**
    * Get use
    * @return use
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USE)
+  @JsonProperty(value = JSON_PROPERTY_USE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SharedCriterionServiceUse getUse() {
@@ -208,11 +209,12 @@ public class SharedCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USE)
+  @JsonProperty(value = JSON_PROPERTY_USE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUse(SharedCriterionServiceUse use) {
+  public void setUse(@jakarta.annotation.Nullable SharedCriterionServiceUse use) {
     this.use = use;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -255,10 +257,7 @@ public class SharedCriterion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionServiceReportDateRangeオブジェクトは、レポートの集計対象期間を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ReportDefinitionServiceReportDateRange object displays date range of the report.&lt;br&gt; This field is optional in ADD operation.&lt;/div&gt; 
@@ -30,29 +30,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceReportDateRange.JSON_PROPERTY_END_DATE,
   ReportDefinitionServiceReportDateRange.JSON_PROPERTY_START_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceReportDateRange {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public ReportDefinitionServiceReportDateRange() {
   }
 
-  public ReportDefinitionServiceReportDateRange endDate(String endDate) {
+  public ReportDefinitionServiceReportDateRange endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;集計の終了日です。&lt;br&gt;指定可能な値は&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;ja\&quot;&gt;こちらのページ&lt;/a&gt;をご参照下さい。&lt;br&gt;※フォーマット：yyyyMMdd&lt;br&gt;DateRangeTypeがCUSTOM_DATEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date.&lt;br&gt;Please refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;en_US\&quot;&gt;this page&lt;/a&gt; for available values.&lt;br&gt;* Format: yyyyMMdd&lt;br&gt;If DateRangeType is CUSTOM_DATE, this field is required in ADD operation.&lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -60,25 +62,24 @@ public class ReportDefinitionServiceReportDateRange {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public ReportDefinitionServiceReportDateRange startDate(String startDate) {
+  public ReportDefinitionServiceReportDateRange startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;集計の開始日です。&lt;br&gt;指定可能な値は&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;ja\&quot;&gt;こちらのページ&lt;/a&gt;をご参照下さい。&lt;br&gt;※フォーマット：yyyyMMdd&lt;br&gt;DateRangeTypeがCUSTOM_DATEの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date. &lt;br&gt;Please refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044658?language&#x3D;en_US\&quot;&gt;this page&lt;/a&gt; for available values.&lt;br&gt;&lt;br&gt;* Format: yyyyMMdd&lt;br&gt;If DateRangeType is CUSTOM_DATE, this field is required in ADD operation.&lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -86,11 +87,12 @@ public class ReportDefinitionServiceReportDateRange {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -125,10 +127,7 @@ public class ReportDefinitionServiceReportDateRange {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

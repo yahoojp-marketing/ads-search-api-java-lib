@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceRadiusTargetオブジェクトは、半径ターゲティングを表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となります。&lt;br&gt; ※targetTypeがRADIUSの場合、このフィールドはADD時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceRadiusTarget describes radius targeting.&lt;br&gt; *This field is optional in ADD and SET operation.&lt;br&gt; If targetType is RADIUS, this field is required in ADD operation.&lt;/div&gt; 
@@ -32,35 +32,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignTargetServiceRadiusTarget.JSON_PROPERTY_RADIUS,
   CampaignTargetServiceRadiusTarget.JSON_PROPERTY_DESCRIPTION
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignTargetServiceRadiusTarget {
   public static final String JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES = "latitudeInMicroDegrees";
+  @jakarta.annotation.Nullable
   private Integer latitudeInMicroDegrees;
 
   public static final String JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES = "longitudeInMicroDegrees";
+  @jakarta.annotation.Nullable
   private Integer longitudeInMicroDegrees;
 
   public static final String JSON_PROPERTY_RADIUS = "radius";
+  @jakarta.annotation.Nullable
   private Integer radius;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public CampaignTargetServiceRadiusTarget() {
   }
 
-  public CampaignTargetServiceRadiusTarget latitudeInMicroDegrees(Integer latitudeInMicroDegrees) {
+  public CampaignTargetServiceRadiusTarget latitudeInMicroDegrees(@jakarta.annotation.Nullable Integer latitudeInMicroDegrees) {
     
     this.latitudeInMicroDegrees = latitudeInMicroDegrees;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;マイクロ表記の緯度です。&lt;br&gt; 1度と指定したい場合は、1000000を指定します。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時は無視されます。&lt;br&gt; 日本国内のみ指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Micro degrees for the latitude.&lt;br&gt; To specify 1 degree, specify 1000000.&lt;br&gt; This field is required in ADD operation. If specified in SET operation, it will be ignored.&lt;br&gt; Can be specified only in Japan.&lt;/div&gt; 
    * @return latitudeInMicroDegrees
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getLatitudeInMicroDegrees() {
@@ -68,25 +72,24 @@ public class CampaignTargetServiceRadiusTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLatitudeInMicroDegrees(Integer latitudeInMicroDegrees) {
+  public void setLatitudeInMicroDegrees(@jakarta.annotation.Nullable Integer latitudeInMicroDegrees) {
     this.latitudeInMicroDegrees = latitudeInMicroDegrees;
   }
 
-
-  public CampaignTargetServiceRadiusTarget longitudeInMicroDegrees(Integer longitudeInMicroDegrees) {
+  public CampaignTargetServiceRadiusTarget longitudeInMicroDegrees(@jakarta.annotation.Nullable Integer longitudeInMicroDegrees) {
     
     this.longitudeInMicroDegrees = longitudeInMicroDegrees;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;マイクロ表記の経度です。&lt;br&gt; 1度と指定したい場合は、1000000を指定します。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時は無視されます。&lt;br&gt; 日本国内のみ指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Micro degrees for the longitude.&lt;br&gt; To specify 1 degree, specify 1000000.&lt;br&gt; This field is required in ADD operation. If specified in SET operation, it will be ignored.&lt;br&gt; Can be specified only in Japan.&lt;/div&gt; 
    * @return longitudeInMicroDegrees
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getLongitudeInMicroDegrees() {
@@ -94,25 +97,24 @@ public class CampaignTargetServiceRadiusTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLongitudeInMicroDegrees(Integer longitudeInMicroDegrees) {
+  public void setLongitudeInMicroDegrees(@jakarta.annotation.Nullable Integer longitudeInMicroDegrees) {
     this.longitudeInMicroDegrees = longitudeInMicroDegrees;
   }
 
-
-  public CampaignTargetServiceRadiusTarget radius(Integer radius) {
+  public CampaignTargetServiceRadiusTarget radius(@jakarta.annotation.Nullable Integer radius) {
     
     this.radius = radius;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;半径(km)です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時は無視されます。&lt;br&gt; 最大80kmまで指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Radius(km).&lt;br&gt; This field is required in ADD operation. If specified in SET operation, it will be ignored.&lt;br&gt; Can be specified up to 80km.&lt;/div&gt; 
    * @return radius
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RADIUS)
+  @JsonProperty(value = JSON_PROPERTY_RADIUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getRadius() {
@@ -120,25 +122,24 @@ public class CampaignTargetServiceRadiusTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RADIUS)
+  @JsonProperty(value = JSON_PROPERTY_RADIUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRadius(Integer radius) {
+  public void setRadius(@jakarta.annotation.Nullable Integer radius) {
     this.radius = radius;
   }
 
-
-  public CampaignTargetServiceRadiusTarget description(String description) {
+  public CampaignTargetServiceRadiusTarget description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;指定した地点の説明です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A description of the specified location.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -146,11 +147,12 @@ public class CampaignTargetServiceRadiusTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -189,10 +191,7 @@ public class CampaignTargetServiceRadiusTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

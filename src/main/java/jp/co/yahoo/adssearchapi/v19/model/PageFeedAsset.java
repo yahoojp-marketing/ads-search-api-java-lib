@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.PageFeedAssetServiceApprovalStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetオブジェクトは、ページフィードアセット情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAsset object retains page feed asset.&lt;/div&gt; 
@@ -39,47 +40,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedAsset.JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL,
   PageFeedAsset.JSON_PROPERTY_PAGE_FEED_ASSET_URL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PageFeedAsset {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID = "pageFeedAssetSetId";
+  @jakarta.annotation.Nullable
   private Long pageFeedAssetSetId;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_ID = "pageFeedAssetId";
+  @jakarta.annotation.Nullable
   private Long pageFeedAssetId;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private PageFeedAssetServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT = "disapprovalReasonComment";
+  @jakarta.annotation.Nullable
   private String disapprovalReasonComment;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL = "pageFeedAssetCustomLabel";
+  @jakarta.annotation.Nullable
   private String pageFeedAssetCustomLabel;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_URL = "pageFeedAssetUrl";
+  @jakarta.annotation.Nullable
   private String pageFeedAssetUrl;
 
   public PageFeedAsset() {
   }
 
-  public PageFeedAsset accountId(Long accountId) {
+  public PageFeedAsset accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -87,25 +96,24 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public PageFeedAsset pageFeedAssetSetId(Long pageFeedAssetSetId) {
+  public PageFeedAsset pageFeedAssetSetId(@jakarta.annotation.Nullable Long pageFeedAssetSetId) {
     
     this.pageFeedAssetSetId = pageFeedAssetSetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet ID.&lt;/div&gt; 
    * @return pageFeedAssetSetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPageFeedAssetSetId() {
@@ -113,25 +121,24 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetSetId(Long pageFeedAssetSetId) {
+  public void setPageFeedAssetSetId(@jakarta.annotation.Nullable Long pageFeedAssetSetId) {
     this.pageFeedAssetSetId = pageFeedAssetSetId;
   }
 
-
-  public PageFeedAsset pageFeedAssetId(Long pageFeedAssetId) {
+  public PageFeedAsset pageFeedAssetId(@jakarta.annotation.Nullable Long pageFeedAssetId) {
     
     this.pageFeedAssetId = pageFeedAssetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAsset ID.&lt;/div&gt; 
    * @return pageFeedAssetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPageFeedAssetId() {
@@ -139,25 +146,24 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetId(Long pageFeedAssetId) {
+  public void setPageFeedAssetId(@jakarta.annotation.Nullable Long pageFeedAssetId) {
     this.pageFeedAssetId = pageFeedAssetId;
   }
 
-
-  public PageFeedAsset approvalStatus(PageFeedAssetServiceApprovalStatus approvalStatus) {
+  public PageFeedAsset approvalStatus(@jakarta.annotation.Nullable PageFeedAssetServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PageFeedAssetServiceApprovalStatus getApprovalStatus() {
@@ -165,14 +171,13 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(PageFeedAssetServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable PageFeedAssetServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public PageFeedAsset disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public PageFeedAsset disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -186,12 +191,12 @@ public class PageFeedAsset {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由コード&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Codes of disapproval reason.&lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -199,25 +204,24 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public PageFeedAsset disapprovalReasonComment(String disapprovalReasonComment) {
+  public PageFeedAsset disapprovalReasonComment(@jakarta.annotation.Nullable String disapprovalReasonComment) {
     
     this.disapprovalReasonComment = disapprovalReasonComment;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由のコメント&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Comment of disapproval reason.&lt;/div&gt; 
    * @return disapprovalReasonComment
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisapprovalReasonComment() {
@@ -225,25 +229,24 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_COMMENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonComment(String disapprovalReasonComment) {
+  public void setDisapprovalReasonComment(@jakarta.annotation.Nullable String disapprovalReasonComment) {
     this.disapprovalReasonComment = disapprovalReasonComment;
   }
 
-
-  public PageFeedAsset pageFeedAssetCustomLabel(String pageFeedAssetCustomLabel) {
+  public PageFeedAsset pageFeedAssetCustomLabel(@jakarta.annotation.Nullable String pageFeedAssetCustomLabel) {
     
     this.pageFeedAssetCustomLabel = pageFeedAssetCustomLabel;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットのカスタムラベル&lt;br&gt; 複数ある場合はカンマ区切り&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom label of page feed asset.&lt;br&gt; If multiple, comma separated.&lt;/div&gt; 
    * @return pageFeedAssetCustomLabel
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPageFeedAssetCustomLabel() {
@@ -251,25 +254,24 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetCustomLabel(String pageFeedAssetCustomLabel) {
+  public void setPageFeedAssetCustomLabel(@jakarta.annotation.Nullable String pageFeedAssetCustomLabel) {
     this.pageFeedAssetCustomLabel = pageFeedAssetCustomLabel;
   }
 
-
-  public PageFeedAsset pageFeedAssetUrl(String pageFeedAssetUrl) {
+  public PageFeedAsset pageFeedAssetUrl(@jakarta.annotation.Nullable String pageFeedAssetUrl) {
     
     this.pageFeedAssetUrl = pageFeedAssetUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットのURL&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Url of page feed asset.&lt;/div&gt; 
    * @return pageFeedAssetUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_URL)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPageFeedAssetUrl() {
@@ -277,11 +279,12 @@ public class PageFeedAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_URL)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetUrl(String pageFeedAssetUrl) {
+  public void setPageFeedAssetUrl(@jakarta.annotation.Nullable String pageFeedAssetUrl) {
     this.pageFeedAssetUrl = pageFeedAssetUrl;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -328,10 +331,7 @@ public class PageFeedAsset {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

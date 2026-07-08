@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupRetargetingListServiceCriterionTargetList;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupRetargetingListServiceExcludedType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListは、広告グループレベルでのオーディエンスリスト設定を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingList is an object that holds ad group audience list information.&lt;/div&gt; 
@@ -38,47 +38,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupRetargetingList.JSON_PROPERTY_CRITERION_TARGET_LIST,
   AdGroupRetargetingList.JSON_PROPERTY_EXCLUDED_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupRetargetingList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_AD_GROUP_NAME = "adGroupName";
+  @jakarta.annotation.Nullable
   private String adGroupName;
 
   public static final String JSON_PROPERTY_BID_MULTIPLIER = "bidMultiplier";
+  @jakarta.annotation.Nullable
   private Double bidMultiplier;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_CRITERION_TARGET_LIST = "criterionTargetList";
+  @jakarta.annotation.Nullable
   private AdGroupRetargetingListServiceCriterionTargetList criterionTargetList;
 
   public static final String JSON_PROPERTY_EXCLUDED_TYPE = "excludedType";
+  @jakarta.annotation.Nullable
   private AdGroupRetargetingListServiceExcludedType excludedType;
 
   public AdGroupRetargetingList() {
   }
 
-  public AdGroupRetargetingList accountId(Long accountId) {
+  public AdGroupRetargetingList accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -86,25 +94,24 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AdGroupRetargetingList adGroupId(Long adGroupId) {
+  public AdGroupRetargetingList adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -112,25 +119,24 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public AdGroupRetargetingList adGroupName(String adGroupName) {
+  public AdGroupRetargetingList adGroupName(@jakarta.annotation.Nullable String adGroupName) {
     
     this.adGroupName = adGroupName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループ名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return adGroupName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdGroupName() {
@@ -138,25 +144,24 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupName(String adGroupName) {
+  public void setAdGroupName(@jakarta.annotation.Nullable String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
-
-  public AdGroupRetargetingList bidMultiplier(Double bidMultiplier) {
+  public AdGroupRetargetingList bidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     
     this.bidMultiplier = bidMultiplier;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   CPC上昇値です。&lt;br&gt;   0.10～10.00まで指定できます。&lt;br&gt;   CPC上昇値の値は小数点第二位まで指定可能です。&lt;br&gt;   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Maximum CPC increase value.&lt;br&gt;   Can be specified between  0.10 to 10.00.&lt;br&gt;   Maximum CPC increase value can be specified up to two decimal places.&lt;br&gt;   This field is optional. The default value will be 1.0. &lt;/div&gt; 
    * @return bidMultiplier
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getBidMultiplier() {
@@ -164,25 +169,24 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidMultiplier(Double bidMultiplier) {
+  public void setBidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     this.bidMultiplier = bidMultiplier;
   }
 
-
-  public AdGroupRetargetingList campaignId(Long campaignId) {
+  public AdGroupRetargetingList campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -190,25 +194,24 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public AdGroupRetargetingList campaignName(String campaignName) {
+  public AdGroupRetargetingList campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -216,25 +219,24 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public AdGroupRetargetingList criterionTargetList(AdGroupRetargetingListServiceCriterionTargetList criterionTargetList) {
+  public AdGroupRetargetingList criterionTargetList(@jakarta.annotation.Nullable AdGroupRetargetingListServiceCriterionTargetList criterionTargetList) {
     
     this.criterionTargetList = criterionTargetList;
     return this;
   }
 
-   /**
+  /**
    * Get criterionTargetList
    * @return criterionTargetList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupRetargetingListServiceCriterionTargetList getCriterionTargetList() {
@@ -242,25 +244,24 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionTargetList(AdGroupRetargetingListServiceCriterionTargetList criterionTargetList) {
+  public void setCriterionTargetList(@jakarta.annotation.Nullable AdGroupRetargetingListServiceCriterionTargetList criterionTargetList) {
     this.criterionTargetList = criterionTargetList;
   }
 
-
-  public AdGroupRetargetingList excludedType(AdGroupRetargetingListServiceExcludedType excludedType) {
+  public AdGroupRetargetingList excludedType(@jakarta.annotation.Nullable AdGroupRetargetingListServiceExcludedType excludedType) {
     
     this.excludedType = excludedType;
     return this;
   }
 
-   /**
+  /**
    * Get excludedType
    * @return excludedType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupRetargetingListServiceExcludedType getExcludedType() {
@@ -268,11 +269,12 @@ public class AdGroupRetargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcludedType(AdGroupRetargetingListServiceExcludedType excludedType) {
+  public void setExcludedType(@jakarta.annotation.Nullable AdGroupRetargetingListServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -319,10 +321,7 @@ public class AdGroupRetargetingList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

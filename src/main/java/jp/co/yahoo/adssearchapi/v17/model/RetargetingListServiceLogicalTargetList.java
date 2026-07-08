@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.RetargetingListServiceLogicalGroup;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceLogicalTargetListは、組合せオーディエンスリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※targetListTypeがLOGICALの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceLogicalTargetList is an object that holds the combination audience list information.&lt;br&gt; This field is optional.&lt;br&gt; If the targetListType is LOGICAL, this field is required.&lt;/div&gt; 
@@ -32,15 +33,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   RetargetingListServiceLogicalTargetList.JSON_PROPERTY_LOGICAL_GROUP
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RetargetingListServiceLogicalTargetList {
   public static final String JSON_PROPERTY_LOGICAL_GROUP = "logicalGroup";
+  @jakarta.annotation.Nullable
   private List<RetargetingListServiceLogicalGroup> logicalGroup;
 
   public RetargetingListServiceLogicalTargetList() {
   }
 
-  public RetargetingListServiceLogicalTargetList logicalGroup(List<RetargetingListServiceLogicalGroup> logicalGroup) {
+  public RetargetingListServiceLogicalTargetList logicalGroup(@jakarta.annotation.Nullable List<RetargetingListServiceLogicalGroup> logicalGroup) {
     
     this.logicalGroup = logicalGroup;
     return this;
@@ -54,12 +56,12 @@ public class RetargetingListServiceLogicalTargetList {
     return this;
   }
 
-   /**
+  /**
    * Get logicalGroup
    * @return logicalGroup
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGICAL_GROUP)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_GROUP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RetargetingListServiceLogicalGroup> getLogicalGroup() {
@@ -67,11 +69,12 @@ public class RetargetingListServiceLogicalTargetList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGICAL_GROUP)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_GROUP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogicalGroup(List<RetargetingListServiceLogicalGroup> logicalGroup) {
+  public void setLogicalGroup(@jakarta.annotation.Nullable List<RetargetingListServiceLogicalGroup> logicalGroup) {
     this.logicalGroup = logicalGroup;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +107,7 @@ public class RetargetingListServiceLogicalTargetList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

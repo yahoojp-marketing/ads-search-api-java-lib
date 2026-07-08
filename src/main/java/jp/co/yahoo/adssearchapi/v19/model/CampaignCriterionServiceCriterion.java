@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignCriterionServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignCriterionServiceKeyword;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCriterionServiceCriterionオブジェクトは、クライテリアを表します。※キャンペーン用クライテリアです。&lt;br&gt; ADD時およびREMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceCriterion object describes criteria information. *This is a criteria for campaign.&lt;br&gt; This field is required in ADD and REMOVE operation.&lt;/div&gt; 
@@ -34,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignCriterionServiceCriterion.JSON_PROPERTY_CRITERION_TYPE,
   CampaignCriterionServiceCriterion.JSON_PROPERTY_KEYWORD
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignCriterionServiceCriterion {
   public static final String JSON_PROPERTY_CRITERION_ID = "criterionId";
+  @jakarta.annotation.Nullable
   private Long criterionId;
 
   public static final String JSON_PROPERTY_CRITERION_TRACK_ID = "criterionTrackId";
+  @jakarta.annotation.Nullable
   private Long criterionTrackId;
 
   public static final String JSON_PROPERTY_CRITERION_TYPE = "criterionType";
+  @jakarta.annotation.Nullable
   private CampaignCriterionServiceCriterionType criterionType;
 
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
+  @jakarta.annotation.Nullable
   private CampaignCriterionServiceKeyword keyword;
 
   public CampaignCriterionServiceCriterion() {
   }
 
-  public CampaignCriterionServiceCriterion criterionId(Long criterionId) {
+  public CampaignCriterionServiceCriterion criterionId(@jakarta.annotation.Nullable Long criterionId) {
     
     this.criterionId = criterionId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリアIDです。&lt;br&gt; REMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceCriterion ID.&lt;br&gt; This field is required in REMOVE operation.&lt;/div&gt; 
    * @return criterionId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_ID)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCriterionId() {
@@ -70,25 +74,24 @@ public class CampaignCriterionServiceCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_ID)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionId(Long criterionId) {
+  public void setCriterionId(@jakarta.annotation.Nullable Long criterionId) {
     this.criterionId = criterionId;
   }
 
-
-  public CampaignCriterionServiceCriterion criterionTrackId(Long criterionTrackId) {
+  public CampaignCriterionServiceCriterion criterionTrackId(@jakarta.annotation.Nullable Long criterionTrackId) {
     
     this.criterionTrackId = criterionTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クライテリオントラックIDです。&lt;br&gt; 対象外キーワードでは返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCriterionServiceCriterion track ID.&lt;br&gt; This is not returned for Negative keyword.&lt;/div&gt; 
    * @return criterionTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCriterionTrackId() {
@@ -96,25 +99,24 @@ public class CampaignCriterionServiceCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionTrackId(Long criterionTrackId) {
+  public void setCriterionTrackId(@jakarta.annotation.Nullable Long criterionTrackId) {
     this.criterionTrackId = criterionTrackId;
   }
 
-
-  public CampaignCriterionServiceCriterion criterionType(CampaignCriterionServiceCriterionType criterionType) {
+  public CampaignCriterionServiceCriterion criterionType(@jakarta.annotation.Nullable CampaignCriterionServiceCriterionType criterionType) {
     
     this.criterionType = criterionType;
     return this;
   }
 
-   /**
+  /**
    * Get criterionType
    * @return criterionType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignCriterionServiceCriterionType getCriterionType() {
@@ -122,25 +124,24 @@ public class CampaignCriterionServiceCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionType(CampaignCriterionServiceCriterionType criterionType) {
+  public void setCriterionType(@jakarta.annotation.Nullable CampaignCriterionServiceCriterionType criterionType) {
     this.criterionType = criterionType;
   }
 
-
-  public CampaignCriterionServiceCriterion keyword(CampaignCriterionServiceKeyword keyword) {
+  public CampaignCriterionServiceCriterion keyword(@jakarta.annotation.Nullable CampaignCriterionServiceKeyword keyword) {
     
     this.keyword = keyword;
     return this;
   }
 
-   /**
+  /**
    * Get keyword
    * @return keyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignCriterionServiceKeyword getKeyword() {
@@ -148,11 +149,12 @@ public class CampaignCriterionServiceCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeyword(CampaignCriterionServiceKeyword keyword) {
+  public void setKeyword(@jakarta.annotation.Nullable CampaignCriterionServiceKeyword keyword) {
     this.keyword = keyword;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,10 +193,7 @@ public class CampaignCriterionServiceCriterion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

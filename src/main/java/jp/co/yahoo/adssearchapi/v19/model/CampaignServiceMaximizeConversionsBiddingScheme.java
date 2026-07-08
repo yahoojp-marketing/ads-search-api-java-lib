@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignServiceIsRemove;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceMaximizeConversionsBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。&lt;br&gt; ADD時、BiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合、必須となり、それ以外では省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceMaximizeConversionsBiddingScheme object displays auto bidding setting for Target CPA.&lt;br&gt; This field is required when BiddingStrategyType is &#39;MAXIMIZE_CONVERSIONS&#39; in ADD operation. For other BiddingStrategyType, this field is optional in ADD operation.&lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_TARGET_CPA,
   CampaignServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_CPA
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceMaximizeConversionsBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
+  @jakarta.annotation.Nullable
   private Long targetCpa;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_CPA = "isRemoveTargetCpa";
+  @jakarta.annotation.Nullable
   private CampaignServiceIsRemove isRemoveTargetCpa;
 
   public CampaignServiceMaximizeConversionsBiddingScheme() {
   }
 
-  public CampaignServiceMaximizeConversionsBiddingScheme targetCpa(Long targetCpa) {
+  public CampaignServiceMaximizeConversionsBiddingScheme targetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     
     this.targetCpa = targetCpa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン単価の目標値です。&lt;br&gt; ※制限値：1 ～ 800000&lt;br&gt; ※日本円のみの設定です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target CPA (JPY).&lt;br&gt; * Range limit: 1 - 800000&lt;/div&gt; 
    * @return targetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetCpa() {
@@ -61,25 +63,24 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetCpa(Long targetCpa) {
+  public void setTargetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     this.targetCpa = targetCpa;
   }
 
-
-  public CampaignServiceMaximizeConversionsBiddingScheme isRemoveTargetCpa(CampaignServiceIsRemove isRemoveTargetCpa) {
+  public CampaignServiceMaximizeConversionsBiddingScheme isRemoveTargetCpa(@jakarta.annotation.Nullable CampaignServiceIsRemove isRemoveTargetCpa) {
     
     this.isRemoveTargetCpa = isRemoveTargetCpa;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTargetCpa
    * @return isRemoveTargetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceIsRemove getIsRemoveTargetCpa() {
@@ -87,11 +88,12 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTargetCpa(CampaignServiceIsRemove isRemoveTargetCpa) {
+  public void setIsRemoveTargetCpa(@jakarta.annotation.Nullable CampaignServiceIsRemove isRemoveTargetCpa) {
     this.isRemoveTargetCpa = isRemoveTargetCpa;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

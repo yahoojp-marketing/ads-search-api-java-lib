@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignCustomizer;
 import jp.co.yahoo.adssearchapi.v19.model.Error;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignCustomizerServiceValueオブジェクトは、キャンペーンとカスタマイザー属性間の設定情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignCustomizerServiceValue object contains the configuration information between the campaign and the customizer attribute.&lt;/div&gt; 
@@ -35,21 +36,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignCustomizerServiceValue.JSON_PROPERTY_CAMPAIGN_CUSTOMIZER,
   CampaignCustomizerServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignCustomizerServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<Error> errors;
 
   public static final String JSON_PROPERTY_CAMPAIGN_CUSTOMIZER = "campaignCustomizer";
+  @jakarta.annotation.Nullable
   private CampaignCustomizer campaignCustomizer;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
+  @jakarta.annotation.Nullable
   private Boolean operationSucceeded;
 
   public CampaignCustomizerServiceValue() {
   }
 
-  public CampaignCustomizerServiceValue errors(List<Error> errors) {
+  public CampaignCustomizerServiceValue errors(@jakarta.annotation.Nullable List<Error> errors) {
     
     this.errors = errors;
     return this;
@@ -63,12 +67,12 @@ public class CampaignCustomizerServiceValue {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Error> getErrors() {
@@ -76,25 +80,24 @@ public class CampaignCustomizerServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<Error> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<Error> errors) {
     this.errors = errors;
   }
 
-
-  public CampaignCustomizerServiceValue campaignCustomizer(CampaignCustomizer campaignCustomizer) {
+  public CampaignCustomizerServiceValue campaignCustomizer(@jakarta.annotation.Nullable CampaignCustomizer campaignCustomizer) {
     
     this.campaignCustomizer = campaignCustomizer;
     return this;
   }
 
-   /**
+  /**
    * Get campaignCustomizer
    * @return campaignCustomizer
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CUSTOMIZER)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_CUSTOMIZER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignCustomizer getCampaignCustomizer() {
@@ -102,25 +105,24 @@ public class CampaignCustomizerServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CUSTOMIZER)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_CUSTOMIZER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignCustomizer(CampaignCustomizer campaignCustomizer) {
+  public void setCampaignCustomizer(@jakarta.annotation.Nullable CampaignCustomizer campaignCustomizer) {
     this.campaignCustomizer = campaignCustomizer;
   }
 
-
-  public CampaignCustomizerServiceValue operationSucceeded(Boolean operationSucceeded) {
+  public CampaignCustomizerServiceValue operationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     
     this.operationSucceeded = operationSucceeded;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Result of process.&lt;/div&gt; 
    * @return operationSucceeded
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getOperationSucceeded() {
@@ -128,11 +130,12 @@ public class CampaignCustomizerServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOperationSucceeded(Boolean operationSucceeded) {
+  public void setOperationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +172,7 @@ public class CampaignCustomizerServiceValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

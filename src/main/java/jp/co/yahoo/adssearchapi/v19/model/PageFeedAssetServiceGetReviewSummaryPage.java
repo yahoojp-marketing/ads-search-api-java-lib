@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.PageFeedAssetServiceGetReviewSummaryValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServiceGetReviewSummaryPageオブジェクトは、ページフィードアセットの審査成績、状況サマリー取得結果をリストに格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServiceGetReviewSummaryPage object is a container storing the examination results of the page feed asset, the situation summary acquisition result in a list.&lt;/div&gt; 
@@ -33,29 +34,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedAssetServiceGetReviewSummaryPage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   PageFeedAssetServiceGetReviewSummaryPage.JSON_PROPERTY_VALUES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PageFeedAssetServiceGetReviewSummaryPage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
+  @jakarta.annotation.Nullable
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
+  @jakarta.annotation.Nullable
   private List<PageFeedAssetServiceGetReviewSummaryValue> values;
 
   public PageFeedAssetServiceGetReviewSummaryPage() {
   }
 
-  public PageFeedAssetServiceGetReviewSummaryPage totalNumEntries(Integer totalNumEntries) {
+  public PageFeedAssetServiceGetReviewSummaryPage totalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     
     this.totalNumEntries = totalNumEntries;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries in the result that this page is a part of.&lt;/div&gt; 
    * @return totalNumEntries
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getTotalNumEntries() {
@@ -63,14 +66,13 @@ public class PageFeedAssetServiceGetReviewSummaryPage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalNumEntries(Integer totalNumEntries) {
+  public void setTotalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
   }
 
-
-  public PageFeedAssetServiceGetReviewSummaryPage values(List<PageFeedAssetServiceGetReviewSummaryValue> values) {
+  public PageFeedAssetServiceGetReviewSummaryPage values(@jakarta.annotation.Nullable List<PageFeedAssetServiceGetReviewSummaryValue> values) {
     
     this.values = values;
     return this;
@@ -84,12 +86,12 @@ public class PageFeedAssetServiceGetReviewSummaryPage {
     return this;
   }
 
-   /**
+  /**
    * Get values
    * @return values
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<PageFeedAssetServiceGetReviewSummaryValue> getValues() {
@@ -97,11 +99,12 @@ public class PageFeedAssetServiceGetReviewSummaryPage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<PageFeedAssetServiceGetReviewSummaryValue> values) {
+  public void setValues(@jakarta.annotation.Nullable List<PageFeedAssetServiceGetReviewSummaryValue> values) {
     this.values = values;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -136,10 +139,7 @@ public class PageFeedAssetServiceGetReviewSummaryPage {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

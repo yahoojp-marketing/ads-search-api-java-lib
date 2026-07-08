@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,15 +18,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupAdServiceApprovalStatus;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupAdServiceHeadlinePinnedField;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupAdServiceTextAssetActiveStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * AdGroupAdServiceHeadlineTextAsset
@@ -38,38 +39,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceHeadlineTextAsset.JSON_PROPERTY_APPROVAL_STATUS,
   AdGroupAdServiceHeadlineTextAsset.JSON_PROPERTY_DISAPPROVAL_REASON_CODES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAdServiceHeadlineTextAsset {
   public static final String JSON_PROPERTY_TEXT = "text";
+  @jakarta.annotation.Nullable
   private String text;
 
   public static final String JSON_PROPERTY_PINNED_FIELD = "pinnedField";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceHeadlinePinnedField pinnedField;
 
   public static final String JSON_PROPERTY_ACTIVE_STATUS = "activeStatus";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceTextAssetActiveStatus activeStatus;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public AdGroupAdServiceHeadlineTextAsset() {
   }
 
-  public AdGroupAdServiceHeadlineTextAsset text(String text) {
+  public AdGroupAdServiceHeadlineTextAsset text(@jakarta.annotation.Nullable String text) {
     
     this.text = text;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;テキストです。&lt;br&gt;ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text of parameter.&lt;br&gt;This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return text
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getText() {
@@ -77,25 +83,24 @@ public class AdGroupAdServiceHeadlineTextAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setText(String text) {
+  public void setText(@jakarta.annotation.Nullable String text) {
     this.text = text;
   }
 
-
-  public AdGroupAdServiceHeadlineTextAsset pinnedField(AdGroupAdServiceHeadlinePinnedField pinnedField) {
+  public AdGroupAdServiceHeadlineTextAsset pinnedField(@jakarta.annotation.Nullable AdGroupAdServiceHeadlinePinnedField pinnedField) {
     
     this.pinnedField = pinnedField;
     return this;
   }
 
-   /**
+  /**
    * Get pinnedField
    * @return pinnedField
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PINNED_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_PINNED_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceHeadlinePinnedField getPinnedField() {
@@ -103,25 +108,24 @@ public class AdGroupAdServiceHeadlineTextAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PINNED_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_PINNED_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPinnedField(AdGroupAdServiceHeadlinePinnedField pinnedField) {
+  public void setPinnedField(@jakarta.annotation.Nullable AdGroupAdServiceHeadlinePinnedField pinnedField) {
     this.pinnedField = pinnedField;
   }
 
-
-  public AdGroupAdServiceHeadlineTextAsset activeStatus(AdGroupAdServiceTextAssetActiveStatus activeStatus) {
+  public AdGroupAdServiceHeadlineTextAsset activeStatus(@jakarta.annotation.Nullable AdGroupAdServiceTextAssetActiveStatus activeStatus) {
     
     this.activeStatus = activeStatus;
     return this;
   }
 
-   /**
+  /**
    * Get activeStatus
    * @return activeStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACTIVE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACTIVE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceTextAssetActiveStatus getActiveStatus() {
@@ -129,25 +133,24 @@ public class AdGroupAdServiceHeadlineTextAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACTIVE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACTIVE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setActiveStatus(AdGroupAdServiceTextAssetActiveStatus activeStatus) {
+  public void setActiveStatus(@jakarta.annotation.Nullable AdGroupAdServiceTextAssetActiveStatus activeStatus) {
     this.activeStatus = activeStatus;
   }
 
-
-  public AdGroupAdServiceHeadlineTextAsset approvalStatus(AdGroupAdServiceApprovalStatus approvalStatus) {
+  public AdGroupAdServiceHeadlineTextAsset approvalStatus(@jakarta.annotation.Nullable AdGroupAdServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceApprovalStatus getApprovalStatus() {
@@ -155,14 +158,13 @@ public class AdGroupAdServiceHeadlineTextAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(AdGroupAdServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable AdGroupAdServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public AdGroupAdServiceHeadlineTextAsset disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public AdGroupAdServiceHeadlineTextAsset disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -176,12 +178,12 @@ public class AdGroupAdServiceHeadlineTextAsset {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認の理由コードです。&lt;br&gt; (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Code of disapproval reason.&lt;br&gt; (Refer to DictionaryService getDisapprovalReason response for details) &lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -189,11 +191,12 @@ public class AdGroupAdServiceHeadlineTextAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -234,10 +237,7 @@ public class AdGroupAdServiceHeadlineTextAsset {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

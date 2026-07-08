@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v18.model.DictionaryServiceGeographicLocationStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationオブジェクトは、地域情報を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocation contains geographic location information.&lt;/div&gt; 
@@ -38,33 +39,40 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceGeographicLocation.JSON_PROPERTY_ORDER,
   DictionaryServiceGeographicLocation.JSON_PROPERTY_PARENT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class DictionaryServiceGeographicLocation {
   public static final String JSON_PROPERTY_CHILD = "child";
+  @jakarta.annotation.Nullable
   private List<DictionaryServiceGeographicLocation> child;
 
   public static final String JSON_PROPERTY_CODE = "code";
+  @jakarta.annotation.Nullable
   private String code;
 
   public static final String JSON_PROPERTY_FULL_NAME = "fullName";
+  @jakarta.annotation.Nullable
   private String fullName;
 
   public static final String JSON_PROPERTY_GEOGRAPHIC_LOCATION_STATUS = "geographicLocationStatus";
+  @jakarta.annotation.Nullable
   private DictionaryServiceGeographicLocationStatus geographicLocationStatus;
 
   public static final String JSON_PROPERTY_NAME = "name";
+  @jakarta.annotation.Nullable
   private String name;
 
   public static final String JSON_PROPERTY_ORDER = "order";
+  @jakarta.annotation.Nullable
   private String order;
 
   public static final String JSON_PROPERTY_PARENT = "parent";
+  @jakarta.annotation.Nullable
   private String parent;
 
   public DictionaryServiceGeographicLocation() {
   }
 
-  public DictionaryServiceGeographicLocation child(List<DictionaryServiceGeographicLocation> child) {
+  public DictionaryServiceGeographicLocation child(@jakarta.annotation.Nullable List<DictionaryServiceGeographicLocation> child) {
     
     this.child = child;
     return this;
@@ -78,12 +86,12 @@ public class DictionaryServiceGeographicLocation {
     return this;
   }
 
-   /**
+  /**
    * Get child
    * @return child
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CHILD)
+  @JsonProperty(value = JSON_PROPERTY_CHILD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<DictionaryServiceGeographicLocation> getChild() {
@@ -91,25 +99,24 @@ public class DictionaryServiceGeographicLocation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CHILD)
+  @JsonProperty(value = JSON_PROPERTY_CHILD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setChild(List<DictionaryServiceGeographicLocation> child) {
+  public void setChild(@jakarta.annotation.Nullable List<DictionaryServiceGeographicLocation> child) {
     this.child = child;
   }
 
-
-  public DictionaryServiceGeographicLocation code(String code) {
+  public DictionaryServiceGeographicLocation code(@jakarta.annotation.Nullable String code) {
     
     this.code = code;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Geographic code.&lt;/div&gt; 
    * @return code
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CODE)
+  @JsonProperty(value = JSON_PROPERTY_CODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCode() {
@@ -117,25 +124,24 @@ public class DictionaryServiceGeographicLocation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CODE)
+  @JsonProperty(value = JSON_PROPERTY_CODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCode(String code) {
+  public void setCode(@jakarta.annotation.Nullable String code) {
     this.code = code;
   }
 
-
-  public DictionaryServiceGeographicLocation fullName(String fullName) {
+  public DictionaryServiceGeographicLocation fullName(@jakarta.annotation.Nullable String fullName) {
     
     this.fullName = fullName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域名(都道府県名からすべて)です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of places (Prefecture and all).&lt;/div&gt; 
    * @return fullName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FULL_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FULL_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFullName() {
@@ -143,25 +149,24 @@ public class DictionaryServiceGeographicLocation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FULL_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FULL_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFullName(String fullName) {
+  public void setFullName(@jakarta.annotation.Nullable String fullName) {
     this.fullName = fullName;
   }
 
-
-  public DictionaryServiceGeographicLocation geographicLocationStatus(DictionaryServiceGeographicLocationStatus geographicLocationStatus) {
+  public DictionaryServiceGeographicLocation geographicLocationStatus(@jakarta.annotation.Nullable DictionaryServiceGeographicLocationStatus geographicLocationStatus) {
     
     this.geographicLocationStatus = geographicLocationStatus;
     return this;
   }
 
-   /**
+  /**
    * Get geographicLocationStatus
    * @return geographicLocationStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GEOGRAPHIC_LOCATION_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_GEOGRAPHIC_LOCATION_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public DictionaryServiceGeographicLocationStatus getGeographicLocationStatus() {
@@ -169,25 +174,24 @@ public class DictionaryServiceGeographicLocation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GEOGRAPHIC_LOCATION_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_GEOGRAPHIC_LOCATION_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGeographicLocationStatus(DictionaryServiceGeographicLocationStatus geographicLocationStatus) {
+  public void setGeographicLocationStatus(@jakarta.annotation.Nullable DictionaryServiceGeographicLocationStatus geographicLocationStatus) {
     this.geographicLocationStatus = geographicLocationStatus;
   }
 
-
-  public DictionaryServiceGeographicLocation name(String name) {
+  public DictionaryServiceGeographicLocation name(@jakarta.annotation.Nullable String name) {
     
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域名(市区町村のみ)です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of places (city only).&lt;/div&gt; 
    * @return name
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getName() {
@@ -195,25 +199,24 @@ public class DictionaryServiceGeographicLocation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setName(String name) {
+  public void setName(@jakarta.annotation.Nullable String name) {
     this.name = name;
   }
 
-
-  public DictionaryServiceGeographicLocation order(String order) {
+  public DictionaryServiceGeographicLocation order(@jakarta.annotation.Nullable String order) {
     
     this.order = order;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;並び順です。&lt;br&gt;下記の順序に基づいた連番となります。&lt;br&gt; 都道府県は北海道、青森、・・・・沖縄の順&lt;br&gt;都道府県配下の市区町村は五十音順&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Order of list&lt;br&gt;&lt;br&gt;Sequential number based on the order below.&lt;br&gt;&lt;br&gt; - Prefecture is in order of Hokkaido, Aomori to Okinawa. (North to South)&lt;br&gt;&lt;br&gt; - Cities under prefecture are listed in the order of the 50-character Japanese kana syllabary.&lt;/div&gt; 
    * @return order
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ORDER)
+  @JsonProperty(value = JSON_PROPERTY_ORDER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getOrder() {
@@ -221,25 +224,24 @@ public class DictionaryServiceGeographicLocation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ORDER)
+  @JsonProperty(value = JSON_PROPERTY_ORDER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrder(String order) {
+  public void setOrder(@jakarta.annotation.Nullable String order) {
     this.order = order;
   }
 
-
-  public DictionaryServiceGeographicLocation parent(String parent) {
+  public DictionaryServiceGeographicLocation parent(@jakarta.annotation.Nullable String parent) {
     
     this.parent = parent;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;上位地域コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Parent geographic code.&lt;/div&gt; 
    * @return parent
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARENT)
+  @JsonProperty(value = JSON_PROPERTY_PARENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getParent() {
@@ -247,11 +249,12 @@ public class DictionaryServiceGeographicLocation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PARENT)
+  @JsonProperty(value = JSON_PROPERTY_PARENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParent(String parent) {
+  public void setParent(@jakarta.annotation.Nullable String parent) {
     this.parent = parent;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -296,10 +299,7 @@ public class DictionaryServiceGeographicLocation {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.KeywordPlanIdeaServiceKeywordAndUrlSeed;
 import jp.co.yahoo.adssearchapi.v17.model.KeywordPlanIdeaServiceKeywordSeed;
@@ -27,6 +26,7 @@ import jp.co.yahoo.adssearchapi.v17.model.KeywordPlanIdeaServiceSiteSeed;
 import jp.co.yahoo.adssearchapi.v17.model.KeywordPlanIdeaServiceUrlSeed;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaServiceSeedオブジェクトは、キーワード候補作成条件の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordPlanIdeaServiceSeed object describes detailed information about related keywords creation conditions.&lt;/div&gt; 
@@ -38,38 +38,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   KeywordPlanIdeaServiceSeed.JSON_PROPERTY_SITE_SEED,
   KeywordPlanIdeaServiceSeed.JSON_PROPERTY_SEED_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class KeywordPlanIdeaServiceSeed {
   public static final String JSON_PROPERTY_KEYWORD_AND_URL_SEED = "keywordAndUrlSeed";
+  @jakarta.annotation.Nullable
   private KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed;
 
   public static final String JSON_PROPERTY_KEYWORD_SEED = "keywordSeed";
+  @jakarta.annotation.Nullable
   private KeywordPlanIdeaServiceKeywordSeed keywordSeed;
 
   public static final String JSON_PROPERTY_URL_SEED = "urlSeed";
+  @jakarta.annotation.Nullable
   private KeywordPlanIdeaServiceUrlSeed urlSeed;
 
   public static final String JSON_PROPERTY_SITE_SEED = "siteSeed";
+  @jakarta.annotation.Nullable
   private KeywordPlanIdeaServiceSiteSeed siteSeed;
 
   public static final String JSON_PROPERTY_SEED_TYPE = "seedType";
+  @jakarta.annotation.Nullable
   private KeywordPlanIdeaServiceSeedType seedType;
 
   public KeywordPlanIdeaServiceSeed() {
   }
 
-  public KeywordPlanIdeaServiceSeed keywordAndUrlSeed(KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed) {
+  public KeywordPlanIdeaServiceSeed keywordAndUrlSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed) {
     
     this.keywordAndUrlSeed = keywordAndUrlSeed;
     return this;
   }
 
-   /**
+  /**
    * Get keywordAndUrlSeed
    * @return keywordAndUrlSeed
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_AND_URL_SEED)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_AND_URL_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public KeywordPlanIdeaServiceKeywordAndUrlSeed getKeywordAndUrlSeed() {
@@ -77,25 +82,24 @@ public class KeywordPlanIdeaServiceSeed {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_AND_URL_SEED)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_AND_URL_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordAndUrlSeed(KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed) {
+  public void setKeywordAndUrlSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceKeywordAndUrlSeed keywordAndUrlSeed) {
     this.keywordAndUrlSeed = keywordAndUrlSeed;
   }
 
-
-  public KeywordPlanIdeaServiceSeed keywordSeed(KeywordPlanIdeaServiceKeywordSeed keywordSeed) {
+  public KeywordPlanIdeaServiceSeed keywordSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceKeywordSeed keywordSeed) {
     
     this.keywordSeed = keywordSeed;
     return this;
   }
 
-   /**
+  /**
    * Get keywordSeed
    * @return keywordSeed
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_SEED)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public KeywordPlanIdeaServiceKeywordSeed getKeywordSeed() {
@@ -103,25 +107,24 @@ public class KeywordPlanIdeaServiceSeed {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_SEED)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordSeed(KeywordPlanIdeaServiceKeywordSeed keywordSeed) {
+  public void setKeywordSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceKeywordSeed keywordSeed) {
     this.keywordSeed = keywordSeed;
   }
 
-
-  public KeywordPlanIdeaServiceSeed urlSeed(KeywordPlanIdeaServiceUrlSeed urlSeed) {
+  public KeywordPlanIdeaServiceSeed urlSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceUrlSeed urlSeed) {
     
     this.urlSeed = urlSeed;
     return this;
   }
 
-   /**
+  /**
    * Get urlSeed
    * @return urlSeed
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_SEED)
+  @JsonProperty(value = JSON_PROPERTY_URL_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public KeywordPlanIdeaServiceUrlSeed getUrlSeed() {
@@ -129,25 +132,24 @@ public class KeywordPlanIdeaServiceSeed {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_SEED)
+  @JsonProperty(value = JSON_PROPERTY_URL_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlSeed(KeywordPlanIdeaServiceUrlSeed urlSeed) {
+  public void setUrlSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceUrlSeed urlSeed) {
     this.urlSeed = urlSeed;
   }
 
-
-  public KeywordPlanIdeaServiceSeed siteSeed(KeywordPlanIdeaServiceSiteSeed siteSeed) {
+  public KeywordPlanIdeaServiceSeed siteSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceSiteSeed siteSeed) {
     
     this.siteSeed = siteSeed;
     return this;
   }
 
-   /**
+  /**
    * Get siteSeed
    * @return siteSeed
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SITE_SEED)
+  @JsonProperty(value = JSON_PROPERTY_SITE_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public KeywordPlanIdeaServiceSiteSeed getSiteSeed() {
@@ -155,25 +157,24 @@ public class KeywordPlanIdeaServiceSeed {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SITE_SEED)
+  @JsonProperty(value = JSON_PROPERTY_SITE_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSiteSeed(KeywordPlanIdeaServiceSiteSeed siteSeed) {
+  public void setSiteSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceSiteSeed siteSeed) {
     this.siteSeed = siteSeed;
   }
 
-
-  public KeywordPlanIdeaServiceSeed seedType(KeywordPlanIdeaServiceSeedType seedType) {
+  public KeywordPlanIdeaServiceSeed seedType(@jakarta.annotation.Nullable KeywordPlanIdeaServiceSeedType seedType) {
     
     this.seedType = seedType;
     return this;
   }
 
-   /**
+  /**
    * Get seedType
    * @return seedType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SEED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public KeywordPlanIdeaServiceSeedType getSeedType() {
@@ -181,11 +182,12 @@ public class KeywordPlanIdeaServiceSeed {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SEED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setSeedType(KeywordPlanIdeaServiceSeedType seedType) {
+  public void setSeedType(@jakarta.annotation.Nullable KeywordPlanIdeaServiceSeedType seedType) {
     this.seedType = seedType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -226,10 +228,7 @@ public class KeywordPlanIdeaServiceSeed {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

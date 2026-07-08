@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupCriterionServiceKeywordMatchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceKeywordオブジェクトは、キーワードに関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceKeyword object displays keyword information.&lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupCriterionServiceKeyword.JSON_PROPERTY_KEYWORD_MATCH_TYPE,
   AdGroupCriterionServiceKeyword.JSON_PROPERTY_TEXT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupCriterionServiceKeyword {
   public static final String JSON_PROPERTY_KEYWORD_MATCH_TYPE = "keywordMatchType";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceKeywordMatchType keywordMatchType;
 
   public static final String JSON_PROPERTY_TEXT = "text";
+  @jakarta.annotation.Nullable
   private String text;
 
   public AdGroupCriterionServiceKeyword() {
   }
 
-  public AdGroupCriterionServiceKeyword keywordMatchType(AdGroupCriterionServiceKeywordMatchType keywordMatchType) {
+  public AdGroupCriterionServiceKeyword keywordMatchType(@jakarta.annotation.Nullable AdGroupCriterionServiceKeywordMatchType keywordMatchType) {
     
     this.keywordMatchType = keywordMatchType;
     return this;
   }
 
-   /**
+  /**
    * Get keywordMatchType
    * @return keywordMatchType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceKeywordMatchType getKeywordMatchType() {
@@ -61,25 +63,24 @@ public class AdGroupCriterionServiceKeyword {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordMatchType(AdGroupCriterionServiceKeywordMatchType keywordMatchType) {
+  public void setKeywordMatchType(@jakarta.annotation.Nullable AdGroupCriterionServiceKeywordMatchType keywordMatchType) {
     this.keywordMatchType = keywordMatchType;
   }
 
-
-  public AdGroupCriterionServiceKeyword text(String text) {
+  public AdGroupCriterionServiceKeyword text(@jakarta.annotation.Nullable String text) {
     
     this.text = text;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードの内容です。&lt;br&gt; ※最大80文字、10ワードです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceKeyword element.&lt;br&gt; *Maximum of 80 letters, 10 words.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return text
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getText() {
@@ -87,11 +88,12 @@ public class AdGroupCriterionServiceKeyword {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setText(String text) {
+  public void setText(@jakarta.annotation.Nullable String text) {
     this.text = text;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class AdGroupCriterionServiceKeyword {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

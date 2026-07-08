@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.SsaReportDefinitionServiceReportJobStatus;
 import jp.co.yahoo.adssearchapi.v19.model.SsaReportDefinitionServiceReportType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SsaReportDefinitionServiceSelectorオブジェクトは、操作の対象とするレポートです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SsaReportDefinitionServiceSelector is a detail of requested report.&lt;/div&gt; 
@@ -38,41 +39,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SsaReportDefinitionServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   SsaReportDefinitionServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class SsaReportDefinitionServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_REPORT_JOB_IDS = "reportJobIds";
+  @jakarta.annotation.Nullable
   private List<Long> reportJobIds;
 
   public static final String JSON_PROPERTY_REPORT_JOB_STATUSES = "reportJobStatuses";
+  @jakarta.annotation.Nullable
   private List<SsaReportDefinitionServiceReportJobStatus> reportJobStatuses;
 
   public static final String JSON_PROPERTY_REPORT_TYPES = "reportTypes";
+  @jakarta.annotation.Nullable
   private List<SsaReportDefinitionServiceReportType> reportTypes;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public SsaReportDefinitionServiceSelector() {
   }
 
-  public SsaReportDefinitionServiceSelector accountId(Long accountId) {
+  public SsaReportDefinitionServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件： アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -80,14 +87,13 @@ public class SsaReportDefinitionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public SsaReportDefinitionServiceSelector reportJobIds(List<Long> reportJobIds) {
+  public SsaReportDefinitionServiceSelector reportJobIds(@jakarta.annotation.Nullable List<Long> reportJobIds) {
     
     this.reportJobIds = reportJobIds;
     return this;
@@ -101,12 +107,12 @@ public class SsaReportDefinitionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件： レポートジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Report Job ID.&lt;/div&gt; 
    * @return reportJobIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_IDS)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getReportJobIds() {
@@ -114,14 +120,13 @@ public class SsaReportDefinitionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_IDS)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportJobIds(List<Long> reportJobIds) {
+  public void setReportJobIds(@jakarta.annotation.Nullable List<Long> reportJobIds) {
     this.reportJobIds = reportJobIds;
   }
 
-
-  public SsaReportDefinitionServiceSelector reportJobStatuses(List<SsaReportDefinitionServiceReportJobStatus> reportJobStatuses) {
+  public SsaReportDefinitionServiceSelector reportJobStatuses(@jakarta.annotation.Nullable List<SsaReportDefinitionServiceReportJobStatus> reportJobStatuses) {
     
     this.reportJobStatuses = reportJobStatuses;
     return this;
@@ -135,12 +140,12 @@ public class SsaReportDefinitionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get reportJobStatuses
    * @return reportJobStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<SsaReportDefinitionServiceReportJobStatus> getReportJobStatuses() {
@@ -148,14 +153,13 @@ public class SsaReportDefinitionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportJobStatuses(List<SsaReportDefinitionServiceReportJobStatus> reportJobStatuses) {
+  public void setReportJobStatuses(@jakarta.annotation.Nullable List<SsaReportDefinitionServiceReportJobStatus> reportJobStatuses) {
     this.reportJobStatuses = reportJobStatuses;
   }
 
-
-  public SsaReportDefinitionServiceSelector reportTypes(List<SsaReportDefinitionServiceReportType> reportTypes) {
+  public SsaReportDefinitionServiceSelector reportTypes(@jakarta.annotation.Nullable List<SsaReportDefinitionServiceReportType> reportTypes) {
     
     this.reportTypes = reportTypes;
     return this;
@@ -169,12 +173,12 @@ public class SsaReportDefinitionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get reportTypes
    * @return reportTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<SsaReportDefinitionServiceReportType> getReportTypes() {
@@ -182,27 +186,26 @@ public class SsaReportDefinitionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportTypes(List<SsaReportDefinitionServiceReportType> reportTypes) {
+  public void setReportTypes(@jakarta.annotation.Nullable List<SsaReportDefinitionServiceReportType> reportTypes) {
     this.reportTypes = reportTypes;
   }
 
-
-  public SsaReportDefinitionServiceSelector numberResults(Integer numberResults) {
+  public SsaReportDefinitionServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -210,26 +213,25 @@ public class SsaReportDefinitionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public SsaReportDefinitionServiceSelector startIndex(Integer startIndex) {
+  public SsaReportDefinitionServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -237,11 +239,12 @@ public class SsaReportDefinitionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -284,10 +287,7 @@ public class SsaReportDefinitionServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.CampaignServiceDasUseUrlsType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   CampaignServiceDynamicAdsForSearchSettingは、動的検索連動型広告に関する検索条件を表します。&lt;br&gt;   ADD時、settingTypeがDYNAMIC_ADS_FOR_SEARCH_SETTINGの場合、必須となり、それ以外では省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   CampaignServiceDynamicAdsForSearchSetting displays search condition for Dynamic ads for search.&lt;br&gt;   This field is optional. However, in ADD operation, this field is required only when settingType is &#39;DYNAMIC_ADS_FOR_SEARCH_SETTING&#39;, and it is optional when settingType is the others. &lt;/div&gt; 
@@ -35,24 +36,28 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceDynamicAdsForSearchSetting.JSON_PROPERTY_DOMAIN,
   CampaignServiceDynamicAdsForSearchSetting.JSON_PROPERTY_DAS_USE_URLS_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceDynamicAdsForSearchSetting {
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
+  @jakarta.annotation.Nullable
   private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS = "pageFeedAssetSetIds";
+  @jakarta.annotation.Nullable
   private List<Long> pageFeedAssetSetIds;
 
   public static final String JSON_PROPERTY_DOMAIN = "domain";
+  @jakarta.annotation.Nullable
   private String domain;
 
   public static final String JSON_PROPERTY_DAS_USE_URLS_TYPE = "dasUseUrlsType";
+  @jakarta.annotation.Nullable
   private CampaignServiceDasUseUrlsType dasUseUrlsType;
 
   public CampaignServiceDynamicAdsForSearchSetting() {
   }
 
-  public CampaignServiceDynamicAdsForSearchSetting feedIds(List<Long> feedIds) {
+  public CampaignServiceDynamicAdsForSearchSetting feedIds(@jakarta.annotation.Nullable List<Long> feedIds) {
     
     this.feedIds = feedIds;
     return this;
@@ -66,12 +71,12 @@ public class CampaignServiceDynamicAdsForSearchSetting {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   キャンペーンで使用するページフィードIDです。&lt;br&gt;   ※現在このフィールドは参照のみ可能です。ページフィードを設定する場合は、pageFeedAssetSetIdsをご利用ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Page Feed ID for campaign.&lt;br&gt;   *Currently, this field is read-only. To set up page feeds, please use pageFeedAssetSetIds. &lt;/div&gt; 
    * @return feedIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getFeedIds() {
@@ -79,14 +84,13 @@ public class CampaignServiceDynamicAdsForSearchSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedIds(List<Long> feedIds) {
+  public void setFeedIds(@jakarta.annotation.Nullable List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
-
-  public CampaignServiceDynamicAdsForSearchSetting pageFeedAssetSetIds(List<Long> pageFeedAssetSetIds) {
+  public CampaignServiceDynamicAdsForSearchSetting pageFeedAssetSetIds(@jakarta.annotation.Nullable List<Long> pageFeedAssetSetIds) {
     
     this.pageFeedAssetSetIds = pageFeedAssetSetIds;
     return this;
@@ -100,12 +104,12 @@ public class CampaignServiceDynamicAdsForSearchSetting {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   キャンペーンで使用するページフィードアセットセットIDです。&lt;br&gt;   ADD時およびSET時、DasUseUrlsTypeがUSE_SUPPLIED_URLS_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、このフィールドは必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   PageFeedAssetSet ID for campaign.&lt;br&gt;   In ADD and SET operation, If DasUseUrlsType is USE_SUPPLIED_URLS_ONLY or DOMAIN_AND_SUPPLIED_URLS, this field is required. &lt;/div&gt; 
    * @return pageFeedAssetSetIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getPageFeedAssetSetIds() {
@@ -113,25 +117,24 @@ public class CampaignServiceDynamicAdsForSearchSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetSetIds(List<Long> pageFeedAssetSetIds) {
+  public void setPageFeedAssetSetIds(@jakarta.annotation.Nullable List<Long> pageFeedAssetSetIds) {
     this.pageFeedAssetSetIds = pageFeedAssetSetIds;
   }
 
-
-  public CampaignServiceDynamicAdsForSearchSetting domain(String domain) {
+  public CampaignServiceDynamicAdsForSearchSetting domain(@jakarta.annotation.Nullable String domain) {
     
     this.domain = domain;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ドメインです。&lt;br&gt;   ADDおよびSET時、DasUseUrlsTypeがTOP_DOMAIN_ONLYまたはDOMAIN_AND_SUPPLIED_URLSの場合、このフィールドは必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Domain.&lt;br&gt;   If DasUseUrlsType is TOP_DOMAIN_ONLY or DOMAIN_AND_SUPPLIED_URLS, this field is required in ADD and SET operation. &lt;/div&gt; 
    * @return domain
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DOMAIN)
+  @JsonProperty(value = JSON_PROPERTY_DOMAIN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDomain() {
@@ -139,25 +142,24 @@ public class CampaignServiceDynamicAdsForSearchSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DOMAIN)
+  @JsonProperty(value = JSON_PROPERTY_DOMAIN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDomain(String domain) {
+  public void setDomain(@jakarta.annotation.Nullable String domain) {
     this.domain = domain;
   }
 
-
-  public CampaignServiceDynamicAdsForSearchSetting dasUseUrlsType(CampaignServiceDasUseUrlsType dasUseUrlsType) {
+  public CampaignServiceDynamicAdsForSearchSetting dasUseUrlsType(@jakarta.annotation.Nullable CampaignServiceDasUseUrlsType dasUseUrlsType) {
     
     this.dasUseUrlsType = dasUseUrlsType;
     return this;
   }
 
-   /**
+  /**
    * Get dasUseUrlsType
    * @return dasUseUrlsType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DAS_USE_URLS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DAS_USE_URLS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceDasUseUrlsType getDasUseUrlsType() {
@@ -165,11 +167,12 @@ public class CampaignServiceDynamicAdsForSearchSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DAS_USE_URLS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DAS_USE_URLS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDasUseUrlsType(CampaignServiceDasUseUrlsType dasUseUrlsType) {
+  public void setDasUseUrlsType(@jakarta.annotation.Nullable CampaignServiceDasUseUrlsType dasUseUrlsType) {
     this.dasUseUrlsType = dasUseUrlsType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -208,10 +211,7 @@ public class CampaignServiceDynamicAdsForSearchSetting {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

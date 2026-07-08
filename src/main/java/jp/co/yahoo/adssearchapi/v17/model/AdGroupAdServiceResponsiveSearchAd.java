@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,15 +18,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupAdServiceDescriptionTextAsset;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupAdServiceHeadlineTextAsset;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupAdServiceIsRemove;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceResponsiveSearchAdオブジェクトは、レスポンシブ検索広告を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。※adTypeがRESPONSIVE_SEARCH_ADの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceResponsiveSearchAd object is Responsive ads.&lt;br&gt; This field is optional in ADD and SET operation. *If adType is RESPONSIVE_SEARCH_AD, this field is required.&lt;/div&gt; 
@@ -43,42 +44,52 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_REVIEW_PATH1,
   AdGroupAdServiceResponsiveSearchAd.JSON_PROPERTY_REVIEW_PATH2
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAdServiceResponsiveSearchAd {
   public static final String JSON_PROPERTY_HEADLINES = "headlines";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceHeadlineTextAsset> headlines;
 
   public static final String JSON_PROPERTY_DESCRIPTIONS = "descriptions";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceDescriptionTextAsset> descriptions;
 
   public static final String JSON_PROPERTY_PATH1 = "path1";
+  @jakarta.annotation.Nullable
   private String path1;
 
   public static final String JSON_PROPERTY_IS_REMOVE_PATH1 = "isRemovePath1";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemove isRemovePath1;
 
   public static final String JSON_PROPERTY_PATH2 = "path2";
+  @jakarta.annotation.Nullable
   private String path2;
 
   public static final String JSON_PROPERTY_IS_REMOVE_PATH2 = "isRemovePath2";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemove isRemovePath2;
 
   public static final String JSON_PROPERTY_REVIEW_HEADLINES = "reviewHeadlines";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceHeadlineTextAsset> reviewHeadlines;
 
   public static final String JSON_PROPERTY_REVIEW_DESCRIPTIONS = "reviewDescriptions";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceDescriptionTextAsset> reviewDescriptions;
 
   public static final String JSON_PROPERTY_REVIEW_PATH1 = "reviewPath1";
+  @jakarta.annotation.Nullable
   private String reviewPath1;
 
   public static final String JSON_PROPERTY_REVIEW_PATH2 = "reviewPath2";
+  @jakarta.annotation.Nullable
   private String reviewPath2;
 
   public AdGroupAdServiceResponsiveSearchAd() {
   }
 
-  public AdGroupAdServiceResponsiveSearchAd headlines(List<AdGroupAdServiceHeadlineTextAsset> headlines) {
+  public AdGroupAdServiceResponsiveSearchAd headlines(@jakarta.annotation.Nullable List<AdGroupAdServiceHeadlineTextAsset> headlines) {
     
     this.headlines = headlines;
     return this;
@@ -92,12 +103,12 @@ public class AdGroupAdServiceResponsiveSearchAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定するタイトルのテキストアセットを表します。&lt;br&gt; headlines[]には、3~15件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※ descriptionsを指定する場合は、headlinesは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline that specify in responsive ads for search.&lt;br&gt; 3 to 15 items can be specified for headlines[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *To specify descriptions, headlines is required.&lt;/div&gt; 
    * @return headlines
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_HEADLINES)
+  @JsonProperty(value = JSON_PROPERTY_HEADLINES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceHeadlineTextAsset> getHeadlines() {
@@ -105,14 +116,13 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_HEADLINES)
+  @JsonProperty(value = JSON_PROPERTY_HEADLINES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setHeadlines(List<AdGroupAdServiceHeadlineTextAsset> headlines) {
+  public void setHeadlines(@jakarta.annotation.Nullable List<AdGroupAdServiceHeadlineTextAsset> headlines) {
     this.headlines = headlines;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd descriptions(List<AdGroupAdServiceDescriptionTextAsset> descriptions) {
+  public AdGroupAdServiceResponsiveSearchAd descriptions(@jakarta.annotation.Nullable List<AdGroupAdServiceDescriptionTextAsset> descriptions) {
     
     this.descriptions = descriptions;
     return this;
@@ -126,12 +136,12 @@ public class AdGroupAdServiceResponsiveSearchAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レスポンシブ検索広告で指定する説明文のテキストアセットを表します。&lt;br&gt; descriptions[]には、2~4件の指定が可能です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※ headlinesを指定する場合は、descriptionsは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description that specify in responsive ads for search.&lt;br&gt; 2 to 4 items can be specified for descriptions[].&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *To specify headlines, descriptions is required.&lt;/div&gt; 
    * @return descriptions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTIONS)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceDescriptionTextAsset> getDescriptions() {
@@ -139,25 +149,24 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTIONS)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescriptions(List<AdGroupAdServiceDescriptionTextAsset> descriptions) {
+  public void setDescriptions(@jakarta.annotation.Nullable List<AdGroupAdServiceDescriptionTextAsset> descriptions) {
     this.descriptions = descriptions;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd path1(String path1) {
+  public AdGroupAdServiceResponsiveSearchAd path1(@jakarta.annotation.Nullable String path1) {
     
     this.path1 = path1;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path2を指定する場合は、path1は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD and SET operation. The default value will be null.&lt;br&gt;*To specify path2, path1 is required.&lt;/div&gt; 
    * @return path1
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PATH1)
+  @JsonProperty(value = JSON_PROPERTY_PATH1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPath1() {
@@ -165,25 +174,24 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PATH1)
+  @JsonProperty(value = JSON_PROPERTY_PATH1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPath1(String path1) {
+  public void setPath1(@jakarta.annotation.Nullable String path1) {
     this.path1 = path1;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd isRemovePath1(AdGroupAdServiceIsRemove isRemovePath1) {
+  public AdGroupAdServiceResponsiveSearchAd isRemovePath1(@jakarta.annotation.Nullable AdGroupAdServiceIsRemove isRemovePath1) {
     
     this.isRemovePath1 = isRemovePath1;
     return this;
   }
 
-   /**
+  /**
    * Get isRemovePath1
    * @return isRemovePath1
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_PATH1)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_PATH1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemove getIsRemovePath1() {
@@ -191,25 +199,24 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_PATH1)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_PATH1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemovePath1(AdGroupAdServiceIsRemove isRemovePath1) {
+  public void setIsRemovePath1(@jakarta.annotation.Nullable AdGroupAdServiceIsRemove isRemovePath1) {
     this.isRemovePath1 = isRemovePath1;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd path2(String path2) {
+  public AdGroupAdServiceResponsiveSearchAd path2(@jakarta.annotation.Nullable String path2) {
     
     this.path2 = path2;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動作成される表示URLを補足するパスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。その際、デフォルト設定値はnullとなります。&lt;br&gt;※path1を指定していない場合、path2は無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically.&lt;br&gt; This field is optional in ADD and SET operation. The default value will be null.&lt;br&gt;*If path1 is not specified, path2 will be ignored.&lt;/div&gt; 
    * @return path2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PATH2)
+  @JsonProperty(value = JSON_PROPERTY_PATH2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPath2() {
@@ -217,25 +224,24 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PATH2)
+  @JsonProperty(value = JSON_PROPERTY_PATH2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPath2(String path2) {
+  public void setPath2(@jakarta.annotation.Nullable String path2) {
     this.path2 = path2;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd isRemovePath2(AdGroupAdServiceIsRemove isRemovePath2) {
+  public AdGroupAdServiceResponsiveSearchAd isRemovePath2(@jakarta.annotation.Nullable AdGroupAdServiceIsRemove isRemovePath2) {
     
     this.isRemovePath2 = isRemovePath2;
     return this;
   }
 
-   /**
+  /**
    * Get isRemovePath2
    * @return isRemovePath2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_PATH2)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_PATH2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemove getIsRemovePath2() {
@@ -243,14 +249,13 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_PATH2)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_PATH2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemovePath2(AdGroupAdServiceIsRemove isRemovePath2) {
+  public void setIsRemovePath2(@jakarta.annotation.Nullable AdGroupAdServiceIsRemove isRemovePath2) {
     this.isRemovePath2 = isRemovePath2;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd reviewHeadlines(List<AdGroupAdServiceHeadlineTextAsset> reviewHeadlines) {
+  public AdGroupAdServiceResponsiveSearchAd reviewHeadlines(@jakarta.annotation.Nullable List<AdGroupAdServiceHeadlineTextAsset> reviewHeadlines) {
     
     this.reviewHeadlines = reviewHeadlines;
     return this;
@@ -264,12 +269,12 @@ public class AdGroupAdServiceResponsiveSearchAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のタイトルのテキストアセットを表します。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the headline under review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewHeadlines
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_HEADLINES)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_HEADLINES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceHeadlineTextAsset> getReviewHeadlines() {
@@ -277,14 +282,13 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_HEADLINES)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_HEADLINES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewHeadlines(List<AdGroupAdServiceHeadlineTextAsset> reviewHeadlines) {
+  public void setReviewHeadlines(@jakarta.annotation.Nullable List<AdGroupAdServiceHeadlineTextAsset> reviewHeadlines) {
     this.reviewHeadlines = reviewHeadlines;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd reviewDescriptions(List<AdGroupAdServiceDescriptionTextAsset> reviewDescriptions) {
+  public AdGroupAdServiceResponsiveSearchAd reviewDescriptions(@jakarta.annotation.Nullable List<AdGroupAdServiceDescriptionTextAsset> reviewDescriptions) {
     
     this.reviewDescriptions = reviewDescriptions;
     return this;
@@ -298,12 +302,12 @@ public class AdGroupAdServiceResponsiveSearchAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の説明文のテキストアセットを表します。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Text asset for the description under review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewDescriptions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_DESCRIPTIONS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_DESCRIPTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceDescriptionTextAsset> getReviewDescriptions() {
@@ -311,25 +315,24 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_DESCRIPTIONS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_DESCRIPTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewDescriptions(List<AdGroupAdServiceDescriptionTextAsset> reviewDescriptions) {
+  public void setReviewDescriptions(@jakarta.annotation.Nullable List<AdGroupAdServiceDescriptionTextAsset> reviewDescriptions) {
     this.reviewDescriptions = reviewDescriptions;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd reviewPath1(String reviewPath1) {
+  public AdGroupAdServiceResponsiveSearchAd reviewPath1(@jakarta.annotation.Nullable String reviewPath1) {
     
     this.reviewPath1 = reviewPath1;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の自動作成される表示URLを補足するパスです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically (Under review).&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewPath1
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_PATH1)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_PATH1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewPath1() {
@@ -337,25 +340,24 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_PATH1)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_PATH1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewPath1(String reviewPath1) {
+  public void setReviewPath1(@jakarta.annotation.Nullable String reviewPath1) {
     this.reviewPath1 = reviewPath1;
   }
 
-
-  public AdGroupAdServiceResponsiveSearchAd reviewPath2(String reviewPath2) {
+  public AdGroupAdServiceResponsiveSearchAd reviewPath2(@jakarta.annotation.Nullable String reviewPath2) {
     
     this.reviewPath2 = reviewPath2;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の自動作成される表示URLを補足するパスです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The path information which complements display URL generated automatically (Under review).&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewPath2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_PATH2)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_PATH2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewPath2() {
@@ -363,11 +365,12 @@ public class AdGroupAdServiceResponsiveSearchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_PATH2)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_PATH2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewPath2(String reviewPath2) {
+  public void setReviewPath2(@jakarta.annotation.Nullable String reviewPath2) {
     this.reviewPath2 = reviewPath2;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -418,10 +421,7 @@ public class AdGroupAdServiceResponsiveSearchAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

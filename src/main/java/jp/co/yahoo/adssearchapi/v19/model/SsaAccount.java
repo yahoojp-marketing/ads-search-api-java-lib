@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.SsaAccountServiceAutoTaggingEnabled;
 import jp.co.yahoo.adssearchapi.v19.model.SsaAccountServiceDeliveryStatus;
@@ -27,6 +26,7 @@ import jp.co.yahoo.adssearchapi.v19.model.SsaAccountServiceStatus;
 import jp.co.yahoo.adssearchapi.v19.model.SsaAccountServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SsaAccountオブジェクトは、アカウントを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SsaAccount object describes the account information.&lt;/div&gt; 
@@ -43,53 +43,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SsaAccount.JSON_PROPERTY_END_DATE,
   SsaAccount.JSON_PROPERTY_CONTACT_BIZ_ID
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class SsaAccount {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_ACCOUNT_NAME = "accountName";
+  @jakarta.annotation.Nullable
   private String accountName;
 
   public static final String JSON_PROPERTY_ACCOUNT_STATUS = "accountStatus";
+  @jakarta.annotation.Nullable
   private SsaAccountServiceStatus accountStatus;
 
   public static final String JSON_PROPERTY_ACCOUNT_TYPE = "accountType";
+  @jakarta.annotation.Nullable
   private SsaAccountServiceType accountType;
 
   public static final String JSON_PROPERTY_AUTO_TAGGING_ENABLED = "autoTaggingEnabled";
+  @jakarta.annotation.Nullable
   private SsaAccountServiceAutoTaggingEnabled autoTaggingEnabled;
 
   public static final String JSON_PROPERTY_DELIVERY_STATUS = "deliveryStatus";
+  @jakarta.annotation.Nullable
   private SsaAccountServiceDeliveryStatus deliveryStatus;
 
   public static final String JSON_PROPERTY_IS_CANCELLATION_PENDING = "isCancellationPending";
+  @jakarta.annotation.Nullable
   private SsaAccountServiceIsCancellationPending isCancellationPending;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_CONTACT_BIZ_ID = "contactBizId";
+  @jakarta.annotation.Nullable
   private String contactBizId;
 
   public SsaAccount() {
   }
 
-  public SsaAccount accountId(Long accountId) {
+  public SsaAccount accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -97,25 +107,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public SsaAccount accountName(String accountName) {
+  public SsaAccount accountName(@jakarta.annotation.Nullable String accountName) {
     
     this.accountName = accountName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account name.&lt;/div&gt; 
    * @return accountName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAccountName() {
@@ -123,25 +132,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountName(String accountName) {
+  public void setAccountName(@jakarta.annotation.Nullable String accountName) {
     this.accountName = accountName;
   }
 
-
-  public SsaAccount accountStatus(SsaAccountServiceStatus accountStatus) {
+  public SsaAccount accountStatus(@jakarta.annotation.Nullable SsaAccountServiceStatus accountStatus) {
     
     this.accountStatus = accountStatus;
     return this;
   }
 
-   /**
+  /**
    * Get accountStatus
    * @return accountStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SsaAccountServiceStatus getAccountStatus() {
@@ -149,25 +157,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountStatus(SsaAccountServiceStatus accountStatus) {
+  public void setAccountStatus(@jakarta.annotation.Nullable SsaAccountServiceStatus accountStatus) {
     this.accountStatus = accountStatus;
   }
 
-
-  public SsaAccount accountType(SsaAccountServiceType accountType) {
+  public SsaAccount accountType(@jakarta.annotation.Nullable SsaAccountServiceType accountType) {
     
     this.accountType = accountType;
     return this;
   }
 
-   /**
+  /**
    * Get accountType
    * @return accountType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SsaAccountServiceType getAccountType() {
@@ -175,25 +182,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountType(SsaAccountServiceType accountType) {
+  public void setAccountType(@jakarta.annotation.Nullable SsaAccountServiceType accountType) {
     this.accountType = accountType;
   }
 
-
-  public SsaAccount autoTaggingEnabled(SsaAccountServiceAutoTaggingEnabled autoTaggingEnabled) {
+  public SsaAccount autoTaggingEnabled(@jakarta.annotation.Nullable SsaAccountServiceAutoTaggingEnabled autoTaggingEnabled) {
     
     this.autoTaggingEnabled = autoTaggingEnabled;
     return this;
   }
 
-   /**
+  /**
    * Get autoTaggingEnabled
    * @return autoTaggingEnabled
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUTO_TAGGING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_AUTO_TAGGING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SsaAccountServiceAutoTaggingEnabled getAutoTaggingEnabled() {
@@ -201,25 +207,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUTO_TAGGING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_AUTO_TAGGING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAutoTaggingEnabled(SsaAccountServiceAutoTaggingEnabled autoTaggingEnabled) {
+  public void setAutoTaggingEnabled(@jakarta.annotation.Nullable SsaAccountServiceAutoTaggingEnabled autoTaggingEnabled) {
     this.autoTaggingEnabled = autoTaggingEnabled;
   }
 
-
-  public SsaAccount deliveryStatus(SsaAccountServiceDeliveryStatus deliveryStatus) {
+  public SsaAccount deliveryStatus(@jakarta.annotation.Nullable SsaAccountServiceDeliveryStatus deliveryStatus) {
     
     this.deliveryStatus = deliveryStatus;
     return this;
   }
 
-   /**
+  /**
    * Get deliveryStatus
    * @return deliveryStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SsaAccountServiceDeliveryStatus getDeliveryStatus() {
@@ -227,25 +232,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryStatus(SsaAccountServiceDeliveryStatus deliveryStatus) {
+  public void setDeliveryStatus(@jakarta.annotation.Nullable SsaAccountServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
-
-  public SsaAccount isCancellationPending(SsaAccountServiceIsCancellationPending isCancellationPending) {
+  public SsaAccount isCancellationPending(@jakarta.annotation.Nullable SsaAccountServiceIsCancellationPending isCancellationPending) {
     
     this.isCancellationPending = isCancellationPending;
     return this;
   }
 
-   /**
+  /**
    * Get isCancellationPending
    * @return isCancellationPending
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_CANCELLATION_PENDING)
+  @JsonProperty(value = JSON_PROPERTY_IS_CANCELLATION_PENDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SsaAccountServiceIsCancellationPending getIsCancellationPending() {
@@ -253,25 +257,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_CANCELLATION_PENDING)
+  @JsonProperty(value = JSON_PROPERTY_IS_CANCELLATION_PENDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsCancellationPending(SsaAccountServiceIsCancellationPending isCancellationPending) {
+  public void setIsCancellationPending(@jakarta.annotation.Nullable SsaAccountServiceIsCancellationPending isCancellationPending) {
     this.isCancellationPending = isCancellationPending;
   }
 
-
-  public SsaAccount startDate(String startDate) {
+  public SsaAccount startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載開始日です。&lt;br&gt; 「yyyyMMdd」形式で表示されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of ad serving.&lt;br&gt; It is displayed in &amp;#39;yyyyMMdd&amp;#39; format.&lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -279,25 +282,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public SsaAccount endDate(String endDate) {
+  public SsaAccount endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載終了日です。&lt;br&gt; 「yyyyMMdd」形式で表示されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of ad serving.&lt;br&gt; It is displayed in &amp;#39;yyyyMMdd&amp;#39; format.&lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -305,25 +307,24 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public SsaAccount contactBizId(String contactBizId) {
+  public SsaAccount contactBizId(@jakarta.annotation.Nullable String contactBizId) {
     
     this.contactBizId = contactBizId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact Business ID.&lt;/div&gt; 
    * @return contactBizId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTACT_BIZ_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTACT_BIZ_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getContactBizId() {
@@ -331,11 +332,12 @@ public class SsaAccount {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTACT_BIZ_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTACT_BIZ_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContactBizId(String contactBizId) {
+  public void setContactBizId(@jakarta.annotation.Nullable String contactBizId) {
     this.contactBizId = contactBizId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -386,10 +388,7 @@ public class SsaAccount {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

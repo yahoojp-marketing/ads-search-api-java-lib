@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.ConversionTrackerServiceConversionSource;
 import jp.co.yahoo.adssearchapi.v17.model.ConversionTrackerServiceMarkupLanguage;
 import jp.co.yahoo.adssearchapi.v17.model.ConversionTrackerServiceTrackingCodeType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceWebConversionオブジェクトは、ウェブページのコンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョン設定を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※ADD時、conversionTrackerTypeがWEB_CONVERSIONの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceWebConversion describes ConversionTracker settings such as ConversionTag and performance data by tag.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If the conversionTrackerType is WEB_CONVERSION,  this field will be required in ADD operation.&lt;/div&gt; 
@@ -35,35 +35,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceWebConversion.JSON_PROPERTY_TRACKING_CODE_TYPE,
   ConversionTrackerServiceWebConversion.JSON_PROPERTY_SOURCE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceWebConversion {
   public static final String JSON_PROPERTY_MARKUP_LANGUAGE = "markupLanguage";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceMarkupLanguage markupLanguage;
 
   public static final String JSON_PROPERTY_ADVANCED_SNIPPET = "advancedSnippet";
+  @jakarta.annotation.Nullable
   private String advancedSnippet;
 
   public static final String JSON_PROPERTY_TRACKING_CODE_TYPE = "trackingCodeType";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceTrackingCodeType trackingCodeType;
 
   public static final String JSON_PROPERTY_SOURCE = "source";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceConversionSource source;
 
   public ConversionTrackerServiceWebConversion() {
   }
 
-  public ConversionTrackerServiceWebConversion markupLanguage(ConversionTrackerServiceMarkupLanguage markupLanguage) {
+  public ConversionTrackerServiceWebConversion markupLanguage(@jakarta.annotation.Nullable ConversionTrackerServiceMarkupLanguage markupLanguage) {
     
     this.markupLanguage = markupLanguage;
     return this;
   }
 
-   /**
+  /**
    * Get markupLanguage
    * @return markupLanguage
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MARKUP_LANGUAGE)
+  @JsonProperty(value = JSON_PROPERTY_MARKUP_LANGUAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceMarkupLanguage getMarkupLanguage() {
@@ -71,25 +75,24 @@ public class ConversionTrackerServiceWebConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MARKUP_LANGUAGE)
+  @JsonProperty(value = JSON_PROPERTY_MARKUP_LANGUAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMarkupLanguage(ConversionTrackerServiceMarkupLanguage markupLanguage) {
+  public void setMarkupLanguage(@jakarta.annotation.Nullable ConversionTrackerServiceMarkupLanguage markupLanguage) {
     this.markupLanguage = markupLanguage;
   }
 
-
-  public ConversionTrackerServiceWebConversion advancedSnippet(String advancedSnippet) {
+  public ConversionTrackerServiceWebConversion advancedSnippet(@jakarta.annotation.Nullable String advancedSnippet) {
     
     this.advancedSnippet = advancedSnippet;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   リニューアル版のコンバージョンタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。&lt;br&gt;   詳細は以下のヘルプを参照してください。&lt;br&gt;   ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000045014?language&#x3D;ja\&quot;&gt;コンバージョン測定とは&lt;/a&gt;&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   The new format of conversion tag avoids the impacts such as changes made to the browser. &lt;br&gt;   See also the help below.&lt;br&gt;   * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000045014?language&#x3D;en_US\&quot;&gt;Conversion Analytics&lt;/a&gt;&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return advancedSnippet
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ADVANCED_SNIPPET)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_SNIPPET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdvancedSnippet() {
@@ -97,25 +100,24 @@ public class ConversionTrackerServiceWebConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ADVANCED_SNIPPET)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_SNIPPET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdvancedSnippet(String advancedSnippet) {
+  public void setAdvancedSnippet(@jakarta.annotation.Nullable String advancedSnippet) {
     this.advancedSnippet = advancedSnippet;
   }
 
-
-  public ConversionTrackerServiceWebConversion trackingCodeType(ConversionTrackerServiceTrackingCodeType trackingCodeType) {
+  public ConversionTrackerServiceWebConversion trackingCodeType(@jakarta.annotation.Nullable ConversionTrackerServiceTrackingCodeType trackingCodeType) {
     
     this.trackingCodeType = trackingCodeType;
     return this;
   }
 
-   /**
+  /**
    * Get trackingCodeType
    * @return trackingCodeType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_CODE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_CODE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceTrackingCodeType getTrackingCodeType() {
@@ -123,25 +125,24 @@ public class ConversionTrackerServiceWebConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_CODE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_CODE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingCodeType(ConversionTrackerServiceTrackingCodeType trackingCodeType) {
+  public void setTrackingCodeType(@jakarta.annotation.Nullable ConversionTrackerServiceTrackingCodeType trackingCodeType) {
     this.trackingCodeType = trackingCodeType;
   }
 
-
-  public ConversionTrackerServiceWebConversion source(ConversionTrackerServiceConversionSource source) {
+  public ConversionTrackerServiceWebConversion source(@jakarta.annotation.Nullable ConversionTrackerServiceConversionSource source) {
     
     this.source = source;
     return this;
   }
 
-   /**
+  /**
    * Get source
    * @return source
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceConversionSource getSource() {
@@ -149,11 +150,12 @@ public class ConversionTrackerServiceWebConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSource(ConversionTrackerServiceConversionSource source) {
+  public void setSource(@jakarta.annotation.Nullable ConversionTrackerServiceConversionSource source) {
     this.source = source;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -192,10 +194,7 @@ public class ConversionTrackerServiceWebConversion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

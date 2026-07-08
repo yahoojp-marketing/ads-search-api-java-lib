@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v18.model.RetargetingListServiceTargetListOwner;
 import jp.co.yahoo.adssearchapi.v18.model.RetargetingListServiceTargetListType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceSelectorは、オーディエンスリストの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceSelector is an object that holds search condition (parameter).&lt;/div&gt; 
@@ -38,41 +39,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingListServiceSelector.JSON_PROPERTY_TARGET_LIST_OWNER,
   RetargetingListServiceSelector.JSON_PROPERTY_TARGET_LIST_TYPES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RetargetingListServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_TARGET_LIST_IDS = "targetListIds";
+  @jakarta.annotation.Nullable
   private List<Long> targetListIds;
 
   public static final String JSON_PROPERTY_TARGET_LIST_OWNER = "targetListOwner";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceTargetListOwner targetListOwner;
 
   public static final String JSON_PROPERTY_TARGET_LIST_TYPES = "targetListTypes";
+  @jakarta.annotation.Nullable
   private List<RetargetingListServiceTargetListType> targetListTypes;
 
   public RetargetingListServiceSelector() {
   }
 
-  public RetargetingListServiceSelector accountId(Long accountId) {
+  public RetargetingListServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -80,27 +87,26 @@ public class RetargetingListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public RetargetingListServiceSelector numberResults(Integer numberResults) {
+  public RetargetingListServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 1000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -108,26 +114,25 @@ public class RetargetingListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public RetargetingListServiceSelector startIndex(Integer startIndex) {
+  public RetargetingListServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -135,14 +140,13 @@ public class RetargetingListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public RetargetingListServiceSelector targetListIds(List<Long> targetListIds) {
+  public RetargetingListServiceSelector targetListIds(@jakarta.annotation.Nullable List<Long> targetListIds) {
     
     this.targetListIds = targetListIds;
     return this;
@@ -156,12 +160,12 @@ public class RetargetingListServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: audience list ID.&lt;/div&gt; 
    * @return targetListIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_IDS)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getTargetListIds() {
@@ -169,25 +173,24 @@ public class RetargetingListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_IDS)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListIds(List<Long> targetListIds) {
+  public void setTargetListIds(@jakarta.annotation.Nullable List<Long> targetListIds) {
     this.targetListIds = targetListIds;
   }
 
-
-  public RetargetingListServiceSelector targetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
+  public RetargetingListServiceSelector targetListOwner(@jakarta.annotation.Nullable RetargetingListServiceTargetListOwner targetListOwner) {
     
     this.targetListOwner = targetListOwner;
     return this;
   }
 
-   /**
+  /**
    * Get targetListOwner
    * @return targetListOwner
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_OWNER)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_OWNER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceTargetListOwner getTargetListOwner() {
@@ -195,14 +198,13 @@ public class RetargetingListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_OWNER)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_OWNER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
+  public void setTargetListOwner(@jakarta.annotation.Nullable RetargetingListServiceTargetListOwner targetListOwner) {
     this.targetListOwner = targetListOwner;
   }
 
-
-  public RetargetingListServiceSelector targetListTypes(List<RetargetingListServiceTargetListType> targetListTypes) {
+  public RetargetingListServiceSelector targetListTypes(@jakarta.annotation.Nullable List<RetargetingListServiceTargetListType> targetListTypes) {
     
     this.targetListTypes = targetListTypes;
     return this;
@@ -216,12 +218,12 @@ public class RetargetingListServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get targetListTypes
    * @return targetListTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RetargetingListServiceTargetListType> getTargetListTypes() {
@@ -229,11 +231,12 @@ public class RetargetingListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListTypes(List<RetargetingListServiceTargetListType> targetListTypes) {
+  public void setTargetListTypes(@jakarta.annotation.Nullable List<RetargetingListServiceTargetListType> targetListTypes) {
     this.targetListTypes = targetListTypes;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -276,10 +279,7 @@ public class RetargetingListServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
