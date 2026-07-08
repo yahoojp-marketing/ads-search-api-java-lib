@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,12 +21,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceIsAllVisitorRule;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceIsDateSpecificRule;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceRuleGroup;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceRuleBaseAudienceListは、ベースオーディエンスリストの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※audienceListTypeがRULEの場合、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceRuleBaseAudienceList is an object that holds Rule based audience list information.&lt;br&gt; This field is optional.&lt;br&gt;*If the audienceListType is RULE, this field is required.&lt;/div&gt; 
@@ -38,38 +40,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceRuleBaseAudienceList.JSON_PROPERTY_RULES,
   AudienceListServiceRuleBaseAudienceList.JSON_PROPERTY_START_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceRuleBaseAudienceList {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_IS_ALL_VISITOR_RULE = "isAllVisitorRule";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsAllVisitorRule isAllVisitorRule;
 
   public static final String JSON_PROPERTY_IS_DATE_SPECIFIC_RULE = "isDateSpecificRule";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsDateSpecificRule isDateSpecificRule;
 
   public static final String JSON_PROPERTY_RULES = "rules";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceRuleGroup> rules;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public AudienceListServiceRuleBaseAudienceList() {
   }
 
-  public AudienceListServiceRuleBaseAudienceList endDate(String endDate) {
+  public AudienceListServiceRuleBaseAudienceList endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用終了日です。&lt;br&gt; ※このフィールドの追加と編集は廃止され、現在設定できません。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of rule setting.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -77,25 +84,24 @@ public class AudienceListServiceRuleBaseAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public AudienceListServiceRuleBaseAudienceList isAllVisitorRule(AudienceListServiceIsAllVisitorRule isAllVisitorRule) {
+  public AudienceListServiceRuleBaseAudienceList isAllVisitorRule(@jakarta.annotation.Nullable AudienceListServiceIsAllVisitorRule isAllVisitorRule) {
     
     this.isAllVisitorRule = isAllVisitorRule;
     return this;
   }
 
-   /**
+  /**
    * Get isAllVisitorRule
    * @return isAllVisitorRule
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_ALL_VISITOR_RULE)
+  @JsonProperty(value = JSON_PROPERTY_IS_ALL_VISITOR_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsAllVisitorRule getIsAllVisitorRule() {
@@ -103,25 +109,24 @@ public class AudienceListServiceRuleBaseAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_ALL_VISITOR_RULE)
+  @JsonProperty(value = JSON_PROPERTY_IS_ALL_VISITOR_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsAllVisitorRule(AudienceListServiceIsAllVisitorRule isAllVisitorRule) {
+  public void setIsAllVisitorRule(@jakarta.annotation.Nullable AudienceListServiceIsAllVisitorRule isAllVisitorRule) {
     this.isAllVisitorRule = isAllVisitorRule;
   }
 
-
-  public AudienceListServiceRuleBaseAudienceList isDateSpecificRule(AudienceListServiceIsDateSpecificRule isDateSpecificRule) {
+  public AudienceListServiceRuleBaseAudienceList isDateSpecificRule(@jakarta.annotation.Nullable AudienceListServiceIsDateSpecificRule isDateSpecificRule) {
     
     this.isDateSpecificRule = isDateSpecificRule;
     return this;
   }
 
-   /**
+  /**
    * Get isDateSpecificRule
    * @return isDateSpecificRule
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_DATE_SPECIFIC_RULE)
+  @JsonProperty(value = JSON_PROPERTY_IS_DATE_SPECIFIC_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsDateSpecificRule getIsDateSpecificRule() {
@@ -129,14 +134,13 @@ public class AudienceListServiceRuleBaseAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_DATE_SPECIFIC_RULE)
+  @JsonProperty(value = JSON_PROPERTY_IS_DATE_SPECIFIC_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsDateSpecificRule(AudienceListServiceIsDateSpecificRule isDateSpecificRule) {
+  public void setIsDateSpecificRule(@jakarta.annotation.Nullable AudienceListServiceIsDateSpecificRule isDateSpecificRule) {
     this.isDateSpecificRule = isDateSpecificRule;
   }
 
-
-  public AudienceListServiceRuleBaseAudienceList rules(List<AudienceListServiceRuleGroup> rules) {
+  public AudienceListServiceRuleBaseAudienceList rules(@jakarta.annotation.Nullable List<AudienceListServiceRuleGroup> rules) {
     
     this.rules = rules;
     return this;
@@ -150,12 +154,12 @@ public class AudienceListServiceRuleBaseAudienceList {
     return this;
   }
 
-   /**
+  /**
    * Get rules
    * @return rules
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULES)
+  @JsonProperty(value = JSON_PROPERTY_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceRuleGroup> getRules() {
@@ -163,25 +167,24 @@ public class AudienceListServiceRuleBaseAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULES)
+  @JsonProperty(value = JSON_PROPERTY_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRules(List<AudienceListServiceRuleGroup> rules) {
+  public void setRules(@jakarta.annotation.Nullable List<AudienceListServiceRuleGroup> rules) {
     this.rules = rules;
   }
 
-
-  public AudienceListServiceRuleBaseAudienceList startDate(String startDate) {
+  public AudienceListServiceRuleBaseAudienceList startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用開始日です。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt;※リクエスト日は2037/12/30まで 指定可能です。&lt;br&gt; ※このフィールドの追加と編集は廃止され、現在設定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of rule setting.&lt;br&gt; *In YYYYMMDD format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *Adding and editing this field is obsolete. Currently not available.&lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -189,11 +192,12 @@ public class AudienceListServiceRuleBaseAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -234,10 +238,7 @@ public class AudienceListServiceRuleBaseAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

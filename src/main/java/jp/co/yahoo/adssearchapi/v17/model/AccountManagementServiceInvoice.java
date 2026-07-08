@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementServiceInvoiceオブジェクトは、後金支払情報を表します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountManagementServiceInvoice object describes the invoice information.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
@@ -31,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountManagementServiceInvoice.JSON_PROPERTY_END_DATE,
   AccountManagementServiceInvoice.JSON_PROPERTY_START_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AccountManagementServiceInvoice {
   public static final String JSON_PROPERTY_BUDGET_AMOUNT = "budgetAmount";
+  @jakarta.annotation.Nullable
   private Long budgetAmount;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public AccountManagementServiceInvoice() {
   }
 
-  public AccountManagementServiceInvoice budgetAmount(Long budgetAmount) {
+  public AccountManagementServiceInvoice budgetAmount(@jakarta.annotation.Nullable Long budgetAmount) {
     
     this.budgetAmount = budgetAmount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;金額です。&lt;br&gt; ※1,000単位、3,000以上999,999,999,999,000以内です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Budget amount.&lt;br&gt; * Amount must be more than 3,000 and less than 999,999,999,999,000. The unit is 1,000.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return budgetAmount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUDGET_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getBudgetAmount() {
@@ -64,25 +68,24 @@ public class AccountManagementServiceInvoice {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUDGET_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBudgetAmount(Long budgetAmount) {
+  public void setBudgetAmount(@jakarta.annotation.Nullable Long budgetAmount) {
     this.budgetAmount = budgetAmount;
   }
 
-
-  public AccountManagementServiceInvoice endDate(String endDate) {
+  public AccountManagementServiceInvoice endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;終了日です。※YYYYMMDD形式です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。その際、ADD時のデフォルト設定値は20371231となり、『設定なし』と同義となります。&lt;br&gt; 20371231を指定した場合も『設定なし』となります。&lt;br&gt;SET時に『設定なし』に設定する場合は、20371231を指定してください。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date (YYYYMMDD).&lt;br&gt; This field is optional in ADD and SET operation. The default value in ADD operation will be 20371231. 20371231 will be considered as \&quot;No setting.\&quot;&lt;br&gt; In order to reset the endDate in SET operation, specify 20371231.&lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -90,25 +93,24 @@ public class AccountManagementServiceInvoice {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public AccountManagementServiceInvoice startDate(String startDate) {
+  public AccountManagementServiceInvoice startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始日です。※YYYYMMDD形式です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。※自動でADD時の日付が登録されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date (YYYYMMDD).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. * This field will be automatically registered in ADD operation.&lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -116,11 +118,12 @@ public class AccountManagementServiceInvoice {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +160,7 @@ public class AccountManagementServiceInvoice {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

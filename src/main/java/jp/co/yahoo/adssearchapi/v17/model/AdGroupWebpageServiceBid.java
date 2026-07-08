@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupWebpageServiceBidSource;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceBidオブジェクトは、入札価格を表示します。 （AdGroupWebpageService用のオブジェクトです。）&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。※ExcludedTypeがINCLUDEDのみ更新可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceBid object describes bid. (Object for AdGroupWebpageService.)&lt;br&gt; This field is optional in ADD and SET operation. *This field can be updated when ExcludedType is &#39;INCLUDED&#39;.&lt;/div&gt; 
@@ -33,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupWebpageServiceBid.JSON_PROPERTY_KEYWORD_CPC,
   AdGroupWebpageServiceBid.JSON_PROPERTY_CPC
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupWebpageServiceBid {
   public static final String JSON_PROPERTY_AD_GROUP_CPC = "adGroupCpc";
+  @jakarta.annotation.Nullable
   private Long adGroupCpc;
 
   public static final String JSON_PROPERTY_BID_SOURCE = "bidSource";
+  @jakarta.annotation.Nullable
   private AdGroupWebpageServiceBidSource bidSource;
 
   public static final String JSON_PROPERTY_KEYWORD_CPC = "keywordCpc";
+  @jakarta.annotation.Nullable
   private Long keywordCpc;
 
   public static final String JSON_PROPERTY_CPC = "cpc";
+  @jakarta.annotation.Nullable
   private Long cpc;
 
   public AdGroupWebpageServiceBid() {
   }
 
-  public AdGroupWebpageServiceBid adGroupCpc(Long adGroupCpc) {
+  public AdGroupWebpageServiceBid adGroupCpc(@jakarta.annotation.Nullable Long adGroupCpc) {
     
     this.adGroupCpc = adGroupCpc;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループの最大入札価格です。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Max bid of ad group.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return adGroupCpc
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_CPC)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupCpc() {
@@ -69,25 +74,24 @@ public class AdGroupWebpageServiceBid {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_CPC)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupCpc(Long adGroupCpc) {
+  public void setAdGroupCpc(@jakarta.annotation.Nullable Long adGroupCpc) {
     this.adGroupCpc = adGroupCpc;
   }
 
-
-  public AdGroupWebpageServiceBid bidSource(AdGroupWebpageServiceBidSource bidSource) {
+  public AdGroupWebpageServiceBid bidSource(@jakarta.annotation.Nullable AdGroupWebpageServiceBidSource bidSource) {
     
     this.bidSource = bidSource;
     return this;
   }
 
-   /**
+  /**
    * Get bidSource
    * @return bidSource
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_BID_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupWebpageServiceBidSource getBidSource() {
@@ -95,25 +99,24 @@ public class AdGroupWebpageServiceBid {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_BID_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidSource(AdGroupWebpageServiceBidSource bidSource) {
+  public void setBidSource(@jakarta.annotation.Nullable AdGroupWebpageServiceBidSource bidSource) {
     this.bidSource = bidSource;
   }
 
-
-  public AdGroupWebpageServiceBid keywordCpc(Long keywordCpc) {
+  public AdGroupWebpageServiceBid keywordCpc(@jakarta.annotation.Nullable Long keywordCpc) {
     
     this.keywordCpc = keywordCpc;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードの最大入札価格です。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Max bid of keyword.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return keywordCpc
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_CPC)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getKeywordCpc() {
@@ -121,25 +124,24 @@ public class AdGroupWebpageServiceBid {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_CPC)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordCpc(Long keywordCpc) {
+  public void setKeywordCpc(@jakarta.annotation.Nullable Long keywordCpc) {
     this.keywordCpc = keywordCpc;
   }
 
-
-  public AdGroupWebpageServiceBid cpc(Long cpc) {
+  public AdGroupWebpageServiceBid cpc(@jakarta.annotation.Nullable Long cpc) {
     
     this.cpc = cpc;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最大入札価格です。&lt;br&gt;ADD時、このフィールドは省略可能となります。その際、デフォルト値は1となります。SET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Max bid.&lt;br&gt;This field is optional in ADD and SET operation. The default value in ADD operation will be 1.&lt;/div&gt; 
    * @return cpc
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPC)
+  @JsonProperty(value = JSON_PROPERTY_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCpc() {
@@ -147,11 +149,12 @@ public class AdGroupWebpageServiceBid {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPC)
+  @JsonProperty(value = JSON_PROPERTY_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpc(Long cpc) {
+  public void setCpc(@jakarta.annotation.Nullable Long cpc) {
     this.cpc = cpc;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +193,7 @@ public class AdGroupWebpageServiceBid {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

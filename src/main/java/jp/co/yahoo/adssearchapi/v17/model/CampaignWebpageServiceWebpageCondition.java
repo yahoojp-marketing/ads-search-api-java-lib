@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adssearchapi.v17.model.CampaignWebpageServiceWebpageCondition
 import jp.co.yahoo.adssearchapi.v17.model.CampaignWebpageServiceWebpageOperator;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignWebpageServiceWebpageConditionオブジェクトは、Webpageの条件を保持します。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignWebpageServiceWebpageCondition object contains the rules of webpage.&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
@@ -33,32 +34,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignWebpageServiceWebpageCondition.JSON_PROPERTY_TYPE,
   CampaignWebpageServiceWebpageCondition.JSON_PROPERTY_OPERATOR
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignWebpageServiceWebpageCondition {
   public static final String JSON_PROPERTY_ARGUMENT = "argument";
+  @jakarta.annotation.Nullable
   private String argument;
 
   public static final String JSON_PROPERTY_TYPE = "type";
+  @jakarta.annotation.Nullable
   private CampaignWebpageServiceWebpageConditionType type;
 
   public static final String JSON_PROPERTY_OPERATOR = "operator";
+  @jakarta.annotation.Nullable
   private CampaignWebpageServiceWebpageOperator operator;
 
   public CampaignWebpageServiceWebpageCondition() {
   }
 
-  public CampaignWebpageServiceWebpageCondition argument(String argument) {
+  public CampaignWebpageServiceWebpageCondition argument(@jakarta.annotation.Nullable String argument) {
     
     this.argument = argument;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件の設定値です。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of rule setting.&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return argument
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ARGUMENT)
+  @JsonProperty(value = JSON_PROPERTY_ARGUMENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getArgument() {
@@ -66,25 +70,24 @@ public class CampaignWebpageServiceWebpageCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ARGUMENT)
+  @JsonProperty(value = JSON_PROPERTY_ARGUMENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setArgument(String argument) {
+  public void setArgument(@jakarta.annotation.Nullable String argument) {
     this.argument = argument;
   }
 
-
-  public CampaignWebpageServiceWebpageCondition type(CampaignWebpageServiceWebpageConditionType type) {
+  public CampaignWebpageServiceWebpageCondition type(@jakarta.annotation.Nullable CampaignWebpageServiceWebpageConditionType type) {
     
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignWebpageServiceWebpageConditionType getType() {
@@ -92,25 +95,24 @@ public class CampaignWebpageServiceWebpageCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(CampaignWebpageServiceWebpageConditionType type) {
+  public void setType(@jakarta.annotation.Nullable CampaignWebpageServiceWebpageConditionType type) {
     this.type = type;
   }
 
-
-  public CampaignWebpageServiceWebpageCondition operator(CampaignWebpageServiceWebpageOperator operator) {
+  public CampaignWebpageServiceWebpageCondition operator(@jakarta.annotation.Nullable CampaignWebpageServiceWebpageOperator operator) {
     
     this.operator = operator;
     return this;
   }
 
-   /**
+  /**
    * Get operator
    * @return operator
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignWebpageServiceWebpageOperator getOperator() {
@@ -118,11 +120,12 @@ public class CampaignWebpageServiceWebpageCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOperator(CampaignWebpageServiceWebpageOperator operator) {
+  public void setOperator(@jakarta.annotation.Nullable CampaignWebpageServiceWebpageOperator operator) {
     this.operator = operator;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -159,10 +162,7 @@ public class CampaignWebpageServiceWebpageCondition {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

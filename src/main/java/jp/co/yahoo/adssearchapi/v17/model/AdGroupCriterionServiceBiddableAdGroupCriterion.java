@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupCriterionServiceApprovalStatus;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupCriterionServiceBid;
@@ -28,6 +29,7 @@ import jp.co.yahoo.adssearchapi.v17.model.AdGroupCriterionServiceCustomParameter
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupCriterionServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceBiddableAdGroupCriterionオブジェクトは、広告グループの単価設定可能（包含）クライテリアです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceBiddableAdGroupCriterion object displays biddable criterion in ad group.&lt;/div&gt; 
@@ -48,65 +50,79 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupCriterionServiceBiddableAdGroupCriterion.JSON_PROPERTY_TRACKING_URL,
   AdGroupCriterionServiceBiddableAdGroupCriterion.JSON_PROPERTY_USER_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   public static final String JSON_PROPERTY_SMARTPHONE_FINAL_URL = "smartphoneFinalUrl";
+  @jakarta.annotation.Nullable
   private String smartphoneFinalUrl;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
+  @jakarta.annotation.Nullable
   private String finalUrl;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_BID = "bid";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceBid bid;
 
   public static final String JSON_PROPERTY_CUSTOM_PARAMETERS = "customParameters";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceCustomParameters customParameters;
 
   public static final String JSON_PROPERTY_DESTINATION_URL = "destinationUrl";
+  @jakarta.annotation.Nullable
   private String destinationUrl;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL = "reviewSmartphoneFinalUrl";
+  @jakarta.annotation.Nullable
   private String reviewSmartphoneFinalUrl;
 
   public static final String JSON_PROPERTY_REVIEW_FINAL_URL = "reviewFinalUrl";
+  @jakarta.annotation.Nullable
   private String reviewFinalUrl;
 
   public static final String JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS = "reviewCustomParameters";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceCustomParameters reviewCustomParameters;
 
   public static final String JSON_PROPERTY_REVIEW_DESTINATION_URL = "reviewDestinationUrl";
+  @jakarta.annotation.Nullable
   private String reviewDestinationUrl;
 
   public static final String JSON_PROPERTY_REVIEW_TRACKING_URL = "reviewTrackingUrl";
+  @jakarta.annotation.Nullable
   private String reviewTrackingUrl;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
+  @jakarta.annotation.Nullable
   private String trackingUrl;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceUserStatus userStatus;
 
   public AdGroupCriterionServiceBiddableAdGroupCriterion() {
   }
 
-  public AdGroupCriterionServiceBiddableAdGroupCriterion smartphoneFinalUrl(String smartphoneFinalUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion smartphoneFinalUrl(@jakarta.annotation.Nullable String smartphoneFinalUrl) {
     
     this.smartphoneFinalUrl = smartphoneFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URL（スマートフォン）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※空で設定すると、既存の最終リンク先URL（スマートフォン）は削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded final URL (Smartphone).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *When tag is set blank, existing upgraded Final URL (Smartphone) will be deleted.&lt;/div&gt; 
    * @return smartphoneFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSmartphoneFinalUrl() {
@@ -114,25 +130,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartphoneFinalUrl(String smartphoneFinalUrl) {
+  public void setSmartphoneFinalUrl(@jakarta.annotation.Nullable String smartphoneFinalUrl) {
     this.smartphoneFinalUrl = smartphoneFinalUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion finalUrl(String finalUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion finalUrl(@jakarta.annotation.Nullable String finalUrl) {
     
     this.finalUrl = finalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行後の最終リンク先URLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。※ADD時、移行してtracking Urlを指定している場合は必須となります。&lt;br&gt; ※空で設定すると、既存の移行後の最終リンク先URLは削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded final URL.&lt;br&gt; This field is optional in ADD and SET operation. *If upgraded and tracking Url is specified, it is required in ADD operation.&lt;br&gt; *When this is set blank, existing upgraded Final URL will be deleted.&lt;/div&gt; 
    * @return finalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFinalUrl() {
@@ -140,25 +155,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFinalUrl(String finalUrl) {
+  public void setFinalUrl(@jakarta.annotation.Nullable String finalUrl) {
     this.finalUrl = finalUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion approvalStatus(AdGroupCriterionServiceApprovalStatus approvalStatus) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion approvalStatus(@jakarta.annotation.Nullable AdGroupCriterionServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceApprovalStatus getApprovalStatus() {
@@ -166,25 +180,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(AdGroupCriterionServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable AdGroupCriterionServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion bid(AdGroupCriterionServiceBid bid) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion bid(@jakarta.annotation.Nullable AdGroupCriterionServiceBid bid) {
     
     this.bid = bid;
     return this;
   }
 
-   /**
+  /**
    * Get bid
    * @return bid
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID)
+  @JsonProperty(value = JSON_PROPERTY_BID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceBid getBid() {
@@ -192,25 +205,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID)
+  @JsonProperty(value = JSON_PROPERTY_BID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBid(AdGroupCriterionServiceBid bid) {
+  public void setBid(@jakarta.annotation.Nullable AdGroupCriterionServiceBid bid) {
     this.bid = bid;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion customParameters(AdGroupCriterionServiceCustomParameters customParameters) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion customParameters(@jakarta.annotation.Nullable AdGroupCriterionServiceCustomParameters customParameters) {
     
     this.customParameters = customParameters;
     return this;
   }
 
-   /**
+  /**
    * Get customParameters
    * @return customParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceCustomParameters getCustomParameters() {
@@ -218,25 +230,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomParameters(AdGroupCriterionServiceCustomParameters customParameters) {
+  public void setCustomParameters(@jakarta.annotation.Nullable AdGroupCriterionServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion destinationUrl(String destinationUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion destinationUrl(@jakarta.annotation.Nullable String destinationUrl) {
     
     this.destinationUrl = destinationUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行前のカスタムURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※空で設定すると、既存の移行前のカスタムURLは削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom URL of before upgrading.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *When tag is set blank, existing Custom URL before upgrade will be deleted.&lt;/div&gt; 
    * @return destinationUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESTINATION_URL)
+  @JsonProperty(value = JSON_PROPERTY_DESTINATION_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDestinationUrl() {
@@ -244,14 +255,13 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESTINATION_URL)
+  @JsonProperty(value = JSON_PROPERTY_DESTINATION_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDestinationUrl(String destinationUrl) {
+  public void setDestinationUrl(@jakarta.annotation.Nullable String destinationUrl) {
     this.destinationUrl = destinationUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -265,12 +275,12 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認コードです。&lt;br&gt; (コード詳細は、DictionaryServiceのgetDisapprovalReasonのレスポンスを参照)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Code of disapproval reason.&lt;br&gt; (Refer to DictionaryService getDisapprovalReason response for details)&lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -278,25 +288,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewSmartphoneFinalUrl(String reviewSmartphoneFinalUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewSmartphoneFinalUrl(@jakarta.annotation.Nullable String reviewSmartphoneFinalUrl) {
     
     this.reviewSmartphoneFinalUrl = reviewSmartphoneFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信審査中の最終リンク先URL（スマートフォン）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded final URL (Smartphone), in review.&lt;/div&gt; 
    * @return reviewSmartphoneFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewSmartphoneFinalUrl() {
@@ -304,25 +313,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewSmartphoneFinalUrl(String reviewSmartphoneFinalUrl) {
+  public void setReviewSmartphoneFinalUrl(@jakarta.annotation.Nullable String reviewSmartphoneFinalUrl) {
     this.reviewSmartphoneFinalUrl = reviewSmartphoneFinalUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewFinalUrl(String reviewFinalUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewFinalUrl(@jakarta.annotation.Nullable String reviewFinalUrl) {
     
     this.reviewFinalUrl = reviewFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行後の配信審査中の最終リンク先URLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upgraded final URL, in review.&lt;/div&gt; 
    * @return reviewFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewFinalUrl() {
@@ -330,25 +338,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewFinalUrl(String reviewFinalUrl) {
+  public void setReviewFinalUrl(@jakarta.annotation.Nullable String reviewFinalUrl) {
     this.reviewFinalUrl = reviewFinalUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewCustomParameters(AdGroupCriterionServiceCustomParameters reviewCustomParameters) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewCustomParameters(@jakarta.annotation.Nullable AdGroupCriterionServiceCustomParameters reviewCustomParameters) {
     
     this.reviewCustomParameters = reviewCustomParameters;
     return this;
   }
 
-   /**
+  /**
    * Get reviewCustomParameters
    * @return reviewCustomParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceCustomParameters getReviewCustomParameters() {
@@ -356,25 +363,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewCustomParameters(AdGroupCriterionServiceCustomParameters reviewCustomParameters) {
+  public void setReviewCustomParameters(@jakarta.annotation.Nullable AdGroupCriterionServiceCustomParameters reviewCustomParameters) {
     this.reviewCustomParameters = reviewCustomParameters;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewDestinationUrl(String reviewDestinationUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewDestinationUrl(@jakarta.annotation.Nullable String reviewDestinationUrl) {
     
     this.reviewDestinationUrl = reviewDestinationUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;移行前の配信審査中のカスタムURLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom URL of before upgrading, in review.&lt;/div&gt; 
    * @return reviewDestinationUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_DESTINATION_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_DESTINATION_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewDestinationUrl() {
@@ -382,25 +388,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_DESTINATION_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_DESTINATION_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewDestinationUrl(String reviewDestinationUrl) {
+  public void setReviewDestinationUrl(@jakarta.annotation.Nullable String reviewDestinationUrl) {
     this.reviewDestinationUrl = reviewDestinationUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewTrackingUrl(String reviewTrackingUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion reviewTrackingUrl(@jakarta.annotation.Nullable String reviewTrackingUrl) {
     
     this.reviewTrackingUrl = reviewTrackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信審査中のトラッキングURLです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL, in review.&lt;/div&gt; 
    * @return reviewTrackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewTrackingUrl() {
@@ -408,25 +413,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewTrackingUrl(String reviewTrackingUrl) {
+  public void setReviewTrackingUrl(@jakarta.annotation.Nullable String reviewTrackingUrl) {
     this.reviewTrackingUrl = reviewTrackingUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion trackingUrl(String trackingUrl) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion trackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     
     this.trackingUrl = trackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※空で設定すると、既存のトラッキングURLは削除されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *When tag is set blank, existing Tracking URL will be deleted.&lt;/div&gt; 
    * @return trackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingUrl() {
@@ -434,25 +438,24 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingUrl(String trackingUrl) {
+  public void setTrackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
-
-  public AdGroupCriterionServiceBiddableAdGroupCriterion userStatus(AdGroupCriterionServiceUserStatus userStatus) {
+  public AdGroupCriterionServiceBiddableAdGroupCriterion userStatus(@jakarta.annotation.Nullable AdGroupCriterionServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceUserStatus getUserStatus() {
@@ -460,11 +463,12 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(AdGroupCriterionServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable AdGroupCriterionServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -523,10 +527,7 @@ public class AdGroupCriterionServiceBiddableAdGroupCriterion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

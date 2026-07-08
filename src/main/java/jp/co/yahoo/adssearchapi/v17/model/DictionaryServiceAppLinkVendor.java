@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceAppLinkVendor オブジェクトは、 アプリ計測ベンダー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceAppLinkVendor object is a container that stores App measurement vendor information.&lt;/div&gt; 
@@ -31,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceAppLinkVendor.JSON_PROPERTY_APP_VENDOR_NAME_JA,
   DictionaryServiceAppLinkVendor.JSON_PROPERTY_APP_VENDOR_NAME_EN
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class DictionaryServiceAppLinkVendor {
   public static final String JSON_PROPERTY_APP_VENDOR_ID = "appVendorId";
+  @jakarta.annotation.Nullable
   private String appVendorId;
 
   public static final String JSON_PROPERTY_APP_VENDOR_NAME_JA = "appVendorNameJa";
+  @jakarta.annotation.Nullable
   private String appVendorNameJa;
 
   public static final String JSON_PROPERTY_APP_VENDOR_NAME_EN = "appVendorNameEn";
+  @jakarta.annotation.Nullable
   private String appVendorNameEn;
 
   public DictionaryServiceAppLinkVendor() {
   }
 
-  public DictionaryServiceAppLinkVendor appVendorId(String appVendorId) {
+  public DictionaryServiceAppLinkVendor appVendorId(@jakarta.annotation.Nullable String appVendorId) {
     
     this.appVendorId = appVendorId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダーIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App vendor ID.&lt;/div&gt; 
    * @return appVendorId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppVendorId() {
@@ -64,25 +68,24 @@ public class DictionaryServiceAppLinkVendor {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppVendorId(String appVendorId) {
+  public void setAppVendorId(@jakarta.annotation.Nullable String appVendorId) {
     this.appVendorId = appVendorId;
   }
 
-
-  public DictionaryServiceAppLinkVendor appVendorNameJa(String appVendorNameJa) {
+  public DictionaryServiceAppLinkVendor appVendorNameJa(@jakarta.annotation.Nullable String appVendorNameJa) {
     
     this.appVendorNameJa = appVendorNameJa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー名（日本語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App vendor name in Japanese.&lt;/div&gt; 
    * @return appVendorNameJa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppVendorNameJa() {
@@ -90,25 +93,24 @@ public class DictionaryServiceAppLinkVendor {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppVendorNameJa(String appVendorNameJa) {
+  public void setAppVendorNameJa(@jakarta.annotation.Nullable String appVendorNameJa) {
     this.appVendorNameJa = appVendorNameJa;
   }
 
-
-  public DictionaryServiceAppLinkVendor appVendorNameEn(String appVendorNameEn) {
+  public DictionaryServiceAppLinkVendor appVendorNameEn(@jakarta.annotation.Nullable String appVendorNameEn) {
     
     this.appVendorNameEn = appVendorNameEn;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー名（英語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App vendor name in English.&lt;/div&gt; 
    * @return appVendorNameEn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppVendorNameEn() {
@@ -116,11 +118,12 @@ public class DictionaryServiceAppLinkVendor {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppVendorNameEn(String appVendorNameEn) {
+  public void setAppVendorNameEn(@jakarta.annotation.Nullable String appVendorNameEn) {
     this.appVendorNameEn = appVendorNameEn;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +160,7 @@ public class DictionaryServiceAppLinkVendor {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

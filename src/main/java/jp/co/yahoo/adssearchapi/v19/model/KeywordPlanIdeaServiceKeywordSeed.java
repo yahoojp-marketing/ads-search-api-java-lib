@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,9 +21,11 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaServiceKeywordSeedオブジェクトは、キーワード候補作成条件としてキーワードを指定するオブジェクトです。&lt;br&gt;seedTypeが&lt;code&gt;KEYWORD&lt;/code&gt;の場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;KeywordPlanIdeaServiceKeywordSeed object is for specifying keywords as related keywords creation conditions.&lt;br&gt;If seedType is &lt;code&gt;KEYWORD&lt;/code&gt;, this field is required.&lt;/div&gt; 
@@ -31,15 +33,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   KeywordPlanIdeaServiceKeywordSeed.JSON_PROPERTY_KEYWORDS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class KeywordPlanIdeaServiceKeywordSeed {
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
+  @jakarta.annotation.Nullable
   private List<String> keywords;
 
   public KeywordPlanIdeaServiceKeywordSeed() {
   }
 
-  public KeywordPlanIdeaServiceKeywordSeed keywords(List<String> keywords) {
+  public KeywordPlanIdeaServiceKeywordSeed keywords(@jakarta.annotation.Nullable List<String> keywords) {
     
     this.keywords = keywords;
     return this;
@@ -53,12 +56,12 @@ public class KeywordPlanIdeaServiceKeywordSeed {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Keyword.&lt;/div&gt; 
    * @return keywords
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getKeywords() {
@@ -66,11 +69,12 @@ public class KeywordPlanIdeaServiceKeywordSeed {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywords(List<String> keywords) {
+  public void setKeywords(@jakarta.annotation.Nullable List<String> keywords) {
     this.keywords = keywords;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -103,10 +107,7 @@ public class KeywordPlanIdeaServiceKeywordSeed {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

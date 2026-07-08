@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -26,6 +26,7 @@ import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceRuleType;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceUrlRuleItem;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceRuleItemは、ルールの評価条件を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceRuleItem is an object that holds evaluation condition of rule.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
@@ -37,38 +38,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceRuleItem.JSON_PROPERTY_URL_RULE_ITEM,
   AudienceListServiceRuleItem.JSON_PROPERTY_VALUE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceRuleItem {
   public static final String JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM = "customKeyRuleItem";
+  @jakarta.annotation.Nullable
   private AudienceListServiceCustomKeyRuleItem customKeyRuleItem;
 
   public static final String JSON_PROPERTY_RULE_OPERATOR = "ruleOperator";
+  @jakarta.annotation.Nullable
   private AudienceListServiceRuleOperator ruleOperator;
 
   public static final String JSON_PROPERTY_RULE_TYPE = "ruleType";
+  @jakarta.annotation.Nullable
   private AudienceListServiceRuleType ruleType;
 
   public static final String JSON_PROPERTY_URL_RULE_ITEM = "urlRuleItem";
+  @jakarta.annotation.Nullable
   private AudienceListServiceUrlRuleItem urlRuleItem;
 
   public static final String JSON_PROPERTY_VALUE = "value";
+  @jakarta.annotation.Nullable
   private String value;
 
   public AudienceListServiceRuleItem() {
   }
 
-  public AudienceListServiceRuleItem customKeyRuleItem(AudienceListServiceCustomKeyRuleItem customKeyRuleItem) {
+  public AudienceListServiceRuleItem customKeyRuleItem(@jakarta.annotation.Nullable AudienceListServiceCustomKeyRuleItem customKeyRuleItem) {
     
     this.customKeyRuleItem = customKeyRuleItem;
     return this;
   }
 
-   /**
+  /**
    * Get customKeyRuleItem
    * @return customKeyRuleItem
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceCustomKeyRuleItem getCustomKeyRuleItem() {
@@ -76,25 +82,24 @@ public class AudienceListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomKeyRuleItem(AudienceListServiceCustomKeyRuleItem customKeyRuleItem) {
+  public void setCustomKeyRuleItem(@jakarta.annotation.Nullable AudienceListServiceCustomKeyRuleItem customKeyRuleItem) {
     this.customKeyRuleItem = customKeyRuleItem;
   }
 
-
-  public AudienceListServiceRuleItem ruleOperator(AudienceListServiceRuleOperator ruleOperator) {
+  public AudienceListServiceRuleItem ruleOperator(@jakarta.annotation.Nullable AudienceListServiceRuleOperator ruleOperator) {
     
     this.ruleOperator = ruleOperator;
     return this;
   }
 
-   /**
+  /**
    * Get ruleOperator
    * @return ruleOperator
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_RULE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceRuleOperator getRuleOperator() {
@@ -102,25 +107,24 @@ public class AudienceListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_RULE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleOperator(AudienceListServiceRuleOperator ruleOperator) {
+  public void setRuleOperator(@jakarta.annotation.Nullable AudienceListServiceRuleOperator ruleOperator) {
     this.ruleOperator = ruleOperator;
   }
 
-
-  public AudienceListServiceRuleItem ruleType(AudienceListServiceRuleType ruleType) {
+  public AudienceListServiceRuleItem ruleType(@jakarta.annotation.Nullable AudienceListServiceRuleType ruleType) {
     
     this.ruleType = ruleType;
     return this;
   }
 
-   /**
+  /**
    * Get ruleType
    * @return ruleType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceRuleType getRuleType() {
@@ -128,25 +132,24 @@ public class AudienceListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleType(AudienceListServiceRuleType ruleType) {
+  public void setRuleType(@jakarta.annotation.Nullable AudienceListServiceRuleType ruleType) {
     this.ruleType = ruleType;
   }
 
-
-  public AudienceListServiceRuleItem urlRuleItem(AudienceListServiceUrlRuleItem urlRuleItem) {
+  public AudienceListServiceRuleItem urlRuleItem(@jakarta.annotation.Nullable AudienceListServiceUrlRuleItem urlRuleItem) {
     
     this.urlRuleItem = urlRuleItem;
     return this;
   }
 
-   /**
+  /**
    * Get urlRuleItem
    * @return urlRuleItem
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceUrlRuleItem getUrlRuleItem() {
@@ -154,25 +157,24 @@ public class AudienceListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlRuleItem(AudienceListServiceUrlRuleItem urlRuleItem) {
+  public void setUrlRuleItem(@jakarta.annotation.Nullable AudienceListServiceUrlRuleItem urlRuleItem) {
     this.urlRuleItem = urlRuleItem;
   }
 
-
-  public AudienceListServiceRuleItem value(String value) {
+  public AudienceListServiceRuleItem value(@jakarta.annotation.Nullable String value) {
     
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;評価値です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; ※括弧（()）、シングルクォート（&amp;#39;）、ダブルクォート（&amp;#34;）、タブ（\\t）は利用できません。&lt;br&gt; ※250文字まで指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Evaluation value.&lt;br&gt; *Cannot use: bracket, single quote, double quote, and tab.&lt;br&gt; *Can select up to 250 characters.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return value
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getValue() {
@@ -180,11 +182,12 @@ public class AudienceListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValue(String value) {
+  public void setValue(@jakarta.annotation.Nullable String value) {
     this.value = value;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -225,10 +228,7 @@ public class AudienceListServiceRuleItem {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

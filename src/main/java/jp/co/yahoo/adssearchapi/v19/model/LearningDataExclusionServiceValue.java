@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.Error;
 import jp.co.yahoo.adssearchapi.v19.model.LearningDataExclusion;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;LearningDataExclusionServiceValueオブジェクトは、操作結果を含む自動入札の学習データ除外の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;LearningDataExclusionServiceValue object is learning data exclusion for autobidding information including its operation results.&lt;/div&gt; 
@@ -35,32 +37,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   LearningDataExclusionServiceValue.JSON_PROPERTY_ERRORS,
   LearningDataExclusionServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class LearningDataExclusionServiceValue {
   public static final String JSON_PROPERTY_LEARNING_DATA_EXCLUSION = "learningDataExclusion";
+  @jakarta.annotation.Nullable
   private LearningDataExclusion learningDataExclusion;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
+  @jakarta.annotation.Nullable
   private Boolean operationSucceeded;
 
   public LearningDataExclusionServiceValue() {
   }
 
-  public LearningDataExclusionServiceValue learningDataExclusion(LearningDataExclusion learningDataExclusion) {
+  public LearningDataExclusionServiceValue learningDataExclusion(@jakarta.annotation.Nullable LearningDataExclusion learningDataExclusion) {
     
     this.learningDataExclusion = learningDataExclusion;
     return this;
   }
 
-   /**
+  /**
    * Get learningDataExclusion
    * @return learningDataExclusion
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LEARNING_DATA_EXCLUSION)
+  @JsonProperty(value = JSON_PROPERTY_LEARNING_DATA_EXCLUSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public LearningDataExclusion getLearningDataExclusion() {
@@ -68,14 +73,13 @@ public class LearningDataExclusionServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LEARNING_DATA_EXCLUSION)
+  @JsonProperty(value = JSON_PROPERTY_LEARNING_DATA_EXCLUSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLearningDataExclusion(LearningDataExclusion learningDataExclusion) {
+  public void setLearningDataExclusion(@jakarta.annotation.Nullable LearningDataExclusion learningDataExclusion) {
     this.learningDataExclusion = learningDataExclusion;
   }
 
-
-  public LearningDataExclusionServiceValue errors(List<Error> errors) {
+  public LearningDataExclusionServiceValue errors(@jakarta.annotation.Nullable List<Error> errors) {
     
     this.errors = errors;
     return this;
@@ -89,12 +93,12 @@ public class LearningDataExclusionServiceValue {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Error> getErrors() {
@@ -102,25 +106,24 @@ public class LearningDataExclusionServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<Error> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<Error> errors) {
     this.errors = errors;
   }
 
-
-  public LearningDataExclusionServiceValue operationSucceeded(Boolean operationSucceeded) {
+  public LearningDataExclusionServiceValue operationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     
     this.operationSucceeded = operationSucceeded;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果を表示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Result of process.&lt;/div&gt; 
    * @return operationSucceeded
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getOperationSucceeded() {
@@ -128,11 +131,12 @@ public class LearningDataExclusionServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOperationSucceeded(Boolean operationSucceeded) {
+  public void setOperationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +173,7 @@ public class LearningDataExclusionServiceValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

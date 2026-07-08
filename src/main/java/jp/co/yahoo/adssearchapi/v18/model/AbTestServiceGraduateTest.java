@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v18.model.AbTestServiceBudget;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AbTestServiceGraduateTestオブジェクトは、A/Bテストキャンペーンに適用する設定情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AbTestServiceGraduateTest object describes configuration information between Apply to the campaign used for the A/B test.&lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AbTestServiceGraduateTest.JSON_PROPERTY_AB_TEST_ID,
   AbTestServiceGraduateTest.JSON_PROPERTY_BUDGET
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AbTestServiceGraduateTest {
   public static final String JSON_PROPERTY_AB_TEST_ID = "abTestId";
+  @jakarta.annotation.Nullable
   private Long abTestId;
 
   public static final String JSON_PROPERTY_BUDGET = "budget";
+  @jakarta.annotation.Nullable
   private AbTestServiceBudget budget;
 
   public AbTestServiceGraduateTest() {
   }
 
-  public AbTestServiceGraduateTest abTestId(Long abTestId) {
+  public AbTestServiceGraduateTest abTestId(@jakarta.annotation.Nullable Long abTestId) {
     
     this.abTestId = abTestId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;A/BテストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A/B test ID.&lt;/div&gt; 
    * @return abTestId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AB_TEST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AB_TEST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAbTestId() {
@@ -61,25 +64,24 @@ public class AbTestServiceGraduateTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AB_TEST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AB_TEST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAbTestId(Long abTestId) {
+  public void setAbTestId(@jakarta.annotation.Nullable Long abTestId) {
     this.abTestId = abTestId;
   }
 
-
-  public AbTestServiceGraduateTest budget(AbTestServiceBudget budget) {
+  public AbTestServiceGraduateTest budget(@jakarta.annotation.Nullable AbTestServiceBudget budget) {
     
     this.budget = budget;
     return this;
   }
 
-   /**
+  /**
    * Get budget
    * @return budget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceBudget getBudget() {
@@ -87,11 +89,12 @@ public class AbTestServiceGraduateTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBudget(AbTestServiceBudget budget) {
+  public void setBudget(@jakarta.annotation.Nullable AbTestServiceBudget budget) {
     this.budget = budget;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class AbTestServiceGraduateTest {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

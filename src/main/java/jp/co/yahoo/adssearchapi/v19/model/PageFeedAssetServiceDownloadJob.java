@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -26,6 +26,7 @@ import jp.co.yahoo.adssearchapi.v19.model.PageFeedAssetServiceBulkOutput;
 import jp.co.yahoo.adssearchapi.v19.model.PageFeedAssetServiceDownloadJobStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServiceDownloadJobオブジェクトは、ページフィードアセット情報をダウンロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServiceDownloadJob object retains contents of page feed asset information for download.&lt;/div&gt; 
@@ -42,53 +43,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedAssetServiceDownloadJob.JSON_PROPERTY_PROGRESS,
   PageFeedAssetServiceDownloadJob.JSON_PROPERTY_START_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PageFeedAssetServiceDownloadJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_BULK_ENCODING = "bulkEncoding";
+  @jakarta.annotation.Nullable
   private PageFeedAssetServiceBulkEncoding bulkEncoding;
 
   public static final String JSON_PROPERTY_BULK_LANG = "bulkLang";
+  @jakarta.annotation.Nullable
   private PageFeedAssetServiceBulkLang bulkLang;
 
   public static final String JSON_PROPERTY_BULK_OUTPUT = "bulkOutput";
+  @jakarta.annotation.Nullable
   private PageFeedAssetServiceBulkOutput bulkOutput;
 
   public static final String JSON_PROPERTY_DOWNLOAD_JOB_STATUS = "downloadJobStatus";
+  @jakarta.annotation.Nullable
   private PageFeedAssetServiceDownloadJobStatus downloadJobStatus;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID = "pageFeedAssetSetId";
+  @jakarta.annotation.Nullable
   private Long pageFeedAssetSetId;
 
   public static final String JSON_PROPERTY_JOB_ID = "jobId";
+  @jakarta.annotation.Nullable
   private Long jobId;
 
   public static final String JSON_PROPERTY_PROGRESS = "progress";
+  @jakarta.annotation.Nullable
   private Integer progress;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public PageFeedAssetServiceDownloadJob() {
   }
 
-  public PageFeedAssetServiceDownloadJob accountId(Long accountId) {
+  public PageFeedAssetServiceDownloadJob accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -96,25 +107,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public PageFeedAssetServiceDownloadJob bulkEncoding(PageFeedAssetServiceBulkEncoding bulkEncoding) {
+  public PageFeedAssetServiceDownloadJob bulkEncoding(@jakarta.annotation.Nullable PageFeedAssetServiceBulkEncoding bulkEncoding) {
     
     this.bulkEncoding = bulkEncoding;
     return this;
   }
 
-   /**
+  /**
    * Get bulkEncoding
    * @return bulkEncoding
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BULK_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_BULK_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PageFeedAssetServiceBulkEncoding getBulkEncoding() {
@@ -122,25 +132,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BULK_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_BULK_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBulkEncoding(PageFeedAssetServiceBulkEncoding bulkEncoding) {
+  public void setBulkEncoding(@jakarta.annotation.Nullable PageFeedAssetServiceBulkEncoding bulkEncoding) {
     this.bulkEncoding = bulkEncoding;
   }
 
-
-  public PageFeedAssetServiceDownloadJob bulkLang(PageFeedAssetServiceBulkLang bulkLang) {
+  public PageFeedAssetServiceDownloadJob bulkLang(@jakarta.annotation.Nullable PageFeedAssetServiceBulkLang bulkLang) {
     
     this.bulkLang = bulkLang;
     return this;
   }
 
-   /**
+  /**
    * Get bulkLang
    * @return bulkLang
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BULK_LANG)
+  @JsonProperty(value = JSON_PROPERTY_BULK_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PageFeedAssetServiceBulkLang getBulkLang() {
@@ -148,25 +157,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BULK_LANG)
+  @JsonProperty(value = JSON_PROPERTY_BULK_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBulkLang(PageFeedAssetServiceBulkLang bulkLang) {
+  public void setBulkLang(@jakarta.annotation.Nullable PageFeedAssetServiceBulkLang bulkLang) {
     this.bulkLang = bulkLang;
   }
 
-
-  public PageFeedAssetServiceDownloadJob bulkOutput(PageFeedAssetServiceBulkOutput bulkOutput) {
+  public PageFeedAssetServiceDownloadJob bulkOutput(@jakarta.annotation.Nullable PageFeedAssetServiceBulkOutput bulkOutput) {
     
     this.bulkOutput = bulkOutput;
     return this;
   }
 
-   /**
+  /**
    * Get bulkOutput
    * @return bulkOutput
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BULK_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_BULK_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PageFeedAssetServiceBulkOutput getBulkOutput() {
@@ -174,25 +182,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BULK_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_BULK_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBulkOutput(PageFeedAssetServiceBulkOutput bulkOutput) {
+  public void setBulkOutput(@jakarta.annotation.Nullable PageFeedAssetServiceBulkOutput bulkOutput) {
     this.bulkOutput = bulkOutput;
   }
 
-
-  public PageFeedAssetServiceDownloadJob downloadJobStatus(PageFeedAssetServiceDownloadJobStatus downloadJobStatus) {
+  public PageFeedAssetServiceDownloadJob downloadJobStatus(@jakarta.annotation.Nullable PageFeedAssetServiceDownloadJobStatus downloadJobStatus) {
     
     this.downloadJobStatus = downloadJobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get downloadJobStatus
    * @return downloadJobStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DOWNLOAD_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DOWNLOAD_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PageFeedAssetServiceDownloadJobStatus getDownloadJobStatus() {
@@ -200,25 +207,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DOWNLOAD_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DOWNLOAD_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDownloadJobStatus(PageFeedAssetServiceDownloadJobStatus downloadJobStatus) {
+  public void setDownloadJobStatus(@jakarta.annotation.Nullable PageFeedAssetServiceDownloadJobStatus downloadJobStatus) {
     this.downloadJobStatus = downloadJobStatus;
   }
 
-
-  public PageFeedAssetServiceDownloadJob endDate(String endDate) {
+  public PageFeedAssetServiceDownloadJob endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの終了日です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; 形式：yyyyMMddHHmmss&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.  &lt;br&gt; Format:yyyyMMddHHmmss&lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -226,25 +232,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public PageFeedAssetServiceDownloadJob pageFeedAssetSetId(Long pageFeedAssetSetId) {
+  public PageFeedAssetServiceDownloadJob pageFeedAssetSetId(@jakarta.annotation.Nullable Long pageFeedAssetSetId) {
     
     this.pageFeedAssetSetId = pageFeedAssetSetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセットIDです。&lt;br&gt; このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet ID.&lt;br&gt; This field is required.&lt;/div&gt; 
    * @return pageFeedAssetSetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPageFeedAssetSetId() {
@@ -252,25 +257,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetSetId(Long pageFeedAssetSetId) {
+  public void setPageFeedAssetSetId(@jakarta.annotation.Nullable Long pageFeedAssetSetId) {
     this.pageFeedAssetSetId = pageFeedAssetSetId;
   }
 
-
-  public PageFeedAssetServiceDownloadJob jobId(Long jobId) {
+  public PageFeedAssetServiceDownloadJob jobId(@jakarta.annotation.Nullable Long jobId) {
     
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Job ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return jobId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getJobId() {
@@ -278,25 +282,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobId(Long jobId) {
+  public void setJobId(@jakarta.annotation.Nullable Long jobId) {
     this.jobId = jobId;
   }
 
-
-  public PageFeedAssetServiceDownloadJob progress(Integer progress) {
+  public PageFeedAssetServiceDownloadJob progress(@jakarta.annotation.Nullable Integer progress) {
     
     this.progress = progress;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの進捗状況です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Progress of page feed asset job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return progress
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
+  @JsonProperty(value = JSON_PROPERTY_PROGRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getProgress() {
@@ -304,25 +307,24 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
+  @JsonProperty(value = JSON_PROPERTY_PROGRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProgress(Integer progress) {
+  public void setProgress(@jakarta.annotation.Nullable Integer progress) {
     this.progress = progress;
   }
 
-
-  public PageFeedAssetServiceDownloadJob startDate(String startDate) {
+  public PageFeedAssetServiceDownloadJob startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの開始日です。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;br&gt; 形式：yyyyMMddHHmmss &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; Format:yyyyMMddHHmmss&lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -330,11 +332,12 @@ public class PageFeedAssetServiceDownloadJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -385,10 +388,7 @@ public class PageFeedAssetServiceDownloadJob {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

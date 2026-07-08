@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceMaximizeClicksBiddingSchemeオブジェクトは、クリック数の最大化の自動入札設定情報を表します。 （BiddingStrategyService用のオブジェクトです。）&lt;br&gt; このフィールドは、省略可能となります。※ADD時、typeがMAXIMIZE_CLICKSの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceMaximizeClicksBiddingScheme object describes auto bidding setting for Maximize Clicks.&lt;br&gt; This field is optional. *If type is &#39;MAXIMIZE_CLICKS&#39;, this field is required in ADD operation.&lt;/div&gt; 
@@ -29,26 +30,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   BiddingStrategyServiceMaximizeClicksBiddingScheme.JSON_PROPERTY_BID_CEILING
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BiddingStrategyServiceMaximizeClicksBiddingScheme {
   public static final String JSON_PROPERTY_BID_CEILING = "bidCeiling";
+  @jakarta.annotation.Nullable
   private Long bidCeiling;
 
   public BiddingStrategyServiceMaximizeClicksBiddingScheme() {
   }
 
-  public BiddingStrategyServiceMaximizeClicksBiddingScheme bidCeiling(Long bidCeiling) {
+  public BiddingStrategyServiceMaximizeClicksBiddingScheme bidCeiling(@jakarta.annotation.Nullable Long bidCeiling) {
     
     this.bidCeiling = bidCeiling;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。（0～50000）&lt;br&gt; ※「0」が設定された場合、上限設定はありません。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bid amount limit (0-50000).&lt;br&gt; * No limits if &amp;#34;0&amp;#34; is set.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
    * @return bidCeiling
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_CEILING)
+  @JsonProperty(value = JSON_PROPERTY_BID_CEILING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getBidCeiling() {
@@ -56,11 +58,12 @@ public class BiddingStrategyServiceMaximizeClicksBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_CEILING)
+  @JsonProperty(value = JSON_PROPERTY_BID_CEILING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidCeiling(Long bidCeiling) {
+  public void setBidCeiling(@jakarta.annotation.Nullable Long bidCeiling) {
     this.bidCeiling = bidCeiling;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -93,10 +96,7 @@ public class BiddingStrategyServiceMaximizeClicksBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

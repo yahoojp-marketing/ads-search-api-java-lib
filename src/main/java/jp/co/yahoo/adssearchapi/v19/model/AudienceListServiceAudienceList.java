@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -30,6 +30,7 @@ import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceRetargetingAccountS
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceRuleBaseAudienceList;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceAudienceListは、リターゲティング情報（オーディエンスリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceAudienceList is an object that holds retargeting information (audience list).&lt;/div&gt; 
@@ -51,68 +52,83 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceAudienceList.JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID,
   AudienceListServiceAudienceList.JSON_PROPERTY_AUDIENCE_LIST_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceAudienceList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CLOSING_REASON = "closingReason";
+  @jakarta.annotation.Nullable
   private AudienceListServiceClosingReason closingReason;
 
   public static final String JSON_PROPERTY_DEFAULT_AUDIENCE_LIST = "defaultAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceDefaultAudienceList defaultAudienceList;
 
   public static final String JSON_PROPERTY_LOGICAL_AUDIENCE_LIST = "logicalAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceLogicalAudienceList logicalAudienceList;
 
   public static final String JSON_PROPERTY_REACH = "reach";
+  @jakarta.annotation.Nullable
   private Long reach;
 
   public static final String JSON_PROPERTY_REACH_STORAGE_SPAN = "reachStorageSpan";
+  @jakarta.annotation.Nullable
   private Long reachStorageSpan;
 
   public static final String JSON_PROPERTY_REACH_STORAGE_STATUS = "reachStorageStatus";
+  @jakarta.annotation.Nullable
   private AudienceListServiceReachStorageStatus reachStorageStatus;
 
   public static final String JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS = "retargetingAccountStatus";
+  @jakarta.annotation.Nullable
   private AudienceListServiceRetargetingAccountStatus retargetingAccountStatus;
 
   public static final String JSON_PROPERTY_RULE_BASE_AUDIENCE_LIST = "ruleBaseAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceRuleBaseAudienceList ruleBaseAudienceList;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_DESCRIPTION = "audienceListDescription";
+  @jakarta.annotation.Nullable
   private String audienceListDescription;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
+  @jakarta.annotation.Nullable
   private String audienceListName;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_OWNER = "audienceListOwner";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAudienceListOwner audienceListOwner;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID = "audienceListTrackId";
+  @jakarta.annotation.Nullable
   private Long audienceListTrackId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPE = "audienceListType";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAudienceListType audienceListType;
 
   public AudienceListServiceAudienceList() {
   }
 
-  public AudienceListServiceAudienceList accountId(Long accountId) {
+  public AudienceListServiceAudienceList accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt;This field is required in any cases.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -120,25 +136,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AudienceListServiceAudienceList closingReason(AudienceListServiceClosingReason closingReason) {
+  public AudienceListServiceAudienceList closingReason(@jakarta.annotation.Nullable AudienceListServiceClosingReason closingReason) {
     
     this.closingReason = closingReason;
     return this;
   }
 
-   /**
+  /**
    * Get closingReason
    * @return closingReason
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLOSING_REASON)
+  @JsonProperty(value = JSON_PROPERTY_CLOSING_REASON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceClosingReason getClosingReason() {
@@ -146,25 +161,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLOSING_REASON)
+  @JsonProperty(value = JSON_PROPERTY_CLOSING_REASON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClosingReason(AudienceListServiceClosingReason closingReason) {
+  public void setClosingReason(@jakarta.annotation.Nullable AudienceListServiceClosingReason closingReason) {
     this.closingReason = closingReason;
   }
 
-
-  public AudienceListServiceAudienceList defaultAudienceList(AudienceListServiceDefaultAudienceList defaultAudienceList) {
+  public AudienceListServiceAudienceList defaultAudienceList(@jakarta.annotation.Nullable AudienceListServiceDefaultAudienceList defaultAudienceList) {
     
     this.defaultAudienceList = defaultAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get defaultAudienceList
    * @return defaultAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEFAULT_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_DEFAULT_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceDefaultAudienceList getDefaultAudienceList() {
@@ -172,25 +186,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEFAULT_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_DEFAULT_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDefaultAudienceList(AudienceListServiceDefaultAudienceList defaultAudienceList) {
+  public void setDefaultAudienceList(@jakarta.annotation.Nullable AudienceListServiceDefaultAudienceList defaultAudienceList) {
     this.defaultAudienceList = defaultAudienceList;
   }
 
-
-  public AudienceListServiceAudienceList logicalAudienceList(AudienceListServiceLogicalAudienceList logicalAudienceList) {
+  public AudienceListServiceAudienceList logicalAudienceList(@jakarta.annotation.Nullable AudienceListServiceLogicalAudienceList logicalAudienceList) {
     
     this.logicalAudienceList = logicalAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get logicalAudienceList
    * @return logicalAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGICAL_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceLogicalAudienceList getLogicalAudienceList() {
@@ -198,25 +211,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGICAL_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogicalAudienceList(AudienceListServiceLogicalAudienceList logicalAudienceList) {
+  public void setLogicalAudienceList(@jakarta.annotation.Nullable AudienceListServiceLogicalAudienceList logicalAudienceList) {
     this.logicalAudienceList = logicalAudienceList;
   }
 
-
-  public AudienceListServiceAudienceList reach(Long reach) {
+  public AudienceListServiceAudienceList reach(@jakarta.annotation.Nullable Long reach) {
     
     this.reach = reach;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リストに蓄積されているユーザー数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of users stored to the list.&lt;/div&gt; 
    * @return reach
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReach() {
@@ -224,25 +236,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReach(Long reach) {
+  public void setReach(@jakarta.annotation.Nullable Long reach) {
     this.reach = reach;
   }
 
-
-  public AudienceListServiceAudienceList reachStorageSpan(Long reachStorageSpan) {
+  public AudienceListServiceAudienceList reachStorageSpan(@jakarta.annotation.Nullable Long reachStorageSpan) {
     
     this.reachStorageSpan = reachStorageSpan;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Cookieを保持する日数です。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt;LogicalAudienceListの場合、SET時にこのフィールドは無視されます。&lt;br&gt; ※SET時、ruleBaseAudienceList.isDateSpecificRule &#x3D; TRUEの場合には、変更は出来ません。&lt;br&gt; ※Default：180&lt;br&gt; ※1-540日まで設定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Days to hold Cookie.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; For LogicalAudienceList, this field will be ignored in SET operation.&lt;br&gt; *In SET operation, if ruleBaseAudienceList.isDateSpecificRule &#x3D; TRUE, it is can not change.&lt;br&gt; *Default: 180&lt;br&gt; *Can set from 1-540 days.&lt;/div&gt; 
    * @return reachStorageSpan
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_SPAN)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_SPAN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReachStorageSpan() {
@@ -250,25 +261,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_SPAN)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_SPAN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReachStorageSpan(Long reachStorageSpan) {
+  public void setReachStorageSpan(@jakarta.annotation.Nullable Long reachStorageSpan) {
     this.reachStorageSpan = reachStorageSpan;
   }
 
-
-  public AudienceListServiceAudienceList reachStorageStatus(AudienceListServiceReachStorageStatus reachStorageStatus) {
+  public AudienceListServiceAudienceList reachStorageStatus(@jakarta.annotation.Nullable AudienceListServiceReachStorageStatus reachStorageStatus) {
     
     this.reachStorageStatus = reachStorageStatus;
     return this;
   }
 
-   /**
+  /**
    * Get reachStorageStatus
    * @return reachStorageStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceReachStorageStatus getReachStorageStatus() {
@@ -276,25 +286,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReachStorageStatus(AudienceListServiceReachStorageStatus reachStorageStatus) {
+  public void setReachStorageStatus(@jakarta.annotation.Nullable AudienceListServiceReachStorageStatus reachStorageStatus) {
     this.reachStorageStatus = reachStorageStatus;
   }
 
-
-  public AudienceListServiceAudienceList retargetingAccountStatus(AudienceListServiceRetargetingAccountStatus retargetingAccountStatus) {
+  public AudienceListServiceAudienceList retargetingAccountStatus(@jakarta.annotation.Nullable AudienceListServiceRetargetingAccountStatus retargetingAccountStatus) {
     
     this.retargetingAccountStatus = retargetingAccountStatus;
     return this;
   }
 
-   /**
+  /**
    * Get retargetingAccountStatus
    * @return retargetingAccountStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceRetargetingAccountStatus getRetargetingAccountStatus() {
@@ -302,25 +311,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRetargetingAccountStatus(AudienceListServiceRetargetingAccountStatus retargetingAccountStatus) {
+  public void setRetargetingAccountStatus(@jakarta.annotation.Nullable AudienceListServiceRetargetingAccountStatus retargetingAccountStatus) {
     this.retargetingAccountStatus = retargetingAccountStatus;
   }
 
-
-  public AudienceListServiceAudienceList ruleBaseAudienceList(AudienceListServiceRuleBaseAudienceList ruleBaseAudienceList) {
+  public AudienceListServiceAudienceList ruleBaseAudienceList(@jakarta.annotation.Nullable AudienceListServiceRuleBaseAudienceList ruleBaseAudienceList) {
     
     this.ruleBaseAudienceList = ruleBaseAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get ruleBaseAudienceList
    * @return ruleBaseAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_BASE_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_RULE_BASE_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceRuleBaseAudienceList getRuleBaseAudienceList() {
@@ -328,25 +336,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_BASE_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_RULE_BASE_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleBaseAudienceList(AudienceListServiceRuleBaseAudienceList ruleBaseAudienceList) {
+  public void setRuleBaseAudienceList(@jakarta.annotation.Nullable AudienceListServiceRuleBaseAudienceList ruleBaseAudienceList) {
     this.ruleBaseAudienceList = ruleBaseAudienceList;
   }
 
-
-  public AudienceListServiceAudienceList audienceListDescription(String audienceListDescription) {
+  public AudienceListServiceAudienceList audienceListDescription(@jakarta.annotation.Nullable String audienceListDescription) {
     
     this.audienceListDescription = audienceListDescription;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストの説明です。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of Audience List.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
    * @return audienceListDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListDescription() {
@@ -354,25 +361,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListDescription(String audienceListDescription) {
+  public void setAudienceListDescription(@jakarta.annotation.Nullable String audienceListDescription) {
     this.audienceListDescription = audienceListDescription;
   }
 
-
-  public AudienceListServiceAudienceList audienceListId(Long audienceListId) {
+  public AudienceListServiceAudienceList audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience List ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListId() {
@@ -380,25 +386,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AudienceListServiceAudienceList audienceListName(String audienceListName) {
+  public AudienceListServiceAudienceList audienceListName(@jakarta.annotation.Nullable String audienceListName) {
     
     this.audienceListName = audienceListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です。&lt;br&gt; ADD時にこのフィールドは必須となり、SET時にこのフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience List name.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation.&lt;/div&gt; 
    * @return audienceListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListName() {
@@ -406,25 +411,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListName(String audienceListName) {
+  public void setAudienceListName(@jakarta.annotation.Nullable String audienceListName) {
     this.audienceListName = audienceListName;
   }
 
-
-  public AudienceListServiceAudienceList audienceListOwner(AudienceListServiceAudienceListOwner audienceListOwner) {
+  public AudienceListServiceAudienceList audienceListOwner(@jakarta.annotation.Nullable AudienceListServiceAudienceListOwner audienceListOwner) {
     
     this.audienceListOwner = audienceListOwner;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListOwner
    * @return audienceListOwner
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_OWNER)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_OWNER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAudienceListOwner getAudienceListOwner() {
@@ -432,25 +436,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_OWNER)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_OWNER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListOwner(AudienceListServiceAudienceListOwner audienceListOwner) {
+  public void setAudienceListOwner(@jakarta.annotation.Nullable AudienceListServiceAudienceListOwner audienceListOwner) {
     this.audienceListOwner = audienceListOwner;
   }
 
-
-  public AudienceListServiceAudienceList audienceListTrackId(Long audienceListTrackId) {
+  public AudienceListServiceAudienceList audienceListTrackId(@jakarta.annotation.Nullable Long audienceListTrackId) {
     
     this.audienceListTrackId = audienceListTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストのトラッキング用IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID of Audience list.&lt;/div&gt; 
    * @return audienceListTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListTrackId() {
@@ -458,25 +461,24 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListTrackId(Long audienceListTrackId) {
+  public void setAudienceListTrackId(@jakarta.annotation.Nullable Long audienceListTrackId) {
     this.audienceListTrackId = audienceListTrackId;
   }
 
-
-  public AudienceListServiceAudienceList audienceListType(AudienceListServiceAudienceListType audienceListType) {
+  public AudienceListServiceAudienceList audienceListType(@jakarta.annotation.Nullable AudienceListServiceAudienceListType audienceListType) {
     
     this.audienceListType = audienceListType;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListType
    * @return audienceListType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAudienceListType getAudienceListType() {
@@ -484,11 +486,12 @@ public class AudienceListServiceAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListType(AudienceListServiceAudienceListType audienceListType) {
+  public void setAudienceListType(@jakarta.annotation.Nullable AudienceListServiceAudienceListType audienceListType) {
     this.audienceListType = audienceListType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -549,10 +552,7 @@ public class AudienceListServiceAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

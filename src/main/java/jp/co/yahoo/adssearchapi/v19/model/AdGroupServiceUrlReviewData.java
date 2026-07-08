@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupServiceReviewUrl;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupServiceUrlApprovalStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceUrlReviewDataオブジェクトは、URLの審査状況を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceUrlReviewData object displays review status of URL.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
@@ -36,24 +38,28 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceUrlReviewData.JSON_PROPERTY_IN_REVIEW_URL,
   AdGroupServiceUrlReviewData.JSON_PROPERTY_URL_APPROVAL_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceUrlReviewData {
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REVIEW_URL = "disapprovalReviewUrl";
+  @jakarta.annotation.Nullable
   private AdGroupServiceReviewUrl disapprovalReviewUrl;
 
   public static final String JSON_PROPERTY_IN_REVIEW_URL = "inReviewUrl";
+  @jakarta.annotation.Nullable
   private AdGroupServiceReviewUrl inReviewUrl;
 
   public static final String JSON_PROPERTY_URL_APPROVAL_STATUS = "urlApprovalStatus";
+  @jakarta.annotation.Nullable
   private AdGroupServiceUrlApprovalStatus urlApprovalStatus;
 
   public AdGroupServiceUrlReviewData() {
   }
 
-  public AdGroupServiceUrlReviewData disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public AdGroupServiceUrlReviewData disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -67,12 +73,12 @@ public class AdGroupServiceUrlReviewData {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Code of Disapproval reason.&lt;br&gt;&lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -80,25 +86,24 @@ public class AdGroupServiceUrlReviewData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public AdGroupServiceUrlReviewData disapprovalReviewUrl(AdGroupServiceReviewUrl disapprovalReviewUrl) {
+  public AdGroupServiceUrlReviewData disapprovalReviewUrl(@jakarta.annotation.Nullable AdGroupServiceReviewUrl disapprovalReviewUrl) {
     
     this.disapprovalReviewUrl = disapprovalReviewUrl;
     return this;
   }
 
-   /**
+  /**
    * Get disapprovalReviewUrl
    * @return disapprovalReviewUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REVIEW_URL)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REVIEW_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceReviewUrl getDisapprovalReviewUrl() {
@@ -106,25 +111,24 @@ public class AdGroupServiceUrlReviewData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REVIEW_URL)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REVIEW_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReviewUrl(AdGroupServiceReviewUrl disapprovalReviewUrl) {
+  public void setDisapprovalReviewUrl(@jakarta.annotation.Nullable AdGroupServiceReviewUrl disapprovalReviewUrl) {
     this.disapprovalReviewUrl = disapprovalReviewUrl;
   }
 
-
-  public AdGroupServiceUrlReviewData inReviewUrl(AdGroupServiceReviewUrl inReviewUrl) {
+  public AdGroupServiceUrlReviewData inReviewUrl(@jakarta.annotation.Nullable AdGroupServiceReviewUrl inReviewUrl) {
     
     this.inReviewUrl = inReviewUrl;
     return this;
   }
 
-   /**
+  /**
    * Get inReviewUrl
    * @return inReviewUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IN_REVIEW_URL)
+  @JsonProperty(value = JSON_PROPERTY_IN_REVIEW_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceReviewUrl getInReviewUrl() {
@@ -132,25 +136,24 @@ public class AdGroupServiceUrlReviewData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IN_REVIEW_URL)
+  @JsonProperty(value = JSON_PROPERTY_IN_REVIEW_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInReviewUrl(AdGroupServiceReviewUrl inReviewUrl) {
+  public void setInReviewUrl(@jakarta.annotation.Nullable AdGroupServiceReviewUrl inReviewUrl) {
     this.inReviewUrl = inReviewUrl;
   }
 
-
-  public AdGroupServiceUrlReviewData urlApprovalStatus(AdGroupServiceUrlApprovalStatus urlApprovalStatus) {
+  public AdGroupServiceUrlReviewData urlApprovalStatus(@jakarta.annotation.Nullable AdGroupServiceUrlApprovalStatus urlApprovalStatus) {
     
     this.urlApprovalStatus = urlApprovalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get urlApprovalStatus
    * @return urlApprovalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_URL_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceUrlApprovalStatus getUrlApprovalStatus() {
@@ -158,11 +161,12 @@ public class AdGroupServiceUrlReviewData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_URL_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlApprovalStatus(AdGroupServiceUrlApprovalStatus urlApprovalStatus) {
+  public void setUrlApprovalStatus(@jakarta.annotation.Nullable AdGroupServiceUrlApprovalStatus urlApprovalStatus) {
     this.urlApprovalStatus = urlApprovalStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -201,10 +205,7 @@ public class AdGroupServiceUrlReviewData {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

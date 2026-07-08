@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.BiddingStrategyServiceTargetImpressionShareLocation;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceTargetImpressionShareSchemeオブジェクトは、広告費用対効果の目標値の自動入札設定情報を表します。&lt;br&gt; このフィールドは、省略可能となります。※ADD時、typeがTARGET_IMPRESSION_SHAREの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceTargetImpressionShareScheme describes the Auto bidding setting information of Target ROAS. &lt;br&gt; This field is optional. *If type is TARGET_IMPRESSION_SHARE, this field is required in ADD operation.&lt;/div&gt; 
@@ -32,32 +33,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BiddingStrategyServiceTargetImpressionShareScheme.JSON_PROPERTY_BID_CEILING,
   BiddingStrategyServiceTargetImpressionShareScheme.JSON_PROPERTY_TARGET_IMPRESSION_SHARE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BiddingStrategyServiceTargetImpressionShareScheme {
   public static final String JSON_PROPERTY_LOCATION = "location";
+  @jakarta.annotation.Nullable
   private BiddingStrategyServiceTargetImpressionShareLocation location;
 
   public static final String JSON_PROPERTY_BID_CEILING = "bidCeiling";
+  @jakarta.annotation.Nullable
   private Long bidCeiling;
 
   public static final String JSON_PROPERTY_TARGET_IMPRESSION_SHARE = "targetImpressionShare";
+  @jakarta.annotation.Nullable
   private Long targetImpressionShare;
 
   public BiddingStrategyServiceTargetImpressionShareScheme() {
   }
 
-  public BiddingStrategyServiceTargetImpressionShareScheme location(BiddingStrategyServiceTargetImpressionShareLocation location) {
+  public BiddingStrategyServiceTargetImpressionShareScheme location(@jakarta.annotation.Nullable BiddingStrategyServiceTargetImpressionShareLocation location) {
     
     this.location = location;
     return this;
   }
 
-   /**
+  /**
    * Get location
    * @return location
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOCATION)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BiddingStrategyServiceTargetImpressionShareLocation getLocation() {
@@ -65,25 +69,24 @@ public class BiddingStrategyServiceTargetImpressionShareScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOCATION)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocation(BiddingStrategyServiceTargetImpressionShareLocation location) {
+  public void setLocation(@jakarta.annotation.Nullable BiddingStrategyServiceTargetImpressionShareLocation location) {
     this.location = location;
   }
 
-
-  public BiddingStrategyServiceTargetImpressionShareScheme bidCeiling(Long bidCeiling) {
+  public BiddingStrategyServiceTargetImpressionShareScheme bidCeiling(@jakarta.annotation.Nullable Long bidCeiling) {
     
     this.bidCeiling = bidCeiling;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt; 入札価格の上限の詳細は以下のヘルプを参照してください。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044401?language&#x3D;ja\&quot;&gt;自動入札タイプ「ページ最上部掲載」【検索広告】&lt;/a&gt;&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bid Limit.&lt;br&gt; Refer to the following help.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044401?language&#x3D;en_US\&quot;&gt;Autobidding type absolute top placement [Search Ads]&lt;/a&gt;&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return bidCeiling
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_CEILING)
+  @JsonProperty(value = JSON_PROPERTY_BID_CEILING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getBidCeiling() {
@@ -91,25 +94,24 @@ public class BiddingStrategyServiceTargetImpressionShareScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_CEILING)
+  @JsonProperty(value = JSON_PROPERTY_BID_CEILING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidCeiling(Long bidCeiling) {
+  public void setBidCeiling(@jakarta.annotation.Nullable Long bidCeiling) {
     this.bidCeiling = bidCeiling;
   }
 
-
-  public BiddingStrategyServiceTargetImpressionShareScheme targetImpressionShare(Long targetImpressionShare) {
+  public BiddingStrategyServiceTargetImpressionShareScheme targetImpressionShare(@jakarta.annotation.Nullable Long targetImpressionShare) {
     
     this.targetImpressionShare = targetImpressionShare;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;目標のインプレッションシェアです。&lt;br&gt; ADD時およびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target impression share.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return targetImpressionShare
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_IMPRESSION_SHARE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_IMPRESSION_SHARE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetImpressionShare() {
@@ -117,11 +119,12 @@ public class BiddingStrategyServiceTargetImpressionShareScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_IMPRESSION_SHARE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_IMPRESSION_SHARE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetImpressionShare(Long targetImpressionShare) {
+  public void setTargetImpressionShare(@jakarta.annotation.Nullable Long targetImpressionShare) {
     this.targetImpressionShare = targetImpressionShare;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +161,7 @@ public class BiddingStrategyServiceTargetImpressionShareScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

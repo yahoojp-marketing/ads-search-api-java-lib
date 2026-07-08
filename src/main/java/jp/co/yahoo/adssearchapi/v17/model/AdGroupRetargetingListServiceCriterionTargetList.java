@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupRetargetingListServiceCriterionTargetListは、オーディエンスリスト情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupRetargetingListServiceCriterionTargetList is an object that holds audience list information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
@@ -31,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupRetargetingListServiceCriterionTargetList.JSON_PROPERTY_TARGET_LIST_ID,
   AdGroupRetargetingListServiceCriterionTargetList.JSON_PROPERTY_TARGET_LIST_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupRetargetingListServiceCriterionTargetList {
   public static final String JSON_PROPERTY_RETARGETING_TRACK_ID = "retargetingTrackId";
+  @jakarta.annotation.Nullable
   private Long retargetingTrackId;
 
   public static final String JSON_PROPERTY_TARGET_LIST_ID = "targetListId";
+  @jakarta.annotation.Nullable
   private Long targetListId;
 
   public static final String JSON_PROPERTY_TARGET_LIST_NAME = "targetListName";
+  @jakarta.annotation.Nullable
   private String targetListName;
 
   public AdGroupRetargetingListServiceCriterionTargetList() {
   }
 
-  public AdGroupRetargetingListServiceCriterionTargetList retargetingTrackId(Long retargetingTrackId) {
+  public AdGroupRetargetingListServiceCriterionTargetList retargetingTrackId(@jakarta.annotation.Nullable Long retargetingTrackId) {
     
     this.retargetingTrackId = retargetingTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リターゲティングトラックIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Retargeting track ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return retargetingTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRetargetingTrackId() {
@@ -64,25 +68,24 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRetargetingTrackId(Long retargetingTrackId) {
+  public void setRetargetingTrackId(@jakarta.annotation.Nullable Long retargetingTrackId) {
     this.retargetingTrackId = retargetingTrackId;
   }
 
-
-  public AdGroupRetargetingListServiceCriterionTargetList targetListId(Long targetListId) {
+  public AdGroupRetargetingListServiceCriterionTargetList targetListId(@jakarta.annotation.Nullable Long targetListId) {
     
     this.targetListId = targetListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return targetListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetListId() {
@@ -90,25 +93,24 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListId(Long targetListId) {
+  public void setTargetListId(@jakarta.annotation.Nullable Long targetListId) {
     this.targetListId = targetListId;
   }
 
-
-  public AdGroupRetargetingListServiceCriterionTargetList targetListName(String targetListName) {
+  public AdGroupRetargetingListServiceCriterionTargetList targetListName(@jakarta.annotation.Nullable String targetListName) {
     
     this.targetListName = targetListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return targetListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTargetListName() {
@@ -116,11 +118,12 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListName(String targetListName) {
+  public void setTargetListName(@jakarta.annotation.Nullable String targetListName) {
     this.targetListName = targetListName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +160,7 @@ public class AdGroupRetargetingListServiceCriterionTargetList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

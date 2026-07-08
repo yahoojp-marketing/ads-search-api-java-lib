@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountSharedオブジェクトは、アカウント内で共有できる対象外キーワードリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountShared object describes negative keyword list which can be shared within the account.&lt;/div&gt; 
@@ -33,38 +34,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountShared.JSON_PROPERTY_REFERENCE_COUNT,
   AccountShared.JSON_PROPERTY_SHARED_LIST_ID
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AccountShared {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_MEMBER_COUNT = "memberCount";
+  @jakarta.annotation.Nullable
   private Integer memberCount;
 
   public static final String JSON_PROPERTY_NAME = "name";
+  @jakarta.annotation.Nullable
   private String name;
 
   public static final String JSON_PROPERTY_REFERENCE_COUNT = "referenceCount";
+  @jakarta.annotation.Nullable
   private Integer referenceCount;
 
   public static final String JSON_PROPERTY_SHARED_LIST_ID = "sharedListId";
+  @jakarta.annotation.Nullable
   private Long sharedListId;
 
   public AccountShared() {
   }
 
-  public AccountShared accountId(Long accountId) {
+  public AccountShared accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -72,25 +78,24 @@ public class AccountShared {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AccountShared memberCount(Integer memberCount) {
+  public AccountShared memberCount(@jakarta.annotation.Nullable Integer memberCount) {
     
     this.memberCount = memberCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリストに含まれるアイテム（検索対象外キーワード）数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of items on negative keyword list (keyword excluded on search).&lt;/div&gt; 
    * @return memberCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEMBER_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_MEMBER_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getMemberCount() {
@@ -98,25 +103,24 @@ public class AccountShared {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEMBER_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_MEMBER_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMemberCount(Integer memberCount) {
+  public void setMemberCount(@jakarta.annotation.Nullable Integer memberCount) {
     this.memberCount = memberCount;
   }
 
-
-  public AccountShared name(String name) {
+  public AccountShared name(@jakarta.annotation.Nullable String name) {
     
     this.name = name;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリスト名です。&lt;br&gt;ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Negative keyword list name.&lt;br&gt;This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return name
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getName() {
@@ -124,25 +128,24 @@ public class AccountShared {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setName(String name) {
+  public void setName(@jakarta.annotation.Nullable String name) {
     this.name = name;
   }
 
-
-  public AccountShared referenceCount(Integer referenceCount) {
+  public AccountShared referenceCount(@jakarta.annotation.Nullable Integer referenceCount) {
     
     this.referenceCount = referenceCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリストを使用している キャンペーン数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of campaigns which use negative keyword list.&lt;/div&gt; 
    * @return referenceCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REFERENCE_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_REFERENCE_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getReferenceCount() {
@@ -150,25 +153,24 @@ public class AccountShared {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REFERENCE_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_REFERENCE_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReferenceCount(Integer referenceCount) {
+  public void setReferenceCount(@jakarta.annotation.Nullable Integer referenceCount) {
     this.referenceCount = referenceCount;
   }
 
-
-  public AccountShared sharedListId(Long sharedListId) {
+  public AccountShared sharedListId(@jakarta.annotation.Nullable Long sharedListId) {
     
     this.sharedListId = sharedListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;対象外キーワードリストIDです。&lt;br&gt;SETおよびREMOVE時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Negative keyword list ID.&lt;br&gt;This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return sharedListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SHARED_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_SHARED_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSharedListId() {
@@ -176,11 +178,12 @@ public class AccountShared {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SHARED_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_SHARED_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSharedListId(Long sharedListId) {
+  public void setSharedListId(@jakarta.annotation.Nullable Long sharedListId) {
     this.sharedListId = sharedListId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -221,10 +224,7 @@ public class AccountShared {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

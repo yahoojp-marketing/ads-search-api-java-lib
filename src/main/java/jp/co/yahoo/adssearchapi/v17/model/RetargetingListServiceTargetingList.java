@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -30,6 +30,7 @@ import jp.co.yahoo.adssearchapi.v17.model.RetargetingListServiceTargetListOwner;
 import jp.co.yahoo.adssearchapi.v17.model.RetargetingListServiceTargetListType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceTargetingListは、リターゲティング情報（オーディエンスリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceTargetingList is an object that holds retargeting information (audience list).&lt;/div&gt; 
@@ -51,68 +52,83 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingListServiceTargetingList.JSON_PROPERTY_TARGET_LIST_TRACK_ID,
   RetargetingListServiceTargetingList.JSON_PROPERTY_TARGET_LIST_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RetargetingListServiceTargetingList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CLOSING_REASON = "closingReason";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceClosingReason closingReason;
 
   public static final String JSON_PROPERTY_DEFAULT_TARGET_LIST = "defaultTargetList";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceDefaultTargetList defaultTargetList;
 
   public static final String JSON_PROPERTY_LOGICAL_TARGET_LIST = "logicalTargetList";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceLogicalTargetList logicalTargetList;
 
   public static final String JSON_PROPERTY_REACH = "reach";
+  @jakarta.annotation.Nullable
   private Long reach;
 
   public static final String JSON_PROPERTY_REACH_STORAGE_SPAN = "reachStorageSpan";
+  @jakarta.annotation.Nullable
   private Long reachStorageSpan;
 
   public static final String JSON_PROPERTY_REACH_STORAGE_STATUS = "reachStorageStatus";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceReachStorageStatus reachStorageStatus;
 
   public static final String JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS = "retargetingAccountStatus";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceRetargetingAccountStatus retargetingAccountStatus;
 
   public static final String JSON_PROPERTY_RULE_BASE_TARGET_LIST = "ruleBaseTargetList";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceRuleBaseTargetList ruleBaseTargetList;
 
   public static final String JSON_PROPERTY_TARGET_LIST_DESCRIPTION = "targetListDescription";
+  @jakarta.annotation.Nullable
   private String targetListDescription;
 
   public static final String JSON_PROPERTY_TARGET_LIST_ID = "targetListId";
+  @jakarta.annotation.Nullable
   private Long targetListId;
 
   public static final String JSON_PROPERTY_TARGET_LIST_NAME = "targetListName";
+  @jakarta.annotation.Nullable
   private String targetListName;
 
   public static final String JSON_PROPERTY_TARGET_LIST_OWNER = "targetListOwner";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceTargetListOwner targetListOwner;
 
   public static final String JSON_PROPERTY_TARGET_LIST_TRACK_ID = "targetListTrackId";
+  @jakarta.annotation.Nullable
   private Long targetListTrackId;
 
   public static final String JSON_PROPERTY_TARGET_LIST_TYPE = "targetListType";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceTargetListType targetListType;
 
   public RetargetingListServiceTargetingList() {
   }
 
-  public RetargetingListServiceTargetingList accountId(Long accountId) {
+  public RetargetingListServiceTargetingList accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt;This field is required in any cases.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -120,25 +136,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public RetargetingListServiceTargetingList closingReason(RetargetingListServiceClosingReason closingReason) {
+  public RetargetingListServiceTargetingList closingReason(@jakarta.annotation.Nullable RetargetingListServiceClosingReason closingReason) {
     
     this.closingReason = closingReason;
     return this;
   }
 
-   /**
+  /**
    * Get closingReason
    * @return closingReason
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLOSING_REASON)
+  @JsonProperty(value = JSON_PROPERTY_CLOSING_REASON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceClosingReason getClosingReason() {
@@ -146,25 +161,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLOSING_REASON)
+  @JsonProperty(value = JSON_PROPERTY_CLOSING_REASON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClosingReason(RetargetingListServiceClosingReason closingReason) {
+  public void setClosingReason(@jakarta.annotation.Nullable RetargetingListServiceClosingReason closingReason) {
     this.closingReason = closingReason;
   }
 
-
-  public RetargetingListServiceTargetingList defaultTargetList(RetargetingListServiceDefaultTargetList defaultTargetList) {
+  public RetargetingListServiceTargetingList defaultTargetList(@jakarta.annotation.Nullable RetargetingListServiceDefaultTargetList defaultTargetList) {
     
     this.defaultTargetList = defaultTargetList;
     return this;
   }
 
-   /**
+  /**
    * Get defaultTargetList
    * @return defaultTargetList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEFAULT_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_DEFAULT_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceDefaultTargetList getDefaultTargetList() {
@@ -172,25 +186,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEFAULT_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_DEFAULT_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDefaultTargetList(RetargetingListServiceDefaultTargetList defaultTargetList) {
+  public void setDefaultTargetList(@jakarta.annotation.Nullable RetargetingListServiceDefaultTargetList defaultTargetList) {
     this.defaultTargetList = defaultTargetList;
   }
 
-
-  public RetargetingListServiceTargetingList logicalTargetList(RetargetingListServiceLogicalTargetList logicalTargetList) {
+  public RetargetingListServiceTargetingList logicalTargetList(@jakarta.annotation.Nullable RetargetingListServiceLogicalTargetList logicalTargetList) {
     
     this.logicalTargetList = logicalTargetList;
     return this;
   }
 
-   /**
+  /**
    * Get logicalTargetList
    * @return logicalTargetList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGICAL_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceLogicalTargetList getLogicalTargetList() {
@@ -198,25 +211,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGICAL_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogicalTargetList(RetargetingListServiceLogicalTargetList logicalTargetList) {
+  public void setLogicalTargetList(@jakarta.annotation.Nullable RetargetingListServiceLogicalTargetList logicalTargetList) {
     this.logicalTargetList = logicalTargetList;
   }
 
-
-  public RetargetingListServiceTargetingList reach(Long reach) {
+  public RetargetingListServiceTargetingList reach(@jakarta.annotation.Nullable Long reach) {
     
     this.reach = reach;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リストに蓄積されているユーザー数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of users stored to the list.&lt;/div&gt; 
    * @return reach
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReach() {
@@ -224,25 +236,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReach(Long reach) {
+  public void setReach(@jakarta.annotation.Nullable Long reach) {
     this.reach = reach;
   }
 
-
-  public RetargetingListServiceTargetingList reachStorageSpan(Long reachStorageSpan) {
+  public RetargetingListServiceTargetingList reachStorageSpan(@jakarta.annotation.Nullable Long reachStorageSpan) {
     
     this.reachStorageSpan = reachStorageSpan;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Cookieを保持する日数です。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt;LogicalTargetListの場合、SET時にこのフィールドは無視されます。&lt;br&gt; ※SET時、ruleBaseTargetList.isDateSpecificRule &#x3D; TRUEの場合には、変更は出来ません。&lt;br&gt; ※Default：180&lt;br&gt; ※1-540日まで設定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Days to hold Cookie.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; For LogicalTargetList, this field will be ignored in SET operation.&lt;br&gt; *In SET operation, if ruleBaseTargetList.isDateSpecificRule &#x3D; TRUE, it is can not change.&lt;br&gt; *Default: 180&lt;br&gt; *Can set from 1-540 days.&lt;/div&gt; 
    * @return reachStorageSpan
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_SPAN)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_SPAN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReachStorageSpan() {
@@ -250,25 +261,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_SPAN)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_SPAN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReachStorageSpan(Long reachStorageSpan) {
+  public void setReachStorageSpan(@jakarta.annotation.Nullable Long reachStorageSpan) {
     this.reachStorageSpan = reachStorageSpan;
   }
 
-
-  public RetargetingListServiceTargetingList reachStorageStatus(RetargetingListServiceReachStorageStatus reachStorageStatus) {
+  public RetargetingListServiceTargetingList reachStorageStatus(@jakarta.annotation.Nullable RetargetingListServiceReachStorageStatus reachStorageStatus) {
     
     this.reachStorageStatus = reachStorageStatus;
     return this;
   }
 
-   /**
+  /**
    * Get reachStorageStatus
    * @return reachStorageStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceReachStorageStatus getReachStorageStatus() {
@@ -276,25 +286,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH_STORAGE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REACH_STORAGE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReachStorageStatus(RetargetingListServiceReachStorageStatus reachStorageStatus) {
+  public void setReachStorageStatus(@jakarta.annotation.Nullable RetargetingListServiceReachStorageStatus reachStorageStatus) {
     this.reachStorageStatus = reachStorageStatus;
   }
 
-
-  public RetargetingListServiceTargetingList retargetingAccountStatus(RetargetingListServiceRetargetingAccountStatus retargetingAccountStatus) {
+  public RetargetingListServiceTargetingList retargetingAccountStatus(@jakarta.annotation.Nullable RetargetingListServiceRetargetingAccountStatus retargetingAccountStatus) {
     
     this.retargetingAccountStatus = retargetingAccountStatus;
     return this;
   }
 
-   /**
+  /**
    * Get retargetingAccountStatus
    * @return retargetingAccountStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceRetargetingAccountStatus getRetargetingAccountStatus() {
@@ -302,25 +311,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRetargetingAccountStatus(RetargetingListServiceRetargetingAccountStatus retargetingAccountStatus) {
+  public void setRetargetingAccountStatus(@jakarta.annotation.Nullable RetargetingListServiceRetargetingAccountStatus retargetingAccountStatus) {
     this.retargetingAccountStatus = retargetingAccountStatus;
   }
 
-
-  public RetargetingListServiceTargetingList ruleBaseTargetList(RetargetingListServiceRuleBaseTargetList ruleBaseTargetList) {
+  public RetargetingListServiceTargetingList ruleBaseTargetList(@jakarta.annotation.Nullable RetargetingListServiceRuleBaseTargetList ruleBaseTargetList) {
     
     this.ruleBaseTargetList = ruleBaseTargetList;
     return this;
   }
 
-   /**
+  /**
    * Get ruleBaseTargetList
    * @return ruleBaseTargetList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_BASE_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_RULE_BASE_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceRuleBaseTargetList getRuleBaseTargetList() {
@@ -328,25 +336,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_BASE_TARGET_LIST)
+  @JsonProperty(value = JSON_PROPERTY_RULE_BASE_TARGET_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleBaseTargetList(RetargetingListServiceRuleBaseTargetList ruleBaseTargetList) {
+  public void setRuleBaseTargetList(@jakarta.annotation.Nullable RetargetingListServiceRuleBaseTargetList ruleBaseTargetList) {
     this.ruleBaseTargetList = ruleBaseTargetList;
   }
 
-
-  public RetargetingListServiceTargetingList targetListDescription(String targetListDescription) {
+  public RetargetingListServiceTargetingList targetListDescription(@jakarta.annotation.Nullable String targetListDescription) {
     
     this.targetListDescription = targetListDescription;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストの説明です。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of audience list.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
    * @return targetListDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTargetListDescription() {
@@ -354,25 +361,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListDescription(String targetListDescription) {
+  public void setTargetListDescription(@jakarta.annotation.Nullable String targetListDescription) {
     this.targetListDescription = targetListDescription;
   }
 
-
-  public RetargetingListServiceTargetingList targetListId(Long targetListId) {
+  public RetargetingListServiceTargetingList targetListId(@jakarta.annotation.Nullable Long targetListId) {
     
     this.targetListId = targetListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;br&gt; SET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;br&gt; This field is required in SET operation.&lt;/div&gt; 
    * @return targetListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetListId() {
@@ -380,25 +386,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListId(Long targetListId) {
+  public void setTargetListId(@jakarta.annotation.Nullable Long targetListId) {
     this.targetListId = targetListId;
   }
 
-
-  public RetargetingListServiceTargetingList targetListName(String targetListName) {
+  public RetargetingListServiceTargetingList targetListName(@jakarta.annotation.Nullable String targetListName) {
     
     this.targetListName = targetListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です。&lt;br&gt; ADD時にこのフィールドは必須となり、SET時にこのフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation.&lt;/div&gt; 
    * @return targetListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTargetListName() {
@@ -406,25 +411,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListName(String targetListName) {
+  public void setTargetListName(@jakarta.annotation.Nullable String targetListName) {
     this.targetListName = targetListName;
   }
 
-
-  public RetargetingListServiceTargetingList targetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
+  public RetargetingListServiceTargetingList targetListOwner(@jakarta.annotation.Nullable RetargetingListServiceTargetListOwner targetListOwner) {
     
     this.targetListOwner = targetListOwner;
     return this;
   }
 
-   /**
+  /**
    * Get targetListOwner
    * @return targetListOwner
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_OWNER)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_OWNER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceTargetListOwner getTargetListOwner() {
@@ -432,25 +436,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_OWNER)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_OWNER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListOwner(RetargetingListServiceTargetListOwner targetListOwner) {
+  public void setTargetListOwner(@jakarta.annotation.Nullable RetargetingListServiceTargetListOwner targetListOwner) {
     this.targetListOwner = targetListOwner;
   }
 
-
-  public RetargetingListServiceTargetingList targetListTrackId(Long targetListTrackId) {
+  public RetargetingListServiceTargetingList targetListTrackId(@jakarta.annotation.Nullable Long targetListTrackId) {
     
     this.targetListTrackId = targetListTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストのトラッキング用IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID of audience list.&lt;/div&gt; 
    * @return targetListTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetListTrackId() {
@@ -458,25 +461,24 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListTrackId(Long targetListTrackId) {
+  public void setTargetListTrackId(@jakarta.annotation.Nullable Long targetListTrackId) {
     this.targetListTrackId = targetListTrackId;
   }
 
-
-  public RetargetingListServiceTargetingList targetListType(RetargetingListServiceTargetListType targetListType) {
+  public RetargetingListServiceTargetingList targetListType(@jakarta.annotation.Nullable RetargetingListServiceTargetListType targetListType) {
     
     this.targetListType = targetListType;
     return this;
   }
 
-   /**
+  /**
    * Get targetListType
    * @return targetListType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceTargetListType getTargetListType() {
@@ -484,11 +486,12 @@ public class RetargetingListServiceTargetingList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetListType(RetargetingListServiceTargetListType targetListType) {
+  public void setTargetListType(@jakarta.annotation.Nullable RetargetingListServiceTargetListType targetListType) {
     this.targetListType = targetListType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -549,10 +552,7 @@ public class RetargetingListServiceTargetingList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

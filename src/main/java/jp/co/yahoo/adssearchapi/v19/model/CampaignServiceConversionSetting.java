@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignServiceCampaignConversionGoals;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignServiceGoalConfigLevel;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceConversionSettingオブジェクトは、コンバージョン設定を表します。&lt;br&gt; conversionGroupId &#x3D; null かつ campaignConversionGoals &#x3D; null の際は goalConfigLevel &#x3D; ACCOUNT を設定してください。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceConversionSetting object display the conversion setting.&lt;br&gt; When both conversionGroupId and campaignConversionGoals are null, please set \&quot;goalConfigLevel &#x3D; ACCOUNT\&quot;.&lt;/div&gt; 
@@ -35,32 +37,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceConversionSetting.JSON_PROPERTY_GOAL_CONFIG_LEVEL,
   CampaignServiceConversionSetting.JSON_PROPERTY_CAMPAIGN_CONVERSION_GOALS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceConversionSetting {
   public static final String JSON_PROPERTY_CONVERSION_GROUP_ID = "conversionGroupId";
+  @jakarta.annotation.Nullable
   private Long conversionGroupId;
 
   public static final String JSON_PROPERTY_GOAL_CONFIG_LEVEL = "goalConfigLevel";
+  @jakarta.annotation.Nullable
   private CampaignServiceGoalConfigLevel goalConfigLevel;
 
   public static final String JSON_PROPERTY_CAMPAIGN_CONVERSION_GOALS = "campaignConversionGoals";
+  @jakarta.annotation.Nullable
   private List<CampaignServiceCampaignConversionGoals> campaignConversionGoals;
 
   public CampaignServiceConversionSetting() {
   }
 
-  public CampaignServiceConversionSetting conversionGroupId(Long conversionGroupId) {
+  public CampaignServiceConversionSetting conversionGroupId(@jakarta.annotation.Nullable Long conversionGroupId) {
     
     this.conversionGroupId = conversionGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョングループIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion Group ID.&lt;/div&gt; 
    * @return conversionGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionGroupId() {
@@ -68,25 +73,24 @@ public class CampaignServiceConversionSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionGroupId(Long conversionGroupId) {
+  public void setConversionGroupId(@jakarta.annotation.Nullable Long conversionGroupId) {
     this.conversionGroupId = conversionGroupId;
   }
 
-
-  public CampaignServiceConversionSetting goalConfigLevel(CampaignServiceGoalConfigLevel goalConfigLevel) {
+  public CampaignServiceConversionSetting goalConfigLevel(@jakarta.annotation.Nullable CampaignServiceGoalConfigLevel goalConfigLevel) {
     
     this.goalConfigLevel = goalConfigLevel;
     return this;
   }
 
-   /**
+  /**
    * Get goalConfigLevel
    * @return goalConfigLevel
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GOAL_CONFIG_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_GOAL_CONFIG_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceGoalConfigLevel getGoalConfigLevel() {
@@ -94,14 +98,13 @@ public class CampaignServiceConversionSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GOAL_CONFIG_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_GOAL_CONFIG_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGoalConfigLevel(CampaignServiceGoalConfigLevel goalConfigLevel) {
+  public void setGoalConfigLevel(@jakarta.annotation.Nullable CampaignServiceGoalConfigLevel goalConfigLevel) {
     this.goalConfigLevel = goalConfigLevel;
   }
 
-
-  public CampaignServiceConversionSetting campaignConversionGoals(List<CampaignServiceCampaignConversionGoals> campaignConversionGoals) {
+  public CampaignServiceConversionSetting campaignConversionGoals(@jakarta.annotation.Nullable List<CampaignServiceCampaignConversionGoals> campaignConversionGoals) {
     
     this.campaignConversionGoals = campaignConversionGoals;
     return this;
@@ -115,12 +118,12 @@ public class CampaignServiceConversionSetting {
     return this;
   }
 
-   /**
+  /**
    * Get campaignConversionGoals
    * @return campaignConversionGoals
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CONVERSION_GOALS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_CONVERSION_GOALS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<CampaignServiceCampaignConversionGoals> getCampaignConversionGoals() {
@@ -128,11 +131,12 @@ public class CampaignServiceConversionSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CONVERSION_GOALS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_CONVERSION_GOALS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignConversionGoals(List<CampaignServiceCampaignConversionGoals> campaignConversionGoals) {
+  public void setCampaignConversionGoals(@jakarta.annotation.Nullable List<CampaignServiceCampaignConversionGoals> campaignConversionGoals) {
     this.campaignConversionGoals = campaignConversionGoals;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +173,7 @@ public class CampaignServiceConversionSetting {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

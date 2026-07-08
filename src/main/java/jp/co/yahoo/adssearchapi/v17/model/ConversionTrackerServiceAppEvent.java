@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.ConversionTrackerServiceAppLinkPlatform;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceAppEventオブジェクトは、アプリコンバージョン測定タグやタグごとのパフォーマンスデータなどのアプリコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceAppConversion object describes the app ConversionTracker settings such as App ConversionTag and performance data by  tag.&lt;/div&gt; 
@@ -34,38 +35,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_APP_LINK_PLATFORM,
   ConversionTrackerServiceAppEvent.JSON_PROPERTY_APP_EVENT_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceAppEvent {
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID = "conversionTrackerTrackId";
+  @jakarta.annotation.Nullable
   private Long conversionTrackerTrackId;
 
   public static final String JSON_PROPERTY_APP_VENDOR_ID = "appVendorId";
+  @jakarta.annotation.Nullable
   private String appVendorId;
 
   public static final String JSON_PROPERTY_APP_ID = "appId";
+  @jakarta.annotation.Nullable
   private String appId;
 
   public static final String JSON_PROPERTY_APP_LINK_PLATFORM = "appLinkPlatform";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceAppLinkPlatform appLinkPlatform;
 
   public static final String JSON_PROPERTY_APP_EVENT_TYPE = "appEventType";
+  @jakarta.annotation.Nullable
   private String appEventType;
 
   public ConversionTrackerServiceAppEvent() {
   }
 
-  public ConversionTrackerServiceAppEvent conversionTrackerTrackId(Long conversionTrackerTrackId) {
+  public ConversionTrackerServiceAppEvent conversionTrackerTrackId(@jakarta.annotation.Nullable Long conversionTrackerTrackId) {
     
     this.conversionTrackerTrackId = conversionTrackerTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキング用コンバージョントラッカーIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker ID for tracking.&lt;/div&gt; 
    * @return conversionTrackerTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionTrackerTrackId() {
@@ -73,25 +79,24 @@ public class ConversionTrackerServiceAppEvent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerTrackId(Long conversionTrackerTrackId) {
+  public void setConversionTrackerTrackId(@jakarta.annotation.Nullable Long conversionTrackerTrackId) {
     this.conversionTrackerTrackId = conversionTrackerTrackId;
   }
 
-
-  public ConversionTrackerServiceAppEvent appVendorId(String appVendorId) {
+  public ConversionTrackerServiceAppEvent appVendorId(@jakarta.annotation.Nullable String appVendorId) {
     
     this.appVendorId = appVendorId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ計測ベンダー識別子です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application vendor ID.&lt;/div&gt; 
    * @return appVendorId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppVendorId() {
@@ -99,25 +104,24 @@ public class ConversionTrackerServiceAppEvent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppVendorId(String appVendorId) {
+  public void setAppVendorId(@jakarta.annotation.Nullable String appVendorId) {
     this.appVendorId = appVendorId;
   }
 
-
-  public ConversionTrackerServiceAppEvent appId(String appId) {
+  public ConversionTrackerServiceAppEvent appId(@jakarta.annotation.Nullable String appId) {
     
     this.appId = appId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application ID.&lt;/div&gt; 
    * @return appId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppId() {
@@ -125,25 +129,24 @@ public class ConversionTrackerServiceAppEvent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppId(String appId) {
+  public void setAppId(@jakarta.annotation.Nullable String appId) {
     this.appId = appId;
   }
 
-
-  public ConversionTrackerServiceAppEvent appLinkPlatform(ConversionTrackerServiceAppLinkPlatform appLinkPlatform) {
+  public ConversionTrackerServiceAppEvent appLinkPlatform(@jakarta.annotation.Nullable ConversionTrackerServiceAppLinkPlatform appLinkPlatform) {
     
     this.appLinkPlatform = appLinkPlatform;
     return this;
   }
 
-   /**
+  /**
    * Get appLinkPlatform
    * @return appLinkPlatform
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_LINK_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceAppLinkPlatform getAppLinkPlatform() {
@@ -151,25 +154,24 @@ public class ConversionTrackerServiceAppEvent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_LINK_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppLinkPlatform(ConversionTrackerServiceAppLinkPlatform appLinkPlatform) {
+  public void setAppLinkPlatform(@jakarta.annotation.Nullable ConversionTrackerServiceAppLinkPlatform appLinkPlatform) {
     this.appLinkPlatform = appLinkPlatform;
   }
 
-
-  public ConversionTrackerServiceAppEvent appEventType(String appEventType) {
+  public ConversionTrackerServiceAppEvent appEventType(@jakarta.annotation.Nullable String appEventType) {
     
     this.appEventType = appEventType;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリイベントタイプです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Application event type.&lt;/div&gt; 
    * @return appEventType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_EVENT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_APP_EVENT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppEventType() {
@@ -177,11 +179,12 @@ public class ConversionTrackerServiceAppEvent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_EVENT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_APP_EVENT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppEventType(String appEventType) {
+  public void setAppEventType(@jakarta.annotation.Nullable String appEventType) {
     this.appEventType = appEventType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -222,10 +225,7 @@ public class ConversionTrackerServiceAppEvent {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
