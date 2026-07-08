@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.KeywordPlanIdeaServiceSeed;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;KeywordPlanIdeaSelectorオブジェクトは、関連キーワードの提案条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Condition for related keyword suggestion.&lt;/div&gt; 
@@ -33,35 +33,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   KeywordPlanIdeaServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   KeywordPlanIdeaServiceSelector.JSON_PROPERTY_PAGE_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class KeywordPlanIdeaServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_SEED = "seed";
+  @jakarta.annotation.Nullable
   private KeywordPlanIdeaServiceSeed seed;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_PAGE_INDEX = "pageIndex";
+  @jakarta.annotation.Nullable
   private Integer pageIndex = 1;
 
   public KeywordPlanIdeaServiceSelector() {
   }
 
-  public KeywordPlanIdeaServiceSelector accountId(Long accountId) {
+  public KeywordPlanIdeaServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -69,25 +73,24 @@ public class KeywordPlanIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public KeywordPlanIdeaServiceSelector seed(KeywordPlanIdeaServiceSeed seed) {
+  public KeywordPlanIdeaServiceSelector seed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceSeed seed) {
     
     this.seed = seed;
     return this;
   }
 
-   /**
+  /**
    * Get seed
    * @return seed
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEED)
+  @JsonProperty(value = JSON_PROPERTY_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public KeywordPlanIdeaServiceSeed getSeed() {
@@ -95,27 +98,26 @@ public class KeywordPlanIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEED)
+  @JsonProperty(value = JSON_PROPERTY_SEED, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setSeed(KeywordPlanIdeaServiceSeed seed) {
+  public void setSeed(@jakarta.annotation.Nullable KeywordPlanIdeaServiceSeed seed) {
     this.seed = seed;
   }
 
-
-  public KeywordPlanIdeaServiceSelector numberResults(Integer numberResults) {
+  public KeywordPlanIdeaServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -123,26 +125,25 @@ public class KeywordPlanIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public KeywordPlanIdeaServiceSelector pageIndex(Integer pageIndex) {
+  public KeywordPlanIdeaServiceSelector pageIndex(@jakarta.annotation.Nullable Integer pageIndex) {
     
     this.pageIndex = pageIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページ番号です。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Page number. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return pageIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getPageIndex() {
@@ -150,11 +151,12 @@ public class KeywordPlanIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageIndex(Integer pageIndex) {
+  public void setPageIndex(@jakarta.annotation.Nullable Integer pageIndex) {
     this.pageIndex = pageIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -193,10 +195,7 @@ public class KeywordPlanIdeaServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

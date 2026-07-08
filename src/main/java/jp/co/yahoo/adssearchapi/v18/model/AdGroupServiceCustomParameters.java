@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupServiceCustomParameter;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupServiceIsRemove;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※SET時、トラッキングURLが審査中の場合、編集はできません。また、変更がない場合、審査対象とはなりません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional.&lt;br&gt; *In SET operation, cannot update it when Tracking URL is in editorial review. In addition, if there is no change, it will not to be reviewed.&lt;/div&gt; 
@@ -34,29 +35,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   AdGroupServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemove isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
+  @jakarta.annotation.Nullable
   private List<AdGroupServiceCustomParameter> parameters;
 
   public AdGroupServiceCustomParameters() {
   }
 
-  public AdGroupServiceCustomParameters isRemove(AdGroupServiceIsRemove isRemove) {
+  public AdGroupServiceCustomParameters isRemove(@jakarta.annotation.Nullable AdGroupServiceIsRemove isRemove) {
     
     this.isRemove = isRemove;
     return this;
   }
 
-   /**
+  /**
    * Get isRemove
    * @return isRemove
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemove getIsRemove() {
@@ -64,14 +67,13 @@ public class AdGroupServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemove(AdGroupServiceIsRemove isRemove) {
+  public void setIsRemove(@jakarta.annotation.Nullable AdGroupServiceIsRemove isRemove) {
     this.isRemove = isRemove;
   }
 
-
-  public AdGroupServiceCustomParameters parameters(List<AdGroupServiceCustomParameter> parameters) {
+  public AdGroupServiceCustomParameters parameters(@jakarta.annotation.Nullable List<AdGroupServiceCustomParameter> parameters) {
     
     this.parameters = parameters;
     return this;
@@ -85,12 +87,12 @@ public class AdGroupServiceCustomParameters {
     return this;
   }
 
-   /**
+  /**
    * Get parameters
    * @return parameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupServiceCustomParameter> getParameters() {
@@ -98,11 +100,12 @@ public class AdGroupServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParameters(List<AdGroupServiceCustomParameter> parameters) {
+  public void setParameters(@jakarta.annotation.Nullable List<AdGroupServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -137,10 +140,7 @@ public class AdGroupServiceCustomParameters {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

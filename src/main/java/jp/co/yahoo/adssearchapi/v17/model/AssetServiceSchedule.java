@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.AssetServiceDayOfWeek;
 import jp.co.yahoo.adssearchapi.v17.model.AssetServiceMinuteOfHour;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceScheduleオブジェクトは、広告表示アセットの配信スケジュール設定を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceSchedule object describes display schedule from ad display asset.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
@@ -35,38 +35,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceSchedule.JSON_PROPERTY_START_HOUR,
   AssetServiceSchedule.JSON_PROPERTY_START_MINUTE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AssetServiceSchedule {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "dayOfWeek";
+  @jakarta.annotation.Nullable
   private AssetServiceDayOfWeek dayOfWeek;
 
   public static final String JSON_PROPERTY_END_HOUR = "endHour";
+  @jakarta.annotation.Nullable
   private Long endHour;
 
   public static final String JSON_PROPERTY_END_MINUTE = "endMinute";
+  @jakarta.annotation.Nullable
   private AssetServiceMinuteOfHour endMinute;
 
   public static final String JSON_PROPERTY_START_HOUR = "startHour";
+  @jakarta.annotation.Nullable
   private Long startHour;
 
   public static final String JSON_PROPERTY_START_MINUTE = "startMinute";
+  @jakarta.annotation.Nullable
   private AssetServiceMinuteOfHour startMinute;
 
   public AssetServiceSchedule() {
   }
 
-  public AssetServiceSchedule dayOfWeek(AssetServiceDayOfWeek dayOfWeek) {
+  public AssetServiceSchedule dayOfWeek(@jakarta.annotation.Nullable AssetServiceDayOfWeek dayOfWeek) {
     
     this.dayOfWeek = dayOfWeek;
     return this;
   }
 
-   /**
+  /**
    * Get dayOfWeek
    * @return dayOfWeek
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+  @JsonProperty(value = JSON_PROPERTY_DAY_OF_WEEK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceDayOfWeek getDayOfWeek() {
@@ -74,25 +79,24 @@ public class AssetServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+  @JsonProperty(value = JSON_PROPERTY_DAY_OF_WEEK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDayOfWeek(AssetServiceDayOfWeek dayOfWeek) {
+  public void setDayOfWeek(@jakarta.annotation.Nullable AssetServiceDayOfWeek dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
-
-  public AssetServiceSchedule endHour(Long endHour) {
+  public AssetServiceSchedule endHour(@jakarta.annotation.Nullable Long endHour) {
     
     this.endHour = endHour;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;終了時です。&lt;br&gt; ※0 ～ 24の範囲で設定してください。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End time in hour.&lt;br&gt; *Specify from 0 - 24.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return endHour
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_END_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getEndHour() {
@@ -100,25 +104,24 @@ public class AssetServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_END_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndHour(Long endHour) {
+  public void setEndHour(@jakarta.annotation.Nullable Long endHour) {
     this.endHour = endHour;
   }
 
-
-  public AssetServiceSchedule endMinute(AssetServiceMinuteOfHour endMinute) {
+  public AssetServiceSchedule endMinute(@jakarta.annotation.Nullable AssetServiceMinuteOfHour endMinute) {
     
     this.endMinute = endMinute;
     return this;
   }
 
-   /**
+  /**
    * Get endMinute
    * @return endMinute
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_MINUTE)
+  @JsonProperty(value = JSON_PROPERTY_END_MINUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceMinuteOfHour getEndMinute() {
@@ -126,25 +129,24 @@ public class AssetServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_MINUTE)
+  @JsonProperty(value = JSON_PROPERTY_END_MINUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndMinute(AssetServiceMinuteOfHour endMinute) {
+  public void setEndMinute(@jakarta.annotation.Nullable AssetServiceMinuteOfHour endMinute) {
     this.endMinute = endMinute;
   }
 
-
-  public AssetServiceSchedule startHour(Long startHour) {
+  public AssetServiceSchedule startHour(@jakarta.annotation.Nullable Long startHour) {
     
     this.startHour = startHour;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始時です。&lt;br&gt; ※0 ～ 23の範囲で設定してください。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start time in hour.&lt;br&gt; *Specify from 0 - 23.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return startHour
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_START_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getStartHour() {
@@ -152,25 +154,24 @@ public class AssetServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_START_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartHour(Long startHour) {
+  public void setStartHour(@jakarta.annotation.Nullable Long startHour) {
     this.startHour = startHour;
   }
 
-
-  public AssetServiceSchedule startMinute(AssetServiceMinuteOfHour startMinute) {
+  public AssetServiceSchedule startMinute(@jakarta.annotation.Nullable AssetServiceMinuteOfHour startMinute) {
     
     this.startMinute = startMinute;
     return this;
   }
 
-   /**
+  /**
    * Get startMinute
    * @return startMinute
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_MINUTE)
+  @JsonProperty(value = JSON_PROPERTY_START_MINUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceMinuteOfHour getStartMinute() {
@@ -178,11 +179,12 @@ public class AssetServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_MINUTE)
+  @JsonProperty(value = JSON_PROPERTY_START_MINUTE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartMinute(AssetServiceMinuteOfHour startMinute) {
+  public void setStartMinute(@jakarta.annotation.Nullable AssetServiceMinuteOfHour startMinute) {
     this.startMinute = startMinute;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -223,10 +225,7 @@ public class AssetServiceSchedule {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

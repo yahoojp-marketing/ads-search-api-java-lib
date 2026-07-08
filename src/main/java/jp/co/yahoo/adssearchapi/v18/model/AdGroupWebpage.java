@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupWebpageServiceBid;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupWebpageServiceExcludedType;
@@ -26,6 +25,7 @@ import jp.co.yahoo.adssearchapi.v18.model.AdGroupWebpageServiceUserStatus;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupWebpageServiceWebpage;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageオブジェクトは、広告グループに関連付けた配信/除外設定の情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpage object contains information of allowed or excluded settings setup to adgroup.&lt;/div&gt; 
@@ -41,50 +41,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupWebpage.JSON_PROPERTY_USER_STATUS,
   AdGroupWebpage.JSON_PROPERTY_WEBPAGE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupWebpage {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_AD_GROUP_TRACK_ID = "adGroupTrackId";
+  @jakarta.annotation.Nullable
   private Long adGroupTrackId;
 
   public static final String JSON_PROPERTY_BID = "bid";
+  @jakarta.annotation.Nullable
   private AdGroupWebpageServiceBid bid;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_TRACK_ID = "campaignTrackId";
+  @jakarta.annotation.Nullable
   private Long campaignTrackId;
 
   public static final String JSON_PROPERTY_EXCLUDED_TYPE = "excludedType";
+  @jakarta.annotation.Nullable
   private AdGroupWebpageServiceExcludedType excludedType;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private AdGroupWebpageServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_WEBPAGE = "webpage";
+  @jakarta.annotation.Nullable
   private AdGroupWebpageServiceWebpage webpage;
 
   public AdGroupWebpage() {
   }
 
-  public AdGroupWebpage accountId(Long accountId) {
+  public AdGroupWebpage accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -92,25 +101,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AdGroupWebpage adGroupId(Long adGroupId) {
+  public AdGroupWebpage adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループIDです。&lt;br&gt;このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID.&lt;br&gt;This field is required in any cases.&lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -118,25 +126,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public AdGroupWebpage adGroupTrackId(Long adGroupTrackId) {
+  public AdGroupWebpage adGroupTrackId(@jakarta.annotation.Nullable Long adGroupTrackId) {
     
     this.adGroupTrackId = adGroupTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループトラッキングIDです。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group tracking ID.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return adGroupTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupTrackId() {
@@ -144,25 +151,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupTrackId(Long adGroupTrackId) {
+  public void setAdGroupTrackId(@jakarta.annotation.Nullable Long adGroupTrackId) {
     this.adGroupTrackId = adGroupTrackId;
   }
 
-
-  public AdGroupWebpage bid(AdGroupWebpageServiceBid bid) {
+  public AdGroupWebpage bid(@jakarta.annotation.Nullable AdGroupWebpageServiceBid bid) {
     
     this.bid = bid;
     return this;
   }
 
-   /**
+  /**
    * Get bid
    * @return bid
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID)
+  @JsonProperty(value = JSON_PROPERTY_BID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupWebpageServiceBid getBid() {
@@ -170,25 +176,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID)
+  @JsonProperty(value = JSON_PROPERTY_BID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBid(AdGroupWebpageServiceBid bid) {
+  public void setBid(@jakarta.annotation.Nullable AdGroupWebpageServiceBid bid) {
     this.bid = bid;
   }
 
-
-  public AdGroupWebpage campaignId(Long campaignId) {
+  public AdGroupWebpage campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt;このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt;This field is required in any cases.&lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -196,25 +201,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public AdGroupWebpage campaignTrackId(Long campaignTrackId) {
+  public AdGroupWebpage campaignTrackId(@jakarta.annotation.Nullable Long campaignTrackId) {
     
     this.campaignTrackId = campaignTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーントラッキングIDです。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign tracking ID.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return campaignTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignTrackId() {
@@ -222,25 +226,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignTrackId(Long campaignTrackId) {
+  public void setCampaignTrackId(@jakarta.annotation.Nullable Long campaignTrackId) {
     this.campaignTrackId = campaignTrackId;
   }
 
-
-  public AdGroupWebpage excludedType(AdGroupWebpageServiceExcludedType excludedType) {
+  public AdGroupWebpage excludedType(@jakarta.annotation.Nullable AdGroupWebpageServiceExcludedType excludedType) {
     
     this.excludedType = excludedType;
     return this;
   }
 
-   /**
+  /**
    * Get excludedType
    * @return excludedType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupWebpageServiceExcludedType getExcludedType() {
@@ -248,25 +251,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcludedType(AdGroupWebpageServiceExcludedType excludedType) {
+  public void setExcludedType(@jakarta.annotation.Nullable AdGroupWebpageServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
 
-
-  public AdGroupWebpage userStatus(AdGroupWebpageServiceUserStatus userStatus) {
+  public AdGroupWebpage userStatus(@jakarta.annotation.Nullable AdGroupWebpageServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupWebpageServiceUserStatus getUserStatus() {
@@ -274,25 +276,24 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(AdGroupWebpageServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable AdGroupWebpageServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
-
-  public AdGroupWebpage webpage(AdGroupWebpageServiceWebpage webpage) {
+  public AdGroupWebpage webpage(@jakarta.annotation.Nullable AdGroupWebpageServiceWebpage webpage) {
     
     this.webpage = webpage;
     return this;
   }
 
-   /**
+  /**
    * Get webpage
    * @return webpage
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WEBPAGE)
+  @JsonProperty(value = JSON_PROPERTY_WEBPAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupWebpageServiceWebpage getWebpage() {
@@ -300,11 +301,12 @@ public class AdGroupWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WEBPAGE)
+  @JsonProperty(value = JSON_PROPERTY_WEBPAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWebpage(AdGroupWebpageServiceWebpage webpage) {
+  public void setWebpage(@jakarta.annotation.Nullable AdGroupWebpageServiceWebpage webpage) {
     this.webpage = webpage;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -353,10 +355,7 @@ public class AdGroupWebpage {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

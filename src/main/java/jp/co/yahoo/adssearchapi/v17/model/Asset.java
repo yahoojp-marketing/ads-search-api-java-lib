@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.AssetServiceApprovalStatus;
 import jp.co.yahoo.adssearchapi.v17.model.AssetServiceAssetData;
@@ -28,6 +28,7 @@ import jp.co.yahoo.adssearchapi.v17.model.AssetServiceCustomParameters;
 import jp.co.yahoo.adssearchapi.v17.model.AssetServiceTrademarkStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Assetオブジェクトは、アセット情報を格納します。&lt;br&gt; ※type&#x3D;IMAGE, FAVICONのアセットを登録するときは最大1件となります。&lt;br&gt; ※REMOVE時は最大100件となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset object contains the information of Asset.&lt;br&gt; *In the case of &#x60;type&#x3D;IMAGE, FAVICON&#x60;, the operand size is limited to one item.&lt;br&gt; *In the case of &#x60;REMOVE&#x60;, the operand size is limited to 100 items.&lt;/div&gt; 
@@ -50,71 +51,87 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Asset.JSON_PROPERTY_TRACKING_URL,
   Asset.JSON_PROPERTY_REVIEW_TRACKING_URL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class Asset {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_ASSET_ID = "assetId";
+  @jakarta.annotation.Nullable
   private Long assetId;
 
   public static final String JSON_PROPERTY_ASSET_TRACK_ID = "assetTrackId";
+  @jakarta.annotation.Nullable
   private Long assetTrackId;
 
   public static final String JSON_PROPERTY_ASSET_DATA = "assetData";
+  @jakarta.annotation.Nullable
   private AssetServiceAssetData assetData;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private AssetServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_INVALIDED_TRADEMARKS = "invalidedTrademarks";
+  @jakarta.annotation.Nullable
   private List<String> invalidedTrademarks;
 
   public static final String JSON_PROPERTY_TRADEMARK_STATUS = "trademarkStatus";
+  @jakarta.annotation.Nullable
   private AssetServiceTrademarkStatus trademarkStatus;
 
   public static final String JSON_PROPERTY_CUSTOM_PARAMETERS = "customParameters";
+  @jakarta.annotation.Nullable
   private AssetServiceCustomParameters customParameters;
 
   public static final String JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS = "reviewCustomParameters";
+  @jakarta.annotation.Nullable
   private AssetServiceCustomParameters reviewCustomParameters;
 
   public static final String JSON_PROPERTY_SMARTPHONE_FINAL_URL = "smartphoneFinalUrl";
+  @jakarta.annotation.Nullable
   private String smartphoneFinalUrl;
 
   public static final String JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL = "reviewSmartphoneFinalUrl";
+  @jakarta.annotation.Nullable
   private String reviewSmartphoneFinalUrl;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
+  @jakarta.annotation.Nullable
   private String finalUrl;
 
   public static final String JSON_PROPERTY_REVIEW_FINAL_URL = "reviewFinalUrl";
+  @jakarta.annotation.Nullable
   private String reviewFinalUrl;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
+  @jakarta.annotation.Nullable
   private String trackingUrl;
 
   public static final String JSON_PROPERTY_REVIEW_TRACKING_URL = "reviewTrackingUrl";
+  @jakarta.annotation.Nullable
   private String reviewTrackingUrl;
 
   public Asset() {
   }
 
-  public Asset accountId(Long accountId) {
+  public Asset accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -122,25 +139,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public Asset assetId(Long assetId) {
+  public Asset assetId(@jakarta.annotation.Nullable Long assetId) {
     
     this.assetId = assetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセットIDです。&lt;br&gt; このフィールドは、SET時に必須となり、ADD時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset ID.&lt;br&gt;This field is required in SET operation, and will be ignored in ADD operation.&lt;/div&gt; 
    * @return assetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ASSET_ID)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAssetId() {
@@ -148,25 +164,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ASSET_ID)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAssetId(Long assetId) {
+  public void setAssetId(@jakarta.annotation.Nullable Long assetId) {
     this.assetId = assetId;
   }
 
-
-  public Asset assetTrackId(Long assetTrackId) {
+  public Asset assetTrackId(@jakarta.annotation.Nullable Long assetTrackId) {
     
     this.assetTrackId = assetTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキング用アセットIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset ID for tracking.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return assetTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ASSET_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAssetTrackId() {
@@ -174,25 +189,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ASSET_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAssetTrackId(Long assetTrackId) {
+  public void setAssetTrackId(@jakarta.annotation.Nullable Long assetTrackId) {
     this.assetTrackId = assetTrackId;
   }
 
-
-  public Asset assetData(AssetServiceAssetData assetData) {
+  public Asset assetData(@jakarta.annotation.Nullable AssetServiceAssetData assetData) {
     
     this.assetData = assetData;
     return this;
   }
 
-   /**
+  /**
    * Get assetData
    * @return assetData
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ASSET_DATA)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceAssetData getAssetData() {
@@ -200,25 +214,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ASSET_DATA)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAssetData(AssetServiceAssetData assetData) {
+  public void setAssetData(@jakarta.annotation.Nullable AssetServiceAssetData assetData) {
     this.assetData = assetData;
   }
 
-
-  public Asset approvalStatus(AssetServiceApprovalStatus approvalStatus) {
+  public Asset approvalStatus(@jakarta.annotation.Nullable AssetServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceApprovalStatus getApprovalStatus() {
@@ -226,14 +239,13 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(AssetServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable AssetServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public Asset disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public Asset disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -247,12 +259,12 @@ public class Asset {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reject reason on editorial review.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -260,14 +272,13 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public Asset invalidedTrademarks(List<String> invalidedTrademarks) {
+  public Asset invalidedTrademarks(@jakarta.annotation.Nullable List<String> invalidedTrademarks) {
     
     this.invalidedTrademarks = invalidedTrademarks;
     return this;
@@ -281,12 +292,12 @@ public class Asset {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;制限された商標です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Invalided trademarks.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return invalidedTrademarks
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INVALIDED_TRADEMARKS)
+  @JsonProperty(value = JSON_PROPERTY_INVALIDED_TRADEMARKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getInvalidedTrademarks() {
@@ -294,25 +305,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INVALIDED_TRADEMARKS)
+  @JsonProperty(value = JSON_PROPERTY_INVALIDED_TRADEMARKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInvalidedTrademarks(List<String> invalidedTrademarks) {
+  public void setInvalidedTrademarks(@jakarta.annotation.Nullable List<String> invalidedTrademarks) {
     this.invalidedTrademarks = invalidedTrademarks;
   }
 
-
-  public Asset trademarkStatus(AssetServiceTrademarkStatus trademarkStatus) {
+  public Asset trademarkStatus(@jakarta.annotation.Nullable AssetServiceTrademarkStatus trademarkStatus) {
     
     this.trademarkStatus = trademarkStatus;
     return this;
   }
 
-   /**
+  /**
    * Get trademarkStatus
    * @return trademarkStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRADEMARK_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_TRADEMARK_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceTrademarkStatus getTrademarkStatus() {
@@ -320,25 +330,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRADEMARK_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_TRADEMARK_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrademarkStatus(AssetServiceTrademarkStatus trademarkStatus) {
+  public void setTrademarkStatus(@jakarta.annotation.Nullable AssetServiceTrademarkStatus trademarkStatus) {
     this.trademarkStatus = trademarkStatus;
   }
 
-
-  public Asset customParameters(AssetServiceCustomParameters customParameters) {
+  public Asset customParameters(@jakarta.annotation.Nullable AssetServiceCustomParameters customParameters) {
     
     this.customParameters = customParameters;
     return this;
   }
 
-   /**
+  /**
    * Get customParameters
    * @return customParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceCustomParameters getCustomParameters() {
@@ -346,25 +355,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomParameters(AssetServiceCustomParameters customParameters) {
+  public void setCustomParameters(@jakarta.annotation.Nullable AssetServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
-
-  public Asset reviewCustomParameters(AssetServiceCustomParameters reviewCustomParameters) {
+  public Asset reviewCustomParameters(@jakarta.annotation.Nullable AssetServiceCustomParameters reviewCustomParameters) {
     
     this.reviewCustomParameters = reviewCustomParameters;
     return this;
   }
 
-   /**
+  /**
    * Get reviewCustomParameters
    * @return reviewCustomParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceCustomParameters getReviewCustomParameters() {
@@ -372,25 +380,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewCustomParameters(AssetServiceCustomParameters reviewCustomParameters) {
+  public void setReviewCustomParameters(@jakarta.annotation.Nullable AssetServiceCustomParameters reviewCustomParameters) {
     this.reviewCustomParameters = reviewCustomParameters;
   }
 
-
-  public Asset smartphoneFinalUrl(String smartphoneFinalUrl) {
+  public Asset smartphoneFinalUrl(@jakarta.annotation.Nullable String smartphoneFinalUrl) {
     
     this.smartphoneFinalUrl = smartphoneFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URL（スマートフォン）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing page URL (Smartphone).&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
    * @return smartphoneFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSmartphoneFinalUrl() {
@@ -398,25 +405,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartphoneFinalUrl(String smartphoneFinalUrl) {
+  public void setSmartphoneFinalUrl(@jakarta.annotation.Nullable String smartphoneFinalUrl) {
     this.smartphoneFinalUrl = smartphoneFinalUrl;
   }
 
-
-  public Asset reviewSmartphoneFinalUrl(String reviewSmartphoneFinalUrl) {
+  public Asset reviewSmartphoneFinalUrl(@jakarta.annotation.Nullable String reviewSmartphoneFinalUrl) {
     
     this.reviewSmartphoneFinalUrl = reviewSmartphoneFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の最終リンク先URL（スマートフォン）です。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing page URL (Smartphone) on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewSmartphoneFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewSmartphoneFinalUrl() {
@@ -424,25 +430,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewSmartphoneFinalUrl(String reviewSmartphoneFinalUrl) {
+  public void setReviewSmartphoneFinalUrl(@jakarta.annotation.Nullable String reviewSmartphoneFinalUrl) {
     this.reviewSmartphoneFinalUrl = reviewSmartphoneFinalUrl;
   }
 
-
-  public Asset finalUrl(String finalUrl) {
+  public Asset finalUrl(@jakarta.annotation.Nullable String finalUrl) {
     
     this.finalUrl = finalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; ADDおよびSET時、assetData.typeがQUICKLINKの場合は必須です。&lt;br&gt; assetData.typeがQUICKLINK以外の場合、リクエストの際に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing page URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; In ADD and SET operation, If assetData.type is QUICKLINK, this field is required.&lt;br&gt; And will be ignored when assetData.type is the others.&lt;/div&gt; 
    * @return finalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFinalUrl() {
@@ -450,25 +455,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFinalUrl(String finalUrl) {
+  public void setFinalUrl(@jakarta.annotation.Nullable String finalUrl) {
     this.finalUrl = finalUrl;
   }
 
-
-  public Asset reviewFinalUrl(String reviewFinalUrl) {
+  public Asset reviewFinalUrl(@jakarta.annotation.Nullable String reviewFinalUrl) {
     
     this.reviewFinalUrl = reviewFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の最終リンク先URLです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Landing page URL on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewFinalUrl() {
@@ -476,25 +480,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewFinalUrl(String reviewFinalUrl) {
+  public void setReviewFinalUrl(@jakarta.annotation.Nullable String reviewFinalUrl) {
     this.reviewFinalUrl = reviewFinalUrl;
   }
 
-
-  public Asset trackingUrl(String trackingUrl) {
+  public Asset trackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     
     this.trackingUrl = trackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
    * @return trackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingUrl() {
@@ -502,25 +505,24 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingUrl(String trackingUrl) {
+  public void setTrackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
-
-  public Asset reviewTrackingUrl(String reviewTrackingUrl) {
+  public Asset reviewTrackingUrl(@jakarta.annotation.Nullable String reviewTrackingUrl) {
     
     this.reviewTrackingUrl = reviewTrackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のトラッキングURLです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewTrackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewTrackingUrl() {
@@ -528,11 +530,12 @@ public class Asset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewTrackingUrl(String reviewTrackingUrl) {
+  public void setReviewTrackingUrl(@jakarta.annotation.Nullable String reviewTrackingUrl) {
     this.reviewTrackingUrl = reviewTrackingUrl;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -595,10 +598,7 @@ public class Asset {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

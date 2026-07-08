@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingStrategyServiceTargetCpaBiddingSchemeオブジェクトは、コンバージョン単価の目標値の自動入札設定情報を表します。&lt;br&gt; このフィールドは、省略可能となります。※ADD時、typeがTARGET_CPAの場合は必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingStrategyServiceTargetCpaBiddingScheme object displays auto bidding setting for Target CPA.&lt;br&gt; This field is optional. *If type is &#39;TARGET_CPA&#39;, this field is required in ADD operation.&lt;/div&gt; 
@@ -31,32 +31,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BiddingStrategyServiceTargetCpaBiddingScheme.JSON_PROPERTY_BID_FLOOR,
   BiddingStrategyServiceTargetCpaBiddingScheme.JSON_PROPERTY_TARGET_CPA
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BiddingStrategyServiceTargetCpaBiddingScheme {
   public static final String JSON_PROPERTY_BID_CEILING = "bidCeiling";
+  @jakarta.annotation.Nullable
   private Long bidCeiling;
 
   public static final String JSON_PROPERTY_BID_FLOOR = "bidFloor";
+  @jakarta.annotation.Nullable
   private Long bidFloor;
 
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
+  @jakarta.annotation.Nullable
   private Long targetCpa;
 
   public BiddingStrategyServiceTargetCpaBiddingScheme() {
   }
 
-  public BiddingStrategyServiceTargetCpaBiddingScheme bidCeiling(Long bidCeiling) {
+  public BiddingStrategyServiceTargetCpaBiddingScheme bidCeiling(@jakarta.annotation.Nullable Long bidCeiling) {
     
     this.bidCeiling = bidCeiling;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の上限です。&lt;br&gt;※「0」が設定された場合、上限設定はありません。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CPC limit.&lt;br&gt;* No limits if &amp;#34;0&amp;#34; is set.&lt;br&gt; This field is optional in any cases.&lt;/div&gt; 
    * @return bidCeiling
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_CEILING)
+  @JsonProperty(value = JSON_PROPERTY_BID_CEILING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getBidCeiling() {
@@ -64,25 +67,24 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_CEILING)
+  @JsonProperty(value = JSON_PROPERTY_BID_CEILING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidCeiling(Long bidCeiling) {
+  public void setBidCeiling(@jakarta.annotation.Nullable Long bidCeiling) {
     this.bidCeiling = bidCeiling;
   }
 
-
-  public BiddingStrategyServiceTargetCpaBiddingScheme bidFloor(Long bidFloor) {
+  public BiddingStrategyServiceTargetCpaBiddingScheme bidFloor(@jakarta.annotation.Nullable Long bidFloor) {
     
     this.bidFloor = bidFloor;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入札価格の下限です。&lt;br&gt;※ 設定を解除する場合は「0」を指定します。&lt;br&gt; このフィールドは、いずれの場合でも省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Minimum CPC.&lt;br&gt; * Set &amp;#34;0&amp;#34; to deactivate.&lt;br&gt;This field is optional in any cases.&lt;/div&gt; 
    * @return bidFloor
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_FLOOR)
+  @JsonProperty(value = JSON_PROPERTY_BID_FLOOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getBidFloor() {
@@ -90,25 +92,24 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_FLOOR)
+  @JsonProperty(value = JSON_PROPERTY_BID_FLOOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidFloor(Long bidFloor) {
+  public void setBidFloor(@jakarta.annotation.Nullable Long bidFloor) {
     this.bidFloor = bidFloor;
   }
 
-
-  public BiddingStrategyServiceTargetCpaBiddingScheme targetCpa(Long targetCpa) {
+  public BiddingStrategyServiceTargetCpaBiddingScheme targetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     
     this.targetCpa = targetCpa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン単価の目標値です（日本円です）。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Target CPA (JPY).&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return targetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetCpa() {
@@ -116,11 +117,12 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetCpa(Long targetCpa) {
+  public void setTargetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     this.targetCpa = targetCpa;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +159,7 @@ public class BiddingStrategyServiceTargetCpaBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

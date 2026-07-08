@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServiceReviewSummaryオブジェクトは、ページフィードアセットの審査成績、状況サマリーを格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServiceReviewSummary object retains the examination results of the page feed asset, the situation summary acquisition result.&lt;/div&gt; 
@@ -36,47 +36,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedAssetServiceReviewSummary.JSON_PROPERTY_PRE_DISAPPROVED_COUNT,
   PageFeedAssetServiceReviewSummary.JSON_PROPERTY_REVIEW_COUNT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PageFeedAssetServiceReviewSummary {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_APPROVED_COUNT = "approvedCount";
+  @jakarta.annotation.Nullable
   private Long approvedCount;
 
   public static final String JSON_PROPERTY_APPROVED_WITH_REVIEW_COUNT = "approvedWithReviewCount";
+  @jakarta.annotation.Nullable
   private Long approvedWithReviewCount;
 
   public static final String JSON_PROPERTY_ENTITY_COUNT = "entityCount";
+  @jakarta.annotation.Nullable
   private Long entityCount;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID = "pageFeedAssetSetId";
+  @jakarta.annotation.Nullable
   private Long pageFeedAssetSetId;
 
   public static final String JSON_PROPERTY_POST_DISAPPROVED_COUNT = "postDisapprovedCount";
+  @jakarta.annotation.Nullable
   private Long postDisapprovedCount;
 
   public static final String JSON_PROPERTY_PRE_DISAPPROVED_COUNT = "preDisapprovedCount";
+  @jakarta.annotation.Nullable
   private Long preDisapprovedCount;
 
   public static final String JSON_PROPERTY_REVIEW_COUNT = "reviewCount";
+  @jakarta.annotation.Nullable
   private Long reviewCount;
 
   public PageFeedAssetServiceReviewSummary() {
   }
 
-  public PageFeedAssetServiceReviewSummary accountId(Long accountId) {
+  public PageFeedAssetServiceReviewSummary accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -84,25 +92,24 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public PageFeedAssetServiceReviewSummary approvedCount(Long approvedCount) {
+  public PageFeedAssetServiceReviewSummary approvedCount(@jakarta.annotation.Nullable Long approvedCount) {
     
     this.approvedCount = approvedCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;承認済みの件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of approved.&lt;/div&gt; 
    * @return approvedCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVED_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_APPROVED_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getApprovedCount() {
@@ -110,25 +117,24 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVED_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_APPROVED_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovedCount(Long approvedCount) {
+  public void setApprovedCount(@jakarta.annotation.Nullable Long approvedCount) {
     this.approvedCount = approvedCount;
   }
 
-
-  public PageFeedAssetServiceReviewSummary approvedWithReviewCount(Long approvedWithReviewCount) {
+  public PageFeedAssetServiceReviewSummary approvedWithReviewCount(@jakarta.annotation.Nullable Long approvedWithReviewCount) {
     
     this.approvedWithReviewCount = approvedWithReviewCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;編集内容審査中の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of approved with review.&lt;/div&gt; 
    * @return approvedWithReviewCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVED_WITH_REVIEW_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_APPROVED_WITH_REVIEW_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getApprovedWithReviewCount() {
@@ -136,25 +142,24 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVED_WITH_REVIEW_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_APPROVED_WITH_REVIEW_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovedWithReviewCount(Long approvedWithReviewCount) {
+  public void setApprovedWithReviewCount(@jakarta.annotation.Nullable Long approvedWithReviewCount) {
     this.approvedWithReviewCount = approvedWithReviewCount;
   }
 
-
-  public PageFeedAssetServiceReviewSummary entityCount(Long entityCount) {
+  public PageFeedAssetServiceReviewSummary entityCount(@jakarta.annotation.Nullable Long entityCount) {
     
     this.entityCount = entityCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセット内にあるページフィードアセットの総件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total count of page feed asset in page feed asset set.&lt;/div&gt; 
    * @return entityCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENTITY_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_ENTITY_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getEntityCount() {
@@ -162,25 +167,24 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENTITY_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_ENTITY_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEntityCount(Long entityCount) {
+  public void setEntityCount(@jakarta.annotation.Nullable Long entityCount) {
     this.entityCount = entityCount;
   }
 
-
-  public PageFeedAssetServiceReviewSummary pageFeedAssetSetId(Long pageFeedAssetSetId) {
+  public PageFeedAssetServiceReviewSummary pageFeedAssetSetId(@jakarta.annotation.Nullable Long pageFeedAssetSetId) {
     
     this.pageFeedAssetSetId = pageFeedAssetSetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet ID.&lt;/div&gt; 
    * @return pageFeedAssetSetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPageFeedAssetSetId() {
@@ -188,25 +192,24 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetSetId(Long pageFeedAssetSetId) {
+  public void setPageFeedAssetSetId(@jakarta.annotation.Nullable Long pageFeedAssetSetId) {
     this.pageFeedAssetSetId = pageFeedAssetSetId;
   }
 
-
-  public PageFeedAssetServiceReviewSummary postDisapprovedCount(Long postDisapprovedCount) {
+  public PageFeedAssetServiceReviewSummary postDisapprovedCount(@jakarta.annotation.Nullable Long postDisapprovedCount) {
     
     this.postDisapprovedCount = postDisapprovedCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信停止の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of distribution cancelled.&lt;/div&gt; 
    * @return postDisapprovedCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_POST_DISAPPROVED_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_POST_DISAPPROVED_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPostDisapprovedCount() {
@@ -214,25 +217,24 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_POST_DISAPPROVED_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_POST_DISAPPROVED_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPostDisapprovedCount(Long postDisapprovedCount) {
+  public void setPostDisapprovedCount(@jakarta.annotation.Nullable Long postDisapprovedCount) {
     this.postDisapprovedCount = postDisapprovedCount;
   }
 
-
-  public PageFeedAssetServiceReviewSummary preDisapprovedCount(Long preDisapprovedCount) {
+  public PageFeedAssetServiceReviewSummary preDisapprovedCount(@jakarta.annotation.Nullable Long preDisapprovedCount) {
     
     this.preDisapprovedCount = preDisapprovedCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載不可の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of disapproved.&lt;/div&gt; 
    * @return preDisapprovedCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRE_DISAPPROVED_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_PRE_DISAPPROVED_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPreDisapprovedCount() {
@@ -240,25 +242,24 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PRE_DISAPPROVED_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_PRE_DISAPPROVED_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPreDisapprovedCount(Long preDisapprovedCount) {
+  public void setPreDisapprovedCount(@jakarta.annotation.Nullable Long preDisapprovedCount) {
     this.preDisapprovedCount = preDisapprovedCount;
   }
 
-
-  public PageFeedAssetServiceReviewSummary reviewCount(Long reviewCount) {
+  public PageFeedAssetServiceReviewSummary reviewCount(@jakarta.annotation.Nullable Long reviewCount) {
     
     this.reviewCount = reviewCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Count of review.&lt;/div&gt; 
    * @return reviewCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReviewCount() {
@@ -266,11 +267,12 @@ public class PageFeedAssetServiceReviewSummary {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewCount(Long reviewCount) {
+  public void setReviewCount(@jakarta.annotation.Nullable Long reviewCount) {
     this.reviewCount = reviewCount;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -317,10 +319,7 @@ public class PageFeedAssetServiceReviewSummary {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.AdGroupServiceBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceBiddingStrategyConfigurationオブジェクトは、自動入札設定方法を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceBiddingStrategyConfiguration object describes auto bidding setting.&lt;br&gt; &lt;/div&gt; 
@@ -32,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_PORTFOLIO_BIDDING_ID,
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_PORTFOLIO_BIDDING_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceBiddingStrategyConfiguration {
   public static final String JSON_PROPERTY_BIDDING_SCHEME = "biddingScheme";
+  @jakarta.annotation.Nullable
   private AdGroupServiceBiddingScheme biddingScheme;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_ID = "portfolioBiddingId";
+  @jakarta.annotation.Nullable
   private Long portfolioBiddingId;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_NAME = "portfolioBiddingName";
+  @jakarta.annotation.Nullable
   private String portfolioBiddingName;
 
   public AdGroupServiceBiddingStrategyConfiguration() {
   }
 
-  public AdGroupServiceBiddingStrategyConfiguration biddingScheme(AdGroupServiceBiddingScheme biddingScheme) {
+  public AdGroupServiceBiddingStrategyConfiguration biddingScheme(@jakarta.annotation.Nullable AdGroupServiceBiddingScheme biddingScheme) {
     
     this.biddingScheme = biddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get biddingScheme
    * @return biddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceBiddingScheme getBiddingScheme() {
@@ -65,25 +68,24 @@ public class AdGroupServiceBiddingStrategyConfiguration {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingScheme(AdGroupServiceBiddingScheme biddingScheme) {
+  public void setBiddingScheme(@jakarta.annotation.Nullable AdGroupServiceBiddingScheme biddingScheme) {
     this.biddingScheme = biddingScheme;
   }
 
-
-  public AdGroupServiceBiddingStrategyConfiguration portfolioBiddingId(Long portfolioBiddingId) {
+  public AdGroupServiceBiddingStrategyConfiguration portfolioBiddingId(@jakarta.annotation.Nullable Long portfolioBiddingId) {
     
     this.portfolioBiddingId = portfolioBiddingId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return portfolioBiddingId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_ID)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPortfolioBiddingId() {
@@ -91,25 +93,24 @@ public class AdGroupServiceBiddingStrategyConfiguration {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_ID)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPortfolioBiddingId(Long portfolioBiddingId) {
+  public void setPortfolioBiddingId(@jakarta.annotation.Nullable Long portfolioBiddingId) {
     this.portfolioBiddingId = portfolioBiddingId;
   }
 
-
-  public AdGroupServiceBiddingStrategyConfiguration portfolioBiddingName(String portfolioBiddingName) {
+  public AdGroupServiceBiddingStrategyConfiguration portfolioBiddingName(@jakarta.annotation.Nullable String portfolioBiddingName) {
     
     this.portfolioBiddingName = portfolioBiddingName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札名です。&lt;br&gt; ADD時、このフィールドは無視されます。&lt;br&gt; ※50文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding name.&lt;br&gt; This field will be ignored in ADD operation.&lt;br&gt;* Up to 50 characters.&lt;/div&gt; 
    * @return portfolioBiddingName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_NAME)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPortfolioBiddingName() {
@@ -117,11 +118,12 @@ public class AdGroupServiceBiddingStrategyConfiguration {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_NAME)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPortfolioBiddingName(String portfolioBiddingName) {
+  public void setPortfolioBiddingName(@jakarta.annotation.Nullable String portfolioBiddingName) {
     this.portfolioBiddingName = portfolioBiddingName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +160,7 @@ public class AdGroupServiceBiddingStrategyConfiguration {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v17.model.RetargetingListServiceUrlRuleKey;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceUrlRuleItemは、URLルールの評価式を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ruleTypeがURL_RULEの場合、ADDおよびSET時にこのフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceUrlRuleItem is an object that holds evaluation of URL rules.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If ruleType is  URL_RULE, this field is required in ADD and SET operation.&lt;/div&gt; 
@@ -30,26 +30,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   RetargetingListServiceUrlRuleItem.JSON_PROPERTY_URL_RULE_KEY
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RetargetingListServiceUrlRuleItem {
   public static final String JSON_PROPERTY_URL_RULE_KEY = "urlRuleKey";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceUrlRuleKey urlRuleKey;
 
   public RetargetingListServiceUrlRuleItem() {
   }
 
-  public RetargetingListServiceUrlRuleItem urlRuleKey(RetargetingListServiceUrlRuleKey urlRuleKey) {
+  public RetargetingListServiceUrlRuleItem urlRuleKey(@jakarta.annotation.Nullable RetargetingListServiceUrlRuleKey urlRuleKey) {
     
     this.urlRuleKey = urlRuleKey;
     return this;
   }
 
-   /**
+  /**
    * Get urlRuleKey
    * @return urlRuleKey
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_RULE_KEY)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE_KEY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceUrlRuleKey getUrlRuleKey() {
@@ -57,11 +58,12 @@ public class RetargetingListServiceUrlRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_RULE_KEY)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE_KEY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlRuleKey(RetargetingListServiceUrlRuleKey urlRuleKey) {
+  public void setUrlRuleKey(@jakarta.annotation.Nullable RetargetingListServiceUrlRuleKey urlRuleKey) {
     this.urlRuleKey = urlRuleKey;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -94,10 +96,7 @@ public class RetargetingListServiceUrlRuleItem {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v18.model.CampaignServiceDynamicAdsForSearchSetting;
 import jp.co.yahoo.adssearchapi.v18.model.CampaignServiceGeoTargetTypeSetting;
@@ -26,6 +25,7 @@ import jp.co.yahoo.adssearchapi.v18.model.CampaignServiceSettingType;
 import jp.co.yahoo.adssearchapi.v18.model.CampaignServiceTargetingSetting;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceSettingsオブジェクトは、キャンペーンの地域ターゲットを格納するコンテナです。&lt;br&gt; ADD時、このフィールドは、campaignTypeがDYNAMIC_ADS_FOR_SEARCH_SETTINGの場合、必須となり、それ以外では省略可能となります。また、TargetingSettingが未設定の場合、デフォルト設定値は[SettingType:TARGET_LIST_SETTING, TargetAll:ACTIVE]となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceSettings object is container for geographic targeting  of campaign.&lt;br&gt; This field is required when campaignType is &#39;DYNAMIC_ADS_FOR_SEARCH_SETTING&#39; in ADD operation. For other campaignType, this field is optional in ADD operation. The default value will be TARGET_LIST_SETTING for SettingType or ACTIVE for TargetAll when TargetingSetting is not setting.&lt;/div&gt; 
@@ -36,35 +36,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceSettings.JSON_PROPERTY_SETTING_TYPE,
   CampaignServiceSettings.JSON_PROPERTY_TARGETING_SETTING
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceSettings {
   public static final String JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING = "dynamicAdsForSearchSetting";
+  @jakarta.annotation.Nullable
   private CampaignServiceDynamicAdsForSearchSetting dynamicAdsForSearchSetting;
 
   public static final String JSON_PROPERTY_GEO_TARGET_TYPE_SETTING = "geoTargetTypeSetting";
+  @jakarta.annotation.Nullable
   private CampaignServiceGeoTargetTypeSetting geoTargetTypeSetting;
 
   public static final String JSON_PROPERTY_SETTING_TYPE = "settingType";
+  @jakarta.annotation.Nullable
   private CampaignServiceSettingType settingType;
 
   public static final String JSON_PROPERTY_TARGETING_SETTING = "targetingSetting";
+  @jakarta.annotation.Nullable
   private CampaignServiceTargetingSetting targetingSetting;
 
   public CampaignServiceSettings() {
   }
 
-  public CampaignServiceSettings dynamicAdsForSearchSetting(CampaignServiceDynamicAdsForSearchSetting dynamicAdsForSearchSetting) {
+  public CampaignServiceSettings dynamicAdsForSearchSetting(@jakarta.annotation.Nullable CampaignServiceDynamicAdsForSearchSetting dynamicAdsForSearchSetting) {
     
     this.dynamicAdsForSearchSetting = dynamicAdsForSearchSetting;
     return this;
   }
 
-   /**
+  /**
    * Get dynamicAdsForSearchSetting
    * @return dynamicAdsForSearchSetting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceDynamicAdsForSearchSetting getDynamicAdsForSearchSetting() {
@@ -72,25 +76,24 @@ public class CampaignServiceSettings {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_DYNAMIC_ADS_FOR_SEARCH_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDynamicAdsForSearchSetting(CampaignServiceDynamicAdsForSearchSetting dynamicAdsForSearchSetting) {
+  public void setDynamicAdsForSearchSetting(@jakarta.annotation.Nullable CampaignServiceDynamicAdsForSearchSetting dynamicAdsForSearchSetting) {
     this.dynamicAdsForSearchSetting = dynamicAdsForSearchSetting;
   }
 
-
-  public CampaignServiceSettings geoTargetTypeSetting(CampaignServiceGeoTargetTypeSetting geoTargetTypeSetting) {
+  public CampaignServiceSettings geoTargetTypeSetting(@jakarta.annotation.Nullable CampaignServiceGeoTargetTypeSetting geoTargetTypeSetting) {
     
     this.geoTargetTypeSetting = geoTargetTypeSetting;
     return this;
   }
 
-   /**
+  /**
    * Get geoTargetTypeSetting
    * @return geoTargetTypeSetting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GEO_TARGET_TYPE_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_GEO_TARGET_TYPE_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceGeoTargetTypeSetting getGeoTargetTypeSetting() {
@@ -98,25 +101,24 @@ public class CampaignServiceSettings {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GEO_TARGET_TYPE_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_GEO_TARGET_TYPE_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGeoTargetTypeSetting(CampaignServiceGeoTargetTypeSetting geoTargetTypeSetting) {
+  public void setGeoTargetTypeSetting(@jakarta.annotation.Nullable CampaignServiceGeoTargetTypeSetting geoTargetTypeSetting) {
     this.geoTargetTypeSetting = geoTargetTypeSetting;
   }
 
-
-  public CampaignServiceSettings settingType(CampaignServiceSettingType settingType) {
+  public CampaignServiceSettings settingType(@jakarta.annotation.Nullable CampaignServiceSettingType settingType) {
     
     this.settingType = settingType;
     return this;
   }
 
-   /**
+  /**
    * Get settingType
    * @return settingType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SETTING_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SETTING_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceSettingType getSettingType() {
@@ -124,25 +126,24 @@ public class CampaignServiceSettings {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SETTING_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SETTING_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSettingType(CampaignServiceSettingType settingType) {
+  public void setSettingType(@jakarta.annotation.Nullable CampaignServiceSettingType settingType) {
     this.settingType = settingType;
   }
 
-
-  public CampaignServiceSettings targetingSetting(CampaignServiceTargetingSetting targetingSetting) {
+  public CampaignServiceSettings targetingSetting(@jakarta.annotation.Nullable CampaignServiceTargetingSetting targetingSetting) {
     
     this.targetingSetting = targetingSetting;
     return this;
   }
 
-   /**
+  /**
    * Get targetingSetting
    * @return targetingSetting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGETING_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGETING_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceTargetingSetting getTargetingSetting() {
@@ -150,11 +151,12 @@ public class CampaignServiceSettings {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGETING_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGETING_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetingSetting(CampaignServiceTargetingSetting targetingSetting) {
+  public void setTargetingSetting(@jakarta.annotation.Nullable CampaignServiceTargetingSetting targetingSetting) {
     this.targetingSetting = targetingSetting;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -193,10 +195,7 @@ public class CampaignServiceSettings {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

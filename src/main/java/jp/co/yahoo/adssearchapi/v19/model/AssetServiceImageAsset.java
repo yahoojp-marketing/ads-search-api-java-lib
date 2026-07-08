@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.AssetServiceFileType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceImageAssetオブジェクトは、画像アセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがIMAGEの場合は必須です。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051554?language&#x3D;ja\&quot;&gt;画像アセットについて&lt;/a&gt;&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051555?language&#x3D;ja\&quot;&gt;画像アセットの作成&lt;/a&gt;&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceImageAsset contains Asset value information for image asset.&lt;br&gt; This field is optional in ADD operation. *If type is IMAGE, this field is required.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051554?language&#x3D;en_US\&quot;&gt;About image asset&lt;/a&gt;&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000051555?language&#x3D;en_US\&quot;&gt;Create image asset&lt;/a&gt;&lt;/div&gt; 
@@ -36,44 +36,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceImageAsset.JSON_PROPERTY_WIDTH,
   AssetServiceImageAsset.JSON_PROPERTY_FILE_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AssetServiceImageAsset {
   public static final String JSON_PROPERTY_IMAGE_NAME = "imageName";
+  @jakarta.annotation.Nullable
   private String imageName;
 
   public static final String JSON_PROPERTY_DATA = "data";
+  @jakarta.annotation.Nullable
   private byte[] data;
 
   public static final String JSON_PROPERTY_ASPECT_RATIO = "aspectRatio";
+  @jakarta.annotation.Nullable
   private String aspectRatio;
 
   public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
+  @jakarta.annotation.Nullable
   private Long fileSize;
 
   public static final String JSON_PROPERTY_HEIGHT = "height";
+  @jakarta.annotation.Nullable
   private Long height;
 
   public static final String JSON_PROPERTY_WIDTH = "width";
+  @jakarta.annotation.Nullable
   private Long width;
 
   public static final String JSON_PROPERTY_FILE_TYPE = "fileType";
+  @jakarta.annotation.Nullable
   private AssetServiceFileType fileType;
 
   public AssetServiceImageAsset() {
   }
 
-  public AssetServiceImageAsset imageName(String imageName) {
+  public AssetServiceImageAsset imageName(@jakarta.annotation.Nullable String imageName) {
     
     this.imageName = imageName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像名です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Image name.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return imageName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMAGE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_IMAGE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getImageName() {
@@ -81,25 +88,24 @@ public class AssetServiceImageAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMAGE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_IMAGE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImageName(String imageName) {
+  public void setImageName(@jakarta.annotation.Nullable String imageName) {
     this.imageName = imageName;
   }
 
-
-  public AssetServiceImageAsset data(byte[] data) {
+  public AssetServiceImageAsset data(@jakarta.annotation.Nullable byte[] data) {
     
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像ファイルのbase64エンコードです。ADD時、このフィールドは必須となります。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The image file in base64 encode. This field is required in ADD operation.&lt;br&gt; * This field is not returned in the response.&lt;/div&gt; 
    * @return data
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonProperty(value = JSON_PROPERTY_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public byte[] getData() {
@@ -107,25 +113,24 @@ public class AssetServiceImageAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonProperty(value = JSON_PROPERTY_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setData(byte[] data) {
+  public void setData(@jakarta.annotation.Nullable byte[] data) {
     this.data = data;
   }
 
-
-  public AssetServiceImageAsset aspectRatio(String aspectRatio) {
+  public AssetServiceImageAsset aspectRatio(@jakarta.annotation.Nullable String aspectRatio) {
     
     this.aspectRatio = aspectRatio;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像アスペクト比の種類です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The type of aspect ratio.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return aspectRatio
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ASPECT_RATIO)
+  @JsonProperty(value = JSON_PROPERTY_ASPECT_RATIO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAspectRatio() {
@@ -133,25 +138,24 @@ public class AssetServiceImageAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ASPECT_RATIO)
+  @JsonProperty(value = JSON_PROPERTY_ASPECT_RATIO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAspectRatio(String aspectRatio) {
+  public void setAspectRatio(@jakarta.annotation.Nullable String aspectRatio) {
     this.aspectRatio = aspectRatio;
   }
 
-
-  public AssetServiceImageAsset fileSize(Long fileSize) {
+  public AssetServiceImageAsset fileSize(@jakarta.annotation.Nullable Long fileSize) {
     
     this.fileSize = fileSize;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ファイルサイズです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The file size of image. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return fileSize
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFileSize() {
@@ -159,25 +163,24 @@ public class AssetServiceImageAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFileSize(Long fileSize) {
+  public void setFileSize(@jakarta.annotation.Nullable Long fileSize) {
     this.fileSize = fileSize;
   }
 
-
-  public AssetServiceImageAsset height(Long height) {
+  public AssetServiceImageAsset height(@jakarta.annotation.Nullable Long height) {
     
     this.height = height;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 縦の長さです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The height of image. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return height
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonProperty(value = JSON_PROPERTY_HEIGHT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getHeight() {
@@ -185,25 +188,24 @@ public class AssetServiceImageAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonProperty(value = JSON_PROPERTY_HEIGHT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setHeight(Long height) {
+  public void setHeight(@jakarta.annotation.Nullable Long height) {
     this.height = height;
   }
 
-
-  public AssetServiceImageAsset width(Long width) {
+  public AssetServiceImageAsset width(@jakarta.annotation.Nullable Long width) {
     
     this.width = width;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 横幅です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The width of image.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return width
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonProperty(value = JSON_PROPERTY_WIDTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getWidth() {
@@ -211,25 +213,24 @@ public class AssetServiceImageAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonProperty(value = JSON_PROPERTY_WIDTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWidth(Long width) {
+  public void setWidth(@jakarta.annotation.Nullable Long width) {
     this.width = width;
   }
 
-
-  public AssetServiceImageAsset fileType(AssetServiceFileType fileType) {
+  public AssetServiceImageAsset fileType(@jakarta.annotation.Nullable AssetServiceFileType fileType) {
     
     this.fileType = fileType;
     return this;
   }
 
-   /**
+  /**
    * Get fileType
    * @return fileType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceFileType getFileType() {
@@ -237,11 +238,12 @@ public class AssetServiceImageAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFileType(AssetServiceFileType fileType) {
+  public void setFileType(@jakarta.annotation.Nullable AssetServiceFileType fileType) {
     this.fileType = fileType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -286,10 +288,7 @@ public class AssetServiceImageAsset {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

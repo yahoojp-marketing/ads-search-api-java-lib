@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceStructuredSnippetAssetオブジェクトは、カテゴリ補足アセットのアセット情報を格納します。&lt;br&gt; ADD時、このフィールドは省略可能となります。※typeがSTRUCTURED_SNIPPETの場合は必須です。&lt;br&gt; 詳細は以下のヘルプを参照してください。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044718?language&#x3D;ja\&quot;&gt;補足カテゴリーと補足内容の入力例（カテゴリ補足アセット）&lt;/a&gt;&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceStructuredSnippetAsset contains Asset value information for category snippet asset.&lt;br&gt; This field is optional in ADD operation. *If type is STRUCTURED_SNIPPET, this field is required.&lt;br&gt; See also the help below.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044718?language&#x3D;en_US\&quot;&gt;Example of supplemental category and supplemental text (Category snippet asset)&lt;/a&gt;&lt;/div&gt; 
@@ -34,35 +35,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceStructuredSnippetAsset.JSON_PROPERTY_VALUES,
   AssetServiceStructuredSnippetAsset.JSON_PROPERTY_REVIEW_VALUES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AssetServiceStructuredSnippetAsset {
   public static final String JSON_PROPERTY_HEADER = "header";
+  @jakarta.annotation.Nullable
   private String header;
 
   public static final String JSON_PROPERTY_REVIEW_HEADER = "reviewHeader";
+  @jakarta.annotation.Nullable
   private String reviewHeader;
 
   public static final String JSON_PROPERTY_VALUES = "values";
+  @jakarta.annotation.Nullable
   private List<String> values;
 
   public static final String JSON_PROPERTY_REVIEW_VALUES = "reviewValues";
+  @jakarta.annotation.Nullable
   private List<String> reviewValues;
 
   public AssetServiceStructuredSnippetAsset() {
   }
 
-  public AssetServiceStructuredSnippetAsset header(String header) {
+  public AssetServiceStructuredSnippetAsset header(@jakarta.annotation.Nullable String header) {
     
     this.header = header;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ヘッダーです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Header.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return header
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_HEADER)
+  @JsonProperty(value = JSON_PROPERTY_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getHeader() {
@@ -70,25 +75,24 @@ public class AssetServiceStructuredSnippetAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_HEADER)
+  @JsonProperty(value = JSON_PROPERTY_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setHeader(String header) {
+  public void setHeader(@jakarta.annotation.Nullable String header) {
     this.header = header;
   }
 
-
-  public AssetServiceStructuredSnippetAsset reviewHeader(String reviewHeader) {
+  public AssetServiceStructuredSnippetAsset reviewHeader(@jakarta.annotation.Nullable String reviewHeader) {
     
     this.reviewHeader = reviewHeader;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査中のヘッダーです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Header on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewHeader
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_HEADER)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewHeader() {
@@ -96,14 +100,13 @@ public class AssetServiceStructuredSnippetAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_HEADER)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewHeader(String reviewHeader) {
+  public void setReviewHeader(@jakarta.annotation.Nullable String reviewHeader) {
     this.reviewHeader = reviewHeader;
   }
 
-
-  public AssetServiceStructuredSnippetAsset values(List<String> values) {
+  public AssetServiceStructuredSnippetAsset values(@jakarta.annotation.Nullable List<String> values) {
     
     this.values = values;
     return this;
@@ -117,12 +120,12 @@ public class AssetServiceStructuredSnippetAsset {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;バリューです。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return values
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getValues() {
@@ -130,14 +133,13 @@ public class AssetServiceStructuredSnippetAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<String> values) {
+  public void setValues(@jakarta.annotation.Nullable List<String> values) {
     this.values = values;
   }
 
-
-  public AssetServiceStructuredSnippetAsset reviewValues(List<String> reviewValues) {
+  public AssetServiceStructuredSnippetAsset reviewValues(@jakarta.annotation.Nullable List<String> reviewValues) {
     
     this.reviewValues = reviewValues;
     return this;
@@ -151,12 +153,12 @@ public class AssetServiceStructuredSnippetAsset {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;レビュー中のバリューです。&lt;br&gt; このフィールドは、リクエストの際には無視されます。&lt;br&gt; 審査中の間のみ、レスポンスの際に返却されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value on editorial review.&lt;br&gt; This field will be ignored on input.&lt;br&gt; It will be returned at the time of response only during the review.&lt;/div&gt; 
    * @return reviewValues
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getReviewValues() {
@@ -164,11 +166,12 @@ public class AssetServiceStructuredSnippetAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewValues(List<String> reviewValues) {
+  public void setReviewValues(@jakarta.annotation.Nullable List<String> reviewValues) {
     this.reviewValues = reviewValues;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -207,10 +210,7 @@ public class AssetServiceStructuredSnippetAsset {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

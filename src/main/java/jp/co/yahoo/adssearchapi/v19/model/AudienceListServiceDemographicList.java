@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceAge;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceGender;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceDemographicListは、年齢・性別ターゲティング情報（オーディエンスリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceDemographicList is an object that holds age and gender targeting information (audience list).&lt;/div&gt; 
@@ -35,38 +35,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceDemographicList.JSON_PROPERTY_GENDER,
   AudienceListServiceDemographicList.JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceDemographicList {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
+  @jakarta.annotation.Nullable
   private String audienceListName;
 
   public static final String JSON_PROPERTY_AGE = "age";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAge age;
 
   public static final String JSON_PROPERTY_GENDER = "gender";
+  @jakarta.annotation.Nullable
   private AudienceListServiceGender gender;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID = "audienceListTrackId";
+  @jakarta.annotation.Nullable
   private Long audienceListTrackId;
 
   public AudienceListServiceDemographicList() {
   }
 
-  public AudienceListServiceDemographicList audienceListId(Long audienceListId) {
+  public AudienceListServiceDemographicList audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience List ID.&lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListId() {
@@ -74,25 +79,24 @@ public class AudienceListServiceDemographicList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AudienceListServiceDemographicList audienceListName(String audienceListName) {
+  public AudienceListServiceDemographicList audienceListName(@jakarta.annotation.Nullable String audienceListName) {
     
     this.audienceListName = audienceListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience List name.&lt;/div&gt; 
    * @return audienceListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListName() {
@@ -100,25 +104,24 @@ public class AudienceListServiceDemographicList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListName(String audienceListName) {
+  public void setAudienceListName(@jakarta.annotation.Nullable String audienceListName) {
     this.audienceListName = audienceListName;
   }
 
-
-  public AudienceListServiceDemographicList age(AudienceListServiceAge age) {
+  public AudienceListServiceDemographicList age(@jakarta.annotation.Nullable AudienceListServiceAge age) {
     
     this.age = age;
     return this;
   }
 
-   /**
+  /**
    * Get age
    * @return age
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AGE)
+  @JsonProperty(value = JSON_PROPERTY_AGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAge getAge() {
@@ -126,25 +129,24 @@ public class AudienceListServiceDemographicList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AGE)
+  @JsonProperty(value = JSON_PROPERTY_AGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAge(AudienceListServiceAge age) {
+  public void setAge(@jakarta.annotation.Nullable AudienceListServiceAge age) {
     this.age = age;
   }
 
-
-  public AudienceListServiceDemographicList gender(AudienceListServiceGender gender) {
+  public AudienceListServiceDemographicList gender(@jakarta.annotation.Nullable AudienceListServiceGender gender) {
     
     this.gender = gender;
     return this;
   }
 
-   /**
+  /**
    * Get gender
    * @return gender
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GENDER)
+  @JsonProperty(value = JSON_PROPERTY_GENDER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceGender getGender() {
@@ -152,25 +154,24 @@ public class AudienceListServiceDemographicList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GENDER)
+  @JsonProperty(value = JSON_PROPERTY_GENDER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGender(AudienceListServiceGender gender) {
+  public void setGender(@jakarta.annotation.Nullable AudienceListServiceGender gender) {
     this.gender = gender;
   }
 
-
-  public AudienceListServiceDemographicList audienceListTrackId(Long audienceListTrackId) {
+  public AudienceListServiceDemographicList audienceListTrackId(@jakarta.annotation.Nullable Long audienceListTrackId) {
     
     this.audienceListTrackId = audienceListTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストのトラッキング用IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID of Audience list.&lt;/div&gt; 
    * @return audienceListTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListTrackId() {
@@ -178,11 +179,12 @@ public class AudienceListServiceDemographicList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListTrackId(Long audienceListTrackId) {
+  public void setAudienceListTrackId(@jakarta.annotation.Nullable Long audienceListTrackId) {
     this.audienceListTrackId = audienceListTrackId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -223,10 +225,7 @@ public class AudienceListServiceDemographicList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

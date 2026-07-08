@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AssetServiceCustomParameter;
 import jp.co.yahoo.adssearchapi.v19.model.AssetServiceIsRemove;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceCustomParametersオブジェクトは、カスタムパラメータの設定を表します。&lt;br&gt; このフィールドはレスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※CustomParameters配下でのみ、クイックリンクアセットの場合、ADDおよびSET時に省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field will be returned in the response, but it will be ignored on input.&lt;br&gt; *Under customParameters, this field will be optional in ADD and SET operation for QUICKLINK asset.&lt;/div&gt; 
@@ -34,29 +35,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   AssetServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AssetServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
+  @jakarta.annotation.Nullable
   private AssetServiceIsRemove isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
+  @jakarta.annotation.Nullable
   private List<AssetServiceCustomParameter> parameters;
 
   public AssetServiceCustomParameters() {
   }
 
-  public AssetServiceCustomParameters isRemove(AssetServiceIsRemove isRemove) {
+  public AssetServiceCustomParameters isRemove(@jakarta.annotation.Nullable AssetServiceIsRemove isRemove) {
     
     this.isRemove = isRemove;
     return this;
   }
 
-   /**
+  /**
    * Get isRemove
    * @return isRemove
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceIsRemove getIsRemove() {
@@ -64,14 +67,13 @@ public class AssetServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemove(AssetServiceIsRemove isRemove) {
+  public void setIsRemove(@jakarta.annotation.Nullable AssetServiceIsRemove isRemove) {
     this.isRemove = isRemove;
   }
 
-
-  public AssetServiceCustomParameters parameters(List<AssetServiceCustomParameter> parameters) {
+  public AssetServiceCustomParameters parameters(@jakarta.annotation.Nullable List<AssetServiceCustomParameter> parameters) {
     
     this.parameters = parameters;
     return this;
@@ -85,12 +87,12 @@ public class AssetServiceCustomParameters {
     return this;
   }
 
-   /**
+  /**
    * Get parameters
    * @return parameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AssetServiceCustomParameter> getParameters() {
@@ -98,11 +100,12 @@ public class AssetServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParameters(List<AssetServiceCustomParameter> parameters) {
+  public void setParameters(@jakarta.annotation.Nullable List<AssetServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -137,10 +140,7 @@ public class AssetServiceCustomParameters {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

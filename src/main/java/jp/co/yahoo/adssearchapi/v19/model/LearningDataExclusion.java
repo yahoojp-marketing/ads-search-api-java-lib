@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.LearningDataExclusionServiceDevices;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;LearningDataExclusion オブジェクトは、自動入札の学習データ除外を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;LearningDataExclusion object describes learning data exclusion for autobidding information.&lt;/div&gt; 
@@ -39,47 +40,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   LearningDataExclusion.JSON_PROPERTY_END_DATE_TIME,
   LearningDataExclusion.JSON_PROPERTY_CAMPAIGN_IDS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class LearningDataExclusion {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_LEARNING_DATA_EXCLUSION_NAME = "learningDataExclusionName";
+  @jakarta.annotation.Nullable
   private String learningDataExclusionName;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_LEARNING_DATA_EXCLUSION_ID = "learningDataExclusionId";
+  @jakarta.annotation.Nullable
   private Long learningDataExclusionId;
 
   public static final String JSON_PROPERTY_DEVICES = "devices";
+  @jakarta.annotation.Nullable
   private List<LearningDataExclusionServiceDevices> devices;
 
   public static final String JSON_PROPERTY_START_DATE_TIME = "startDateTime";
+  @jakarta.annotation.Nullable
   private String startDateTime;
 
   public static final String JSON_PROPERTY_END_DATE_TIME = "endDateTime";
+  @jakarta.annotation.Nullable
   private String endDateTime;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public LearningDataExclusion() {
   }
 
-  public LearningDataExclusion accountId(Long accountId) {
+  public LearningDataExclusion accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -87,25 +96,24 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public LearningDataExclusion learningDataExclusionName(String learningDataExclusionName) {
+  public LearningDataExclusion learningDataExclusionName(@jakarta.annotation.Nullable String learningDataExclusionName) {
     
     this.learningDataExclusionName = learningDataExclusionName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;学習データ除外名です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; ※128文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Learning Data Exclusion name.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *Up to 128 characters.&lt;/div&gt; 
    * @return learningDataExclusionName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LEARNING_DATA_EXCLUSION_NAME)
+  @JsonProperty(value = JSON_PROPERTY_LEARNING_DATA_EXCLUSION_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getLearningDataExclusionName() {
@@ -113,25 +121,24 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LEARNING_DATA_EXCLUSION_NAME)
+  @JsonProperty(value = JSON_PROPERTY_LEARNING_DATA_EXCLUSION_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLearningDataExclusionName(String learningDataExclusionName) {
+  public void setLearningDataExclusionName(@jakarta.annotation.Nullable String learningDataExclusionName) {
     this.learningDataExclusionName = learningDataExclusionName;
   }
 
-
-  public LearningDataExclusion description(String description) {
+  public LearningDataExclusion description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;学習データ除外の説明です。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※500文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Learning Data Exclusion description.&lt;br&gt; This field is optional.&lt;br&gt; *Up to 500 characters.&lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -139,25 +146,24 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public LearningDataExclusion learningDataExclusionId(Long learningDataExclusionId) {
+  public LearningDataExclusion learningDataExclusionId(@jakarta.annotation.Nullable Long learningDataExclusionId) {
     
     this.learningDataExclusionId = learningDataExclusionId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;学習データ除外IDです。&lt;br&gt; SET及びREMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Learning Data Exclusion ID.&lt;br&gt; This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return learningDataExclusionId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LEARNING_DATA_EXCLUSION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LEARNING_DATA_EXCLUSION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLearningDataExclusionId() {
@@ -165,14 +171,13 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LEARNING_DATA_EXCLUSION_ID)
+  @JsonProperty(value = JSON_PROPERTY_LEARNING_DATA_EXCLUSION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLearningDataExclusionId(Long learningDataExclusionId) {
+  public void setLearningDataExclusionId(@jakarta.annotation.Nullable Long learningDataExclusionId) {
     this.learningDataExclusionId = learningDataExclusionId;
   }
 
-
-  public LearningDataExclusion devices(List<LearningDataExclusionServiceDevices> devices) {
+  public LearningDataExclusion devices(@jakarta.annotation.Nullable List<LearningDataExclusionServiceDevices> devices) {
     
     this.devices = devices;
     return this;
@@ -186,12 +191,12 @@ public class LearningDataExclusion {
     return this;
   }
 
-   /**
+  /**
    * Get devices
    * @return devices
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICES)
+  @JsonProperty(value = JSON_PROPERTY_DEVICES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<LearningDataExclusionServiceDevices> getDevices() {
@@ -199,25 +204,24 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICES)
+  @JsonProperty(value = JSON_PROPERTY_DEVICES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDevices(List<LearningDataExclusionServiceDevices> devices) {
+  public void setDevices(@jakarta.annotation.Nullable List<LearningDataExclusionServiceDevices> devices) {
     this.devices = devices;
   }
 
-
-  public LearningDataExclusion startDateTime(String startDateTime) {
+  public LearningDataExclusion startDateTime(@jakarta.annotation.Nullable String startDateTime) {
     
     this.startDateTime = startDateTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用開始日です。&lt;br&gt; ADD時、このフィールドは必須です。&lt;br&gt; ※YYYYMMDDHHmmss形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;br&gt; ※startDateTime〜endDateTimeが14日を超える場合はエラーになります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of rule setting.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *In YYYYMMDDHHmmss format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *If startDateTime〜endDateTime exceeds 14 days, an error will occur.&lt;/div&gt; 
    * @return startDateTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDateTime() {
@@ -225,25 +229,24 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDateTime(String startDateTime) {
+  public void setStartDateTime(@jakarta.annotation.Nullable String startDateTime) {
     this.startDateTime = startDateTime;
   }
 
-
-  public LearningDataExclusion endDateTime(String endDateTime) {
+  public LearningDataExclusion endDateTime(@jakarta.annotation.Nullable String endDateTime) {
     
     this.endDateTime = endDateTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用終了日です。&lt;br&gt; ADD時、このフィールドは必須です。&lt;br&gt; ※YYYYMMDDHHmmss形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;br&gt; ※startDateTime〜endDateTimeが14日を超える場合はエラーになります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of rule setting.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *In YYYYMMDDHHmmss format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *If startDateTime〜endDateTime exceeds 14 days, an error will occur.&lt;/div&gt; 
    * @return endDateTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDateTime() {
@@ -251,14 +254,13 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDateTime(String endDateTime) {
+  public void setEndDateTime(@jakarta.annotation.Nullable String endDateTime) {
     this.endDateTime = endDateTime;
   }
 
-
-  public LearningDataExclusion campaignIds(List<Long> campaignIds) {
+  public LearningDataExclusion campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -272,12 +274,12 @@ public class LearningDataExclusion {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -285,11 +287,12 @@ public class LearningDataExclusion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -336,10 +339,7 @@ public class LearningDataExclusion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

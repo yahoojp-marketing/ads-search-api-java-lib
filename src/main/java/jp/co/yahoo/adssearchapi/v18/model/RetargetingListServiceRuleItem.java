@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v18.model.RetargetingListServiceCustomKeyRuleItem;
 import jp.co.yahoo.adssearchapi.v18.model.RetargetingListServiceRuleOperator;
@@ -26,6 +25,7 @@ import jp.co.yahoo.adssearchapi.v18.model.RetargetingListServiceRuleType;
 import jp.co.yahoo.adssearchapi.v18.model.RetargetingListServiceUrlRuleItem;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceRuleItemは、ルールの評価条件を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceRuleItem is an object that holds evaluation condition of rule.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
@@ -37,38 +37,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingListServiceRuleItem.JSON_PROPERTY_URL_RULE_ITEM,
   RetargetingListServiceRuleItem.JSON_PROPERTY_VALUE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RetargetingListServiceRuleItem {
   public static final String JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM = "customKeyRuleItem";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceCustomKeyRuleItem customKeyRuleItem;
 
   public static final String JSON_PROPERTY_RULE_OPERATOR = "ruleOperator";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceRuleOperator ruleOperator;
 
   public static final String JSON_PROPERTY_RULE_TYPE = "ruleType";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceRuleType ruleType;
 
   public static final String JSON_PROPERTY_URL_RULE_ITEM = "urlRuleItem";
+  @jakarta.annotation.Nullable
   private RetargetingListServiceUrlRuleItem urlRuleItem;
 
   public static final String JSON_PROPERTY_VALUE = "value";
+  @jakarta.annotation.Nullable
   private String value;
 
   public RetargetingListServiceRuleItem() {
   }
 
-  public RetargetingListServiceRuleItem customKeyRuleItem(RetargetingListServiceCustomKeyRuleItem customKeyRuleItem) {
+  public RetargetingListServiceRuleItem customKeyRuleItem(@jakarta.annotation.Nullable RetargetingListServiceCustomKeyRuleItem customKeyRuleItem) {
     
     this.customKeyRuleItem = customKeyRuleItem;
     return this;
   }
 
-   /**
+  /**
    * Get customKeyRuleItem
    * @return customKeyRuleItem
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceCustomKeyRuleItem getCustomKeyRuleItem() {
@@ -76,25 +81,24 @@ public class RetargetingListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_KEY_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomKeyRuleItem(RetargetingListServiceCustomKeyRuleItem customKeyRuleItem) {
+  public void setCustomKeyRuleItem(@jakarta.annotation.Nullable RetargetingListServiceCustomKeyRuleItem customKeyRuleItem) {
     this.customKeyRuleItem = customKeyRuleItem;
   }
 
-
-  public RetargetingListServiceRuleItem ruleOperator(RetargetingListServiceRuleOperator ruleOperator) {
+  public RetargetingListServiceRuleItem ruleOperator(@jakarta.annotation.Nullable RetargetingListServiceRuleOperator ruleOperator) {
     
     this.ruleOperator = ruleOperator;
     return this;
   }
 
-   /**
+  /**
    * Get ruleOperator
    * @return ruleOperator
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_RULE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceRuleOperator getRuleOperator() {
@@ -102,25 +106,24 @@ public class RetargetingListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_RULE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleOperator(RetargetingListServiceRuleOperator ruleOperator) {
+  public void setRuleOperator(@jakarta.annotation.Nullable RetargetingListServiceRuleOperator ruleOperator) {
     this.ruleOperator = ruleOperator;
   }
 
-
-  public RetargetingListServiceRuleItem ruleType(RetargetingListServiceRuleType ruleType) {
+  public RetargetingListServiceRuleItem ruleType(@jakarta.annotation.Nullable RetargetingListServiceRuleType ruleType) {
     
     this.ruleType = ruleType;
     return this;
   }
 
-   /**
+  /**
    * Get ruleType
    * @return ruleType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceRuleType getRuleType() {
@@ -128,25 +131,24 @@ public class RetargetingListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleType(RetargetingListServiceRuleType ruleType) {
+  public void setRuleType(@jakarta.annotation.Nullable RetargetingListServiceRuleType ruleType) {
     this.ruleType = ruleType;
   }
 
-
-  public RetargetingListServiceRuleItem urlRuleItem(RetargetingListServiceUrlRuleItem urlRuleItem) {
+  public RetargetingListServiceRuleItem urlRuleItem(@jakarta.annotation.Nullable RetargetingListServiceUrlRuleItem urlRuleItem) {
     
     this.urlRuleItem = urlRuleItem;
     return this;
   }
 
-   /**
+  /**
    * Get urlRuleItem
    * @return urlRuleItem
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingListServiceUrlRuleItem getUrlRuleItem() {
@@ -154,25 +156,24 @@ public class RetargetingListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_RULE_ITEM)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE_ITEM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlRuleItem(RetargetingListServiceUrlRuleItem urlRuleItem) {
+  public void setUrlRuleItem(@jakarta.annotation.Nullable RetargetingListServiceUrlRuleItem urlRuleItem) {
     this.urlRuleItem = urlRuleItem;
   }
 
-
-  public RetargetingListServiceRuleItem value(String value) {
+  public RetargetingListServiceRuleItem value(@jakarta.annotation.Nullable String value) {
     
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;評価値です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; ※括弧（()）、シングルクォート（&amp;#39;）、ダブルクォート（&amp;#34;）、タブ（\\t）は利用できません。&lt;br&gt; ※250文字まで指定可能です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Evaluation value.&lt;br&gt; *Cannot use: bracket, single quote, double quote, and tab.&lt;br&gt; *Can select up to 250 characters.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return value
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getValue() {
@@ -180,11 +181,12 @@ public class RetargetingListServiceRuleItem {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValue(String value) {
+  public void setValue(@jakarta.annotation.Nullable String value) {
     this.value = value;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -225,10 +227,7 @@ public class RetargetingListServiceRuleItem {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupCriterionServiceApprovalStatus;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupCriterionServiceBiddingKeywordCpcRange;
@@ -30,6 +30,7 @@ import jp.co.yahoo.adssearchapi.v19.model.AdGroupCriterionServiceUse;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupCriterionServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupCriterionServiceSelectorオブジェクトは、操作の対象となる広告グループのクライテリアを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupCriterionServiceSelector object displays criteria of ad group to be operated.&lt;/div&gt; 
@@ -50,65 +51,79 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupCriterionServiceSelector.JSON_PROPERTY_KEYWORD,
   AdGroupCriterionServiceSelector.JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupCriterionServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
+  @jakarta.annotation.Nullable
   private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUSES = "approvalStatuses";
+  @jakarta.annotation.Nullable
   private List<AdGroupCriterionServiceApprovalStatus> approvalStatuses;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_IDS = "portfolioBiddingIds";
+  @jakarta.annotation.Nullable
   private List<Long> portfolioBiddingIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_CONTAINS_LABEL_ID = "containsLabelId";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceContainsLabelId containsLabelId;
 
   public static final String JSON_PROPERTY_CRITERION_IDS = "criterionIds";
+  @jakarta.annotation.Nullable
   private List<Long> criterionIds;
 
   public static final String JSON_PROPERTY_LABEL_IDS = "labelIds";
+  @jakarta.annotation.Nullable
   private List<Long> labelIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_USE = "use";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceUse use;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
+  @jakarta.annotation.Nullable
   private List<AdGroupCriterionServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceKeyword keyword;
 
   public static final String JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE = "biddingKeywordCpcRange";
+  @jakarta.annotation.Nullable
   private AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange;
 
   public AdGroupCriterionServiceSelector() {
   }
 
-  public AdGroupCriterionServiceSelector accountId(Long accountId) {
+  public AdGroupCriterionServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -116,14 +131,13 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AdGroupCriterionServiceSelector adGroupIds(List<Long> adGroupIds) {
+  public AdGroupCriterionServiceSelector adGroupIds(@jakarta.annotation.Nullable List<Long> adGroupIds) {
     
     this.adGroupIds = adGroupIds;
     return this;
@@ -137,12 +151,12 @@ public class AdGroupCriterionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：広告グループID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Ad group ID.&lt;/div&gt; 
    * @return adGroupIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getAdGroupIds() {
@@ -150,14 +164,13 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupIds(List<Long> adGroupIds) {
+  public void setAdGroupIds(@jakarta.annotation.Nullable List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
-
-  public AdGroupCriterionServiceSelector approvalStatuses(List<AdGroupCriterionServiceApprovalStatus> approvalStatuses) {
+  public AdGroupCriterionServiceSelector approvalStatuses(@jakarta.annotation.Nullable List<AdGroupCriterionServiceApprovalStatus> approvalStatuses) {
     
     this.approvalStatuses = approvalStatuses;
     return this;
@@ -171,12 +184,12 @@ public class AdGroupCriterionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatuses
    * @return approvalStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupCriterionServiceApprovalStatus> getApprovalStatuses() {
@@ -184,14 +197,13 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatuses(List<AdGroupCriterionServiceApprovalStatus> approvalStatuses) {
+  public void setApprovalStatuses(@jakarta.annotation.Nullable List<AdGroupCriterionServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
-
-  public AdGroupCriterionServiceSelector portfolioBiddingIds(List<Long> portfolioBiddingIds) {
+  public AdGroupCriterionServiceSelector portfolioBiddingIds(@jakarta.annotation.Nullable List<Long> portfolioBiddingIds) {
     
     this.portfolioBiddingIds = portfolioBiddingIds;
     return this;
@@ -205,12 +217,12 @@ public class AdGroupCriterionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ポートフォリオ入札ID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Portfolio bidding ID.&lt;/div&gt; 
    * @return portfolioBiddingIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getPortfolioBiddingIds() {
@@ -218,14 +230,13 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPortfolioBiddingIds(List<Long> portfolioBiddingIds) {
+  public void setPortfolioBiddingIds(@jakarta.annotation.Nullable List<Long> portfolioBiddingIds) {
     this.portfolioBiddingIds = portfolioBiddingIds;
   }
 
-
-  public AdGroupCriterionServiceSelector campaignIds(List<Long> campaignIds) {
+  public AdGroupCriterionServiceSelector campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -239,12 +250,12 @@ public class AdGroupCriterionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign ID.&lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -252,25 +263,24 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
-
-  public AdGroupCriterionServiceSelector containsLabelId(AdGroupCriterionServiceContainsLabelId containsLabelId) {
+  public AdGroupCriterionServiceSelector containsLabelId(@jakarta.annotation.Nullable AdGroupCriterionServiceContainsLabelId containsLabelId) {
     
     this.containsLabelId = containsLabelId;
     return this;
   }
 
-   /**
+  /**
    * Get containsLabelId
    * @return containsLabelId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTAINS_LABEL_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceContainsLabelId getContainsLabelId() {
@@ -278,14 +288,13 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTAINS_LABEL_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContainsLabelId(AdGroupCriterionServiceContainsLabelId containsLabelId) {
+  public void setContainsLabelId(@jakarta.annotation.Nullable AdGroupCriterionServiceContainsLabelId containsLabelId) {
     this.containsLabelId = containsLabelId;
   }
 
-
-  public AdGroupCriterionServiceSelector criterionIds(List<Long> criterionIds) {
+  public AdGroupCriterionServiceSelector criterionIds(@jakarta.annotation.Nullable List<Long> criterionIds) {
     
     this.criterionIds = criterionIds;
     return this;
@@ -299,12 +308,12 @@ public class AdGroupCriterionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：クライテリオンID&lt;br&gt;指定しない場合は、広告グループID以下のすべてのクライ テリアが含まれます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Criterion ID.&lt;br&gt;* All criteria under the Ad group ID will return if theres is no designation.&lt;/div&gt; 
    * @return criterionIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCriterionIds() {
@@ -312,14 +321,13 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionIds(List<Long> criterionIds) {
+  public void setCriterionIds(@jakarta.annotation.Nullable List<Long> criterionIds) {
     this.criterionIds = criterionIds;
   }
 
-
-  public AdGroupCriterionServiceSelector labelIds(List<Long> labelIds) {
+  public AdGroupCriterionServiceSelector labelIds(@jakarta.annotation.Nullable List<Long> labelIds) {
     
     this.labelIds = labelIds;
     return this;
@@ -333,12 +341,12 @@ public class AdGroupCriterionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ラベルID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Label ID&lt;/div&gt; 
    * @return labelIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABEL_IDS)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getLabelIds() {
@@ -346,27 +354,26 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABEL_IDS)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabelIds(List<Long> labelIds) {
+  public void setLabelIds(@jakarta.annotation.Nullable List<Long> labelIds) {
     this.labelIds = labelIds;
   }
 
-
-  public AdGroupCriterionServiceSelector numberResults(Integer numberResults) {
+  public AdGroupCriterionServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 10000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -374,26 +381,25 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public AdGroupCriterionServiceSelector startIndex(Integer startIndex) {
+  public AdGroupCriterionServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -401,25 +407,24 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public AdGroupCriterionServiceSelector use(AdGroupCriterionServiceUse use) {
+  public AdGroupCriterionServiceSelector use(@jakarta.annotation.Nullable AdGroupCriterionServiceUse use) {
     
     this.use = use;
     return this;
   }
 
-   /**
+  /**
    * Get use
    * @return use
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USE)
+  @JsonProperty(value = JSON_PROPERTY_USE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public AdGroupCriterionServiceUse getUse() {
@@ -427,14 +432,13 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USE)
+  @JsonProperty(value = JSON_PROPERTY_USE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setUse(AdGroupCriterionServiceUse use) {
+  public void setUse(@jakarta.annotation.Nullable AdGroupCriterionServiceUse use) {
     this.use = use;
   }
 
-
-  public AdGroupCriterionServiceSelector userStatuses(List<AdGroupCriterionServiceUserStatus> userStatuses) {
+  public AdGroupCriterionServiceSelector userStatuses(@jakarta.annotation.Nullable List<AdGroupCriterionServiceUserStatus> userStatuses) {
     
     this.userStatuses = userStatuses;
     return this;
@@ -448,12 +452,12 @@ public class AdGroupCriterionServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get userStatuses
    * @return userStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupCriterionServiceUserStatus> getUserStatuses() {
@@ -461,25 +465,24 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatuses(List<AdGroupCriterionServiceUserStatus> userStatuses) {
+  public void setUserStatuses(@jakarta.annotation.Nullable List<AdGroupCriterionServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
-
-  public AdGroupCriterionServiceSelector keyword(AdGroupCriterionServiceKeyword keyword) {
+  public AdGroupCriterionServiceSelector keyword(@jakarta.annotation.Nullable AdGroupCriterionServiceKeyword keyword) {
     
     this.keyword = keyword;
     return this;
   }
 
-   /**
+  /**
    * Get keyword
    * @return keyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceKeyword getKeyword() {
@@ -487,25 +490,24 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeyword(AdGroupCriterionServiceKeyword keyword) {
+  public void setKeyword(@jakarta.annotation.Nullable AdGroupCriterionServiceKeyword keyword) {
     this.keyword = keyword;
   }
 
-
-  public AdGroupCriterionServiceSelector biddingKeywordCpcRange(AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange) {
+  public AdGroupCriterionServiceSelector biddingKeywordCpcRange(@jakarta.annotation.Nullable AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange) {
     
     this.biddingKeywordCpcRange = biddingKeywordCpcRange;
     return this;
   }
 
-   /**
+  /**
    * Get biddingKeywordCpcRange
    * @return biddingKeywordCpcRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupCriterionServiceBiddingKeywordCpcRange getBiddingKeywordCpcRange() {
@@ -513,11 +515,12 @@ public class AdGroupCriterionServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_KEYWORD_CPC_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingKeywordCpcRange(AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange) {
+  public void setBiddingKeywordCpcRange(@jakarta.annotation.Nullable AdGroupCriterionServiceBiddingKeywordCpcRange biddingKeywordCpcRange) {
     this.biddingKeywordCpcRange = biddingKeywordCpcRange;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -576,10 +579,7 @@ public class AdGroupCriterionServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

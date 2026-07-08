@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupWebpageServiceWebpageParameter;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageオブジェクトは、配信/除外設定するAdGroupWebpageServiceWebpageの条件を保持します。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupWebpageServiceWebpage object contains the rules of webpage to be allowed or excluded.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
@@ -32,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupWebpageServiceWebpage.JSON_PROPERTY_TARGET_ID,
   AdGroupWebpageServiceWebpage.JSON_PROPERTY_TARGET_TRACK_ID
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupWebpageServiceWebpage {
   public static final String JSON_PROPERTY_PARAMETER = "parameter";
+  @jakarta.annotation.Nullable
   private AdGroupWebpageServiceWebpageParameter parameter;
 
   public static final String JSON_PROPERTY_TARGET_ID = "targetId";
+  @jakarta.annotation.Nullable
   private Long targetId;
 
   public static final String JSON_PROPERTY_TARGET_TRACK_ID = "targetTrackId";
+  @jakarta.annotation.Nullable
   private Long targetTrackId;
 
   public AdGroupWebpageServiceWebpage() {
   }
 
-  public AdGroupWebpageServiceWebpage parameter(AdGroupWebpageServiceWebpageParameter parameter) {
+  public AdGroupWebpageServiceWebpage parameter(@jakarta.annotation.Nullable AdGroupWebpageServiceWebpageParameter parameter) {
     
     this.parameter = parameter;
     return this;
   }
 
-   /**
+  /**
    * Get parameter
    * @return parameter
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARAMETER)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupWebpageServiceWebpageParameter getParameter() {
@@ -65,25 +68,24 @@ public class AdGroupWebpageServiceWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PARAMETER)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParameter(AdGroupWebpageServiceWebpageParameter parameter) {
+  public void setParameter(@jakarta.annotation.Nullable AdGroupWebpageServiceWebpageParameter parameter) {
     this.parameter = parameter;
   }
 
-
-  public AdGroupWebpageServiceWebpage targetId(Long targetId) {
+  public AdGroupWebpageServiceWebpage targetId(@jakarta.annotation.Nullable Long targetId) {
     
     this.targetId = targetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageを識別するIDです。&lt;br&gt;このフィールドは、ADD時は無視され、SET時は必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Unique ID for each identify webpage.&lt;br&gt;This field will be ignored in ADD operation, and is required in SET operation.&lt;/div&gt; 
    * @return targetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetId() {
@@ -91,25 +93,24 @@ public class AdGroupWebpageServiceWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetId(Long targetId) {
+  public void setTargetId(@jakarta.annotation.Nullable Long targetId) {
     this.targetId = targetId;
   }
 
-
-  public AdGroupWebpageServiceWebpage targetTrackId(Long targetTrackId) {
+  public AdGroupWebpageServiceWebpage targetTrackId(@jakarta.annotation.Nullable Long targetTrackId) {
     
     this.targetTrackId = targetTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupWebpageServiceWebpageを識別するトラッキングIDです。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking ID for each identify webpage.&lt;br&gt;Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return targetTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetTrackId() {
@@ -117,11 +118,12 @@ public class AdGroupWebpageServiceWebpage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetTrackId(Long targetTrackId) {
+  public void setTargetTrackId(@jakarta.annotation.Nullable Long targetTrackId) {
     this.targetTrackId = targetTrackId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +160,7 @@ public class AdGroupWebpageServiceWebpage {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

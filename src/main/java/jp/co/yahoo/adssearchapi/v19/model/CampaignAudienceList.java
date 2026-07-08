@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignAudienceListServiceCriterionAudienceList;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignAudienceListServiceExcludedType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignAudienceListオブジェクトは、キャンペーン階層におけるオーディエンスリストの設定情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignAudienceList object holds the setting information of Audience List on campaign level.&lt;/div&gt; 
@@ -36,41 +36,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignAudienceList.JSON_PROPERTY_CRITERION_AUDIENCE_LIST,
   CampaignAudienceList.JSON_PROPERTY_EXCLUDED_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignAudienceList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_BID_MULTIPLIER = "bidMultiplier";
+  @jakarta.annotation.Nullable
   private Double bidMultiplier;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_CRITERION_AUDIENCE_LIST = "criterionAudienceList";
+  @jakarta.annotation.Nullable
   private CampaignAudienceListServiceCriterionAudienceList criterionAudienceList;
 
   public static final String JSON_PROPERTY_EXCLUDED_TYPE = "excludedType";
+  @jakarta.annotation.Nullable
   private CampaignAudienceListServiceExcludedType excludedType;
 
   public CampaignAudienceList() {
   }
 
-  public CampaignAudienceList accountId(Long accountId) {
+  public CampaignAudienceList accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -78,25 +84,24 @@ public class CampaignAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public CampaignAudienceList bidMultiplier(Double bidMultiplier) {
+  public CampaignAudienceList bidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     
     this.bidMultiplier = bidMultiplier;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   入札価格調整率です。0.10～10.00まで指定できます。&lt;br&gt;   また、入札価格調整率の値は小数点第二位まで指定可能です。&lt;br&gt;   このフィールドは省略可能となります。その際、デフォルト設定値は1.0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Bid adjustment rate.&lt;br&gt;   Can be specified between  0.10 to 10.00.&lt;br&gt;   Bid adjustment rate can be specified up to two decimal places.&lt;br&gt;   This field is optional. The default value will be 1.0. &lt;/div&gt; 
    * @return bidMultiplier
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getBidMultiplier() {
@@ -104,25 +109,24 @@ public class CampaignAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidMultiplier(Double bidMultiplier) {
+  public void setBidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     this.bidMultiplier = bidMultiplier;
   }
 
-
-  public CampaignAudienceList campaignId(Long campaignId) {
+  public CampaignAudienceList campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt;このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt;This field is required in any cases.&lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -130,25 +134,24 @@ public class CampaignAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public CampaignAudienceList campaignName(String campaignName) {
+  public CampaignAudienceList campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名称です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of campaign.&lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -156,25 +159,24 @@ public class CampaignAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public CampaignAudienceList criterionAudienceList(CampaignAudienceListServiceCriterionAudienceList criterionAudienceList) {
+  public CampaignAudienceList criterionAudienceList(@jakarta.annotation.Nullable CampaignAudienceListServiceCriterionAudienceList criterionAudienceList) {
     
     this.criterionAudienceList = criterionAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get criterionAudienceList
    * @return criterionAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignAudienceListServiceCriterionAudienceList getCriterionAudienceList() {
@@ -182,25 +184,24 @@ public class CampaignAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionAudienceList(CampaignAudienceListServiceCriterionAudienceList criterionAudienceList) {
+  public void setCriterionAudienceList(@jakarta.annotation.Nullable CampaignAudienceListServiceCriterionAudienceList criterionAudienceList) {
     this.criterionAudienceList = criterionAudienceList;
   }
 
-
-  public CampaignAudienceList excludedType(CampaignAudienceListServiceExcludedType excludedType) {
+  public CampaignAudienceList excludedType(@jakarta.annotation.Nullable CampaignAudienceListServiceExcludedType excludedType) {
     
     this.excludedType = excludedType;
     return this;
   }
 
-   /**
+  /**
    * Get excludedType
    * @return excludedType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignAudienceListServiceExcludedType getExcludedType() {
@@ -208,11 +209,12 @@ public class CampaignAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCLUDED_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDED_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcludedType(CampaignAudienceListServiceExcludedType excludedType) {
+  public void setExcludedType(@jakarta.annotation.Nullable CampaignAudienceListServiceExcludedType excludedType) {
     this.excludedType = excludedType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -255,10 +257,7 @@ public class CampaignAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

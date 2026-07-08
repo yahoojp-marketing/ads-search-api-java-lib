@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.PageFeedAssetServiceGetJobStatusType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServiceGetJobStatusSelectorオブジェクトは、upload、downloadの処理状況を取得するための検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServiceGetJobStatusSelector object retains search condition for The processing situation upload/download.&lt;/div&gt; 
@@ -36,38 +37,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedAssetServiceGetJobStatusSelector.JSON_PROPERTY_NUMBER_RESULTS,
   PageFeedAssetServiceGetJobStatusSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PageFeedAssetServiceGetJobStatusSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_JOB_IDS = "jobIds";
+  @jakarta.annotation.Nullable
   private List<Long> jobIds;
 
   public static final String JSON_PROPERTY_JOB_TYPE = "jobType";
+  @jakarta.annotation.Nullable
   private PageFeedAssetServiceGetJobStatusType jobType;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public PageFeedAssetServiceGetJobStatusSelector() {
   }
 
-  public PageFeedAssetServiceGetJobStatusSelector accountId(Long accountId) {
+  public PageFeedAssetServiceGetJobStatusSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -75,14 +81,13 @@ public class PageFeedAssetServiceGetJobStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public PageFeedAssetServiceGetJobStatusSelector jobIds(List<Long> jobIds) {
+  public PageFeedAssetServiceGetJobStatusSelector jobIds(@jakarta.annotation.Nullable List<Long> jobIds) {
     
     this.jobIds = jobIds;
     return this;
@@ -96,12 +101,12 @@ public class PageFeedAssetServiceGetJobStatusSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;登録したジョブのID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Registered job ID.&lt;/div&gt; 
    * @return jobIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_IDS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getJobIds() {
@@ -109,25 +114,24 @@ public class PageFeedAssetServiceGetJobStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_IDS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobIds(List<Long> jobIds) {
+  public void setJobIds(@jakarta.annotation.Nullable List<Long> jobIds) {
     this.jobIds = jobIds;
   }
 
-
-  public PageFeedAssetServiceGetJobStatusSelector jobType(PageFeedAssetServiceGetJobStatusType jobType) {
+  public PageFeedAssetServiceGetJobStatusSelector jobType(@jakarta.annotation.Nullable PageFeedAssetServiceGetJobStatusType jobType) {
     
     this.jobType = jobType;
     return this;
   }
 
-   /**
+  /**
    * Get jobType
    * @return jobType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_JOB_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public PageFeedAssetServiceGetJobStatusType getJobType() {
@@ -135,27 +139,26 @@ public class PageFeedAssetServiceGetJobStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_JOB_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setJobType(PageFeedAssetServiceGetJobStatusType jobType) {
+  public void setJobType(@jakarta.annotation.Nullable PageFeedAssetServiceGetJobStatusType jobType) {
     this.jobType = jobType;
   }
 
-
-  public PageFeedAssetServiceGetJobStatusSelector numberResults(Integer numberResults) {
+  public PageFeedAssetServiceGetJobStatusSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 10000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -163,26 +166,25 @@ public class PageFeedAssetServiceGetJobStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public PageFeedAssetServiceGetJobStatusSelector startIndex(Integer startIndex) {
+  public PageFeedAssetServiceGetJobStatusSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -190,11 +192,12 @@ public class PageFeedAssetServiceGetJobStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -235,10 +238,7 @@ public class PageFeedAssetServiceGetJobStatusSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
