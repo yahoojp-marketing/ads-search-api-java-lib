@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Labelオブジェクトは、ラベルの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Label object describes label information.&lt;/div&gt; 
@@ -37,50 +38,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Label.JSON_PROPERTY_LABELED_AD_GROUP_CRITERION,
   Label.JSON_PROPERTY_LABELED_CAMPAIGN
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class Label {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_COLOR = "color";
+  @jakarta.annotation.Nullable
   private String color;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_LABEL_ID = "labelId";
+  @jakarta.annotation.Nullable
   private Long labelId;
 
   public static final String JSON_PROPERTY_LABEL_NAME = "labelName";
+  @jakarta.annotation.Nullable
   private String labelName;
 
   public static final String JSON_PROPERTY_LABELED_AD_GROUP = "labeledAdGroup";
+  @jakarta.annotation.Nullable
   private Long labeledAdGroup;
 
   public static final String JSON_PROPERTY_LABELED_AD_GROUP_AD = "labeledAdGroupAd";
+  @jakarta.annotation.Nullable
   private Long labeledAdGroupAd;
 
   public static final String JSON_PROPERTY_LABELED_AD_GROUP_CRITERION = "labeledAdGroupCriterion";
+  @jakarta.annotation.Nullable
   private Long labeledAdGroupCriterion;
 
   public static final String JSON_PROPERTY_LABELED_CAMPAIGN = "labeledCampaign";
+  @jakarta.annotation.Nullable
   private Long labeledCampaign;
 
   public Label() {
   }
 
-  public Label accountId(Long accountId) {
+  public Label accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -88,25 +98,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public Label color(String color) {
+  public Label color(@jakarta.annotation.Nullable String color) {
     
     this.color = color;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カラーコードです。例：#FFFFFF&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Color code. e.g. #FFFFFF&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return color
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COLOR)
+  @JsonProperty(value = JSON_PROPERTY_COLOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getColor() {
@@ -114,25 +123,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COLOR)
+  @JsonProperty(value = JSON_PROPERTY_COLOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setColor(String color) {
+  public void setColor(@jakarta.annotation.Nullable String color) {
     this.color = color;
   }
 
-
-  public Label description(String description) {
+  public Label description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明文です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -140,25 +148,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public Label labelId(Long labelId) {
+  public Label labelId(@jakarta.annotation.Nullable Long labelId) {
     
     this.labelId = labelId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベルIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となり、ADD時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Label ID.&lt;br&gt; This field is required in SET and REMOVE operation, and will be ignored in ADD operation.&lt;/div&gt; 
    * @return labelId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABEL_ID)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLabelId() {
@@ -166,25 +173,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABEL_ID)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabelId(Long labelId) {
+  public void setLabelId(@jakarta.annotation.Nullable Long labelId) {
     this.labelId = labelId;
   }
 
-
-  public Label labelName(String labelName) {
+  public Label labelName(@jakarta.annotation.Nullable String labelName) {
     
     this.labelName = labelName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベル名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となり、REMOVE時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Label name.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation.&lt;/div&gt; 
    * @return labelName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABEL_NAME)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getLabelName() {
@@ -192,25 +198,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABEL_NAME)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabelName(String labelName) {
+  public void setLabelName(@jakarta.annotation.Nullable String labelName) {
     this.labelName = labelName;
   }
 
-
-  public Label labeledAdGroup(Long labeledAdGroup) {
+  public Label labeledAdGroup(@jakarta.annotation.Nullable Long labeledAdGroup) {
     
     this.labeledAdGroup = labeledAdGroup;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループの紐付け数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of labeled ad group.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return labeledAdGroup
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELED_AD_GROUP)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_AD_GROUP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLabeledAdGroup() {
@@ -218,25 +223,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELED_AD_GROUP)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_AD_GROUP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabeledAdGroup(Long labeledAdGroup) {
+  public void setLabeledAdGroup(@jakarta.annotation.Nullable Long labeledAdGroup) {
     this.labeledAdGroup = labeledAdGroup;
   }
 
-
-  public Label labeledAdGroupAd(Long labeledAdGroupAd) {
+  public Label labeledAdGroupAd(@jakarta.annotation.Nullable Long labeledAdGroupAd) {
     
     this.labeledAdGroupAd = labeledAdGroupAd;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告の紐付け数です。&lt;br&gt;このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of labeled ad.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return labeledAdGroupAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELED_AD_GROUP_AD)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_AD_GROUP_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLabeledAdGroupAd() {
@@ -244,25 +248,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELED_AD_GROUP_AD)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_AD_GROUP_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabeledAdGroupAd(Long labeledAdGroupAd) {
+  public void setLabeledAdGroupAd(@jakarta.annotation.Nullable Long labeledAdGroupAd) {
     this.labeledAdGroupAd = labeledAdGroupAd;
   }
 
-
-  public Label labeledAdGroupCriterion(Long labeledAdGroupCriterion) {
+  public Label labeledAdGroupCriterion(@jakarta.annotation.Nullable Long labeledAdGroupCriterion) {
     
     this.labeledAdGroupCriterion = labeledAdGroupCriterion;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードの紐付け数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of labeled ad group criterion.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return labeledAdGroupCriterion
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELED_AD_GROUP_CRITERION)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_AD_GROUP_CRITERION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLabeledAdGroupCriterion() {
@@ -270,25 +273,24 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELED_AD_GROUP_CRITERION)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_AD_GROUP_CRITERION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabeledAdGroupCriterion(Long labeledAdGroupCriterion) {
+  public void setLabeledAdGroupCriterion(@jakarta.annotation.Nullable Long labeledAdGroupCriterion) {
     this.labeledAdGroupCriterion = labeledAdGroupCriterion;
   }
 
-
-  public Label labeledCampaign(Long labeledCampaign) {
+  public Label labeledCampaign(@jakarta.annotation.Nullable Long labeledCampaign) {
     
     this.labeledCampaign = labeledCampaign;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンの紐付け数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of labeled campaign.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return labeledCampaign
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELED_CAMPAIGN)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_CAMPAIGN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLabeledCampaign() {
@@ -296,11 +298,12 @@ public class Label {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELED_CAMPAIGN)
+  @JsonProperty(value = JSON_PROPERTY_LABELED_CAMPAIGN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabeledCampaign(Long labeledCampaign) {
+  public void setLabeledCampaign(@jakarta.annotation.Nullable Long labeledCampaign) {
     this.labeledCampaign = labeledCampaign;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -349,10 +352,7 @@ public class Label {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

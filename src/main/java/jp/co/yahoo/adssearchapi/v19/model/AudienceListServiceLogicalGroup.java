@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceLogicalCondition;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceLogicalRuleOperand;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceLogicalGroupは、組合せグループの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceLogicalGroup is an object that holds combination group information.&lt;br&gt; This field is required in ADD and SET operation.&lt;/div&gt; 
@@ -34,29 +36,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceLogicalGroup.JSON_PROPERTY_LOGICAL_CONDITION,
   AudienceListServiceLogicalGroup.JSON_PROPERTY_LOGICAL_OPERAND
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceLogicalGroup {
   public static final String JSON_PROPERTY_LOGICAL_CONDITION = "logicalCondition";
+  @jakarta.annotation.Nullable
   private AudienceListServiceLogicalCondition logicalCondition;
 
   public static final String JSON_PROPERTY_LOGICAL_OPERAND = "logicalOperand";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceLogicalRuleOperand> logicalOperand;
 
   public AudienceListServiceLogicalGroup() {
   }
 
-  public AudienceListServiceLogicalGroup logicalCondition(AudienceListServiceLogicalCondition logicalCondition) {
+  public AudienceListServiceLogicalGroup logicalCondition(@jakarta.annotation.Nullable AudienceListServiceLogicalCondition logicalCondition) {
     
     this.logicalCondition = logicalCondition;
     return this;
   }
 
-   /**
+  /**
    * Get logicalCondition
    * @return logicalCondition
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGICAL_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceLogicalCondition getLogicalCondition() {
@@ -64,14 +68,13 @@ public class AudienceListServiceLogicalGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGICAL_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogicalCondition(AudienceListServiceLogicalCondition logicalCondition) {
+  public void setLogicalCondition(@jakarta.annotation.Nullable AudienceListServiceLogicalCondition logicalCondition) {
     this.logicalCondition = logicalCondition;
   }
 
-
-  public AudienceListServiceLogicalGroup logicalOperand(List<AudienceListServiceLogicalRuleOperand> logicalOperand) {
+  public AudienceListServiceLogicalGroup logicalOperand(@jakarta.annotation.Nullable List<AudienceListServiceLogicalRuleOperand> logicalOperand) {
     
     this.logicalOperand = logicalOperand;
     return this;
@@ -85,12 +88,12 @@ public class AudienceListServiceLogicalGroup {
     return this;
   }
 
-   /**
+  /**
    * Get logicalOperand
    * @return logicalOperand
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGICAL_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_OPERAND, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceLogicalRuleOperand> getLogicalOperand() {
@@ -98,11 +101,12 @@ public class AudienceListServiceLogicalGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGICAL_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_LOGICAL_OPERAND, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogicalOperand(List<AudienceListServiceLogicalRuleOperand> logicalOperand) {
+  public void setLogicalOperand(@jakarta.annotation.Nullable List<AudienceListServiceLogicalRuleOperand> logicalOperand) {
     this.logicalOperand = logicalOperand;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -137,10 +141,7 @@ public class AudienceListServiceLogicalGroup {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

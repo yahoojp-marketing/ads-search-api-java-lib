@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adssearchapi.v18.model.AdGroupServiceCriterionType;
 import jp.co.yahoo.adssearchapi.v18.model.AdGroupServiceTargetingSetting;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceSettingsは、ターゲットタイプを保持するオブジェクトです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceSettings is object that holds target type.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
@@ -32,29 +33,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceSettings.JSON_PROPERTY_CRITERION_TYPE,
   AdGroupServiceSettings.JSON_PROPERTY_TARGETING_SETTING
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceSettings {
   public static final String JSON_PROPERTY_CRITERION_TYPE = "criterionType";
+  @jakarta.annotation.Nullable
   private AdGroupServiceCriterionType criterionType;
 
   public static final String JSON_PROPERTY_TARGETING_SETTING = "targetingSetting";
+  @jakarta.annotation.Nullable
   private AdGroupServiceTargetingSetting targetingSetting;
 
   public AdGroupServiceSettings() {
   }
 
-  public AdGroupServiceSettings criterionType(AdGroupServiceCriterionType criterionType) {
+  public AdGroupServiceSettings criterionType(@jakarta.annotation.Nullable AdGroupServiceCriterionType criterionType) {
     
     this.criterionType = criterionType;
     return this;
   }
 
-   /**
+  /**
    * Get criterionType
    * @return criterionType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CRITERION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceCriterionType getCriterionType() {
@@ -62,25 +65,24 @@ public class AdGroupServiceSettings {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CRITERION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CRITERION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCriterionType(AdGroupServiceCriterionType criterionType) {
+  public void setCriterionType(@jakarta.annotation.Nullable AdGroupServiceCriterionType criterionType) {
     this.criterionType = criterionType;
   }
 
-
-  public AdGroupServiceSettings targetingSetting(AdGroupServiceTargetingSetting targetingSetting) {
+  public AdGroupServiceSettings targetingSetting(@jakarta.annotation.Nullable AdGroupServiceTargetingSetting targetingSetting) {
     
     this.targetingSetting = targetingSetting;
     return this;
   }
 
-   /**
+  /**
    * Get targetingSetting
    * @return targetingSetting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGETING_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGETING_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceTargetingSetting getTargetingSetting() {
@@ -88,11 +90,12 @@ public class AdGroupServiceSettings {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGETING_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGETING_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetingSetting(AdGroupServiceTargetingSetting targetingSetting) {
+  public void setTargetingSetting(@jakarta.annotation.Nullable AdGroupServiceTargetingSetting targetingSetting) {
     this.targetingSetting = targetingSetting;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -127,10 +130,7 @@ public class AdGroupServiceSettings {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

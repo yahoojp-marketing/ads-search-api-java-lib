@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.BiddingSeasonalityAdjustmentServiceDevices;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BiddingSeasonalityAdjustment オブジェクトは、自動入札のスポット調整を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BiddingSeasonalityAdjustment object describes bidding seasonality adjustment information.&lt;/div&gt; 
@@ -40,50 +42,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BiddingSeasonalityAdjustment.JSON_PROPERTY_CONVERSION_RATE,
   BiddingSeasonalityAdjustment.JSON_PROPERTY_CAMPAIGN_IDS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BiddingSeasonalityAdjustment {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_NAME = "biddingSeasonalityAdjustmentName";
+  @jakarta.annotation.Nullable
   private String biddingSeasonalityAdjustmentName;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_ID = "biddingSeasonalityAdjustmentId";
+  @jakarta.annotation.Nullable
   private Long biddingSeasonalityAdjustmentId;
 
   public static final String JSON_PROPERTY_DEVICES = "devices";
+  @jakarta.annotation.Nullable
   private List<BiddingSeasonalityAdjustmentServiceDevices> devices;
 
   public static final String JSON_PROPERTY_START_DATE_TIME = "startDateTime";
+  @jakarta.annotation.Nullable
   private String startDateTime;
 
   public static final String JSON_PROPERTY_END_DATE_TIME = "endDateTime";
+  @jakarta.annotation.Nullable
   private String endDateTime;
 
   public static final String JSON_PROPERTY_CONVERSION_RATE = "conversionRate";
+  @jakarta.annotation.Nullable
   private Double conversionRate;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public BiddingSeasonalityAdjustment() {
   }
 
-  public BiddingSeasonalityAdjustment accountId(Long accountId) {
+  public BiddingSeasonalityAdjustment accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -91,25 +102,24 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public BiddingSeasonalityAdjustment biddingSeasonalityAdjustmentName(String biddingSeasonalityAdjustmentName) {
+  public BiddingSeasonalityAdjustment biddingSeasonalityAdjustmentName(@jakarta.annotation.Nullable String biddingSeasonalityAdjustmentName) {
     
     this.biddingSeasonalityAdjustmentName = biddingSeasonalityAdjustmentName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動入札のスポット調整名です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; ※256文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bidding seasonality adjustment name.&lt;br&gt; This field is required in ADD and SET operation.&lt;br&gt; *Up to 256 characters.&lt;/div&gt; 
    * @return biddingSeasonalityAdjustmentName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getBiddingSeasonalityAdjustmentName() {
@@ -117,25 +127,24 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingSeasonalityAdjustmentName(String biddingSeasonalityAdjustmentName) {
+  public void setBiddingSeasonalityAdjustmentName(@jakarta.annotation.Nullable String biddingSeasonalityAdjustmentName) {
     this.biddingSeasonalityAdjustmentName = biddingSeasonalityAdjustmentName;
   }
 
-
-  public BiddingSeasonalityAdjustment description(String description) {
+  public BiddingSeasonalityAdjustment description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動入札のスポット調整の説明です。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※500文字以内になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bidding Seasonality Adjustment description.&lt;br&gt; This field is optional.&lt;br&gt; *Up to 500 characters.&lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -143,25 +152,24 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public BiddingSeasonalityAdjustment biddingSeasonalityAdjustmentId(Long biddingSeasonalityAdjustmentId) {
+  public BiddingSeasonalityAdjustment biddingSeasonalityAdjustmentId(@jakarta.annotation.Nullable Long biddingSeasonalityAdjustmentId) {
     
     this.biddingSeasonalityAdjustmentId = biddingSeasonalityAdjustmentId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;自動入札のスポット調整IDです。&lt;br&gt; SET及びREMOVE時、このフィールドは必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Bidding seasonality adjustment ID.&lt;br&gt; This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return biddingSeasonalityAdjustmentId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getBiddingSeasonalityAdjustmentId() {
@@ -169,14 +177,13 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_ID)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SEASONALITY_ADJUSTMENT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingSeasonalityAdjustmentId(Long biddingSeasonalityAdjustmentId) {
+  public void setBiddingSeasonalityAdjustmentId(@jakarta.annotation.Nullable Long biddingSeasonalityAdjustmentId) {
     this.biddingSeasonalityAdjustmentId = biddingSeasonalityAdjustmentId;
   }
 
-
-  public BiddingSeasonalityAdjustment devices(List<BiddingSeasonalityAdjustmentServiceDevices> devices) {
+  public BiddingSeasonalityAdjustment devices(@jakarta.annotation.Nullable List<BiddingSeasonalityAdjustmentServiceDevices> devices) {
     
     this.devices = devices;
     return this;
@@ -190,12 +197,12 @@ public class BiddingSeasonalityAdjustment {
     return this;
   }
 
-   /**
+  /**
    * Get devices
    * @return devices
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICES)
+  @JsonProperty(value = JSON_PROPERTY_DEVICES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<BiddingSeasonalityAdjustmentServiceDevices> getDevices() {
@@ -203,25 +210,24 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICES)
+  @JsonProperty(value = JSON_PROPERTY_DEVICES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDevices(List<BiddingSeasonalityAdjustmentServiceDevices> devices) {
+  public void setDevices(@jakarta.annotation.Nullable List<BiddingSeasonalityAdjustmentServiceDevices> devices) {
     this.devices = devices;
   }
 
-
-  public BiddingSeasonalityAdjustment startDateTime(String startDateTime) {
+  public BiddingSeasonalityAdjustment startDateTime(@jakarta.annotation.Nullable String startDateTime) {
     
     this.startDateTime = startDateTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用開始日です。&lt;br&gt; ADD時、このフィールドは必須です。&lt;br&gt; ※YYYYMMDDHHmmss形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;br&gt; ※startDateTime〜endDateTimeが14日を超える場合はエラーになります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date of rule setting.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *In YYYYMMDDHHmmss format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *If startDateTime〜endDateTime exceeds 14 days, an error will occur.&lt;/div&gt; 
    * @return startDateTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDateTime() {
@@ -229,25 +235,24 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDateTime(String startDateTime) {
+  public void setStartDateTime(@jakarta.annotation.Nullable String startDateTime) {
     this.startDateTime = startDateTime;
   }
 
-
-  public BiddingSeasonalityAdjustment endDateTime(String endDateTime) {
+  public BiddingSeasonalityAdjustment endDateTime(@jakarta.annotation.Nullable String endDateTime) {
     
     this.endDateTime = endDateTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ルール適用終了日です。&lt;br&gt; ADD時、このフィールドは必須です。&lt;br&gt; ※YYYYMMDDHHmmss形式です。&lt;br&gt; ※リクエスト日は2037/12/30まで 指定可能です。&lt;br&gt; ※startDateTime〜endDateTimeが14日を超える場合はエラーになります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date of rule setting.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *In YYYYMMDDHHmmss format&lt;br&gt; *Request date can be set up to 2037/12/30&lt;br&gt; *If startDateTime〜endDateTime exceeds 14 days, an error will occur.&lt;/div&gt; 
    * @return endDateTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDateTime() {
@@ -255,25 +260,24 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDateTime(String endDateTime) {
+  public void setEndDateTime(@jakarta.annotation.Nullable String endDateTime) {
     this.endDateTime = endDateTime;
   }
 
-
-  public BiddingSeasonalityAdjustment conversionRate(Double conversionRate) {
+  public BiddingSeasonalityAdjustment conversionRate(@jakarta.annotation.Nullable Double conversionRate) {
     
     this.conversionRate = conversionRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン率を調整する値です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; ※制限値：0.1 ～ 10 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value to adjust conversion rate.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *Range limit: 0.1 ～ 10 &lt;/div&gt; 
    * @return conversionRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_RATE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getConversionRate() {
@@ -281,14 +285,13 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_RATE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionRate(Double conversionRate) {
+  public void setConversionRate(@jakarta.annotation.Nullable Double conversionRate) {
     this.conversionRate = conversionRate;
   }
 
-
-  public BiddingSeasonalityAdjustment campaignIds(List<Long> campaignIds) {
+  public BiddingSeasonalityAdjustment campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -302,12 +305,12 @@ public class BiddingSeasonalityAdjustment {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID.&lt;br&gt; This field is required in ADD operation.&lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -315,11 +318,12 @@ public class BiddingSeasonalityAdjustment {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -368,10 +372,7 @@ public class BiddingSeasonalityAdjustment {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

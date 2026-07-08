@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AccountAssetServiceType;
 import jp.co.yahoo.adssearchapi.v19.model.AccountAssetServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountAssetServiceSelectorオブジェクトは、アセット情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountAssetServiceSelector describes the Asset information.&lt;/div&gt; 
@@ -38,41 +40,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountAssetServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AccountAssetServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AccountAssetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_ASSET_IDS = "assetIds";
+  @jakarta.annotation.Nullable
   private List<Long> assetIds;
 
   public static final String JSON_PROPERTY_TYPES = "types";
+  @jakarta.annotation.Nullable
   private List<AccountAssetServiceType> types;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
+  @jakarta.annotation.Nullable
   private List<AccountAssetServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public AccountAssetServiceSelector() {
   }
 
-  public AccountAssetServiceSelector accountId(Long accountId) {
+  public AccountAssetServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -80,14 +88,13 @@ public class AccountAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AccountAssetServiceSelector assetIds(List<Long> assetIds) {
+  public AccountAssetServiceSelector assetIds(@jakarta.annotation.Nullable List<Long> assetIds) {
     
     this.assetIds = assetIds;
     return this;
@@ -101,12 +108,12 @@ public class AccountAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アセット情報のIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Asset information ID.&lt;/div&gt; 
    * @return assetIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ASSET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getAssetIds() {
@@ -114,14 +121,13 @@ public class AccountAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ASSET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_ASSET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAssetIds(List<Long> assetIds) {
+  public void setAssetIds(@jakarta.annotation.Nullable List<Long> assetIds) {
     this.assetIds = assetIds;
   }
 
-
-  public AccountAssetServiceSelector types(List<AccountAssetServiceType> types) {
+  public AccountAssetServiceSelector types(@jakarta.annotation.Nullable List<AccountAssetServiceType> types) {
     
     this.types = types;
     return this;
@@ -135,12 +141,12 @@ public class AccountAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get types
    * @return types
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AccountAssetServiceType> getTypes() {
@@ -148,14 +154,13 @@ public class AccountAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTypes(List<AccountAssetServiceType> types) {
+  public void setTypes(@jakarta.annotation.Nullable List<AccountAssetServiceType> types) {
     this.types = types;
   }
 
-
-  public AccountAssetServiceSelector userStatuses(List<AccountAssetServiceUserStatus> userStatuses) {
+  public AccountAssetServiceSelector userStatuses(@jakarta.annotation.Nullable List<AccountAssetServiceUserStatus> userStatuses) {
     
     this.userStatuses = userStatuses;
     return this;
@@ -169,12 +174,12 @@ public class AccountAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get userStatuses
    * @return userStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AccountAssetServiceUserStatus> getUserStatuses() {
@@ -182,27 +187,26 @@ public class AccountAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatuses(List<AccountAssetServiceUserStatus> userStatuses) {
+  public void setUserStatuses(@jakarta.annotation.Nullable List<AccountAssetServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
-
-  public AccountAssetServiceSelector numberResults(Integer numberResults) {
+  public AccountAssetServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -210,26 +214,25 @@ public class AccountAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public AccountAssetServiceSelector startIndex(Integer startIndex) {
+  public AccountAssetServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -237,11 +240,12 @@ public class AccountAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -284,10 +288,7 @@ public class AccountAssetServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

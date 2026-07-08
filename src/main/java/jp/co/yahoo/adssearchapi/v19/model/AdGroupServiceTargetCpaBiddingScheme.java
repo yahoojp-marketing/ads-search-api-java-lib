@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceTargetCpaBiddingSchemeオブジェクトは、広告グループ目標単価（tCPA）の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceTargetCpaBiddingScheme object holds configuration information of target CPA (tCPA) of ad group. &lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceTargetCpaBiddingScheme.JSON_PROPERTY_TARGET_CPA,
   AdGroupServiceTargetCpaBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_CPA
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceTargetCpaBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
+  @jakarta.annotation.Nullable
   private Long targetCpa;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_CPA = "isRemoveTargetCpa";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemoveFlg isRemoveTargetCpa;
 
   public AdGroupServiceTargetCpaBiddingScheme() {
   }
 
-  public AdGroupServiceTargetCpaBiddingScheme targetCpa(Long targetCpa) {
+  public AdGroupServiceTargetCpaBiddingScheme targetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     
     this.targetCpa = targetCpa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ目標単価（tCPA）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※制限値：1 ～ 800000&lt;br&gt; ※日本円のみの設定です。&lt;br&gt; ※campaignBiddingStrategyTypeがTARGET_CPAの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target CPA (tCPA) of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *Range limit: 1 - 800000&lt;br&gt; *JPY only.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is TARGET_CPA. &lt;/div&gt; 
    * @return targetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetCpa() {
@@ -61,25 +64,24 @@ public class AdGroupServiceTargetCpaBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetCpa(Long targetCpa) {
+  public void setTargetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     this.targetCpa = targetCpa;
   }
 
-
-  public AdGroupServiceTargetCpaBiddingScheme isRemoveTargetCpa(AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
+  public AdGroupServiceTargetCpaBiddingScheme isRemoveTargetCpa(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
     
     this.isRemoveTargetCpa = isRemoveTargetCpa;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTargetCpa
    * @return isRemoveTargetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemoveFlg getIsRemoveTargetCpa() {
@@ -87,11 +89,12 @@ public class AdGroupServiceTargetCpaBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTargetCpa(AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
+  public void setIsRemoveTargetCpa(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
     this.isRemoveTargetCpa = isRemoveTargetCpa;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class AdGroupServiceTargetCpaBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

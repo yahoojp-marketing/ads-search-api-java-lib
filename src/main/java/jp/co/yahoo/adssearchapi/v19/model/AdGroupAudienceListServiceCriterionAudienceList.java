@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adssearchapi.v19.model.AdGroupAudienceListServiceIsDemographic;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAudienceListServiceCriterionAudienceListは、オーディエンスリスト情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAudienceListServiceCriterionAudienceList is an object that holds audience list information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
@@ -33,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAudienceListServiceCriterionAudienceList.JSON_PROPERTY_AUDIENCE_LIST_NAME,
   AdGroupAudienceListServiceCriterionAudienceList.JSON_PROPERTY_IS_DEMOGRAPHIC
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAudienceListServiceCriterionAudienceList {
   public static final String JSON_PROPERTY_RETARGETING_TRACK_ID = "retargetingTrackId";
+  @jakarta.annotation.Nullable
   private Long retargetingTrackId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
+  @jakarta.annotation.Nullable
   private String audienceListName;
 
   public static final String JSON_PROPERTY_IS_DEMOGRAPHIC = "isDemographic";
+  @jakarta.annotation.Nullable
   private AdGroupAudienceListServiceIsDemographic isDemographic;
 
   public AdGroupAudienceListServiceCriterionAudienceList() {
   }
 
-  public AdGroupAudienceListServiceCriterionAudienceList retargetingTrackId(Long retargetingTrackId) {
+  public AdGroupAudienceListServiceCriterionAudienceList retargetingTrackId(@jakarta.annotation.Nullable Long retargetingTrackId) {
     
     this.retargetingTrackId = retargetingTrackId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リターゲティングトラックIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Retargeting track ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return retargetingTrackId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRetargetingTrackId() {
@@ -69,25 +74,24 @@ public class AdGroupAudienceListServiceCriterionAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TRACK_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TRACK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRetargetingTrackId(Long retargetingTrackId) {
+  public void setRetargetingTrackId(@jakarta.annotation.Nullable Long retargetingTrackId) {
     this.retargetingTrackId = retargetingTrackId;
   }
 
-
-  public AdGroupAudienceListServiceCriterionAudienceList audienceListId(Long audienceListId) {
+  public AdGroupAudienceListServiceCriterionAudienceList audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;br&gt; このフィールドは、いずれの場合でも必須です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListId() {
@@ -95,25 +99,24 @@ public class AdGroupAudienceListServiceCriterionAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AdGroupAudienceListServiceCriterionAudienceList audienceListName(String audienceListName) {
+  public AdGroupAudienceListServiceCriterionAudienceList audienceListName(@jakarta.annotation.Nullable String audienceListName) {
     
     this.audienceListName = audienceListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return audienceListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListName() {
@@ -121,25 +124,24 @@ public class AdGroupAudienceListServiceCriterionAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListName(String audienceListName) {
+  public void setAudienceListName(@jakarta.annotation.Nullable String audienceListName) {
     this.audienceListName = audienceListName;
   }
 
-
-  public AdGroupAudienceListServiceCriterionAudienceList isDemographic(AdGroupAudienceListServiceIsDemographic isDemographic) {
+  public AdGroupAudienceListServiceCriterionAudienceList isDemographic(@jakarta.annotation.Nullable AdGroupAudienceListServiceIsDemographic isDemographic) {
     
     this.isDemographic = isDemographic;
     return this;
   }
 
-   /**
+  /**
    * Get isDemographic
    * @return isDemographic
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_DEMOGRAPHIC)
+  @JsonProperty(value = JSON_PROPERTY_IS_DEMOGRAPHIC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAudienceListServiceIsDemographic getIsDemographic() {
@@ -147,11 +149,12 @@ public class AdGroupAudienceListServiceCriterionAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_DEMOGRAPHIC)
+  @JsonProperty(value = JSON_PROPERTY_IS_DEMOGRAPHIC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsDemographic(AdGroupAudienceListServiceIsDemographic isDemographic) {
+  public void setIsDemographic(@jakarta.annotation.Nullable AdGroupAudienceListServiceIsDemographic isDemographic) {
     this.isDemographic = isDemographic;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +193,7 @@ public class AdGroupAudienceListServiceCriterionAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

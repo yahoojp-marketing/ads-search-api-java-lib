@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.PageFeedAssetServiceApprovalStatus;
 import jp.co.yahoo.adssearchapi.v17.model.PageFeedAssetServicePageFeedAssetUrl;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PageFeedAssetServiceSelectorオブジェクトは、登録したページフィードアセットを照会するための検索条件を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetServiceSelector object stores search condition to inquire about registered page feed asset.&lt;/div&gt; 
@@ -40,47 +42,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PageFeedAssetServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   PageFeedAssetServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PageFeedAssetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS = "pageFeedAssetSetIds";
+  @jakarta.annotation.Nullable
   private List<Long> pageFeedAssetSetIds;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_IDS = "pageFeedAssetIds";
+  @jakarta.annotation.Nullable
   private List<Long> pageFeedAssetIds;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUSES = "approvalStatuses";
+  @jakarta.annotation.Nullable
   private List<PageFeedAssetServiceApprovalStatus> approvalStatuses;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABELS = "pageFeedAssetCustomLabels";
+  @jakarta.annotation.Nullable
   private List<String> pageFeedAssetCustomLabels;
 
   public static final String JSON_PROPERTY_PAGE_FEED_ASSET_URLS = "pageFeedAssetUrls";
+  @jakarta.annotation.Nullable
   private List<PageFeedAssetServicePageFeedAssetUrl> pageFeedAssetUrls;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public PageFeedAssetServiceSelector() {
   }
 
-  public PageFeedAssetServiceSelector accountId(Long accountId) {
+  public PageFeedAssetServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -88,14 +98,13 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public PageFeedAssetServiceSelector pageFeedAssetSetIds(List<Long> pageFeedAssetSetIds) {
+  public PageFeedAssetServiceSelector pageFeedAssetSetIds(@jakarta.annotation.Nullable List<Long> pageFeedAssetSetIds) {
     
     this.pageFeedAssetSetIds = pageFeedAssetSetIds;
     return this;
@@ -109,12 +118,12 @@ public class PageFeedAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットセットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAssetSet ID.&lt;/div&gt; 
    * @return pageFeedAssetSetIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getPageFeedAssetSetIds() {
@@ -122,14 +131,13 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_SET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetSetIds(List<Long> pageFeedAssetSetIds) {
+  public void setPageFeedAssetSetIds(@jakarta.annotation.Nullable List<Long> pageFeedAssetSetIds) {
     this.pageFeedAssetSetIds = pageFeedAssetSetIds;
   }
 
-
-  public PageFeedAssetServiceSelector pageFeedAssetIds(List<Long> pageFeedAssetIds) {
+  public PageFeedAssetServiceSelector pageFeedAssetIds(@jakarta.annotation.Nullable List<Long> pageFeedAssetIds) {
     
     this.pageFeedAssetIds = pageFeedAssetIds;
     return this;
@@ -143,12 +151,12 @@ public class PageFeedAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PageFeedAsset ID.&lt;/div&gt; 
    * @return pageFeedAssetIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getPageFeedAssetIds() {
@@ -156,14 +164,13 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetIds(List<Long> pageFeedAssetIds) {
+  public void setPageFeedAssetIds(@jakarta.annotation.Nullable List<Long> pageFeedAssetIds) {
     this.pageFeedAssetIds = pageFeedAssetIds;
   }
 
-
-  public PageFeedAssetServiceSelector approvalStatuses(List<PageFeedAssetServiceApprovalStatus> approvalStatuses) {
+  public PageFeedAssetServiceSelector approvalStatuses(@jakarta.annotation.Nullable List<PageFeedAssetServiceApprovalStatus> approvalStatuses) {
     
     this.approvalStatuses = approvalStatuses;
     return this;
@@ -177,12 +184,12 @@ public class PageFeedAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatuses
    * @return approvalStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<PageFeedAssetServiceApprovalStatus> getApprovalStatuses() {
@@ -190,14 +197,13 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatuses(List<PageFeedAssetServiceApprovalStatus> approvalStatuses) {
+  public void setApprovalStatuses(@jakarta.annotation.Nullable List<PageFeedAssetServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
-
-  public PageFeedAssetServiceSelector pageFeedAssetCustomLabels(List<String> pageFeedAssetCustomLabels) {
+  public PageFeedAssetServiceSelector pageFeedAssetCustomLabels(@jakarta.annotation.Nullable List<String> pageFeedAssetCustomLabels) {
     
     this.pageFeedAssetCustomLabels = pageFeedAssetCustomLabels;
     return this;
@@ -211,12 +217,12 @@ public class PageFeedAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページフィードアセットのカスタムラベル&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom label of Page feed asset.&lt;/div&gt; 
    * @return pageFeedAssetCustomLabels
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getPageFeedAssetCustomLabels() {
@@ -224,14 +230,13 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_CUSTOM_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetCustomLabels(List<String> pageFeedAssetCustomLabels) {
+  public void setPageFeedAssetCustomLabels(@jakarta.annotation.Nullable List<String> pageFeedAssetCustomLabels) {
     this.pageFeedAssetCustomLabels = pageFeedAssetCustomLabels;
   }
 
-
-  public PageFeedAssetServiceSelector pageFeedAssetUrls(List<PageFeedAssetServicePageFeedAssetUrl> pageFeedAssetUrls) {
+  public PageFeedAssetServiceSelector pageFeedAssetUrls(@jakarta.annotation.Nullable List<PageFeedAssetServicePageFeedAssetUrl> pageFeedAssetUrls) {
     
     this.pageFeedAssetUrls = pageFeedAssetUrls;
     return this;
@@ -245,12 +250,12 @@ public class PageFeedAssetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get pageFeedAssetUrls
    * @return pageFeedAssetUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_URLS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<PageFeedAssetServicePageFeedAssetUrl> getPageFeedAssetUrls() {
@@ -258,27 +263,26 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAGE_FEED_ASSET_URLS)
+  @JsonProperty(value = JSON_PROPERTY_PAGE_FEED_ASSET_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPageFeedAssetUrls(List<PageFeedAssetServicePageFeedAssetUrl> pageFeedAssetUrls) {
+  public void setPageFeedAssetUrls(@jakarta.annotation.Nullable List<PageFeedAssetServicePageFeedAssetUrl> pageFeedAssetUrls) {
     this.pageFeedAssetUrls = pageFeedAssetUrls;
   }
 
-
-  public PageFeedAssetServiceSelector numberResults(Integer numberResults) {
+  public PageFeedAssetServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 10000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -286,26 +290,25 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public PageFeedAssetServiceSelector startIndex(Integer startIndex) {
+  public PageFeedAssetServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -313,11 +316,12 @@ public class PageFeedAssetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -364,10 +368,7 @@ public class PageFeedAssetServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

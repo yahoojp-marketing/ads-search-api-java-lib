@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -29,6 +29,7 @@ import jp.co.yahoo.adssearchapi.v17.model.AssetServiceStructuredSnippetAsset;
 import jp.co.yahoo.adssearchapi.v17.model.AssetServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AssetServiceAssetDataオブジェクトは、アセットの詳細情報を格納します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AssetServiceAssetData object contains the details of Asset.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
@@ -42,44 +43,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AssetServiceAssetData.JSON_PROPERTY_IMAGE_ASSET,
   AssetServiceAssetData.JSON_PROPERTY_FAVICON_ASSET
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AssetServiceAssetData {
   public static final String JSON_PROPERTY_TYPE = "type";
+  @jakarta.annotation.Nullable
   private AssetServiceType type;
 
   public static final String JSON_PROPERTY_QUICK_LINK_ASSET = "quickLinkAsset";
+  @jakarta.annotation.Nullable
   private AssetServiceQuickLinkAsset quickLinkAsset;
 
   public static final String JSON_PROPERTY_CALL_ASSET = "callAsset";
+  @jakarta.annotation.Nullable
   private AssetServiceCallAsset callAsset;
 
   public static final String JSON_PROPERTY_CALLOUT_ASSET = "calloutAsset";
+  @jakarta.annotation.Nullable
   private AssetServiceCalloutAsset calloutAsset;
 
   public static final String JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET = "structuredSnippetAsset";
+  @jakarta.annotation.Nullable
   private AssetServiceStructuredSnippetAsset structuredSnippetAsset;
 
   public static final String JSON_PROPERTY_IMAGE_ASSET = "imageAsset";
+  @jakarta.annotation.Nullable
   private AssetServiceImageAsset imageAsset;
 
   public static final String JSON_PROPERTY_FAVICON_ASSET = "faviconAsset";
+  @jakarta.annotation.Nullable
   private AssetServiceFaviconAsset faviconAsset;
 
   public AssetServiceAssetData() {
   }
 
-  public AssetServiceAssetData type(AssetServiceType type) {
+  public AssetServiceAssetData type(@jakarta.annotation.Nullable AssetServiceType type) {
     
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceType getType() {
@@ -87,25 +95,24 @@ public class AssetServiceAssetData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(AssetServiceType type) {
+  public void setType(@jakarta.annotation.Nullable AssetServiceType type) {
     this.type = type;
   }
 
-
-  public AssetServiceAssetData quickLinkAsset(AssetServiceQuickLinkAsset quickLinkAsset) {
+  public AssetServiceAssetData quickLinkAsset(@jakarta.annotation.Nullable AssetServiceQuickLinkAsset quickLinkAsset) {
     
     this.quickLinkAsset = quickLinkAsset;
     return this;
   }
 
-   /**
+  /**
    * Get quickLinkAsset
    * @return quickLinkAsset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_QUICK_LINK_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_QUICK_LINK_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceQuickLinkAsset getQuickLinkAsset() {
@@ -113,25 +120,24 @@ public class AssetServiceAssetData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_QUICK_LINK_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_QUICK_LINK_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setQuickLinkAsset(AssetServiceQuickLinkAsset quickLinkAsset) {
+  public void setQuickLinkAsset(@jakarta.annotation.Nullable AssetServiceQuickLinkAsset quickLinkAsset) {
     this.quickLinkAsset = quickLinkAsset;
   }
 
-
-  public AssetServiceAssetData callAsset(AssetServiceCallAsset callAsset) {
+  public AssetServiceAssetData callAsset(@jakarta.annotation.Nullable AssetServiceCallAsset callAsset) {
     
     this.callAsset = callAsset;
     return this;
   }
 
-   /**
+  /**
    * Get callAsset
    * @return callAsset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CALL_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_CALL_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceCallAsset getCallAsset() {
@@ -139,25 +145,24 @@ public class AssetServiceAssetData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CALL_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_CALL_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCallAsset(AssetServiceCallAsset callAsset) {
+  public void setCallAsset(@jakarta.annotation.Nullable AssetServiceCallAsset callAsset) {
     this.callAsset = callAsset;
   }
 
-
-  public AssetServiceAssetData calloutAsset(AssetServiceCalloutAsset calloutAsset) {
+  public AssetServiceAssetData calloutAsset(@jakarta.annotation.Nullable AssetServiceCalloutAsset calloutAsset) {
     
     this.calloutAsset = calloutAsset;
     return this;
   }
 
-   /**
+  /**
    * Get calloutAsset
    * @return calloutAsset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CALLOUT_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_CALLOUT_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceCalloutAsset getCalloutAsset() {
@@ -165,25 +170,24 @@ public class AssetServiceAssetData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CALLOUT_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_CALLOUT_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCalloutAsset(AssetServiceCalloutAsset calloutAsset) {
+  public void setCalloutAsset(@jakarta.annotation.Nullable AssetServiceCalloutAsset calloutAsset) {
     this.calloutAsset = calloutAsset;
   }
 
-
-  public AssetServiceAssetData structuredSnippetAsset(AssetServiceStructuredSnippetAsset structuredSnippetAsset) {
+  public AssetServiceAssetData structuredSnippetAsset(@jakarta.annotation.Nullable AssetServiceStructuredSnippetAsset structuredSnippetAsset) {
     
     this.structuredSnippetAsset = structuredSnippetAsset;
     return this;
   }
 
-   /**
+  /**
    * Get structuredSnippetAsset
    * @return structuredSnippetAsset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceStructuredSnippetAsset getStructuredSnippetAsset() {
@@ -191,25 +195,24 @@ public class AssetServiceAssetData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_STRUCTURED_SNIPPET_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStructuredSnippetAsset(AssetServiceStructuredSnippetAsset structuredSnippetAsset) {
+  public void setStructuredSnippetAsset(@jakarta.annotation.Nullable AssetServiceStructuredSnippetAsset structuredSnippetAsset) {
     this.structuredSnippetAsset = structuredSnippetAsset;
   }
 
-
-  public AssetServiceAssetData imageAsset(AssetServiceImageAsset imageAsset) {
+  public AssetServiceAssetData imageAsset(@jakarta.annotation.Nullable AssetServiceImageAsset imageAsset) {
     
     this.imageAsset = imageAsset;
     return this;
   }
 
-   /**
+  /**
    * Get imageAsset
    * @return imageAsset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMAGE_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_IMAGE_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceImageAsset getImageAsset() {
@@ -217,25 +220,24 @@ public class AssetServiceAssetData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMAGE_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_IMAGE_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImageAsset(AssetServiceImageAsset imageAsset) {
+  public void setImageAsset(@jakarta.annotation.Nullable AssetServiceImageAsset imageAsset) {
     this.imageAsset = imageAsset;
   }
 
-
-  public AssetServiceAssetData faviconAsset(AssetServiceFaviconAsset faviconAsset) {
+  public AssetServiceAssetData faviconAsset(@jakarta.annotation.Nullable AssetServiceFaviconAsset faviconAsset) {
     
     this.faviconAsset = faviconAsset;
     return this;
   }
 
-   /**
+  /**
    * Get faviconAsset
    * @return faviconAsset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FAVICON_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_FAVICON_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AssetServiceFaviconAsset getFaviconAsset() {
@@ -243,11 +245,12 @@ public class AssetServiceAssetData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FAVICON_ASSET)
+  @JsonProperty(value = JSON_PROPERTY_FAVICON_ASSET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFaviconAsset(AssetServiceFaviconAsset faviconAsset) {
+  public void setFaviconAsset(@jakarta.annotation.Nullable AssetServiceFaviconAsset faviconAsset) {
     this.faviconAsset = faviconAsset;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -292,10 +295,7 @@ public class AssetServiceAssetData {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

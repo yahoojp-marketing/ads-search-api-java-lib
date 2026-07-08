@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceFieldAttribute オブジェクトは、ジョブ作成に使用できるフィールドを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceFieldAttribute object displays available fields for creating jobs.&lt;/div&gt; 
@@ -31,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignExportServiceFieldAttribute.JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A,
   CampaignExportServiceFieldAttribute.JSON_PROPERTY_FIELD_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignExportServiceFieldAttribute {
   public static final String JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N = "displayFieldNameEN";
+  @jakarta.annotation.Nullable
   private String displayFieldNameEN;
 
   public static final String JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A = "displayFieldNameJA";
+  @jakarta.annotation.Nullable
   private String displayFieldNameJA;
 
   public static final String JSON_PROPERTY_FIELD_NAME = "fieldName";
+  @jakarta.annotation.Nullable
   private String fieldName;
 
   public CampaignExportServiceFieldAttribute() {
   }
 
-  public CampaignExportServiceFieldAttribute displayFieldNameEN(String displayFieldNameEN) {
+  public CampaignExportServiceFieldAttribute displayFieldNameEN(@jakarta.annotation.Nullable String displayFieldNameEN) {
     
     this.displayFieldNameEN = displayFieldNameEN;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドの英語表示名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Display name (EN).&lt;/div&gt; 
    * @return displayFieldNameEN
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisplayFieldNameEN() {
@@ -64,25 +68,24 @@ public class CampaignExportServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_E_N, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayFieldNameEN(String displayFieldNameEN) {
+  public void setDisplayFieldNameEN(@jakarta.annotation.Nullable String displayFieldNameEN) {
     this.displayFieldNameEN = displayFieldNameEN;
   }
 
-
-  public CampaignExportServiceFieldAttribute displayFieldNameJA(String displayFieldNameJA) {
+  public CampaignExportServiceFieldAttribute displayFieldNameJA(@jakarta.annotation.Nullable String displayFieldNameJA) {
     
     this.displayFieldNameJA = displayFieldNameJA;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドの日本語表示名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Display name (JA).&lt;/div&gt; 
    * @return displayFieldNameJA
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisplayFieldNameJA() {
@@ -90,25 +93,24 @@ public class CampaignExportServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_J_A, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayFieldNameJA(String displayFieldNameJA) {
+  public void setDisplayFieldNameJA(@jakarta.annotation.Nullable String displayFieldNameJA) {
     this.displayFieldNameJA = displayFieldNameJA;
   }
 
-
-  public CampaignExportServiceFieldAttribute fieldName(String fieldName) {
+  public CampaignExportServiceFieldAttribute fieldName(@jakarta.annotation.Nullable String fieldName) {
     
     this.fieldName = fieldName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールド名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field name.&lt;/div&gt; 
    * @return fieldName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FIELD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FIELD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFieldName() {
@@ -116,11 +118,12 @@ public class CampaignExportServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FIELD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FIELD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFieldName(String fieldName) {
+  public void setFieldName(@jakarta.annotation.Nullable String fieldName) {
     this.fieldName = fieldName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +160,7 @@ public class CampaignExportServiceFieldAttribute {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

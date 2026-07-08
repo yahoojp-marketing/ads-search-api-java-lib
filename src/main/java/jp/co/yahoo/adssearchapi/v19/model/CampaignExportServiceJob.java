@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignExportServiceJobStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignExportServiceJob オブジェクトは、ジョブの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceJob object describes the information of job settings.&lt;/div&gt; 
@@ -40,50 +42,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignExportServiceJob.JSON_PROPERTY_START_DATE,
   CampaignExportServiceJob.JSON_PROPERTY_USER_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignExportServiceJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_EXPORT_FIELDS = "exportFields";
+  @jakarta.annotation.Nullable
   private List<String> exportFields;
 
   public static final String JSON_PROPERTY_JOB_ID = "jobId";
+  @jakarta.annotation.Nullable
   private Long jobId;
 
   public static final String JSON_PROPERTY_JOB_NAME = "jobName";
+  @jakarta.annotation.Nullable
   private String jobName;
 
   public static final String JSON_PROPERTY_JOB_STATUS = "jobStatus";
+  @jakarta.annotation.Nullable
   private CampaignExportServiceJobStatus jobStatus;
 
   public static final String JSON_PROPERTY_PROGRESS = "progress";
+  @jakarta.annotation.Nullable
   private Integer progress;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_USER_NAME = "userName";
+  @jakarta.annotation.Nullable
   private String userName;
 
   public CampaignExportServiceJob() {
   }
 
-  public CampaignExportServiceJob accountId(Long accountId) {
+  public CampaignExportServiceJob accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -91,25 +102,24 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public CampaignExportServiceJob endDate(String endDate) {
+  public CampaignExportServiceJob endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの終了日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End date and time of job setting.&lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -117,14 +127,13 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public CampaignExportServiceJob exportFields(List<String> exportFields) {
+  public CampaignExportServiceJob exportFields(@jakarta.annotation.Nullable List<String> exportFields) {
     
     this.exportFields = exportFields;
     return this;
@@ -138,12 +147,12 @@ public class CampaignExportServiceJob {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エクスポートするフィールドです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Fields to be exported.&lt;/div&gt; 
    * @return exportFields
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXPORT_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_EXPORT_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getExportFields() {
@@ -151,25 +160,24 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXPORT_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_EXPORT_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExportFields(List<String> exportFields) {
+  public void setExportFields(@jakarta.annotation.Nullable List<String> exportFields) {
     this.exportFields = exportFields;
   }
 
-
-  public CampaignExportServiceJob jobId(Long jobId) {
+  public CampaignExportServiceJob jobId(@jakarta.annotation.Nullable Long jobId) {
     
     this.jobId = jobId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceJob ID.&lt;/div&gt; 
    * @return jobId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getJobId() {
@@ -177,25 +185,24 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobId(Long jobId) {
+  public void setJobId(@jakarta.annotation.Nullable Long jobId) {
     this.jobId = jobId;
   }
 
-
-  public CampaignExportServiceJob jobName(String jobName) {
+  public CampaignExportServiceJob jobName(@jakarta.annotation.Nullable String jobName) {
     
     this.jobName = jobName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブ名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignExportServiceJob name.&lt;br&gt; ∗ Default: NULL&lt;/div&gt; 
    * @return jobName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_NAME)
+  @JsonProperty(value = JSON_PROPERTY_JOB_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getJobName() {
@@ -203,25 +210,24 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_NAME)
+  @JsonProperty(value = JSON_PROPERTY_JOB_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobName(String jobName) {
+  public void setJobName(@jakarta.annotation.Nullable String jobName) {
     this.jobName = jobName;
   }
 
-
-  public CampaignExportServiceJob jobStatus(CampaignExportServiceJobStatus jobStatus) {
+  public CampaignExportServiceJob jobStatus(@jakarta.annotation.Nullable CampaignExportServiceJobStatus jobStatus) {
     
     this.jobStatus = jobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get jobStatus
    * @return jobStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignExportServiceJobStatus getJobStatus() {
@@ -229,25 +235,24 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobStatus(CampaignExportServiceJobStatus jobStatus) {
+  public void setJobStatus(@jakarta.annotation.Nullable CampaignExportServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
-
-  public CampaignExportServiceJob progress(Integer progress) {
+  public CampaignExportServiceJob progress(@jakarta.annotation.Nullable Integer progress) {
     
     this.progress = progress;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理進捗です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Progress of job setting.&lt;/div&gt; 
    * @return progress
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
+  @JsonProperty(value = JSON_PROPERTY_PROGRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getProgress() {
@@ -255,25 +260,24 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
+  @JsonProperty(value = JSON_PROPERTY_PROGRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProgress(Integer progress) {
+  public void setProgress(@jakarta.annotation.Nullable Integer progress) {
     this.progress = progress;
   }
 
-
-  public CampaignExportServiceJob startDate(String startDate) {
+  public CampaignExportServiceJob startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブの開始日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date and time of job setting.&lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -281,25 +285,24 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public CampaignExportServiceJob userName(String userName) {
+  public CampaignExportServiceJob userName(@jakarta.annotation.Nullable String userName) {
     
     this.userName = userName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブ実行者のユーザー名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of user who run the job.&lt;/div&gt; 
    * @return userName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_USER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUserName() {
@@ -307,11 +310,12 @@ public class CampaignExportServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_USER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserName(String userName) {
+  public void setUserName(@jakarta.annotation.Nullable String userName) {
     this.userName = userName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -360,10 +364,7 @@ public class CampaignExportServiceJob {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

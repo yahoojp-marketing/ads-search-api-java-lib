@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AudienceListServiceRuleItem;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceRuleGroupは、URL/LABELのルールをグループ化した情報を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時に、このフィールドは省略可能となります。&lt;br&gt; isAllVisitorがTRUEである場合、ADDおよびSET時に必須となります。&lt;br&gt; ※SET時、isAllVisitorRule &#x3D; TRUEを指定してリクエストすると、このフィールドは無視されます。&lt;br&gt; ruleBaseAudienceList.isDateSpecificRule &#x3D; TRUEの場合には、このフィールドは変更出来ません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceRuleGroup is an object that holds grouped URL/LABEL rules.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; If isAllVisitor is TRUE, this field is required in ADD and SET operation.&lt;br&gt; *In SET operation, if isAllVisitorRule &#x3D; TRUE, this field is ignored on request.&lt;br&gt; If ruleBaseAudienceList.isDateSpecificRule &#x3D; TRUE, it is can not change.&lt;/div&gt; 
@@ -32,15 +34,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   AudienceListServiceRuleGroup.JSON_PROPERTY_RULE_ITEMS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceRuleGroup {
   public static final String JSON_PROPERTY_RULE_ITEMS = "ruleItems";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceRuleItem> ruleItems;
 
   public AudienceListServiceRuleGroup() {
   }
 
-  public AudienceListServiceRuleGroup ruleItems(List<AudienceListServiceRuleItem> ruleItems) {
+  public AudienceListServiceRuleGroup ruleItems(@jakarta.annotation.Nullable List<AudienceListServiceRuleItem> ruleItems) {
     
     this.ruleItems = ruleItems;
     return this;
@@ -54,12 +57,12 @@ public class AudienceListServiceRuleGroup {
     return this;
   }
 
-   /**
+  /**
    * Get ruleItems
    * @return ruleItems
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_ITEMS)
+  @JsonProperty(value = JSON_PROPERTY_RULE_ITEMS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceRuleItem> getRuleItems() {
@@ -67,11 +70,12 @@ public class AudienceListServiceRuleGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_ITEMS)
+  @JsonProperty(value = JSON_PROPERTY_RULE_ITEMS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleItems(List<AudienceListServiceRuleItem> ruleItems) {
+  public void setRuleItems(@jakarta.annotation.Nullable List<AudienceListServiceRuleItem> ruleItems) {
     this.ruleItems = ruleItems;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +108,7 @@ public class AudienceListServiceRuleGroup {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

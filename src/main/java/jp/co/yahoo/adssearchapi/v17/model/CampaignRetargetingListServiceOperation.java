@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v17.model.CampaignRetargetingList;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignRetargetingListServiceOperationオブジェクトは、操作対象となるキャンペーン階層のオーディエンスリスト設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignRetargetingListServiceOperation object holds the setting information of audience list on campaign level to be object.&lt;/div&gt; 
@@ -33,29 +35,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignRetargetingListServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   CampaignRetargetingListServiceOperation.JSON_PROPERTY_OPERAND
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignRetargetingListServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
+  @jakarta.annotation.Nullable
   private List<CampaignRetargetingList> operand;
 
   public CampaignRetargetingListServiceOperation() {
   }
 
-  public CampaignRetargetingListServiceOperation accountId(Long accountId) {
+  public CampaignRetargetingListServiceOperation accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -63,14 +67,13 @@ public class CampaignRetargetingListServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public CampaignRetargetingListServiceOperation operand(List<CampaignRetargetingList> operand) {
+  public CampaignRetargetingListServiceOperation operand(@jakarta.annotation.Nullable List<CampaignRetargetingList> operand) {
     
     this.operand = operand;
     return this;
@@ -84,12 +87,12 @@ public class CampaignRetargetingListServiceOperation {
     return this;
   }
 
-   /**
+  /**
    * Get operand
    * @return operand
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_OPERAND, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public List<CampaignRetargetingList> getOperand() {
@@ -97,11 +100,12 @@ public class CampaignRetargetingListServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_OPERAND, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setOperand(List<CampaignRetargetingList> operand) {
+  public void setOperand(@jakarta.annotation.Nullable List<CampaignRetargetingList> operand) {
     this.operand = operand;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -136,10 +140,7 @@ public class CampaignRetargetingListServiceOperation {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

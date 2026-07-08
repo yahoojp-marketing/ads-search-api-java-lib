@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.ConversionTrackerServiceCategory;
 import jp.co.yahoo.adssearchapi.v19.model.ConversionTrackerServiceConversionCountingType;
@@ -31,6 +32,7 @@ import jp.co.yahoo.adssearchapi.v19.model.ConversionTrackerServiceStatus;
 import jp.co.yahoo.adssearchapi.v19.model.ConversionTrackerServiceTrackingCodeType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceSelectorオブジェクトは、操作の対象となるコンバージョン設定および操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceSelector object specifies ConversionTracker settings and operation.&lt;/div&gt; 
@@ -49,59 +51,71 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceSelector.JSON_PROPERTY_STATUSES,
   ConversionTrackerServiceSelector.JSON_PROPERTY_TRACKING_CODE_TYPES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_APP_IDS = "appIds";
+  @jakarta.annotation.Nullable
   private List<String> appIds;
 
   public static final String JSON_PROPERTY_CATEGORIES = "categories";
+  @jakarta.annotation.Nullable
   private List<ConversionTrackerServiceCategory> categories;
 
   public static final String JSON_PROPERTY_CONVERSION_COUNTING_TYPES = "conversionCountingTypes";
+  @jakarta.annotation.Nullable
   private List<ConversionTrackerServiceConversionCountingType> conversionCountingTypes;
 
   public static final String JSON_PROPERTY_CONVERSION_DATE_RANGE = "conversionDateRange";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceConversionDateRange conversionDateRange;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_IDS = "conversionTrackerIds";
+  @jakarta.annotation.Nullable
   private List<Long> conversionTrackerIds;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_TYPES = "conversionTrackerTypes";
+  @jakarta.annotation.Nullable
   private List<ConversionTrackerServiceConversionTrackerType> conversionTrackerTypes;
 
   public static final String JSON_PROPERTY_EXCLUDE_FROM_BIDDINGS = "excludeFromBiddings";
+  @jakarta.annotation.Nullable
   private List<ConversionTrackerServiceExcludeFromBidding> excludeFromBiddings;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_STATUSES = "statuses";
+  @jakarta.annotation.Nullable
   private List<ConversionTrackerServiceStatus> statuses;
 
   public static final String JSON_PROPERTY_TRACKING_CODE_TYPES = "trackingCodeTypes";
+  @jakarta.annotation.Nullable
   private List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes;
 
   public ConversionTrackerServiceSelector() {
   }
 
-  public ConversionTrackerServiceSelector accountId(Long accountId) {
+  public ConversionTrackerServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -109,14 +123,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public ConversionTrackerServiceSelector appIds(List<String> appIds) {
+  public ConversionTrackerServiceSelector appIds(@jakarta.annotation.Nullable List<String> appIds) {
     
     this.appIds = appIds;
     return this;
@@ -130,12 +143,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;App ID.&lt;/div&gt; 
    * @return appIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_APP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getAppIds() {
@@ -143,14 +156,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_APP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppIds(List<String> appIds) {
+  public void setAppIds(@jakarta.annotation.Nullable List<String> appIds) {
     this.appIds = appIds;
   }
 
-
-  public ConversionTrackerServiceSelector categories(List<ConversionTrackerServiceCategory> categories) {
+  public ConversionTrackerServiceSelector categories(@jakarta.annotation.Nullable List<ConversionTrackerServiceCategory> categories) {
     
     this.categories = categories;
     return this;
@@ -164,12 +176,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get categories
    * @return categories
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CATEGORIES)
+  @JsonProperty(value = JSON_PROPERTY_CATEGORIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionTrackerServiceCategory> getCategories() {
@@ -177,14 +189,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CATEGORIES)
+  @JsonProperty(value = JSON_PROPERTY_CATEGORIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCategories(List<ConversionTrackerServiceCategory> categories) {
+  public void setCategories(@jakarta.annotation.Nullable List<ConversionTrackerServiceCategory> categories) {
     this.categories = categories;
   }
 
-
-  public ConversionTrackerServiceSelector conversionCountingTypes(List<ConversionTrackerServiceConversionCountingType> conversionCountingTypes) {
+  public ConversionTrackerServiceSelector conversionCountingTypes(@jakarta.annotation.Nullable List<ConversionTrackerServiceConversionCountingType> conversionCountingTypes) {
     
     this.conversionCountingTypes = conversionCountingTypes;
     return this;
@@ -198,12 +209,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get conversionCountingTypes
    * @return conversionCountingTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_COUNTING_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_COUNTING_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionTrackerServiceConversionCountingType> getConversionCountingTypes() {
@@ -211,25 +222,24 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_COUNTING_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_COUNTING_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionCountingTypes(List<ConversionTrackerServiceConversionCountingType> conversionCountingTypes) {
+  public void setConversionCountingTypes(@jakarta.annotation.Nullable List<ConversionTrackerServiceConversionCountingType> conversionCountingTypes) {
     this.conversionCountingTypes = conversionCountingTypes;
   }
 
-
-  public ConversionTrackerServiceSelector conversionDateRange(ConversionTrackerServiceConversionDateRange conversionDateRange) {
+  public ConversionTrackerServiceSelector conversionDateRange(@jakarta.annotation.Nullable ConversionTrackerServiceConversionDateRange conversionDateRange) {
     
     this.conversionDateRange = conversionDateRange;
     return this;
   }
 
-   /**
+  /**
    * Get conversionDateRange
    * @return conversionDateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceConversionDateRange getConversionDateRange() {
@@ -237,14 +247,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionDateRange(ConversionTrackerServiceConversionDateRange conversionDateRange) {
+  public void setConversionDateRange(@jakarta.annotation.Nullable ConversionTrackerServiceConversionDateRange conversionDateRange) {
     this.conversionDateRange = conversionDateRange;
   }
 
-
-  public ConversionTrackerServiceSelector conversionTrackerIds(List<Long> conversionTrackerIds) {
+  public ConversionTrackerServiceSelector conversionTrackerIds(@jakarta.annotation.Nullable List<Long> conversionTrackerIds) {
     
     this.conversionTrackerIds = conversionTrackerIds;
     return this;
@@ -258,12 +267,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョントラッカーIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion Tracker ID.&lt;/div&gt; 
    * @return conversionTrackerIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getConversionTrackerIds() {
@@ -271,14 +280,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerIds(List<Long> conversionTrackerIds) {
+  public void setConversionTrackerIds(@jakarta.annotation.Nullable List<Long> conversionTrackerIds) {
     this.conversionTrackerIds = conversionTrackerIds;
   }
 
-
-  public ConversionTrackerServiceSelector conversionTrackerTypes(List<ConversionTrackerServiceConversionTrackerType> conversionTrackerTypes) {
+  public ConversionTrackerServiceSelector conversionTrackerTypes(@jakarta.annotation.Nullable List<ConversionTrackerServiceConversionTrackerType> conversionTrackerTypes) {
     
     this.conversionTrackerTypes = conversionTrackerTypes;
     return this;
@@ -292,12 +300,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get conversionTrackerTypes
    * @return conversionTrackerTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionTrackerServiceConversionTrackerType> getConversionTrackerTypes() {
@@ -305,14 +313,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerTypes(List<ConversionTrackerServiceConversionTrackerType> conversionTrackerTypes) {
+  public void setConversionTrackerTypes(@jakarta.annotation.Nullable List<ConversionTrackerServiceConversionTrackerType> conversionTrackerTypes) {
     this.conversionTrackerTypes = conversionTrackerTypes;
   }
 
-
-  public ConversionTrackerServiceSelector excludeFromBiddings(List<ConversionTrackerServiceExcludeFromBidding> excludeFromBiddings) {
+  public ConversionTrackerServiceSelector excludeFromBiddings(@jakarta.annotation.Nullable List<ConversionTrackerServiceExcludeFromBidding> excludeFromBiddings) {
     
     this.excludeFromBiddings = excludeFromBiddings;
     return this;
@@ -326,12 +333,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get excludeFromBiddings
    * @return excludeFromBiddings
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_FROM_BIDDINGS)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDE_FROM_BIDDINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionTrackerServiceExcludeFromBidding> getExcludeFromBiddings() {
@@ -339,27 +346,26 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_FROM_BIDDINGS)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDE_FROM_BIDDINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcludeFromBiddings(List<ConversionTrackerServiceExcludeFromBidding> excludeFromBiddings) {
+  public void setExcludeFromBiddings(@jakarta.annotation.Nullable List<ConversionTrackerServiceExcludeFromBidding> excludeFromBiddings) {
     this.excludeFromBiddings = excludeFromBiddings;
   }
 
-
-  public ConversionTrackerServiceSelector numberResults(Integer numberResults) {
+  public ConversionTrackerServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -367,26 +373,25 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public ConversionTrackerServiceSelector startIndex(Integer startIndex) {
+  public ConversionTrackerServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -394,14 +399,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public ConversionTrackerServiceSelector statuses(List<ConversionTrackerServiceStatus> statuses) {
+  public ConversionTrackerServiceSelector statuses(@jakarta.annotation.Nullable List<ConversionTrackerServiceStatus> statuses) {
     
     this.statuses = statuses;
     return this;
@@ -415,12 +419,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get statuses
    * @return statuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionTrackerServiceStatus> getStatuses() {
@@ -428,14 +432,13 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatuses(List<ConversionTrackerServiceStatus> statuses) {
+  public void setStatuses(@jakarta.annotation.Nullable List<ConversionTrackerServiceStatus> statuses) {
     this.statuses = statuses;
   }
 
-
-  public ConversionTrackerServiceSelector trackingCodeTypes(List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes) {
+  public ConversionTrackerServiceSelector trackingCodeTypes(@jakarta.annotation.Nullable List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes) {
     
     this.trackingCodeTypes = trackingCodeTypes;
     return this;
@@ -449,12 +452,12 @@ public class ConversionTrackerServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get trackingCodeTypes
    * @return trackingCodeTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_CODE_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_CODE_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionTrackerServiceTrackingCodeType> getTrackingCodeTypes() {
@@ -462,11 +465,12 @@ public class ConversionTrackerServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_CODE_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_CODE_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingCodeTypes(List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes) {
+  public void setTrackingCodeTypes(@jakarta.annotation.Nullable List<ConversionTrackerServiceTrackingCodeType> trackingCodeTypes) {
     this.trackingCodeTypes = trackingCodeTypes;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -521,10 +525,7 @@ public class ConversionTrackerServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

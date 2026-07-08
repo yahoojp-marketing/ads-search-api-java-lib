@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -28,6 +28,7 @@ import jp.co.yahoo.adssearchapi.v19.model.CampaignTargetServiceScheduleTarget;
 import jp.co.yahoo.adssearchapi.v19.model.CampaignTargetServiceTargetType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignTargetServiceTargetオブジェクトは、ターゲティング設定を表します。&lt;br&gt; このフィールドは、いずれの場合でも必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceTarget object describes CampaignTargetServiceTarget information.&lt;br&gt; This field is required in any cases.&lt;/div&gt; 
@@ -41,44 +42,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignTargetServiceTarget.JSON_PROPERTY_TARGET_ID,
   CampaignTargetServiceTarget.JSON_PROPERTY_TARGET_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignTargetServiceTarget {
   public static final String JSON_PROPERTY_LOCATION_TARGET = "locationTarget";
+  @jakarta.annotation.Nullable
   private CampaignTargetServiceLocationTarget locationTarget;
 
   public static final String JSON_PROPERTY_NETWORK_TARGET = "networkTarget";
+  @jakarta.annotation.Nullable
   private CampaignTargetServiceNetworkTarget networkTarget;
 
   public static final String JSON_PROPERTY_PLATFORM_TARGET = "platformTarget";
+  @jakarta.annotation.Nullable
   private CampaignTargetServicePlatformTarget platformTarget;
 
   public static final String JSON_PROPERTY_RADIUS_TARGET = "radiusTarget";
+  @jakarta.annotation.Nullable
   private CampaignTargetServiceRadiusTarget radiusTarget;
 
   public static final String JSON_PROPERTY_SCHEDULE_TARGET = "scheduleTarget";
+  @jakarta.annotation.Nullable
   private CampaignTargetServiceScheduleTarget scheduleTarget;
 
   public static final String JSON_PROPERTY_TARGET_ID = "targetId";
+  @jakarta.annotation.Nullable
   private String targetId;
 
   public static final String JSON_PROPERTY_TARGET_TYPE = "targetType";
+  @jakarta.annotation.Nullable
   private CampaignTargetServiceTargetType targetType;
 
   public CampaignTargetServiceTarget() {
   }
 
-  public CampaignTargetServiceTarget locationTarget(CampaignTargetServiceLocationTarget locationTarget) {
+  public CampaignTargetServiceTarget locationTarget(@jakarta.annotation.Nullable CampaignTargetServiceLocationTarget locationTarget) {
     
     this.locationTarget = locationTarget;
     return this;
   }
 
-   /**
+  /**
    * Get locationTarget
    * @return locationTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOCATION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignTargetServiceLocationTarget getLocationTarget() {
@@ -86,25 +94,24 @@ public class CampaignTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOCATION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_LOCATION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLocationTarget(CampaignTargetServiceLocationTarget locationTarget) {
+  public void setLocationTarget(@jakarta.annotation.Nullable CampaignTargetServiceLocationTarget locationTarget) {
     this.locationTarget = locationTarget;
   }
 
-
-  public CampaignTargetServiceTarget networkTarget(CampaignTargetServiceNetworkTarget networkTarget) {
+  public CampaignTargetServiceTarget networkTarget(@jakarta.annotation.Nullable CampaignTargetServiceNetworkTarget networkTarget) {
     
     this.networkTarget = networkTarget;
     return this;
   }
 
-   /**
+  /**
    * Get networkTarget
    * @return networkTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NETWORK_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_NETWORK_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignTargetServiceNetworkTarget getNetworkTarget() {
@@ -112,25 +119,24 @@ public class CampaignTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NETWORK_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_NETWORK_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNetworkTarget(CampaignTargetServiceNetworkTarget networkTarget) {
+  public void setNetworkTarget(@jakarta.annotation.Nullable CampaignTargetServiceNetworkTarget networkTarget) {
     this.networkTarget = networkTarget;
   }
 
-
-  public CampaignTargetServiceTarget platformTarget(CampaignTargetServicePlatformTarget platformTarget) {
+  public CampaignTargetServiceTarget platformTarget(@jakarta.annotation.Nullable CampaignTargetServicePlatformTarget platformTarget) {
     
     this.platformTarget = platformTarget;
     return this;
   }
 
-   /**
+  /**
    * Get platformTarget
    * @return platformTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLATFORM_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLATFORM_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignTargetServicePlatformTarget getPlatformTarget() {
@@ -138,25 +144,24 @@ public class CampaignTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLATFORM_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLATFORM_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlatformTarget(CampaignTargetServicePlatformTarget platformTarget) {
+  public void setPlatformTarget(@jakarta.annotation.Nullable CampaignTargetServicePlatformTarget platformTarget) {
     this.platformTarget = platformTarget;
   }
 
-
-  public CampaignTargetServiceTarget radiusTarget(CampaignTargetServiceRadiusTarget radiusTarget) {
+  public CampaignTargetServiceTarget radiusTarget(@jakarta.annotation.Nullable CampaignTargetServiceRadiusTarget radiusTarget) {
     
     this.radiusTarget = radiusTarget;
     return this;
   }
 
-   /**
+  /**
    * Get radiusTarget
    * @return radiusTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RADIUS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_RADIUS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignTargetServiceRadiusTarget getRadiusTarget() {
@@ -164,25 +169,24 @@ public class CampaignTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RADIUS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_RADIUS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRadiusTarget(CampaignTargetServiceRadiusTarget radiusTarget) {
+  public void setRadiusTarget(@jakarta.annotation.Nullable CampaignTargetServiceRadiusTarget radiusTarget) {
     this.radiusTarget = radiusTarget;
   }
 
-
-  public CampaignTargetServiceTarget scheduleTarget(CampaignTargetServiceScheduleTarget scheduleTarget) {
+  public CampaignTargetServiceTarget scheduleTarget(@jakarta.annotation.Nullable CampaignTargetServiceScheduleTarget scheduleTarget) {
     
     this.scheduleTarget = scheduleTarget;
     return this;
   }
 
-   /**
+  /**
    * Get scheduleTarget
    * @return scheduleTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignTargetServiceScheduleTarget getScheduleTarget() {
@@ -190,25 +194,24 @@ public class CampaignTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setScheduleTarget(CampaignTargetServiceScheduleTarget scheduleTarget) {
+  public void setScheduleTarget(@jakarta.annotation.Nullable CampaignTargetServiceScheduleTarget scheduleTarget) {
     this.scheduleTarget = scheduleTarget;
   }
 
-
-  public CampaignTargetServiceTarget targetId(String targetId) {
+  public CampaignTargetServiceTarget targetId(@jakarta.annotation.Nullable String targetId) {
     
     this.targetId = targetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。&lt;br&gt; ※LocationCampaignTargetServiceTargetの場合、ADD時に必須となります。&lt;br&gt; ※PlatformCampaignTargetServiceTargetの場合、SET時に無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignTargetServiceTarget ID.&lt;br&gt; This field will be ignored in ADD operation, and is required in ADD and REMOVE operation.&lt;br&gt; *For LocationCampaignTargetServiceTarget, this is required in ADD operation.&lt;br&gt; *For PlatformCampaignTargetServiceTarget, this will be ignored in SET operation.&lt;/div&gt; 
    * @return targetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTargetId() {
@@ -216,25 +219,24 @@ public class CampaignTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetId(String targetId) {
+  public void setTargetId(@jakarta.annotation.Nullable String targetId) {
     this.targetId = targetId;
   }
 
-
-  public CampaignTargetServiceTarget targetType(CampaignTargetServiceTargetType targetType) {
+  public CampaignTargetServiceTarget targetType(@jakarta.annotation.Nullable CampaignTargetServiceTargetType targetType) {
     
     this.targetType = targetType;
     return this;
   }
 
-   /**
+  /**
    * Get targetType
    * @return targetType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignTargetServiceTargetType getTargetType() {
@@ -242,11 +244,12 @@ public class CampaignTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetType(CampaignTargetServiceTargetType targetType) {
+  public void setTargetType(@jakarta.annotation.Nullable CampaignTargetServiceTargetType targetType) {
     this.targetType = targetType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -291,10 +294,7 @@ public class CampaignTargetServiceTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 検索広告 API リファレンス / Yahoo! JAPAN Ads Search Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 検索広告 API リファレンス / LY Ads Search Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 検索広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Search Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-search-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adssearchapi.v19.model.AbTestServiceCampaignIsDeleteFlg;
 import jp.co.yahoo.adssearchapi.v19.model.AbTestServiceCampaignTestType;
@@ -29,6 +30,7 @@ import jp.co.yahoo.adssearchapi.v19.model.AbTestServiceIsRemoveFlg;
 import jp.co.yahoo.adssearchapi.v19.model.AbTestServiceStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AbTestオブジェクトは、A/Bテスト情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The A/B Test object is a container for storing A/B test information.&lt;/div&gt; 
@@ -55,83 +57,103 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AbTest.JSON_PROPERTY_STATUS,
   AbTest.JSON_PROPERTY_ERRORS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AbTest {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AB_TEST_ID = "abTestId";
+  @jakarta.annotation.Nullable
   private Long abTestId;
 
   public static final String JSON_PROPERTY_AB_TEST_NAME = "abTestName";
+  @jakarta.annotation.Nullable
   private String abTestName;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_SUFFIX = "suffix";
+  @jakarta.annotation.Nullable
   private String suffix;
 
   public static final String JSON_PROPERTY_A_CAMPAIGN_ID = "aCampaignId";
+  @jakarta.annotation.Nullable
   private Long aCampaignId;
 
   public static final String JSON_PROPERTY_A_CAMPAIGN_NAME = "aCampaignName";
+  @jakarta.annotation.Nullable
   private String aCampaignName;
 
   public static final String JSON_PROPERTY_A_CAMPAIGN_USER_STATUS = "aCampaignUserStatus";
+  @jakarta.annotation.Nullable
   private AbTestServiceCampaignUserStatus aCampaignUserStatus;
 
   public static final String JSON_PROPERTY_A_CAMPAIGN_TEST_TYPE = "aCampaignTestType";
+  @jakarta.annotation.Nullable
   private AbTestServiceCampaignTestType aCampaignTestType;
 
   public static final String JSON_PROPERTY_A_CAMPAIGN_IS_DELETED = "aCampaignIsDeleted";
+  @jakarta.annotation.Nullable
   private AbTestServiceCampaignIsDeleteFlg aCampaignIsDeleted;
 
   public static final String JSON_PROPERTY_B_CAMPAIGN_ID = "bCampaignId";
+  @jakarta.annotation.Nullable
   private Long bCampaignId;
 
   public static final String JSON_PROPERTY_B_CAMPAIGN_NAME = "bCampaignName";
+  @jakarta.annotation.Nullable
   private String bCampaignName;
 
   public static final String JSON_PROPERTY_B_CAMPAIGN_USER_STATUS = "bCampaignUserStatus";
+  @jakarta.annotation.Nullable
   private AbTestServiceCampaignUserStatus bCampaignUserStatus;
 
   public static final String JSON_PROPERTY_B_CAMPAIGN_TEST_TYPE = "bCampaignTestType";
+  @jakarta.annotation.Nullable
   private AbTestServiceCampaignTestType bCampaignTestType;
 
   public static final String JSON_PROPERTY_B_CAMPAIGN_IS_DELETED = "bCampaignIsDeleted";
+  @jakarta.annotation.Nullable
   private AbTestServiceCampaignIsDeleteFlg bCampaignIsDeleted;
 
   public static final String JSON_PROPERTY_IS_REMOVE_DESCRIPTION = "isRemoveDescription";
+  @jakarta.annotation.Nullable
   private AbTestServiceIsRemoveFlg isRemoveDescription;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_STATUS = "status";
+  @jakarta.annotation.Nullable
   private AbTestServiceStatus status;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<String> errors;
 
   public AbTest() {
   }
 
-  public AbTest accountId(Long accountId) {
+  public AbTest accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -139,25 +161,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AbTest abTestId(Long abTestId) {
+  public AbTest abTestId(@jakarta.annotation.Nullable Long abTestId) {
     
     this.abTestId = abTestId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; A/BテストIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A/B test ID.&lt;br&gt; This field will be ignored in ADD operation, and will be required in SET and REMOVE operation. &lt;/div&gt; 
    * @return abTestId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AB_TEST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AB_TEST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAbTestId() {
@@ -165,25 +186,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AB_TEST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AB_TEST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAbTestId(Long abTestId) {
+  public void setAbTestId(@jakarta.annotation.Nullable Long abTestId) {
     this.abTestId = abTestId;
   }
 
-
-  public AbTest abTestName(String abTestName) {
+  public AbTest abTestName(@jakarta.annotation.Nullable String abTestName) {
     
     this.abTestName = abTestName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; A/Bテスト名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※256文字以内になります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A/B test name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *Up to 128 characters. &lt;/div&gt; 
    * @return abTestName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AB_TEST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AB_TEST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAbTestName() {
@@ -191,25 +211,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AB_TEST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AB_TEST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAbTestName(String abTestName) {
+  public void setAbTestName(@jakarta.annotation.Nullable String abTestName) {
     this.abTestName = abTestName;
   }
 
-
-  public AbTest description(String description) {
+  public AbTest description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 説明文です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※512文字以内になります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description text.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *Up to 512 characters. &lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -217,25 +236,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public AbTest suffix(String suffix) {
+  public AbTest suffix(@jakarta.annotation.Nullable String suffix) {
     
     this.suffix = suffix;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; A/Bテストのサフィックスです。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; ※16文字以内になります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; suffix text.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; *Up to 16 characters. &lt;/div&gt; 
    * @return suffix
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSuffix() {
@@ -243,25 +261,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSuffix(String suffix) {
+  public void setSuffix(@jakarta.annotation.Nullable String suffix) {
     this.suffix = suffix;
   }
 
-
-  public AbTest aCampaignId(Long aCampaignId) {
+  public AbTest aCampaignId(@jakarta.annotation.Nullable Long aCampaignId) {
     
     this.aCampaignId = aCampaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンAのキャンペーンIDです。&lt;br&gt; ADD時、このフィールドは必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID of Campaign A.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return aCampaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getaCampaignId() {
@@ -269,25 +286,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setaCampaignId(Long aCampaignId) {
+  public void setaCampaignId(@jakarta.annotation.Nullable Long aCampaignId) {
     this.aCampaignId = aCampaignId;
   }
 
-
-  public AbTest aCampaignName(String aCampaignName) {
+  public AbTest aCampaignName(@jakarta.annotation.Nullable String aCampaignName) {
     
     this.aCampaignName = aCampaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンAのキャンペーン名です。&lt;br&gt; このフィールドはリクエストの際には無視されます。&lt;br&gt; GET時のみレスポンスの際に返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name of Campaign A.&lt;br&gt; This field will be ignored on input.&lt;br&gt; This field will be returned in the GET response only. &lt;/div&gt; 
    * @return aCampaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getaCampaignName() {
@@ -295,25 +311,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setaCampaignName(String aCampaignName) {
+  public void setaCampaignName(@jakarta.annotation.Nullable String aCampaignName) {
     this.aCampaignName = aCampaignName;
   }
 
-
-  public AbTest aCampaignUserStatus(AbTestServiceCampaignUserStatus aCampaignUserStatus) {
+  public AbTest aCampaignUserStatus(@jakarta.annotation.Nullable AbTestServiceCampaignUserStatus aCampaignUserStatus) {
     
     this.aCampaignUserStatus = aCampaignUserStatus;
     return this;
   }
 
-   /**
+  /**
    * Get aCampaignUserStatus
    * @return aCampaignUserStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceCampaignUserStatus getaCampaignUserStatus() {
@@ -321,25 +336,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setaCampaignUserStatus(AbTestServiceCampaignUserStatus aCampaignUserStatus) {
+  public void setaCampaignUserStatus(@jakarta.annotation.Nullable AbTestServiceCampaignUserStatus aCampaignUserStatus) {
     this.aCampaignUserStatus = aCampaignUserStatus;
   }
 
-
-  public AbTest aCampaignTestType(AbTestServiceCampaignTestType aCampaignTestType) {
+  public AbTest aCampaignTestType(@jakarta.annotation.Nullable AbTestServiceCampaignTestType aCampaignTestType) {
     
     this.aCampaignTestType = aCampaignTestType;
     return this;
   }
 
-   /**
+  /**
    * Get aCampaignTestType
    * @return aCampaignTestType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_TEST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_TEST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceCampaignTestType getaCampaignTestType() {
@@ -347,25 +361,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_TEST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_TEST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setaCampaignTestType(AbTestServiceCampaignTestType aCampaignTestType) {
+  public void setaCampaignTestType(@jakarta.annotation.Nullable AbTestServiceCampaignTestType aCampaignTestType) {
     this.aCampaignTestType = aCampaignTestType;
   }
 
-
-  public AbTest aCampaignIsDeleted(AbTestServiceCampaignIsDeleteFlg aCampaignIsDeleted) {
+  public AbTest aCampaignIsDeleted(@jakarta.annotation.Nullable AbTestServiceCampaignIsDeleteFlg aCampaignIsDeleted) {
     
     this.aCampaignIsDeleted = aCampaignIsDeleted;
     return this;
   }
 
-   /**
+  /**
    * Get aCampaignIsDeleted
    * @return aCampaignIsDeleted
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_IS_DELETED)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_IS_DELETED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceCampaignIsDeleteFlg getaCampaignIsDeleted() {
@@ -373,25 +386,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_IS_DELETED)
+  @JsonProperty(value = JSON_PROPERTY_A_CAMPAIGN_IS_DELETED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setaCampaignIsDeleted(AbTestServiceCampaignIsDeleteFlg aCampaignIsDeleted) {
+  public void setaCampaignIsDeleted(@jakarta.annotation.Nullable AbTestServiceCampaignIsDeleteFlg aCampaignIsDeleted) {
     this.aCampaignIsDeleted = aCampaignIsDeleted;
   }
 
-
-  public AbTest bCampaignId(Long bCampaignId) {
+  public AbTest bCampaignId(@jakarta.annotation.Nullable Long bCampaignId) {
     
     this.bCampaignId = bCampaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンBのキャンペーンIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID of Campaign B.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return bCampaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getbCampaignId() {
@@ -399,25 +411,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setbCampaignId(Long bCampaignId) {
+  public void setbCampaignId(@jakarta.annotation.Nullable Long bCampaignId) {
     this.bCampaignId = bCampaignId;
   }
 
-
-  public AbTest bCampaignName(String bCampaignName) {
+  public AbTest bCampaignName(@jakarta.annotation.Nullable String bCampaignName) {
     
     this.bCampaignName = bCampaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンBのキャンペーン名です。&lt;br&gt; このフィールドはリクエストの際には無視されます。&lt;br&gt; GET時のみレスポンスの際に返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name of Campaign B.&lt;br&gt; This field will be ignored on input.&lt;br&gt; This field will be returned in the GET response only. &lt;/div&gt; 
    * @return bCampaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getbCampaignName() {
@@ -425,25 +436,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setbCampaignName(String bCampaignName) {
+  public void setbCampaignName(@jakarta.annotation.Nullable String bCampaignName) {
     this.bCampaignName = bCampaignName;
   }
 
-
-  public AbTest bCampaignUserStatus(AbTestServiceCampaignUserStatus bCampaignUserStatus) {
+  public AbTest bCampaignUserStatus(@jakarta.annotation.Nullable AbTestServiceCampaignUserStatus bCampaignUserStatus) {
     
     this.bCampaignUserStatus = bCampaignUserStatus;
     return this;
   }
 
-   /**
+  /**
    * Get bCampaignUserStatus
    * @return bCampaignUserStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceCampaignUserStatus getbCampaignUserStatus() {
@@ -451,25 +461,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setbCampaignUserStatus(AbTestServiceCampaignUserStatus bCampaignUserStatus) {
+  public void setbCampaignUserStatus(@jakarta.annotation.Nullable AbTestServiceCampaignUserStatus bCampaignUserStatus) {
     this.bCampaignUserStatus = bCampaignUserStatus;
   }
 
-
-  public AbTest bCampaignTestType(AbTestServiceCampaignTestType bCampaignTestType) {
+  public AbTest bCampaignTestType(@jakarta.annotation.Nullable AbTestServiceCampaignTestType bCampaignTestType) {
     
     this.bCampaignTestType = bCampaignTestType;
     return this;
   }
 
-   /**
+  /**
    * Get bCampaignTestType
    * @return bCampaignTestType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_TEST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_TEST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceCampaignTestType getbCampaignTestType() {
@@ -477,25 +486,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_TEST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_TEST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setbCampaignTestType(AbTestServiceCampaignTestType bCampaignTestType) {
+  public void setbCampaignTestType(@jakarta.annotation.Nullable AbTestServiceCampaignTestType bCampaignTestType) {
     this.bCampaignTestType = bCampaignTestType;
   }
 
-
-  public AbTest bCampaignIsDeleted(AbTestServiceCampaignIsDeleteFlg bCampaignIsDeleted) {
+  public AbTest bCampaignIsDeleted(@jakarta.annotation.Nullable AbTestServiceCampaignIsDeleteFlg bCampaignIsDeleted) {
     
     this.bCampaignIsDeleted = bCampaignIsDeleted;
     return this;
   }
 
-   /**
+  /**
    * Get bCampaignIsDeleted
    * @return bCampaignIsDeleted
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_IS_DELETED)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_IS_DELETED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceCampaignIsDeleteFlg getbCampaignIsDeleted() {
@@ -503,25 +511,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_IS_DELETED)
+  @JsonProperty(value = JSON_PROPERTY_B_CAMPAIGN_IS_DELETED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setbCampaignIsDeleted(AbTestServiceCampaignIsDeleteFlg bCampaignIsDeleted) {
+  public void setbCampaignIsDeleted(@jakarta.annotation.Nullable AbTestServiceCampaignIsDeleteFlg bCampaignIsDeleted) {
     this.bCampaignIsDeleted = bCampaignIsDeleted;
   }
 
-
-  public AbTest isRemoveDescription(AbTestServiceIsRemoveFlg isRemoveDescription) {
+  public AbTest isRemoveDescription(@jakarta.annotation.Nullable AbTestServiceIsRemoveFlg isRemoveDescription) {
     
     this.isRemoveDescription = isRemoveDescription;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveDescription
    * @return isRemoveDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceIsRemoveFlg getIsRemoveDescription() {
@@ -529,25 +536,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveDescription(AbTestServiceIsRemoveFlg isRemoveDescription) {
+  public void setIsRemoveDescription(@jakarta.annotation.Nullable AbTestServiceIsRemoveFlg isRemoveDescription) {
     this.isRemoveDescription = isRemoveDescription;
   }
 
-
-  public AbTest endDate(String endDate) {
+  public AbTest endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -555,25 +561,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public AbTest startDate(String startDate) {
+  public AbTest startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -581,25 +586,24 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public AbTest status(AbTestServiceStatus status) {
+  public AbTest status(@jakarta.annotation.Nullable AbTestServiceStatus status) {
     
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AbTestServiceStatus getStatus() {
@@ -607,14 +611,13 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatus(AbTestServiceStatus status) {
+  public void setStatus(@jakarta.annotation.Nullable AbTestServiceStatus status) {
     this.status = status;
   }
 
-
-  public AbTest errors(List<String> errors) {
+  public AbTest errors(@jakarta.annotation.Nullable List<String> errors) {
     
     this.errors = errors;
     return this;
@@ -628,12 +631,12 @@ public class AbTest {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; エラー内容です。&lt;br&gt; このフィールドはリクエストの際には無視されます。&lt;br&gt; 以下エラー詳細になります。&lt;br&gt; - ENTITY_USE_AD_CUSTOMIZER: アドカスタマイザーを利用した広告が含まれるキャンペーンはテスト元のキャンペーンに設定できません。&lt;br&gt; - ENTITY_UNDER_REVIEW: 審査中のアイテムが含まれるためA/Bテストを作成できませんでした。&lt;br&gt; - CAMPAIGN_OVER_LIMIT: キャンペーンの作成上限数を超えています。&lt;br&gt; - KEYWORD_OVER_LIMIT: キーワードの作成上限数を超えています。&lt;br&gt; - AD_OVER_LIMIT: 広告の作成上限数を超えています。&lt;br&gt; - DOUBLE_TEXT_AD_UNSUPPORTED: 拡大テキスト広告が含まれるためA/Bテストを作成できませんでした。&lt;br&gt; - DUPLICATE_CAMPAIGN_NAME: キャンペーン名が重複しているためA/Bテストの作成に失敗しました。&lt;br&gt; - CAMPAIGN_CRITERION_OVER_LIMIT: 「キャンペーンに設定した除外キーワード数」「オーディエンスリストのキャンペーンとの関連付け数」「地域ターゲティング/曜日・時間帯ターゲティング/デバイスターゲティングの設定数」「動的検索連動型広告の対象ページ（除外）数」の合計が上限数を超えています。&lt;br&gt; - SYSTEM_ERROR_OCCURRED: システムエラーが発生しました。&lt;br&gt; 詳細は以下のヘルプを参照してください。&lt;br&gt; ・&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000053491?language&#x3D;ja\&quot;&gt;A/Bテストについて【検索広告】&lt;/a&gt;&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Errors.&lt;br&gt; This field will be ignored on input.&lt;br&gt; Error details.&lt;br&gt; - ENTITY_USE_AD_CUSTOMIZER: You can&#39;t set up a campaign that contains ads using the ad customizer as the original campaign.&lt;br&gt; - ENTITY_UNDER_REVIEW: Can&#39;t create an A/B test. The campaign contains elements under review.&lt;br&gt; - CAMPAIGN_OVER_LIMIT: You already have the maximum number of campaigns.&lt;br&gt; - KEYWORD_OVER_LIMIT: You already have the maximum number of keywords.&lt;br&gt; - AD_OVER_LIMIT: You already have the maximum number of ads.&lt;br&gt; - DOUBLE_TEXT_AD_UNSUPPORTED: Can&#39;t create an A/B test. The campaign contains extended text ads.&lt;br&gt; - DUPLICATE_CAMPAIGN_NAME: Failed to create an A/B test. The campaign name is a duplicate.&lt;br&gt; - CAMPAIGN_CRITERION_OVER_LIMIT: You have reached the maximum total number of \&quot;Excluded keywords specified in the campaign,\&quot; \&quot;Associations of audience lists with campaigns,\&quot; \&quot;Settings for geo targeting, day of week/hours targeting, and device targeting,\&quot; and \&quot;Target pages of Dynamic Ads for Search (exclusions).\&quot;&lt;br&gt; - SYSTEM_ERROR_OCCURRED: A system error has occurred.&lt;br&gt; See also the help below.&lt;br&gt; * &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000053491?language&#x3D;en_US\&quot;&gt;A/B test [Search Ads]&lt;/a&gt;&lt;/div&gt; 
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getErrors() {
@@ -641,11 +644,12 @@ public class AbTest {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<String> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<String> errors) {
     this.errors = errors;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -716,10 +720,7 @@ public class AbTest {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
