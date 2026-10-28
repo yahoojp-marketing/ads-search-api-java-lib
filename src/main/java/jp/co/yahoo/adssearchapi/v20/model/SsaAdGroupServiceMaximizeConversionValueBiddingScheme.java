@@ -45,7 +45,7 @@ public class SsaAdGroupServiceMaximizeConversionValueBiddingScheme {
   }
 
   /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告費用対効果の目標値です。※Return On Advertising Spend(ROAS)&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合のみ指定可能です。&lt;br&gt; ※現在利用できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ROAS. * ROAS: Return On Advertising Spend.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSION_VALUE.&lt;br&gt; *Not Available. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告費用対効果の目標値です。※Return On Advertising Spend(ROAS)&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ROAS. * ROAS: Return On Advertising Spend.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. &lt;/div&gt; 
    * @return targetRoas
    */
   @jakarta.annotation.Nullable
